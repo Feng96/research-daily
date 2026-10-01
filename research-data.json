@@ -1,0 +1,43 @@
+[
+  {
+    "id": "2026-09-18-usbf-data-sample",
+    "date": "2026-09-18",
+    "category": "USBF · 数据样本",
+    "title": "向导师分享 Orange County 建筑样本",
+    "summary": "已分享 Orange County 市中心建筑数据样本，供导师查看。",
+    "status": "已分享",
+    "note": "记录分享日期，不代表数据在当天完成；更大区域上传状态尚未核实。",
+    "sources": []
+  },
+  {
+    "id": "2026-09-21-usbf-paper-review",
+    "date": "2026-09-21",
+    "category": "USBF · 论文",
+    "title": "提供论文文稿供导师审阅",
+    "summary": "已发送论文文稿链接，并说明文稿与样本的位置。",
+    "status": "已送审",
+    "note": "记录文稿分享日期，不代表实验完成日期。",
+    "sources": []
+  },
+  {
+    "id": "2026-09-21-usbf-publishing-permission",
+    "date": "2026-09-21",
+    "category": "USBF · 数据发布",
+    "title": "确认 Source Cooperative 上传权限",
+    "summary": "平台确认可通过个人账户上传数据，同时开放创建组织的权限。",
+    "status": "权限已确认",
+    "note": "尚未核实数据上传成功或公开发布。",
+    "sources": []
+  },
+  {
+    "id": "2026-09-25-usbf-title-feedback",
+    "date": "2026-09-25",
+    "category": "USBF · 论文",
+    "title": "收到论文标题修改意见",
+    "summary": "导师对论文标题与开头文字提出修改建议。",
+    "status": "收到反馈",
+    "note": "记录批注日期，建议是否落实尚未核实。",
+    "sources": []
+  }
+]
+
