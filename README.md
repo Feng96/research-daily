@@ -1,37 +1,39 @@
-# 科研日历
+# Research Daily
 
-适用于 GitHub Pages 的纯静态页面。公开访问者只能浏览；维护者通过仓库提交更新内容。页面没有账号、数据库或写入接口。本机与 ISAAC 自动采集尚未配置。
+A static GitHub Pages site for public research updates. Visitors can browse entries; the repository owner controls edits through commits. The site has no login, database, or visitor-facing write interface. Automatic collection from this computer and ISAAC has not been configured.
 
-## 文件
+The entries do not cover every research activity. A blank date does not mean no research took place.
 
-- `index.html`：页面结构
-- `styles.css`：样式
-- `script.js`：日历和记录展示
-- `research-data.json`：已获准公开的四条记录
-- `.nojekyll`：让 GitHub Pages 直接提供静态文件
+## Files
 
-## 添加记录
+- `index.html`: page structure
+- `styles.css`: styling
+- `script.js`: calendar and entry display
+- `research-data.json`: four approved public entries
+- `.nojekyll`: serves the static files directly through GitHub Pages
 
-只把确认可公开的内容写入 `research-data.json`。它是 JSON 数组，每条记录使用以下字段：
+## Add an entry
+
+Add only information approved for public release to `research-data.json`. It is a JSON array; each entry follows this format:
 
 ```json
 [
   {
     "id": "2026-10-01-example",
     "date": "2026-10-01",
-    "title": "已获准公开的标题",
-    "summary": "已获准公开的简要进度。",
-    "category": "可选分类",
-    "status": "可选状态",
-    "note": "可选的日期或核实说明。",
+    "title": "Approved public title",
+    "summary": "Approved public summary of the update.",
+    "category": "Optional category",
+    "status": "Optional status",
+    "note": "Optional clarification about the date or verification status.",
     "sources": []
   }
 ]
 ```
 
-`date` 必须是 `YYYY-MM-DD` 格式的真实日期；`title` 和 `summary` 必填。`id` 应保持稳定且唯一；`status`、`note`、`details` 与 `category` 可省略。`sources` 当前均为空数组。页面按日期降序显示，直接使用原始日期字符串，不进行时区转换。文字作为纯文本呈现，不解析 HTML。当前来源覆盖不完整，空白日期不代表当天没有科研活动。
+`date` must be a real date in `YYYY-MM-DD` format; `title` and `summary` are required. Keep `id` unique and stable. `status`, `note`, `details`, and `category` are optional. The current `sources` arrays are empty. Entries appear in descending date order. The page uses the original date strings without timezone conversion. Text is rendered as plain text, not HTML.
 
-用本地静态 HTTP 服务预览，例如在此目录运行 `python -m http.server 8000`，再访问 `http://localhost:8000/`。直接双击打开 HTML 文件时，浏览器通常会阻止读取 JSON，页面会显示读取失败提示。
+To preview locally, run a static HTTP server in this directory, for example `python -m http.server 8000`, then open `http://localhost:8000/`. Opening the HTML file directly may prevent the browser from loading the JSON file.
 
-待公开范围确认后，由仓库管理员提交文件并在仓库设置中启用 GitHub Pages。修改网页内容仍需拥有仓库写入权限。
+The repository owner publishes changes by committing approved content. The GitHub Pages publishing source is the root of the `main` branch.
 

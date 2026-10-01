@@ -6,6 +6,7 @@ const entriesTitle = document.getElementById("entries-title");
 const entryCount = document.getElementById("entry-count");
 const entryList = document.getElementById("entry-list");
 const status = document.getElementById("status");
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const now = new Date();
 const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
 let year = now.getFullYear();
@@ -25,8 +26,13 @@ function dateKey(day) {
   return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
+function formatDate(key) {
+  const [y, m, d] = key.split("-").map(Number);
+  return `${months[m - 1]} ${d}, ${y}`;
+}
+
 function renderCalendar() {
-  monthTitle.textContent = `${year} 年 ${month + 1} 月`;
+  monthTitle.textContent = `${months[month]} ${year}`;
   calendarDays.replaceChildren();
   const offset = (new Date(year, month, 1).getDay() + 6) % 7;
   const count = new Date(year, month + 1, 0).getDate();
@@ -40,7 +46,7 @@ function renderCalendar() {
     if (key === today) button.classList.add("today");
     if (marked.has(key)) button.classList.add("has-entry");
     button.textContent = String(day);
-    button.setAttribute("aria-label", `${year}年${month + 1}月${day}日${marked.has(key) ? "，有记录" : ""}`);
+    button.setAttribute("aria-label", `${formatDate(key)}${marked.has(key) ? ", has a public entry" : ""}`);
     button.setAttribute("aria-pressed", String(selectedDate === key));
     button.addEventListener("click", () => { selectedDate = key; render(); });
     calendarDays.append(button);
@@ -50,22 +56,22 @@ function renderCalendar() {
 function renderEntries() {
   const prefix = `${year}-${String(month + 1).padStart(2, "0")}-`;
   const visible = records.filter(item => selectedDate ? item.date === selectedDate : item.date.startsWith(prefix));
-  entriesTitle.textContent = selectedDate ? selectedDate.replaceAll("-", " / ") : `${year} 年 ${month + 1} 月`;
-  entryCount.textContent = `${visible.length} 条记录`;
+  entriesTitle.textContent = selectedDate ? formatDate(selectedDate) : `${months[month]} ${year}`;
+  entryCount.textContent = `${visible.length} ${visible.length === 1 ? "entry" : "entries"}`;
   entryList.replaceChildren();
   if (loadError) {
     status.hidden = false;
-    status.textContent = "无法读取公开记录。请检查 research-data.json 是否与网页文件位于同一目录，并通过网站地址访问页面。";
+    status.textContent = "Unable to load public entries. Check that research-data.json is in the same directory and open the page through a website URL.";
     return;
   }
   if (!records.length) {
     status.hidden = false;
-    status.textContent = "尚无公开记录。内容经确认后会在此展示。";
+    status.textContent = "No public entries are available yet. Approved updates will appear here.";
     return;
   }
   if (!visible.length) {
     status.hidden = false;
-    status.textContent = selectedDate ? "这一天没有公开记录。可选择其他日期或查看整月。" : "这个月没有公开记录。可切换月份查看。";
+    status.textContent = selectedDate ? "No public entry is available for this date. Select another date or view the full month." : "No public entries are available for this month. Try another month.";
     return;
   }
   status.hidden = true;
@@ -74,7 +80,7 @@ function renderEntries() {
     card.className = "card";
     const date = document.createElement("p");
     date.className = "card-date";
-    date.textContent = item.date;
+    date.textContent = formatDate(item.date);
     const heading = document.createElement("h3");
     heading.textContent = item.title;
     if (item.category) {
