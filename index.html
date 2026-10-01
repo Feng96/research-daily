@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12345a">
+  <title>科研日历</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div>
+        <p class="eyebrow">RESEARCH DAILY</p>
+        <h1>科研日历</h1>
+        <p class="subtitle">按日期浏览已公开的研究进度</p>
+      </div>
+      <span class="header-mark" aria-hidden="true">日 / 志</span>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <aside class="calendar-panel" aria-label="日期筛选">
+      <div class="calendar-heading">
+        <h2 id="month-title"></h2>
+        <div class="month-actions">
+          <button type="button" id="previous-month" aria-label="上个月">‹</button>
+          <button type="button" id="next-month" aria-label="下个月">›</button>
+        </div>
+      </div>
+      <div class="weekdays" aria-hidden="true"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+      <div id="calendar-days" class="calendar-days" aria-label="日历"></div>
+      <button type="button" id="show-month" class="show-month">查看整月</button>
+      <p class="calendar-note"><span class="dot" aria-hidden="true"></span>圆点表示当天有公开记录</p>
+    </aside>
+
+    <section class="entries" aria-labelledby="entries-title">
+      <div class="entries-heading">
+        <div>
+          <p class="section-label">进度记录</p>
+          <h2 id="entries-title"></h2>
+        </div>
+        <span id="entry-count" class="entry-count"></span>
+      </div>
+      <p class="coverage-note">当前记录的来源覆盖不完整；空白日期不表示当天没有开展科研。本机与 ISAAC 自动采集尚未配置。</p>
+      <div id="status" class="status" role="status" aria-live="polite">正在读取公开记录…</div>
+      <div id="entry-list" class="entry-list"></div>
+    </section>
+  </main>
+
+  <footer class="wrap site-footer">本机与 ISAAC 自动采集尚未配置；页面记录由仓库维护者审核后手动发布。</footer>
+</body>
+</html>
+
