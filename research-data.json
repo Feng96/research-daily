@@ -30,6 +30,16 @@
     "sources": []
   },
   {
+    "id": "2026-10-13-usbf-manuscript-review",
+    "date": "2026-10-13",
+    "category": "USBF — Paper",
+    "title": "Prepared a highlighted manuscript and sentence-level review",
+    "summary": "Prepared a highlighted revision of the manuscript and supplementary methods, checked citation numbering, and created a separate sentence-level review with optional tracked English suggestions.",
+    "status": "Prepared for review",
+    "note": "The suggested edits are separate from the highlighted revision. Structural checks passed, but desktop Word rendering and independent validation of footprint changes were not completed.",
+    "sources": []
+  },
+  {
     "id": "2026-10-11-footprint-input-retirement",
     "date": "2026-10-11",
     "category": "Building Footprints",
@@ -37,6 +47,16 @@
     "summary": "A verified cleanup batch removed eligible intermediate pixel files after checking product identities, input dependencies and recoverability. The work freed storage capacity for continued footprint production.",
     "status": "Batch completed",
     "note": "The remaining storage constraint was not resolved by this batch, and the removed files were a bounded eligible cohort rather than the full input collection.",
+    "sources": []
+  },
+  {
+    "id": "2026-10-11-usbf-manuscript-revision",
+    "date": "2026-10-11",
+    "category": "USBF — Paper",
+    "title": "Prepared tracked revisions to the manuscript and methods",
+    "summary": "Prepared Word tracked-change versions of the main manuscript and supplementary methods. The revision clarified the distinction between national counts and regional evaluation, refined method descriptions, and updated figures and cross-references.",
+    "status": "Revision prepared",
+    "note": "The shared source manuscript was not overwritten. Independent evidence that every modified footprint improved remains an open research question; this entry does not indicate submission or acceptance.",
     "sources": []
   },
   {
@@ -67,6 +87,16 @@
     "summary": "An AutoBEM/OpenStudio example generated a building model, simulation inputs and time-series electricity output, and its run report marked the example successful.",
     "status": "Single example completed",
     "note": "This verifies one building example; batch modeling and validation against observed energy use remain to be demonstrated.",
+    "sources": []
+  },
+  {
+    "id": "2026-10-02-usbf-product-section-revision",
+    "date": "2026-10-02",
+    "category": "USBF — Paper",
+    "title": "Revised the manuscript's building-product section",
+    "summary": "Prepared tracked revisions to the building-product section, checked national counts and regional evaluation results, and refined the corresponding descriptions.",
+    "status": "Draft revision prepared",
+    "note": "This entry does not indicate paper submission.",
     "sources": []
   },
   {
