@@ -1,5 +1,85 @@
 [
   {
+    "id": "2026-10-16-footprint-production-checkpoint",
+    "date": "2026-10-16",
+    "category": "Building Footprints",
+    "title": "Reviewed the current footprint production and recovery checkpoint",
+    "summary": "The latest project handoff recorded substantial progress in the building-footprint production workflow and a completed producer segment that committed new buildings. Work to recover storage capacity and resume the next production segment was still in progress.",
+    "status": "In progress",
+    "note": "This describes the October 16 project snapshot, not a verified live status or a completed nationwide release. A proposed million-file recovery target had not been certified.",
+    "sources": []
+  },
+  {
+    "id": "2026-10-14-regional-footprint-production",
+    "date": "2026-10-14",
+    "category": "Building Footprints",
+    "title": "Verified new buildings from a regional production run",
+    "summary": "A bounded regional run ended cleanly, reporting 14,876 newly committed buildings and 779 footprint modifications. A separate trial showed that a larger input catalog could produce and verify another nonempty building batch.",
+    "status": "Regional run completed",
+    "note": "These are regional and trial results, not a nationwide completion count. A two-host computing pilot remained separate from the canonical production workflow.",
+    "sources": []
+  },
+  {
+    "id": "2026-10-13-footprint-input-archive-tests",
+    "date": "2026-10-13",
+    "category": "Building Footprints",
+    "title": "Tested an indexed input archive for footprint processing",
+    "summary": "Independent component checks and bounded real-data comparisons showed that archived inputs could be read while preserving the tested building geometry and output attributes.",
+    "status": "Scoped tests completed",
+    "note": "These checks did not establish nationwide throughput or authorize removal of the original inputs.",
+    "sources": []
+  },
+  {
+    "id": "2026-10-11-footprint-input-retirement",
+    "date": "2026-10-11",
+    "category": "Building Footprints",
+    "title": "Completed a guarded footprint-input cleanup batch",
+    "summary": "A verified cleanup batch removed eligible intermediate pixel files after checking product identities, input dependencies and recoverability. The work freed storage capacity for continued footprint production.",
+    "status": "Batch completed",
+    "note": "The remaining storage constraint was not resolved by this batch, and the removed files were a bounded eligible cohort rather than the full input collection.",
+    "sources": []
+  },
+  {
+    "id": "2026-10-09-footprint-pipeline-comparison",
+    "date": "2026-10-09",
+    "category": "Building Footprints",
+    "title": "Compared footprint pipeline revisions on matched inputs",
+    "summary": "Repeated isolated comparisons found matching building attributes, geometry, ownership and candidate records between the existing and revised workflows. The revision reduced elapsed time in these tests, but missed its planned speedup targets.",
+    "status": "Comparison completed",
+    "note": "The measured gains came from isolated test cohorts. Sustained improvement in live production had not been established.",
+    "sources": []
+  },
+  {
+    "id": "2026-10-04-naip-footprint-model-studies",
+    "date": "2026-10-04",
+    "category": "Building Footprints",
+    "title": "Completed controlled NAIP footprint-model training studies",
+    "summary": "Across October 2-4, several matched training comparisons explored model structure, quality retention and residual learning for aerial-image building footprints. The inspected run logs show the training and validation stages completed.",
+    "status": "Training completed",
+    "note": "The inspected logs do not establish which candidate improved held-out footprint accuracy.",
+    "sources": []
+  },
+  {
+    "id": "2026-10-02-autobem-single-building",
+    "date": "2026-10-02",
+    "category": "Building Energy",
+    "title": "Verified a single-building energy-model run",
+    "summary": "An AutoBEM/OpenStudio example generated a building model, simulation inputs and time-series electricity output, and its run report marked the example successful.",
+    "status": "Single example completed",
+    "note": "This verifies one building example; batch modeling and validation against observed energy use remain to be demonstrated.",
+    "sources": []
+  },
+  {
+    "id": "2026-10-01-footprint-pipeline-replay",
+    "date": "2026-10-01",
+    "category": "Building Footprints",
+    "title": "Measured early footprint-pipeline changes in isolated replays",
+    "summary": "Small replay cohorts showed faster processing while preserving the checked final building geometry. A grouped scheduling approach did not reproduce its short-test gain in live production and was rolled back.",
+    "status": "Engineering replay completed",
+    "note": "The replay measurements do not establish a sustained national production speedup. Candidate screening remained experimental.",
+    "sources": []
+  },
+  {
     "id": "2026-09-18-usbf-data-sample",
     "date": "2026-09-18",
     "category": "USBF · Data Sample",
