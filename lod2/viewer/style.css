@@ -20,3 +20,5 @@ body{height:auto;min-height:100dvh}.workspace{flex:none;height:510px;min-height:
 @media(max-width:680px){.workspace{height:auto;min-height:760px}.observation-panel{display:flex;flex-direction:column;gap:15px;padding:12px 10px}.location-inspector{padding:13px 0 0;border-left:0;border-top:1px solid var(--line);gap:7px}.cloud-controls{gap:8px 12px}.cloud-controls select{max-width:232px}.cloud-controls label:first-child{width:100%}.point-status{font-size:11px}.coordinate-copy input{font-size:12px}.location-note{font-size:10px}.observation-heading{gap:7px 9px}.model-tools .opacity-label{display:flex}.model-tools input[type=range]{width:55px}.point-detail{font-size:10px}}
 
 @media(max-width:680px){.model-pane .model-tools{top:auto;bottom:57px}.model-pane .geometry-warning{bottom:139px;max-height:60px}}
+
+@media(min-width:681px){.model-pane .model-tools{top:auto;bottom:70px}.model-pane .geometry-warning{bottom:126px}}
