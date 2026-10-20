@@ -1,4 +1,5 @@
 import * as THREE from '../vendor/three.module.js';
+import {createPointCloudController} from './point_clouds.js';
 
 const $=id=>document.getElementById(id);
 const chapter=new URLSearchParams(location.search).get('chapter')||'pilot';
@@ -30,6 +31,7 @@ const mesh=new THREE.Mesh(new THREE.BufferGeometry(),material);root.add(mesh);
 const edgeMaterial=new THREE.LineBasicMaterial({color:0x3b392b,transparent:true,opacity:.75,depthWrite:false});
 const edgeLines=new THREE.LineSegments(new THREE.BufferGeometry(),edgeMaterial);edgeLines.renderOrder=2;root.add(edgeLines);
 const baselineLines=new THREE.LineSegments(new THREE.BufferGeometry(),new THREE.LineBasicMaterial({color:0x42d9e4,transparent:true,opacity:.8,depthWrite:false,depthTest:false}));baselineLines.renderOrder=3;root.add(baselineLines);
+const pointCloud=createPointCloudController({THREE,root,map:modelMap,chapter,getSelected:()=>selected,getGroup:()=>group,isHidden:()=>temporaryHide,toast,onChange:saveHash,onHeight:reportHeight,initialHash});
 let renderer,renderCount=0;
 const modelLayer={id:'experiment-roof-model',type:'custom',renderingMode:'3d',
   onAdd(map,gl){renderer=new THREE.WebGLRenderer({canvas:map.getCanvas(),context:gl});renderer.autoClear=false;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;},
@@ -58,6 +60,9 @@ function setupImageOverlays(){
   imageMap.on('mouseleave','building-hit',()=>imageMap.getCanvas().style.cursor='');
 }
 function geometry(b){
+  const bases=GROUPS.map(key=>b.groups[key]?.nativeGroundZ).filter(Number.isFinite);
+  root.position.z=Number.isFinite(b.displayOffsetZ)?b.displayOffsetZ:(bases.length?b.ground_z-Math.min(...bases):0);
+  pointCloud.sync();
   const g=b.groups[group];mesh.geometry.dispose();edgeLines.geometry.dispose();
   const warnings=[...(g?.previewWarnings||[])];if(g?.status!=='success')warnings.unshift('当前记录状态：'+(g?.status||'missing')+'；'+(g?.lodClass||g?.lod||'无声明等级'));$('geometry-warning').hidden=!warnings.length;$('geometry-warning').textContent=warnings.length?'源模型含异常面；三角化仅用于预览。'+warnings.join('；'):'';
   mesh.geometry=new THREE.BufferGeometry();edgeLines.geometry=new THREE.BufferGeometry();
@@ -82,7 +87,7 @@ function geometry(b){
 function appearance(){
   const alpha=+$('opacity').value/100;material.opacity=alpha;material.transparent=alpha<1;material.depthWrite=alpha>=.95;material.needsUpdate=true;
   $('opacity-value').textContent=Math.round(alpha*100)+'%';mesh.visible=$('models').checked&&!temporaryHide&&!!selected?.groups[group]?.positions?.length;edgeLines.visible=mesh.visible&&$('edges').checked;baselineLines.visible=!!selected&&$('baseline-overlay').checked&&!temporaryHide&&$('models').checked;
-  modelMap.triggerRepaint();
+  pointCloud.appearance();saveHash();modelMap.triggerRepaint();
 }
 function focusBuilding(){
   if(!selected)return;
@@ -138,7 +143,7 @@ function setBasemap(key){
   saveHash();
 }
 function footprintVisibility(){for(const id of ['selected-outline','selected-outline-shadow'])if(imageMap.getLayer(id))imageMap.setLayoutProperty(id,'visibility',$('footprint').checked?'visible':'none');$('clean-image').textContent=$('footprint').checked?'查看纯影像':'显示定位轮廓';}
-function saveHash(){if(!loaded||!selected)return;clearTimeout(hashTimer);hashTimer=setTimeout(()=>{const c=imageMap.getCenter();const state={building:selected.id,group,base:basemap,cohort:$('cohort').value,lng:c.lng.toFixed(7),lat:c.lat.toFixed(7),z:imageMap.getZoom().toFixed(3),bearing:imageMap.getBearing().toFixed(2),pitch:modelMap.getPitch().toFixed(1)};history.replaceState(null,'','#'+new URLSearchParams(state));if(parent!==window)parent.postMessage({type:'lod2-selection',chapter,...state},location.origin);},150);}
+function saveHash(){if(!loaded||!selected)return;clearTimeout(hashTimer);hashTimer=setTimeout(()=>{const c=imageMap.getCenter();const state={building:selected.id,group,base:basemap,cohort:$('cohort').value,lng:c.lng.toFixed(7),lat:c.lat.toFixed(7),z:imageMap.getZoom().toFixed(3),bearing:imageMap.getBearing().toFixed(2),pitch:modelMap.getPitch().toFixed(1),...pointCloud.state()};history.replaceState(null,'','#'+new URLSearchParams(state));if(parent!==window)parent.postMessage({type:'lod2-selection',chapter,...state},location.origin);},150);}
 function reportHeight(){if(parent!==window)requestAnimationFrame(()=>parent.postMessage({type:'lod2-height',height:document.body.scrollHeight},location.origin));}
 function filterBuildings(focus=true){
   visibleBuildings=data.buildings.filter(b=>$('cohort').value==='all'||b.cohort===$('cohort').value);
@@ -199,5 +204,5 @@ async function init(){
     $('loading').hidden=true;reportHeight();
   }catch(e){loadError=true;$('loading-text').textContent='页面数据加载失败：'+e.message;console.error(e);}
 }
-window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},selectBuilding,setGroup,setBasemap,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;}};
+window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},selectBuilding,setGroup,setBasemap,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;},pointCloud};
 init();

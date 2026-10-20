@@ -28,14 +28,14 @@ function loadChapter(id,options={}){
   $('downloads').replaceChildren(...c.downloads.map(item=>{const a=el('a',item.label+' ↓');a.href=item.url;a.download='';return a;}));
   const figures=FIGURES[c.id];$('evidence-section').hidden=!figures.length;$('figures').replaceChildren(...figures.map(([url,caption])=>{const fig=el('div',undefined,'figure-card'),link=el('a'),img=el('img');link.href=url;link.target='_blank';link.rel='noopener';img.src=url;img.alt=caption;img.loading='lazy';link.append(img);fig.append(link,el('p',caption+' 点击查看原图 ↗'));return fig;}));
   const state={...Object.fromEntries(params()),...selectedState,...options};delete state.chapter;if(prior?.id!==c.id&&state.group&&!c.groups.some(x=>x.id===state.group))delete state.group;
-  const url='./viewer/?chapter='+c.id+'#'+new URLSearchParams(state);$('viewer').src=url;$('open-viewer').href=url;
+  const url='./viewer/?chapter='+c.id+'&v=20261020-points#'+new URLSearchParams(state);$('viewer').src=url;$('open-viewer').href=url;
   history.replaceState(null,'','#'+new URLSearchParams({chapter:c.id,...state}));
   $('next-chapter').textContent=c.number===3?'回到第一章 ↑':'下一章 →';$('next-chapter').onclick=()=>{loadChapter(manifest.chapters[c.number%3].id);$('chapter').scrollIntoView({behavior:'smooth',block:'start'});};
 }
 window.addEventListener('message',event=>{
   if(event.origin!==location.origin||event.source!==$('viewer').contentWindow)return;const message=event.data;
   if(message?.type==='lod2-height'&&Number.isFinite(message.height)){const target=Math.max(760,Math.min(2100,Math.ceil(message.height)));if(Math.abs($('viewer').getBoundingClientRect().height-target)>4)$('viewer').style.height=target+'px';}
-  if(message?.type==='lod2-selection'&&message.chapter===current?.id){selectedState={};for(const k of ['building','group','base','cohort','lng','lat','z','bearing','pitch'])if(message[k]!==undefined)selectedState[k]=message[k];const hash=new URLSearchParams({chapter:current.id,...selectedState});history.replaceState(null,'','#'+hash);$('open-viewer').href='./viewer/?chapter='+current.id+'#'+new URLSearchParams(selectedState);}
+  if(message?.type==='lod2-selection'&&message.chapter===current?.id){selectedState={};for(const k of ['building','group','base','cohort','lng','lat','z','bearing','pitch','points','pointMode','pointColor','pointSize','pointThrough','opacity','models'])if(message[k]!==undefined)selectedState[k]=message[k];const hash=new URLSearchParams({chapter:current.id,...selectedState});history.replaceState(null,'','#'+hash);$('open-viewer').href='./viewer/?chapter='+current.id+'&v=20261020-points#'+new URLSearchParams(selectedState);}
 });
 window.addEventListener('hashchange',()=>{if(manifest&&!changing){selectedState=Object.fromEntries(params());loadChapter(params().get('chapter'));}});
 try{

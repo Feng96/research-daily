@@ -1,0 +1,3049 @@
+{
+  "schema": "lod2-atlas-actual-point-cloud-index-v1",
+  "createdUtc": "2026-10-20T15:36:14.774393+00:00",
+  "buildingCount": 120,
+  "buildingPointRecordsWithOverlap": 351286,
+  "compressedBytes": 5205839,
+  "uncompressedBytes": 17993209,
+  "rawSourceRecordCount": 1685153,
+  "originalGroundRecordCount": 679898,
+  "cohortCounts": {
+    "legacy60": 60,
+    "fresh60": 60
+  },
+  "anchor": [
+    -77.07175227227003,
+    38.91224912885592
+  ],
+  "flagBits": {
+    "insideOriginal": 1,
+    "isGround": 2,
+    "high2to100": 4,
+    "sourceWithheld": 8,
+    "sourceSynthetic": 16,
+    "legacyOverlapClass": 32
+  },
+  "classLabels": {
+    "0": "unclassified/created, legacy project convention",
+    "1": "unclassified",
+    "2": "ground",
+    "6": "building, if present in source",
+    "7": "noise, legacy source label",
+    "11": "source class 11; not assumed building",
+    "17": "legacy overlap + unclassified (1+16), not modern bridge class",
+    "18": "legacy overlap + ground (2+16), not modern high-noise class"
+  },
+  "buildings": [
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "shortId": "OSM 67521488",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84575-osm-67521488.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 666950,
+      "uncompressedBytes": 2114641,
+      "sha256": "cc738ba9f7f1568ae7421a990c4cd47823b13cc9d2b93268c3f2bd20b5358689",
+      "targetLngLat": [
+        -77.07339071003106,
+        38.91043122680121
+      ],
+      "rawCount": 38893,
+      "groundCount": 7440,
+      "nonGroundCount": 31453,
+      "insideOriginalCount": 15134,
+      "insideHighCount": 14279,
+      "footprintArea": 1460.143923160947,
+      "insideHighDensity_per_m2": 9.77917297980363,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "shortId": "OSM 67521431",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84595-osm-67521431.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 71783,
+      "uncompressedBytes": 260500,
+      "sha256": "5dc733bd4f1462fc84e79ee22e65ec44a571fe223d679a96d6c87d73f85b075c",
+      "targetLngLat": [
+        -77.07089381828303,
+        38.91040085006708
+      ],
+      "rawCount": 5106,
+      "groundCount": 1280,
+      "nonGroundCount": 3826,
+      "insideOriginalCount": 1727,
+      "insideHighCount": 1607,
+      "footprintArea": 293.1482461172484,
+      "insideHighDensity_per_m2": 5.481868035319098,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "shortId": "OSM 67521425",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85199-osm-67521425.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 152881,
+      "uncompressedBytes": 666694,
+      "sha256": "37c82859d00cd2b00c6fce31dfad13b7b41bb44675203bc72e189801e3b3c504",
+      "targetLngLat": [
+        -77.0698768858568,
+        38.91043466481617
+      ],
+      "rawCount": 11201,
+      "groundCount": 2575,
+      "nonGroundCount": 8626,
+      "insideOriginalCount": 6810,
+      "insideHighCount": 6554,
+      "footprintArea": 1507.766090882389,
+      "insideHighDensity_per_m2": 4.3468280919916475,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "shortId": "OSM 67521385",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84681-osm-67521385.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 108882,
+      "uncompressedBytes": 414839,
+      "sha256": "979b9867ac45eb5cf24d94725c1d9487aec0a8d0ecaf1db3f5199bc3f7f69931",
+      "targetLngLat": [
+        -77.07319512049006,
+        38.91107761627999
+      ],
+      "rawCount": 7828,
+      "groundCount": 1641,
+      "nonGroundCount": 6187,
+      "insideOriginalCount": 2404,
+      "insideHighCount": 2202,
+      "footprintArea": 186.39600008790188,
+      "insideHighDensity_per_m2": 11.813558225292207,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "shortId": "OSM 67521498",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84655-osm-67521498.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 14613,
+      "uncompressedBytes": 58038,
+      "sha256": "6936b782983653396b19f4c50230d7c03860820dc53a0ed86fe083efc3fcdb70",
+      "targetLngLat": [
+        -77.07179479849046,
+        38.91133400000857
+      ],
+      "rawCount": 1064,
+      "groundCount": 693,
+      "nonGroundCount": 371,
+      "insideOriginalCount": 147,
+      "insideHighCount": 112,
+      "footprintArea": 31.150213303036814,
+      "insideHighDensity_per_m2": 3.5954809975275897,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "shortId": "OSM 67521381",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84674-osm-67521381.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 31027,
+      "uncompressedBytes": 108642,
+      "sha256": "cbc5c15b18ed980c21fb7572aa7e07bfbec33ad54d26aae6bf50b3b11016caf0",
+      "targetLngLat": [
+        -77.07282380065976,
+        38.912042050023764
+      ],
+      "rawCount": 2113,
+      "groundCount": 157,
+      "nonGroundCount": 1956,
+      "insideOriginalCount": 452,
+      "insideHighCount": 444,
+      "footprintArea": 90.65481616227763,
+      "insideHighDensity_per_m2": 4.897698972829121,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "shortId": "OSM 67521513",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84662-osm-67521513.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28263,
+      "uncompressedBytes": 99869,
+      "sha256": "65b2ec0e4ec76761afe2b3b302f5e837182c854034a1d266fa8ea976adbb3574",
+      "targetLngLat": [
+        -77.07225010090539,
+        38.91163615013101
+      ],
+      "rawCount": 1960,
+      "groundCount": 309,
+      "nonGroundCount": 1651,
+      "insideOriginalCount": 405,
+      "insideHighCount": 382,
+      "footprintArea": 87.15170452358832,
+      "insideHighDensity_per_m2": 4.38316154673267,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84893-osm-66348193",
+      "shortId": "OSM 66348193",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84893-osm-66348193.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29486,
+      "uncompressedBytes": 102344,
+      "sha256": "d30995d6b644c1e4971ea6fffa5641baac32f014bc5875a554f50788e5434093",
+      "targetLngLat": [
+        -77.07120792066443,
+        38.912189357257326
+      ],
+      "rawCount": 2032,
+      "groundCount": 162,
+      "nonGroundCount": 1870,
+      "insideOriginalCount": 414,
+      "insideHighCount": 403,
+      "footprintArea": 83.96258813630133,
+      "insideHighDensity_per_m2": 4.79975676006779,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85154-osm-67521361",
+      "shortId": "OSM 67521361",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85154-osm-67521361.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26847,
+      "uncompressedBytes": 95092,
+      "sha256": "3bd35422f2ffdc23ed4f8ef6d61fb592edd2bc532c97cf8b9ce3841acc1280e3",
+      "targetLngLat": [
+        -77.0699757846852,
+        38.91170212115547
+      ],
+      "rawCount": 1794,
+      "groundCount": 276,
+      "nonGroundCount": 1518,
+      "insideOriginalCount": 386,
+      "insideHighCount": 380,
+      "footprintArea": 78.87853424334105,
+      "insideHighDensity_per_m2": 4.817533738997942,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85141-osm-66347936",
+      "shortId": "OSM 66347936",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85141-osm-66347936.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 19623,
+      "uncompressedBytes": 69331,
+      "sha256": "a5a69280e357801e3c3d1bc95191832da9569e38ad5dcb6e5008222d42fce2db",
+      "targetLngLat": [
+        -77.0698134334542,
+        38.91218830001685
+      ],
+      "rawCount": 1350,
+      "groundCount": 521,
+      "nonGroundCount": 829,
+      "insideOriginalCount": 222,
+      "insideHighCount": 213,
+      "footprintArea": 43.330447502225425,
+      "insideHighDensity_per_m2": 4.915711982643624,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84844-osm-67528292",
+      "shortId": "OSM 67528292",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84844-osm-67528292.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 32155,
+      "uncompressedBytes": 107857,
+      "sha256": "5393d667e70edd026153f2479eefb5ac20aab93be9bc03e676211ca8a0da2c81",
+      "targetLngLat": [
+        -77.07394021567018,
+        38.91284680040816
+      ],
+      "rawCount": 2205,
+      "groundCount": 506,
+      "nonGroundCount": 1699,
+      "insideOriginalCount": 395,
+      "insideHighCount": 369,
+      "footprintArea": 84.14725114059198,
+      "insideHighDensity_per_m2": 4.38516998473878,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84840-osm-67527608",
+      "shortId": "OSM 67527608",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84840-osm-67527608.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26250,
+      "uncompressedBytes": 93519,
+      "sha256": "80f19cd7bdad93caafeae0042d189bada2d998854c7cc610ad9030b48da82845",
+      "targetLngLat": [
+        -77.0732350259972,
+        38.912881700020876
+      ],
+      "rawCount": 1801,
+      "groundCount": 276,
+      "nonGroundCount": 1525,
+      "insideOriginalCount": 371,
+      "insideHighCount": 346,
+      "footprintArea": 85.52636993015129,
+      "insideHighDensity_per_m2": 4.04553590059505,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84875-osm-66347707",
+      "shortId": "OSM 66347707",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84875-osm-66347707.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26636,
+      "uncompressedBytes": 89467,
+      "sha256": "bb563e18aa239f37d3149b1c496ae3fb6d4ce7cf9de8c1d232a4b41bf61ade24",
+      "targetLngLat": [
+        -77.07176802570223,
+        38.91232145002417
+      ],
+      "rawCount": 1828,
+      "groundCount": 483,
+      "nonGroundCount": 1345,
+      "insideOriginalCount": 422,
+      "insideHighCount": 391,
+      "footprintArea": 54.34903645455817,
+      "insideHighDensity_per_m2": 7.19423977878466,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84888-osm-66346517",
+      "shortId": "OSM 66346517",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84888-osm-66346517.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 25882,
+      "uncompressedBytes": 92072,
+      "sha256": "614cf80f17e5cc442d5a4c8ed0c8893ed91ec9a644f170fa5dc157af795c9dbb",
+      "targetLngLat": [
+        -77.07173357323676,
+        38.91244184990074
+      ],
+      "rawCount": 1792,
+      "groundCount": 175,
+      "nonGroundCount": 1617,
+      "insideOriginalCount": 398,
+      "insideHighCount": 374,
+      "footprintArea": 85.35744813174222,
+      "insideHighDensity_per_m2": 4.381574287726616,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84906-osm-66346984",
+      "shortId": "OSM 66346984",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84906-osm-66346984.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27945,
+      "uncompressedBytes": 97959,
+      "sha256": "4f57ea535aabc9ee7eedbad1deef85718a9a7154430079a08f66b14487094f81",
+      "targetLngLat": [
+        -77.0705231922239,
+        38.912456374124176
+      ],
+      "rawCount": 1958,
+      "groundCount": 227,
+      "nonGroundCount": 1731,
+      "insideOriginalCount": 421,
+      "insideHighCount": 395,
+      "footprintArea": 85.1865891421017,
+      "insideHighDensity_per_m2": 4.6368801002361,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85134-osm-66348371",
+      "shortId": "OSM 66348371",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85134-osm-66348371.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 38579,
+      "uncompressedBytes": 132307,
+      "sha256": "26ab1ceb2a2aad035bf0a5f1d5c48874b54aa5fab6ff99c17d8f8c24b1f7df66",
+      "targetLngLat": [
+        -77.06972768916087,
+        38.91248432895312
+      ],
+      "rawCount": 2718,
+      "groundCount": 383,
+      "nonGroundCount": 2335,
+      "insideOriginalCount": 660,
+      "insideHighCount": 612,
+      "footprintArea": 130.61954746993516,
+      "insideHighDensity_per_m2": 4.685363039868628,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84763-osm-67527654",
+      "shortId": "OSM 67527654",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84763-osm-67527654.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 41127,
+      "uncompressedBytes": 151858,
+      "sha256": "d8cb9f9739430fc8dbf92dbeaf5865f9d8808d80f289ed032225a32805d5e0a7",
+      "targetLngLat": [
+        -77.07430450198116,
+        38.91341715004498
+      ],
+      "rawCount": 2932,
+      "groundCount": 1169,
+      "nonGroundCount": 1763,
+      "insideOriginalCount": 840,
+      "insideHighCount": 773,
+      "footprintArea": 168.62717313426813,
+      "insideHighDensity_per_m2": 4.584077320589989,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84805-ms-UnitedStates_032010032_270279",
+      "shortId": "UnitedStates_032010032_270279",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84805-ms-UnitedStates_032010032_270279.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 18508,
+      "uncompressedBytes": 63467,
+      "sha256": "5641c93d0217e7be3922c15aab7a9eeca339c5150eec505024d900d443d62015",
+      "targetLngLat": [
+        -77.0732390516416,
+        38.913128720587096
+      ],
+      "rawCount": 1185,
+      "groundCount": 329,
+      "nonGroundCount": 856,
+      "insideOriginalCount": 159,
+      "insideHighCount": 159,
+      "footprintArea": 30.082450223275234,
+      "insideHighDensity_per_m2": 5.285473717063757,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84794-osm-67527568",
+      "shortId": "OSM 67527568",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84794-osm-67527568.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 24702,
+      "uncompressedBytes": 86566,
+      "sha256": "b2bdaa715d71c5c2156a69a914ffdb096f0e6e23e8baf809e0d5a4ed8b73aa72",
+      "targetLngLat": [
+        -77.07248663784216,
+        38.913729649247024
+      ],
+      "rawCount": 1673,
+      "groundCount": 513,
+      "nonGroundCount": 1160,
+      "insideOriginalCount": 334,
+      "insideHighCount": 284,
+      "footprintArea": 71.58870252465678,
+      "insideHighDensity_per_m2": 3.967106400652867,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84865-osm-67527701",
+      "shortId": "OSM 67527701",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84865-osm-67527701.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 168086,
+      "uncompressedBytes": 680749,
+      "sha256": "db9731ddc8755afeff6dec3be47b16767f49d1da68fe50809141b0aeb9b5d186",
+      "targetLngLat": [
+        -77.07152890700722,
+        38.912997142947575
+      ],
+      "rawCount": 12275,
+      "groundCount": 1576,
+      "nonGroundCount": 10699,
+      "insideOriginalCount": 6780,
+      "insideHighCount": 6593,
+      "footprintArea": 1384.263031086752,
+      "insideHighDensity_per_m2": 4.762823142668191,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84773-osm-67528234",
+      "shortId": "OSM 67528234",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84773-osm-67528234.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 22797,
+      "uncompressedBytes": 81482,
+      "sha256": "653b30404e1a0a6574651fc04c11daff29ecfdb37f789be3032aed0b8d5ca1cb",
+      "targetLngLat": [
+        -77.07360203616796,
+        38.913756556247705
+      ],
+      "rawCount": 1553,
+      "groundCount": 212,
+      "nonGroundCount": 1341,
+      "insideOriginalCount": 309,
+      "insideHighCount": 292,
+      "footprintArea": 69.90861712530395,
+      "insideHighDensity_per_m2": 4.17688136323195,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84795-osm-67527776",
+      "shortId": "OSM 67527776",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84795-osm-67527776.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29608,
+      "uncompressedBytes": 102951,
+      "sha256": "e05b090e44fab447d5c7450a75ee4d835d108f498b336e2a56eb9a141e2e4da1",
+      "targetLngLat": [
+        -77.07300830737805,
+        38.913771950024
+      ],
+      "rawCount": 2037,
+      "groundCount": 174,
+      "nonGroundCount": 1863,
+      "insideOriginalCount": 404,
+      "insideHighCount": 397,
+      "footprintArea": 89.58891005738438,
+      "insideHighDensity_per_m2": 4.431352047320473,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84920-osm-67527952",
+      "shortId": "OSM 67527952",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84920-osm-67527952.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 19875,
+      "uncompressedBytes": 69840,
+      "sha256": "77ea42ac83d5c9106d9d0bff8c95a21844f44704e4df0aa9c61dcac0d968cff5",
+      "targetLngLat": [
+        -77.07193949926892,
+        38.91377945000525
+      ],
+      "rawCount": 1338,
+      "groundCount": 164,
+      "nonGroundCount": 1174,
+      "insideOriginalCount": 227,
+      "insideHighCount": 216,
+      "footprintArea": 51.7142124803974,
+      "insideHighDensity_per_m2": 4.176801494983147,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84930-osm-67527281",
+      "shortId": "OSM 67527281",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84930-osm-67527281.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 33248,
+      "uncompressedBytes": 112383,
+      "sha256": "9842e5fe58de5acd7ff6e4672613b0fe1c8849b64957b40c904d94353b6114d0",
+      "targetLngLat": [
+        -77.07095150364404,
+        38.91383615009507
+      ],
+      "rawCount": 2294,
+      "groundCount": 287,
+      "nonGroundCount": 2007,
+      "insideOriginalCount": 469,
+      "insideHighCount": 444,
+      "footprintArea": 84.32464654262529,
+      "insideHighDensity_per_m2": 5.265364495486646,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row87181-osm-67527404",
+      "shortId": "OSM 67527404",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row87181-osm-67527404.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 25087,
+      "uncompressedBytes": 85379,
+      "sha256": "d6523767eb5ec9042d39480bec1a9a6dc8e09ac447a376e9e74fb148dd80d76d",
+      "targetLngLat": [
+        -77.07072597458743,
+        38.91432204998925
+      ],
+      "rawCount": 1715,
+      "groundCount": 225,
+      "nonGroundCount": 1490,
+      "insideOriginalCount": 266,
+      "insideHighCount": 249,
+      "footprintArea": 50.11736793360266,
+      "insideHighDensity_per_m2": 4.968337529813705,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84952-osm-67527583",
+      "shortId": "OSM 67527583",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84952-osm-67527583.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29665,
+      "uncompressedBytes": 103219,
+      "sha256": "4bcf9c288d4f37885bfa1ea4c4c9d6d60dd85f9eef73d79ce595c7952a857741",
+      "targetLngLat": [
+        -77.069892300484,
+        38.9138476288904
+      ],
+      "rawCount": 2030,
+      "groundCount": 321,
+      "nonGroundCount": 1709,
+      "insideOriginalCount": 462,
+      "insideHighCount": 433,
+      "footprintArea": 87.82922482865646,
+      "insideHighDensity_per_m2": 4.930021878762193,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84682-osm-67521500",
+      "shortId": "OSM 67521500",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84682-osm-67521500.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 250357,
+      "uncompressedBytes": 944922,
+      "sha256": "6dbbeeb3b28516e0390b0a6d59a8e3c219e349d4fefc335b6f8c4df1c6a89034",
+      "targetLngLat": [
+        -77.07372050397004,
+        38.91066109763354
+      ],
+      "rawCount": 17980,
+      "groundCount": 3034,
+      "nonGroundCount": 14946,
+      "insideOriginalCount": 6100,
+      "insideHighCount": 5766,
+      "footprintArea": 643.4437189118238,
+      "insideHighDensity_per_m2": 8.961156711190402,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "shortId": "OSM 67521493",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84594-osm-67521493.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 130688,
+      "uncompressedBytes": 524725,
+      "sha256": "268904ca25b79579423e4f109118faf88e139feef62679c016895708719bced8",
+      "targetLngLat": [
+        -77.07095109357071,
+        38.910743541236855
+      ],
+      "rawCount": 9505,
+      "groundCount": 1839,
+      "nonGroundCount": 7666,
+      "insideOriginalCount": 4877,
+      "insideHighCount": 4733,
+      "footprintArea": 990.0298542491256,
+      "insideHighDensity_per_m2": 4.780663916028753,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85200-osm-67521375",
+      "shortId": "OSM 67521375",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85200-osm-67521375.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 65432,
+      "uncompressedBytes": 242476,
+      "sha256": "f2d809afcf0a7bd21aeedbcf79a4b036a0e7a54d5f7faa54bc7bc8d26a925e70",
+      "targetLngLat": [
+        -77.06937047678156,
+        38.91036720002078
+      ],
+      "rawCount": 4528,
+      "groundCount": 843,
+      "nonGroundCount": 3685,
+      "insideOriginalCount": 1729,
+      "insideHighCount": 1646,
+      "footprintArea": 275.0823829045823,
+      "insideHighDensity_per_m2": 5.983661994708499,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "shortId": "OSM 67521446",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84656-osm-67521446.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29728,
+      "uncompressedBytes": 106100,
+      "sha256": "e24a287f07e6dfe97a026b77683bd2b279462e1ffe4b895399a3d1e66a1d5222",
+      "targetLngLat": [
+        -77.07282871069589,
+        38.91160430001552
+      ],
+      "rawCount": 2005,
+      "groundCount": 293,
+      "nonGroundCount": 1712,
+      "insideOriginalCount": 431,
+      "insideHighCount": 423,
+      "footprintArea": 86.69461927511611,
+      "insideHighDensity_per_m2": 4.8791955433549425,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "shortId": "OSM 66346451",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84665-osm-66346451.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 19705,
+      "uncompressedBytes": 71197,
+      "sha256": "f63fcf938c05ba4f940d3578f2016bbd5c45dfaa8ef874cb2bb3b12979cf56fc",
+      "targetLngLat": [
+        -77.07229400118251,
+        38.91202005000652
+      ],
+      "rawCount": 1352,
+      "groundCount": 637,
+      "nonGroundCount": 715,
+      "insideOriginalCount": 251,
+      "insideHighCount": 217,
+      "footprintArea": 52.49839316147829,
+      "insideHighDensity_per_m2": 4.133459843857239,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84895-osm-66348089",
+      "shortId": "OSM 66348089",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84895-osm-66348089.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28813,
+      "uncompressedBytes": 101570,
+      "sha256": "8f90258e355ffd3178b76ea829cf196fb40d49f5f440e91812fc7d041a393451",
+      "targetLngLat": [
+        -77.07084622527015,
+        38.912147900008925
+      ],
+      "rawCount": 1998,
+      "groundCount": 199,
+      "nonGroundCount": 1799,
+      "insideOriginalCount": 474,
+      "insideHighCount": 454,
+      "footprintArea": 90.39107704016209,
+      "insideHighDensity_per_m2": 5.022619653024835,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "shortId": "OSM 67521427",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84605-osm-67521427.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29098,
+      "uncompressedBytes": 102424,
+      "sha256": "5ff021e7224befed8a968db5836f38512d83851ce70077e1db62867c6333d12b",
+      "targetLngLat": [
+        -77.07028899202399,
+        38.91168790034341
+      ],
+      "rawCount": 1977,
+      "groundCount": 177,
+      "nonGroundCount": 1800,
+      "insideOriginalCount": 409,
+      "insideHighCount": 394,
+      "footprintArea": 83.41983923187955,
+      "insideHighDensity_per_m2": 4.723097090906761,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85168-osm-66348086",
+      "shortId": "OSM 66348086",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85168-osm-66348086.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27728,
+      "uncompressedBytes": 98546,
+      "sha256": "5f0e46f3261d0f260e61f1e1db42a544857d025649d38a2093254598f0c9e4b9",
+      "targetLngLat": [
+        -77.06944966390579,
+        38.91206985004855
+      ],
+      "rawCount": 1912,
+      "groundCount": 204,
+      "nonGroundCount": 1708,
+      "insideOriginalCount": 473,
+      "insideHighCount": 448,
+      "footprintArea": 88.0238317170002,
+      "insideHighDensity_per_m2": 5.08953076980716,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84835-osm-67527545",
+      "shortId": "OSM 67527545",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84835-osm-67527545.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27419,
+      "uncompressedBytes": 96646,
+      "sha256": "4a099989218780087125e3c65abfc754a30e08597d73809e6962748ecd3a13d1",
+      "targetLngLat": [
+        -77.07366075064103,
+        38.91287010000597
+      ],
+      "rawCount": 1925,
+      "groundCount": 265,
+      "nonGroundCount": 1660,
+      "insideOriginalCount": 397,
+      "insideHighCount": 374,
+      "footprintArea": 90.04382248233452,
+      "insideHighDensity_per_m2": 4.153533131863368,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84839-osm-67528090",
+      "shortId": "OSM 67528090",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84839-osm-67528090.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27274,
+      "uncompressedBytes": 95517,
+      "sha256": "a28a10a566e1d9a9fbd18295942641ef47d9f59e27cf24ea6dc5049698471dbd",
+      "targetLngLat": [
+        -77.07330517398151,
+        38.91287974999144
+      ],
+      "rawCount": 1833,
+      "groundCount": 256,
+      "nonGroundCount": 1577,
+      "insideOriginalCount": 403,
+      "insideHighCount": 386,
+      "footprintArea": 90.80453116681042,
+      "insideHighDensity_per_m2": 4.250889190660622,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84851-osm-66346781",
+      "shortId": "OSM 66346781",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84851-osm-66346781.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28629,
+      "uncompressedBytes": 98200,
+      "sha256": "55a2e57f16746917c57d60edd4ec2d4c514fc7f0e6ad44bbfec10daf22e001d2",
+      "targetLngLat": [
+        -77.07246530281796,
+        38.912297700021234
+      ],
+      "rawCount": 1994,
+      "groundCount": 201,
+      "nonGroundCount": 1793,
+      "insideOriginalCount": 434,
+      "insideHighCount": 415,
+      "footprintArea": 85.95727475065351,
+      "insideHighDensity_per_m2": 4.82797996101947,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84883-osm-66346836",
+      "shortId": "OSM 66346836",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84883-osm-66346836.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26175,
+      "uncompressedBytes": 90880,
+      "sha256": "e3e80f305fb435d7683ba215fe5dfb734f30efdfaf84c403cd3fc22e1de58a74",
+      "targetLngLat": [
+        -77.0712221450397,
+        38.91232550002571
+      ],
+      "rawCount": 1810,
+      "groundCount": 121,
+      "nonGroundCount": 1689,
+      "insideOriginalCount": 418,
+      "insideHighCount": 411,
+      "footprintArea": 84.85039612438322,
+      "insideHighDensity_per_m2": 4.8438194607543155,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85127-osm-66348319",
+      "shortId": "OSM 66348319",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85127-osm-66348319.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29122,
+      "uncompressedBytes": 103722,
+      "sha256": "2229ca39af9e98991b0095d41b417d7a921557639cc1084de82e94bfe7cbd468",
+      "targetLngLat": [
+        -77.07013500561128,
+        38.91247329967615
+      ],
+      "rawCount": 2043,
+      "groundCount": 174,
+      "nonGroundCount": 1869,
+      "insideOriginalCount": 499,
+      "insideHighCount": 491,
+      "footprintArea": 109.28334050580102,
+      "insideHighDensity_per_m2": 4.492908047351797,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85135-osm-66348447",
+      "shortId": "OSM 66348447",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85135-osm-66348447.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28012,
+      "uncompressedBytes": 97618,
+      "sha256": "25efcf1a11e1d983198ccac65359ea095c07268041854992a59041c4315d3479",
+      "targetLngLat": [
+        -77.0694394566852,
+        38.91235960002461
+      ],
+      "rawCount": 1977,
+      "groundCount": 274,
+      "nonGroundCount": 1703,
+      "insideOriginalCount": 430,
+      "insideHighCount": 408,
+      "footprintArea": 83.62116459277347,
+      "insideHighDensity_per_m2": 4.879147545802768,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84818-osm-67527268",
+      "shortId": "OSM 67527268",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84818-osm-67527268.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26068,
+      "uncompressedBytes": 93497,
+      "sha256": "4b77ff86598464afbab96ef41012ed657f8a3ebcd19eedf7998d4f39b27bf518",
+      "targetLngLat": [
+        -77.07390543519922,
+        38.91333732174106
+      ],
+      "rawCount": 1793,
+      "groundCount": 330,
+      "nonGroundCount": 1463,
+      "insideOriginalCount": 392,
+      "insideHighCount": 381,
+      "footprintArea": 89.10304956292283,
+      "insideHighDensity_per_m2": 4.275947926237309,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84801-osm-67528138",
+      "shortId": "OSM 67528138",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84801-osm-67528138.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27033,
+      "uncompressedBytes": 93412,
+      "sha256": "695dcadb1923a684f0392240ac390528321ad56737d3d1d0f1b1e3f2a0828592",
+      "targetLngLat": [
+        -77.07295268812432,
+        38.91335526955401
+      ],
+      "rawCount": 1829,
+      "groundCount": 150,
+      "nonGroundCount": 1679,
+      "insideOriginalCount": 352,
+      "insideHighCount": 334,
+      "footprintArea": 72.75188060460752,
+      "insideHighDensity_per_m2": 4.590946615046637,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84768-osm-67527772",
+      "shortId": "OSM 67527772",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84768-osm-67527772.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 20047,
+      "uncompressedBytes": 73433,
+      "sha256": "3d567f764bf65b858c5030cb025e4e7ae4b8d3daeff8ae0825c1b0591a053ded",
+      "targetLngLat": [
+        -77.073789520767,
+        38.91375044986596
+      ],
+      "rawCount": 1315,
+      "groundCount": 385,
+      "nonGroundCount": 930,
+      "insideOriginalCount": 253,
+      "insideHighCount": 219,
+      "footprintArea": 53.623014711247066,
+      "insideHighDensity_per_m2": 4.0840672830367035,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84784-osm-67528002",
+      "shortId": "OSM 67528002",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84784-osm-67528002.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 23582,
+      "uncompressedBytes": 84651,
+      "sha256": "eef7f29734d9e5e922331f2a92aee40bb0e406646866d0e01bcad775cc1fd543",
+      "targetLngLat": [
+        -77.07301385270719,
+        38.913990700024826
+      ],
+      "rawCount": 1588,
+      "groundCount": 311,
+      "nonGroundCount": 1277,
+      "insideOriginalCount": 359,
+      "insideHighCount": 344,
+      "footprintArea": 82.48986153455729,
+      "insideHighDensity_per_m2": 4.170209448780428,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84788-osm-67528339",
+      "shortId": "OSM 67528339",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84788-osm-67528339.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26055,
+      "uncompressedBytes": 91100,
+      "sha256": "e4c999cc1003e1fd3509bc8ef5a6f28514b7981b36968283dfe7af89b7b2a3fd",
+      "targetLngLat": [
+        -77.07248229790697,
+        38.91405956004065
+      ],
+      "rawCount": 1742,
+      "groundCount": 127,
+      "nonGroundCount": 1615,
+      "insideOriginalCount": 374,
+      "insideHighCount": 364,
+      "footprintArea": 81.41267040016427,
+      "insideHighDensity_per_m2": 4.471048526118184,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84914-osm-67527576",
+      "shortId": "OSM 67527576",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84914-osm-67527576.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27246,
+      "uncompressedBytes": 96605,
+      "sha256": "1f4fcf2298e3cc7483f34c1817cf2913a71e9e21cf4c13a51ad820a1deecd1d3",
+      "targetLngLat": [
+        -77.07160036194252,
+        38.9137809684414
+      ],
+      "rawCount": 1898,
+      "groundCount": 182,
+      "nonGroundCount": 1716,
+      "insideOriginalCount": 383,
+      "insideHighCount": 353,
+      "footprintArea": 79.20275753049,
+      "insideHighDensity_per_m2": 4.456915529287079,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84932-osm-67528247",
+      "shortId": "OSM 67528247",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84932-osm-67528247.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 25635,
+      "uncompressedBytes": 90287,
+      "sha256": "274acc84474ca4bf0df8886da0722a47344395b587df7789b2a58b20665c9ebd",
+      "targetLngLat": [
+        -77.07081123074877,
+        38.91385704965378
+      ],
+      "rawCount": 1772,
+      "groundCount": 281,
+      "nonGroundCount": 1491,
+      "insideOriginalCount": 374,
+      "insideHighCount": 350,
+      "footprintArea": 80.65484971698287,
+      "insideHighDensity_per_m2": 4.339478670261575,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85744-osm-67527324",
+      "shortId": "OSM 67527324",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85744-osm-67527324.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 52821,
+      "uncompressedBytes": 219475,
+      "sha256": "f24cca652395b71dc0d46df791b0fc4d13399eca34ef9f119bdebeee3ac33565",
+      "targetLngLat": [
+        -77.06965207193035,
+        38.91439795002159
+      ],
+      "rawCount": 4401,
+      "groundCount": 536,
+      "nonGroundCount": 3865,
+      "insideOriginalCount": 1050,
+      "insideHighCount": 996,
+      "footprintArea": 85.40716995707771,
+      "insideHighDensity_per_m2": 11.661784373613486,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84672-osm-67521370",
+      "shortId": "OSM 67521370",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84672-osm-67521370.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28741,
+      "uncompressedBytes": 100245,
+      "sha256": "1933258d9dc81b3fd94079a976472bf1a8b5915a85ec65b497917c816fbb4bef",
+      "targetLngLat": [
+        -77.07281563717271,
+        38.91197795003149
+      ],
+      "rawCount": 1932,
+      "groundCount": 180,
+      "nonGroundCount": 1752,
+      "insideOriginalCount": 432,
+      "insideHighCount": 419,
+      "footprintArea": 84.77470220066036,
+      "insideHighDensity_per_m2": 4.942512201437567,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "shortId": "OSM 66347416",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84641-osm-66347416.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 20449,
+      "uncompressedBytes": 73693,
+      "sha256": "5e1ead23aa7caaac2fc439eb98ae3ff36c048c9bd7ce0f0e5516c2cf7be3f1f1",
+      "targetLngLat": [
+        -77.0721268743553,
+        38.91189939999245
+      ],
+      "rawCount": 1384,
+      "groundCount": 639,
+      "nonGroundCount": 745,
+      "insideOriginalCount": 312,
+      "insideHighCount": 262,
+      "footprintArea": 55.603599729871405,
+      "insideHighDensity_per_m2": 4.7119251500411075,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "shortId": "OSM 66348273",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84626-osm-66348273.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 31175,
+      "uncompressedBytes": 108070,
+      "sha256": "a3d6db509e3d550eb09ade409d5c8010a49b5723f950e2754bbeeeb153dfa67a",
+      "targetLngLat": [
+        -77.07168062803989,
+        38.91188000003705
+      ],
+      "rawCount": 2203,
+      "groundCount": 445,
+      "nonGroundCount": 1758,
+      "insideOriginalCount": 482,
+      "insideHighCount": 438,
+      "footprintArea": 90.92603357457808,
+      "insideHighDensity_per_m2": 4.8171022399294445,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "shortId": "OSM 67521395",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84602-osm-67521395.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28253,
+      "uncompressedBytes": 98029,
+      "sha256": "7083c0be3fc98751952f6ee0c8d2b30cb5a7fc27d51e58a13f1cfd047791733d",
+      "targetLngLat": [
+        -77.07076625994719,
+        38.9116734001229
+      ],
+      "rawCount": 1976,
+      "groundCount": 143,
+      "nonGroundCount": 1833,
+      "insideOriginalCount": 419,
+      "insideHighCount": 403,
+      "footprintArea": 87.79102782601487,
+      "insideHighDensity_per_m2": 4.5904463130181075,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85138-osm-66347524",
+      "shortId": "OSM 66347524",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85138-osm-66347524.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26215,
+      "uncompressedBytes": 96125,
+      "sha256": "a243daf8174ee0597364d94635182e8d9bfecd4c27ee2b63e273bf0703b041be",
+      "targetLngLat": [
+        -77.06945599529125,
+        38.91218130003052
+      ],
+      "rawCount": 1813,
+      "groundCount": 222,
+      "nonGroundCount": 1591,
+      "insideOriginalCount": 453,
+      "insideHighCount": 431,
+      "footprintArea": 87.2294637079029,
+      "insideHighDensity_per_m2": 4.94099105599513,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84841-osm-67527468",
+      "shortId": "OSM 67527468",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84841-osm-67527468.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27692,
+      "uncompressedBytes": 96916,
+      "sha256": "7df5b5e709ba443bfdd6236f925410165e0b7b988c26db494358cb9a845e2adf",
+      "targetLngLat": [
+        -77.07373069935542,
+        38.91286815000624
+      ],
+      "rawCount": 1940,
+      "groundCount": 253,
+      "nonGroundCount": 1687,
+      "insideOriginalCount": 380,
+      "insideHighCount": 356,
+      "footprintArea": 85.6482226177199,
+      "insideHighDensity_per_m2": 4.156536926504142,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84858-osm-67528086",
+      "shortId": "OSM 67528086",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84858-osm-67528086.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26122,
+      "uncompressedBytes": 94115,
+      "sha256": "74414d4a72c38551f22e7cc3e26901be0d00fd3804abd29c17b97fc9178381e5",
+      "targetLngLat": [
+        -77.0730963239304,
+        38.91288544996026
+      ],
+      "rawCount": 1817,
+      "groundCount": 270,
+      "nonGroundCount": 1547,
+      "insideOriginalCount": 404,
+      "insideHighCount": 377,
+      "footprintArea": 90.89545443368714,
+      "insideHighDensity_per_m2": 4.147622148421522,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84870-osm-66346835",
+      "shortId": "OSM 66346835",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84870-osm-66346835.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28798,
+      "uncompressedBytes": 99940,
+      "sha256": "79372d8687b0d4ddec76cf4d087e3a9230506bc2a215bb47d9fb6938e9c2b7df",
+      "targetLngLat": [
+        -77.07213098639387,
+        38.91243225044839
+      ],
+      "rawCount": 2000,
+      "groundCount": 189,
+      "nonGroundCount": 1811,
+      "insideOriginalCount": 418,
+      "insideHighCount": 404,
+      "footprintArea": 88.63218767966731,
+      "insideHighDensity_per_m2": 4.5581634683341985,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84884-osm-66347343",
+      "shortId": "OSM 66347343",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84884-osm-66347343.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27425,
+      "uncompressedBytes": 96483,
+      "sha256": "0fb01fecaf1594cc101f39f22240b9ab4616805d522c7c7b087dd3b306f09f85",
+      "targetLngLat": [
+        -77.07122539818067,
+        38.912402700026284
+      ],
+      "rawCount": 1927,
+      "groundCount": 123,
+      "nonGroundCount": 1804,
+      "insideOriginalCount": 427,
+      "insideHighCount": 416,
+      "footprintArea": 90.5626269495806,
+      "insideHighDensity_per_m2": 4.593506328295907,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85126-osm-66348470",
+      "shortId": "OSM 66348470",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85126-osm-66348470.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28964,
+      "uncompressedBytes": 105024,
+      "sha256": "b5ee646d855f090c8cad5b169e6771da7622ccf752fbfe9ee37d5adbb7059864",
+      "targetLngLat": [
+        -77.07021434217276,
+        38.912471350371405
+      ],
+      "rawCount": 2004,
+      "groundCount": 153,
+      "nonGroundCount": 1851,
+      "insideOriginalCount": 447,
+      "insideHighCount": 443,
+      "footprintArea": 90.89414754080116,
+      "insideHighDensity_per_m2": 4.873801141059641,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85133-osm-66348041",
+      "shortId": "OSM 66348041",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row85133-osm-66348041.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29703,
+      "uncompressedBytes": 101596,
+      "sha256": "5f4b47127a5fcb0bcffad7bb29c87d6c0e09cea084bdc276b4cd59a77ca104ac",
+      "targetLngLat": [
+        -77.06962149999919,
+        38.91240765000707
+      ],
+      "rawCount": 2048,
+      "groundCount": 543,
+      "nonGroundCount": 1505,
+      "insideOriginalCount": 429,
+      "insideHighCount": 396,
+      "footprintArea": 52.32134858613354,
+      "insideHighDensity_per_m2": 7.568612252952323,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84815-osm-67527269",
+      "shortId": "OSM 67527269",
+      "cohort": "legacy60",
+      "url": "./data/points/usbf-v1-dc-row84815-osm-67527269.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 20922,
+      "uncompressedBytes": 76459,
+      "sha256": "4239418c01472afa68121c244268c925328f02821314486cff8ca307e77a1b82",
+      "targetLngLat": [
+        -77.07383905532296,
+        38.91333755022277
+      ],
+      "rawCount": 1449,
+      "groundCount": 122,
+      "nonGroundCount": 1327,
+      "insideOriginalCount": 235,
+      "insideHighCount": 235,
+      "footprintArea": 55.180087293957406,
+      "insideHighDensity_per_m2": 4.258782679122983,
+      "availableChapters": [
+        "pilot",
+        "optimization",
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84675-osm-67521461",
+      "shortId": "OSM 67521461",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84675-osm-67521461.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28367,
+      "uncompressedBytes": 93962,
+      "sha256": "525ad39d12c2599ee2689527b359ee494242b4bb7c5d0fde36f01cefa69b2a5f",
+      "targetLngLat": [
+        -77.07281617137485,
+        38.91185405001053
+      ],
+      "rawCount": 1955,
+      "groundCount": 213,
+      "nonGroundCount": 1742,
+      "insideOriginalCount": 458,
+      "insideHighCount": 453,
+      "footprintArea": 88.40905399654167,
+      "insideHighDensity_per_m2": 5.1239095943467525,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84636-osm-66348287",
+      "shortId": "OSM 66348287",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84636-osm-66348287.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27713,
+      "uncompressedBytes": 94257,
+      "sha256": "8a39f98690e43f049dfb29a29595484bede0c8c50215f44545ed715e1d68de0a",
+      "targetLngLat": [
+        -77.07197675275829,
+        38.91205745002107
+      ],
+      "rawCount": 1929,
+      "groundCount": 173,
+      "nonGroundCount": 1756,
+      "insideOriginalCount": 434,
+      "insideHighCount": 422,
+      "footprintArea": 88.72156186616677,
+      "insideHighDensity_per_m2": 4.756453686383154,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "shortId": "OSM 67521499",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84598-osm-67521499.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26894,
+      "uncompressedBytes": 88198,
+      "sha256": "e9d5339faf406a7d76eba808e2ceb0fd8442150ba994a27447e865c59ea85821",
+      "targetLngLat": [
+        -77.0712149386967,
+        38.91166494989331
+      ],
+      "rawCount": 1870,
+      "groundCount": 131,
+      "nonGroundCount": 1739,
+      "insideOriginalCount": 422,
+      "insideHighCount": 397,
+      "footprintArea": 90.3722842046279,
+      "insideHighDensity_per_m2": 4.392939754638513,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "shortId": "OSM 67521511",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84604-osm-67521511.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 32085,
+      "uncompressedBytes": 107590,
+      "sha256": "babb7fa5cb0d0cffcbdffd890bd2e5430f83cb21385a520fd689ada9f3babc7e",
+      "targetLngLat": [
+        -77.07052619455996,
+        38.911680549800295
+      ],
+      "rawCount": 2255,
+      "groundCount": 128,
+      "nonGroundCount": 2127,
+      "insideOriginalCount": 461,
+      "insideHighCount": 428,
+      "footprintArea": 89.29531066215156,
+      "insideHighDensity_per_m2": 4.793084842039872,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85139-osm-66347673",
+      "shortId": "OSM 66347673",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row85139-osm-66347673.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 17544,
+      "uncompressedBytes": 59726,
+      "sha256": "339f037b6a35206b53dd89f1341aa235fa4918fed7aebed3c60d3e57a6004a3b",
+      "targetLngLat": [
+        -77.06963596524874,
+        38.912175899997756
+      ],
+      "rawCount": 1236,
+      "groundCount": 588,
+      "nonGroundCount": 648,
+      "insideOriginalCount": 216,
+      "insideHighCount": 176,
+      "footprintArea": 41.713394993769874,
+      "insideHighDensity_per_m2": 4.219268175757129,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84836-osm-67527989",
+      "shortId": "OSM 67527989",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84836-osm-67527989.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 24516,
+      "uncompressedBytes": 81310,
+      "sha256": "de7f2f108251aa4b76d48d72150c85a19728573c5cc2ed6a12c915bb0f2fa42a",
+      "targetLngLat": [
+        -77.07351689924839,
+        38.91287399997558
+      ],
+      "rawCount": 1703,
+      "groundCount": 275,
+      "nonGroundCount": 1428,
+      "insideOriginalCount": 394,
+      "insideHighCount": 376,
+      "footprintArea": 91.58648797223779,
+      "insideHighDensity_per_m2": 4.105409087353314,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84855-osm-66347419",
+      "shortId": "OSM 66347419",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84855-osm-66347419.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 32557,
+      "uncompressedBytes": 104089,
+      "sha256": "e9c38d1f75b31680af80a01ffec923effa3d061e7d78abed21ce7ad089200a17",
+      "targetLngLat": [
+        -77.0722907315396,
+        38.91242795023596
+      ],
+      "rawCount": 2306,
+      "groundCount": 361,
+      "nonGroundCount": 1945,
+      "insideOriginalCount": 408,
+      "insideHighCount": 383,
+      "footprintArea": 87.82068425907475,
+      "insideHighDensity_per_m2": 4.361159369586939,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84882-osm-66348126",
+      "shortId": "OSM 66348126",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84882-osm-66348126.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 30593,
+      "uncompressedBytes": 95984,
+      "sha256": "5ec9a21f8beb527e2ee20564409952a20b703a2a5bc59b6430228ee8dda47f51",
+      "targetLngLat": [
+        -77.07144975162436,
+        38.912329350038945
+      ],
+      "rawCount": 2199,
+      "groundCount": 544,
+      "nonGroundCount": 1655,
+      "insideOriginalCount": 455,
+      "insideHighCount": 422,
+      "footprintArea": 55.15365900945025,
+      "insideHighDensity_per_m2": 7.651350927192207,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "shortId": "OSM 66347628",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84898-osm-66347628.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 24109,
+      "uncompressedBytes": 76479,
+      "sha256": "2c73c3beafb1634709173d97500a4bb64361c7c0749242a2b9a5dfc11efa0701",
+      "targetLngLat": [
+        -77.07063700065672,
+        38.912310000008034
+      ],
+      "rawCount": 1709,
+      "groundCount": 628,
+      "nonGroundCount": 1081,
+      "insideOriginalCount": 333,
+      "insideHighCount": 293,
+      "footprintArea": 52.81945632615647,
+      "insideHighDensity_per_m2": 5.547198331439562,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "shortId": "OSM 67528254",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84764-osm-67528254.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 50110,
+      "uncompressedBytes": 170433,
+      "sha256": "382374e271cdff898de7b92e1febbe0f1bfed2e6b0f8092d4661d057d2cf9877",
+      "targetLngLat": [
+        -77.07431302561999,
+        38.91364474999821
+      ],
+      "rawCount": 3513,
+      "groundCount": 1099,
+      "nonGroundCount": 2414,
+      "insideOriginalCount": 1139,
+      "insideHighCount": 1076,
+      "footprintArea": 168.86367842948326,
+      "insideHighDensity_per_m2": 6.37200379624167,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84802-osm-67527677",
+      "shortId": "OSM 67527677",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84802-osm-67527677.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29486,
+      "uncompressedBytes": 99421,
+      "sha256": "aa3dfa9ba057e08de05cce60dc2d62c7adecaddf0dfa92e0f69a34d355cfc3aa",
+      "targetLngLat": [
+        -77.07308182485622,
+        38.91335416990973
+      ],
+      "rawCount": 2054,
+      "groundCount": 245,
+      "nonGroundCount": 1809,
+      "insideOriginalCount": 447,
+      "insideHighCount": 421,
+      "footprintArea": 93.75566049023254,
+      "insideHighDensity_per_m2": 4.490395543038809,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84767-osm-67527291",
+      "shortId": "OSM 67527291",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84767-osm-67527291.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 34051,
+      "uncompressedBytes": 111182,
+      "sha256": "e48a9c15694fa4506ddd3e70970ebfe0628cde980bde9ee230e5e1cb5eb3f48d",
+      "targetLngLat": [
+        -77.07398582518753,
+        38.91374645002122
+      ],
+      "rawCount": 2339,
+      "groundCount": 326,
+      "nonGroundCount": 2013,
+      "insideOriginalCount": 396,
+      "insideHighCount": 380,
+      "footprintArea": 71.30186032689392,
+      "insideHighDensity_per_m2": 5.32945421420751,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84771-osm-67528155",
+      "shortId": "OSM 67528155",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84771-osm-67528155.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 22008,
+      "uncompressedBytes": 73552,
+      "sha256": "cce8a58a8120087652a843d1ed6aae7899e0dd7f6d7d38a3db3f21fed7a7213f",
+      "targetLngLat": [
+        -77.07347278537078,
+        38.913760950454254
+      ],
+      "rawCount": 1522,
+      "groundCount": 253,
+      "nonGroundCount": 1269,
+      "insideOriginalCount": 276,
+      "insideHighCount": 250,
+      "footprintArea": 58.10910160227698,
+      "insideHighDensity_per_m2": 4.302252024323224,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84789-osm-67527797",
+      "shortId": "OSM 67527797",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84789-osm-67527797.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 23748,
+      "uncompressedBytes": 79330,
+      "sha256": "160d1154c7328c84a172c26467d0b7d13ad737b23691ef9021ddc2dd7db6bb3c",
+      "targetLngLat": [
+        -77.07246997822777,
+        38.913896850040224
+      ],
+      "rawCount": 1668,
+      "groundCount": 249,
+      "nonGroundCount": 1419,
+      "insideOriginalCount": 360,
+      "insideHighCount": 355,
+      "footprintArea": 81.20541191555624,
+      "insideHighDensity_per_m2": 4.371629816608244,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84910-osm-67527800",
+      "shortId": "OSM 67527800",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84910-osm-67527800.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 25624,
+      "uncompressedBytes": 82962,
+      "sha256": "3548bb63b1f9e0a2b696c02c0a73950fd5c9fba086043d27e8ea1a21c15459c2",
+      "targetLngLat": [
+        -77.07131886994993,
+        38.913799230888145
+      ],
+      "rawCount": 1808,
+      "groundCount": 320,
+      "nonGroundCount": 1488,
+      "insideOriginalCount": 381,
+      "insideHighCount": 353,
+      "footprintArea": 83.20164092724073,
+      "insideHighDensity_per_m2": 4.242704784016172,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84934-osm-67528320",
+      "shortId": "OSM 67528320",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84934-osm-67528320.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 25232,
+      "uncompressedBytes": 82254,
+      "sha256": "5be52197bf662a44980af0991307a3b59fcb59252e679bee54a3794a397561a5",
+      "targetLngLat": [
+        -77.07066969999833,
+        38.913861950006385
+      ],
+      "rawCount": 1812,
+      "groundCount": 210,
+      "nonGroundCount": 1602,
+      "insideOriginalCount": 406,
+      "insideHighCount": 378,
+      "footprintArea": 84.83477961208233,
+      "insideHighDensity_per_m2": 4.45571971458466,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84947-osm-67528340",
+      "shortId": "OSM 67528340",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84947-osm-67528340.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 20059,
+      "uncompressedBytes": 67880,
+      "sha256": "664a8cac7ec755ddf61435a00a87384cbcfaf60cf427bd90d05d59fa6e530f1d",
+      "targetLngLat": [
+        -77.06981985069689,
+        38.914100100007275
+      ],
+      "rawCount": 1391,
+      "groundCount": 427,
+      "nonGroundCount": 964,
+      "insideOriginalCount": 295,
+      "insideHighCount": 244,
+      "footprintArea": 58.47207079187699,
+      "insideHighDensity_per_m2": 4.172932422189788,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84676-osm-67521439",
+      "shortId": "OSM 67521439",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84676-osm-67521439.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28498,
+      "uncompressedBytes": 96618,
+      "sha256": "24c42f98fa335040e4afc4c0ff11e8e4d8c98c2add98084836d78caa88e559db",
+      "targetLngLat": [
+        -77.07282311347899,
+        38.91179090001464
+      ],
+      "rawCount": 1952,
+      "groundCount": 164,
+      "nonGroundCount": 1788,
+      "insideOriginalCount": 453,
+      "insideHighCount": 444,
+      "footprintArea": 87.73789144353391,
+      "insideHighDensity_per_m2": 5.060527358191052,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84637-osm-66347791",
+      "shortId": "OSM 66347791",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84637-osm-66347791.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26464,
+      "uncompressedBytes": 88320,
+      "sha256": "99a1c0b29c1b4f5d40b4a2e2f8d82a240871b78cd26434c9e0f33e942db206d8",
+      "targetLngLat": [
+        -77.07198350206585,
+        38.912108355633535
+      ],
+      "rawCount": 1824,
+      "groundCount": 137,
+      "nonGroundCount": 1687,
+      "insideOriginalCount": 417,
+      "insideHighCount": 407,
+      "footprintArea": 85.9662400947826,
+      "insideHighDensity_per_m2": 4.734416668115991,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "shortId": "OSM 67521357",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84599-osm-67521357.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27734,
+      "uncompressedBytes": 89620,
+      "sha256": "a17bfe109438fadfeaae4ebe94dae478249b58ef8bbecc3d84b31b98fc376545",
+      "targetLngLat": [
+        -77.07113395638784,
+        38.91166740024759
+      ],
+      "rawCount": 1925,
+      "groundCount": 288,
+      "nonGroundCount": 1637,
+      "insideOriginalCount": 435,
+      "insideHighCount": 404,
+      "footprintArea": 84.8626763498728,
+      "insideHighDensity_per_m2": 4.760632322440365,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "shortId": "OSM 67521423",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84607-osm-67521423.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 32400,
+      "uncompressedBytes": 106751,
+      "sha256": "c6fbcf57e666fea44046f8df32766587b738f6745b03db98871d7fcc0193f4d5",
+      "targetLngLat": [
+        -77.07044588734402,
+        38.91168225049745
+      ],
+      "rawCount": 2304,
+      "groundCount": 123,
+      "nonGroundCount": 2181,
+      "insideOriginalCount": 434,
+      "insideHighCount": 414,
+      "footprintArea": 85.26754775238084,
+      "insideHighDensity_per_m2": 4.8553055753669225,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85147-osm-66347474",
+      "shortId": "OSM 66347474",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row85147-osm-66347474.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 20447,
+      "uncompressedBytes": 66670,
+      "sha256": "4deb30648289b6f8d62241992bc8b939f6659e74229e235d76de1fb71dc77238",
+      "targetLngLat": [
+        -77.06980770367258,
+        38.91207245000486
+      ],
+      "rawCount": 1399,
+      "groundCount": 448,
+      "nonGroundCount": 951,
+      "insideOriginalCount": 251,
+      "insideHighCount": 219,
+      "footprintArea": 44.156279667732015,
+      "insideHighDensity_per_m2": 4.959656964942138,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84837-osm-67528241",
+      "shortId": "OSM 67528241",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84837-osm-67528241.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 24198,
+      "uncompressedBytes": 79650,
+      "sha256": "9b2c4b55f40f44119825c415aa6834dfd331d668c8abcde3854928554a37f669",
+      "targetLngLat": [
+        -77.07344777128748,
+        38.9128773001177
+      ],
+      "rawCount": 1673,
+      "groundCount": 275,
+      "nonGroundCount": 1398,
+      "insideOriginalCount": 358,
+      "insideHighCount": 340,
+      "footprintArea": 82.19981764746284,
+      "insideHighDensity_per_m2": 4.136262217249509,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84856-osm-66346901",
+      "shortId": "OSM 66346901",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84856-osm-66346901.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 34818,
+      "uncompressedBytes": 113867,
+      "sha256": "5bbdb11a3d48d284c9123e4adf9cec9ceb1f214bddac4bfa280fb942736aa049",
+      "targetLngLat": [
+        -77.07247044116829,
+        38.91242240002849
+      ],
+      "rawCount": 2481,
+      "groundCount": 353,
+      "nonGroundCount": 2128,
+      "insideOriginalCount": 427,
+      "insideHighCount": 408,
+      "footprintArea": 88.67735654079952,
+      "insideHighDensity_per_m2": 4.600949057522745,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84885-osm-66346485",
+      "shortId": "OSM 66346485",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84885-osm-66346485.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28266,
+      "uncompressedBytes": 90983,
+      "sha256": "eb72efdcac63b442ee3ef27e0f3df92a56a8fa7ae0e46bbd6602a26a55472a1f",
+      "targetLngLat": [
+        -77.07141585098698,
+        38.912450950007084
+      ],
+      "rawCount": 1992,
+      "groundCount": 227,
+      "nonGroundCount": 1765,
+      "insideOriginalCount": 416,
+      "insideHighCount": 388,
+      "footprintArea": 85.0116103537936,
+      "insideHighDensity_per_m2": 4.564082463386552,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84902-osm-66348357",
+      "shortId": "OSM 66348357",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84902-osm-66348357.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27307,
+      "uncompressedBytes": 86607,
+      "sha256": "2179f39510209c9032199a2f5dd37a7c80b11c09c5e9cd3e718a38181bb2b404",
+      "targetLngLat": [
+        -77.07047809794263,
+        38.91231264997956
+      ],
+      "rawCount": 1928,
+      "groundCount": 608,
+      "nonGroundCount": 1320,
+      "insideOriginalCount": 348,
+      "insideHighCount": 308,
+      "footprintArea": 53.1850633621602,
+      "insideHighDensity_per_m2": 5.791099615745387,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84770-osm-67527774",
+      "shortId": "OSM 67527774",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84770-osm-67527774.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 20715,
+      "uncompressedBytes": 69919,
+      "sha256": "2c3986ddbbd0b8e3cc95b75b269ac9447ab9b3582a305b78bba7ebcc8eb67838",
+      "targetLngLat": [
+        -77.07392098011938,
+        38.91375065017544
+      ],
+      "rawCount": 1390,
+      "groundCount": 209,
+      "nonGroundCount": 1181,
+      "insideOriginalCount": 236,
+      "insideHighCount": 223,
+      "footprintArea": 53.707785307105894,
+      "insideHighDensity_per_m2": 4.152098224212117,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84804-osm-67527675",
+      "shortId": "OSM 67527675",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84804-osm-67527675.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 23185,
+      "uncompressedBytes": 78286,
+      "sha256": "7f1663f6c8015c0a7bfe107d914a8d4412975d29281e0b2cd8ec4a044b822f2a",
+      "targetLngLat": [
+        -77.07314870365616,
+        38.91335616803109
+      ],
+      "rawCount": 1573,
+      "groundCount": 163,
+      "nonGroundCount": 1410,
+      "insideOriginalCount": 300,
+      "insideHighCount": 283,
+      "footprintArea": 67.79690209848262,
+      "insideHighDensity_per_m2": 4.1742320259546775,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row87270-osm-67527777",
+      "shortId": "OSM 67527777",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row87270-osm-67527777.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 20980,
+      "uncompressedBytes": 70141,
+      "sha256": "5d11b517b450d1a3e81927bf6552fd77979d6a55a0ba85c0ec2de159e1f75932",
+      "targetLngLat": [
+        -77.07368573658981,
+        38.91424929982464
+      ],
+      "rawCount": 1416,
+      "groundCount": 178,
+      "nonGroundCount": 1238,
+      "insideOriginalCount": 249,
+      "insideHighCount": 248,
+      "footprintArea": 54.57176063300268,
+      "insideHighDensity_per_m2": 4.544474965134626,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84775-osm-67528263",
+      "shortId": "OSM 67528263",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84775-osm-67528263.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 24067,
+      "uncompressedBytes": 80018,
+      "sha256": "db3607c38491adebc3db6b7842c1760b7234125e93fa68458f48f120b4151b09",
+      "targetLngLat": [
+        -77.0732766401563,
+        38.91376218182369
+      ],
+      "rawCount": 1657,
+      "groundCount": 400,
+      "nonGroundCount": 1257,
+      "insideOriginalCount": 347,
+      "insideHighCount": 311,
+      "footprintArea": 73.16080491477877,
+      "insideHighDensity_per_m2": 4.250910037994631,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84790-osm-67528237",
+      "shortId": "OSM 67528237",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84790-osm-67528237.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 23915,
+      "uncompressedBytes": 80028,
+      "sha256": "5d475c63ed259621eb289f937d71ade6d29637cf54eb027b98694eac6a669f8f",
+      "targetLngLat": [
+        -77.07247199957878,
+        38.91394810008949
+      ],
+      "rawCount": 1688,
+      "groundCount": 239,
+      "nonGroundCount": 1449,
+      "insideOriginalCount": 368,
+      "insideHighCount": 357,
+      "footprintArea": 81.72130414087852,
+      "insideHighDensity_per_m2": 4.3685059086253855,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84911-osm-67527799",
+      "shortId": "OSM 67527799",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84911-osm-67527799.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 23219,
+      "uncompressedBytes": 78543,
+      "sha256": "e0887d3f2d609e64aa5b0c8d2e55cd341388bab4717f2b18ccdcc453ecd8480d",
+      "targetLngLat": [
+        -77.07146278674172,
+        38.9137879500138
+      ],
+      "rawCount": 1636,
+      "groundCount": 328,
+      "nonGroundCount": 1308,
+      "insideOriginalCount": 371,
+      "insideHighCount": 347,
+      "footprintArea": 83.17978812954516,
+      "insideHighDensity_per_m2": 4.17168650946283,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84935-osm-67528131",
+      "shortId": "OSM 67528131",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84935-osm-67528131.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 24647,
+      "uncompressedBytes": 80551,
+      "sha256": "251d7a6f989d227e1d95cd1da71d746d753948eead4ca248b91cb7fa649d6308",
+      "targetLngLat": [
+        -77.07059986566232,
+        38.913862179362134
+      ],
+      "rawCount": 1727,
+      "groundCount": 212,
+      "nonGroundCount": 1515,
+      "insideOriginalCount": 385,
+      "insideHighCount": 360,
+      "footprintArea": 81.24923852860022,
+      "insideHighDensity_per_m2": 4.430810756131306,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84948-osm-67527356",
+      "shortId": "OSM 67527356",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84948-osm-67527356.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 44074,
+      "uncompressedBytes": 152788,
+      "sha256": "2415d9792f54014e1b524542f736b90a65c7c4ad200ce37ed8086f4a9d0c0688",
+      "targetLngLat": [
+        -77.06961644000545,
+        38.91402427368791
+      ],
+      "rawCount": 3197,
+      "groundCount": 753,
+      "nonGroundCount": 2444,
+      "insideOriginalCount": 992,
+      "insideHighCount": 935,
+      "footprintArea": 190.44466157134923,
+      "insideHighDensity_per_m2": 4.90956266395373,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84677-osm-67521434",
+      "shortId": "OSM 67521434",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84677-osm-67521434.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 30122,
+      "uncompressedBytes": 99782,
+      "sha256": "e488d4aaff6ba3b96614a242502e2491901e967ab55ade1c1f17c21d0b58fcee",
+      "targetLngLat": [
+        -77.07283713831441,
+        38.911713703215995
+      ],
+      "rawCount": 2093,
+      "groundCount": 210,
+      "nonGroundCount": 1883,
+      "insideOriginalCount": 469,
+      "insideHighCount": 460,
+      "footprintArea": 90.97137455066391,
+      "insideHighDensity_per_m2": 5.056535665994759,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84638-osm-66347039",
+      "shortId": "OSM 66347039",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84638-osm-66347039.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 18743,
+      "uncompressedBytes": 64284,
+      "sha256": "2f286e6088c293c47d61bb75e0001a5d552d1cb0a662b75c5913757891c691ed",
+      "targetLngLat": [
+        -77.07213192604291,
+        38.91202575002272
+      ],
+      "rawCount": 1279,
+      "groundCount": 574,
+      "nonGroundCount": 705,
+      "insideOriginalCount": 260,
+      "insideHighCount": 221,
+      "footprintArea": 55.47800544550799,
+      "insideHighDensity_per_m2": 3.983560660216457,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "shortId": "OSM 67521521",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84600-osm-67521521.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27145,
+      "uncompressedBytes": 89438,
+      "sha256": "8109ed9c7ab4b0f504f68c28cea320e574b088999d8a45b1208eef2940967b33",
+      "targetLngLat": [
+        -77.07092497676446,
+        38.91167147564979
+      ],
+      "rawCount": 1916,
+      "groundCount": 408,
+      "nonGroundCount": 1508,
+      "insideOriginalCount": 408,
+      "insideHighCount": 387,
+      "footprintArea": 86.520366076261,
+      "insideHighDensity_per_m2": 4.472935304722237,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "shortId": "OSM 67521442",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84608-osm-67521442.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27805,
+      "uncompressedBytes": 91485,
+      "sha256": "4700c0fec142663b01c405e298eac618f8587aa4384d37d8003b9029da3aafce",
+      "targetLngLat": [
+        -77.0706045670642,
+        38.91167967742653
+      ],
+      "rawCount": 1940,
+      "groundCount": 156,
+      "nonGroundCount": 1784,
+      "insideOriginalCount": 415,
+      "insideHighCount": 396,
+      "footprintArea": 81.06712803337663,
+      "insideHighDensity_per_m2": 4.88484062044187,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85149-osm-66346598",
+      "shortId": "OSM 66346598",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row85149-osm-66346598.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 21476,
+      "uncompressedBytes": 69943,
+      "sha256": "cf3caf294b9645a085b91f2eb0bb10ff85d9fb26f03f4a1a8dc4756e7452ec94",
+      "targetLngLat": [
+        -77.06979740124184,
+        38.911947800006935
+      ],
+      "rawCount": 1486,
+      "groundCount": 614,
+      "nonGroundCount": 872,
+      "insideOriginalCount": 232,
+      "insideHighCount": 200,
+      "footprintArea": 45.3318951787076,
+      "insideHighDensity_per_m2": 4.411904669142094,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84845-osm-67521465",
+      "shortId": "OSM 67521465",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84845-osm-67521465.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 32718,
+      "uncompressedBytes": 104750,
+      "sha256": "968b69d222df6edcff8ce57ffd010d99510936fe0493c2aeb1bc6c66d3294414",
+      "targetLngLat": [
+        -77.07282124912352,
+        38.91241540101856
+      ],
+      "rawCount": 2312,
+      "groundCount": 246,
+      "nonGroundCount": 2066,
+      "insideOriginalCount": 418,
+      "insideHighCount": 407,
+      "footprintArea": 87.8414967823751,
+      "insideHighDensity_per_m2": 4.633345456400081,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84868-osm-66347678",
+      "shortId": "OSM 66347678",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84868-osm-66347678.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29634,
+      "uncompressedBytes": 98591,
+      "sha256": "1d451e89bf6ccc24cf33e3f51af568d8078b9f88689e84bf8993d76bc7a336ba",
+      "targetLngLat": [
+        -77.07197311516865,
+        38.9124351497821
+      ],
+      "rawCount": 2099,
+      "groundCount": 160,
+      "nonGroundCount": 1939,
+      "insideOriginalCount": 422,
+      "insideHighCount": 404,
+      "footprintArea": 85.8381148782349,
+      "insideHighDensity_per_m2": 4.7065339281168,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84886-osm-66346988",
+      "shortId": "OSM 66346988",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84886-osm-66346988.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27575,
+      "uncompressedBytes": 88721,
+      "sha256": "fa062e873a84aee7d1142b5032b600c3447f80863c8674a456a4a91b1bf009bb",
+      "targetLngLat": [
+        -77.07149518254033,
+        38.91244650026342
+      ],
+      "rawCount": 1957,
+      "groundCount": 199,
+      "nonGroundCount": 1758,
+      "insideOriginalCount": 407,
+      "insideHighCount": 392,
+      "footprintArea": 87.78426541284814,
+      "insideHighDensity_per_m2": 4.4654927412837555,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84903-osm-66346373",
+      "shortId": "OSM 66346373",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84903-osm-66346373.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 30471,
+      "uncompressedBytes": 99205,
+      "sha256": "263b617487a4944f5fa7ab703a5174cebc49799a302243ad99b93b16332ff0cc",
+      "targetLngLat": [
+        -77.0703627284911,
+        38.91246130050329
+      ],
+      "rawCount": 2141,
+      "groundCount": 122,
+      "nonGroundCount": 2019,
+      "insideOriginalCount": 472,
+      "insideHighCount": 451,
+      "footprintArea": 86.01507911308933,
+      "insideHighDensity_per_m2": 5.243266699865991,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84809-osm-67527385",
+      "shortId": "OSM 67527385",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84809-osm-67527385.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 19781,
+      "uncompressedBytes": 68136,
+      "sha256": "666d3bfb48f1148b4670db5b6b2b41da9ceaf653a4315b2ec39ae8a88a0f6302",
+      "targetLngLat": [
+        -77.07364741438559,
+        38.91334354961803
+      ],
+      "rawCount": 1340,
+      "groundCount": 126,
+      "nonGroundCount": 1214,
+      "insideOriginalCount": 237,
+      "insideHighCount": 236,
+      "footprintArea": 54.6333867010562,
+      "insideHighDensity_per_m2": 4.3197029188644,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84807-osm-67527313",
+      "shortId": "OSM 67527313",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84807-osm-67527313.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28965,
+      "uncompressedBytes": 95642,
+      "sha256": "538b52f8882e9230def3514f7325b9110146df1f14cd9420047241faccea079d",
+      "targetLngLat": [
+        -77.07351761881914,
+        38.91334249860705
+      ],
+      "rawCount": 1993,
+      "groundCount": 131,
+      "nonGroundCount": 1862,
+      "insideOriginalCount": 360,
+      "insideHighCount": 343,
+      "footprintArea": 68.70512756981093,
+      "insideHighDensity_per_m2": 4.9923493650671045,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row87276-osm-67527778",
+      "shortId": "OSM 67527778",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row87276-osm-67527778.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 23980,
+      "uncompressedBytes": 80938,
+      "sha256": "22269a4a3b25e93ed8f5f110daf414ac5b243d6c43490997b8eb559fd65acced",
+      "targetLngLat": [
+        -77.07362217802269,
+        38.91425031901454
+      ],
+      "rawCount": 1622,
+      "groundCount": 180,
+      "nonGroundCount": 1442,
+      "insideOriginalCount": 289,
+      "insideHighCount": 285,
+      "footprintArea": 62.82843822092948,
+      "insideHighDensity_per_m2": 4.536162414189383,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84776-osm-67527307",
+      "shortId": "OSM 67527307",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84776-osm-67527307.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 21840,
+      "uncompressedBytes": 72721,
+      "sha256": "559e9a84945972262dc8b4e4799105697769da9a5c1cee8e327e8e29b8911851",
+      "targetLngLat": [
+        -77.07334532707318,
+        38.9137639500829
+      ],
+      "rawCount": 1497,
+      "groundCount": 151,
+      "nonGroundCount": 1346,
+      "insideOriginalCount": 295,
+      "insideHighCount": 282,
+      "footprintArea": 62.824711398542625,
+      "insideHighDensity_per_m2": 4.488679593147191,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84792-osm-67528037",
+      "shortId": "OSM 67528037",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84792-osm-67528037.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 22990,
+      "uncompressedBytes": 76778,
+      "sha256": "66e40787988dc21aad1bb73000a9d88db9ad421adac9f797fea10c455de24de9",
+      "targetLngLat": [
+        -77.07246714925316,
+        38.913840212186464
+      ],
+      "rawCount": 1610,
+      "groundCount": 303,
+      "nonGroundCount": 1307,
+      "insideOriginalCount": 353,
+      "insideHighCount": 342,
+      "footprintArea": 79.22696171615932,
+      "insideHighDensity_per_m2": 4.3167122983367525,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84912-osm-67528038",
+      "shortId": "OSM 67528038",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84912-osm-67528038.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 23946,
+      "uncompressedBytes": 79383,
+      "sha256": "e0e4402a9d28e4828b392145465c213d4cc6a7e171ea3f9b8af96b1dacfc33f7",
+      "targetLngLat": [
+        -77.07139292488908,
+        38.91381167836125
+      ],
+      "rawCount": 1698,
+      "groundCount": 268,
+      "nonGroundCount": 1430,
+      "insideOriginalCount": 389,
+      "insideHighCount": 360,
+      "footprintArea": 85.02050150985352,
+      "insideHighDensity_per_m2": 4.234272835455782,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84936-osm-67527798",
+      "shortId": "OSM 67527798",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84936-osm-67527798.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 24124,
+      "uncompressedBytes": 80649,
+      "sha256": "d9e675f5ece8ff3537fb00688b56cfbd5a9ef957e10145be75dd2d6a79832adc",
+      "targetLngLat": [
+        -77.07052896428362,
+        38.91386309957571
+      ],
+      "rawCount": 1692,
+      "groundCount": 279,
+      "nonGroundCount": 1413,
+      "insideOriginalCount": 387,
+      "insideHighCount": 376,
+      "footprintArea": 84.23643533171716,
+      "insideHighDensity_per_m2": 4.463626677925514,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84949-osm-67527327",
+      "shortId": "OSM 67527327",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84949-osm-67527327.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 30193,
+      "uncompressedBytes": 98936,
+      "sha256": "96ceb69c1dbcdf541513dc382a1e02d23a1a49b6b9caf454e9bc828b074cece3",
+      "targetLngLat": [
+        -77.06956635000003,
+        38.91385430002482
+      ],
+      "rawCount": 2139,
+      "groundCount": 146,
+      "nonGroundCount": 1993,
+      "insideOriginalCount": 493,
+      "insideHighCount": 433,
+      "footprintArea": 97.60671430078588,
+      "insideHighDensity_per_m2": 4.43617022765117,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84679-osm-67521529",
+      "shortId": "OSM 67521529",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84679-osm-67521529.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 569824,
+      "uncompressedBytes": 1817580,
+      "sha256": "7aed58714dbea386cec26f2304c3dc46d4ebec368d80bdf948feb98b61dcd6b0",
+      "targetLngLat": [
+        -77.07357250475104,
+        38.91185374483853
+      ],
+      "rawCount": 33547,
+      "groundCount": 5153,
+      "nonGroundCount": 28394,
+      "insideOriginalCount": 16432,
+      "insideHighCount": 15599,
+      "footprintArea": 1658.0313328673865,
+      "insideHighDensity_per_m2": 9.408145486022397,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84644-osm-67521445",
+      "shortId": "OSM 67521445",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84644-osm-67521445.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28604,
+      "uncompressedBytes": 96500,
+      "sha256": "4ed375780af79d08fd8550e0cbc1048540ec82768c02ff8211fa49ab64cbdd12",
+      "targetLngLat": [
+        -77.07201105228053,
+        38.91164237556913
+      ],
+      "rawCount": 1969,
+      "groundCount": 222,
+      "nonGroundCount": 1747,
+      "insideOriginalCount": 398,
+      "insideHighCount": 377,
+      "footprintArea": 86.05740791377357,
+      "insideHighDensity_per_m2": 4.380796600075852,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "shortId": "OSM 66346998",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84618-osm-66346998.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 24870,
+      "uncompressedBytes": 81884,
+      "sha256": "bd64f454686192aba7964ed8575502045e26724d83e761c9e9ddf6c1d49f3c0a",
+      "targetLngLat": [
+        -77.0708481083118,
+        38.91197269306741
+      ],
+      "rawCount": 1730,
+      "groundCount": 149,
+      "nonGroundCount": 1581,
+      "insideOriginalCount": 417,
+      "insideHighCount": 407,
+      "footprintArea": 83.36936957466992,
+      "insideHighDensity_per_m2": 4.881888900880674,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "shortId": "OSM 66347037",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84609-osm-66347037.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28961,
+      "uncompressedBytes": 96578,
+      "sha256": "05adc674dbb8d9b271375a6219ec485e6701fc7d79efa2cfe551d0cbb673d7b1",
+      "targetLngLat": [
+        -77.07034023056121,
+        38.91192150051745
+      ],
+      "rawCount": 1972,
+      "groundCount": 438,
+      "nonGroundCount": 1534,
+      "insideOriginalCount": 515,
+      "insideHighCount": 487,
+      "footprintArea": 92.4496122379612,
+      "insideHighDensity_per_m2": 5.267734371307946,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row85156-osm-67521428",
+      "shortId": "OSM 67521428",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row85156-osm-67521428.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 28026,
+      "uncompressedBytes": 93929,
+      "sha256": "cfb86e4aed5556dbbe506a5588870b007cc4d52da24c9eda24762a49ba524f06",
+      "targetLngLat": [
+        -77.06982712796349,
+        38.91170680037765
+      ],
+      "rawCount": 1967,
+      "groundCount": 247,
+      "nonGroundCount": 1720,
+      "insideOriginalCount": 362,
+      "insideHighCount": 360,
+      "footprintArea": 74.71126842392592,
+      "insideHighDensity_per_m2": 4.818550234715487,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84848-osm-67521374",
+      "shortId": "OSM 67521374",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84848-osm-67521374.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 27255,
+      "uncompressedBytes": 90043,
+      "sha256": "5b1e34899985f8c527bbd2b71ca904615919196157155f341cc05881f76358da",
+      "targetLngLat": [
+        -77.07281553175622,
+        38.91228910000352
+      ],
+      "rawCount": 1904,
+      "groundCount": 222,
+      "nonGroundCount": 1682,
+      "insideOriginalCount": 418,
+      "insideHighCount": 401,
+      "footprintArea": 86.63078345853953,
+      "insideHighDensity_per_m2": 4.628839587857518,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84876-osm-66348088",
+      "shortId": "OSM 66348088",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84876-osm-66348088.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29604,
+      "uncompressedBytes": 93295,
+      "sha256": "dd8a2d60ea8371e7f135efaed5d2e959efcd77ff428ff54daa63925a98dc8856",
+      "targetLngLat": [
+        -77.07192712577327,
+        38.912317250023825
+      ],
+      "rawCount": 2075,
+      "groundCount": 531,
+      "nonGroundCount": 1544,
+      "insideOriginalCount": 448,
+      "insideHighCount": 415,
+      "footprintArea": 53.72776911176226,
+      "insideHighDensity_per_m2": 7.724124914562046,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84887-osm-66346469",
+      "shortId": "OSM 66346469",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84887-osm-66346469.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 26484,
+      "uncompressedBytes": 86638,
+      "sha256": "2cf2976e802b0c0fcde19ea5ee0ba22c34936db87beae38af561041dd0d71057",
+      "targetLngLat": [
+        -77.07157522476408,
+        38.91244449941068
+      ],
+      "rawCount": 1855,
+      "groundCount": 163,
+      "nonGroundCount": 1692,
+      "insideOriginalCount": 422,
+      "insideHighCount": 400,
+      "footprintArea": 85.02943185937642,
+      "insideHighDensity_per_m2": 4.704253471451262,
+      "availableChapters": [
+        "overnight"
+      ]
+    },
+    {
+      "id": "usbf-v1-dc-row84908-osm-66348130",
+      "shortId": "OSM 66348130",
+      "cohort": "fresh60",
+      "url": "./data/points/usbf-v1-dc-row84908-osm-66348130.json.gz",
+      "encoding": "gzip",
+      "compressedBytes": 29442,
+      "uncompressedBytes": 94648,
+      "sha256": "f172d12b7b98ee3bedcd6e6b3aefd445b361ca8722914a09c15e332731544e94",
+      "targetLngLat": [
+        -77.07068239265057,
+        38.91244874970963
+      ],
+      "rawCount": 2077,
+      "groundCount": 328,
+      "nonGroundCount": 1749,
+      "insideOriginalCount": 410,
+      "insideHighCount": 395,
+      "footprintArea": 80.74649374862642,
+      "insideHighDensity_per_m2": 4.891853276374857,
+      "availableChapters": [
+        "overnight"
+      ]
+    }
+  ],
+  "notes": [
+    "真实原始回波，保留地面、未分类、重合回波和其他来源类别，不插值、不抽稀、不移动。",
+    "原足迹外5米用于观察周围环境；同一点可出现在相邻建筑的局部文件中。",
+    "重建输入候选仅表示该轮输入集合，不等同 Roofer 内部最终平面inliers或经认证的屋顶点。",
+    "旧NPZ以4位XYZ匹配；坐标重合时所有原始回波共享标记，匹配歧义在metadata报告。",
+    "新增轮次候选优先按source_indices精确匹配原始记录；测试点标记仍按原XYZ匹配。",
+    "高度采用原地面class2/18的8邻点中位数作可视化参考；高点包含树木等非屋面。",
+    "高点密度为原始回波记录数每平方米，非脉冲密度或认证屋面密度。"
+  ],
+  "gzipHandling": "GitHub static hosting may serve .gz as application/gzip without Content-Encoding; fetch arrayBuffer and use browser DecompressionStream(gzip) when gzip magic bytes are present.",
+  "allSourceFilesUnchanged": true
+}
