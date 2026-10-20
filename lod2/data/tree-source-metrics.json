@@ -1,0 +1,152 @@
+{
+  "source": "Official ISPRS Vaihingen3D, label5 roof;labels1/4/7/8 vegetation/mixed hedge, class4 is Fence/Hedge (mixed);others background",
+  "publisher": "https://isprs.org/resources/datasets/benchmarks/UrbanSemLab/default.aspx",
+  "model": "multiscale-feature MLP prototype",
+  "sourceCommonOpticalTest": {
+    "point": {
+      "records": 252365,
+      "macroF1": 0.7534807784436331,
+      "roofRetention": 0.99466726753793,
+      "vegetationOrHedgeRejection": 0.06857608334925631,
+      "tree8Rejection": 0.17286550432008918,
+      "threshold": 0.9800000000000002
+    },
+    "image": {
+      "records": 252365,
+      "macroF1": 0.805355215368515,
+      "roofRetention": 0.9978068198888388,
+      "vegetationOrHedgeRejection": 0.546084455484377,
+      "tree8Rejection": 0.7527794122201232,
+      "threshold": 0.9300000000000002
+    },
+    "fusion": {
+      "records": 252365,
+      "macroF1": 0.8664110162411468,
+      "roofRetention": 0.9982424515547544,
+      "vegetationOrHedgeRejection": 0.45391554451562294,
+      "tree8Rejection": 0.7520361710693382,
+      "threshold": 0.9300000000000002
+    }
+  },
+  "sourceFullPointTest": {
+    "records": 411722,
+    "confusion": [
+      [
+        87982,
+        18876,
+        2190
+      ],
+      [
+        11330,
+        150314,
+        23512
+      ],
+      [
+        3976,
+        33963,
+        79579
+      ]
+    ],
+    "classification": {
+      "roof": {
+        "precision": 0.8518124080241655,
+        "recall": 0.8068190154794219,
+        "f1-score": 0.8287054479692562,
+        "support": 109048
+      },
+      "vegetation": {
+        "precision": 0.7399053915029559,
+        "recall": 0.8118235433904384,
+        "f1-score": 0.7741978681925992,
+        "support": 185156
+      },
+      "other": {
+        "precision": 0.7558723796316524,
+        "recall": 0.6771643492911724,
+        "f1-score": 0.7143568867005687,
+        "support": 117518
+      },
+      "accuracy": 0.7720622167384789,
+      "macro avg": {
+        "precision": 0.7825300597195913,
+        "recall": 0.7652689693870109,
+        "f1-score": 0.772420067620808,
+        "support": 411722
+      },
+      "weighted avg": {
+        "precision": 0.7741023614207961,
+        "recall": 0.7720622167384789,
+        "f1-score": 0.7715542156710057,
+        "support": 411722
+      }
+    },
+    "vegetation_rejection": 0.12096286374732658,
+    "roof_retention": 0.987537598121928,
+    "threshold": 0.9800000000000002,
+    "tree8_rejection": 0.2909674325969092
+  },
+  "sourceFullFusionWithPointFallback": {
+    "records": 411722,
+    "confusion": [
+      [
+        94043,
+        11324,
+        3681
+      ],
+      [
+        7351,
+        159347,
+        18458
+      ],
+      [
+        5333,
+        17853,
+        94332
+      ]
+    ],
+    "classification": {
+      "roof": {
+        "precision": 0.8811547218604476,
+        "recall": 0.8624000440173135,
+        "f1-score": 0.8716765148881936,
+        "support": 109048
+      },
+      "vegetation": {
+        "precision": 0.8452345589951412,
+        "recall": 0.8606094320464905,
+        "f1-score": 0.8528527081995291,
+        "support": 185156
+      },
+      "other": {
+        "precision": 0.8099183487735144,
+        "recall": 0.8027025647134907,
+        "f1-score": 0.8062943129805248,
+        "support": 117518
+      },
+      "accuracy": 0.8445553067360986,
+      "macro avg": {
+        "precision": 0.8454358765430344,
+        "recall": 0.8419040135924316,
+        "f1-score": 0.8436078453560825,
+        "support": 411722
+      },
+      "weighted avg": {
+        "precision": 0.8446679910859958,
+        "recall": 0.8445553067360986,
+        "f1-score": 0.8445491659609277,
+        "support": 411722
+      }
+    },
+    "vegetation_rejection": 0.3279072781870423,
+    "roof_retention": 0.9897201232484777,
+    "tree8_rejection": 0.6358573378084313,
+    "thresholdByOpticalCoverage": {
+      "optical_present": 0.9300000000000002,
+      "optical_missing_point_fallback": 0.9800000000000002
+    }
+  },
+  "fullFusionFallbackUsesPointThreshold": true,
+  "sourceOfficialTestRecords": 411722,
+  "commonOpticalRecords": 252365,
+  "localSemanticAccuracyMeasured": false
+}

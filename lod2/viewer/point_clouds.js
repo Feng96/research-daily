@@ -4,10 +4,11 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
   let payload=null,activeId=null,requestToken=0,visibleCount=0,error=null,loading=false;
   const material=new THREE.PointsMaterial({size:3,sizeAttenuation:false,vertexColors:true,transparent:true,opacity:.95,depthWrite:false,depthTest:false,toneMapped:false});
   const cloud=new THREE.Points(new THREE.BufferGeometry(),material);cloud.name='original-3dep-observations';cloud.renderOrder=8;cloud.frustumCulled=false;cloud.visible=false;root.add(cloud);
+  if(chapter==='tree'){for(const [id,value,label]of [['point-mode','removed','本组剔除的候选点'],['point-color','vegetation','DL 植被／篱笆得分']]){const o=document.createElement('option');o.value=value;o.textContent=label;$(id).append(o);}}
   const enumValue=(key,values,fallback)=>values.includes(initialHash.get(key))?initialHash.get(key):fallback;
   $('show-points').checked=initialHash.get('points')!=='0';
-  $('point-mode').value=enumValue('pointMode',['inside','high','all','train','test'],'inside');
-  $('point-color').value=enumValue('pointColor',['height','split','class'],'height');
+  $('point-mode').value=enumValue('pointMode',['inside','high','all','train','test',...(chapter==='tree'?['removed']:[])],'inside');
+  $('point-color').value=enumValue('pointColor',['height','split','class',...(chapter==='tree'?['vegetation']:[])],'height');
   $('point-size').value=initialHash.has('pointSize')?Math.max(1,Math.min(6,+initialHash.get('pointSize')||3)):3;
   $('point-through').checked=initialHash.get('pointThrough')!=='0';
   if(initialHash.has('opacity'))$('opacity').value=Math.max(15,Math.min(100,+initialHash.get('opacity')||55));
@@ -34,15 +35,18 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     cloud.geometry.dispose();cloud.geometry=new THREE.BufferGeometry();visibleCount=0;
     if(!payload||payload.id!==getSelected()?.id){appearance();return;}
     const key=chapter+'/'+getGroup(),setId=payload.groupToTrainSet[key];
+    const originalCandidates=new Set(payload.trainSets[payload.groupToTrainSet['tree/global']]||[]);
+    const scoreKind=payload.groupToScoreModel?.[key]||'fusion',scores=payload.semanticScores?.[scoreKind]||[];
     const train=new Set(payload.trainSets[setId]||[]),test=new Set(payload.tests[chapter]||[]),mode=$('point-mode').value,colorMode=$('point-color').value;
     const indices=[];for(let i=0;i<payload.flags.length;i++){
       const f=payload.flags[i];
-      if(mode==='all'||mode==='inside'&&(f&1)&&(f&4)||mode==='high'&&(f&4)||mode==='train'&&train.has(i)||mode==='test'&&test.has(i))indices.push(i);
+      if(mode==='all'||mode==='inside'&&(f&1)&&(f&4)||mode==='high'&&(f&4)||mode==='train'&&train.has(i)||mode==='test'&&test.has(i)||mode==='removed'&&originalCandidates.has(i)&&!train.has(i))indices.push(i);
     }
     const positions=new Float32Array(indices.length*3),colors=new Float32Array(indices.length*3),c=new THREE.Color();
     for(let k=0;k<indices.length;k++){
       const i=indices[k],j=i*3;positions[k*3]=payload.positions[j];positions[k*3+1]=payload.positions[j+1];positions[k*3+2]=payload.positions[j+2];
       if(colorMode==='height'){const h=payload.heightAboveGround[i];c.setHSL((1-Math.max(0,Math.min(1,(h-2)/28)))*.68,.95,.57);}
+      else if(colorMode==='vegetation'){const p=scores[i];if(Number.isFinite(p)&&p>=0)c.setHSL((1-p)*.68,.95,.57);else c.set(payload.flags[i]&2?'#d6ab7a':'#bcc4cb');}
       else if(colorMode==='split')c.set(test.has(i)?'#ff56c7':train.has(i)?'#30ebf5':payload.flags[i]&2?'#d6ab7a':'#c5cdd7');
       else c.set(payload.flags[i]&2?'#d6ab7a':payload.classification[i]===17?'#c487ff':'#4ce9ce');
       colors[k*3]=c.r;colors[k*3+1]=c.g;colors[k*3+2]=c.b;
@@ -58,7 +62,7 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     $('point-ambiguity').hidden=!ambiguous;
     $('point-ambiguity').textContent=`旧实验中 ${fmt(ambiguous)} 个成员坐标存在重合回波，按原坐标标记全部匹配源记录；候选记录数与可视回波数可能不同。`;
     $('point-legend').dataset.mode=colorMode;
-    $('point-legend').textContent=colorMode==='height'?'离估计地面高度：蓝 ≤2 m → 绿 → 黄 → 红 ≥30 m':colorMode==='split'?'青：本组候选　粉：留出　灰：其他　棕：地面':'棕：原地面类 2/18　紫：原重叠未分类 17　青：其他类';
+    $('point-legend').textContent=colorMode==='vegetation'?({point:'点云',image:'光学',fusion:'融合'}[scoreKind]+'模型：蓝 低 → 红 高植被／篱笆得分 · 灰 未推理 · 棕 地面；非本地GT'):colorMode==='height'?'离估计地面高度：蓝 ≤2 m → 绿 → 黄 → 红 ≥30 m':colorMode==='split'?'青：本组候选　粉：留出　灰：其他　棕：地面':'棕：原地面类 2/18　紫：原重叠未分类 17　青：其他类';
     appearance();onHeight();
   }
   async function sync(){
@@ -69,7 +73,7 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     try{
       let promise=cache.get(b.id);
       if(!promise){promise=(async()=>{
-        const response=await fetch('../data/points/'+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw new Error('点云 HTTP '+response.status);
+        const response=await fetch('../data/'+(chapter==='tree'?'tree-points/':'points/')+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw new Error('点云 HTTP '+response.status);
         const bytes=new Uint8Array(await response.arrayBuffer());
         const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);
         const data=JSON.parse(text);if(data.id!==b.id||data.positions.length!==data.flags.length*3)throw new Error('点云清单不一致');return data;

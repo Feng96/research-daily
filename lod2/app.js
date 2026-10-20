@@ -18,7 +18,7 @@ function results(c){
   }table.append(body);
   $('metric-notes').textContent=(c.metricNotes||[]).join(' ');
 }
-const FIGURES={pilot:[],optimization:[['./figures/optimization.png','四组实验：共同支撑域、覆盖与结构检查。']],overnight:[['./figures/workflows.png','12配置完整比较；原60栋与新增60栋分别报告。'],['./figures/roof-cases.png','六个同点改善／退化／中间案例；真实NAIP航片与原始屋面叠加。'],['./figures/robustness.png','描述性空间分块区间与中位数，检查少数案例的影响。']]};
+const FIGURES={pilot:[],optimization:[['./figures/optimization.png','四组实验：共同支撑域、覆盖与结构检查。']],tree:[],overnight:[['./figures/workflows.png','12配置完整比较；原60栋与新增60栋分别报告。'],['./figures/roof-cases.png','六个同点改善／退化／中间案例；真实NAIP航片与原始屋面叠加。'],['./figures/robustness.png','描述性空间分块区间与中位数，检查少数案例的影响。']]};
 function loadChapter(id,options={}){
   const c=manifest.chapters.find(x=>x.id===id)||manifest.chapters[0];const prior=current;current=c;
   document.querySelectorAll('.chapter-link').forEach(a=>{const active=a.dataset.chapter===c.id;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
@@ -28,19 +28,19 @@ function loadChapter(id,options={}){
   $('downloads').replaceChildren(...c.downloads.map(item=>{const a=el('a',item.label+' ↓');a.href=item.url;a.download='';return a;}));
   const figures=FIGURES[c.id];$('evidence-section').hidden=!figures.length;$('figures').replaceChildren(...figures.map(([url,caption])=>{const fig=el('div',undefined,'figure-card'),link=el('a'),img=el('img');link.href=url;link.target='_blank';link.rel='noopener';img.src=url;img.alt=caption;img.loading='lazy';link.append(img);fig.append(link,el('p',caption+' 点击查看原图 ↗'));return fig;}));
   const state={...Object.fromEntries(params()),...selectedState,...options};delete state.chapter;if(prior?.id!==c.id&&state.group&&!c.groups.some(x=>x.id===state.group))delete state.group;
-  const url='./viewer/?chapter='+c.id+'&v=20261020-points#'+new URLSearchParams(state);$('viewer').src=url;$('open-viewer').href=url;
+  const url='./viewer/?chapter='+c.id+'&v=20261020-tree#'+new URLSearchParams(state);$('viewer').src=url;$('open-viewer').href=url;
   history.replaceState(null,'','#'+new URLSearchParams({chapter:c.id,...state}));
-  $('next-chapter').textContent=c.number===3?'回到第一章 ↑':'下一章 →';$('next-chapter').onclick=()=>{loadChapter(manifest.chapters[c.number%3].id);$('chapter').scrollIntoView({behavior:'smooth',block:'start'});};
+  $('next-chapter').textContent=c.number===manifest.chapters.length?'回到第一章 ↑':'下一章 →';$('next-chapter').onclick=()=>{loadChapter(manifest.chapters[c.number%manifest.chapters.length].id);$('chapter').scrollIntoView({behavior:'smooth',block:'start'});};
 }
 window.addEventListener('message',event=>{
   if(event.origin!==location.origin||event.source!==$('viewer').contentWindow)return;const message=event.data;
   if(message?.type==='lod2-height'&&Number.isFinite(message.height)){const target=Math.max(760,Math.min(2100,Math.ceil(message.height)));if(Math.abs($('viewer').getBoundingClientRect().height-target)>4)$('viewer').style.height=target+'px';}
-  if(message?.type==='lod2-selection'&&message.chapter===current?.id){selectedState={};for(const k of ['building','group','base','cohort','lng','lat','z','bearing','pitch','points','pointMode','pointColor','pointSize','pointThrough','opacity','models'])if(message[k]!==undefined)selectedState[k]=message[k];const hash=new URLSearchParams({chapter:current.id,...selectedState});history.replaceState(null,'','#'+hash);$('open-viewer').href='./viewer/?chapter='+current.id+'&v=20261020-points#'+new URLSearchParams(selectedState);}
+  if(message?.type==='lod2-selection'&&message.chapter===current?.id){selectedState={};for(const k of ['building','group','base','cohort','lng','lat','z','bearing','pitch','points','pointMode','pointColor','pointSize','pointThrough','opacity','models'])if(message[k]!==undefined)selectedState[k]=message[k];const hash=new URLSearchParams({chapter:current.id,...selectedState});history.replaceState(null,'','#'+hash);$('open-viewer').href='./viewer/?chapter='+current.id+'&v=20261020-tree#'+new URLSearchParams(selectedState);}
 });
 window.addEventListener('hashchange',()=>{if(manifest&&!changing){selectedState=Object.fromEntries(params());loadChapter(params().get('chapter'));}});
 try{
   const response=await fetch('./data/chapters.json');if(!response.ok)throw new Error('HTTP '+response.status);manifest=await response.json();
-  $('chapters').replaceChildren(...manifest.chapters.map(c=>{const a=el('a',undefined,'chapter-link');a.href='#chapter='+c.id;a.dataset.chapter=c.id;const label=el('div');label.append(el('strong',c.title),el('small',c.date+' · '+(c.id==='overnight'?'120栋 / 12组':c.id==='pilot'?'60栋 / 5方法':'60栋 / 4组')));a.append(el('span',String(c.number).padStart(2,'0')),label);a.onclick=e=>{e.preventDefault();loadChapter(c.id);};return a;}));
+  $('chapters').replaceChildren(...manifest.chapters.map(c=>{const a=el('a',undefined,'chapter-link');a.href='#chapter='+c.id;a.dataset.chapter=c.id;const label=el('div');label.append(el('strong',c.title),el('small',c.date+' · '+(c.id==='tree'?'120栋 / 6组':c.id==='overnight'?'120栋 / 12组':c.id==='pilot'?'60栋 / 5方法':'60栋 / 4组')));a.append(el('span',String(c.number).padStart(2,'0')),label);a.onclick=e=>{e.preventDefault();loadChapter(c.id);};return a;}));
   $('article').hidden=false;$('page-loading').hidden=true;loadChapter(params().get('chapter')||'pilot');
 }catch(error){$('page-loading').textContent='实验记录加载失败：'+error.message;console.error(error);}
 window.lod2Atlas={get current(){return current;},get manifest(){return manifest;},loadChapter};

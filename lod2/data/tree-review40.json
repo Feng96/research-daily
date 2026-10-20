@@ -1,0 +1,1642 @@
+[
+  {
+    "id": "usbf-v1-dc-row84575-osm-67521488",
+    "shortId": "OSM 67521488",
+    "cohort": "legacy60",
+    "latitude": 38.91043122680121,
+    "longitude": -77.07339071003106,
+    "original_candidates": 11321,
+    "geometry_candidates": 10753,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 10877,
+        "removed": 444,
+        "retained_fraction": 0.9607808497482555,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 11122,
+        "removed": 199,
+        "retained_fraction": 0.9824220475223037,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 11283,
+        "removed": 38,
+        "retained_fraction": 0.9966434060595354,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 10733,
+        "removed": 588,
+        "retained_fraction": 0.9480611253422843,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84598-osm-67521499",
+    "shortId": "OSM 67521499",
+    "cohort": "fresh60",
+    "latitude": 38.91166494989331,
+    "longitude": -77.0712149386967,
+    "original_candidates": 353,
+    "geometry_candidates": 338,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 353,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 353,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 353,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 338,
+        "removed": 15,
+        "retained_fraction": 0.9575070821529745,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84602-osm-67521395",
+    "shortId": "OSM 67521395",
+    "cohort": "legacy60",
+    "latitude": 38.9116734001229,
+    "longitude": -77.07076625994719,
+    "original_candidates": 337,
+    "geometry_candidates": 323,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 337,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 337,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 337,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 323,
+        "removed": 14,
+        "retained_fraction": 0.9584569732937686,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84608-osm-67521442",
+    "shortId": "OSM 67521442",
+    "cohort": "fresh60",
+    "latitude": 38.91167967742653,
+    "longitude": -77.0706045670642,
+    "original_candidates": 356,
+    "geometry_candidates": 330,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 356,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 356,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 356,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 330,
+        "removed": 26,
+        "retained_fraction": 0.9269662921348315,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84626-osm-66348273",
+    "shortId": "OSM 66348273",
+    "cohort": "legacy60",
+    "latitude": 38.91188000003705,
+    "longitude": -77.07168062803989,
+    "original_candidates": 360,
+    "geometry_candidates": 335,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 355,
+        "removed": 5,
+        "retained_fraction": 0.9861111111111112,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 360,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 360,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 335,
+        "removed": 25,
+        "retained_fraction": 0.9305555555555556,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84638-osm-66347039",
+    "shortId": "OSM 66347039",
+    "cohort": "fresh60",
+    "latitude": 38.91202575002272,
+    "longitude": -77.07213192604291,
+    "original_candidates": 200,
+    "geometry_candidates": 198,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 200,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 200,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 200,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 198,
+        "removed": 2,
+        "retained_fraction": 0.99,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84655-osm-67521498",
+    "shortId": "OSM 67521498",
+    "cohort": "legacy60",
+    "latitude": 38.91133400000857,
+    "longitude": -77.07179479849046,
+    "original_candidates": 114,
+    "geometry_candidates": 114,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 114,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 114,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 114,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 114,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84672-osm-67521370",
+    "shortId": "OSM 67521370",
+    "cohort": "legacy60",
+    "latitude": 38.91197795003149,
+    "longitude": -77.07281563717271,
+    "original_candidates": 327,
+    "geometry_candidates": 303,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 327,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 327,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 327,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 303,
+        "removed": 24,
+        "retained_fraction": 0.926605504587156,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84676-osm-67521439",
+    "shortId": "OSM 67521439",
+    "cohort": "fresh60",
+    "latitude": 38.91179090001464,
+    "longitude": -77.07282311347899,
+    "original_candidates": 377,
+    "geometry_candidates": 360,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 377,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 377,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 377,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 360,
+        "removed": 17,
+        "retained_fraction": 0.9549071618037135,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84681-osm-67521385",
+    "shortId": "OSM 67521385",
+    "cohort": "legacy60",
+    "latitude": 38.91107761627999,
+    "longitude": -77.07319512049006,
+    "original_candidates": 1793,
+    "geometry_candidates": 1702,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 1768,
+        "removed": 25,
+        "retained_fraction": 0.9860568878973787,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 1647,
+        "removed": 146,
+        "retained_fraction": 0.9185722253206916,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 1790,
+        "removed": 3,
+        "retained_fraction": 0.9983268265476855,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 1700,
+        "removed": 93,
+        "retained_fraction": 0.9481316229782487,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_1"
+  },
+  {
+    "id": "usbf-v1-dc-row84682-osm-67521500",
+    "shortId": "OSM 67521500",
+    "cohort": "legacy60",
+    "latitude": 38.91066109763354,
+    "longitude": -77.07372050397004,
+    "original_candidates": 4633,
+    "geometry_candidates": 4473,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 4606,
+        "removed": 27,
+        "retained_fraction": 0.9941722426073818,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 4633,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 4633,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 4473,
+        "removed": 160,
+        "retained_fraction": 0.9654651413770775,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84767-osm-67527291",
+    "shortId": "OSM 67527291",
+    "cohort": "fresh60",
+    "latitude": 38.91374645002122,
+    "longitude": -77.07398582518753,
+    "original_candidates": 325,
+    "geometry_candidates": 312,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 286,
+        "removed": 39,
+        "retained_fraction": 0.88,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 162,
+        "removed": 163,
+        "retained_fraction": 0.49846153846153846,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 271,
+        "removed": 54,
+        "retained_fraction": 0.8338461538461538,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 266,
+        "removed": 59,
+        "retained_fraction": 0.8184615384615385,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84771-osm-67528155",
+    "shortId": "OSM 67528155",
+    "cohort": "fresh60",
+    "latitude": 38.913760950454254,
+    "longitude": -77.07347278537078,
+    "original_candidates": 213,
+    "geometry_candidates": 209,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 211,
+        "removed": 2,
+        "retained_fraction": 0.9906103286384976,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 213,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 213,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 209,
+        "removed": 4,
+        "retained_fraction": 0.9812206572769953,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84784-osm-67528002",
+    "shortId": "OSM 67528002",
+    "cohort": "legacy60",
+    "latitude": 38.913990700024826,
+    "longitude": -77.07301385270719,
+    "original_candidates": 296,
+    "geometry_candidates": 286,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 296,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 296,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 296,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 286,
+        "removed": 10,
+        "retained_fraction": 0.9662162162162162,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84790-osm-67528237",
+    "shortId": "OSM 67528237",
+    "cohort": "fresh60",
+    "latitude": 38.91394810008949,
+    "longitude": -77.07247199957878,
+    "original_candidates": 274,
+    "geometry_candidates": 270,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 274,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 274,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 274,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 270,
+        "removed": 4,
+        "retained_fraction": 0.9854014598540146,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84795-osm-67527776",
+    "shortId": "OSM 67527776",
+    "cohort": "legacy60",
+    "latitude": 38.913771950024,
+    "longitude": -77.07300830737805,
+    "original_candidates": 325,
+    "geometry_candidates": 310,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 319,
+        "removed": 6,
+        "retained_fraction": 0.9815384615384616,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 325,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 325,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 310,
+        "removed": 15,
+        "retained_fraction": 0.9538461538461539,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84804-osm-67527675",
+    "shortId": "OSM 67527675",
+    "cohort": "fresh60",
+    "latitude": 38.91335616803109,
+    "longitude": -77.07314870365616,
+    "original_candidates": 238,
+    "geometry_candidates": 228,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 235,
+        "removed": 3,
+        "retained_fraction": 0.9873949579831933,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 231,
+        "removed": 7,
+        "retained_fraction": 0.9705882352941176,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 234,
+        "removed": 4,
+        "retained_fraction": 0.9831932773109243,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 224,
+        "removed": 14,
+        "retained_fraction": 0.9411764705882353,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84815-osm-67527269",
+    "shortId": "OSM 67527269",
+    "cohort": "legacy60",
+    "latitude": 38.91333755022277,
+    "longitude": -77.07383905532296,
+    "original_candidates": 193,
+    "geometry_candidates": 189,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 187,
+        "removed": 6,
+        "retained_fraction": 0.9689119170984456,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 193,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 193,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 189,
+        "removed": 4,
+        "retained_fraction": 0.9792746113989638,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84836-osm-67527989",
+    "shortId": "OSM 67527989",
+    "cohort": "fresh60",
+    "latitude": 38.91287399997558,
+    "longitude": -77.07351689924839,
+    "original_candidates": 319,
+    "geometry_candidates": 310,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 319,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 319,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 319,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 310,
+        "removed": 9,
+        "retained_fraction": 0.9717868338557993,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84840-osm-67527608",
+    "shortId": "OSM 67527608",
+    "cohort": "legacy60",
+    "latitude": 38.912881700020876,
+    "longitude": -77.0732350259972,
+    "original_candidates": 302,
+    "geometry_candidates": 298,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 302,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 302,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 302,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 298,
+        "removed": 4,
+        "retained_fraction": 0.9867549668874173,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_2"
+  },
+  {
+    "id": "usbf-v1-dc-row84841-osm-67527468",
+    "shortId": "OSM 67527468",
+    "cohort": "legacy60",
+    "latitude": 38.91286815000624,
+    "longitude": -77.07373069935542,
+    "original_candidates": 298,
+    "geometry_candidates": 286,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 297,
+        "removed": 1,
+        "retained_fraction": 0.9966442953020134,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 298,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 298,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 286,
+        "removed": 12,
+        "retained_fraction": 0.959731543624161,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84848-osm-67521374",
+    "shortId": "OSM 67521374",
+    "cohort": "fresh60",
+    "latitude": 38.91228910000352,
+    "longitude": -77.07281553175622,
+    "original_candidates": 340,
+    "geometry_candidates": 326,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 340,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 340,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 340,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 326,
+        "removed": 14,
+        "retained_fraction": 0.9588235294117647,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84856-osm-66346901",
+    "shortId": "OSM 66346901",
+    "cohort": "fresh60",
+    "latitude": 38.91242240002849,
+    "longitude": -77.07247044116829,
+    "original_candidates": 343,
+    "geometry_candidates": 317,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 335,
+        "removed": 8,
+        "retained_fraction": 0.9766763848396501,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 343,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 343,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 317,
+        "removed": 26,
+        "retained_fraction": 0.924198250728863,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84870-osm-66346835",
+    "shortId": "OSM 66346835",
+    "cohort": "legacy60",
+    "latitude": 38.91243225044839,
+    "longitude": -77.07213098639387,
+    "original_candidates": 359,
+    "geometry_candidates": 340,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 356,
+        "removed": 3,
+        "retained_fraction": 0.9916434540389972,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 359,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 359,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 340,
+        "removed": 19,
+        "retained_fraction": 0.947075208913649,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84882-osm-66348126",
+    "shortId": "OSM 66348126",
+    "cohort": "fresh60",
+    "latitude": 38.912329350038945,
+    "longitude": -77.07144975162436,
+    "original_candidates": 328,
+    "geometry_candidates": 303,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 223,
+        "removed": 105,
+        "retained_fraction": 0.6798780487804879,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 328,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 325,
+        "removed": 3,
+        "retained_fraction": 0.9908536585365854,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 301,
+        "removed": 27,
+        "retained_fraction": 0.9176829268292683,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84885-osm-66346485",
+    "shortId": "OSM 66346485",
+    "cohort": "fresh60",
+    "latitude": 38.912450950007084,
+    "longitude": -77.07141585098698,
+    "original_candidates": 325,
+    "geometry_candidates": 304,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 322,
+        "removed": 3,
+        "retained_fraction": 0.9907692307692307,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 325,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 325,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 304,
+        "removed": 21,
+        "retained_fraction": 0.9353846153846154,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84888-osm-66346517",
+    "shortId": "OSM 66346517",
+    "cohort": "legacy60",
+    "latitude": 38.91244184990074,
+    "longitude": -77.07173357323676,
+    "original_candidates": 326,
+    "geometry_candidates": 314,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 326,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 326,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 326,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 314,
+        "removed": 12,
+        "retained_fraction": 0.9631901840490797,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84902-osm-66348357",
+    "shortId": "OSM 66348357",
+    "cohort": "fresh60",
+    "latitude": 38.91231264997956,
+    "longitude": -77.07047809794263,
+    "original_candidates": 301,
+    "geometry_candidates": 274,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 221,
+        "removed": 80,
+        "retained_fraction": 0.7342192691029901,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 301,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 301,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 274,
+        "removed": 27,
+        "retained_fraction": 0.9102990033222591,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84908-osm-66348130",
+    "shortId": "OSM 66348130",
+    "cohort": "fresh60",
+    "latitude": 38.91244874970963,
+    "longitude": -77.07068239265057,
+    "original_candidates": 342,
+    "geometry_candidates": 314,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 328,
+        "removed": 14,
+        "retained_fraction": 0.9590643274853801,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 342,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 342,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 314,
+        "removed": 28,
+        "retained_fraction": 0.9181286549707602,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84912-osm-67528038",
+    "shortId": "OSM 67528038",
+    "cohort": "fresh60",
+    "latitude": 38.91381167836125,
+    "longitude": -77.07139292488908,
+    "original_candidates": 314,
+    "geometry_candidates": 308,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 314,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 314,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 314,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 308,
+        "removed": 6,
+        "retained_fraction": 0.9808917197452229,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_3"
+  },
+  {
+    "id": "usbf-v1-dc-row84914-osm-67527576",
+    "shortId": "OSM 67527576",
+    "cohort": "legacy60",
+    "latitude": 38.9137809684414,
+    "longitude": -77.07160036194252,
+    "original_candidates": 296,
+    "geometry_candidates": 277,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 292,
+        "removed": 4,
+        "retained_fraction": 0.9864864864864865,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 296,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 296,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 277,
+        "removed": 19,
+        "retained_fraction": 0.9358108108108109,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  },
+  {
+    "id": "usbf-v1-dc-row84932-osm-67528247",
+    "shortId": "OSM 67528247",
+    "cohort": "legacy60",
+    "latitude": 38.91385704965378,
+    "longitude": -77.07081123074877,
+    "original_candidates": 293,
+    "geometry_candidates": 279,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 293,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 293,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 293,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 279,
+        "removed": 14,
+        "retained_fraction": 0.9522184300341296,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  },
+  {
+    "id": "usbf-v1-dc-row84936-osm-67527798",
+    "shortId": "OSM 67527798",
+    "cohort": "fresh60",
+    "latitude": 38.91386309957571,
+    "longitude": -77.07052896428362,
+    "original_candidates": 302,
+    "geometry_candidates": 296,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 302,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 302,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 302,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 296,
+        "removed": 6,
+        "retained_fraction": 0.9801324503311258,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  },
+  {
+    "id": "usbf-v1-dc-row84952-osm-67527583",
+    "shortId": "OSM 67527583",
+    "cohort": "legacy60",
+    "latitude": 38.9138476288904,
+    "longitude": -77.069892300484,
+    "original_candidates": 367,
+    "geometry_candidates": 347,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 354,
+        "removed": 13,
+        "retained_fraction": 0.9645776566757494,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 367,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 367,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 347,
+        "removed": 20,
+        "retained_fraction": 0.9455040871934605,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  },
+  {
+    "id": "usbf-v1-dc-row85133-osm-66348041",
+    "shortId": "OSM 66348041",
+    "cohort": "legacy60",
+    "latitude": 38.91240765000707,
+    "longitude": -77.06962149999919,
+    "original_candidates": 294,
+    "geometry_candidates": 280,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 223,
+        "removed": 71,
+        "retained_fraction": 0.7585034013605442,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 294,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 288,
+        "removed": 6,
+        "retained_fraction": 0.9795918367346939,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 276,
+        "removed": 18,
+        "retained_fraction": 0.9387755102040817,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  },
+  {
+    "id": "usbf-v1-dc-row85138-osm-66347524",
+    "shortId": "OSM 66347524",
+    "cohort": "legacy60",
+    "latitude": 38.91218130003052,
+    "longitude": -77.06945599529125,
+    "original_candidates": 343,
+    "geometry_candidates": 320,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 342,
+        "removed": 1,
+        "retained_fraction": 0.9970845481049563,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 343,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 343,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 320,
+        "removed": 23,
+        "retained_fraction": 0.9329446064139941,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  },
+  {
+    "id": "usbf-v1-dc-row85147-osm-66347474",
+    "shortId": "OSM 66347474",
+    "cohort": "fresh60",
+    "latitude": 38.91207245000486,
+    "longitude": -77.06980770367258,
+    "original_candidates": 200,
+    "geometry_candidates": 192,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 173,
+        "removed": 27,
+        "retained_fraction": 0.865,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 200,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 200,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 192,
+        "removed": 8,
+        "retained_fraction": 0.96,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  },
+  {
+    "id": "usbf-v1-dc-row85168-osm-66348086",
+    "shortId": "OSM 66348086",
+    "cohort": "legacy60",
+    "latitude": 38.91206985004855,
+    "longitude": -77.06944966390579,
+    "original_candidates": 369,
+    "geometry_candidates": 339,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 364,
+        "removed": 5,
+        "retained_fraction": 0.986449864498645,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 369,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 369,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 339,
+        "removed": 30,
+        "retained_fraction": 0.9186991869918699,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  },
+  {
+    "id": "usbf-v1-dc-row85744-osm-67527324",
+    "shortId": "OSM 67527324",
+    "cohort": "legacy60",
+    "latitude": 38.91439795002159,
+    "longitude": -77.06965207193035,
+    "original_candidates": 823,
+    "geometry_candidates": 817,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 820,
+        "removed": 3,
+        "retained_fraction": 0.9963547995139733,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 823,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 823,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 817,
+        "removed": 6,
+        "retained_fraction": 0.9927095990279465,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  },
+  {
+    "id": "usbf-v1-dc-row87276-osm-67527778",
+    "shortId": "OSM 67527778",
+    "cohort": "fresh60",
+    "latitude": 38.91425031901454,
+    "longitude": -77.07362217802269,
+    "original_candidates": 224,
+    "geometry_candidates": 214,
+    "vegetation_roughness_proxy": 0.0,
+    "optical_vegetation_fraction": 0.0,
+    "semantic_label_status": "unreviewed",
+    "roof_GT_status": "unavailable",
+    "manual_notes": "",
+    "methods": {
+      "point_dl": {
+        "kept": 224,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "image_dl": {
+        "kept": 224,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "fusion_dl": {
+        "kept": 224,
+        "removed": 0,
+        "retained_fraction": 1.0,
+        "fewer_than15_candidates": false
+      },
+      "geometry_fusion_dl": {
+        "kept": 214,
+        "removed": 10,
+        "retained_fraction": 0.9553571428571429,
+        "fewer_than15_candidates": false
+      }
+    },
+    "review_stratum": "proxy_quartile_4"
+  }
+]

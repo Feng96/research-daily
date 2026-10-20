@@ -1,11 +1,11 @@
 import * as THREE from '../vendor/three.module.js';
-import {createPointCloudController} from './point_clouds.js';
+import {createPointCloudController} from './point_clouds.js?v=20261020-tree';
 
 const $=id=>document.getElementById(id);
 const chapter=new URLSearchParams(location.search).get('chapter')||'pilot';
 let GROUPS=[],LABELS={};
 let visibleBuildings=[];
-const BASELINES={pilot:'roofer',optimization:'baseline',overnight:'baseline'};
+const BASELINES={pilot:'roofer',optimization:'baseline',overnight:'baseline',tree:'global_geo'};
 let data,selected,group='',basemap='satellite',syncing=false,temporaryHide=false;
 let loadError=false,loaded=false,hashTimer,toastTimer,lastTileError=0,frameToken=0;
 const mapErrors=[];
@@ -188,11 +188,11 @@ async function init(){
     GROUPS=data.groupOrder;LABELS=data.groupLabels;group=GROUPS.includes(group)?group:GROUPS[0];
     data.naip.url='../data/naip2014.png';
     if(!data.buildings.length||data.buildings.length!==data.buildingCount)throw new Error('建筑分母与导出清单不一致');
-    $('chapter-name').textContent={pilot:'01 · 五种重建方法',optimization:'02 · 四组输入优化',overnight:'03 · 120栋扩展复核'}[chapter]||chapter;
-    $('chapter-detail').textContent=`Georgetown · ${data.buildingCount}栋 · ${GROUPS.length}组方法 · 原始观测2014年`;
+    $('chapter-name').textContent={pilot:'01 · 五种重建方法',optimization:'02 · 四组输入优化',overnight:'03 · 120栋扩展复核',tree:'04 · 树冠干扰与语义迁移'}[chapter]||chapter;
+    $('chapter-detail').textContent=`Georgetown · ${data.buildingCount}栋 · ${GROUPS.length}组方法 · ${chapter==='tree'?'零本地标签迁移 · 待核查':'原始观测2014年'}`;
     $('group-select').replaceChildren(...GROUPS.map(key=>{const o=document.createElement('option');o.value=key;o.textContent=LABELS[key];return o;}));$('group-select').disabled=false;
-    $('cohort').hidden=chapter!=='overnight';$('cohort').value=chapter==='overnight'&&['legacy60','fresh60'].includes(initialHash.get('cohort'))?initialHash.get('cohort'):'all';
-    $('metric-mode').value=chapter==='overnight'?'paired':'common';
+    $('cohort').hidden=!['overnight','tree'].includes(chapter);$('cohort').value=['overnight','tree'].includes(chapter)&&['legacy60','fresh60'].includes(initialHash.get('cohort'))?initialHash.get('cohort'):'all';
+    $('metric-mode').value=['overnight','tree'].includes(chapter)?'paired':'common';
     await Promise.all([ready(imageMap),ready(modelMap)]);for(const map of [imageMap,modelMap])addSources(map);setupImageOverlays();modelMap.addLayer(modelLayer);
     visibleBuildings=data.buildings.filter(b=>$('cohort').value==='all'||b.cohort===$('cohort').value);$('building').replaceChildren(...visibleBuildings.map((b,i)=>{const o=document.createElement('option');o.value=b.id;o.textContent=`${String(i+1).padStart(2,'0')} · ${b.shortId||b.id}`;return o;}));
     $('building').disabled=false;$('export').disabled=false;loaded=true;setGroup(group);setBasemap(basemap);

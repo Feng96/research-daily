@@ -1,0 +1,230 @@
+{
+  "id": "tree",
+  "number": 4,
+  "title": "树冠干扰与语义迁移",
+  "subtitle": "先完成可复核基线：真实源域标注训练，零本地语义标签迁移",
+  "date": "2026-10-20",
+  "dataUrl": "./data/tree.json.gz",
+  "question": "学习逐点屋面／植被判断，能否在保留真实屋面观测的同时改善显式LoD2？",
+  "summary": "三个轻量MLP已在真实逐点标注上训练，再固定阈值迁移到Georgetown。六组共720个建筑与方法记录。源域融合分类较好，本地融合尚未优于几何基线；40栋案例仍待人工核查。",
+  "keyMetrics": [
+    {
+      "label": "训练网络",
+      "value": 3,
+      "unit": "个",
+      "detail": "点云／光学／特征融合MLP，均训练24轮；相同20万源域训练点。"
+    },
+    {
+      "label": "本地重建",
+      "value": 120,
+      "unit": "栋",
+      "detail": "固定足迹与Roofer参数；比较6组，保留失败。"
+    },
+    {
+      "label": "源域融合 macro F1",
+      "value": 0.866,
+      "unit": "",
+      "detail": "三类任务；252365个有光学覆盖测试点，非本地精度。"
+    },
+    {
+      "label": "本地语义 GT",
+      "value": 0,
+      "unit": "栋",
+      "detail": "40栋清单全部待核查；没有把网络输出当真值。"
+    }
+  ],
+  "groups": [
+    {
+      "id": "global_geo",
+      "label": "几何净化基线",
+      "description": "固定几何重建器下的候选点处理对照。"
+    },
+    {
+      "id": "global",
+      "label": "配准后原始候选",
+      "description": "固定几何重建器下的候选点处理对照。"
+    },
+    {
+      "id": "point_dl",
+      "label": "点云 MLP",
+      "description": "固定几何重建器下的候选点处理对照。"
+    },
+    {
+      "id": "image_dl",
+      "label": "光学 MLP",
+      "description": "固定几何重建器下的候选点处理对照。"
+    },
+    {
+      "id": "fusion_dl",
+      "label": "融合 MLP",
+      "description": "固定几何重建器下的候选点处理对照。"
+    },
+    {
+      "id": "geometry_fusion_dl",
+      "label": "几何净化＋融合 MLP",
+      "description": "固定几何重建器下的候选点处理对照。"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "global_geo",
+      "label": "几何净化基线",
+      "cohort": "all120",
+      "n": 120,
+      "mae_m": 0.6332053169374239,
+      "maeKind": "own-support mean only when all120 succeed; observation agreement, not roof accuracy",
+      "ownCoverage": 0.9394360011404437,
+      "coverage": 0.9394360011404437,
+      "edge_passes": 120,
+      "lod2_success": 120,
+      "pairedDelta_m": 0.0,
+      "pairedControlMae_m": 0.6332053169374239,
+      "referenceShape_m": 0.3335832416034395,
+      "referenceKind": "provisional_historical_own_support_offset_removed_successful_only",
+      "removedCandidateRecords": 3486,
+      "commonValidBuildings": 119,
+      "ownCoverageLabel": "macro building observation coverage",
+      "engineeringPrototype": false
+    },
+    {
+      "name": "global",
+      "label": "配准后原始候选",
+      "cohort": "all120",
+      "n": 120,
+      "mae_m": 0.6300461129472434,
+      "maeKind": "own-support mean only when all120 succeed; observation agreement, not roof accuracy",
+      "ownCoverage": 0.9394360011404437,
+      "coverage": 0.9394360011404437,
+      "edge_passes": 120,
+      "lod2_success": 120,
+      "pairedDelta_m": -0.0031592039901803485,
+      "pairedControlMae_m": 0.6332053169374239,
+      "referenceShape_m": 0.3593726183061616,
+      "referenceKind": "provisional_historical_own_support_offset_removed_successful_only",
+      "removedCandidateRecords": 0,
+      "commonValidBuildings": 119,
+      "ownCoverageLabel": "macro building observation coverage",
+      "engineeringPrototype": false
+    },
+    {
+      "name": "point_dl",
+      "label": "点云 MLP",
+      "cohort": "all120",
+      "n": 120,
+      "mae_m": 0.6298551449910826,
+      "maeKind": "own-support mean only when all120 succeed; observation agreement, not roof accuracy",
+      "ownCoverage": 0.9394360011404437,
+      "coverage": 0.9394360011404437,
+      "edge_passes": 120,
+      "lod2_success": 120,
+      "pairedDelta_m": -0.003350171946341274,
+      "pairedControlMae_m": 0.6332053169374239,
+      "referenceShape_m": 0.318043945698378,
+      "referenceKind": "provisional_historical_own_support_offset_removed_successful_only",
+      "removedCandidateRecords": 2147,
+      "commonValidBuildings": 119,
+      "ownCoverageLabel": "macro building observation coverage",
+      "engineeringPrototype": false
+    },
+    {
+      "name": "image_dl",
+      "label": "光学 MLP",
+      "cohort": "all120",
+      "n": 120,
+      "mae_m": null,
+      "maeKind": "own-support mean only when all120 succeed; observation agreement, not roof accuracy",
+      "ownCoverage": 0.9312439107449635,
+      "coverage": 0.9312439107449635,
+      "edge_passes": 119,
+      "lod2_success": 119,
+      "pairedDelta_m": null,
+      "pairedControlMae_m": null,
+      "referenceShape_m": 0.3495748117621107,
+      "referenceKind": "provisional_historical_own_support_offset_removed_successful_only",
+      "removedCandidateRecords": 927,
+      "commonValidBuildings": 119,
+      "ownCoverageLabel": "macro building observation coverage",
+      "engineeringPrototype": false
+    },
+    {
+      "name": "fusion_dl",
+      "label": "融合 MLP",
+      "cohort": "all120",
+      "n": 120,
+      "mae_m": 0.629916694448602,
+      "maeKind": "own-support mean only when all120 succeed; observation agreement, not roof accuracy",
+      "ownCoverage": 0.9394360011404437,
+      "coverage": 0.9394360011404437,
+      "edge_passes": 120,
+      "lod2_success": 120,
+      "pairedDelta_m": -0.0032886224888219024,
+      "pairedControlMae_m": 0.6332053169374239,
+      "referenceShape_m": 0.35286358550908414,
+      "referenceKind": "provisional_historical_own_support_offset_removed_successful_only",
+      "removedCandidateRecords": 498,
+      "commonValidBuildings": 119,
+      "ownCoverageLabel": "macro building observation coverage",
+      "engineeringPrototype": false
+    },
+    {
+      "name": "geometry_fusion_dl",
+      "label": "几何净化＋融合 MLP",
+      "cohort": "all120",
+      "n": 120,
+      "mae_m": 0.6295404236431655,
+      "maeKind": "own-support mean only when all120 succeed; observation agreement, not roof accuracy",
+      "ownCoverage": 0.9394360011404437,
+      "coverage": 0.9394360011404437,
+      "edge_passes": 119,
+      "lod2_success": 120,
+      "pairedDelta_m": -0.003664893294258344,
+      "pairedControlMae_m": 0.6332053169374239,
+      "referenceShape_m": 0.33538461426710214,
+      "referenceKind": "provisional_historical_own_support_offset_removed_successful_only",
+      "removedCandidateRecords": 3866,
+      "commonValidBuildings": 119,
+      "ownCoverageLabel": "macro building observation coverage",
+      "engineeringPrototype": false
+    }
+  ],
+  "metricNotes": [
+    "本地留出点可能含树木；MAE仅衡量与原始观测的一致性。去树后MAE变化不能独立证明屋面改善。",
+    "MAE在所有120栋均有成功结果时才给宏平均；光学MLP有1栋未达到LoD2成功条件，保留该失败。",
+    "配对差相对本章几何净化基线；交集可能随方法不同。",
+    "历史形状代理使用未筛时相、垂直基准未认证的官方参考，逐栋移除常量高程差；只作诊断。"
+  ],
+  "findings": [
+    "源域相同光学覆盖测试点上，点云、光学、融合的三类macro F1依次为0.753、0.805、0.866。该比较只验证源域语义分类。",
+    "本地原候选82,140条；点云MLP剔除2,147条，光学MLP剔除927条，融合MLP剔除498条。剔除比例不是去树准确率。",
+    "固定120栋中，光学MLP有1栋未达到LoD2成功条件；其他五组均为120栋。",
+    "历史形状代理下，点云MLP有改善迹象，融合及几何＋融合没有优于几何净化基线；尚无本地真值支持最终精度结论。",
+    "下一步优先核查删掉与保留的点，建立本地语义验证集，再研究跨域适配；当前未学习遮挡屋面补全。"
+  ],
+  "limitations": [
+    "真实GT仅来自Vaihingen逐点语义标注；DC完全没有语义监督或独立屋面GT。",
+    "源标签4是Fence/Hedge混合类，本轮与植被合并；因此植被得分不是严格纯树木概率。",
+    "源航片只有R/G/NIR，已降到约1m；NAIP蓝波段本轮未用。源域测试光学覆盖61.3%，共同域与全域fallback指标分别报告。",
+    "源域99.5%屋面保留是验证区阈值选择目标，不能外推为DC或完整源域测试保证。",
+    "当前是多尺度手工几何特征＋MLP原型，尚无学习点邻域、影像对齐门控或缺测屋面补全；只跑一个随机种子。",
+    "本地影像与LiDAR相隔156天，精配准和时相可靠性尚未解决。",
+    "下载提供诊断权重与配置；源影像重叠区按读取顺序覆盖，该顺序尚未显式冻结，当前包不保证完整精确重训复现。"
+  ],
+  "downloads": [
+    {
+      "label": "本章指标 CSV",
+      "url": "./data/tree-metrics.csv"
+    },
+    {
+      "label": "40栋待核查清单 CSV",
+      "url": "./data/tree-review40.csv"
+    },
+    {
+      "label": "源域分类结果 JSON",
+      "url": "./data/tree-source-metrics.json"
+    },
+    {
+      "label": "轻量模型权重与配置 ZIP",
+      "url": "./data/tree-models.zip"
+    }
+  ]
+}
