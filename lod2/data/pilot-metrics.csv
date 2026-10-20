@@ -1,0 +1,6 @@
+﻿name,label,cohort,n,mae_m,maeKind,coverage,edge_passes,lod2_success,pairedDelta_m,referenceShape_m,pairedBaseline,pairedDeltaKind,ownSupportMae_m,ownCoverage,referenceKind,referenceCoverage,engineeringPrototype
+roofer,Roofer 基线,legacy60,60,0.7433636275809393,own_support,0.9969329470399337,60,60,,0.4222964426969455,,,0.7433636275809393,0.9969329470399337,provisional_own_support_offset_removed,0.9617977110700504,False
+plane_arrangement,自由平面,legacy60,60,1.033168474824638,own_support,1.0,59,60,,0.7424508645425404,,,1.033168474824638,1.0,provisional_own_support_offset_removed,0.9655939086765629,True
+template_lidar_only,点云屋顶模板,legacy60,60,0.8510289004632052,own_support,1.0,60,60,,0.46683174658447746,,,0.8510289004632052,1.0,provisional_own_support_offset_removed,0.9655939086765629,True
+rgb_templates,影像辅助模板,legacy60,60,0.8462382552921599,own_support,1.0,58,60,-0.0047906451710452765,0.4718736791872496,template_lidar_only,same_test_points_against_named_control,0.8462382552921599,1.0,provisional_own_support_offset_removed,0.9655939086765629,True
+rgb_plane_partition,影像辅助平面分区,legacy60,60,1.0115500014548664,own_support,1.0,59,60,-0.021618473369771605,0.7121329460448227,plane_arrangement,same_test_points_against_named_control,1.0115500014548664,1.0,provisional_own_support_offset_removed,0.9655939086765629,True

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#153b3a">
+  <title>DC 官方源模型 · LoD2 实验图谱</title>
+  <meta name="description" content="在卫星与 OSM 底图上查看 DC、Boston、Philadelphia 官方建筑模型，检查原始屋面、屋脊和几何细节。">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../vendor/maplibre-gl.css"><link rel="stylesheet" href="./style.css">
+  <script src="../vendor/maplibre-gl.js"></script>
+</head>
+<body>
+  <div id="map" aria-label="交互式建筑三维地图"></div>
+  <aside class="sidebar" id="sidebar">
+    <header><div class="brand-icon">◈</div><div><div class="eyebrow">BUILDING GEOMETRY EXPLORER</div><h1>LoD2 Atlas<span>模型检查器</span></h1></div><button id="collapse" class="icon-button" aria-label="收起控制面板">‹</button></header>
+    <div class="sidebar-content">
+      <section class="intro"><div class="live-label"><i></i> 真实源模型 · 可交互检查</div><p>把屋顶放回地图，看看细节。</p><p><a class="text-button" href="../">返回三章实验图谱 ↗</a></p></section>
+      <section class="section"><div class="section-heading"><span>01 / 选择数据</span><button id="source-info" class="text-button">来源与说明 ↗</button></div>
+        <div class="dataset-list" role="group" aria-label="模型数据集">
+          <button class="dataset active" data-dataset="dc"><span class="dataset-symbol">DC</span><span class="dataset-text"><strong>Washington, DC</strong><small>完整建筑 · Georgetown 样本</small></span><span class="dataset-count" id="count-dc">235</span></button>
+        </div>
+        <div class="dataset-stats"><div><strong id="visible-count">—</strong><span>当前筛选 / 模型记录</span></div><div><strong id="inclined-count">—</strong><span>包含倾斜面的记录</span></div></div>
+        <label class="field-label" for="model-filter">模型筛选</label><select id="model-filter"><option value="all">全部已加载模型</option><option value="inclined">仅包含倾斜面的模型</option><option value="detailed">仅源标签 LoD ≥ 2（Boston）</option></select>
+        <p class="tiny-note" id="dataset-note">正在读取源模型…</p>
+      </section>
+      <section class="section"><div class="section-heading"><span>02 / 检查方式</span></div>
+        <div class="switch-row"><label for="show-models">显示三维模型</label><input type="checkbox" id="show-models" checked role="switch"></div>
+        <div class="switch-row"><label for="show-edges">显示源面边界</label><input type="checkbox" id="show-edges" checked role="switch"></div>
+        <div class="switch-row"><label for="roof-only">仅显示屋面方向的面</label><input type="checkbox" id="roof-only" role="switch"></div>
+        <div class="slider-label"><label for="opacity">模型透明度</label><output id="opacity-value">100%</output></div><input id="opacity" type="range" min="10" max="100" value="100">
+        <div class="field-grid"><div><label class="field-label" for="color-mode">着色</label><select id="color-mode"><option value="surface">面方向</option><option value="lod">源 LoD 标签</option><option value="neutral">素色</option></select></div><div><label class="field-label" for="height-scale">高度显示</label><select id="height-scale"><option value="1">1× 原始比例</option><option value="1.5">1.5× 夸张</option><option value="2">2× 夸张</option><option value="3">3× 夸张</option></select></div></div>
+        <div id="philly-units" hidden><label class="field-label" for="z-unit">Philadelphia 的 Z 单位假设</label><select id="z-unit"><option value="1">暂按米预览（尚未核实）</option><option value="0.3048006096">假设原始 Z 为英尺</option></select></div>
+        <div class="legend" id="legend"><span><i class="inclined"></i>倾斜面</span><span><i class="horizontal"></i>近水平面</span><span><i class="wall"></i>近竖直面</span></div>
+      </section>
+      <section class="section selected-section"><div class="section-heading"><span>03 / 单体检查</span><span class="record-tag" id="selection-tag">点击建筑</span></div>
+        <div class="search-row"><input id="model-search" type="search" aria-label="查找模型 ID 或名称" placeholder="输入模型 ID 或名称"><button id="find-model" class="small-button">定位</button></div>
+        <div id="selection-empty"><p>点击地图中的建筑，查看来源、细节等级和原始高度范围。</p><button class="wide-button" id="example">查看一个细节样例 ↗</button></div>
+        <div id="selection" hidden><h2 id="selected-name"></h2><div class="model-id" id="selected-id"></div><dl id="selected-facts"></dl><div class="selection-actions"><button id="focus-model" class="wide-button">聚焦此模型 ↗</button><button id="isolate-model" class="small-button" aria-pressed="false">单独显示</button></div><button id="download-model" class="text-button export-button">↓ 导出此模型 OBJ（显示坐标）</button></div>
+      </section>
+      <div class="research-note"><span>i</span><p>这里检查的是<strong>原始几何内容</strong>。倾斜面不等于合格 LoD2，底图可能与模型不同期；这些候选数据尚未通过独立精度验证。</p></div>
+      <footer>真实源几何 · 无屋顶补全 · 无模型拟合</footer>
+    </div>
+  </aside>
+  <button id="expand" class="expand-button" hidden>◈ 控制面板</button>
+  <div class="top-tools"><div class="basemap-switch" role="group" aria-label="切换底图"><button id="satellite" class="active" aria-pressed="true"><span class="map-thumbnail satellite"></span>卫星影像</button><button id="osm" aria-pressed="false"><span class="map-thumbnail streets"></span>OSM</button></div><button id="share" class="tool-button" title="复制当前视图链接">↗ <span>复制视图</span></button></div>
+  <div class="map-toolbar"><button id="overview" title="查看全部已筛选模型">⌗ <span>全部范围</span></button><button id="view-3d" class="active">3D</button><button id="view-top">俯视</button><button id="rotate">↻ <span>旋转视角</span></button></div>
+  <div class="map-caption"><span class="caption-dot"></span><span id="caption-city">Washington, DC</span><span class="caption-divider">/</span><span id="caption-count">正在加载</span></div>
+  <div class="interaction-hint">拖动平移 · 滚轮缩放 · 右键拖动旋转 / 倾斜 · 点击模型检查</div>
+  <div id="loading" class="loading-panel" role="status"><div class="spinner"></div><strong id="loading-text">正在加载真实建筑几何</strong><span>保留源屋面结构与面边界</span></div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="source-dialog"><div class="dialog-heading"><div><div class="eyebrow">DATA PROVENANCE</div><h2>数据来源与显示约定</h2></div><button id="close-dialog" class="icon-button" aria-label="关闭">×</button></div><div id="source-content"></div></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
