@@ -3,7 +3,7 @@ let overview,scene='controlled',selected={},switchToken=0,frameObserver=null;
 const legacy=params().get('chapter');
 if(legacy&&legacy!=='scaling')location.replace('./archive/'+location.hash);
 if(legacy==='scaling')for(const k of ['building','case','method'])if(params().has(k))selected[k]=params().get(k);
-const descriptions={controlled:'受控点云＋真实 PDOK 航拍（2023）。航拍用于核对屋顶形状，不作为本轮模型输入。默认显示五个代表方法，参考和原始基线在下方展开。',real:'实测 AHN 点云＋真实 PDOK 航拍。Leiden 20 栋用于迁移定性检查，部分建筑与教师域重合；建筑分类标签不是独立 GT。粉色为模型删除的点，请重点检查屋面是否被删。',us:'Georgetown 的真实 NAIP＋3DEP 与 120 栋足迹。六种规则／轻量 MLP 流程来自早期试验；没有独立屋顶 GT，其观测拟合指标不与上表横比。'};
+const descriptions={controlled:'受控点云＋真实 PDOK 航拍（2023）。航拍用于核对屋顶形状，不作为本轮模型输入。默认显示五个代表方法，参考和原始基线在下方展开。',real:'实测 AHN 点云＋真实 PDOK 航拍。Leiden 20 栋来自训练城市的候选训练池，仅作定性检查；航拍不输入模型，建筑分类标签不是独立 GT。粉色为模型删除的点，请重点检查屋面是否被删。',us:'Georgetown 的真实 NAIP＋3DEP 与 120 栋足迹。六种规则／轻量 MLP 流程来自早期试验；没有独立屋顶 GT，其观测拟合指标不与上表横比。'};
 function updateHash(){history.replaceState(null,'','#'+new URLSearchParams({view:scene,...selected}))}
 function targetURL(id,full=false){const entry=overview.views.find(v=>v.id===id),url=new URL(entry.url,document.baseURI);if(id==='controlled'){if(full)url.searchParams.delete('compact');for(const [k,v] of Object.entries(selected))if(['building','case','method'].includes(k))url.searchParams.set(k,v)}return url.href}
 function fit(height){const next=Math.max(700,Math.min(8500,Math.ceil(height)));if(Math.abs($('viewer').clientHeight-next)>4)$('viewer').style.height=next+'px'}
