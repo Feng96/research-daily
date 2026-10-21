@@ -51,7 +51,7 @@ function loadChapter(id,options={}){
   if(prior?.id!==c.id&&state.group&&!(c.groups||[]).some(x=>x.id===state.group))delete state.group;
   let url;
   if(c.viewerUrl){
-    const target=new URL(c.viewerUrl,location.href);target.searchParams.set('v','20261021-all');
+    const target=new URL(c.viewerUrl,location.href);target.searchParams.set('v','20261021-imagery');
     const nativeState={};if(c.viewerKind==='native')for(const key of ['building','case','method'])if(state[key]){target.searchParams.set(key,state[key]);nativeState[key]=state[key];}
     state=nativeState;url=target.href;$('viewer').style.height=(c.viewerHeight||1150)+'px';
   }else{url='./viewer/?chapter='+c.id+'&v=20261020-tree#'+new URLSearchParams(state);$('viewer').style.removeProperty('height');}
@@ -70,7 +70,7 @@ window.addEventListener('message',event=>{
 });
 window.addEventListener('hashchange',()=>{if(manifest&&!changing){selectedState=Object.fromEntries(params());loadChapter(params().get('chapter'));}});
 try{
-  const response=await fetch('./data/chapters.json?v=20261021-all');if(!response.ok)throw new Error('HTTP '+response.status);manifest=await response.json();
+  const response=await fetch('./data/chapters.json?v=20261021-imagery');if(!response.ok)throw new Error('HTTP '+response.status);manifest=await response.json();
   $('chapters').replaceChildren(...manifest.chapters.map(c=>{const a=el('a',undefined,'chapter-link');a.href='#chapter='+c.id;a.dataset.chapter=c.id;const label=el('div');label.append(el('strong',c.title),el('small',c.date+' · '+(c.navLabel||(c.id==='tree'?'120栋 / 6组':c.id==='overnight'?'120栋 / 12组':c.id==='pilot'?'60栋 / 5方法':'60栋 / 4组'))));a.append(el('span',String(c.number).padStart(2,'0')),label);a.onclick=e=>{e.preventDefault();loadChapter(c.id);};return a;}));
   $('article').hidden=false;$('page-loading').hidden=true;loadChapter(params().get('chapter')||manifest.defaultChapter||'pilot');
 }catch(error){$('page-loading').textContent='实验记录加载失败：'+error.message;console.error(error);}

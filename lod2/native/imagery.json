@@ -1,0 +1,4616 @@
+{
+  "schema": "lod2-observation-imagery-v1",
+  "year": 2023,
+  "source": "PDOK / Beeldmateriaal Nederland",
+  "layer": "2023_orthoHR",
+  "source_nominal_resolution_m": 0.08,
+  "crs": "EPSG:28992",
+  "orientation": "north-up",
+  "license": "CC BY 4.0",
+  "source_information": "https://www.pdok.nl/-/nu-hoge-resolutie-luchtfoto-2023-bij-pdok",
+  "source_capabilities": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&request=GetCapabilities",
+  "retrieved_utc": "2026-10-21T16:11:02.540462+00:00",
+  "purpose": "Visual observation reference only; not model input or independent roof GT. Exact image acquisition day not verified. Teacher AHN year is shown separately.",
+  "buildings": [
+    {
+      "id": "NL.IMBAG.Pand.0014100010903865",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903865.jpg",
+      "sha256": "08b92fdd0111d3a2be535a50e9bdb09bc1d5b99eb5e81ef0f4400ff02e2099d6",
+      "bytes": 126941,
+      "bbox_RD": [
+        233667.98575,
+        582456.2239999999,
+        233699.98575,
+        582488.2239999999
+      ],
+      "center_RD": [
+        233683.98575,
+        582472.2239999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233667.9857%2C582456.2240%2C233699.9857%2C582488.2240&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903871",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903871.jpg",
+      "sha256": "1c9c58335eca34e1112517daedcc04a35b2d53e5b3f8060effeb639396c1854f",
+      "bytes": 114885,
+      "bbox_RD": [
+        235420.25575,
+        582580.4864999999,
+        235452.25575,
+        582612.4864999999
+      ],
+      "center_RD": [
+        235436.25575,
+        582596.4864999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=235420.2558%2C582580.4865%2C235452.2558%2C582612.4865&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903876",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903876.jpg",
+      "sha256": "f79512613021c130195bd552119c708481575b09e82522ca4b9caa5da488df13",
+      "bytes": 99968,
+      "bbox_RD": [
+        232867.43622499998,
+        583124.265475,
+        232900.530275,
+        583157.359525
+      ],
+      "center_RD": [
+        232883.98325,
+        583140.8125
+      ],
+      "span_m": 33.094050000001154,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03231840820312613,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232867.4362%2C583124.2655%2C232900.5303%2C583157.3595&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903878",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903878.jpg",
+      "sha256": "c006292443df982be5b96fefc3a5cf48b638415292940e2ff59b3304a15ef880",
+      "bytes": 86683,
+      "bbox_RD": [
+        232857.80125000002,
+        583129.9225,
+        232889.80125000002,
+        583161.9225
+      ],
+      "center_RD": [
+        232873.80125000002,
+        583145.9225
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232857.8013%2C583129.9225%2C232889.8013%2C583161.9225&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903880",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903880.jpg",
+      "sha256": "57c34687c5c9d636d9cdd9d4365fc0905ec341087a49e03403250989c9f665e2",
+      "bytes": 132022,
+      "bbox_RD": [
+        235132.25012500002,
+        583575.503375,
+        235210.33637499996,
+        583653.5896249999
+      ],
+      "center_RD": [
+        235171.29325,
+        583614.5464999999
+      ],
+      "span_m": 78.08624999992317,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.07625610351554997,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=235132.2501%2C583575.5034%2C235210.3364%2C583653.5896&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903883",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903883.jpg",
+      "sha256": "085382ffff1d02c91b6cc372c5281fa368948ad34660612b00e15348d849ec68",
+      "bytes": 103978,
+      "bbox_RD": [
+        236359.33035,
+        582024.0586,
+        236445.51314999996,
+        582110.2413999998
+      ],
+      "center_RD": [
+        236402.42174999998,
+        582067.1499999999
+      ],
+      "span_m": 86.18279999993392,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.08416289062493547,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=236359.3304%2C582024.0586%2C236445.5131%2C582110.2414&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903888",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903888.jpg",
+      "sha256": "8dd3f97cf07b7b9e2214ba05f8a82772fb12ebb7ecf1ee174356b112e82d3de5",
+      "bytes": 97108,
+      "bbox_RD": [
+        233069.73025,
+        580702.3514999999,
+        233101.73025,
+        580734.3514999999
+      ],
+      "center_RD": [
+        233085.73025,
+        580718.3514999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233069.7302%2C580702.3515%2C233101.7302%2C580734.3515&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903891",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903891.jpg",
+      "sha256": "d255ffc8ececc4198d49aa481242c9b5aa96cae9128616570d40626e3c7b045c",
+      "bytes": 110900,
+      "bbox_RD": [
+        233569.47574999998,
+        581888.8614999999,
+        233601.47574999998,
+        581920.8614999999
+      ],
+      "center_RD": [
+        233585.47574999998,
+        581904.8614999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233569.4757%2C581888.8615%2C233601.4757%2C581920.8615&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903896",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903896.jpg",
+      "sha256": "52fe3e2b76970d730094d6cab26d0930f66687cbc11b090d7989151ced45b3ea",
+      "bytes": 107685,
+      "bbox_RD": [
+        232934.37524999998,
+        583472.9105,
+        232966.37524999998,
+        583504.9105
+      ],
+      "center_RD": [
+        232950.37524999998,
+        583488.9105
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232934.3752%2C583472.9105%2C232966.3752%2C583504.9105&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903906",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903906.jpg",
+      "sha256": "3aba7ba836145c729f59a5ec51de64709dd8d4f4a45f2ec3d710298a38a77265",
+      "bytes": 96695,
+      "bbox_RD": [
+        233764.57025,
+        579362.108,
+        233796.57025,
+        579394.108
+      ],
+      "center_RD": [
+        233780.57025,
+        579378.108
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233764.5702%2C579362.1080%2C233796.5702%2C579394.1080&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903909",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903909.jpg",
+      "sha256": "4edc6c8d54da254d06dc151fc5c81762e49778bbfb40171e8fc15ab60d23e156",
+      "bytes": 104705,
+      "bbox_RD": [
+        232185.50425,
+        583290.7494999999,
+        232217.50425,
+        583322.7494999999
+      ],
+      "center_RD": [
+        232201.50425,
+        583306.7494999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232185.5042%2C583290.7495%2C232217.5042%2C583322.7495&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903912",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903912.jpg",
+      "sha256": "eacbafe2080074a992e85c08d1e5ebdf440388d65a08268c31b206d11407bbca",
+      "bytes": 112656,
+      "bbox_RD": [
+        231137.231225,
+        583795.948975,
+        231183.591275,
+        583842.309025
+      ],
+      "center_RD": [
+        231160.41125,
+        583819.129
+      ],
+      "span_m": 46.360050000014596,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.045273486328139254,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231137.2312%2C583795.9490%2C231183.5913%2C583842.3090&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903929",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903929.jpg",
+      "sha256": "e0ae8acdb163389006ae0feed502489e94b5858a8f38fc1159e966312b27d7d3",
+      "bytes": 102451,
+      "bbox_RD": [
+        233879.16129999995,
+        581450.93755,
+        233914.1842,
+        581485.96045
+      ],
+      "center_RD": [
+        233896.67274999997,
+        581468.449
+      ],
+      "span_m": 35.022900000039954,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03420205078128902,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233879.1613%2C581450.9376%2C233914.1842%2C581485.9605&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903934",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903934.jpg",
+      "sha256": "30d6648ce5a6f89813288daa333577096dc3e500f200f8cb84b7812ee25c3e9d",
+      "bytes": 122296,
+      "bbox_RD": [
+        234285.33825,
+        581713.9654999999,
+        234317.33825,
+        581745.9654999999
+      ],
+      "center_RD": [
+        234301.33825,
+        581729.9654999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234285.3383%2C581713.9655%2C234317.3383%2C581745.9655&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903948",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903948.jpg",
+      "sha256": "9a95403a4dd42b302427f73a51580aea2062ad955b692983a6268c065e3a89b4",
+      "bytes": 103115,
+      "bbox_RD": [
+        234350.20825,
+        580786.457,
+        234382.20825,
+        580818.457
+      ],
+      "center_RD": [
+        234366.20825,
+        580802.457
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234350.2082%2C580786.4570%2C234382.2082%2C580818.4570&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903949",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903949.jpg",
+      "sha256": "c8e937348d6bdb42f4703f05c953091974e68f0728280e198cae399ba9f5f413",
+      "bytes": 103121,
+      "bbox_RD": [
+        233070.56624999997,
+        583748.6599999999,
+        233102.56624999997,
+        583780.6599999999
+      ],
+      "center_RD": [
+        233086.56624999997,
+        583764.6599999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233070.5662%2C583748.6600%2C233102.5662%2C583780.6600&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903957",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903957.jpg",
+      "sha256": "9fdfc6d2debf652c3d1e16d13473c919c38ca9bcf11465a6ca0eb2be5ba70cce",
+      "bytes": 135422,
+      "bbox_RD": [
+        233706.6569,
+        582083.33815,
+        233763.31459999998,
+        582139.9958500001
+      ],
+      "center_RD": [
+        233734.98575,
+        582111.667
+      ],
+      "span_m": 56.65769999998156,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.05532978515623199,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233706.6569%2C582083.3381%2C233763.3146%2C582139.9959&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903960",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903960.jpg",
+      "sha256": "df941968f467689c5cba48c22e62c015405e318fa5f858430730013a9fee30b5",
+      "bytes": 110384,
+      "bbox_RD": [
+        233090.02175,
+        581362.5875,
+        233122.02175,
+        581394.5875
+      ],
+      "center_RD": [
+        233106.02175,
+        581378.5875
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233090.0218%2C581362.5875%2C233122.0218%2C581394.5875&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903962",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903962.jpg",
+      "sha256": "508f9cf9aad5b702442e11b8669db0b0c57d413e8b407c00b56ff8bfde4d7d75",
+      "bytes": 106576,
+      "bbox_RD": [
+        233176.37274999998,
+        581232.3365,
+        233208.37274999998,
+        581264.3365
+      ],
+      "center_RD": [
+        233192.37274999998,
+        581248.3365
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233176.3727%2C581232.3365%2C233208.3727%2C581264.3365&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903965",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903965.jpg",
+      "sha256": "2e677ce1b283d6a323fc31f59bf82c7cd301bd163e548cd79bc8e344be6d2c2e",
+      "bytes": 102949,
+      "bbox_RD": [
+        231032.13075,
+        582247.432,
+        231064.13075,
+        582279.432
+      ],
+      "center_RD": [
+        231048.13075,
+        582263.432
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231032.1308%2C582247.4320%2C231064.1308%2C582279.4320&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903967",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903967.jpg",
+      "sha256": "0a9066170ccd763c89909eaa94f45e4d09724bb5d97ee95659727b3b15563d0f",
+      "bytes": 89764,
+      "bbox_RD": [
+        231085.77474999998,
+        582264.3425,
+        231117.77474999998,
+        582296.3425
+      ],
+      "center_RD": [
+        231101.77474999998,
+        582280.3425
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231085.7747%2C582264.3425%2C231117.7747%2C582296.3425&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903968",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903968.jpg",
+      "sha256": "84c228b4edce655a3c8bde288beecaa80b3d08da680658e28ea8a8152fc6ae10",
+      "bytes": 100319,
+      "bbox_RD": [
+        233075.81625,
+        583796.9450000001,
+        233107.81625,
+        583828.9450000001
+      ],
+      "center_RD": [
+        233091.81625,
+        583812.9450000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233075.8163%2C583796.9450%2C233107.8163%2C583828.9450&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903970",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903970.jpg",
+      "sha256": "f0738a22ceb8d4dcdb53c44452d35e2cbf742652b28bf06971fbe49fffac3708",
+      "bytes": 104976,
+      "bbox_RD": [
+        233068.90625,
+        583061.669,
+        233100.90625,
+        583093.669
+      ],
+      "center_RD": [
+        233084.90625,
+        583077.669
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233068.9062%2C583061.6690%2C233100.9062%2C583093.6690&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903975",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903975.jpg",
+      "sha256": "6697e5999474aebce6cfe82ced55d7f1883e61bbda688dc707190e14d912e2cb",
+      "bytes": 100185,
+      "bbox_RD": [
+        233153.2995,
+        583841.8665,
+        233185.2995,
+        583873.8665
+      ],
+      "center_RD": [
+        233169.2995,
+        583857.8665
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233153.2995%2C583841.8665%2C233185.2995%2C583873.8665&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903976",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903976.jpg",
+      "sha256": "aafa8b5a138178076e2a700ffd43c81c36fd99f493003e069f5fdb3d75767931",
+      "bytes": 99899,
+      "bbox_RD": [
+        233048.935,
+        583781.7660000001,
+        233080.935,
+        583813.7660000001
+      ],
+      "center_RD": [
+        233064.935,
+        583797.7660000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233048.9350%2C583781.7660%2C233080.9350%2C583813.7660&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903979",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903979.jpg",
+      "sha256": "2bef5da3d249863907b8781b83ead70a1f0ca42b0a566dba2c77a16ad437247a",
+      "bytes": 114585,
+      "bbox_RD": [
+        232906.886,
+        581708.8640000001,
+        232938.886,
+        581740.8640000001
+      ],
+      "center_RD": [
+        232922.886,
+        581724.8640000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232906.8860%2C581708.8640%2C232938.8860%2C581740.8640&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903980",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903980.jpg",
+      "sha256": "faef6a0c594eef3143b5919dcce530433315b301a606a598eb0ca05ebd14d25a",
+      "bytes": 110323,
+      "bbox_RD": [
+        232966.4155,
+        581682.6275,
+        232998.4155,
+        581714.6275
+      ],
+      "center_RD": [
+        232982.4155,
+        581698.6275
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232966.4155%2C581682.6275%2C232998.4155%2C581714.6275&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903983",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903983.jpg",
+      "sha256": "127196f580423d9d0589c5746daa938a12a83726b0ad3c574ff506af38c11bc0",
+      "bytes": 121494,
+      "bbox_RD": [
+        233103.052,
+        582545.0360000001,
+        233135.052,
+        582577.0360000001
+      ],
+      "center_RD": [
+        233119.052,
+        582561.0360000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233103.0520%2C582545.0360%2C233135.0520%2C582577.0360&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010903987",
+      "file": "imagery/NL.IMBAG.Pand.0014100010903987.jpg",
+      "sha256": "a15c85e8c93315a90af345e838b49426d7d3a27b29d0e1b0349eac0b567ffca2",
+      "bytes": 91011,
+      "bbox_RD": [
+        234141.345,
+        583490.2135000001,
+        234173.345,
+        583522.2135000001
+      ],
+      "center_RD": [
+        234157.345,
+        583506.2135000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234141.3450%2C583490.2135%2C234173.3450%2C583522.2135&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904005",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904005.jpg",
+      "sha256": "b69b08c53db7d23987439fe1794327a90cc81b7feee3a27df826e4fbc553f59d",
+      "bytes": 73075,
+      "bbox_RD": [
+        233594.651,
+        583467.354,
+        233626.651,
+        583499.354
+      ],
+      "center_RD": [
+        233610.651,
+        583483.354
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233594.6510%2C583467.3540%2C233626.6510%2C583499.3540&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904010",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904010.jpg",
+      "sha256": "73211c0c018c873decc8139361930b28ced64e07da52cb180a564c842d6293d5",
+      "bytes": 93613,
+      "bbox_RD": [
+        234342.64250000002,
+        579792.3225,
+        234374.64250000002,
+        579824.3225
+      ],
+      "center_RD": [
+        234358.64250000002,
+        579808.3225
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234342.6425%2C579792.3225%2C234374.6425%2C579824.3225&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904022",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904022.jpg",
+      "sha256": "94c729547d91665a5d159c5fa608fa4e92973de554bc7e1b1ae00b73c92257fe",
+      "bytes": 105890,
+      "bbox_RD": [
+        234183.95299999998,
+        584162.6555,
+        234215.95299999998,
+        584194.6555
+      ],
+      "center_RD": [
+        234199.95299999998,
+        584178.6555
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234183.9530%2C584162.6555%2C234215.9530%2C584194.6555&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904024",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904024.jpg",
+      "sha256": "3d61eb2d853301b8fa1ba5d747a88bd1dae2fe02f9b7f3b80d49947daa4944a4",
+      "bytes": 124425,
+      "bbox_RD": [
+        232575.071,
+        583681.3385,
+        232607.071,
+        583713.3385
+      ],
+      "center_RD": [
+        232591.071,
+        583697.3385
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232575.0710%2C583681.3385%2C232607.0710%2C583713.3385&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904025",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904025.jpg",
+      "sha256": "0e4ec3b87bcd40e7a223992bfe7469d0ffc0cd8f32179f80f95610332b10c967",
+      "bytes": 113832,
+      "bbox_RD": [
+        232617.3725,
+        583695.1610000001,
+        232649.3725,
+        583727.1610000001
+      ],
+      "center_RD": [
+        232633.3725,
+        583711.1610000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232617.3725%2C583695.1610%2C232649.3725%2C583727.1610&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904027",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904027.jpg",
+      "sha256": "b1f9a8063b3fdf2406496228eebbc09760a3145fa7f1fc9333d1bec33b2b225f",
+      "bytes": 152639,
+      "bbox_RD": [
+        235885.45887499998,
+        581357.125875,
+        235969.386125,
+        581441.053125
+      ],
+      "center_RD": [
+        235927.4225,
+        581399.0895
+      ],
+      "span_m": 83.92724999998462,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.08196020507810999,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=235885.4589%2C581357.1259%2C235969.3861%2C581441.0531&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904028",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904028.jpg",
+      "sha256": "4f5d9ae46c1da1b47203a6ed7edfa34ed8cd68d74b9dcf2b1d7dd9cee2844309",
+      "bytes": 166177,
+      "bbox_RD": [
+        235776.6778,
+        581132.2983,
+        235860.68919999996,
+        581216.3097
+      ],
+      "center_RD": [
+        235818.68349999998,
+        581174.304
+      ],
+      "span_m": 84.01139999994774,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.08204238281244897,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=235776.6778%2C581132.2983%2C235860.6892%2C581216.3097&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904041",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904041.jpg",
+      "sha256": "e003fed6e8a94728c38ef13795aaa0f5530705674c523b76f7f978907ca61083",
+      "bytes": 124876,
+      "bbox_RD": [
+        232517.3835,
+        583907.915,
+        232549.3835,
+        583939.915
+      ],
+      "center_RD": [
+        232533.3835,
+        583923.915
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232517.3835%2C583907.9150%2C232549.3835%2C583939.9150&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904044",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904044.jpg",
+      "sha256": "ba83c7502fe5a23568136427c61956e0d0158783fd4c68d7f796d3a26c986be5",
+      "bytes": 124281,
+      "bbox_RD": [
+        232498.9905,
+        583901.9265000001,
+        232530.9905,
+        583933.9265000001
+      ],
+      "center_RD": [
+        232514.9905,
+        583917.9265000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232498.9905%2C583901.9265%2C232530.9905%2C583933.9265&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904048",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904048.jpg",
+      "sha256": "9ae95928874a052203c611555f132263e39342a28d52a299f894434059c5c15b",
+      "bytes": 116015,
+      "bbox_RD": [
+        232543.22275000002,
+        583886.4294999999,
+        232575.22275000002,
+        583918.4294999999
+      ],
+      "center_RD": [
+        232559.22275000002,
+        583902.4294999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232543.2228%2C583886.4295%2C232575.2228%2C583918.4295&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904057",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904057.jpg",
+      "sha256": "e51706d8c27d5c2e3baba0737d7e0c8bb0602f98a5c9d46b526697ef838abc94",
+      "bytes": 99675,
+      "bbox_RD": [
+        231179.05575,
+        582262.8835,
+        231211.05575,
+        582294.8835
+      ],
+      "center_RD": [
+        231195.05575,
+        582278.8835
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231179.0557%2C582262.8835%2C231211.0557%2C582294.8835&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904058",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904058.jpg",
+      "sha256": "3aaa06933ee353666e7284e042f86dd59000e0650ff3cf19b23c810bcfc315d5",
+      "bytes": 92211,
+      "bbox_RD": [
+        231121.74775,
+        582244.1095,
+        231153.74775,
+        582276.1095
+      ],
+      "center_RD": [
+        231137.74775,
+        582260.1095
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231121.7478%2C582244.1095%2C231153.7478%2C582276.1095&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904059",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904059.jpg",
+      "sha256": "a1e5ef2d5f4daf756a1fe7b0a85ced0af426f4f5e641714080227067c57fdbc7",
+      "bytes": 106597,
+      "bbox_RD": [
+        231143.60375,
+        582251.6564999999,
+        231175.60375,
+        582283.6564999999
+      ],
+      "center_RD": [
+        231159.60375,
+        582267.6564999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231143.6038%2C582251.6565%2C231175.6038%2C582283.6565&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904068",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904068.jpg",
+      "sha256": "cebbdd3181ee8e546fef787055c3746277dd2f60ef25d9e4832f09fbab78f7eb",
+      "bytes": 122285,
+      "bbox_RD": [
+        232553.90175000002,
+        583797.129,
+        232585.90175000002,
+        583829.129
+      ],
+      "center_RD": [
+        232569.90175000002,
+        583813.129
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232553.9018%2C583797.1290%2C232585.9018%2C583829.1290&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904070",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904070.jpg",
+      "sha256": "9fed321592fa1457e4934207e570c0b7015f69bbcd32abf55937168a7efb471b",
+      "bytes": 68433,
+      "bbox_RD": [
+        236528.25075,
+        581447.842,
+        236560.25075,
+        581479.842
+      ],
+      "center_RD": [
+        236544.25075,
+        581463.842
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=236528.2508%2C581447.8420%2C236560.2508%2C581479.8420&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904073",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904073.jpg",
+      "sha256": "151c863abc74d7b0a5bf6ff5196512cf003591bd5a965c42f26f1bd20896b051",
+      "bytes": 97032,
+      "bbox_RD": [
+        232523.87325,
+        583703.085,
+        232555.87325,
+        583735.085
+      ],
+      "center_RD": [
+        232539.87325,
+        583719.085
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232523.8733%2C583703.0850%2C232555.8733%2C583735.0850&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904077",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904077.jpg",
+      "sha256": "8ad3de9148c4210cc0967eb82bd6c9b59efca6d743a75c4a096fb0a84a6ae9a3",
+      "bytes": 115837,
+      "bbox_RD": [
+        234172.84225000002,
+        580916.057,
+        234204.84225000002,
+        580948.057
+      ],
+      "center_RD": [
+        234188.84225000002,
+        580932.057
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234172.8423%2C580916.0570%2C234204.8423%2C580948.0570&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904084",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904084.jpg",
+      "sha256": "1664f69e965492a7b865cd15b1b354ed12477b6d2c6a22c08b29daef9c8c1b3e",
+      "bytes": 109718,
+      "bbox_RD": [
+        232565.55525,
+        583767.0434999999,
+        232597.55525,
+        583799.0434999999
+      ],
+      "center_RD": [
+        232581.55525,
+        583783.0434999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232565.5553%2C583767.0435%2C232597.5553%2C583799.0435&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904103",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904103.jpg",
+      "sha256": "0d1262ad5ce319e40135d2bcc1510a29139df1df56d4bdb0cbe55a6fcf02bf1d",
+      "bytes": 86200,
+      "bbox_RD": [
+        234173.61972500003,
+        583115.505475,
+        234206.87877499996,
+        583148.764525
+      ],
+      "center_RD": [
+        234190.24925,
+        583132.135
+      ],
+      "span_m": 33.259049999962734,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03247954101558861,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234173.6197%2C583115.5055%2C234206.8788%2C583148.7645&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904106",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904106.jpg",
+      "sha256": "c538269b8f3d0d3a552d9d28fa82c5b2c9a25356510c23c640bfcd21423b3c8b",
+      "bytes": 106873,
+      "bbox_RD": [
+        232475.84725,
+        583747.4139999999,
+        232507.84725,
+        583779.4139999999
+      ],
+      "center_RD": [
+        232491.84725,
+        583763.4139999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232475.8472%2C583747.4140%2C232507.8472%2C583779.4140&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904108",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904108.jpg",
+      "sha256": "3c380c6f15c1d3041b2716f237d30f653123b27dbd6de81447bc5992372de627",
+      "bytes": 89194,
+      "bbox_RD": [
+        233909.06035,
+        579330.7850999999,
+        233943.73015,
+        579365.4548999999
+      ],
+      "center_RD": [
+        233926.39525,
+        579348.1199999999
+      ],
+      "span_m": 34.66979999998002,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03385722656248049,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233909.0604%2C579330.7851%2C233943.7301%2C579365.4549&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904109",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904109.jpg",
+      "sha256": "9c9c93b9eed112209944ac4124b0cfa35ebad1bd7157d7f329e027cfc0ce6c46",
+      "bytes": 99266,
+      "bbox_RD": [
+        233341.67775,
+        580658.3435,
+        233373.67775,
+        580690.3435
+      ],
+      "center_RD": [
+        233357.67775,
+        580674.3435
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233341.6778%2C580658.3435%2C233373.6778%2C580690.3435&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904119",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904119.jpg",
+      "sha256": "b27838729ccb0c8f1f4f86381d85ca58037809de7bed81c7386a2c17a76d9941",
+      "bytes": 120104,
+      "bbox_RD": [
+        232442.324,
+        583705.5700000001,
+        232474.324,
+        583737.5700000001
+      ],
+      "center_RD": [
+        232458.324,
+        583721.5700000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232442.3240%2C583705.5700%2C232474.3240%2C583737.5700&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904123",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904123.jpg",
+      "sha256": "f88c0c8e6aec18e4194dc7c16d89dec4008ef7061e84f10c9354663977fc8b0d",
+      "bytes": 137470,
+      "bbox_RD": [
+        232395.03600000002,
+        583810.185,
+        232427.03600000002,
+        583842.185
+      ],
+      "center_RD": [
+        232411.03600000002,
+        583826.185
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232395.0360%2C583810.1850%2C232427.0360%2C583842.1850&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904125",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904125.jpg",
+      "sha256": "7f3cdd6466a2be19739cad6f5df5d007df3589e575f728adde61938581337926",
+      "bytes": 116868,
+      "bbox_RD": [
+        233531.79892499998,
+        582572.636425,
+        233568.876075,
+        582609.7135750001
+      ],
+      "center_RD": [
+        233550.3375,
+        582591.175
+      ],
+      "span_m": 37.07715000003227,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03620815429690651,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233531.7989%2C582572.6364%2C233568.8761%2C582609.7136&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904126",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904126.jpg",
+      "sha256": "891e1e4366261e1e0df0819e750610860932ca41c5943ab9ebd148f2dfcb7635",
+      "bytes": 79492,
+      "bbox_RD": [
+        233921.6815,
+        581906.369,
+        233953.6815,
+        581938.369
+      ],
+      "center_RD": [
+        233937.6815,
+        581922.369
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233921.6815%2C581906.3690%2C233953.6815%2C581938.3690&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904127",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904127.jpg",
+      "sha256": "ec7fa43d2ebaeea6ea65d6f1930a3e5d04acd95ccc19c53ea262dddf1cbaae96",
+      "bytes": 124372,
+      "bbox_RD": [
+        232446.193,
+        583828.0795,
+        232478.193,
+        583860.0795
+      ],
+      "center_RD": [
+        232462.193,
+        583844.0795
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232446.1930%2C583828.0795%2C232478.1930%2C583860.0795&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904128",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904128.jpg",
+      "sha256": "95b98000676f55b3d22cc66acd318dc2f615251542c4b83710802d5c0b2fd554",
+      "bytes": 114925,
+      "bbox_RD": [
+        232452.20150000002,
+        583829.054,
+        232484.20150000002,
+        583861.054
+      ],
+      "center_RD": [
+        232468.20150000002,
+        583845.054
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232452.2015%2C583829.0540%2C232484.2015%2C583861.0540&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904130",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904130.jpg",
+      "sha256": "b6106077cfc02a1efb1d2a2aa76321ea86543c99749492dd3067eb7ce827b5e4",
+      "bytes": 101291,
+      "bbox_RD": [
+        232341.41100000002,
+        583864.316,
+        232373.41100000002,
+        583896.316
+      ],
+      "center_RD": [
+        232357.41100000002,
+        583880.316
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232341.4110%2C583864.3160%2C232373.4110%2C583896.3160&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904131",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904131.jpg",
+      "sha256": "1ade1ef6a603cfac42b27d7db124d3cbe9df74f50c5fe818f484b632c208c9ee",
+      "bytes": 117049,
+      "bbox_RD": [
+        232379.031,
+        583851.4495,
+        232411.031,
+        583883.4495
+      ],
+      "center_RD": [
+        232395.031,
+        583867.4495
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232379.0310%2C583851.4495%2C232411.0310%2C583883.4495&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904135",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904135.jpg",
+      "sha256": "9c87214b3babe8690677ed88785a865e65e5f76456c65f484f50121e40496f41",
+      "bytes": 82665,
+      "bbox_RD": [
+        231207.1435,
+        583325.9384999999,
+        231239.1435,
+        583357.9384999999
+      ],
+      "center_RD": [
+        231223.1435,
+        583341.9384999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231207.1435%2C583325.9385%2C231239.1435%2C583357.9385&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904140",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904140.jpg",
+      "sha256": "d0461ae21c56f1e234b588516a1e7fe6eef6d94b21d8def8ab9b6365e1604677",
+      "bytes": 120474,
+      "bbox_RD": [
+        232430.535,
+        583887.48,
+        232462.535,
+        583919.48
+      ],
+      "center_RD": [
+        232446.535,
+        583903.48
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232430.5350%2C583887.4800%2C232462.5350%2C583919.4800&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904147",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904147.jpg",
+      "sha256": "b4262bbb5b0a25b641979c60356dcf30be36551e3826e5689bc6bbf3b73d19a0",
+      "bytes": 127853,
+      "bbox_RD": [
+        232612.7895,
+        583940.71,
+        232644.7895,
+        583972.71
+      ],
+      "center_RD": [
+        232628.7895,
+        583956.71
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232612.7895%2C583940.7100%2C232644.7895%2C583972.7100&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904170",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904170.jpg",
+      "sha256": "3e291b096cab5eb98386cb291b1587be920baa70fd1dcfea33b4f72ffe95c160",
+      "bytes": 156151,
+      "bbox_RD": [
+        232081.19904999997,
+        583127.29405,
+        232247.36395,
+        583293.45895
+      ],
+      "center_RD": [
+        232164.28149999998,
+        583210.3765
+      ],
+      "span_m": 166.1649000000092,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.16227041015625898,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232081.1990%2C583127.2941%2C232247.3639%2C583293.4590&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904172",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904172.jpg",
+      "sha256": "a02315cc3e2c54ec5240392cedd9fd1d9310830fab4f249a10641c8c7fb4238c",
+      "bytes": 95531,
+      "bbox_RD": [
+        232934.85499999998,
+        583382.485,
+        232966.85499999998,
+        583414.485
+      ],
+      "center_RD": [
+        232950.85499999998,
+        583398.485
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232934.8550%2C583382.4850%2C232966.8550%2C583414.4850&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904173",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904173.jpg",
+      "sha256": "0715d954f6f88311bcb382d189e09f583ed1be99054f53dd1b9fee87b1ddd194",
+      "bytes": 95871,
+      "bbox_RD": [
+        232932.0705,
+        583388.0804999999,
+        232964.0705,
+        583420.0804999999
+      ],
+      "center_RD": [
+        232948.0705,
+        583404.0804999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232932.0705%2C583388.0805%2C232964.0705%2C583420.0805&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904175",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904175.jpg",
+      "sha256": "42279d4607b79c665b9f52734efe32460bacccd9fe8785d1f18302a9952e1e6e",
+      "bytes": 81980,
+      "bbox_RD": [
+        233689.5025,
+        583718.551,
+        233721.5025,
+        583750.551
+      ],
+      "center_RD": [
+        233705.5025,
+        583734.551
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233689.5025%2C583718.5510%2C233721.5025%2C583750.5510&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904180",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904180.jpg",
+      "sha256": "9713a7dcedcb6a44c2449d0c49322d71463e2bb5c5c28f155420c57f917dfa3d",
+      "bytes": 107816,
+      "bbox_RD": [
+        232964.50699999998,
+        583450.326,
+        232996.50699999998,
+        583482.326
+      ],
+      "center_RD": [
+        232980.50699999998,
+        583466.326
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232964.5070%2C583450.3260%2C232996.5070%2C583482.3260&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904182",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904182.jpg",
+      "sha256": "92bd8b7822ee54d4783291b8b21b9fb5496ce7264730ae6f66a1be63c0e61fe1",
+      "bytes": 118229,
+      "bbox_RD": [
+        232512.097,
+        584000.3025,
+        232544.097,
+        584032.3025
+      ],
+      "center_RD": [
+        232528.097,
+        584016.3025
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232512.0970%2C584000.3025%2C232544.0970%2C584032.3025&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904202",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904202.jpg",
+      "sha256": "0e7c3841a22a12ff6ca55f440f074171283bc32fa9d0773845a31ef517053b07",
+      "bytes": 89781,
+      "bbox_RD": [
+        232974.2825,
+        583913.0475,
+        233006.2825,
+        583945.0475
+      ],
+      "center_RD": [
+        232990.2825,
+        583929.0475
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232974.2825%2C583913.0475%2C233006.2825%2C583945.0475&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904204",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904204.jpg",
+      "sha256": "ad5eca1e416721c095feec37831469c1cb488b32e09d0399b562c38d00db99fb",
+      "bytes": 84037,
+      "bbox_RD": [
+        235392.50449999998,
+        582637.4045,
+        235424.50449999998,
+        582669.4045
+      ],
+      "center_RD": [
+        235408.50449999998,
+        582653.4045
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=235392.5045%2C582637.4045%2C235424.5045%2C582669.4045&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904205",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904205.jpg",
+      "sha256": "1cb7bb62f73568cdd439adb2f4329389f254f5071162b7ca5f17f935616fb038",
+      "bytes": 86595,
+      "bbox_RD": [
+        235396.77625,
+        582640.1195,
+        235428.77625,
+        582672.1195
+      ],
+      "center_RD": [
+        235412.77625,
+        582656.1195
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=235396.7762%2C582640.1195%2C235428.7762%2C582672.1195&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904208",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904208.jpg",
+      "sha256": "1ad8826a3d8a9c2882f0feb8df2b5499c7f9edbd73760b67636469f36aad7fd7",
+      "bytes": 99585,
+      "bbox_RD": [
+        232739.50375,
+        581726.0955,
+        232771.50375,
+        581758.0955
+      ],
+      "center_RD": [
+        232755.50375,
+        581742.0955
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232739.5038%2C581726.0955%2C232771.5038%2C581758.0955&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904221",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904221.jpg",
+      "sha256": "5a6cd4ad67feb915db77deeba75b3f9ffaf2d470506185225569f6e49f7b97b0",
+      "bytes": 93157,
+      "bbox_RD": [
+        232972.94125,
+        583553.7525000001,
+        233004.94125,
+        583585.7525000001
+      ],
+      "center_RD": [
+        232988.94125,
+        583569.7525000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232972.9413%2C583553.7525%2C233004.9413%2C583585.7525&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904249",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904249.jpg",
+      "sha256": "86b9a0e2b9bf03b2a66c81964aecd8fd1251644e800fc9225ef5635038099a13",
+      "bytes": 137540,
+      "bbox_RD": [
+        234009.61489999993,
+        583922.92515,
+        234073.0706000001,
+        583986.3808500001
+      ],
+      "center_RD": [
+        234041.34275,
+        583954.653
+      ],
+      "span_m": 63.45570000016596,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.06196845703141207,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234009.6149%2C583922.9252%2C234073.0706%2C583986.3809&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904250",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904250.jpg",
+      "sha256": "ebacc6dd15d772bb8b02e233093f269cdc7e737f5121066fc02e6f4bcdcc6121",
+      "bytes": 87990,
+      "bbox_RD": [
+        234071.43624999997,
+        583947.9355,
+        234103.43624999997,
+        583979.9355
+      ],
+      "center_RD": [
+        234087.43624999997,
+        583963.9355
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234071.4362%2C583947.9355%2C234103.4362%2C583979.9355&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904258",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904258.jpg",
+      "sha256": "b545c2b1cbd55fe58d0eed2b4023af9b507199b48baab4b693bf0b54af60ce70",
+      "bytes": 84107,
+      "bbox_RD": [
+        232904.53075,
+        583998.2490000001,
+        232936.53075,
+        584030.2490000001
+      ],
+      "center_RD": [
+        232920.53075,
+        584014.2490000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232904.5308%2C583998.2490%2C232936.5308%2C584030.2490&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904268",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904268.jpg",
+      "sha256": "c4755e50a90e63e00061c807540a39456b5db76f0784c8394262f6abc93d41ee",
+      "bytes": 83077,
+      "bbox_RD": [
+        236593.28625,
+        581440.2635000001,
+        236625.28625,
+        581472.2635000001
+      ],
+      "center_RD": [
+        236609.28625,
+        581456.2635000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=236593.2863%2C581440.2635%2C236625.2863%2C581472.2635&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904274",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904274.jpg",
+      "sha256": "4d6d361965fcc0258dcd4a7c9884434f6e21824a8b0e96705c772008fa680e19",
+      "bytes": 92301,
+      "bbox_RD": [
+        231042.54725,
+        582943.9380000001,
+        231074.54725,
+        582975.9380000001
+      ],
+      "center_RD": [
+        231058.54725,
+        582959.9380000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231042.5473%2C582943.9380%2C231074.5473%2C582975.9380&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904278",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904278.jpg",
+      "sha256": "a65e81c2dea653f928a07d5ab28eb19d84e181a2b8fc940890dcc99b63f46c6a",
+      "bytes": 88384,
+      "bbox_RD": [
+        231302.38624999998,
+        583026.3185,
+        231334.38624999998,
+        583058.3185
+      ],
+      "center_RD": [
+        231318.38624999998,
+        583042.3185
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231302.3862%2C583026.3185%2C231334.3862%2C583058.3185&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904283",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904283.jpg",
+      "sha256": "db1d93e57a2e1a6635c65c08577278874b1c2e6c055cf6a50d00631cd3a25ccb",
+      "bytes": 83148,
+      "bbox_RD": [
+        234144.53929999997,
+        581535.71355,
+        234178.04419999997,
+        581569.21845
+      ],
+      "center_RD": [
+        234161.29174999997,
+        581552.466
+      ],
+      "span_m": 33.50490000001882,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03271962890626838,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234144.5393%2C581535.7135%2C234178.0442%2C581569.2185&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904295",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904295.jpg",
+      "sha256": "7b324da89baeca71e55df1fbd17ac1db21513ed980d3b16b6511ababd767359e",
+      "bytes": 118827,
+      "bbox_RD": [
+        233232.73575,
+        582393.6030000001,
+        233264.73575,
+        582425.6030000001
+      ],
+      "center_RD": [
+        233248.73575,
+        582409.6030000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233232.7357%2C582393.6030%2C233264.7357%2C582425.6030&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904299",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904299.jpg",
+      "sha256": "008a280be290e1826835a1d0eaf0f5be8ef5f9c2a245298cb51da2203239e1e5",
+      "bytes": 113382,
+      "bbox_RD": [
+        234387.36825,
+        580828.233,
+        234419.36825,
+        580860.233
+      ],
+      "center_RD": [
+        234403.36825,
+        580844.233
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234387.3682%2C580828.2330%2C234419.3682%2C580860.2330&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904302",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904302.jpg",
+      "sha256": "6eec16069bc0058071f31e95de49637ea5c13672027d35c3ddd4d272b3d9f3a0",
+      "bytes": 114006,
+      "bbox_RD": [
+        234977.91775,
+        580658.703,
+        235009.91775,
+        580690.703
+      ],
+      "center_RD": [
+        234993.91775,
+        580674.703
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234977.9177%2C580658.7030%2C235009.9177%2C580690.7030&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904315",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904315.jpg",
+      "sha256": "ca7ebb0fa8329289c7c6f197a1b917eca7b8bff2a334ece88165038ebe7e2224",
+      "bytes": 108250,
+      "bbox_RD": [
+        232542.82475,
+        583531.4450000001,
+        232574.82475,
+        583563.4450000001
+      ],
+      "center_RD": [
+        232558.82475,
+        583547.4450000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=232542.8247%2C583531.4450%2C232574.8247%2C583563.4450&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904324",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904324.jpg",
+      "sha256": "64c213b908354340e6c2aac2fcfdcbb289d9097c76be394f6de1cf3a1cbbb916",
+      "bytes": 97159,
+      "bbox_RD": [
+        234648.76775,
+        582407.331,
+        234680.76775,
+        582439.331
+      ],
+      "center_RD": [
+        234664.76775,
+        582423.331
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234648.7677%2C582407.3310%2C234680.7677%2C582439.3310&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904325",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904325.jpg",
+      "sha256": "a1a0183d017e2e928f63dfe6456df7da7f292396bb0464d31f35517d6cadad41",
+      "bytes": 94547,
+      "bbox_RD": [
+        234637.80575,
+        582430.804,
+        234669.80575,
+        582462.804
+      ],
+      "center_RD": [
+        234653.80575,
+        582446.804
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234637.8057%2C582430.8040%2C234669.8057%2C582462.8040&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904329",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904329.jpg",
+      "sha256": "cf59857f8c71d188b11b1366ac8d02dc83de641e29b2506557485e13ae0f68da",
+      "bytes": 92617,
+      "bbox_RD": [
+        234610.06524999999,
+        582420.8400000001,
+        234642.06524999999,
+        582452.8400000001
+      ],
+      "center_RD": [
+        234626.06524999999,
+        582436.8400000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234610.0652%2C582420.8400%2C234642.0652%2C582452.8400&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904331",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904331.jpg",
+      "sha256": "be2d0e598da6590eb345de87f359bf97a63835488290addd6819b8abb23925c6",
+      "bytes": 86991,
+      "bbox_RD": [
+        234541.91825,
+        582528.7495,
+        234573.91825,
+        582560.7495
+      ],
+      "center_RD": [
+        234557.91825,
+        582544.7495
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234541.9182%2C582528.7495%2C234573.9182%2C582560.7495&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904337",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904337.jpg",
+      "sha256": "1eec1471e62a45a98206d910b88ddbe67a67a4b201e5dbb2165c09410d74fa7c",
+      "bytes": 128308,
+      "bbox_RD": [
+        231941.51575,
+        582597.869,
+        231973.51575,
+        582629.869
+      ],
+      "center_RD": [
+        231957.51575,
+        582613.869
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231941.5157%2C582597.8690%2C231973.5157%2C582629.8690&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904338",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904338.jpg",
+      "sha256": "0c37f2b762b696b3e9e0e1fdc8d05b08a8ac5cf168501ebd4a52e60d1b36db99",
+      "bytes": 121863,
+      "bbox_RD": [
+        231907.47825,
+        582585.5279999999,
+        231939.47825,
+        582617.5279999999
+      ],
+      "center_RD": [
+        231923.47825,
+        582601.5279999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=231907.4782%2C582585.5280%2C231939.4782%2C582617.5280&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904342",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904342.jpg",
+      "sha256": "48600ee8218a2c0cc71106b5ec0ad415387fe8883c7b46e99a48e2065b261e2d",
+      "bytes": 83846,
+      "bbox_RD": [
+        233770.41175,
+        581444.0495,
+        233802.41175,
+        581476.0495
+      ],
+      "center_RD": [
+        233786.41175,
+        581460.0495
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=233770.4117%2C581444.0495%2C233802.4117%2C581476.0495&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904345",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904345.jpg",
+      "sha256": "02a7d573366bed1fdce6da1ef72a53710533d5f9eabe15babaf63c54109872b5",
+      "bytes": 102143,
+      "bbox_RD": [
+        234861.68925,
+        580789.0355,
+        234893.68925,
+        580821.0355
+      ],
+      "center_RD": [
+        234877.68925,
+        580805.0355
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234861.6892%2C580789.0355%2C234893.6892%2C580821.0355&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904362",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904362.jpg",
+      "sha256": "0ea1dc69b3f587d55682758253fbb5b8848ff1d7959e8399011f4379aa6895d5",
+      "bytes": 117793,
+      "bbox_RD": [
+        234631.70124999998,
+        581190.3275,
+        234663.70124999998,
+        581222.3275
+      ],
+      "center_RD": [
+        234647.70124999998,
+        581206.3275
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234631.7012%2C581190.3275%2C234663.7012%2C581222.3275&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904364",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904364.jpg",
+      "sha256": "850e42f26178d4b440b07a7551b42fa7428ac00e8efad576e070af599438e313",
+      "bytes": 108762,
+      "bbox_RD": [
+        234680.34375,
+        581231.468,
+        234712.34375,
+        581263.468
+      ],
+      "center_RD": [
+        234696.34375,
+        581247.468
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234680.3438%2C581231.4680%2C234712.3438%2C581263.4680&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904370",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904370.jpg",
+      "sha256": "4f6e8efffbdc757835b8f79f1d07e68c9321626f079f1c04e37894d7932cb97f",
+      "bytes": 82703,
+      "bbox_RD": [
+        234130.89325,
+        581988.7220000001,
+        234162.89325,
+        582020.7220000001
+      ],
+      "center_RD": [
+        234146.89325,
+        582004.7220000001
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234130.8932%2C581988.7220%2C234162.8932%2C582020.7220&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904391",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904391.jpg",
+      "sha256": "3a263d1aa6bb3719f98c8e4c1186a4ca8ecd5a0698152e50e3363063692c576a",
+      "bytes": 87062,
+      "bbox_RD": [
+        234515.889,
+        583187.0519999999,
+        234547.889,
+        583219.0519999999
+      ],
+      "center_RD": [
+        234531.889,
+        583203.0519999999
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234515.8890%2C583187.0520%2C234547.8890%2C583219.0520&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904392",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904392.jpg",
+      "sha256": "2a737582ac6a4a1d097c0e250718b904f38258f060cf45c44da91d664a25c13a",
+      "bytes": 84594,
+      "bbox_RD": [
+        234508.676,
+        583179.6285,
+        234540.676,
+        583211.6285
+      ],
+      "center_RD": [
+        234524.676,
+        583195.6285
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234508.6760%2C583179.6285%2C234540.6760%2C583211.6285&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904417",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904417.jpg",
+      "sha256": "669e0e2491f8455e668ce4a9360e05ea80682ec44790bcbed7be86444ca9a8a0",
+      "bytes": 110924,
+      "bbox_RD": [
+        234859.06300000002,
+        580751.9155,
+        234891.06300000002,
+        580783.9155
+      ],
+      "center_RD": [
+        234875.06300000002,
+        580767.9155
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234859.0630%2C580751.9155%2C234891.0630%2C580783.9155&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904418",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904418.jpg",
+      "sha256": "772cda3371f79f0a8cb7fe2a84d8673c1781d323e90b89755fdeac2d416fbcb7",
+      "bytes": 114929,
+      "bbox_RD": [
+        234887.91100000002,
+        580778.1635,
+        234919.91100000002,
+        580810.1635
+      ],
+      "center_RD": [
+        234903.91100000002,
+        580794.1635
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234887.9110%2C580778.1635%2C234919.9110%2C580810.1635&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0014100010904449",
+      "file": "imagery/NL.IMBAG.Pand.0014100010904449.jpg",
+      "sha256": "1cb9653e522b2e2c871b31846dcb85ef517d18e630d5feac55ec59e10564d835",
+      "bytes": 102995,
+      "bbox_RD": [
+        234350.2195,
+        583823.5045,
+        234382.2195,
+        583855.5045
+      ],
+      "center_RD": [
+        234366.2195,
+        583839.5045
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=234350.2195%2C583823.5045%2C234382.2195%2C583855.5045&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001507",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001507.jpg",
+      "sha256": "ebc102b3f317e9f2ce705bac70c9c133869ba28f099bd69f2f30bf087b7bc73f",
+      "bytes": 88196,
+      "bbox_RD": [
+        173379.433875,
+        318978.35675000004,
+        173411.433875,
+        319010.35675000004
+      ],
+      "center_RD": [
+        173395.433875,
+        318994.35675000004
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173379.4339%2C318978.3568%2C173411.4339%2C319010.3568&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001512",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001512.jpg",
+      "sha256": "a5a50440b3735ed804476bd23f0828940d8d3c389f5497e43dfa8eeb80558655",
+      "bytes": 89260,
+      "bbox_RD": [
+        173377.76837499999,
+        316476.29625,
+        173409.76837499999,
+        316508.29625
+      ],
+      "center_RD": [
+        173393.76837499999,
+        316492.29625
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173377.7684%2C316476.2963%2C173409.7684%2C316508.2963&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001520",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001520.jpg",
+      "sha256": "c7c2d1b6079e312be15d352e4103cce1c90a282b051239bd791ab1f06f0de636",
+      "bytes": 95631,
+      "bbox_RD": [
+        173380.901375,
+        317312.12025,
+        173412.901375,
+        317344.12025
+      ],
+      "center_RD": [
+        173396.901375,
+        317328.12025
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173380.9014%2C317312.1202%2C173412.9014%2C317344.1202&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001523",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001523.jpg",
+      "sha256": "f6f49793f059b8d91e6042ea86272884a0c7e1e586f17415f73184c3d1e78be8",
+      "bytes": 86002,
+      "bbox_RD": [
+        173377.78787499998,
+        316429.35175,
+        173409.78787499998,
+        316461.35175
+      ],
+      "center_RD": [
+        173393.78787499998,
+        316445.35175
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173377.7879%2C316429.3517%2C173409.7879%2C316461.3517&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001524",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001524.jpg",
+      "sha256": "8fbe62833b6bd643eff8c4f0ae01b702cf070a78cb2f464359d5b55cb45aca16",
+      "bytes": 89148,
+      "bbox_RD": [
+        173380.53787499998,
+        317305.01925,
+        173412.53787499998,
+        317337.01925
+      ],
+      "center_RD": [
+        173396.53787499998,
+        317321.01925
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173380.5379%2C317305.0193%2C173412.5379%2C317337.0193&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001526",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001526.jpg",
+      "sha256": "fd86deccafd54ede85f9ae0df2c4f2f7ea44c4fc0cf0e98af75a6a008dd4860b",
+      "bytes": 100531,
+      "bbox_RD": [
+        173382.64687499998,
+        316798.60175000003,
+        173414.64687499998,
+        316830.60175000003
+      ],
+      "center_RD": [
+        173398.64687499998,
+        316814.60175000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173382.6469%2C316798.6018%2C173414.6469%2C316830.6018&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001536",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001536.jpg",
+      "sha256": "3c1690590fdfc7e0ee750cf169448acd3b85d53b00a2b0b6f44360ed953ba416",
+      "bytes": 90710,
+      "bbox_RD": [
+        173384.19837499998,
+        318971.24875,
+        173416.19837499998,
+        319003.24875
+      ],
+      "center_RD": [
+        173400.19837499998,
+        318987.24875
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173384.1984%2C318971.2488%2C173416.1984%2C319003.2488&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001539",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001539.jpg",
+      "sha256": "99451f3ce62e67332590269544fcff342383560fafce96cb5ee33a2b53ecc9fa",
+      "bytes": 86323,
+      "bbox_RD": [
+        173383.04887499998,
+        317294.51475,
+        173415.04887499998,
+        317326.51475
+      ],
+      "center_RD": [
+        173399.04887499998,
+        317310.51475
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173383.0489%2C317294.5147%2C173415.0489%2C317326.5147&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001540",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001540.jpg",
+      "sha256": "cbf730af46f755d56de91d12be9997fecd3494b3e9a82f6c8f4646303bb4367c",
+      "bytes": 82223,
+      "bbox_RD": [
+        173380.610375,
+        317494.93574999995,
+        173412.610375,
+        317526.93574999995
+      ],
+      "center_RD": [
+        173396.610375,
+        317510.93574999995
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173380.6104%2C317494.9357%2C173412.6104%2C317526.9357&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001544",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001544.jpg",
+      "sha256": "e8e1ec904dfcc3c0f0aed5525b48967923166f52a02042912c41dcdcdd48ce1e",
+      "bytes": 87200,
+      "bbox_RD": [
+        173384.892875,
+        317290.27075,
+        173416.892875,
+        317322.27075
+      ],
+      "center_RD": [
+        173400.892875,
+        317306.27075
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173384.8929%2C317290.2708%2C173416.8929%2C317322.2708&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001549",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001549.jpg",
+      "sha256": "bdced63d8c1dc21a98d96865274c54261463fc2fe8993ec4b27c0b15544e1e53",
+      "bytes": 87091,
+      "bbox_RD": [
+        173380.52187499998,
+        317386.76025,
+        173412.52187499998,
+        317418.76025
+      ],
+      "center_RD": [
+        173396.52187499998,
+        317402.76025
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173380.5219%2C317386.7602%2C173412.5219%2C317418.7602&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001552",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001552.jpg",
+      "sha256": "27f74fe7cf6d19d0ef3cc3c161141505a84592bb1dfcb02ebef8ea5e01588931",
+      "bytes": 80715,
+      "bbox_RD": [
+        173383.262375,
+        316431.86425,
+        173415.262375,
+        316463.86425
+      ],
+      "center_RD": [
+        173399.262375,
+        316447.86425
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173383.2624%2C316431.8642%2C173415.2624%2C316463.8642&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001565",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001565.jpg",
+      "sha256": "9d4fbc26fb1bd877dcc9c4cc8cdcbb8bceadf794092959e96a5d1c34b55b1596",
+      "bytes": 103834,
+      "bbox_RD": [
+        173384.69662499998,
+        316897.81275,
+        173416.69662499998,
+        316929.81275
+      ],
+      "center_RD": [
+        173400.69662499998,
+        316913.81275
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173384.6966%2C316897.8127%2C173416.6966%2C316929.8127&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001568",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001568.jpg",
+      "sha256": "240a7b941a74a2ae7fa473335b66a6af0fc20ecadee11d9dff02ec47e1857657",
+      "bytes": 90626,
+      "bbox_RD": [
+        173390.039625,
+        317273.44525,
+        173422.039625,
+        317305.44525
+      ],
+      "center_RD": [
+        173406.039625,
+        317289.44525
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173390.0396%2C317273.4452%2C173422.0396%2C317305.4452&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001575",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001575.jpg",
+      "sha256": "ddce24d6ec18844eddc616a565f81d8d937311c6b3b1221b5fc03de905806321",
+      "bytes": 89298,
+      "bbox_RD": [
+        173387.733625,
+        316370.80874999997,
+        173419.733625,
+        316402.80874999997
+      ],
+      "center_RD": [
+        173403.733625,
+        316386.80874999997
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173387.7336%2C316370.8087%2C173419.7336%2C316402.8087&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001581",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001581.jpg",
+      "sha256": "6b610477bead2572a864fb570ce729cd00af0c2e206bb533d5abf2a23888bc62",
+      "bytes": 99224,
+      "bbox_RD": [
+        173388.804625,
+        319188.18924999994,
+        173420.804625,
+        319220.18924999994
+      ],
+      "center_RD": [
+        173404.804625,
+        319204.18924999994
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173388.8046%2C319188.1892%2C173420.8046%2C319220.1892&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001589",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001589.jpg",
+      "sha256": "30d73c844b367f2243d05bf0e7220a97e67a74d01b6362a71cb8ec292965ee0e",
+      "bytes": 107490,
+      "bbox_RD": [
+        173390.143125,
+        316308.80475,
+        173422.143125,
+        316340.80475
+      ],
+      "center_RD": [
+        173406.143125,
+        316324.80475
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173390.1431%2C316308.8048%2C173422.1431%2C316340.8048&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001590",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001590.jpg",
+      "sha256": "a193c7f83e677dcda03279fc842be37bab620a569931ccafb73098231c20632f",
+      "bytes": 97536,
+      "bbox_RD": [
+        173394.91912500001,
+        316819.68025,
+        173426.91912500001,
+        316851.68025
+      ],
+      "center_RD": [
+        173410.91912500001,
+        316835.68025
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173394.9191%2C316819.6802%2C173426.9191%2C316851.6802&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001591",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001591.jpg",
+      "sha256": "402048019af58acef81427bda8eb75115a2a29d8a8211bd9850044e037c33569",
+      "bytes": 93329,
+      "bbox_RD": [
+        173390.890625,
+        316570.09624999994,
+        173422.890625,
+        316602.09624999994
+      ],
+      "center_RD": [
+        173406.890625,
+        316586.09624999994
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173390.8906%2C316570.0962%2C173422.8906%2C316602.0962&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001592",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001592.jpg",
+      "sha256": "63ed2dd968bd6d3919534153f69e48f138642ef18a29a0a0c04259f7c692d9f7",
+      "bytes": 90516,
+      "bbox_RD": [
+        173394.208125,
+        317251.48325,
+        173426.208125,
+        317283.48325
+      ],
+      "center_RD": [
+        173410.208125,
+        317267.48325
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173394.2081%2C317251.4832%2C173426.2081%2C317283.4832&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001600",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001600.jpg",
+      "sha256": "4a2ddf20c2219169da6d0dfe3b7b6714e2493f3f252ce72de2dbca12071ccd48",
+      "bytes": 93188,
+      "bbox_RD": [
+        173393.267625,
+        316373.28725,
+        173425.267625,
+        316405.28725
+      ],
+      "center_RD": [
+        173409.267625,
+        316389.28725
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173393.2676%2C316373.2872%2C173425.2676%2C316405.2872&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001601",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001601.jpg",
+      "sha256": "342469c6622532224f026cdc771f4fdd575b2d87f2e4479fa73aecde1678e48b",
+      "bytes": 96872,
+      "bbox_RD": [
+        173396.530625,
+        316823.21475,
+        173428.530625,
+        316855.21475
+      ],
+      "center_RD": [
+        173412.530625,
+        316839.21475
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173396.5306%2C316823.2147%2C173428.5306%2C316855.2147&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001606",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001606.jpg",
+      "sha256": "32cd5c8020404fd14534767e1653035833c34ce91c31cdb1828c61aa0f137edf",
+      "bytes": 101947,
+      "bbox_RD": [
+        173400.08212500002,
+        319284.42175,
+        173432.08212500002,
+        319316.42175
+      ],
+      "center_RD": [
+        173416.08212500002,
+        319300.42175
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173400.0821%2C319284.4217%2C173432.0821%2C319316.4217&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001609",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001609.jpg",
+      "sha256": "94e91b562114ed9d3a94c6fb4ce26b7a8a828ef4671be66c57f63a880b91fb5f",
+      "bytes": 94803,
+      "bbox_RD": [
+        173395.922625,
+        316532.88425,
+        173427.922625,
+        316564.88425
+      ],
+      "center_RD": [
+        173411.922625,
+        316548.88425
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173395.9226%2C316532.8843%2C173427.9226%2C316564.8843&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001610",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001610.jpg",
+      "sha256": "f782f70fa62fb0157e0c47ae2039ba31a107bd602e19c9e71cdc5b817a6cb0eb",
+      "bytes": 83105,
+      "bbox_RD": [
+        173397.184125,
+        317384.85825,
+        173429.184125,
+        317416.85825
+      ],
+      "center_RD": [
+        173413.184125,
+        317400.85825
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173397.1841%2C317384.8582%2C173429.1841%2C317416.8582&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001611",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001611.jpg",
+      "sha256": "73d4d60b7769a350fc002b547dce71129c9509f7ed3cff06797a180fef929e1e",
+      "bytes": 93603,
+      "bbox_RD": [
+        173396.445625,
+        316345.00625,
+        173428.445625,
+        316377.00625
+      ],
+      "center_RD": [
+        173412.445625,
+        316361.00625
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173396.4456%2C316345.0062%2C173428.4456%2C316377.0062&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001612",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001612.jpg",
+      "sha256": "47179e0af00b9a8d83f4d1f222032954ea08da588dd0d6d30b67936b67b91d6f",
+      "bytes": 93438,
+      "bbox_RD": [
+        173394.66112499998,
+        317174.66825,
+        173426.66112499998,
+        317206.66825
+      ],
+      "center_RD": [
+        173410.66112499998,
+        317190.66825
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173394.6611%2C317174.6682%2C173426.6611%2C317206.6682&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001616",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001616.jpg",
+      "sha256": "871fd82191122041e30be5b7e55016d2e42dfea54250cab21b75c8e9dd194698",
+      "bytes": 101764,
+      "bbox_RD": [
+        173402.632625,
+        319281.04775,
+        173434.632625,
+        319313.04775
+      ],
+      "center_RD": [
+        173418.632625,
+        319297.04775
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173402.6326%2C319281.0478%2C173434.6326%2C319313.0478&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001617",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001617.jpg",
+      "sha256": "bfd2bbfeee2fe39485536a9f944f47aaa59cf2f4fb0860be1df818f4d4b1628b",
+      "bytes": 74849,
+      "bbox_RD": [
+        173397.800125,
+        317496.32175,
+        173429.800125,
+        317528.32175
+      ],
+      "center_RD": [
+        173413.800125,
+        317512.32175
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173397.8001%2C317496.3218%2C173429.8001%2C317528.3218&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001618",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001618.jpg",
+      "sha256": "1166f0720695e5ded5ea67278cc28a9c915dd9b615502acb5cf8e4c68e1f72a2",
+      "bytes": 97763,
+      "bbox_RD": [
+        173400.12262500002,
+        319311.48825,
+        173432.12262500002,
+        319343.48825
+      ],
+      "center_RD": [
+        173416.12262500002,
+        319327.48825
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173400.1226%2C319311.4882%2C173432.1226%2C319343.4882&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001628",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001628.jpg",
+      "sha256": "14701664aca8a99b29568e81a3c4535ce2aecc36c0fd9e83536f4818cf21b435",
+      "bytes": 95223,
+      "bbox_RD": [
+        173398.740625,
+        316375.77925,
+        173430.740625,
+        316407.77925
+      ],
+      "center_RD": [
+        173414.740625,
+        316391.77925
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173398.7406%2C316375.7793%2C173430.7406%2C316407.7793&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001629",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001629.jpg",
+      "sha256": "093f7f5126eac3b304adc1b203a1bf9ed22bcb6d75ed2811c84e279fc2cd6112",
+      "bytes": 95053,
+      "bbox_RD": [
+        173400.18312499998,
+        317191.87175,
+        173432.18312499998,
+        317223.87175
+      ],
+      "center_RD": [
+        173416.18312499998,
+        317207.87175
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173400.1831%2C317191.8717%2C173432.1831%2C317223.8717&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001636",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001636.jpg",
+      "sha256": "9a392cf4abe8cd4c47899d24f853414df161b004d60d67169de723ec68e0702e",
+      "bytes": 102818,
+      "bbox_RD": [
+        173404.959125,
+        319273.99025000003,
+        173436.959125,
+        319305.99025000003
+      ],
+      "center_RD": [
+        173420.959125,
+        319289.99025000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173404.9591%2C319273.9903%2C173436.9591%2C319305.9903&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001637",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001637.jpg",
+      "sha256": "8165befac10738905bfca4a0761148c1a03ad567d65a74d9793d1ba100c61efd",
+      "bytes": 93359,
+      "bbox_RD": [
+        173401.963625,
+        316347.48575,
+        173433.963625,
+        316379.48575
+      ],
+      "center_RD": [
+        173417.963625,
+        316363.48575
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173401.9636%2C316347.4857%2C173433.9636%2C316379.4857&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001641",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001641.jpg",
+      "sha256": "6f499b354f7465222d1d881a212543e701c9b6c89c55ec9d3f76ad142e056060",
+      "bytes": 102973,
+      "bbox_RD": [
+        173403.998625,
+        316845.81475,
+        173435.998625,
+        316877.81475
+      ],
+      "center_RD": [
+        173419.998625,
+        316861.81475
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173403.9986%2C316845.8148%2C173435.9986%2C316877.8148&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001645",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001645.jpg",
+      "sha256": "7e35d3ff62557b53bd77014383b9a7e92850669440507380f703af9794d3706f",
+      "bytes": 81941,
+      "bbox_RD": [
+        173400.203125,
+        317470.95775,
+        173432.203125,
+        317502.95775
+      ],
+      "center_RD": [
+        173416.203125,
+        317486.95775
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173400.2031%2C317470.9578%2C173432.2031%2C317502.9578&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001646",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001646.jpg",
+      "sha256": "9794e53b163355766c5ddcd4448dc41bac3da40ef7053e733b8ef79640cfbbb4",
+      "bytes": 91489,
+      "bbox_RD": [
+        173394.03365000003,
+        317464.400775,
+        173428.29260000002,
+        317498.65972500003
+      ],
+      "center_RD": [
+        173411.16312500002,
+        317481.53025
+      ],
+      "span_m": 34.25895000001037,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03345600585938513,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173394.0337%2C317464.4008%2C173428.2926%2C317498.6597&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001648",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001648.jpg",
+      "sha256": "1b080fce2e03a8eee0ea06ae0cb676f77c8e6c10838b2b944671de945ba0efdc",
+      "bytes": 87653,
+      "bbox_RD": [
+        173400.287625,
+        317454.75625,
+        173432.287625,
+        317486.75625
+      ],
+      "center_RD": [
+        173416.287625,
+        317470.75625
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173400.2876%2C317454.7562%2C173432.2876%2C317486.7562&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001650",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001650.jpg",
+      "sha256": "9d51981b766a7edd4912269fed29a0879d62ff39b8aadc10b2201a65d3ca31dd",
+      "bytes": 97284,
+      "bbox_RD": [
+        173400.38612500002,
+        317437.73075,
+        173432.38612500002,
+        317469.73075
+      ],
+      "center_RD": [
+        173416.38612500002,
+        317453.73075
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173400.3861%2C317437.7307%2C173432.3861%2C317469.7307&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001666",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001666.jpg",
+      "sha256": "a0ae69f0af5acf2c9b6902d737cfccaed2b730b6f2b399a0f678401492b78000",
+      "bytes": 93355,
+      "bbox_RD": [
+        173404.42512499998,
+        317176.49025000003,
+        173436.42512499998,
+        317208.49025000003
+      ],
+      "center_RD": [
+        173420.42512499998,
+        317192.49025000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173404.4251%2C317176.4903%2C173436.4251%2C317208.4903&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001670",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001670.jpg",
+      "sha256": "3b3b1285e815711c752b4190ba5148ac7024c3ebe297c9d67c1698c21017edd3",
+      "bytes": 79547,
+      "bbox_RD": [
+        173404.29812499997,
+        317384.88125,
+        173436.29812499997,
+        317416.88125
+      ],
+      "center_RD": [
+        173420.29812499997,
+        317400.88125
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173404.2981%2C317384.8812%2C173436.2981%2C317416.8812&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001678",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001678.jpg",
+      "sha256": "4e804844ee84840a099167b8dad15e75ca61e10d4a559f83c35135bd1e64db4c",
+      "bytes": 95887,
+      "bbox_RD": [
+        173408.05912499997,
+        319098.49025000003,
+        173440.05912499997,
+        319130.49025000003
+      ],
+      "center_RD": [
+        173424.05912499997,
+        319114.49025000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173408.0591%2C319098.4903%2C173440.0591%2C319130.4903&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001683",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001683.jpg",
+      "sha256": "9b8b6d2071d8a8fe0eec3b21333000b2680bddce8cc008d9661d759725fc4718",
+      "bytes": 77189,
+      "bbox_RD": [
+        173410.50362499998,
+        316453.68075000006,
+        173442.50362499998,
+        316485.68075000006
+      ],
+      "center_RD": [
+        173426.50362499998,
+        316469.68075000006
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173410.5036%2C316453.6808%2C173442.5036%2C316485.6808&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001684",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001684.jpg",
+      "sha256": "3da22c36e051fb409ad3701380bb67ed4410160aab48e512d74e0d6717793892",
+      "bytes": 92793,
+      "bbox_RD": [
+        173409.94712499998,
+        317193.63325,
+        173441.94712499998,
+        317225.63325
+      ],
+      "center_RD": [
+        173425.94712499998,
+        317209.63325
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173409.9471%2C317193.6333%2C173441.9471%2C317225.6333&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001687",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001687.jpg",
+      "sha256": "063062715f827a810842d1c75492614741837bf98360d0237f2e58b2d8cbe484",
+      "bytes": 98345,
+      "bbox_RD": [
+        173409.74812499998,
+        316380.76225,
+        173441.74812499998,
+        316412.76225
+      ],
+      "center_RD": [
+        173425.74812499998,
+        316396.76225
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173409.7481%2C316380.7623%2C173441.7481%2C316412.7623&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001688",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001688.jpg",
+      "sha256": "46ce59e8df2ebf1e5946edef73b4d51813018343a753792a849526250dc00f32",
+      "bytes": 93839,
+      "bbox_RD": [
+        173408.803625,
+        317329.76775,
+        173440.803625,
+        317361.76775
+      ],
+      "center_RD": [
+        173424.803625,
+        317345.76775
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173408.8036%2C317329.7677%2C173440.8036%2C317361.7677&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001691",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001691.jpg",
+      "sha256": "ea1870d9ec529b4f9c2fec8a8086c268701b5eacbf4f1f2f22c8242967741fb3",
+      "bytes": 95267,
+      "bbox_RD": [
+        173411.168625,
+        319167.57525,
+        173443.168625,
+        319199.57525
+      ],
+      "center_RD": [
+        173427.168625,
+        319183.57525
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173411.1686%2C319167.5752%2C173443.1686%2C319199.5752&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001692",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001692.jpg",
+      "sha256": "47d4483614bd88f3120a4d75ca6fb13fd7b13e9e799679ca473389644bdcfa84",
+      "bytes": 92268,
+      "bbox_RD": [
+        173412.34912499998,
+        316521.92525000003,
+        173444.34912499998,
+        316553.92525000003
+      ],
+      "center_RD": [
+        173428.34912499998,
+        316537.92525000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173412.3491%2C316521.9253%2C173444.3491%2C316553.9253&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001694",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001694.jpg",
+      "sha256": "5064811a23d9d2df3f17d41f442aad3fcda03e94315633c262f2cf1dee140f7f",
+      "bytes": 100670,
+      "bbox_RD": [
+        173411.53812499996,
+        316860.43875000003,
+        173443.53812499996,
+        316892.43875000003
+      ],
+      "center_RD": [
+        173427.53812499996,
+        316876.43875000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173411.5381%2C316860.4388%2C173443.5381%2C316892.4388&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001698",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001698.jpg",
+      "sha256": "8e109a3e87ed7b3910c296d0b85224cfb059e6c20351906eca43db2898195f35",
+      "bytes": 74130,
+      "bbox_RD": [
+        173414.291125,
+        316460.07525,
+        173446.291125,
+        316492.07525
+      ],
+      "center_RD": [
+        173430.291125,
+        316476.07525
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173414.2911%2C316460.0752%2C173446.2911%2C316492.0752&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001699",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001699.jpg",
+      "sha256": "244348d667f492740614f20d6f82277c6b519fb719e1a3079d9260efd250ae80",
+      "bytes": 105872,
+      "bbox_RD": [
+        173412.250625,
+        316318.70225000003,
+        173444.250625,
+        316350.70225000003
+      ],
+      "center_RD": [
+        173428.250625,
+        316334.70225000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173412.2506%2C316318.7023%2C173444.2506%2C316350.7023&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001707",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001707.jpg",
+      "sha256": "b078a226a68b72db9db3519747813d06607761175719d0e5bec11ff6ff304d1e",
+      "bytes": 83398,
+      "bbox_RD": [
+        173415.88462499998,
+        317228.44225,
+        173447.88462499998,
+        317260.44225
+      ],
+      "center_RD": [
+        173431.88462499998,
+        317244.44225
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173415.8846%2C317228.4423%2C173447.8846%2C317260.4423&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001711",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001711.jpg",
+      "sha256": "404a9f8f3a748b4930fdf70d87197e3daa5bc23e261eec0521867c41d36f3b8c",
+      "bytes": 97344,
+      "bbox_RD": [
+        173415.25112499998,
+        316383.25375000003,
+        173447.25112499998,
+        316415.25375000003
+      ],
+      "center_RD": [
+        173431.25112499998,
+        316399.25375000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173415.2511%2C316383.2538%2C173447.2511%2C316415.2538&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001714",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001714.jpg",
+      "sha256": "50da4db4b06a146c534f444edabac5b08861dc42a086fb93e4371b2830a7c20b",
+      "bytes": 74143,
+      "bbox_RD": [
+        173418.176375,
+        316466.46825,
+        173450.176375,
+        316498.46825
+      ],
+      "center_RD": [
+        173434.176375,
+        316482.46825
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173418.1764%2C316466.4682%2C173450.1764%2C316498.4682&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001717",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001717.jpg",
+      "sha256": "e30c577d70cc65a7ec454c852b896ddcc0c9b40058b698726e372ec7bbc42794",
+      "bytes": 91301,
+      "bbox_RD": [
+        173416.162375,
+        319207.57275,
+        173448.162375,
+        319239.57275
+      ],
+      "center_RD": [
+        173432.162375,
+        319223.57275
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173416.1624%2C319207.5727%2C173448.1624%2C319239.5727&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001718",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001718.jpg",
+      "sha256": "1695eb6fe44ceb4b0f1c7b53ef073883f0e28a95043c91db78854b9c8de35ebb",
+      "bytes": 94170,
+      "bbox_RD": [
+        173417.42737500003,
+        319241.52225000004,
+        173449.42737500003,
+        319273.52225000004
+      ],
+      "center_RD": [
+        173433.42737500003,
+        319257.52225000004
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173417.4274%2C319241.5223%2C173449.4274%2C319273.5223&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001721",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001721.jpg",
+      "sha256": "26e2b3a258f5dea68c0e9e0032c79905f3398c1151bde183b9c161897014ecaa",
+      "bytes": 103507,
+      "bbox_RD": [
+        173417.766375,
+        316321.17125,
+        173449.766375,
+        316353.17125
+      ],
+      "center_RD": [
+        173433.766375,
+        316337.17125
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173417.7664%2C316321.1713%2C173449.7664%2C316353.1713&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001723",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001723.jpg",
+      "sha256": "06685174ef246a6741fccd8fa4af30d65d0a8664501641ef5e20cad24383af07",
+      "bytes": 112276,
+      "bbox_RD": [
+        173419.718375,
+        316900.22375,
+        173451.718375,
+        316932.22375
+      ],
+      "center_RD": [
+        173435.718375,
+        316916.22375
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173419.7184%2C316900.2238%2C173451.7184%2C316932.2238&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001724",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001724.jpg",
+      "sha256": "19596952b5265a15992c3142c34b969d7e2d633e8a67a739c13fa4bdfdcd4569",
+      "bytes": 95320,
+      "bbox_RD": [
+        173416.227875,
+        317296.83725,
+        173448.227875,
+        317328.83725
+      ],
+      "center_RD": [
+        173432.227875,
+        317312.83725
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173416.2279%2C317296.8372%2C173448.2279%2C317328.8372&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001726",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001726.jpg",
+      "sha256": "e23a5760174ff1f7a99b645560e79548dbbc843f4323d7daa22af34e9650f0c8",
+      "bytes": 91001,
+      "bbox_RD": [
+        173419.701375,
+        317195.34775,
+        173451.701375,
+        317227.34775
+      ],
+      "center_RD": [
+        173435.701375,
+        317211.34775
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173419.7014%2C317195.3478%2C173451.7014%2C317227.3478&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001737",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001737.jpg",
+      "sha256": "bfff220bf75444996659e111dbc3937d6376558ffc40a0903c566d2877d3c2cd",
+      "bytes": 98067,
+      "bbox_RD": [
+        173422.099875,
+        316865.17525,
+        173454.099875,
+        316897.17525
+      ],
+      "center_RD": [
+        173438.099875,
+        316881.17525
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173422.0999%2C316865.1752%2C173454.0999%2C316897.1752&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001743",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001743.jpg",
+      "sha256": "4b684307c2d7ce1ac89aa7936fe2cd85a43a2f7e8fcc0cab146a951ce4200754",
+      "bytes": 93480,
+      "bbox_RD": [
+        173419.755375,
+        317280.27425,
+        173451.755375,
+        317312.27425
+      ],
+      "center_RD": [
+        173435.755375,
+        317296.27425
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173419.7554%2C317280.2743%2C173451.7554%2C317312.2743&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001747",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001747.jpg",
+      "sha256": "b86c42d01a980b946ba4cde44b59ce0412a0d9f93fe080e17943b1f21d8b957d",
+      "bytes": 96355,
+      "bbox_RD": [
+        173424.148375,
+        316869.19775,
+        173456.148375,
+        316901.19775
+      ],
+      "center_RD": [
+        173440.148375,
+        316885.19775
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173424.1484%2C316869.1977%2C173456.1484%2C316901.1977&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001749",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001749.jpg",
+      "sha256": "88db7f74e2794ce60046c4c439ac41a9b1e8f66216db885322e4c82be4dc856d",
+      "bytes": 90646,
+      "bbox_RD": [
+        173423.94487500002,
+        317179.98475,
+        173455.94487500002,
+        317211.98475
+      ],
+      "center_RD": [
+        173439.94487500002,
+        317195.98475
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173423.9449%2C317179.9848%2C173455.9449%2C317211.9848&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001750",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001750.jpg",
+      "sha256": "59de358c850db3ef5ec9d525a11364f8e8ab8650379eb3515b6ddf075f9fe4f8",
+      "bytes": 98943,
+      "bbox_RD": [
+        173425.382875,
+        316358.02475,
+        173457.382875,
+        316390.02475
+      ],
+      "center_RD": [
+        173441.382875,
+        316374.02475
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173425.3829%2C316358.0247%2C173457.3829%2C316390.0247&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001751",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001751.jpg",
+      "sha256": "c06e3be3a984dc6c1bb31f41cc1d035b0e0bd3ed2f0b4c2f123dcefdf07b55c9",
+      "bytes": 84511,
+      "bbox_RD": [
+        173425.298375,
+        317426.30874999997,
+        173457.298375,
+        317458.30874999997
+      ],
+      "center_RD": [
+        173441.298375,
+        317442.30874999997
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173425.2984%2C317426.3087%2C173457.2984%2C317458.3087&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001753",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001753.jpg",
+      "sha256": "7001ee4c9bdf1c05581673172a84d1789f8f1de98611f9e8c21044cfa4f57d85",
+      "bytes": 100287,
+      "bbox_RD": [
+        173425.75137500002,
+        319108.89925,
+        173457.75137500002,
+        319140.89925
+      ],
+      "center_RD": [
+        173441.75137500002,
+        319124.89925
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173425.7514%2C319108.8993%2C173457.7514%2C319140.8993&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001757",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001757.jpg",
+      "sha256": "3625d8c77b5ec0b8acd2590ad801287fe6f70d3b9cf5ef6886a7ca49b3b096cf",
+      "bytes": 85737,
+      "bbox_RD": [
+        173423.007875,
+        318961.63275,
+        173455.007875,
+        318993.63275
+      ],
+      "center_RD": [
+        173439.007875,
+        318977.63275
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173423.0079%2C318961.6327%2C173455.0079%2C318993.6327&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001762",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001762.jpg",
+      "sha256": "a4c76f108b0da5ad013e551dac1eb456516d1fc883c37c3e1b6ce4781ab32e7f",
+      "bytes": 95174,
+      "bbox_RD": [
+        173428.52587500002,
+        319179.64875,
+        173460.52587500002,
+        319211.64875
+      ],
+      "center_RD": [
+        173444.52587500002,
+        319195.64875
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173428.5259%2C319179.6487%2C173460.5259%2C319211.6487&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001763",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001763.jpg",
+      "sha256": "1e4681423d247422c865664abc9da37326996fbed4c22faf27f4b22593476a0e",
+      "bytes": 93731,
+      "bbox_RD": [
+        173427.98237500002,
+        316547.77625,
+        173459.98237500002,
+        316579.77625
+      ],
+      "center_RD": [
+        173443.98237500002,
+        316563.77625
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173427.9824%2C316547.7762%2C173459.9824%2C316579.7762&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001767",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001767.jpg",
+      "sha256": "27df75cc47daacebbd35160dffe21c2a42b2d9536f5c47ae703abd147ddf8791",
+      "bytes": 96369,
+      "bbox_RD": [
+        173429.457375,
+        317197.14775,
+        173461.457375,
+        317229.14775
+      ],
+      "center_RD": [
+        173445.457375,
+        317213.14775
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173429.4574%2C317197.1478%2C173461.4574%2C317229.1478&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001768",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001768.jpg",
+      "sha256": "560065470121e011783287f470e4ec7276dbf1b223b09af7865c8bcfa7d23192",
+      "bytes": 106188,
+      "bbox_RD": [
+        173424.463875,
+        319286.04775,
+        173456.463875,
+        319318.04775
+      ],
+      "center_RD": [
+        173440.463875,
+        319302.04775
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173424.4639%2C319286.0478%2C173456.4639%2C319318.0478&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001781",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001781.jpg",
+      "sha256": "f8aebe4e3aab02dea5b73144237948f388d1aa581a4389dd45d00c2cfd4a075d",
+      "bytes": 84586,
+      "bbox_RD": [
+        173429.531875,
+        318953.77525000006,
+        173461.531875,
+        318985.77525000006
+      ],
+      "center_RD": [
+        173445.531875,
+        318969.77525000006
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173429.5319%2C318953.7753%2C173461.5319%2C318985.7753&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001786",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001786.jpg",
+      "sha256": "ad114466f5e66f3cebbe3f2e87ae10d519be35c6cb65d4de1bf8b9d84a45c545",
+      "bytes": 93815,
+      "bbox_RD": [
+        173433.79387499997,
+        319182.98275,
+        173465.79387499997,
+        319214.98275
+      ],
+      "center_RD": [
+        173449.79387499997,
+        319198.98275
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173433.7939%2C319182.9828%2C173465.7939%2C319214.9828&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001791",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001791.jpg",
+      "sha256": "4b9dfde5abf2aff4f21fba91a2e1cdf513887b8f4f47c2d5f2ae3f2407e05b11",
+      "bytes": 84197,
+      "bbox_RD": [
+        173431.959875,
+        317385.00675000006,
+        173463.959875,
+        317417.00675000006
+      ],
+      "center_RD": [
+        173447.959875,
+        317401.00675000006
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173431.9599%2C317385.0068%2C173463.9599%2C317417.0068&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001800",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001800.jpg",
+      "sha256": "947a8e1fe1f299b9ded850dfe98787a97860c9589696e8bcf30012d65a20f356",
+      "bytes": 85072,
+      "bbox_RD": [
+        173436.180375,
+        317426.36875,
+        173468.180375,
+        317458.36875
+      ],
+      "center_RD": [
+        173452.180375,
+        317442.36875
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173436.1804%2C317426.3688%2C173468.1804%2C317458.3688&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001813",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001813.jpg",
+      "sha256": "4ffc71538aa423b54f79ac2076db09728739b58f2d7cc86aded759c265f117d0",
+      "bytes": 81788,
+      "bbox_RD": [
+        173437.649875,
+        319148.08225,
+        173469.649875,
+        319180.08225
+      ],
+      "center_RD": [
+        173453.649875,
+        319164.08225
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173437.6499%2C319148.0822%2C173469.6499%2C319180.0822&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001815",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001815.jpg",
+      "sha256": "959ef0b2665ac1bb240e50d5f904387631f77f451cb1e907c0880d540523477d",
+      "bytes": 92043,
+      "bbox_RD": [
+        173439.093375,
+        319186.32025,
+        173471.093375,
+        319218.32025
+      ],
+      "center_RD": [
+        173455.093375,
+        319202.32025
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173439.0934%2C319186.3202%2C173471.0934%2C319218.3202&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001816",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001816.jpg",
+      "sha256": "11ae43e37315c366bfee5ee537153fdd7bed78e5a0ec5088f860ad3395b74c81",
+      "bytes": 91073,
+      "bbox_RD": [
+        173439.84787499998,
+        319253.01475000003,
+        173471.84787499998,
+        319285.01475000003
+      ],
+      "center_RD": [
+        173455.84787499998,
+        319269.01475000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173439.8479%2C319253.0148%2C173471.8479%2C319285.0148&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001819",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001819.jpg",
+      "sha256": "3f4c2b8f8628184f05082c7445bad4d70b95a74999c78c3c339901e59be01624",
+      "bytes": 90093,
+      "bbox_RD": [
+        173442.32837499998,
+        317303.10075000004,
+        173474.32837499998,
+        317335.10075000004
+      ],
+      "center_RD": [
+        173458.32837499998,
+        317319.10075000004
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173442.3284%2C317303.1008%2C173474.3284%2C317335.1008&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001823",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001823.jpg",
+      "sha256": "a42f1b1567aa896a29933353aaf0e8b2a09849dfe7675a7a5acb184f1b0b98f8",
+      "bytes": 86176,
+      "bbox_RD": [
+        173441.580375,
+        317426.39875000005,
+        173473.580375,
+        317458.39875000005
+      ],
+      "center_RD": [
+        173457.580375,
+        317442.39875000005
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173441.5804%2C317426.3988%2C173473.5804%2C317458.3988&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001825",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001825.jpg",
+      "sha256": "44e907b1ebe7775bbddc11167f719857b757dad61a8db5cfc2ac83b6b7eaa27e",
+      "bytes": 89274,
+      "bbox_RD": [
+        173440.261875,
+        317387.54225,
+        173472.261875,
+        317419.54225
+      ],
+      "center_RD": [
+        173456.261875,
+        317403.54225
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173440.2619%2C317387.5422%2C173472.2619%2C317419.5422&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001828",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001828.jpg",
+      "sha256": "2e65be265c8692ec968be650e4392396e722c106aabf46bf2913a639f3835c02",
+      "bytes": 103616,
+      "bbox_RD": [
+        173442.16637499997,
+        317351.96875,
+        173474.16637499997,
+        317383.96875
+      ],
+      "center_RD": [
+        173458.16637499997,
+        317367.96875
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173442.1664%2C317351.9688%2C173474.1664%2C317383.9688&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001831",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001831.jpg",
+      "sha256": "9e8bb7d57b8753d726893575c9d8c4bb0b35e8fbe5d6509333314a76e7597ca5",
+      "bytes": 86743,
+      "bbox_RD": [
+        173443.622875,
+        316478.88474999997,
+        173475.622875,
+        316510.88474999997
+      ],
+      "center_RD": [
+        173459.622875,
+        316494.88474999997
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173443.6229%2C316478.8847%2C173475.6229%2C316510.8847&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001833",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001833.jpg",
+      "sha256": "7b07b69ac838c99a8303a2a2ba9b8307b09eb2d3a47b14689f93e0e85ff9e6d1",
+      "bytes": 85347,
+      "bbox_RD": [
+        173440.909875,
+        318936.80325,
+        173472.909875,
+        318968.80325
+      ],
+      "center_RD": [
+        173456.909875,
+        318952.80325
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173440.9099%2C318936.8032%2C173472.9099%2C318968.8032&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001835",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001835.jpg",
+      "sha256": "45f20241c8ebfe2ce73468c0804c5035a24114f855c78b75c7b1c936675f0b1a",
+      "bytes": 89877,
+      "bbox_RD": [
+        173447.032375,
+        317287.02425,
+        173479.032375,
+        317319.02425
+      ],
+      "center_RD": [
+        173463.032375,
+        317303.02425
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173447.0324%2C317287.0243%2C173479.0324%2C317319.0243&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001842",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001842.jpg",
+      "sha256": "7156d858cfdecb5332946dc6f20eb63775c933324ceb867a717eb0e193dc8504",
+      "bytes": 88444,
+      "bbox_RD": [
+        173445.082375,
+        319256.50875,
+        173477.082375,
+        319288.50875
+      ],
+      "center_RD": [
+        173461.082375,
+        319272.50875
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173445.0824%2C319256.5087%2C173477.0824%2C319288.5087&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001851",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001851.jpg",
+      "sha256": "8bc4c811f4b9e0890627771bc8f6bf0d262d0b5743bbf43f717c1d3199edb08d",
+      "bytes": 83439,
+      "bbox_RD": [
+        173450.549875,
+        318965.23725,
+        173482.549875,
+        318997.23725
+      ],
+      "center_RD": [
+        173466.549875,
+        318981.23725
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173450.5499%2C318965.2373%2C173482.5499%2C318997.2373&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001852",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001852.jpg",
+      "sha256": "9fe0573d088247085054a9df94c8cfe50888d07a36d5b623f7e498d7fb71bfbd",
+      "bytes": 99969,
+      "bbox_RD": [
+        173446.79887499998,
+        316334.05125,
+        173478.79887499998,
+        316366.05125
+      ],
+      "center_RD": [
+        173462.79887499998,
+        316350.05125
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173446.7989%2C316334.0513%2C173478.7989%2C316366.0513&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001853",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001853.jpg",
+      "sha256": "73c956710568dbf7c3429c62cb7bc26e9c04cd194f0c49a8b010825084c7a8ff",
+      "bytes": 87733,
+      "bbox_RD": [
+        173446.748875,
+        316397.29825,
+        173478.748875,
+        316429.29825
+      ],
+      "center_RD": [
+        173462.748875,
+        316413.29825
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173446.7489%2C316397.2982%2C173478.7489%2C316429.2982&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001855",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001855.jpg",
+      "sha256": "2401e9d8f21550d37def9ec990965c4ad1b88c05b238921487b1775c99f3c023",
+      "bytes": 88989,
+      "bbox_RD": [
+        173451.423375,
+        317269.86925,
+        173483.423375,
+        317301.86925
+      ],
+      "center_RD": [
+        173467.423375,
+        317285.86925
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173451.4234%2C317269.8692%2C173483.4234%2C317301.8692&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001868",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001868.jpg",
+      "sha256": "f3b1919d15c4cf797d5fcc86609a3a59bcd7f172b2dc138a0b24ac312bb2f3d6",
+      "bytes": 75198,
+      "bbox_RD": [
+        173452.947375,
+        316524.30675,
+        173484.947375,
+        316556.30675
+      ],
+      "center_RD": [
+        173468.947375,
+        316540.30675
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173452.9474%2C316524.3067%2C173484.9474%2C316556.3067&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001872",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001872.jpg",
+      "sha256": "a817afb592635e4d134da474e5a25c99e34641c18fab03c60eecb78d886492f9",
+      "bytes": 88142,
+      "bbox_RD": [
+        173452.37987499998,
+        317426.45725,
+        173484.37987499998,
+        317458.45725
+      ],
+      "center_RD": [
+        173468.37987499998,
+        317442.45725
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173452.3799%2C317426.4572%2C173484.3799%2C317458.4572&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001883",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001883.jpg",
+      "sha256": "74e2a6897d956bdeb450a758cc875876010f256315cdbc13c2e60f5827b7d44a",
+      "bytes": 98402,
+      "bbox_RD": [
+        173455.947375,
+        316434.60425000003,
+        173487.947375,
+        316466.60425000003
+      ],
+      "center_RD": [
+        173471.947375,
+        316450.60425000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173455.9474%2C316434.6043%2C173487.9474%2C316466.6043&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001884",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001884.jpg",
+      "sha256": "fd0deabbc62a35928424599493dd8a74a645c271c6126797745bba04e031ba01",
+      "bytes": 88153,
+      "bbox_RD": [
+        173457.196375,
+        319372.33675,
+        173489.196375,
+        319404.33675
+      ],
+      "center_RD": [
+        173473.196375,
+        319388.33675
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173457.1964%2C319372.3368%2C173489.1964%2C319404.3368&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001895",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001895.jpg",
+      "sha256": "7c25697d49e7c5fb40bd1d1362246a6e906f40e336456ee1df8106f562175792",
+      "bytes": 87897,
+      "bbox_RD": [
+        173457.779875,
+        317426.48725,
+        173489.779875,
+        317458.48725
+      ],
+      "center_RD": [
+        173473.779875,
+        317442.48725
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173457.7799%2C317426.4873%2C173489.7799%2C317458.4873&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001906",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001906.jpg",
+      "sha256": "fc16c438304c3b5964f525bda2f32b529a532af3071772ea9664ed7fe461ab3a",
+      "bytes": 97959,
+      "bbox_RD": [
+        173457.848375,
+        316338.99075,
+        173489.848375,
+        316370.99075
+      ],
+      "center_RD": [
+        173473.848375,
+        316354.99075
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173457.8484%2C316338.9907%2C173489.8484%2C316370.9907&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001916",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001916.jpg",
+      "sha256": "c8d9ba1c88cdd43150770ffa8a388fd53347337919af2ee826f41bebea05efbc",
+      "bytes": 88060,
+      "bbox_RD": [
+        173463.179875,
+        317426.51725000003,
+        173495.179875,
+        317458.51725000003
+      ],
+      "center_RD": [
+        173479.179875,
+        317442.51725000003
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173463.1799%2C317426.5173%2C173495.1799%2C317458.5173&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001923",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001923.jpg",
+      "sha256": "f0dadb1af5b2f24775965560fd95a6b3027e5d5d3f8ccdd09d3746118ca02fe7",
+      "bytes": 79903,
+      "bbox_RD": [
+        173465.69837499998,
+        317239.91325000004,
+        173497.69837499998,
+        317271.91325000004
+      ],
+      "center_RD": [
+        173481.69837499998,
+        317255.91325000004
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173465.6984%2C317239.9133%2C173497.6984%2C317271.9133&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    },
+    {
+      "id": "NL.IMBAG.Pand.0935100000001948",
+      "file": "imagery/NL.IMBAG.Pand.0935100000001948.jpg",
+      "sha256": "dcbde500131804161877fb47d01b690b8f52e89489a0ef68c611c72058d3d1ab",
+      "bytes": 88339,
+      "bbox_RD": [
+        173471.919375,
+        319347.77375000005,
+        173503.919375,
+        319379.77375000005
+      ],
+      "center_RD": [
+        173487.919375,
+        319363.77375000005
+      ],
+      "span_m": 32.0,
+      "pixels": [
+        1024,
+        1024
+      ],
+      "display_sample_m": 0.03125,
+      "source_url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?service=WMS&version=1.3.0&request=GetMap&layers=2023_orthoHR&styles=&crs=EPSG%3A28992&bbox=173471.9194%2C319347.7738%2C173503.9194%2C319379.7738&width=1024&height=1024&format=image%2Fjpeg&transparent=false"
+    }
+  ]
+}
