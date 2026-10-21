@@ -1,0 +1,193 @@
+{
+  "utc": "2026-10-21T08:37:57.057501+00:00",
+  "status": "passed",
+  "version": 3,
+  "output_path": "source:scaling/paired_real_feasibility/reports/raw_quality_preview_dl_qualitative.html",
+  "output_bytes": 6381093,
+  "output_sha256": "baaafcc04f009692e2088087cff778b49103c3a93fddc1f04b4307c4c4779228",
+  "original_v2_bytes_preserved": true,
+  "original_v2_sha256": "eec158500910d291eae41b60e9532c6b11ffa990f2129113bc4b046e1277c17d",
+  "original_point_payload_bytes_unchanged": true,
+  "all20_buildings_preserved": true,
+  "actual_inference_status": "complete",
+  "probabilities_masks_no_changes": true,
+  "all_points_one_valid_vote_per_pass": true,
+  "padding_zero_votes": true,
+  "real_scores_not_calibrated_probabilities": true,
+  "no_independent_validation_or_local_GT_claim": true,
+  "RGB_display_only_not_model_input": true,
+  "source_input_hashes": {
+    "source:scaling/paired_real_feasibility/reports/raw_quality_preview_rgb2023.html": "eec158500910d291eae41b60e9532c6b11ffa990f2129113bc4b046e1277c17d",
+    "source:scaling/paired_real_feasibility/qualitative_dl/qualitative_result.json": "534bc9aa9b0c65c0f5bea52dac04b9f75ff4b4ff85e8f58adc5b102ff6057ccf",
+    "source:scaling/paired_real_feasibility/qualitative_dl/recipe_freeze.json": "632b5f639390237397796dd1243f8c3c5bea6a1552d2549c3e27be99d3e896e9",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003629.npz": "f8d4e7b1b539a5566ace3f1ca5cb3a30d825ec70dbbcb16d13ff72692c1564c8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005073.npz": "f9b7dd756fcaba95dea784fc27219322316182f7ef911ef9fa5ab7efb65f54bc",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004149.npz": "fb946ad6ca464d3d1928ad5db1ba35c3d9e4ec480c87794c6978ca06ba5b46bc",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003619.npz": "d3c71a7bf5f91627e6e8d2c026aef710eed95278cfa50938dd8b0ea744405277",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000000956.npz": "8c663f0844219957b52a96686094b2ca59aaf1cc8cdd6077c4895417e98aa568",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004156.npz": "0fb605bb5acddc86f7093ee87c422adecd8b7e80f16671e78d088711ac7a19a1",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002345.npz": "2c05ac6fbfb1b17df7dca6884df4fe86c8ac6f83dd4e393f8b8bfd27dab45bb2",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003600.npz": "2c718d20d2981e3702b1c606870bf636ea540b98d526adfea2a9cf6bcc458f3e",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003601.npz": "0eeb2298f10dc84940e2ec568511b6a324ac8d13858927f799e5e624ac504350",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005062.npz": "3abcd5b54dec995f9e60f22f82d1f57c1d0932afa775c1376a6711a3e3cf45b0",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003648.npz": "2a48fdd6d2a2d8ed0c2cee3b5f9e56c5c10057df52f1a8b978142e7c13394cdf",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005058.npz": "c59c6c712c311e97bfeef9e371e9047e8c1ad7bbf5518fb9fb35f584dbcf3fcc",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005074.npz": "2f47b9ea68390405023639f860e55bb8fd36eb72d83d48e69d73d5a425487484",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003746.npz": "86753b1fed6851dfcae99ba46d67b145fb1e5bdec5d2e9f45fdcc642bd0598a0",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003976.npz": "949b4da5b344b3fbfe3ee48867d5791594a1ec993b5c3d3f6e4cbe94d4a31b7e",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003739.npz": "50e79814fdc9a0c442b32ffe6cd47a56079d738f489ed0b0ce247c544217b71c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003952.npz": "3aa86e64f5618de93ad0697ef3f58b69cb9ed72c61e749ef5d693302161bb310",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005049.npz": "df4beb6354cc82d5d8bf11b1b476360ff775bda9cf8e95222f24c90d2e96020c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002942.npz": "210341c34f653c4c92a58f7094055d82d8b8fbad29138fa4931fa6488bf3d8d1",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004178.npz": "8bd6e2be70e5a350ca39d6ee86844ed1928b0c58ce712e8ce1fe26fed0364094"
+  },
+  "per_building": [
+    {
+      "id": "NL.IMBAG.Pand.0546100000003629",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005073",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004149",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003619",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000000956",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004156",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002345",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003600",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003601",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005062",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003648",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005058",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005074",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003746",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003976",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003739",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003952",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005049",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002942",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004178",
+      "source_indices_context_candidate_order_exact": true,
+      "original_XYZ_and_input_indices_exact": true,
+      "status": "complete",
+      "all20_preserved": true
+    }
+  ],
+  "export_code_sha256": "305641918683c45e5f1bed4ae70643aee07e1500aa59a479a5c0d507369fa522",
+  "_publication": {
+    "original_source_sha256": "896cf3a3c1c3e2aa4dafd061af6c3b8afae40100f37a3e5409d99c0074f44c9c",
+    "original_source": "source:scaling/paired_real_feasibility/reports/qualitative_viewer_export_audit.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

@@ -1,0 +1,13 @@
+20栋真实AHN5点云：定性迁移质量查看（非独立精度验证）
+
+交互离线预览：https://feng96.github.io/research-daily/lod2/studies/scaling/real/raw_quality_preview_dl_qualitative.html
+官方生产分类×保留/删除附录：https://feng96.github.io/research-daily/lod2/studies/scaling/real/qualitative_class_decision_appendix.json
+足迹内外与输入支持域诊断：https://feng96.github.io/research-daily/lod2/studies/scaling/real/qualitative_support_domain_diagnostic.json
+
+所有20栋均来自已固定的Leiden源训练池；真实AHN5点云为2023-02-08观测。RGB是独立2023年正射质量查看，未输入模型。teacher与AHN同源，非独立GT。
+98,227是逐栋5m缓冲候选记录，包含跨栋重复；唯一原始记录91,612条。固定源选模型保留88,518条、删除9,709条，分数不是已校准的真实域概率。
+
+官方class6共删除6,729条，其中精确本栋先验足迹内3492条、足迹外但5m缓冲内3237条；外侧且落入其他已选建筑先验的738条只是邻楼覆盖的保守下限。因此不能把6,729直接称为本栋屋面误删；同时足迹内仍存在class6删除，不能用邻楼单独解释全部风险。class6是生产分类，class1不是树木GT，足迹本身也不是独立测量真值。
+冻结合成生成器在这20栋训练样本的12场景原始XYZ重放：105600条，精确足迹外0条、距足迹超过1mm的0条。合成干扰点XY同样从teacher屋面三角形采样、仅改Z；真实候选则允许5m外侧环境和邻楼回波。
+
+这证明存在输入支持域风险，不能据此归因于单一因素。真实密度、噪声/遮挡、地面定义、随机512点分组及三次均值等变化亦可能影响行为；本检查没有改变阈值、分数、mask或XYZ，未读取主实验validation/test标签。

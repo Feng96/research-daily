@@ -1,0 +1,61 @@
+{
+  "role": "Explicit post-hoc reporting-only fixed-reference-domain summary; no fitting/tuning or primary selection",
+  "source_sha256": "4a75850a3267a94d50b4789929e004d1bf9ad3d9ea7db6d20f7a765c70aa36f4",
+  "reason": "Original conditional F1 includes any predicted-edge-positive teacher-empty cloud, so its denominator differs across methods. Use common teacher-edge-positive subset for paired F1 and report spurious detections separately.",
+  "source_buildings": 80,
+  "common_teacher_edge_positive_buildings": 65,
+  "parameters_changed": false,
+  "summaries": [
+    {
+      "method": "raw",
+      "teacher_edge_positive_buildings": 65,
+      "teacher_edge_positive_cloud_denominator": 780,
+      "F1_macro_fixed_teacher_edge_positive_domain": 0.4908757915599554,
+      "recall_macro_fixed_teacher_edge_positive_domain": 0.4762751271086416,
+      "teacher_edge_empty_clouds": 180,
+      "spurious_predicted_edge_clouds_on_teacher_empty": 37
+    },
+    {
+      "method": "geometry",
+      "teacher_edge_positive_buildings": 65,
+      "teacher_edge_positive_cloud_denominator": 780,
+      "F1_macro_fixed_teacher_edge_positive_domain": 0.4948744314478311,
+      "recall_macro_fixed_teacher_edge_positive_domain": 0.48271735884929673,
+      "teacher_edge_empty_clouds": 180,
+      "spurious_predicted_edge_clouds_on_teacher_empty": 35
+    },
+    {
+      "method": "global_cls_hard",
+      "teacher_edge_positive_buildings": 65,
+      "teacher_edge_positive_cloud_denominator": 780,
+      "F1_macro_fixed_teacher_edge_positive_domain": 0.5751469412405364,
+      "recall_macro_fixed_teacher_edge_positive_domain": 0.5623947572658198,
+      "teacher_edge_empty_clouds": 180,
+      "spurious_predicted_edge_clouds_on_teacher_empty": 25
+    },
+    {
+      "method": "graph_cls_hard",
+      "teacher_edge_positive_buildings": 65,
+      "teacher_edge_positive_cloud_denominator": 780,
+      "F1_macro_fixed_teacher_edge_positive_domain": 0.5821898091409502,
+      "recall_macro_fixed_teacher_edge_positive_domain": 0.5673648445885451,
+      "teacher_edge_empty_clouds": 180,
+      "spurious_predicted_edge_clouds_on_teacher_empty": 21
+    },
+    {
+      "method": "graph_reweight_hard",
+      "teacher_edge_positive_buildings": 65,
+      "teacher_edge_positive_cloud_denominator": 780,
+      "F1_macro_fixed_teacher_edge_positive_domain": 0.5787970929586367,
+      "recall_macro_fixed_teacher_edge_positive_domain": 0.5639719422539139,
+      "teacher_edge_empty_clouds": 180,
+      "spurious_predicted_edge_clouds_on_teacher_empty": 22
+    }
+  ],
+  "_publication": {
+    "original_source_sha256": "54fd85a507e6e3af1d5dd5a86daef6f5ed1bdf2f85b0f5f5e9112a9a000fb4e1",
+    "original_source": "source:expanded/reports_reconstruction/ridge3d_validation_ce7a2baa0267_common_teacher_edge_summary.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

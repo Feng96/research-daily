@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-21T07:04:22.930921+00:00",
+  "scope": "checkpoint_loading_correctness_only_no_scientific_reselection",
+  "original_protocol_path": "reports/protocol_freeze.json",
+  "original_protocol_sha256": "88b0d89f7a545268a847856a78ec99f154da8beb932dda1ab41a324f0247ac7f",
+  "reason": "Single and ensemble inference omitted loading learned state_dict. Both now strict-load and verify all state tensors before inference. Training algorithm, hyperparameters, weights, data, method ladder, scoring, selection rules and final sealed state are unchanged.",
+  "changed_existing_code": {
+    "tools/predict.py": {
+      "old_sha256": "e09108d7bf30103c6700b3fdf2a64403964ddabf528515e2314f84cc57e45372",
+      "new_sha256": "c3e0eb6583ed708fd6736a284594ec082fe8b1033079654fa72d36208cd751bf",
+      "old_code_archive_path": "reports/invalid_inference_v1/code/tools/predict.py"
+    },
+    "tools/train.py": {
+      "old_sha256": "2e400c1b0599246e9a75cc7837b6b392402dd0f33e63f586b22341eab6f1f205",
+      "new_sha256": "8d1576845bb34e64cd41179e1ee7bb8b074611856a40a7551e7f0da780405b17",
+      "old_code_archive_path": "reports/invalid_inference_v1/code/tools/train.py"
+    }
+  },
+  "new_code_sha256": {
+    "tools/amendment.py": "25223e0871860cd10ca26ce8edc4a7d371078fe6468322d66b18da30fa5bcfb4",
+    "tools_admin/request_final_review_v2.py": "0d17a127a2559ea6801bc55f34467301379ac3c1cc24ebe34877210eaaa08d3d",
+    "tools_admin/validate_loaded_checkpoint.py": "c0775e815e1ea6e39cbed453cf054882511d55bd976b916ef48adae077992f86"
+  },
+  "invalidated_artifact_archive_manifest": "reports/invalid_inference_v1/archive_manifest.json",
+  "invalidated_artifact_archive_manifest_sha256": "886c10c06412e7b0279f1f92a12e4cb09ed298b4a7ea4461229db837c4a0589f",
+  "models_data_hyperparameters_and_selection_unchanged": true,
+  "training_artifacts_sha256": {
+    "models/global_3500_s20261031.pt": "8a50b6e826176a041b9a5f8b3622955ff5423ce2bf0a79eabb9d3d86f30c1f3d",
+    "models/graph_10000_attention_s20261031.pt": "2f6b431f0ba232ce20ead2d2132debbdfe52010bcbf68d94ffbb83550d3d52ec",
+    "models/graph_10000_consistency_s20261031.pt": "4b66b5f48756ec1421eaca61803317c8ff4caa9994ed19d724e4d6971353d3d4",
+    "models/graph_10000_density_s20261031.pt": "7e470a1900b658cc8676eed6122d36645c83efc953e035618e95ad09fcd7a239",
+    "models/graph_10000_geometry_s20261031.pt": "6e97b133c47a45fcac002536a4d6aeebc6156ff22fc5bce78e890f1f90979bba",
+    "models/graph_10000_masked_s20261031.pt": "b02e9aabab110a1b7b97c05b1a3863e3c8e2529918c18a943af0faaab0393232",
+    "models/graph_10000_multiscale_s20261031.pt": "a4ae7361608c1ef771d45880ab889ac43d93885065e73fc7db97f75913aaca91",
+    "models/graph_10000_normal_s20261031.pt": "667a8ac833ad887cbb9fed1f096a9f42a6166d5ac6d574e13a77516039cc6cff",
+    "models/graph_10000_residual_s20261031.pt": "cc58bda0a6c11a36e4cb62a932c9b628a105d1141882b08dd7817a4a2d1091dd",
+    "models/graph_10000_reweight_s20261031.pt": "078f902e47afa3f2084f4cc540bcf05ef06e66f20ba79d23a38ad79395d668fa",
+    "models/graph_10000_s20261031.pt": "04b58e8bd152d7dbee0c81fcca4f664a77b492f08b68740141da8fe376ec8ac9",
+    "models/graph_10000_strongaug_s20261031.pt": "d9055ed4c59149dd733d79406181c3714fae2420ab9005333f4645f085211109",
+    "models/graph_10000_wide_s20261031.pt": "4498ffd0014a26fcca783a7c68ad8a5158ec195f347ed4d3fc25821dddc9a63b",
+    "models/graph_20000_long_s20261031.pt": "0899d4f194dbad868ebf63f267dc6a54e7723491ab96c91347dfe323088d56b1",
+    "models/graph_20000_s20261031.pt": "f87a713f5a91553152c1ce0c344d00731978a52cf9a7a2a3262ca55a67c21ab3",
+    "models/graph_3500_s20261031.pt": "24fc29d3ead72ffc125079f00543742e3c9b5df9b2ea868ee0b9ab468b3bb32d",
+    "reports/models/global_3500_s20261031.json": "999b86e314fc6d2e3c42e052a13e8fc424cd5a87a9d63c83cb1ec956845331c1",
+    "reports/models/graph_10000_attention_s20261031.json": "c8c51f67edc2994d6b9f7bb1952ef746800f659b1d379a84cc2f8264b999fe3b",
+    "reports/models/graph_10000_consistency_s20261031.json": "23485e13041a596a29961e54e3f1f989e9a8e7f9ad5883c2c4f88aad39b89da9",
+    "reports/models/graph_10000_density_s20261031.json": "3e5e0f630f3451c7d7536f548e18fa1f778b24c49e647abc0392fca0de83c628",
+    "reports/models/graph_10000_geometry_s20261031.json": "7d099ed4ff9dfa76ea5d8d6f907550e1e849bc302a189a73beb70ee2c12bc86f",
+    "reports/models/graph_10000_masked_s20261031.json": "44c7b962670aa389d66e5a19435362944b969af31819cd55e645fa623955f729",
+    "reports/models/graph_10000_multiscale_s20261031.json": "0611668220f54428225207eab782da9d66147ca3d06e65091cf88c26a0f3f594",
+    "reports/models/graph_10000_normal_s20261031.json": "1f49eba0abe93428a2fdcdd181a7d0cebb396725b8dcadab95ac17740b70596f",
+    "reports/models/graph_10000_residual_s20261031.json": "a9b76141adf044f3e4a74cde3e52f8aca3bd98fb7768647e7d08e9b329ce4dc8",
+    "reports/models/graph_10000_reweight_s20261031.json": "e35e8c6494f27a25ec693fa1380c2dcdb5555a7aaab107f0e4b1ee0a91374d9c",
+    "reports/models/graph_10000_s20261031.json": "03709bd791b4bffb77172f50593e48d045cc7a10111621da93a0fca7f3d5f27e",
+    "reports/models/graph_10000_strongaug_s20261031.json": "e13738cf356fe4b13466a436181e3f264f56354402ae998133f3b1bb417505ef",
+    "reports/models/graph_10000_wide_s20261031.json": "6b70f59923e6085d4c2e0c05a4567b33af27369212b141d38da9c1f9045b3be1",
+    "reports/models/graph_20000_long_s20261031.json": "62397e83155757dec175050ed679a8549535fac071ca7fa885abf182a6d9e817",
+    "reports/models/graph_20000_s20261031.json": "56c85f1eb5708a0fa7749585350d10451b6bcf902e9d930858077f72b7d593ed",
+    "reports/models/graph_3500_s20261031.json": "726695d4ee3ba0b01713b0bea3f8ebf86b4e9961918776c4a4ce75bca96d9bcf"
+  },
+  "required_validation": [
+    "Complete calibration BCE/cutoff reproduction for16 preserved checkpoints",
+    "Known classifier bias intervention changes logits; strict reload restores logits",
+    "Every newly exported source probability equals separate strict-loaded forward; no validation labels needed"
+  ],
+  "final_data_untouched": true,
+  "_publication": {
+    "original_source_sha256": "dc0b2b92b8944222bef757398aea59e4a590912dc345d177cd3ccb24961831d0",
+    "original_source": "source:scaling/reports/inference_correction_amendment.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

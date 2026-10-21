@@ -1,0 +1,110 @@
+{
+  "status": "complete",
+  "summaries": [
+    {
+      "case": "all",
+      "method": "learned_quality_router_native",
+      "fixed_denominator": 96,
+      "primary_capped_loss_10m": 0.4565674423058043,
+      "native_lod2_success": 96,
+      "activation_count": 64,
+      "selection_counts": {
+        "original_raw_native": 32,
+        "raster_linear_native": 13,
+        "hybrid_global_cls_linear_native": 51
+      }
+    },
+    {
+      "case": "clean",
+      "method": "learned_quality_router_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.13506111402569443,
+      "native_lod2_success": 16,
+      "activation_count": 0,
+      "selection_counts": {
+        "original_raw_native": 16,
+        "raster_linear_native": 0,
+        "hybrid_global_cls_linear_native": 0
+      }
+    },
+    {
+      "case": "dense_canopy",
+      "method": "learned_quality_router_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.4343947527756377,
+      "native_lod2_success": 16,
+      "activation_count": 16,
+      "selection_counts": {
+        "original_raw_native": 0,
+        "raster_linear_native": 0,
+        "hybrid_global_cls_linear_native": 16
+      }
+    },
+    {
+      "case": "flat_canopy",
+      "method": "learned_quality_router_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.3729951477421827,
+      "native_lod2_success": 16,
+      "activation_count": 15,
+      "selection_counts": {
+        "original_raw_native": 1,
+        "raster_linear_native": 0,
+        "hybrid_global_cls_linear_native": 15
+      }
+    },
+    {
+      "case": "hole",
+      "method": "learned_quality_router_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.36809386209906214,
+      "native_lod2_success": 16,
+      "activation_count": 4,
+      "selection_counts": {
+        "original_raw_native": 12,
+        "raster_linear_native": 3,
+        "hybrid_global_cls_linear_native": 1
+      }
+    },
+    {
+      "case": "occlusion_heavy",
+      "method": "learned_quality_router_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 1.154483527553962,
+      "native_lod2_success": 16,
+      "activation_count": 14,
+      "selection_counts": {
+        "original_raw_native": 2,
+        "raster_linear_native": 2,
+        "hybrid_global_cls_linear_native": 12
+      }
+    },
+    {
+      "case": "very_sparse",
+      "method": "learned_quality_router_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.2743762496382873,
+      "native_lod2_success": 16,
+      "activation_count": 15,
+      "selection_counts": {
+        "original_raw_native": 1,
+        "raster_linear_native": 8,
+        "hybrid_global_cls_linear_native": 7
+      }
+    }
+  ],
+  "decisions_sha256": "67295a68697392a06f09f8eb7b4707216c6a9e8eb7e1e802709d025641822d17",
+  "checkpoint_sha256": {
+    "models/learned_quality_gate_s20261028.pt": "50fea3e33eeed8434f02f918a01586ab981bcf042a530b83a17db46fb9d4d0fc",
+    "models/learned_quality_gate_s20261029.pt": "56a40137cfa98648c935f95a72ffb5a56b66cc548f734ed086c48d25deb4680b",
+    "models/learned_quality_gate_s20261030.pt": "019cd73f05306aaf18cb6ab2b253c649a6aa46a30baf711145cc3c1c64fb4647"
+  },
+  "protocol_sha256": "d08237c1bbe371b4a31628243dccceb082df727cca3ffcdb4137026913edf38d",
+  "source_teacher_not_independent_GT": true,
+  "_publication": {
+    "original_source_sha256": "36896b978dc110150eab9c54e4cbfff3f4a6b9ccd4c55afa82021c6e370d7ffc",
+    "original_source": "source:expanded/reports/learned_quality_test_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

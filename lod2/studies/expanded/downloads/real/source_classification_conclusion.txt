@@ -1,0 +1,15 @@
+The full raw-cloud audit contains 5,190,141 source records across the expanded
+Boston/DC ROIs and the previous Boston ROI. It found no class6 building records,
+no class3/4/5 vegetation records, and no possible overlap counterparts19–22.
+This includes records outside the reconstruction candidate pools.
+
+Boston classes are1,2,7,17,18. DC also has three class11 withheld records.
+The legacy metadata defines1/17 as unclassified and2/18 as ground. These are
+not modern class17 bridge/class18 high-noise conventions. Ground is already
+used as terrain input and cannot independently validate roof/tree separation.
+Urban/forest strata in the vertical accuracy report are not point labels.
+
+There is therefore no independent roof-versus-vegetation point-level weak GT
+in these downloaded ROIs. Class6 in a derived native observations.laz is our
+Roofer input convention for retained candidates, not an official source label.
+No candidate pool, point value, prediction or threshold was changed by this audit.

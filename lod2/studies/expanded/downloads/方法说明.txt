@@ -1,0 +1,52 @@
+本轮实验方法说明
+
+主重建比较：同一80栋源验证/64栋留出建筑，各12种条件，全部经过同一冻结Roofer后端。
+
+raw：保留全部候选原始观测。
+geometry：固定阈值和局部几何筛选参考。
+global_cls_hard：PointNet-style全局点特征分类器，按源验证阈值保留屋顶点。
+graph_cls_hard：固定一次kNN邻域并复用两层EdgeConv-style局部图，单屋顶分类目标。
+graph_reweight_hard：同局部图，屋顶正类权重4，未增加法向/残差目标。
+graph_normal_hard：局部图分类，额外只在真屋顶点上监督法向。
+graph_support_balanced_hard：正类权重1，额外监督真屋顶及污染点下方屋面的法向/垂直残差。
+graph_support_hard：正类权重4，额外法向/残差监督。
+以上hard只使用屋顶概率筛选原始点，法向/残差输出没有直接进入后端。其差异可能通过共享特征训练影响概率，但不是直接生成了新屋面。
+
+graph_normal_guard / graph_support_guard：对应模型的hard集合并上满足冻结平面支持规则的观测点，尝试恢复被误删的屋顶点。
+geometry_support_guard：仍用graph_support屋顶概率和hard集合，但平面支持时使用原始观测估计的局部法向；这个名字不代表只用了geometry参考掩码。
+weighted_ransac_support：用DL概率加权三点采样提出支持平面，SVD拟合不带权；有支持平面时对hard作交集，无支持平面时回退hard。流程还包含接受/组合阈值，不能单归因于加权采样。
+residual_veto：从hard中去掉高屋顶概率却预测大垂直残差的点。
+
+graph_cls_mean3_hard / graph_support_mean3_hard：对应三次随机训练的屋顶概率均值与各自校准阈值均值作筛选。
+graph_support_mean3_abstain：三seed分歧高时保留观测，不把这种点强制删掉。
+graph_support_mean3_guard：用三seed均值的法向及屋顶概率做平面支持保护。
+graph_support_mean3_residual：三seed均值下加入残差veto，同时限制残差分歧。
+三seed集成不等于单模型同计算预算，均值阈值也不继承单模型99.5%屋顶点保留保证。
+
+observation_router_safe：候选为mean3_guard，观测数、保留比例、凸包支持或分歧规则不通过时回到raw；safe只是实验名，不表示逐栋风险保证。
+observation_router_geometryfallback：候选为mean3_residual，观测规则不通过时回到geometry。
+路由方法必须同时查看实际DL激活比例与回退比例，不能把大量回退到raw的干净屋顶当成DL纠错成功。
+
+global_small_basic_hard / global_small_diverse_hard：500栋教师、基础/丰富污染混合的全局分类器。
+global_large_basic_hard / global_cls_hard：3500栋教师、基础/丰富混合。四组匹配优化步数、只用单seed，混合也改变clean/sparse相对比例。
+global_height_only_hard：把点级XY通道置零，仍保留由XY跨度计算的归一化尺度，不是完全没有XY信息。
+global_relative_xyz_hard：只移除分类器的离地高输入通道，保留相对XYZ；原生重建仍使用共同地面和世界高程。其设计受到已查看的美国目标协变量统计启发。
+
+补面侧实验：独立10栋源验证/16栋留出，各6种条件，不能与主比较均值交叉排名。
+original_raw_native：相同侧实验队列上的原始观测重建。
+raster_nearest_native / raster_linear_native：按冻结格网最近邻/线性插值后重建。
+pretrained_roofdiffusion_native：官方公开预训练权重、冻结高度图适配器后重建；不代表原论文benchmark复现。
+hybrid_geometry_linear_native / hybrid_global_cls_linear_native / hybrid_graph_support_linear_native：先筛选原始点，再用保留点线性补面、凸包外最近邻补值，然后重建。
+hybrid_global_cls_selective_native / hybrid_graph_support_selective_native：删点比例≥5%才采用相应hybrid；否则原始原生重建失败时用未筛选线性补面，其余保留raw。
+learned_quality_router_native：18维可观测特征输入三seed小MLP，预测raw/linear/global-hybrid候选代价分数再选择；未校准为期望风险，当前训练使用100栋教师但其点分类器预训练使用3500栋。
+support_count_router_native：独特点数≤64用linear，否则DL删点比例≥5%用global-hybrid，其余raw。用于检查学习选择器是否只是学到了点数规则。
+所有补出的格网点均为预测/插值，不是新测得的LiDAR回波。
+
+真实NAIP/3DEP：固定226实例、14方法，只比较运行表现与原始点保留，没有独立目标准确率GT。
+teacher_*为受控教师训练的分类器/集成筛点迁移到真实观测；relative_xyz是上述输入通道控制。
+semantic2_point / late / late_aug / gated分别为真实ISPRS标签训练的纯几何、光谱late fusion、匹配增强late fusion、同增强逐点标量门控。
+光谱只使用实测R/G/NIR及其手工8维特征，尚非空间影像CNN；mixed hedge/fence类别不等同纯树木。
+semantic2_gated_ssl为监督源区重放＋BackBay无标签EMA伪标签一致性适配；semantic2_gated_ssl_guard额外并入geometry保留的原始点。
+legacy_image是此前实验的光学参考，不计入本轮41个新训练模型。
+
+准确公式、参数、sha与逐实例结果见冻结JSON和独立审计；本文只是便于阅读的方法释义，不替代协议。

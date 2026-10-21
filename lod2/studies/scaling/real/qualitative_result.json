@@ -1,0 +1,430 @@
+{
+  "utc": "2026-10-21T08:35:35.700400+00:00",
+  "source_selection_path": "source:scaling/reports/source_family_selection.json",
+  "source_selection_sha256": "645f41e5b04f418d7155e816705699a883135b0ce6011069b086f8ed847ce99b",
+  "primary_method": "graph_20000_long_s20261031",
+  "recipe_sha256": "632b5f639390237397796dd1243f8c3c5bea6a1552d2549c3e27be99d3e896e9",
+  "scope": "20source-train-city qualitative probe only; no independent GT/validation accuracy; RGB display only",
+  "no_local_threshold_or_checkpoint_selection": true,
+  "checkpoint_changed_by_target_results": false,
+  "status": "complete",
+  "fixed_building_denominator": 20,
+  "checkpoint_path": "source:scaling/models/graph_20000_long_s20261031.pt",
+  "checkpoint_sha256": "0899d4f194dbad868ebf63f267dc6a54e7723491ab96c91347dfe323088d56b1",
+  "checkpoint_state_strict_loaded_and_verified": true,
+  "unchanged_calibration_cutoff": 0.43206343054771423,
+  "GPU_execution_performed": true,
+  "candidate_records": 98227,
+  "kept": 88518,
+  "removed": 9709,
+  "score_is_calibrated_real_probability": false,
+  "independent_accuracy_evaluated": false,
+  "records": [
+    {
+      "id": "NL.IMBAG.Pand.0546100000003629",
+      "status": "complete",
+      "source_input_sha256": "fcfe819c8c204bb8129a531d4411c9abe327de321155b75238105b561716cecb",
+      "n_original": 6936,
+      "kept": 6740,
+      "removed": 196,
+      "retained_fraction": 0.9717416378316033,
+      "score_quantiles": [
+        0.04000580310821533,
+        0.5152913928031921,
+        0.972647488117218,
+        0.9998016357421875,
+        0.9999942779541016
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003629.npz",
+      "prediction_sha256": "f8d4e7b1b539a5566ace3f1ca5cb3a30d825ec70dbbcb16d13ff72692c1564c8",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005073",
+      "status": "complete",
+      "source_input_sha256": "edcd120512149941c6eda51a292700efbcda2aa7e118a5fb0d88b0f2afce3cf4",
+      "n_original": 2667,
+      "kept": 2667,
+      "removed": 0,
+      "retained_fraction": 1.0,
+      "score_quantiles": [
+        0.8547865748405457,
+        0.9939291477203369,
+        0.9999780654907227,
+        0.9999992251396179,
+        1.0
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005073.npz",
+      "prediction_sha256": "f9b7dd756fcaba95dea784fc27219322316182f7ef911ef9fa5ab7efb65f54bc",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004149",
+      "status": "complete",
+      "source_input_sha256": "20a8f003c5f0c9a6580158e3df3fd20abe10e204015d755ffeae737ea12bec40",
+      "n_original": 2935,
+      "kept": 1811,
+      "removed": 1124,
+      "retained_fraction": 0.6170357751277683,
+      "score_quantiles": [
+        0.022653160616755486,
+        0.11955755949020389,
+        0.6057978272438049,
+        0.9999955296516418,
+        0.9999998211860657
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004149.npz",
+      "prediction_sha256": "fb946ad6ca464d3d1928ad5db1ba35c3d9e4ec480c87794c6978ca06ba5b46bc",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003619",
+      "status": "complete",
+      "source_input_sha256": "f0f0dfb6b1cee9340cba6c2e5e6e01af44b2fa516dc3a38fdbabdeec08022150",
+      "n_original": 6144,
+      "kept": 5949,
+      "removed": 195,
+      "retained_fraction": 0.96826171875,
+      "score_quantiles": [
+        0.05672616884112358,
+        0.5136048257350921,
+        0.9967122673988342,
+        0.9999529719352722,
+        0.9999977946281433
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003619.npz",
+      "prediction_sha256": "d3c71a7bf5f91627e6e8d2c026aef710eed95278cfa50938dd8b0ea744405277",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000000956",
+      "status": "complete",
+      "source_input_sha256": "9af2513066496a30d98bcde713e6a966744607f8a1ea9ef252949dbb4f29a83c",
+      "n_original": 18394,
+      "kept": 16106,
+      "removed": 2288,
+      "retained_fraction": 0.8756116124823312,
+      "score_quantiles": [
+        0.04978397116065025,
+        0.32650002688169477,
+        0.7000448405742645,
+        0.933272337913513,
+        0.9948928952217102
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000000956.npz",
+      "prediction_sha256": "8c663f0844219957b52a96686094b2ca59aaf1cc8cdd6077c4895417e98aa568",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004156",
+      "status": "complete",
+      "source_input_sha256": "fffb198e6794c25059fd436909184300038247337f95c0255221da19b80a02c8",
+      "n_original": 3056,
+      "kept": 1548,
+      "removed": 1508,
+      "retained_fraction": 0.506544502617801,
+      "score_quantiles": [
+        0.004594551865011454,
+        0.05030013807117939,
+        0.4394802451133728,
+        0.9999998211860657,
+        1.0
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004156.npz",
+      "prediction_sha256": "0fb605bb5acddc86f7093ee87c422adecd8b7e80f16671e78d088711ac7a19a1",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002345",
+      "status": "complete",
+      "source_input_sha256": "f1aa54d1dcacbc8ee6b9bccae424087c0a42245159dab4327ab172cfd4b92586",
+      "n_original": 5013,
+      "kept": 4991,
+      "removed": 22,
+      "retained_fraction": 0.9956114103331338,
+      "score_quantiles": [
+        0.16743619740009308,
+        0.6851834416389465,
+        0.9924939274787903,
+        0.9999997019767761,
+        1.0
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002345.npz",
+      "prediction_sha256": "2c05ac6fbfb1b17df7dca6884df4fe86c8ac6f83dd4e393f8b8bfd27dab45bb2",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003600",
+      "status": "complete",
+      "source_input_sha256": "13c62621894fc068227d5a175db6fa82b18befb4462403c06107d91f031d1e68",
+      "n_original": 7020,
+      "kept": 7020,
+      "removed": 0,
+      "retained_fraction": 1.0,
+      "score_quantiles": [
+        0.4509317874908447,
+        0.9313598304986954,
+        0.9994461536407471,
+        0.9999935060739518,
+        0.9999997019767761
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003600.npz",
+      "prediction_sha256": "2c718d20d2981e3702b1c606870bf636ea540b98d526adfea2a9cf6bcc458f3e",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003601",
+      "status": "complete",
+      "source_input_sha256": "54cb67ee5a97e10b3473a57f3369a5fc90fdbb657e2723588261065649102934",
+      "n_original": 6420,
+      "kept": 6360,
+      "removed": 60,
+      "retained_fraction": 0.9906542056074766,
+      "score_quantiles": [
+        0.1532876193523407,
+        0.6277570694684982,
+        0.9810330271720886,
+        0.999793142080307,
+        0.9999991059303284
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003601.npz",
+      "prediction_sha256": "0eeb2298f10dc84940e2ec568511b6a324ac8d13858927f799e5e624ac504350",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005062",
+      "status": "complete",
+      "source_input_sha256": "125a1480ef792b84efac16f85adddd68f8fd37846d53c2adbbd191c2aeaf900c",
+      "n_original": 2844,
+      "kept": 2394,
+      "removed": 450,
+      "retained_fraction": 0.8417721518987342,
+      "score_quantiles": [
+        0.11737260967493057,
+        0.32350028157234195,
+        0.693574845790863,
+        0.9921497255563736,
+        0.9999845623970032
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005062.npz",
+      "prediction_sha256": "3abcd5b54dec995f9e60f22f82d1f57c1d0932afa775c1376a6711a3e3cf45b0",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003648",
+      "status": "complete",
+      "source_input_sha256": "76f200c0e400da62bc38c5761dd43b9e7beed517373b35faf2a42713ba3ccf2c",
+      "n_original": 3066,
+      "kept": 2731,
+      "removed": 335,
+      "retained_fraction": 0.8907371167645141,
+      "score_quantiles": [
+        0.007856331765651703,
+        0.2546047568321228,
+        0.8780481219291687,
+        0.9943911582231522,
+        0.9998158812522888
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003648.npz",
+      "prediction_sha256": "2a48fdd6d2a2d8ed0c2cee3b5f9e56c5c10057df52f1a8b978142e7c13394cdf",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005058",
+      "status": "complete",
+      "source_input_sha256": "b05d0e76e677980c536c10b18d3110b2751467a67f0398d46cde8ce6879dce5f",
+      "n_original": 4504,
+      "kept": 2265,
+      "removed": 2239,
+      "retained_fraction": 0.502886323268206,
+      "score_quantiles": [
+        8.86033012648113e-06,
+        0.00018284444595337846,
+        0.4493345320224762,
+        0.999988853931427,
+        0.9999985098838806
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005058.npz",
+      "prediction_sha256": "c59c6c712c311e97bfeef9e371e9047e8c1ad7bbf5518fb9fb35f584dbcf3fcc",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005074",
+      "status": "complete",
+      "source_input_sha256": "78d243bdb22d767833687d5b844d40474379379b3e055720164dd2eeceda56d8",
+      "n_original": 2208,
+      "kept": 2194,
+      "removed": 14,
+      "retained_fraction": 0.9936594202898551,
+      "score_quantiles": [
+        0.1712895780801773,
+        0.6925442934036254,
+        0.9880383014678955,
+        0.9999382883310318,
+        0.9999995231628418
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005074.npz",
+      "prediction_sha256": "2f47b9ea68390405023639f860e55bb8fd36eb72d83d48e69d73d5a425487484",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003746",
+      "status": "complete",
+      "source_input_sha256": "68238db52047fc3a4ecbfb6b9db8857087c20ccfc1c5e7ef7263a717176a0c3d",
+      "n_original": 5134,
+      "kept": 5120,
+      "removed": 14,
+      "retained_fraction": 0.9972730814179976,
+      "score_quantiles": [
+        0.19499091804027557,
+        0.6930528968572617,
+        0.9663399159908295,
+        0.9999859154224395,
+        0.9999997019767761
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003746.npz",
+      "prediction_sha256": "86753b1fed6851dfcae99ba46d67b145fb1e5bdec5d2e9f45fdcc642bd0598a0",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003976",
+      "status": "complete",
+      "source_input_sha256": "781990fce929df5c5ef4a6c9fa6c8c05e4660befedef08e372b3d09deb1596ee",
+      "n_original": 7012,
+      "kept": 6965,
+      "removed": 47,
+      "retained_fraction": 0.9932972047917855,
+      "score_quantiles": [
+        0.13005344569683075,
+        0.7369957447052002,
+        0.9987643659114838,
+        0.9999838143587112,
+        0.9999998211860657
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003976.npz",
+      "prediction_sha256": "949b4da5b344b3fbfe3ee48867d5791594a1ec993b5c3d3f6e4cbe94d4a31b7e",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003739",
+      "status": "complete",
+      "source_input_sha256": "0c72411585c96e0f2ed9c322f5feca0b770fab5b88202002e527a3c5c7135574",
+      "n_original": 3541,
+      "kept": 3537,
+      "removed": 4,
+      "retained_fraction": 0.9988703756001129,
+      "score_quantiles": [
+        0.3568998873233795,
+        0.8519836068153381,
+        0.9985955357551575,
+        0.9999866485595703,
+        0.9999998211860657
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003739.npz",
+      "prediction_sha256": "50e79814fdc9a0c442b32ffe6cd47a56079d738f489ed0b0ce247c544217b71c",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003952",
+      "status": "complete",
+      "source_input_sha256": "46466be37f59ea4f0d207285cee679e1c5e2843c44c545f66ae6251970ae51c8",
+      "n_original": 3743,
+      "kept": 3649,
+      "removed": 94,
+      "retained_fraction": 0.9748864547154689,
+      "score_quantiles": [
+        0.09620410203933716,
+        0.5494783759117127,
+        0.9807628989219666,
+        0.9998220086097718,
+        0.9999976754188538
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003952.npz",
+      "prediction_sha256": "3aa86e64f5618de93ad0697ef3f58b69cb9ed72c61e749ef5d693302161bb310",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005049",
+      "status": "complete",
+      "source_input_sha256": "f57c8c26f62a11f6e1ba09eac181d8a5a506939a5f8fcb37c466632fd7d82c13",
+      "n_original": 2202,
+      "kept": 2198,
+      "removed": 4,
+      "retained_fraction": 0.9981834695731153,
+      "score_quantiles": [
+        0.3634984791278839,
+        0.6891676843166351,
+        0.990991860628128,
+        0.9998356491327286,
+        0.9999988675117493
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005049.npz",
+      "prediction_sha256": "df4beb6354cc82d5d8bf11b1b476360ff775bda9cf8e95222f24c90d2e96020c",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002942",
+      "status": "complete",
+      "source_input_sha256": "08fe4b8c85b9f1d102181c0c7b3333687742318264e983afa3b398336b1461dd",
+      "n_original": 2043,
+      "kept": 2017,
+      "removed": 26,
+      "retained_fraction": 0.9872736172295644,
+      "score_quantiles": [
+        0.14417850971221924,
+        0.6536734819412232,
+        0.9852738380432129,
+        0.9997481286525727,
+        0.9999611973762512
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002942.npz",
+      "prediction_sha256": "210341c34f653c4c92a58f7094055d82d8b8fbad29138fa4931fa6488bf3d8d1",
+      "XYZ_and_source_indices_original": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004178",
+      "status": "complete",
+      "source_input_sha256": "592ceed4895da2893481e52358c7e0da832de2df151ada9919f5b7172190e47e",
+      "n_original": 3345,
+      "kept": 2256,
+      "removed": 1089,
+      "retained_fraction": 0.6744394618834081,
+      "score_quantiles": [
+        0.022098831832408905,
+        0.12789686620235444,
+        0.644974410533905,
+        0.9999984860420227,
+        1.0
+      ],
+      "all_points_exactly1vote_per_pass": true,
+      "prediction_path": "paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004178.npz",
+      "prediction_sha256": "8bd6e2be70e5a350ca39d6ee86844ed1928b0c58ce712e8ce1fe26fed0364094",
+      "XYZ_and_source_indices_original": true
+    }
+  ],
+  "_publication": {
+    "original_source_sha256": "534bc9aa9b0c65c0f5bea52dac04b9f75ff4b4ff85e8f58adc5b102ff6057ccf",
+    "original_source": "source:scaling/paired_real_feasibility/qualitative_dl/qualitative_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

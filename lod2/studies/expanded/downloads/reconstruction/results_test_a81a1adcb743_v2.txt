@@ -1,0 +1,27 @@
+分组：test；固定64栋×12种合成条件×20方法。
+主指标：每栋固定1m网格，原生LoD2失败、LoD1退化和缺失网格罚10m，其余垂直误差封顶10m。
+参考为自动3DBAG教师屋面；输入为合成观测，不能解释成真实AHN/3DEP精度验证。
+每栋12条件先平均，再进行建筑层配对bootstrap；各增强云不是独立建筑样本。
+raw: capped=1.4471m，配对变化=+0.0000m，clean变化=+0.0000m，原生成功=745/768，coverage=0.969，激活=0，fallback=0。
+geometry: capped=1.4198m，配对变化=-0.0272m，clean变化=-0.0059m，原生成功=745/768，coverage=0.970，激活=438，fallback=0。
+global_cls_hard: capped=0.9892m，配对变化=-0.4578m，clean变化=+0.0032m，原生成功=745/768，coverage=0.969，激活=428，fallback=0。
+graph_cls_hard: capped=0.9398m，配对变化=-0.5073m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=443，fallback=0。
+graph_reweight_hard: capped=0.9520m，配对变化=-0.4951m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=447，fallback=0。
+graph_normal_hard: capped=0.9421m，配对变化=-0.5049m，clean变化=+0.0000m，原生成功=745/768，coverage=0.969，激活=449，fallback=0。
+graph_support_balanced_hard: capped=0.9393m，配对变化=-0.5077m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=449，fallback=0。
+graph_support_hard: capped=0.9520m，配对变化=-0.4951m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=445，fallback=0。
+graph_normal_guard: capped=0.9436m，配对变化=-0.5035m，clean变化=+0.0000m，原生成功=745/768，coverage=0.969，激活=446，fallback=0。
+graph_support_guard: capped=0.9519m，配对变化=-0.4952m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=437，fallback=0。
+geometry_support_guard: capped=0.9495m，配对变化=-0.4975m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=437，fallback=0。
+weighted_ransac_support: capped=1.2990m，配对变化=-0.1481m，clean变化=+0.2693m，原生成功=742/768，coverage=0.966，激活=687，fallback=35。
+residual_veto: capped=0.9370m，配对变化=-0.5100m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=451，fallback=0。
+graph_cls_mean3_hard: capped=0.9325m，配对变化=-0.5146m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=444，fallback=0。
+graph_support_mean3_hard: capped=0.9274m，配对变化=-0.5196m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=446，fallback=0。
+graph_support_mean3_abstain: capped=0.9641m，配对变化=-0.4830m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=437，fallback=0。
+graph_support_mean3_guard: capped=0.9346m，配对变化=-0.5124m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=445，fallback=0。
+graph_support_mean3_residual: capped=0.9345m，配对变化=-0.5126m，clean变化=+0.0000m，原生成功=745/768，coverage=0.969，激活=449，fallback=0。
+observation_router_safe: capped=1.4406m，配对变化=-0.0065m，clean变化=+0.0000m，原生成功=745/768，coverage=0.969，激活=92，fallback=417。
+observation_router_geometryfallback: capped=1.4161m，配对变化=-0.0310m，clean变化=+0.0000m，原生成功=745/768，coverage=0.970，激活=333，fallback=423。
+plane原指标只是朝向和高度匹配，未要求XY位置重叠；新增XY-intersection为独立次要诊断，不参与选择。
+junction为二维投影共享屋面边界buffer-F1，不是三维屋脊精度；也不是人工屋脊风格标注。
+该脚本不会自动解锁final，也不按真实条件名称选择推理路由。

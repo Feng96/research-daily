@@ -1,0 +1,118 @@
+{
+  "status": "complete",
+  "groups": [
+    "raw",
+    "geometry",
+    "pointnet_hard",
+    "edgeconv_hard",
+    "edgeconv_guard",
+    "image_hard",
+    "image_guard"
+  ],
+  "summaries": [
+    {
+      "group": "raw",
+      "runner_return_code": 0,
+      "fixed_source_instance_denominator": 18,
+      "all_parts_lod2_instances": 0,
+      "source_area_ge30m2_denominator": 13,
+      "source_area_ge30m2_all_parts_lod2": 0,
+      "requested_parts": 76,
+      "native_lod2_parts": 0,
+      "input_candidate_records": 47544,
+      "output_models": "source:multicity/outputs/boston_v1/raw/models.json"
+    },
+    {
+      "group": "geometry",
+      "runner_return_code": 0,
+      "fixed_source_instance_denominator": 18,
+      "all_parts_lod2_instances": 0,
+      "source_area_ge30m2_denominator": 13,
+      "source_area_ge30m2_all_parts_lod2": 0,
+      "requested_parts": 76,
+      "native_lod2_parts": 0,
+      "input_candidate_records": 44386,
+      "output_models": "source:multicity/outputs/boston_v1/geometry/models.json"
+    },
+    {
+      "group": "pointnet_hard",
+      "runner_return_code": 0,
+      "fixed_source_instance_denominator": 18,
+      "all_parts_lod2_instances": 0,
+      "source_area_ge30m2_denominator": 13,
+      "source_area_ge30m2_all_parts_lod2": 0,
+      "requested_parts": 76,
+      "native_lod2_parts": 0,
+      "input_candidate_records": 47349,
+      "output_models": "source:multicity/outputs/boston_v1/pointnet_hard/models.json"
+    },
+    {
+      "group": "edgeconv_hard",
+      "runner_return_code": 0,
+      "fixed_source_instance_denominator": 18,
+      "all_parts_lod2_instances": 0,
+      "source_area_ge30m2_denominator": 13,
+      "source_area_ge30m2_all_parts_lod2": 0,
+      "requested_parts": 76,
+      "native_lod2_parts": 0,
+      "input_candidate_records": 45589,
+      "output_models": "source:multicity/outputs/boston_v1/edgeconv_hard/models.json"
+    },
+    {
+      "group": "edgeconv_guard",
+      "runner_return_code": 0,
+      "fixed_source_instance_denominator": 18,
+      "all_parts_lod2_instances": 0,
+      "source_area_ge30m2_denominator": 13,
+      "source_area_ge30m2_all_parts_lod2": 0,
+      "requested_parts": 76,
+      "native_lod2_parts": 0,
+      "input_candidate_records": 46867,
+      "output_models": "source:multicity/outputs/boston_v1/edgeconv_guard/models.json"
+    },
+    {
+      "group": "image_hard",
+      "runner_return_code": 0,
+      "fixed_source_instance_denominator": 18,
+      "all_parts_lod2_instances": 0,
+      "source_area_ge30m2_denominator": 13,
+      "source_area_ge30m2_all_parts_lod2": 0,
+      "requested_parts": 76,
+      "native_lod2_parts": 0,
+      "input_candidate_records": 47544,
+      "output_models": "source:multicity/outputs/boston_v1/image_hard/models.json"
+    },
+    {
+      "group": "image_guard",
+      "runner_return_code": 0,
+      "fixed_source_instance_denominator": 18,
+      "all_parts_lod2_instances": 0,
+      "source_area_ge30m2_denominator": 13,
+      "source_area_ge30m2_all_parts_lod2": 0,
+      "requested_parts": 76,
+      "native_lod2_parts": 0,
+      "input_candidate_records": 47544,
+      "output_models": "source:multicity/outputs/boston_v1/image_guard/models.json"
+    }
+  ],
+  "source_instances": 18,
+  "native_part_denominator": 76,
+  "real_observations": true,
+  "independent_roof_GT": false,
+  "accuracy_measured": false,
+  "retuned_on_target": false,
+  "historical_mesh_agreement_not_used_as_independent_validation": true,
+  "elapsed_seconds": 13.802563667297363,
+  "limitations": [
+    "17/18footprints are historical mesh-derived input priors.",
+    "5/18sourceinstances are tiny2–6m2fragments, retained in every group.",
+    "NativeLoD2 success describes output generation, not geometric correctness.",
+    "2011reference,2013–14LiDAR,2014NAIP and2026OSM are not temporally equivalent."
+  ],
+  "_publication": {
+    "original_source_sha256": "0fec245ae5c2ed1948b446d091019a471af216db9c0607521658489c2afe50d1",
+    "original_source": "source:multicity/reports/boston_reconstruction_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

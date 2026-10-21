@@ -1,0 +1,182 @@
+LoD2 扩大实验：结果与证据
+
+状态：complete；实际持续 4.10 小时。正式比较使用H100本轮训练的41个模型实例（含随机重复和轻量选择器，并非41种架构；早期v1保留但不参与），另运行官方RoofDiffusion权重。
+数据：8 个荷兰城市共 4,600 栋自动模型；训练 3,500 栋。主重建比较为验证 80 栋、最终留出 64 栋，各 12 种观测条件；补面侧实验为验证 10 栋、留出 16 栋，各 6 种条件。美国实际 NAIP/3DEP 为波士顿/华盛顿5片区的226个建筑实例、327,008个候选回波、14种流程，角色为60适配、60旧开发、106观察样本。
+主要评估值是固定分母的限幅垂直损失：每个屋面格点 min(|预测高程−参考高程|,10米)，未覆盖、原生重建失败或LoD1回退计10米，再对建筑和条件求均值。它不是通常只在成功模型上计算的MAE。
+验证区选定主方法：graph_support_mean3_residual。留出损失 0.934467 米；相对原始基线变化 -0.512589 米；清洁平均变化 +0.000000 米。该方法在打开最终城市前已固定。
+原生生成与几何有效性：主方法745/768原生成功；失败23均为very_sparse，与raw相同，新增/恢复失败分别0/0。原生成功中3个未通过1mm边关联诊断，尚不能宣称所有输出水密或通过完整几何有效性认证。
+主流程留出比较（相同64×12分母）：
+  graph_support_mean3_hard: loss=0.927429m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_cls_mean3_hard: loss=0.932467m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_support_mean3_residual: loss=0.934467m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_support_mean3_guard: loss=0.934613m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  residual_veto: loss=0.937023m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_support_balanced_hard: loss=0.939337m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_cls_hard: loss=0.939802m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_normal_hard: loss=0.942122m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_normal_guard: loss=0.943569m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  geometry_support_guard: loss=0.949526m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_support_guard: loss=0.951876m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_support_hard: loss=0.951967m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_reweight_hard: loss=0.951989m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  graph_support_mean3_abstain: loss=0.964081m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  global_cls_hard: loss=0.989249m; clean变化=+0.003182m; 清洁恶化>2cm=1/64
+  global_small_diverse_hard: loss=0.990351m; clean变化=+0.022503m; 清洁恶化>2cm=1/64
+  global_relative_xyz_hard: loss=1.010062m; clean变化=+0.005995m; 清洁恶化>2cm=1/64
+  global_small_basic_hard: loss=1.023532m; clean变化=+0.013222m; 清洁恶化>2cm=1/64
+  global_height_only_hard: loss=1.033390m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  global_large_basic_hard: loss=1.049104m; clean变化=+0.048507m; 清洁恶化>2cm=2/64
+  weighted_ransac_support: loss=1.298991m; clean变化=+0.269336m; 清洁恶化>2cm=30/64
+  observation_router_geometryfallback: loss=1.416102m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  geometry: loss=1.419845m; clean变化=-0.005867m; 清洁恶化>2cm=1/64
+  observation_router_safe: loss=1.440561m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+  raw: loss=1.447056m; clean变化=+0.000000m; 清洁恶化>2cm=0/64
+
+三维共享屋面边诊断（统一教师含边域；两非共面屋面共享边的3D长度匹配，不是完整屋脊语义/拓扑认证）：
+  raw: 3D边F1=0.47122; 教师含边=47栋/564个条件样本；教师无边域误报=24/204。
+  geometry: 3D边F1=0.47649; 教师含边=47栋/564个条件样本；教师无边域误报=22/204。
+  graph_support_mean3_residual: 3D边F1=0.55572; 教师含边=47栋/564个条件样本；教师无边域误报=15/204。
+  graph_cls_hard: 3D边F1=0.55282; 教师含边=47栋/564个条件样本；教师无边域误报=15/204。
+  graph_support_hard: 3D边F1=0.55694; 教师含边=47栋/564个条件样本；教师无边域误报=16/204。
+
+补面侧实验留出比较（独立16×6分母，不能与主流程均值交叉排名）：
+  源验证提前选定：hybrid_graph_support_selective_native；留出loss=0.509157m，clean平均变化=+0.000000m。未按留出排名重新选择。
+  hybrid_graph_support_linear_native: loss=0.363440m; clean变化=-0.063472m; 原生LoD2=96/96
+  hybrid_global_cls_linear_native: loss=0.426832m; clean变化=-0.063471m; 原生LoD2=96/96
+  learned_quality_router_native: loss=0.456567m; clean变化=+0.000000m; 原生LoD2=96/96
+  support_count_router_native: loss=0.473865m; clean变化=+0.000000m; 原生LoD2=96/96
+  hybrid_graph_support_selective_native: loss=0.509157m; clean变化=+0.000000m; 原生LoD2=96/96
+  hybrid_global_cls_selective_native: loss=0.581254m; clean变化=+0.000000m; 原生LoD2=96/96
+  hybrid_geometry_linear_native: loss=1.218034m; clean变化=-0.064139m; 原生LoD2=96/96
+  raster_linear_native: loss=1.229716m; clean变化=-0.063472m; 原生LoD2=96/96
+  raster_nearest_native: loss=1.314836m; clean变化=-0.066827m; 原生LoD2=96/96
+  pretrained_roofdiffusion_native: loss=1.386699m; clean变化=-0.035713m; 原生LoD2=96/96
+  original_raw_native: loss=1.875135m; clean变化=+0.000000m; 原生LoD2=91/96
+  RoofDiffusion使用公开预训练权重与冻结高度图适配器，训练数据/预算不同，外部预训练暴露未完全核验；这是本流程的外部可用模型比较，不是原论文benchmark复现，也不能据此断言扩散模型一般不如插值。
+
+关键机制对照（留出城市；负值表示candidate优于reference）：
+  graph_cls_hard vs global_cls_hard: paired变化=-0.049448m; 建筑bootstrap95%区间=[-0.086016,-0.018440]m
+  graph_reweight_hard vs graph_cls_hard: paired变化=+0.012187m; 建筑bootstrap95%区间=[-0.007274,+0.032932]m
+  graph_normal_hard vs graph_cls_hard: paired变化=+0.002320m; 建筑bootstrap95%区间=[-0.021472,+0.026523]m
+  graph_support_balanced_hard vs graph_cls_hard: paired变化=-0.000464m; 建筑bootstrap95%区间=[-0.019895,+0.020846]m
+  graph_support_hard vs graph_reweight_hard: paired变化=-0.000022m; 建筑bootstrap95%区间=[-0.019052,+0.020402]m
+  graph_cls_mean3_hard vs graph_cls_hard: paired变化=-0.007335m; 建筑bootstrap95%区间=[-0.017264,+0.002526]m
+  graph_support_mean3_hard vs graph_support_hard: paired变化=-0.024538m; 建筑bootstrap95%区间=[-0.044031,-0.008537]m
+  graph_support_guard vs graph_support_hard: paired变化=-0.000091m; 建筑bootstrap95%区间=[-0.005613,+0.005623]m
+  graph_support_mean3_guard vs graph_support_mean3_hard: paired变化=+0.007183m; 建筑bootstrap95%区间=[-0.004677,+0.021178]m
+  weighted_ransac_support vs graph_support_hard: paired变化=+0.347024m; 建筑bootstrap95%区间=[+0.259349,+0.436975]m
+  residual_veto vs graph_support_hard: paired变化=-0.014944m; 建筑bootstrap95%区间=[-0.031020,-0.001982]m
+  global_relative_xyz_hard vs global_cls_hard: paired变化=+0.020812m; 建筑bootstrap95%区间=[-0.001606,+0.047290]m
+  global_height_only_hard vs global_cls_hard: paired变化=+0.044141m; 建筑bootstrap95%区间=[+0.000997,+0.082731]m
+  observation_router_safe vs graph_support_mean3_guard: paired变化=+0.505949m; 建筑bootstrap95%区间=[+0.446508,+0.565295]m
+  observation_router_geometryfallback vs geometry: paired变化=-0.003744m; 建筑bootstrap95%区间=[-0.010710,+0.003377]m
+  对照解释在部分源验证结果后确定、最终城市打开前写入；区间为探索性描述，未作多重比较校正，且不包含训练seed变异或教师偏差。三seed ensemble与single的计算预算不同。
+  主原生重建方案多使用seed20261023，分类/support另有三seed集成方案；三seed点指标重复不等于所有原生重建方案都做了三次独立重复。
+  12种人工污染条件等权，不能将这个均值解释为美国实际误差分布或通常成功模型MAE。
+
+主损失构成（同一固定分母，可相加）：
+  geometry: 原生失败/非LoD2罚分=0.299479m；成功模型缺覆盖罚分=0.004942m；被覆盖格点限幅误差贡献=1.115424m。
+  graph_support_mean3_residual: 原生失败/非LoD2罚分=0.299479m；成功模型缺覆盖罚分=0.009889m；被覆盖格点限幅误差贡献=0.625098m。
+  raw: 原生失败/非LoD2罚分=0.299479m；成功模型缺覆盖罚分=0.012029m；被覆盖格点限幅误差贡献=1.135548m。
+  源验证事后失败分析：weighted RANSAC相对同support_hard的clean平均损伤+0.270985m，53/80栋>2cm，但clean新增原生失败为0。所有80栋仍能生成LoD2，说明生成成功不能代替几何正确。复杂度与损伤有关，但不能由此证明plane cap8或密度的因果；clean固定512点使面积与密度完全相关。
+
+补面机制对照（仅16×6侧实验分母）：
+  pretrained_roofdiffusion_native vs raster_linear_native: paired变化=+0.156983m; 95%区间=[+0.088312,+0.240751]m
+  hybrid_global_cls_linear_native vs raster_linear_native: paired变化=-0.802883m; 95%区间=[-0.911212,-0.674179]m
+  hybrid_graph_support_linear_native vs hybrid_global_cls_linear_native: paired变化=-0.063392m; 95%区间=[-0.118389,-0.010868]m
+  hybrid_graph_support_selective_native vs hybrid_graph_support_linear_native: paired变化=+0.145716m; 95%区间=[+0.081956,+0.208267]m
+  hybrid_global_cls_selective_native vs hybrid_global_cls_linear_native: paired变化=+0.154422m; 95%区间=[+0.085329,+0.233195]m
+  learned_quality_router_native vs support_count_router_native: paired变化=-0.017297m; 95%区间=[-0.071179,+0.014782]m
+  learned_quality_router_native vs hybrid_global_cls_linear_native: paired变化=+0.029735m; 95%区间=[+0.002038,+0.062337]m
+
+真实航测源区点分类（ISPRS；同一验证区也用于checkpoint与温度/阈值选择，不能代替独立测试）：
+  semantic2_gated: 3 seeds; accuracy均值=0.9070; roof保留=0.9952; vegetation/hedge去除=0.6023
+  semantic2_gated_ssl: 3 seeds; accuracy均值=0.9076; roof保留=0.9952; vegetation/hedge去除=0.6474
+  semantic2_late: 3 seeds; accuracy均值=0.9006; roof保留=0.9952; vegetation/hedge去除=0.6156
+  semantic2_late_aug: 3 seeds; accuracy均值=0.9085; roof保留=0.9952; vegetation/hedge去除=0.6087
+  semantic2_point: 3 seeds; accuracy均值=0.8425; roof保留=0.9952; vegetation/hedge去除=0.4413
+  光学分支使用真实R/G/NIR与手工8维光谱特征，尚未使用空间影像CNN；gating为逐点标量门。全局原型为PointNet-style；局部图原型固定一次kNN并复用EdgeConv-style层，不是原版动态图DGCNN复现。
+  光谱值为DN/255，并非跨传感器校准的地表反射率；同名波段和相同数值单位不保证跨场景光谱可比。
+
+美国真实点云运行结果：仅为模型生成情况，不是屋顶准确率。
+  raw: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  geometry: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  legacy_image: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  teacher_global_hard: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  teacher_support_hard: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  teacher_support_abstain: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  semantic2_point: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  semantic2_late: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  semantic2_late_aug: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  semantic2_gated: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  semantic2_gated_ssl: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  semantic2_gated_ssl_guard: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  teacher_graph_cls_hard: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  teacher_relative_xyz_hard: 原生LoD2生成=223/226；LoD1回退=0；所有状态={"native_lod2_generated": 223, "native_no_geometry": 3}
+  真实输入干预（固定327,008个候选点；去除点不等于正确去树，改变掩码不等于改善屋顶）：
+    raw: 去除=0；逐栋保留率中位数=1.00000；与raw完全相同=226/226；与geometry相同=11/226。
+    geometry: 去除=17875；逐栋保留率中位数=0.96027；与raw完全相同=11/226；与geometry相同=226/226。
+    legacy_image: 去除=1388；逐栋保留率中位数=1.00000；与raw完全相同=212/226；与geometry相同=11/226。
+    teacher_global_hard: 去除=4702；逐栋保留率中位数=1.00000；与raw完全相同=150/226；与geometry相同=8/226。
+    teacher_support_hard: 去除=70879；逐栋保留率中位数=0.92143；与raw完全相同=84/226；与geometry相同=10/226。
+    teacher_support_abstain: 去除=18832；逐栋保留率中位数=1.00000；与raw完全相同=119/226；与geometry相同=10/226。
+    semantic2_point: 去除=4584；逐栋保留率中位数=1.00000；与raw完全相同=193/226；与geometry相同=8/226。
+    semantic2_late: 去除=424；逐栋保留率中位数=1.00000；与raw完全相同=219/226；与geometry相同=11/226。
+    semantic2_late_aug: 去除=1106；逐栋保留率中位数=1.00000；与raw完全相同=217/226；与geometry相同=11/226。
+    semantic2_gated: 去除=3254；逐栋保留率中位数=1.00000；与raw完全相同=194/226；与geometry相同=9/226。
+    semantic2_gated_ssl: 去除=2856；逐栋保留率中位数=1.00000；与raw完全相同=189/226；与geometry相同=9/226。
+    semantic2_gated_ssl_guard: 去除=445；逐栋保留率中位数=1.00000；与raw完全相同=206/226；与geometry相同=12/226。
+    teacher_graph_cls_hard: 去除=23245；逐栋保留率中位数=1.00000；与raw完全相同=120/226；与geometry相同=10/226。
+    teacher_relative_xyz_hard: 去除=3033；逐栋保留率中位数=1.00000；与raw完全相同=167/226；与geometry相同=7/226。
+  单实例原生尝试运行时间（含实例I/O，排除GPU掩码推理与数据下载；并行实测不能直接外推全国）：
+    raw: timed=226；median=0.430099505931139s；p90=0.6721408893354237s
+    geometry: timed=226；median=0.4049268686212599s；p90=0.649580059107393s
+    legacy_image: timed=226；median=0.40362183609977365s；p90=0.6391213829629123s
+    teacher_global_hard: timed=226；median=0.3615169762633741s；p90=0.5864001931622624s
+    teacher_support_hard: timed=226；median=0.35301785869523883s；p90=0.4958913424052298s
+    teacher_support_abstain: timed=226；median=0.31572436448186636s；p90=0.47578399209305644s
+    semantic2_point: timed=226；median=0.2839788072742522s；p90=0.41319477977231145s
+    semantic2_late: timed=226；median=0.2589840507134795s；p90=0.4050551154650748s
+    semantic2_late_aug: timed=226；median=0.2570386128500104s；p90=0.40728996600955725s
+    semantic2_gated: timed=226；median=0.25067483354359865s；p90=0.39519874984398484s
+    semantic2_gated_ssl: timed=226；median=0.25773944426327944s；p90=0.40286547550931573s
+    semantic2_gated_ssl_guard: timed=226；median=0.2528233132325113s；p90=0.38525449577718973s
+    teacher_graph_cls_hard: timed=226；median=0.25214162888005376s；p90=0.3995894128456712s
+    teacher_relative_xyz_hard: timed=226；median=0.2502176580019295s；p90=0.3841784172691405s
+
+BackBay无标签适配审计（预测分布与置信度，不是准确率）：
+  semantic2_gated seed20261023: 17525独特点；预测roof/vegetation/other=[14008, 140, 3377]；raw置信≥0.9的独特点=13170；源区校准后保留=17523
+  semantic2_gated_ssl seed20261023: 17525独特点；预测roof/vegetation/other=[14804, 117, 2604]；raw置信≥0.9的独特点=15414；源区校准后保留=17523
+  semantic2_gated seed20261024: 17525独特点；预测roof/vegetation/other=[13866, 214, 3445]；raw置信≥0.9的独特点=12665；源区校准后保留=17525
+  semantic2_gated_ssl seed20261024: 17525独特点；预测roof/vegetation/other=[15284, 113, 2128]；raw置信≥0.9的独特点=14956；源区校准后保留=17525
+  semantic2_gated seed20261025: 17525独特点；预测roof/vegetation/other=[12425, 504, 4596]；raw置信≥0.9的独特点=11347；源区校准后保留=17451
+  semantic2_gated_ssl seed20261025: 17525独特点；预测roof/vegetation/other=[15011, 328, 2186]；raw置信≥0.9的独特点=15221；源区校准后保留=17412
+
+美国数据：仅报告真实点云上的掩码、模型生成成功/失败与运行表现。当前没有被接受的独立屋面/树点真值，不能据原生LoD2成功率宣称真实屋顶准确率。
+训练样本对照仅单随机种子：丰富污染混合同时改变了类别种类与clean/sparse相对比例；不能严格把收益单归因于类型数。高度对照保留XY跨度归一化；relativeXYZ只移除筛点器的离地通道，后端仍使用共同地面及世界高程。
+三维内部屋面边诊断仅检测可确认的两非共面屋面共享边，不能当完整屋脊语义或连通拓扑准确率。1米主格网也不能充分评价小老虎窗等细节。
+加权RANSAC仅三点采样带权、后续SVD不带权，且流程还改变接受/组合阈值，结果不能单归因于权重；support hybrid对global hybrid也同时改变backbone/aux/类别权重，需匹配消融。
+自动3DBAG教师与Roofer基线共享建模谱系。当前结果支持受控污染后的教师几何恢复；尚未证明新架构、美国实测高精度或人工三维标注需求降低。
+真实样本中106栋原定观察测试样本的协变量统计已被查看；relativeXYZ属于目标协变量启发的探索。无目标真值进入训练，SSL仅使用BackBay适配区。NAIP、LiDAR和现今OSM年份也不完全一致。
+SSL具体为有标签源区重放＋BackBay无标签EMA伪标签一致性，不是纯无标签预训练；raw softmax≥0.9只是伪标签启发式，unique-point置信度审计不等于目标准确率。
+语义跨域还存在输入定义差异：源区为10米网格5%低分位加30米最小值滤波的无标签terrain proxy，真实区为分类地面8NN；源区场景邻域patch与真实区每栋候选点patch的上下文也不同。光谱分布、保守源阈值与这些差异均可能影响去树，当前不能单因归因。
+补充输入审计已通过：13项特征/归一化重放，默认/显式None/冻存影像64万DN一致，单独第四波段16万DN一致，服务像元与有效掩膜均核对。未确认机械导出错误，未因此改数据/模型/阈值。BackBay57/60栋少于512个候选点，padding为18294/46080，1041/17525独特点的离地高超过源区60米clip；这些是输入域差异而非目标准确率结论。
+2厘米选型门槛约束源验证clean平均损伤，不是逐栋保护或校准风险保证；学习质量选择器的代价输出也尚未校准为期望误差。
+当前项目17/18为旧版重叠点编码，不能套用全国新3DEP；缺建筑/植被分类不等于激光位置精度差。
+
+优先改进方向（待未来独立实验验证，本轮未证明这些新设计有效）：
+  1. 先检验输入域匹配：统一height proxy/clip，匹配物理点密度、每栋候选点上下文和稀疏padding，再做真实光谱辐射增强/多源训练；这些收益不能归给新融合架构，简单整体均值匹配也不保证正确。
+  2. 以最终重建风险和屋面支持度监督DL。对比点分类、aux法向/残差的结果，判断中间点指标能否转化为原生LoD2改善，避免仅追求分点准确率。
+  3. 学习在哪里、何时补面，并保留有观测支持的干净屋面。将复杂屋顶的稀疏缺口与连续树冠区别处理；必须同时胜过线性/邻近补面和点数规则，且检验逐栋清洁误伤。
+  4. 用真实光学可见性辅助支持度判别和目标适配，先补独立美国屋面GT；同XY树冠与屋顶不共享可见性，不能用源区分类准确率或无标签SSL置信度替代目标屋顶准确率。
+  本轮为架构与流程探索，不能将“首次融合/首次去树/首次补面”作为创新结论；官方RoofDiffusion等已有相关方向。
+
+完整机器结果：https://feng96.github.io/research-daily/lod2/studies/expanded/downloads/final_experiment_result.json
+比较图与PDF：source:expanded/figures
+独立AI审查：source:expanded/oversight
+真实点云与模型浏览数据：source:expanded/reports_real/viewer_payload
+方法释义：https://feng96.github.io/research-daily/lod2/studies/expanded/downloads/%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E.txt
+后续DL设计假设：https://feng96.github.io/research-daily/lod2/studies/expanded/downloads/%E4%B8%8B%E4%B8%80%E9%98%B6%E6%AE%B5DL%E8%AE%BE%E8%AE%A1_%E5%BB%BA%E8%AE%AE.txt
+核心结论与下一步：https://feng96.github.io/research-daily/lod2/studies/expanded/downloads/%E6%A0%B8%E5%BF%83%E7%BB%93%E8%AE%BA.txt
+文献定位：source:expanded/reports/prior_work_positioning.json
+未来美国GT候选（尚未接受或用于本轮）：source:expanded/reports/future_US_GT_candidates.json

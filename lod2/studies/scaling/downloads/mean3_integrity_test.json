@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "split": "test",
+  "created_utc": "2026-10-21T08:45:09.839762+00:00",
+  "methods": [
+    {
+      "method": "graph_10000_mean3",
+      "checkpoint_sha256": {
+        "source:scaling/models/graph_10000_s20261031.pt": "04b58e8bd152d7dbee0c81fcca4f664a77b492f08b68740141da8fe376ec8ac9",
+        "source:scaling/models/graph_10000_s20261101.pt": "5be4438748570b7aab91e2f8f497a61d8b79823fc4146ec7890b921267ee7b76",
+        "source:scaling/models/graph_10000_s20261102.pt": "8fb91978c8890b31b79b79183989fe00105e46b7ee9535437bb68903c85b9ab1"
+      },
+      "single_prediction_receipt_sha256": {
+        "source:scaling/predictions/test/graph_10000_s20261031/results.json": "e16b96e5996a03a675baa6b51cdd3227a5f5f0ba37f4a3aaa29b10a9dd18a385",
+        "source:scaling/predictions/test/graph_10000_s20261101/results.json": "3cd4699396bd0cd1ef8ceef3bf5769d2148053bf4f40399b209787a9b9960872",
+        "source:scaling/predictions/test/graph_10000_s20261102/results.json": "9c4b96a75bb9d586fdf948aa750b3e0b096b58dcb6b2d74ac7bd69a795023a2f"
+      },
+      "ensemble_prediction_receipt_sha256": "42dce49654fb23ca3abc3650968fba9774197cc0614823ba69f2650a59945729",
+      "clouds": 7200,
+      "export_is_exact_mean_of_three_loaded_single_model_exports": true,
+      "maximum_probability_difference": 0.0,
+      "frozen_calibration_sha256": "c083e26eeb23f6c4af95148f2bec5e5d31369c241b6a76e35ce3d5110517a1e9",
+      "final_cutoff_frozen_before_test": true
+    },
+    {
+      "method": "graph_20000_long_mean3",
+      "checkpoint_sha256": {
+        "source:scaling/models/graph_20000_long_s20261031.pt": "0899d4f194dbad868ebf63f267dc6a54e7723491ab96c91347dfe323088d56b1",
+        "source:scaling/models/graph_20000_long_s20261101.pt": "13cc96011f29cdf232d6636dd5336503eaa1354ed57f56b9f640da44b739afcb",
+        "source:scaling/models/graph_20000_long_s20261102.pt": "ad2a7f523b694e5a7b7b6c28116b87c31f533d24ccbfb47fb05a4b1e7d6e33d0"
+      },
+      "single_prediction_receipt_sha256": {
+        "source:scaling/predictions/test/graph_20000_long_s20261031/results.json": "c4ce8ae33c8e600ca4f5adc5b894bfe88d0fa818565c9fca82b7562b92853f8f",
+        "source:scaling/predictions/test/graph_20000_long_s20261101/results.json": "88707a7e1821c6f34f31ba5dcb306a8f373b515da48e6ba5022b5e7240692760",
+        "source:scaling/predictions/test/graph_20000_long_s20261102/results.json": "f41858251fe7800d1f008773e2ada801f8410d118fd5d2d4ee1cbf47ae1d7ef9"
+      },
+      "ensemble_prediction_receipt_sha256": "cad4c4072e0d76329220db48bebcc12929732e2fa32d708f486f74bb0eabf58c",
+      "clouds": 7200,
+      "export_is_exact_mean_of_three_loaded_single_model_exports": true,
+      "maximum_probability_difference": 0.0,
+      "frozen_calibration_sha256": "d88878beaec32584104d540e0565e1dc68aad0155e9114ce54eccef16327d529",
+      "final_cutoff_frozen_before_test": true
+    }
+  ],
+  "validator_code_sha256": "38fcd9eb63e14b59e624345d2ca2390b722858090339dc7db2cbed329f3225f6",
+  "selection_sha256": "645f41e5b04f418d7155e816705699a883135b0ce6011069b086f8ed847ce99b",
+  "validation_labels_read": false,
+  "final_labels_read": false,
+  "calibration_labels_read": false,
+  "weights_cutoffs_or_selection_modified": false,
+  "_publication": {
+    "original_source_sha256": "d4c33ddffa8bfe3810d97a80eaddbfda3833c9fd814f5395c82cf66d4550de4f",
+    "original_source": "source:scaling/reports/mean3_integrity_test.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

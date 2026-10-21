@@ -1,0 +1,238 @@
+{
+  "status": "complete",
+  "source_adaptation_sha256": "e7baa4b771c11b691437efc13d148f844fa7f3319a760f74a50611461f0b1500",
+  "models": [
+    {
+      "model": "semantic2_gated",
+      "seed": 20261023,
+      "unique_original_points": 17525,
+      "valid_patch_occurrences": 27786,
+      "padded_occurrences_excluded": 18294,
+      "predicted_class_counts": [
+        14008,
+        140,
+        3377
+      ],
+      "raw_softmax_pseudo_threshold": 0.9,
+      "raw_confident_unique_points": 13170,
+      "raw_confident_predicted_class_counts": [
+        11830,
+        0,
+        1340
+      ],
+      "calibrated_confident_unique_points": 12136,
+      "mean_raw_entropy": 0.1952372409533834,
+      "source_temperature": 1.3,
+      "source_calibrated_keep_count": 17523,
+      "checkpoint_sha256": "ee15abb75b505c4366c010620df93f3022fec43b292cc48ccc746c40be50d268",
+      "target_labels_used": false,
+      "target_accuracy_measured": false
+    },
+    {
+      "model": "semantic2_gated_ssl",
+      "seed": 20261023,
+      "unique_original_points": 17525,
+      "valid_patch_occurrences": 27786,
+      "padded_occurrences_excluded": 18294,
+      "predicted_class_counts": [
+        14804,
+        117,
+        2604
+      ],
+      "raw_softmax_pseudo_threshold": 0.9,
+      "raw_confident_unique_points": 15414,
+      "raw_confident_predicted_class_counts": [
+        13725,
+        5,
+        1684
+      ],
+      "calibrated_confident_unique_points": 14821,
+      "mean_raw_entropy": 0.09466881180385674,
+      "source_temperature": 1.3,
+      "source_calibrated_keep_count": 17523,
+      "checkpoint_sha256": "e99b4dbf0fcaf80c46bec33821b8d5999a9eb52d7705cc39ca8c9e95625aad46",
+      "target_labels_used": false,
+      "target_accuracy_measured": false
+    },
+    {
+      "model": "semantic2_gated",
+      "seed": 20261024,
+      "unique_original_points": 17525,
+      "valid_patch_occurrences": 27786,
+      "padded_occurrences_excluded": 18294,
+      "predicted_class_counts": [
+        13866,
+        214,
+        3445
+      ],
+      "raw_softmax_pseudo_threshold": 0.9,
+      "raw_confident_unique_points": 12665,
+      "raw_confident_predicted_class_counts": [
+        11567,
+        0,
+        1098
+      ],
+      "calibrated_confident_unique_points": 11157,
+      "mean_raw_entropy": 0.2264788864609576,
+      "source_temperature": 1.3,
+      "source_calibrated_keep_count": 17525,
+      "checkpoint_sha256": "4f9929b2dd36ce980671394eb324a92e99970ec8e7470e266e161e69721e7788",
+      "target_labels_used": false,
+      "target_accuracy_measured": false
+    },
+    {
+      "model": "semantic2_gated_ssl",
+      "seed": 20261024,
+      "unique_original_points": 17525,
+      "valid_patch_occurrences": 27786,
+      "padded_occurrences_excluded": 18294,
+      "predicted_class_counts": [
+        15284,
+        113,
+        2128
+      ],
+      "raw_softmax_pseudo_threshold": 0.9,
+      "raw_confident_unique_points": 14956,
+      "raw_confident_predicted_class_counts": [
+        14072,
+        4,
+        880
+      ],
+      "calibrated_confident_unique_points": 14209,
+      "mean_raw_entropy": 0.11738576716820534,
+      "source_temperature": 1.3,
+      "source_calibrated_keep_count": 17525,
+      "checkpoint_sha256": "1c3f2ed66c74bbd742a9287ad592f4f950fcb8d0f7493d4d0a4e560f5f497c3b",
+      "target_labels_used": false,
+      "target_accuracy_measured": false
+    },
+    {
+      "model": "semantic2_gated",
+      "seed": 20261025,
+      "unique_original_points": 17525,
+      "valid_patch_occurrences": 27786,
+      "padded_occurrences_excluded": 18294,
+      "predicted_class_counts": [
+        12425,
+        504,
+        4596
+      ],
+      "raw_softmax_pseudo_threshold": 0.9,
+      "raw_confident_unique_points": 11347,
+      "raw_confident_predicted_class_counts": [
+        9373,
+        138,
+        1836
+      ],
+      "calibrated_confident_unique_points": 9518,
+      "mean_raw_entropy": 0.2777613484313833,
+      "source_temperature": 1.3,
+      "source_calibrated_keep_count": 17451,
+      "checkpoint_sha256": "a76236421d998a648baf8b23668652a0417535038c85ab843db5b1d478d3bbeb",
+      "target_labels_used": false,
+      "target_accuracy_measured": false
+    },
+    {
+      "model": "semantic2_gated_ssl",
+      "seed": 20261025,
+      "unique_original_points": 17525,
+      "valid_patch_occurrences": 27786,
+      "padded_occurrences_excluded": 18294,
+      "predicted_class_counts": [
+        15011,
+        328,
+        2186
+      ],
+      "raw_softmax_pseudo_threshold": 0.9,
+      "raw_confident_unique_points": 15221,
+      "raw_confident_predicted_class_counts": [
+        13888,
+        167,
+        1166
+      ],
+      "calibrated_confident_unique_points": 14466,
+      "mean_raw_entropy": 0.10814161567855243,
+      "source_temperature": 1.3,
+      "source_calibrated_keep_count": 17412,
+      "checkpoint_sha256": "5235616b511edebe52e99f95466f31ab0205df479f2b0b3c05603686e42f2e6d",
+      "target_labels_used": false,
+      "target_accuracy_measured": false
+    }
+  ],
+  "changes": [
+    {
+      "seed": 20261023,
+      "class_transition_counts_before_after": [
+        [
+          13917,
+          2,
+          89
+        ],
+        [
+          20,
+          92,
+          28
+        ],
+        [
+          867,
+          23,
+          2487
+        ]
+      ],
+      "changed_unique_points": 1029
+    },
+    {
+      "seed": 20261024,
+      "class_transition_counts_before_after": [
+        [
+          13839,
+          0,
+          27
+        ],
+        [
+          21,
+          112,
+          81
+        ],
+        [
+          1424,
+          1,
+          2020
+        ]
+      ],
+      "changed_unique_points": 1554
+    },
+    {
+      "seed": 20261025,
+      "class_transition_counts_before_after": [
+        [
+          12424,
+          0,
+          1
+        ],
+        [
+          158,
+          315,
+          31
+        ],
+        [
+          2429,
+          13,
+          2154
+        ]
+      ],
+      "changed_unique_points": 2632
+    }
+  ],
+  "scope": "BackBay designatedadaptationpatches only, no unseen blocks or targetlabels",
+  "unique_row_aggregation": "Mean logits over validpatchoccurrences; sparsepadding excluded, originalpoint IDs pooled",
+  "training_pseudo_occurrence_counts_not_unique": true,
+  "interpretation": "Predictedclassconcentration/confidence/change only; neither pseudo-labelaccuracy nor roofaccuracy canbe established withouttargetGT.0.90rawsoftmax matches trainingheuristic, not calibratedconfidence.",
+  "script_sha256": "c0cd8d6b7bcca0e6e5a06a72c029efe17653083360ce449ecd928f3bba291f50",
+  "_publication": {
+    "original_source_sha256": "3b4e93c47b50206999c429f692a649317d394d9010f46e0fdd51b65815e4fc92",
+    "original_source": "source:expanded/reports/SSL_unique_point_diagnostics.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

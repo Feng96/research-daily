@@ -1,0 +1,11 @@
+分组：test；固定64栋×12种合成条件×4方法。
+主指标：每栋固定1m网格，原生LoD2失败、LoD1退化和缺失网格罚10m，其余垂直误差封顶10m。
+参考为自动3DBAG教师屋面；输入为合成观测，不能解释成真实AHN/3DEP精度验证。
+每栋12条件先平均，再进行建筑层配对bootstrap；各增强云不是独立建筑样本。
+raw: capped=1.4471m，配对变化=+0.0000m，clean变化=+0.0000m，原生成功=745/768，coverage=0.969，激活=0，fallback=0。
+geometry: capped=1.4198m，配对变化=-0.0272m，clean变化=-0.0059m，原生成功=745/768，coverage=0.970，激活=438，fallback=0。
+global_cls_hard: capped=0.9892m，配对变化=-0.4578m，clean变化=+0.0032m，原生成功=745/768，coverage=0.969，激活=428，fallback=0。
+global_relative_xyz_hard: capped=1.0101m，配对变化=-0.4370m，clean变化=+0.0060m，原生成功=745/768，coverage=0.970，激活=422，fallback=0。
+plane原指标只是朝向和高度匹配，未要求XY位置重叠；新增XY-intersection为独立次要诊断，不参与选择。
+junction为二维投影共享屋面边界buffer-F1，不是三维屋脊精度；也不是人工屋脊风格标注。
+该脚本不会自动解锁final，也不按真实条件名称选择推理路由。

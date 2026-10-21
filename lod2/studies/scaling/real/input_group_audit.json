@@ -1,0 +1,210 @@
+{
+  "utc": "2026-10-21T08:15:12.934240+00:00",
+  "status": "passed",
+  "fixed_building_denominator": 20,
+  "candidate_records": 98227,
+  "groups": 597,
+  "valid_original_votes": 294681,
+  "expected_original_votes": 294681,
+  "padding_occurrences_zero_votes": 10983,
+  "every_original_exactly3votes": true,
+  "features_reference_formula_bitwise_equal": true,
+  "reference_main_source_sha256": "2a3b25c889c78fc6cbd35ade61517eb77acdf2ce9c8b8f2e126938b2281bf5ae",
+  "recipe_sha256": "632b5f639390237397796dd1243f8c3c5bea6a1552d2549c3e27be99d3e896e9",
+  "group_npz_sha256": "3dfd27098febbbdd3cf9d6f86a0d44e0015b88bcaea9f9b167d16a7979efda60",
+  "class6_teacher_roof_RGB_or_main_validation_test_arrays_read": false,
+  "model_loaded_or_GPU_used": false,
+  "input_files_modified": false,
+  "real_vs_teacher_ground_definition_difference_disclosed": true,
+  "new_partition_mean_not_main_controlled_inference": true,
+  "real_scores_not_calibrated_probabilities": true,
+  "per_building": [
+    {
+      "id": "NL.IMBAG.Pand.0546100000003629",
+      "candidate_count": 6936,
+      "groups": 42,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005073",
+      "candidate_count": 2667,
+      "groups": 18,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004149",
+      "candidate_count": 2935,
+      "groups": 18,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003619",
+      "candidate_count": 6144,
+      "groups": 36,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000000956",
+      "candidate_count": 18394,
+      "groups": 108,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004156",
+      "candidate_count": 3056,
+      "groups": 18,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002345",
+      "candidate_count": 5013,
+      "groups": 30,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003600",
+      "candidate_count": 7020,
+      "groups": 42,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003601",
+      "candidate_count": 6420,
+      "groups": 39,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005062",
+      "candidate_count": 2844,
+      "groups": 18,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003648",
+      "candidate_count": 3066,
+      "groups": 18,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005058",
+      "candidate_count": 4504,
+      "groups": 27,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005074",
+      "candidate_count": 2208,
+      "groups": 15,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003746",
+      "candidate_count": 5134,
+      "groups": 33,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003976",
+      "candidate_count": 7012,
+      "groups": 42,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003739",
+      "candidate_count": 3541,
+      "groups": 21,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003952",
+      "candidate_count": 3743,
+      "groups": 24,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005049",
+      "candidate_count": 2202,
+      "groups": 15,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002942",
+      "candidate_count": 2043,
+      "groups": 12,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004178",
+      "candidate_count": 3345,
+      "groups": 21,
+      "each_original_once_per_pass": true,
+      "padding_only_own_group_repeats_zero_votes": true,
+      "features_bitwise_equal_reference_formula": true,
+      "XYZ_and_source_indices_unmodified": true
+    }
+  ],
+  "audit_code_sha256": "8df0860c839df782f97a93e11b754d3518a3810fd5012422bff1fadc2aa699e9",
+  "_publication": {
+    "original_source_sha256": "9f96a1ea4da16776b4d403372fcccdf6bce1b5902f470bbdddf46c72bd8ce6d7",
+    "original_source": "source:scaling/paired_real_feasibility/qualitative_dl/input_group_audit.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

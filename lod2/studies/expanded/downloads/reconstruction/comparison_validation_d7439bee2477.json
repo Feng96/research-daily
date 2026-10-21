@@ -1,0 +1,234 @@
+{
+  "split": "validation",
+  "methods": [
+    "raw"
+  ],
+  "fixed_buildings": 80,
+  "fixed_logical_pairs": 960,
+  "metric": "building-macro strict nativeLoD2 vertical loss capped10m; failures/fallback/missing=10m",
+  "reference": "automatic 3DBAG teachers, synthetic observations; not independent measured roof GT",
+  "normal_plane_junction": "geometry-derived diagnostics; source coplanar groups are not human ridge labels",
+  "support_diagnostic": "distance<=1m to a true sampled roof input; evaluation-only, includes density effects",
+  "bootstrap_unit": "physical building; all12corruptions are averaged within building before bootstrap",
+  "source_rows_sha256": "ef7100de1df742282524c96aafb0bb789feded97d3a4d98f785d9dce657024a4",
+  "summaries": [
+    {
+      "method": "raw",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 1.297975456835917,
+      "paired_primary_delta_vs_raw_m": 0.0,
+      "paired_building_bootstrap95_m": [
+        0.0,
+        0.0
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9764629154491548,
+      "any_roof_coverage_macro": 0.9764629154491548,
+      "any_roof_conditional_mae_macro_m": 1.1024968568870144,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 10.884009911617447,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 925,
+      "activation_clouds": 0,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 1.0229166666666667,
+      "plane_area_precision_macro": 0.7845282028007826,
+      "plane_area_recall_macro": 0.7896912577785266,
+      "structural_junction_f1_macro": 0.5378793835054547,
+      "observed_support_capped_loss_macro_m": 0.995836688335851,
+      "missing_support_capped_loss_macro_m": 3.861606790877469,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0344100000000141",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000186",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000320",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000403",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000792",
+          0.0
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0344100000000141",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000186",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000320",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000403",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000792",
+          0.0
+        ]
+      ]
+    }
+  ],
+  "per_case": [
+    {
+      "method": "raw",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "raw",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 2.2122546144294395,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 2.266428196071847,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 77
+    },
+    {
+      "method": "raw",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 2.1219592897853206,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 2.1383274809817436,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4531994480420229,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4585619649908076,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "raw",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.28725592010956336,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.2829538568249586,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.1534550661275254,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 3.191775905613839,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.17893775992847422,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1729033423860742,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "raw",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.8734441803483484,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.8743179606978462,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "raw",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.6767778722941402,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.974363160396603,
+      "any_roof_conditional_mae_macro_m": 0.4490697106445333,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 72
+    },
+    {
+      "method": "raw",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    }
+  ],
+  "stress_wording": "training-unseen stresses were visible in validation/development; not unseen final mechanisms",
+  "single_seed_hard_family_roof_rank": "exploratory seed20261023; mean3 methods use3 independently trained checkpoints",
+  "no_case_label_in_interventions": true,
+  "automatic_final_promotion": false,
+  "_publication": {
+    "original_source_sha256": "e90af458cf59fc2d8dd9070686914ba4ec5420e7c6a6089c8dee61f4c5804503",
+    "original_source": "source:expanded/reports_reconstruction/comparison_validation_d7439bee2477.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

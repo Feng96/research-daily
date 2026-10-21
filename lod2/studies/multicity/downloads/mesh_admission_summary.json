@@ -1,0 +1,60 @@
+{
+  "audits": [
+    {
+      "archive": "BOS_G_5_BldgModels_OBJ.zip",
+      "archive_sha256": "32d98675cc32d0eaec6686e82115a313b672795b8cb2fc4f74954d45c3dc8d8e",
+      "counts": {
+        "catalog_models": 2184,
+        "readable_models": 2184,
+        "raw_faces": 312017,
+        "excluded_noncurrent": 87,
+        "detailed_candidates": 332,
+        "exported_candidates": 332,
+        "substantial_sloped_upper_roof": 271,
+        "excluded_flat_extrusion_candidates": 1646,
+        "excluded_catalog_lod1": 119
+      }
+    },
+    {
+      "archive": "BOS_E_7_BldgModels_OBJ.zip",
+      "archive_sha256": "e6c4d630164b6bcedd3b36499a8f9a84fe9beadf5625103235f98948a7e7a755",
+      "counts": {
+        "catalog_models": 2669,
+        "readable_models": 2669,
+        "raw_faces": 181184,
+        "excluded_noncurrent": 7,
+        "excluded_catalog_lod1": 1888,
+        "excluded_flat_extrusion_candidates": 774
+      }
+    },
+    {
+      "archive": "Philadelphia2015_globe.gdb.zip",
+      "archive_sha256": "31246485342473073008f8cea9c9c4e8af32cb1cfbefdf70b4075d9249b87a55",
+      "counts": {
+        "all_features": 859,
+        "readable_features": 859,
+        "interior_rings": 0,
+        "detailed_candidates": 329,
+        "exported_candidates": 329,
+        "not_inclined_candidate": 530,
+        "substantial_sloped_upper_roof_normalized": 308,
+        "edge_incidence_closed_normalized": 1
+      }
+    }
+  ],
+  "records": 661,
+  "errors": [],
+  "split_groups": {
+    "Boston": 291,
+    "Philadelphia": 301
+  },
+  "source_script_sha256": "f2122a63afbfe3b6a2c02185ee2b7bda72f4c7b62839bc7d31d6e721ee827f12",
+  "boston_metric_candidate_count": 332,
+  "philly_dimensionless_only_count": 329,
+  "_publication": {
+    "original_source_sha256": "fcdb4eca0db023f992dc10548354102dee3dcb4e4c2da48a0bb623eb33fc261a",
+    "original_source": "source:multicity/mesh_audit/audit_summary.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

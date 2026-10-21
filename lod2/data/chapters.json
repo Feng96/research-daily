@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "LoD2 建筑实验图谱",
-  "subtitle": "四轮真实观测实验：方法、覆盖与证据一起检查",
+  "subtitle": "七轮实验：真实观测、受控验证与规模训练分别检查",
   "region": {
     "label": "美国华盛顿特区 Georgetown",
     "bbox": [
@@ -13,19 +13,22 @@
     "observationYear": 2014,
     "imagery": "NAIP 2014",
     "elevation": "3DEP LiDAR 2014",
-    "note": "实验日期是2026年；输入观测来自2014年，足迹与历史参考另有时相不确定性。"
+    "note": "实验日期是2026年；输入观测来自2014年，足迹与历史参考另有时相不确定性。",
+    "scope": "仅适用于前四章Georgetown实验；后三章区域见各章regionInfo。"
   },
   "metricDefinitions": {
     "mae": "米；先在每栋指定测试支撑域算垂直绝对残差，再对固定建筑宏平均。",
     "coverage": "0至1的建筑宏平均覆盖率；pointCoverage另表示点记录加权比例。",
     "pairedDelta": "候选与指定对照在相同点上的MAE差，负值为观测拟合改善。",
     "provisionalShape": "历史参考同支撑域形状差；逐栋去除常量高程偏移，不是绝对高度或独立GT精度。",
-    "edges": "原1mm容差边关联通过数量，不是完整实体合法性、无自交或语义正确认证。"
+    "edges": "原1mm容差边关联通过数量，不是完整实体合法性、无自交或语义正确认证。",
+    "scope": "以下历史定义用于前四章；后三章以各章metricsDefinition与表头为准，不作跨轮直接排名。"
   },
   "globalLimitations": [
-    "所有留出观测与训练来自同次LiDAR采集，可能含植被与背景，不是独立语义屋顶GT。",
-    "官方历史三维资料作为附录和暂定参考展示，未获本实验独立精度认证。",
-    "四轮属于同一小区域研究，不能据此声称全国产品已完成或跨域融合模型已普遍有效。"
+    "前四章的训练与留出点来自同次LiDAR采集，可能含植被与背景，不是独立语义屋顶GT。",
+    "后三章受控数据来自自动3DBAG教师与模拟污染；真实美国迁移没有独立同期屋面GT，生成成功不是精度。",
+    "最新真实20栋仅开发诊断，生产class6不是独立人工GT；按章分别报告分母、采集时相和适用范围。",
+    "历史参考与自动教师均未获本实验独立精度认证，不能据此声称全国产品已完成。"
   ],
   "chapters": [
     {
@@ -2007,6 +2010,3594 @@
           "url": "./data/tree-models.zip"
         }
       ]
+    },
+    {
+      "id": "multicity",
+      "title": "小规模多城迁移试验",
+      "subtitle": "24栋受控模拟屋面＋18栋Boston真实观测",
+      "date": "2026-10-20",
+      "scope": "自动3DBAG教师＋合成点云的受控实验；Boston NAIP＋3DEP仅做真实迁移与生成诊断。",
+      "summary": "受控污染下筛点改变屋面结果；真实Boston没有独立同期屋面GT，生成成功不能代表精度。",
+      "reportUrl": "studies/multicity/index.html",
+      "figures": [
+        {
+          "url": "studies/multicity/figures/controlled_roof_comparison.png",
+          "caption": "24栋×6条件×5流程；自动教师和合成观测，不是美国实测精度。"
+        },
+        {
+          "url": "studies/multicity/figures/controlled_roof_comparison.svg",
+          "caption": "controlled_roof_comparison.svg；原实验已生成图，适用范围见正式报告。"
+        }
+      ],
+      "downloads": [
+        {
+          "url": "studies/multicity/downloads/pilot_results.pdf",
+          "label": "pilot_results.pdf",
+          "download": true,
+          "bytes": 25477,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/controlled_roof_metrics.csv",
+          "label": "controlled_roof_metrics.csv",
+          "download": true,
+          "bytes": 2343,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/controlled_reconstruction_result.json",
+          "label": "controlled_reconstruction_result.json",
+          "download": true,
+          "bytes": 9914,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/paired_controlled_comparisons.json",
+          "label": "paired_controlled_comparisons.json",
+          "download": true,
+          "bytes": 9767,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/boston_inference_result.json",
+          "label": "boston_inference_result.json",
+          "download": true,
+          "bytes": 8343,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/boston_reconstruction_result.json",
+          "label": "boston_reconstruction_result.json",
+          "download": true,
+          "bytes": 4391,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/boston_reconstruction_v2_result.json",
+          "label": "boston_reconstruction_v2_result.json",
+          "download": true,
+          "bytes": 5100,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/boston_reconstruction_v2_topology.json",
+          "label": "boston_reconstruction_v2_topology.json",
+          "download": true,
+          "bytes": 28132,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/h100_training_result.json",
+          "label": "h100_training_result.json",
+          "download": true,
+          "bytes": 15410,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/experiment_summary.txt",
+          "label": "experiment_summary.txt",
+          "download": true,
+          "bytes": 4401,
+          "kind": "result_text"
+        },
+        {
+          "url": "studies/multicity/downloads/supervisor_final_review.json",
+          "label": "supervisor_final_review.json",
+          "download": true,
+          "bytes": 23476,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/multicity/downloads/supervisor_final_review_brief.txt",
+          "label": "supervisor_final_review_brief.txt",
+          "download": true,
+          "bytes": 2217,
+          "kind": "result_text"
+        },
+        {
+          "url": "studies/multicity/downloads/per_building/controlled_reconstruction_per_building.json.gz",
+          "label": "controlled_reconstruction_per_building.json",
+          "download": true,
+          "bytes": 21551,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/multicity/downloads/per_building/boston_reconstruction_per_instance.json.gz",
+          "label": "boston_reconstruction_per_instance.json",
+          "download": true,
+          "bytes": 1227,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/multicity/downloads/per_building/boston_reconstruction_v2_per_instance.json.gz",
+          "label": "boston_reconstruction_v2_per_instance.json",
+          "download": true,
+          "bytes": 1697,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/multicity/downloads/mesh_admission_summary.json",
+          "label": "audit_summary.json",
+          "download": true,
+          "bytes": 2246,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/multicity/downloads/reference_data_limits.txt",
+          "label": "README.txt",
+          "download": true,
+          "bytes": 4936,
+          "kind": "source_documentation"
+        }
+      ],
+      "keyMetrics": [
+        {
+          "label": "受控建筑",
+          "value": 24,
+          "unit": "栋",
+          "detail": "六种固定模拟条件，五条处理流程。"
+        },
+        {
+          "label": "真实Boston输入",
+          "value": 18,
+          "unit": "实例",
+          "detail": "1个OSM足迹、17个历史mesh投影先验；有5个微小碎片实例。"
+        },
+        {
+          "label": "原始流程全部parts成功",
+          "value": "5/18",
+          "unit": "实例",
+          "detail": "77个统一归约后的parts；仅描述native生成，非精度。"
+        }
+      ],
+      "findings": [
+        "干净屋面筛点也可能受损；污染条件的改善不等于无条件优于raw。",
+        "Boston先保留v1足迹退化导致的失败，再统一0.01m网格归约得到v2；原始观测和预测mask不变。",
+        "Boston光学筛点在本批真实候选上未删除点；不能据此判定光学融合普遍无效。"
+      ],
+      "limitations": [
+        "17/18footprints are historical mesh-derived input priors.",
+        "5/18sourceinstances are tiny2–6m2fragments, retained in every group.",
+        "NativeLoD2 success describes output generation, not geometric correctness.",
+        "2011reference,2013–14LiDAR,2014NAIP and2026OSM are not temporally equivalent.",
+        "自动教师非独立人工GT；24栋结果不能作美国总体推断。",
+        "各轮输入/地面/评估契约不同，不能跨轮直接相减归因。"
+      ],
+      "columns": [
+        "条件",
+        "方法",
+        "建筑分母",
+        "LoD2生成",
+        "平均覆盖",
+        "屋面MAE (m)",
+        "限幅损失 (m)"
+      ],
+      "tableRows": [
+        [
+          "clean",
+          "raw",
+          "24",
+          "24",
+          "1.0000",
+          "0.4038",
+          "0.4029"
+        ],
+        [
+          "clean",
+          "geometry",
+          "24",
+          "24",
+          "1.0000",
+          "0.4101",
+          "0.4092"
+        ],
+        [
+          "clean",
+          "pointnet_hard",
+          "24",
+          "24",
+          "1.0000",
+          "0.5457",
+          "0.5444"
+        ],
+        [
+          "clean",
+          "edgeconv_hard",
+          "24",
+          "24",
+          "1.0000",
+          "0.4842",
+          "0.4816"
+        ],
+        [
+          "clean",
+          "edgeconv_guard",
+          "24",
+          "24",
+          "1.0000",
+          "0.5183",
+          "0.5157"
+        ],
+        [
+          "sparse",
+          "raw",
+          "24",
+          "24",
+          "1.0000",
+          "1.6093",
+          "1.5561"
+        ],
+        [
+          "sparse",
+          "geometry",
+          "24",
+          "24",
+          "1.0000",
+          "1.6182",
+          "1.5650"
+        ],
+        [
+          "sparse",
+          "pointnet_hard",
+          "24",
+          "24",
+          "1.0000",
+          "1.6344",
+          "1.5812"
+        ],
+        [
+          "sparse",
+          "edgeconv_hard",
+          "24",
+          "24",
+          "1.0000",
+          "1.6085",
+          "1.5560"
+        ],
+        [
+          "sparse",
+          "edgeconv_guard",
+          "24",
+          "24",
+          "1.0000",
+          "1.6095",
+          "1.5563"
+        ],
+        [
+          "hole",
+          "raw",
+          "24",
+          "24",
+          "1.0000",
+          "0.8421",
+          "0.8236"
+        ],
+        [
+          "hole",
+          "geometry",
+          "24",
+          "24",
+          "1.0000",
+          "0.8612",
+          "0.8428"
+        ],
+        [
+          "hole",
+          "pointnet_hard",
+          "24",
+          "24",
+          "1.0000",
+          "1.0848",
+          "1.0280"
+        ],
+        [
+          "hole",
+          "edgeconv_hard",
+          "24",
+          "24",
+          "1.0000",
+          "0.8614",
+          "0.8429"
+        ],
+        [
+          "hole",
+          "edgeconv_guard",
+          "24",
+          "24",
+          "1.0000",
+          "0.8704",
+          "0.8520"
+        ],
+        [
+          "scattered_tree",
+          "raw",
+          "24",
+          "24",
+          "1.0000",
+          "0.5950",
+          "0.5798"
+        ],
+        [
+          "scattered_tree",
+          "geometry",
+          "24",
+          "24",
+          "1.0000",
+          "0.6683",
+          "0.6514"
+        ],
+        [
+          "scattered_tree",
+          "pointnet_hard",
+          "24",
+          "24",
+          "1.0000",
+          "0.5749",
+          "0.5674"
+        ],
+        [
+          "scattered_tree",
+          "edgeconv_hard",
+          "24",
+          "24",
+          "1.0000",
+          "0.5871",
+          "0.5863"
+        ],
+        [
+          "scattered_tree",
+          "edgeconv_guard",
+          "24",
+          "24",
+          "1.0000",
+          "0.5218",
+          "0.5202"
+        ],
+        [
+          "dense_canopy",
+          "raw",
+          "24",
+          "24",
+          "1.0000",
+          "2.1351",
+          "2.1038"
+        ],
+        [
+          "dense_canopy",
+          "geometry",
+          "24",
+          "24",
+          "1.0000",
+          "2.2094",
+          "2.1746"
+        ],
+        [
+          "dense_canopy",
+          "pointnet_hard",
+          "24",
+          "24",
+          "1.0000",
+          "1.2654",
+          "1.2551"
+        ],
+        [
+          "dense_canopy",
+          "edgeconv_hard",
+          "24",
+          "24",
+          "1.0000",
+          "1.5920",
+          "1.5413"
+        ],
+        [
+          "dense_canopy",
+          "edgeconv_guard",
+          "24",
+          "24",
+          "1.0000",
+          "1.4887",
+          "1.4490"
+        ],
+        [
+          "unseen_flat_canopy",
+          "raw",
+          "24",
+          "24",
+          "1.0000",
+          "2.2322",
+          "2.2155"
+        ],
+        [
+          "unseen_flat_canopy",
+          "geometry",
+          "24",
+          "24",
+          "1.0000",
+          "2.2159",
+          "2.2034"
+        ],
+        [
+          "unseen_flat_canopy",
+          "pointnet_hard",
+          "24",
+          "24",
+          "1.0000",
+          "1.6684",
+          "1.6518"
+        ],
+        [
+          "unseen_flat_canopy",
+          "edgeconv_hard",
+          "24",
+          "24",
+          "1.0000",
+          "2.1088",
+          "2.0934"
+        ],
+        [
+          "unseen_flat_canopy",
+          "edgeconv_guard",
+          "24",
+          "24",
+          "1.0000",
+          "2.0980",
+          "2.0827"
+        ]
+      ],
+      "metricsDefinition": "MAE与10m限幅损失是不同指标；此表来自24栋自动教师及模拟点云，同条件配对。真实Boston不报告屋面精度。",
+      "primaryReportUrl": "studies/multicity/downloads/pilot_results.pdf",
+      "artifactCount": 19,
+      "totalBytes": 360404,
+      "original_and_published_hashes_in": "studies/report_package_manifest.json",
+      "status": "complete",
+      "navLabel": "24栋受控 / Boston迁移",
+      "locationTag": "SYNTHETIC / BOSTON",
+      "viewerTitle": "完整实验报告与真实迁移诊断",
+      "viewerNote": "这轮受控观测由自动3DBAG教师生成；Boston为真实NAIP＋3DEP迁移。报告保留原始失败及修正版，生成率不能作为精度。",
+      "regionInfo": {
+        "name": "多城市初探",
+        "area": "3DBAG / Boston",
+        "geo": "受控实验与真实观测分开报告",
+        "description": "从几何基线到学习筛点；先检查能否在污染条件下保住屋面。",
+        "facts": [
+          [
+            "受控",
+            "24栋 × 6条件 × 5流程"
+          ],
+          [
+            "真实",
+            "18个Boston实例"
+          ],
+          [
+            "精度GT",
+            "美国迁移暂无独立同期屋面GT"
+          ]
+        ]
+      },
+      "number": 5,
+      "question": "自动3DBAG教师＋合成点云的受控实验；Boston NAIP＋3DEP仅做真实迁移与生成诊断。 MAE与10m限幅损失是不同指标；此表来自24栋自动教师及模拟点云，同条件配对。真实Boston不报告屋面精度。",
+      "metricNotes": [
+        "自动3DBAG教师＋合成点云的受控实验；Boston NAIP＋3DEP仅做真实迁移与生成诊断。",
+        "MAE与10m限幅损失是不同指标；此表来自24栋自动教师及模拟点云，同条件配对。真实Boston不报告屋面精度。"
+      ],
+      "tableNote": "各轮分母、损失与数据域不同，请只在同轮同条件比较。生成成功不是独立几何精度；三seed均值不等于概率集成。",
+      "observationLabel": "受控结果为模拟观测；真实迁移另列日期和证据范围",
+      "viewerUrl": "studies/multicity/index.html",
+      "viewerHeight": 1150,
+      "resources": [
+        {
+          "label": "完整报告 · 全部图表与逐栋下载",
+          "url": "studies/multicity/index.html"
+        },
+        {
+          "label": "下一步：RGB＋点云＋屋面实例",
+          "url": "./next/"
+        }
+      ]
+    },
+    {
+      "id": "expanded",
+      "title": "多区域与多方法扩展",
+      "subtitle": "受控方法比较、补面侧实验与226栋真实观测",
+      "date": "2026-10-20",
+      "scope": "主实验64栋×12合成条件；补面侧实验16栋×6条件；Boston/DC五片区226栋真实生成和掩码诊断。",
+      "summary": "源验证预选局部图网络流程在受控留出降低限幅损失；真实14方法生成率相同，尚无美国精度收益证据。",
+      "reportUrl": "studies/expanded/index.html",
+      "figures": [
+        {
+          "url": "studies/expanded/figures/stages/comparison_test_37ad45e2caa6_v2.png",
+          "caption": "comparison_test_37ad45e2caa6_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_test_7bb1c49cbeab_v2.png",
+          "caption": "comparison_test_7bb1c49cbeab_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_test_a81a1adcb743_v2.png",
+          "caption": "comparison_test_a81a1adcb743_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_05ea51d6b5fb_v2.png",
+          "caption": "comparison_validation_05ea51d6b5fb_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_09f6a31e1aca_v2.png",
+          "caption": "comparison_validation_09f6a31e1aca_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_0dc3032dfb92_v2.png",
+          "caption": "comparison_validation_0dc3032dfb92_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_101b0fa19bef_v2.png",
+          "caption": "comparison_validation_101b0fa19bef_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_37ad45e2caa6_v2.png",
+          "caption": "comparison_validation_37ad45e2caa6_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_3ae1e03d822c_v2.png",
+          "caption": "comparison_validation_3ae1e03d822c_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_3cc4a72ad385.png",
+          "caption": "comparison_validation_3cc4a72ad385.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_6773e367b515_v2.png",
+          "caption": "comparison_validation_6773e367b515_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_7bb1c49cbeab_v2.png",
+          "caption": "comparison_validation_7bb1c49cbeab_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_869d59d60c9d_v2.png",
+          "caption": "comparison_validation_869d59d60c9d_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_a81a1adcb743_v2.png",
+          "caption": "comparison_validation_a81a1adcb743_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_ac9e06c7f507_v2.png",
+          "caption": "comparison_validation_ac9e06c7f507_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_ce7a2baa0267_v2.png",
+          "caption": "comparison_validation_ce7a2baa0267_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_d7439bee2477.png",
+          "caption": "comparison_validation_d7439bee2477.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/comparison_validation_f9020839b89f_v2.png",
+          "caption": "comparison_validation_f9020839b89f_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/stages/weighted_ransac_failure_posthoc.png",
+          "caption": "weighted_ransac_failure_posthoc.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+        },
+        {
+          "url": "studies/expanded/figures/real_native_generation.png",
+          "caption": "真实226栋×14方法的native生成情况；不是独立几何精度。"
+        },
+        {
+          "url": "studies/expanded/figures/test_completion_conditions.png",
+          "caption": "test_completion_conditions.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/expanded/figures/test_main_comparison.png",
+          "caption": "主受控留出方法比较：自动3DBAG教师，包含失败/缺覆盖10m罚分。"
+        },
+        {
+          "url": "studies/expanded/figures/test_paired_uncertainty.png",
+          "caption": "建筑配对的探索性不确定性诊断，不覆盖教师偏差或训练seed变异。"
+        },
+        {
+          "url": "studies/expanded/figures/validation_completion_conditions.png",
+          "caption": "validation_completion_conditions.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/expanded/figures/validation_data_and_corruption.png",
+          "caption": "validation_data_and_corruption.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/expanded/figures/validation_input_domain_shift.png",
+          "caption": "validation_input_domain_shift.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/expanded/figures/validation_main_comparison.png",
+          "caption": "validation_main_comparison.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/expanded/figures/validation_paired_uncertainty.png",
+          "caption": "validation_paired_uncertainty.png；原实验已生成图，适用范围见正式报告。"
+        }
+      ],
+      "downloads": [
+        {
+          "url": "studies/expanded/downloads/final_experiment_result.json",
+          "label": "final_experiment_result.json",
+          "download": true,
+          "bytes": 1569640,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/main_heldout_comparison.csv",
+          "label": "main_heldout_comparison.csv",
+          "download": true,
+          "bytes": 4238,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/completion_heldout_comparison.csv",
+          "label": "completion_heldout_comparison.csv",
+          "download": true,
+          "bytes": 1050,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/real_operational_comparison.csv",
+          "label": "real_operational_comparison.csv",
+          "download": true,
+          "bytes": 1476,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/实验报告.txt",
+          "label": "实验报告.txt",
+          "download": true,
+          "bytes": 21897,
+          "kind": "result_text"
+        },
+        {
+          "url": "studies/expanded/downloads/核心结论.txt",
+          "label": "核心结论.txt",
+          "download": true,
+          "bytes": 4569,
+          "kind": "result_text"
+        },
+        {
+          "url": "studies/expanded/downloads/方法说明.txt",
+          "label": "方法说明.txt",
+          "download": true,
+          "bytes": 5420,
+          "kind": "result_text"
+        },
+        {
+          "url": "studies/expanded/downloads/下一阶段DL设计_建议.txt",
+          "label": "下一阶段DL设计_建议.txt",
+          "download": true,
+          "bytes": 7447,
+          "kind": "result_text"
+        },
+        {
+          "url": "studies/expanded/downloads/evidence_synthesis_validation.json",
+          "label": "evidence_synthesis_validation.json",
+          "download": true,
+          "bytes": 80662,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/evidence_synthesis_test.json",
+          "label": "evidence_synthesis_test.json",
+          "download": true,
+          "bytes": 79101,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/plotted_validation_summary.json",
+          "label": "plotted_validation_summary.json",
+          "download": true,
+          "bytes": 16146,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/plotted_test_summary.json",
+          "label": "plotted_test_summary.json",
+          "download": true,
+          "bytes": 15225,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/semantic_source_calibration_summary.json",
+          "label": "semantic_source_calibration_summary.json",
+          "download": true,
+          "bytes": 11083,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/SSL_unique_point_diagnostics.json",
+          "label": "SSL_unique_point_diagnostics.json",
+          "download": true,
+          "bytes": 7113,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/method_selection.json",
+          "label": "method_selection.json",
+          "download": true,
+          "bytes": 47706,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/input_domain_shift.json",
+          "label": "input_domain_shift.json",
+          "download": true,
+          "bytes": 836901,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/completion_router_test_global_cls_result.json",
+          "label": "completion_router_test_global_cls_result.json",
+          "download": true,
+          "bytes": 3541,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/completion_router_test_graph_support_result.json",
+          "label": "completion_router_test_graph_support_result.json",
+          "download": true,
+          "bytes": 3586,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/completion_router_validation_global_cls_result.json",
+          "label": "completion_router_validation_global_cls_result.json",
+          "download": true,
+          "bytes": 3543,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/completion_router_validation_graph_support_result.json",
+          "label": "completion_router_validation_graph_support_result.json",
+          "download": true,
+          "bytes": 3592,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/completion_v2_test_result.json",
+          "label": "completion_v2_test_result.json",
+          "download": true,
+          "bytes": 7276,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/completion_v2_validation_result.json",
+          "label": "completion_v2_validation_result.json",
+          "download": true,
+          "bytes": 7251,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/completion_validation_result.json",
+          "label": "completion_validation_result.json",
+          "download": true,
+          "bytes": 7246,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/data_scale_ablation_result.json",
+          "label": "data_scale_ablation_result.json",
+          "download": true,
+          "bytes": 9173,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/height_only_control_result.json",
+          "label": "height_only_control_result.json",
+          "download": true,
+          "bytes": 3491,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/hybrid_test_geometry_result.json",
+          "label": "hybrid_test_geometry_result.json",
+          "download": true,
+          "bytes": 2712,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/hybrid_test_global_cls_result.json",
+          "label": "hybrid_test_global_cls_result.json",
+          "download": true,
+          "bytes": 2796,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/hybrid_test_graph_support_result.json",
+          "label": "hybrid_test_graph_support_result.json",
+          "download": true,
+          "bytes": 2820,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/hybrid_validation_geometry_result.json",
+          "label": "hybrid_validation_geometry_result.json",
+          "download": true,
+          "bytes": 2721,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/hybrid_validation_global_cls_result.json",
+          "label": "hybrid_validation_global_cls_result.json",
+          "download": true,
+          "bytes": 2797,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/hybrid_validation_graph_support_result.json",
+          "label": "hybrid_validation_graph_support_result.json",
+          "download": true,
+          "bytes": 2824,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/learned_quality_gate_training_result.json",
+          "label": "learned_quality_gate_training_result.json",
+          "download": true,
+          "bytes": 2074,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/learned_quality_test_result.json",
+          "label": "learned_quality_test_result.json",
+          "download": true,
+          "bytes": 3916,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/learned_quality_validation_result.json",
+          "label": "learned_quality_validation_result.json",
+          "download": true,
+          "bytes": 3918,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/quality_count_test_result.json",
+          "label": "quality_count_test_result.json",
+          "download": true,
+          "bytes": 2324,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/quality_count_validation_result.json",
+          "label": "quality_count_validation_result.json",
+          "download": true,
+          "bytes": 2328,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/relative_xyz_control_result.json",
+          "label": "relative_xyz_control_result.json",
+          "download": true,
+          "bytes": 3482,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/real/native_generation_summary.json",
+          "label": "native_generation_summary.json",
+          "download": true,
+          "bytes": 22500,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/expanded/downloads/real/real14_mask_change_summary.json.gz",
+          "label": "real14_mask_change_summary.json",
+          "download": true,
+          "bytes": 93816,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/expanded/downloads/real/source_classification_audit.json.gz",
+          "label": "source_classification_audit.json",
+          "download": true,
+          "bytes": 27714,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/expanded/downloads/real/source_classification_conclusion.txt",
+          "label": "source_classification_conclusion.txt",
+          "download": true,
+          "bytes": 1003,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/expanded/downloads/real/real14_native_outcome_audit.json.gz",
+          "label": "real14_native_outcome_audit.json",
+          "download": true,
+          "bytes": 25793,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/global_cls_s20261023.json.gz",
+          "label": "global_cls_s20261023.json",
+          "download": true,
+          "bytes": 2042,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/global_cls_s20261024.json.gz",
+          "label": "global_cls_s20261024.json",
+          "download": true,
+          "bytes": 2041,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/global_cls_s20261025.json.gz",
+          "label": "global_cls_s20261025.json",
+          "download": true,
+          "bytes": 2053,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/global_height_only_s20261023.json.gz",
+          "label": "global_height_only_s20261023.json",
+          "download": true,
+          "bytes": 1930,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/global_large_basic_s20261023.json.gz",
+          "label": "global_large_basic_s20261023.json",
+          "download": true,
+          "bytes": 2048,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/global_relative_xyz_s20261023.json.gz",
+          "label": "global_relative_xyz_s20261023.json",
+          "download": true,
+          "bytes": 2060,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/global_small_basic_s20261023.json.gz",
+          "label": "global_small_basic_s20261023.json",
+          "download": true,
+          "bytes": 2019,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/global_small_diverse_s20261023.json.gz",
+          "label": "global_small_diverse_s20261023.json",
+          "download": true,
+          "bytes": 2053,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_cls_s20261023.json.gz",
+          "label": "graph_cls_s20261023.json",
+          "download": true,
+          "bytes": 2025,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_cls_s20261024.json.gz",
+          "label": "graph_cls_s20261024.json",
+          "download": true,
+          "bytes": 2035,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_cls_s20261025.json.gz",
+          "label": "graph_cls_s20261025.json",
+          "download": true,
+          "bytes": 2003,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_normal_s20261023.json.gz",
+          "label": "graph_normal_s20261023.json",
+          "download": true,
+          "bytes": 2507,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_normal_s20261024.json.gz",
+          "label": "graph_normal_s20261024.json",
+          "download": true,
+          "bytes": 2508,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_normal_s20261025.json.gz",
+          "label": "graph_normal_s20261025.json",
+          "download": true,
+          "bytes": 2519,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_reweight_s20261023.json.gz",
+          "label": "graph_reweight_s20261023.json",
+          "download": true,
+          "bytes": 2028,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_reweight_s20261024.json.gz",
+          "label": "graph_reweight_s20261024.json",
+          "download": true,
+          "bytes": 2042,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_reweight_s20261025.json.gz",
+          "label": "graph_reweight_s20261025.json",
+          "download": true,
+          "bytes": 2054,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_balanced_s20261023.json.gz",
+          "label": "graph_support_balanced_s20261023.json",
+          "download": true,
+          "bytes": 2916,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_balanced_s20261024.json.gz",
+          "label": "graph_support_balanced_s20261024.json",
+          "download": true,
+          "bytes": 2935,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_balanced_s20261025.json.gz",
+          "label": "graph_support_balanced_s20261025.json",
+          "download": true,
+          "bytes": 2940,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_s20261023.json.gz",
+          "label": "graph_support_s20261023.json",
+          "download": true,
+          "bytes": 2918,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_s20261024.json.gz",
+          "label": "graph_support_s20261024.json",
+          "download": true,
+          "bytes": 2945,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_s20261025.json.gz",
+          "label": "graph_support_s20261025.json",
+          "download": true,
+          "bytes": 2928,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_cls_s20261023.json.gz",
+          "label": "global_cls_s20261023.json",
+          "download": true,
+          "bytes": 1866,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_cls_s20261024.json.gz",
+          "label": "global_cls_s20261024.json",
+          "download": true,
+          "bytes": 1868,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_cls_s20261025.json.gz",
+          "label": "global_cls_s20261025.json",
+          "download": true,
+          "bytes": 1847,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_height_only_s20261023.json.gz",
+          "label": "global_height_only_s20261023.json",
+          "download": true,
+          "bytes": 1806,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_large_basic_s20261023.json.gz",
+          "label": "global_large_basic_s20261023.json",
+          "download": true,
+          "bytes": 1877,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_relative_xyz_s20261023.json.gz",
+          "label": "global_relative_xyz_s20261023.json",
+          "download": true,
+          "bytes": 1861,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_small_basic_s20261023.json.gz",
+          "label": "global_small_basic_s20261023.json",
+          "download": true,
+          "bytes": 1907,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_small_diverse_s20261023.json.gz",
+          "label": "global_small_diverse_s20261023.json",
+          "download": true,
+          "bytes": 1879,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_cls_s20261023.json.gz",
+          "label": "graph_cls_s20261023.json",
+          "download": true,
+          "bytes": 1849,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_cls_s20261024.json.gz",
+          "label": "graph_cls_s20261024.json",
+          "download": true,
+          "bytes": 1849,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_cls_s20261025.json.gz",
+          "label": "graph_cls_s20261025.json",
+          "download": true,
+          "bytes": 1857,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_normal_s20261023.json.gz",
+          "label": "graph_normal_s20261023.json",
+          "download": true,
+          "bytes": 2234,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_normal_s20261024.json.gz",
+          "label": "graph_normal_s20261024.json",
+          "download": true,
+          "bytes": 2234,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_normal_s20261025.json.gz",
+          "label": "graph_normal_s20261025.json",
+          "download": true,
+          "bytes": 2249,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_reweight_s20261023.json.gz",
+          "label": "graph_reweight_s20261023.json",
+          "download": true,
+          "bytes": 1879,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_reweight_s20261024.json.gz",
+          "label": "graph_reweight_s20261024.json",
+          "download": true,
+          "bytes": 1861,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_reweight_s20261025.json.gz",
+          "label": "graph_reweight_s20261025.json",
+          "download": true,
+          "bytes": 1860,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_balanced_s20261023.json.gz",
+          "label": "graph_support_balanced_s20261023.json",
+          "download": true,
+          "bytes": 2603,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_balanced_s20261024.json.gz",
+          "label": "graph_support_balanced_s20261024.json",
+          "download": true,
+          "bytes": 2585,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_balanced_s20261025.json.gz",
+          "label": "graph_support_balanced_s20261025.json",
+          "download": true,
+          "bytes": 2632,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_s20261023.json.gz",
+          "label": "graph_support_s20261023.json",
+          "download": true,
+          "bytes": 2620,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_s20261024.json.gz",
+          "label": "graph_support_s20261024.json",
+          "download": true,
+          "bytes": 2578,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_s20261025.json.gz",
+          "label": "graph_support_s20261025.json",
+          "download": true,
+          "bytes": 2602,
+          "kind": "point_diagnostic"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_test_37ad45e2caa6_v2.json",
+          "label": "comparison_test_37ad45e2caa6_v2.json",
+          "download": true,
+          "bytes": 30280,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_test_7bb1c49cbeab_v2.json",
+          "label": "comparison_test_7bb1c49cbeab_v2.json",
+          "download": true,
+          "bytes": 52359,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_test_a81a1adcb743_v2.json",
+          "label": "comparison_test_a81a1adcb743_v2.json",
+          "download": true,
+          "bytes": 146895,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_05ea51d6b5fb_v2.json",
+          "label": "comparison_validation_05ea51d6b5fb_v2.json",
+          "download": true,
+          "bytes": 59403,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_09f6a31e1aca_v2.json",
+          "label": "comparison_validation_09f6a31e1aca_v2.json",
+          "download": true,
+          "bytes": 45199,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_0dc3032dfb92_v2.json",
+          "label": "comparison_validation_0dc3032dfb92_v2.json",
+          "download": true,
+          "bytes": 44901,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_101b0fa19bef_v2.json",
+          "label": "comparison_validation_101b0fa19bef_v2.json",
+          "download": true,
+          "bytes": 95816,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_37ad45e2caa6_v2.json",
+          "label": "comparison_validation_37ad45e2caa6_v2.json",
+          "download": true,
+          "bytes": 30403,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_3ae1e03d822c_v2.json",
+          "label": "comparison_validation_3ae1e03d822c_v2.json",
+          "download": true,
+          "bytes": 30230,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_3cc4a72ad385.json",
+          "label": "comparison_validation_3cc4a72ad385.json",
+          "download": true,
+          "bytes": 15117,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_6773e367b515_v2.json",
+          "label": "comparison_validation_6773e367b515_v2.json",
+          "download": true,
+          "bytes": 23038,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_7bb1c49cbeab_v2.json",
+          "label": "comparison_validation_7bb1c49cbeab_v2.json",
+          "download": true,
+          "bytes": 52595,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_869d59d60c9d_v2.json",
+          "label": "comparison_validation_869d59d60c9d_v2.json",
+          "download": true,
+          "bytes": 37828,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_a81a1adcb743_v2.json",
+          "label": "comparison_validation_a81a1adcb743_v2.json",
+          "download": true,
+          "bytes": 147679,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_ac9e06c7f507_v2.json",
+          "label": "comparison_validation_ac9e06c7f507_v2.json",
+          "download": true,
+          "bytes": 52137,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_ce7a2baa0267_v2.json",
+          "label": "comparison_validation_ce7a2baa0267_v2.json",
+          "download": true,
+          "bytes": 37523,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_d7439bee2477.json",
+          "label": "comparison_validation_d7439bee2477.json",
+          "download": true,
+          "bytes": 8139,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_f9020839b89f_v2.json",
+          "label": "comparison_validation_f9020839b89f_v2.json",
+          "download": true,
+          "bytes": 30381,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_test_37ad45e2caa6_v2.csv",
+          "label": "comparison_test_37ad45e2caa6_v2.csv",
+          "download": true,
+          "bytes": 2078,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_test_7bb1c49cbeab_v2.csv",
+          "label": "comparison_test_7bb1c49cbeab_v2.csv",
+          "download": true,
+          "bytes": 3099,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_test_a81a1adcb743_v2.csv",
+          "label": "comparison_test_a81a1adcb743_v2.csv",
+          "download": true,
+          "bytes": 7237,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_05ea51d6b5fb_v2.csv",
+          "label": "comparison_validation_05ea51d6b5fb_v2.csv",
+          "download": true,
+          "bytes": 3347,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_09f6a31e1aca_v2.csv",
+          "label": "comparison_validation_09f6a31e1aca_v2.csv",
+          "download": true,
+          "bytes": 2746,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_0dc3032dfb92_v2.csv",
+          "label": "comparison_validation_0dc3032dfb92_v2.csv",
+          "download": true,
+          "bytes": 2707,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_101b0fa19bef_v2.csv",
+          "label": "comparison_validation_101b0fa19bef_v2.csv",
+          "download": true,
+          "bytes": 4945,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_37ad45e2caa6_v2.csv",
+          "label": "comparison_validation_37ad45e2caa6_v2.csv",
+          "download": true,
+          "bytes": 2054,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_3ae1e03d822c_v2.csv",
+          "label": "comparison_validation_3ae1e03d822c_v2.csv",
+          "download": true,
+          "bytes": 2052,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_3cc4a72ad385.csv",
+          "label": "comparison_validation_3cc4a72ad385.csv",
+          "download": true,
+          "bytes": 1155,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_6773e367b515_v2.csv",
+          "label": "comparison_validation_6773e367b515_v2.csv",
+          "download": true,
+          "bytes": 1737,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_7bb1c49cbeab_v2.csv",
+          "label": "comparison_validation_7bb1c49cbeab_v2.csv",
+          "download": true,
+          "bytes": 3079,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_869d59d60c9d_v2.csv",
+          "label": "comparison_validation_869d59d60c9d_v2.csv",
+          "download": true,
+          "bytes": 2409,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_a81a1adcb743_v2.csv",
+          "label": "comparison_validation_a81a1adcb743_v2.csv",
+          "download": true,
+          "bytes": 7300,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_ac9e06c7f507_v2.csv",
+          "label": "comparison_validation_ac9e06c7f507_v2.csv",
+          "download": true,
+          "bytes": 3028,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_ce7a2baa0267_v2.csv",
+          "label": "comparison_validation_ce7a2baa0267_v2.csv",
+          "download": true,
+          "bytes": 2376,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_d7439bee2477.csv",
+          "label": "comparison_validation_d7439bee2477.csv",
+          "download": true,
+          "bytes": 861,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/comparison_validation_f9020839b89f_v2.csv",
+          "label": "comparison_validation_f9020839b89f_v2.csv",
+          "download": true,
+          "bytes": 2063,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_test_37ad45e2caa6.csv",
+          "label": "ridge3d_test_37ad45e2caa6.csv",
+          "download": true,
+          "bytes": 5415,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_test_7bb1c49cbeab.csv",
+          "label": "ridge3d_test_7bb1c49cbeab.csv",
+          "download": true,
+          "bytes": 9725,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_test_a81a1adcb743.csv",
+          "label": "ridge3d_test_a81a1adcb743.csv",
+          "download": true,
+          "bytes": 28047,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_test_all25_common_teacher_edges.csv",
+          "label": "ridge3d_test_all25_common_teacher_edges.csv",
+          "download": true,
+          "bytes": 4057,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_05ea51d6b5fb.csv",
+          "label": "ridge3d_validation_05ea51d6b5fb.csv",
+          "download": true,
+          "bytes": 10840,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_101b0fa19bef.csv",
+          "label": "ridge3d_validation_101b0fa19bef.csv",
+          "download": true,
+          "bytes": 17716,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_37ad45e2caa6.csv",
+          "label": "ridge3d_validation_37ad45e2caa6.csv",
+          "download": true,
+          "bytes": 5407,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_7bb1c49cbeab.csv",
+          "label": "ridge3d_validation_7bb1c49cbeab.csv",
+          "download": true,
+          "bytes": 9695,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_a81a1adcb743.csv",
+          "label": "ridge3d_validation_a81a1adcb743.csv",
+          "download": true,
+          "bytes": 27976,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_ac9e06c7f507.csv",
+          "label": "ridge3d_validation_ac9e06c7f507.csv",
+          "download": true,
+          "bytes": 9477,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_ce7a2baa0267.csv",
+          "label": "ridge3d_validation_ce7a2baa0267.csv",
+          "download": true,
+          "bytes": 6654,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_test_37ad45e2caa6_common_teacher_edge_summary.json",
+          "label": "ridge3d_test_37ad45e2caa6_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 34610,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_test_7bb1c49cbeab_common_teacher_edge_summary.json",
+          "label": "ridge3d_test_7bb1c49cbeab_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 53881,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_test_a81a1adcb743_common_teacher_edge_summary.json",
+          "label": "ridge3d_test_a81a1adcb743_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 137026,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_05ea51d6b5fb_common_teacher_edge_summary.json",
+          "label": "ridge3d_validation_05ea51d6b5fb_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 51800,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_101b0fa19bef_common_teacher_edge_summary.json",
+          "label": "ridge3d_validation_101b0fa19bef_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 83614,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_37ad45e2caa6_common_teacher_edge_summary.json",
+          "label": "ridge3d_validation_37ad45e2caa6_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 26422,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_7bb1c49cbeab_common_teacher_edge_summary.json",
+          "label": "ridge3d_validation_7bb1c49cbeab_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 45671,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_a81a1adcb743_common_teacher_edge_summary.json",
+          "label": "ridge3d_validation_a81a1adcb743_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 128772,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_ac9e06c7f507_common_teacher_edge_summary.json",
+          "label": "ridge3d_validation_ac9e06c7f507_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 45452,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_ce7a2baa0267_common_teacher_edge_summary.json",
+          "label": "ridge3d_validation_ce7a2baa0267_common_teacher_edge_summary.json",
+          "download": true,
+          "bytes": 3147,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_test_37ad45e2caa6_v2.txt",
+          "label": "results_test_37ad45e2caa6_v2.txt",
+          "download": true,
+          "bytes": 1299,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_test_7bb1c49cbeab_v2.txt",
+          "label": "results_test_7bb1c49cbeab_v2.txt",
+          "download": true,
+          "bytes": 1768,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_test_a81a1adcb743_v2.txt",
+          "label": "results_test_a81a1adcb743_v2.txt",
+          "download": true,
+          "bytes": 3780,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_05ea51d6b5fb_v2.txt",
+          "label": "results_validation_05ea51d6b5fb_v2.txt",
+          "download": true,
+          "bytes": 1908,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_09f6a31e1aca_v2.txt",
+          "label": "results_validation_09f6a31e1aca_v2.txt",
+          "download": true,
+          "bytes": 1618,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_0dc3032dfb92_v2.txt",
+          "label": "results_validation_0dc3032dfb92_v2.txt",
+          "download": true,
+          "bytes": 1607,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_101b0fa19bef_v2.txt",
+          "label": "results_validation_101b0fa19bef_v2.txt",
+          "download": true,
+          "bytes": 2670,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_37ad45e2caa6_v2.txt",
+          "label": "results_validation_37ad45e2caa6_v2.txt",
+          "download": true,
+          "bytes": 1305,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_3ae1e03d822c_v2.txt",
+          "label": "results_validation_3ae1e03d822c_v2.txt",
+          "download": true,
+          "bytes": 1295,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_3cc4a72ad385.txt",
+          "label": "results_validation_3cc4a72ad385.txt",
+          "download": true,
+          "bytes": 825,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_6773e367b515_v2.txt",
+          "label": "results_validation_6773e367b515_v2.txt",
+          "download": true,
+          "bytes": 1148,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_7bb1c49cbeab_v2.txt",
+          "label": "results_validation_7bb1c49cbeab_v2.txt",
+          "download": true,
+          "bytes": 1774,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_869d59d60c9d_v2.txt",
+          "label": "results_validation_869d59d60c9d_v2.txt",
+          "download": true,
+          "bytes": 1462,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_a81a1adcb743_v2.txt",
+          "label": "results_validation_a81a1adcb743_v2.txt",
+          "download": true,
+          "bytes": 3787,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_ac9e06c7f507_v2.txt",
+          "label": "results_validation_ac9e06c7f507_v2.txt",
+          "download": true,
+          "bytes": 1757,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_ce7a2baa0267_v2.txt",
+          "label": "results_validation_ce7a2baa0267_v2.txt",
+          "download": true,
+          "bytes": 1447,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_d7439bee2477.txt",
+          "label": "results_validation_d7439bee2477.txt",
+          "download": true,
+          "bytes": 684,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/results_validation_f9020839b89f_v2.txt",
+          "label": "results_validation_f9020839b89f_v2.txt",
+          "download": true,
+          "bytes": 1304,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_test_37ad45e2caa6_v2.csv.gz",
+          "label": "per_building_test_37ad45e2caa6_v2.csv",
+          "download": true,
+          "bytes": 388015,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_test_7bb1c49cbeab_v2.csv.gz",
+          "label": "per_building_test_7bb1c49cbeab_v2.csv",
+          "download": true,
+          "bytes": 542444,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_test_a81a1adcb743_v2.csv.gz",
+          "label": "per_building_test_a81a1adcb743_v2.csv",
+          "download": true,
+          "bytes": 1111553,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_05ea51d6b5fb_v2.csv.gz",
+          "label": "per_building_validation_05ea51d6b5fb_v2.csv",
+          "download": true,
+          "bytes": 717212,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_09f6a31e1aca_v2.csv.gz",
+          "label": "per_building_validation_09f6a31e1aca_v2.csv",
+          "download": true,
+          "bytes": 604895,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_0dc3032dfb92_v2.csv.gz",
+          "label": "per_building_validation_0dc3032dfb92_v2.csv",
+          "download": true,
+          "bytes": 610248,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_101b0fa19bef_v2.csv.gz",
+          "label": "per_building_validation_101b0fa19bef_v2.csv",
+          "download": true,
+          "bytes": 1064492,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_37ad45e2caa6_v2.csv.gz",
+          "label": "per_building_validation_37ad45e2caa6_v2.csv",
+          "download": true,
+          "bytes": 485898,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_3ae1e03d822c_v2.csv.gz",
+          "label": "per_building_validation_3ae1e03d822c_v2.csv",
+          "download": true,
+          "bytes": 494125,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_3cc4a72ad385.csv.gz",
+          "label": "per_building_validation_3cc4a72ad385.csv",
+          "download": true,
+          "bytes": 245606,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_6773e367b515_v2.csv.gz",
+          "label": "per_building_validation_6773e367b515_v2.csv",
+          "download": true,
+          "bytes": 401767,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_7bb1c49cbeab_v2.csv.gz",
+          "label": "per_building_validation_7bb1c49cbeab_v2.csv",
+          "download": true,
+          "bytes": 657690,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_869d59d60c9d_v2.csv.gz",
+          "label": "per_building_validation_869d59d60c9d_v2.csv",
+          "download": true,
+          "bytes": 546616,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_a81a1adcb743_v2.csv.gz",
+          "label": "per_building_validation_a81a1adcb743_v2.csv",
+          "download": true,
+          "bytes": 1314091,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_ac9e06c7f507_v2.csv.gz",
+          "label": "per_building_validation_ac9e06c7f507_v2.csv",
+          "download": true,
+          "bytes": 665675,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_ce7a2baa0267_v2.csv.gz",
+          "label": "per_building_validation_ce7a2baa0267_v2.csv",
+          "download": true,
+          "bytes": 553419,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_d7439bee2477.csv.gz",
+          "label": "per_building_validation_d7439bee2477.csv",
+          "download": true,
+          "bytes": 137944,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_validation_f9020839b89f_v2.csv.gz",
+          "label": "per_building_validation_f9020839b89f_v2.csv",
+          "download": true,
+          "bytes": 478911,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/per_building/per_building_test_a81a1adcb743_v2.json.gz",
+          "label": "per_building_test_a81a1adcb743_v2.json",
+          "download": true,
+          "bytes": 1650890,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/weighted_ransac_failure_posthoc.csv",
+          "label": "weighted_ransac_failure_posthoc.csv",
+          "download": true,
+          "bytes": 20162,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/expanded/downloads/reconstruction/weighted_ransac_failure_posthoc.json",
+          "label": "weighted_ransac_failure_posthoc.json",
+          "download": true,
+          "bytes": 109724,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/expanded/figures/real_native_generation.pdf",
+          "label": "real_native_generation.pdf",
+          "download": true,
+          "bytes": 21373,
+          "kind": "figure_pdf"
+        },
+        {
+          "url": "studies/expanded/figures/test_experiment_figures.pdf",
+          "label": "test_experiment_figures.pdf",
+          "download": true,
+          "bytes": 47716,
+          "kind": "figure_pdf"
+        },
+        {
+          "url": "studies/expanded/figures/validation_experiment_figures.pdf",
+          "label": "validation_experiment_figures.pdf",
+          "download": true,
+          "bytes": 52761,
+          "kind": "figure_pdf"
+        }
+      ],
+      "keyMetrics": [
+        {
+          "label": "主受控留出",
+          "value": 64,
+          "unit": "栋×12条件",
+          "detail": "源验证预选method=graph_support_mean3_residual"
+        },
+        {
+          "label": "预选方法限幅损失",
+          "value": "0.9345",
+          "unit": "m",
+          "detail": "raw=1.4471 m；不是通常成功屋顶MAE。"
+        },
+        {
+          "label": "真实观测",
+          "value": 226,
+          "unit": "栋×14方法",
+          "detail": "各方法223个LoD2输出、3个无几何；并未评独立屋面精度。"
+        }
+      ],
+      "findings": [
+        "局部点云分类是本轮受控任务的主要收益来源；复杂辅助头和集成的额外贡献尚不充分。",
+        "筛点与补面分别处理；选择性修补仍漏修部分稀疏/空洞样本。",
+        "真实光学/点云语义/SSL确有不同mask干预，但生成率和源区F1不能替代当地屋面精度。"
+      ],
+      "limitations": [
+        "自动3DBAG教师＋模拟污染是受控证据；美国真实区域没有被接受的独立同期屋面GT。",
+        "主native多数方法仅首seed；三seed点诊断不等于全部native三次重建。",
+        "真实区域包括适配、开发及未见观测区域，角色分开呈现；无标签曝光不等于独立验证。",
+        "跨轮地面与输入条件已变，不可直接横比数字归因。"
+      ],
+      "columns": [
+        "方法",
+        "建筑",
+        "槽位分母",
+        "限幅损失 (m)",
+        "相对raw差 (m)",
+        "clean损伤>2cm",
+        "LoD2生成",
+        "严格覆盖"
+      ],
+      "tableRows": [
+        [
+          "graph_support_mean3_hard",
+          "64",
+          "768",
+          "0.9274",
+          "-0.5196",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "graph_cls_mean3_hard",
+          "64",
+          "768",
+          "0.9325",
+          "-0.5146",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "graph_support_mean3_residual",
+          "64",
+          "768",
+          "0.9345",
+          "-0.5126",
+          "0",
+          "745",
+          "0.9691"
+        ],
+        [
+          "graph_support_mean3_guard",
+          "64",
+          "768",
+          "0.9346",
+          "-0.5124",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "residual_veto",
+          "64",
+          "768",
+          "0.9370",
+          "-0.5100",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "graph_support_balanced_hard",
+          "64",
+          "768",
+          "0.9393",
+          "-0.5077",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "graph_cls_hard",
+          "64",
+          "768",
+          "0.9398",
+          "-0.5073",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "graph_normal_hard",
+          "64",
+          "768",
+          "0.9421",
+          "-0.5049",
+          "0",
+          "745",
+          "0.9692"
+        ],
+        [
+          "graph_normal_guard",
+          "64",
+          "768",
+          "0.9436",
+          "-0.5035",
+          "0",
+          "745",
+          "0.9692"
+        ],
+        [
+          "geometry_support_guard",
+          "64",
+          "768",
+          "0.9495",
+          "-0.4975",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "graph_support_guard",
+          "64",
+          "768",
+          "0.9519",
+          "-0.4952",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "graph_support_hard",
+          "64",
+          "768",
+          "0.9520",
+          "-0.4951",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "graph_reweight_hard",
+          "64",
+          "768",
+          "0.9520",
+          "-0.4951",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "graph_support_mean3_abstain",
+          "64",
+          "768",
+          "0.9641",
+          "-0.4830",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "global_cls_hard",
+          "64",
+          "768",
+          "0.9892",
+          "-0.4578",
+          "1",
+          "745",
+          "0.9686"
+        ],
+        [
+          "global_small_diverse_hard",
+          "64",
+          "768",
+          "0.9904",
+          "-0.4567",
+          "1",
+          "745",
+          "0.9699"
+        ],
+        [
+          "global_relative_xyz_hard",
+          "64",
+          "768",
+          "1.0101",
+          "-0.4370",
+          "1",
+          "745",
+          "0.9699"
+        ],
+        [
+          "global_small_basic_hard",
+          "64",
+          "768",
+          "1.0235",
+          "-0.4235",
+          "1",
+          "745",
+          "0.9699"
+        ],
+        [
+          "global_height_only_hard",
+          "64",
+          "768",
+          "1.0334",
+          "-0.4137",
+          "0",
+          "745",
+          "0.9699"
+        ],
+        [
+          "global_large_basic_hard",
+          "64",
+          "768",
+          "1.0491",
+          "-0.3980",
+          "2",
+          "746",
+          "0.9712"
+        ],
+        [
+          "weighted_ransac_support",
+          "64",
+          "768",
+          "1.2990",
+          "-0.1481",
+          "30",
+          "742",
+          "0.9660"
+        ],
+        [
+          "observation_router_geometryfallback",
+          "64",
+          "768",
+          "1.4161",
+          "-0.0310",
+          "0",
+          "745",
+          "0.9695"
+        ],
+        [
+          "geometry",
+          "64",
+          "768",
+          "1.4198",
+          "-0.0272",
+          "1",
+          "745",
+          "0.9696"
+        ],
+        [
+          "observation_router_safe",
+          "64",
+          "768",
+          "1.4406",
+          "-0.0065",
+          "0",
+          "745",
+          "0.9688"
+        ],
+        [
+          "raw",
+          "64",
+          "768",
+          "1.4471",
+          "0.0000",
+          "0",
+          "745",
+          "0.9688"
+        ]
+      ],
+      "metricsDefinition": "逐栋宏平均的10m限幅垂直损失包含失败与缺覆盖罚分；每栋12条件配对；不是通常成功屋顶MAE。",
+      "primaryReportUrl": "studies/expanded/report.html",
+      "artifactCount": 216,
+      "totalBytes": 23840013,
+      "original_and_published_hashes_in": "studies/report_package_manifest.json",
+      "status": "complete",
+      "navLabel": "64栋受控 / 226栋真实",
+      "locationTag": "CONTROLLED / REAL TRANSFER",
+      "viewerTitle": "扩展实验：主比较、补面与真实生成",
+      "viewerNote": "打开完整报告可查看全部方法、12幅主图及逐栋结果下载。相同生成数量并不意味着重建几何相同或精度相同。",
+      "regionInfo": {
+        "name": "扩展方法",
+        "area": "荷兰受控 / 美国迁移",
+        "geo": "64栋主实验 · 226栋真实输入",
+        "description": "增加图网络、融合与补面候选，固定数据和重建条件逐项比较。",
+        "facts": [
+          [
+            "主实验",
+            "64栋 × 12污染条件"
+          ],
+          [
+            "真实",
+            "Boston / DC · 5瓦片"
+          ],
+          [
+            "方法",
+            "14个真实生成流程"
+          ]
+        ]
+      },
+      "number": 6,
+      "question": "主实验64栋×12合成条件；补面侧实验16栋×6条件；Boston/DC五片区226栋真实生成和掩码诊断。 逐栋宏平均的10m限幅垂直损失包含失败与缺覆盖罚分；每栋12条件配对；不是通常成功屋顶MAE。",
+      "metricNotes": [
+        "主实验64栋×12合成条件；补面侧实验16栋×6条件；Boston/DC五片区226栋真实生成和掩码诊断。",
+        "逐栋宏平均的10m限幅垂直损失包含失败与缺覆盖罚分；每栋12条件配对；不是通常成功屋顶MAE。"
+      ],
+      "tableNote": "各轮分母、损失与数据域不同，请只在同轮同条件比较。生成成功不是独立几何精度；三seed均值不等于概率集成。",
+      "observationLabel": "受控结果为模拟观测；真实迁移另列日期和证据范围",
+      "viewerUrl": "studies/expanded/index.html",
+      "viewerHeight": 1150,
+      "resources": [
+        {
+          "label": "完整报告 · 全部图表与逐栋下载",
+          "url": "studies/expanded/index.html"
+        },
+        {
+          "label": "下一步：RGB＋点云＋屋面实例",
+          "url": "./next/"
+        }
+      ]
+    },
+    {
+      "id": "scaling",
+      "title": "扩大训练数据与逐项模块",
+      "subtitle": "20,000教师建筑、26个模型实例、三seed与新城市测试",
+      "date": "2026-10-21",
+      "scope": "10源城市自动3DBAG教师；同12种模拟污染；两座新城市200栋native测试。另附20栋Leiden实测AHN5定性迁移探针。",
+      "summary": "固定源选单模型在受控新城市达到安全门槛；真实20栋仍显示屋顶支持点删除风险，需要真实配对和独立核查。",
+      "reportUrl": "studies/scaling/index.html",
+      "figures": [
+        {
+          "url": "studies/scaling/figures/source_data_composition.png",
+          "caption": "source_data_composition.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/real/qualitative_posthoc_4156_keep_removed.png",
+          "caption": "事后非随机高风险例4156：生产class6与删除行为，不是独立GT误删率。"
+        },
+        {
+          "url": "studies/scaling/real/qualitative_posthoc_4156_score.png",
+          "caption": "qualitative_posthoc_4156_score.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/real/pdok_rgb2023_contact_sheet.png",
+          "caption": "pdok_rgb2023_contact_sheet.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/figures/calibration_trajectories.png",
+          "caption": "calibration_trajectories.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/figures/data_scaling.png",
+          "caption": "嵌套训练规模与匹配更新预算；long额外训练不能只归因数据量。"
+        },
+        {
+          "url": "studies/scaling/figures/family_comparison.png",
+          "caption": "三seed分别重建的均值，与概率集成分开报告。"
+        },
+        {
+          "url": "studies/scaling/figures/reconstruction/test/full/graph_10000_s20261031/largest_clean_damage.png",
+          "caption": "largest_clean_damage.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/figures/reconstruction/test/full/graph_10000_s20261031/largest_damage.png",
+          "caption": "largest_damage.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/figures/reconstruction/test/full/graph_10000_s20261031/largest_improvement.png",
+          "caption": "largest_improvement.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/figures/reconstruction/test/full/graph_10000_s20261031/median_delta.png",
+          "caption": "median_delta.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/figures/reconstruction/test/full/graph_20000_long_s20261031/largest_clean_damage.png",
+          "caption": "largest_clean_damage.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/figures/reconstruction/test/full/graph_20000_long_s20261031/largest_damage.png",
+          "caption": "largest_damage.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/figures/reconstruction/test/full/graph_20000_long_s20261031/largest_improvement.png",
+          "caption": "largest_improvement.png；原实验已生成图，适用范围见正式报告。"
+        },
+        {
+          "url": "studies/scaling/figures/reconstruction/test/full/graph_20000_long_s20261031/median_delta.png",
+          "caption": "median_delta.png；原实验已生成图，适用范围见正式报告。"
+        }
+      ],
+      "downloads": [
+        {
+          "url": "studies/scaling/downloads/final_result.json",
+          "label": "final_result.json",
+          "download": true,
+          "bytes": 1126008,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/source_family_selection.json",
+          "label": "source_family_selection.json",
+          "download": true,
+          "bytes": 3933,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/source_data_composition.json",
+          "label": "source_data_composition.json",
+          "download": true,
+          "bytes": 114499,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/source_data_composition.txt",
+          "label": "source_data_composition.txt",
+          "download": true,
+          "bytes": 2479,
+          "kind": "result_text"
+        },
+        {
+          "url": "studies/scaling/downloads/核心结论.txt",
+          "label": "核心结论.txt",
+          "download": true,
+          "bytes": 686,
+          "kind": "result_text"
+        },
+        {
+          "url": "studies/scaling/downloads/training_initial_result.json",
+          "label": "training_initial_result.json",
+          "download": true,
+          "bytes": 182422,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/training_repeat_result.json",
+          "label": "training_repeat_result.json",
+          "download": true,
+          "bytes": 120996,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/validation_point_diagnostics.json",
+          "label": "validation_point_diagnostics.json",
+          "download": true,
+          "bytes": 230877,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/test_point_diagnostics.json",
+          "label": "test_point_diagnostics.json",
+          "download": true,
+          "bytes": 100139,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/mean3_integrity_validation.json",
+          "label": "mean3_integrity_validation.json",
+          "download": true,
+          "bytes": 4174,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/mean3_integrity_test.json",
+          "label": "mean3_integrity_test.json",
+          "download": true,
+          "bytes": 3751,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/inference_correction_amendment.json",
+          "label": "inference_correction_amendment.json",
+          "download": true,
+          "bytes": 6567,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/inference_correction_calibration_replay.json",
+          "label": "inference_correction_calibration_replay.json",
+          "download": true,
+          "bytes": 9065,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/inference_correction_source_forward_replay.json",
+          "label": "inference_correction_source_forward_replay.json",
+          "download": true,
+          "bytes": 9547,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/reconstruction/test_full_summary.json",
+          "label": "test_full_summary.json",
+          "download": true,
+          "bytes": 571785,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/reconstruction/validation_full_summary.json",
+          "label": "validation_full_summary.json",
+          "download": true,
+          "bytes": 812112,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/reconstruction/validation_screen_summary.json",
+          "label": "validation_screen_summary.json",
+          "download": true,
+          "bytes": 746296,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/geometry.json.gz",
+          "label": "geometry.json",
+          "download": true,
+          "bytes": 1303026,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/global_3500_s20261031.json.gz",
+          "label": "global_3500_s20261031.json",
+          "download": true,
+          "bytes": 740424,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/global_3500_s20261101.json.gz",
+          "label": "global_3500_s20261101.json",
+          "download": true,
+          "bytes": 741664,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/global_3500_s20261102.json.gz",
+          "label": "global_3500_s20261102.json",
+          "download": true,
+          "bytes": 740721,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_10000_mean3.json.gz",
+          "label": "graph_10000_mean3.json",
+          "download": true,
+          "bytes": 736939,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_10000_s20261031.json.gz",
+          "label": "graph_10000_s20261031.json",
+          "download": true,
+          "bytes": 737762,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_10000_s20261101.json.gz",
+          "label": "graph_10000_s20261101.json",
+          "download": true,
+          "bytes": 737453,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_10000_s20261102.json.gz",
+          "label": "graph_10000_s20261102.json",
+          "download": true,
+          "bytes": 736950,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_20000_long_mean3.json.gz",
+          "label": "graph_20000_long_mean3.json",
+          "download": true,
+          "bytes": 736458,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_20000_long_s20261031.json.gz",
+          "label": "graph_20000_long_s20261031.json",
+          "download": true,
+          "bytes": 737784,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_20000_long_s20261101.json.gz",
+          "label": "graph_20000_long_s20261101.json",
+          "download": true,
+          "bytes": 737899,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_20000_long_s20261102.json.gz",
+          "label": "graph_20000_long_s20261102.json",
+          "download": true,
+          "bytes": 737884,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_20000_s20261031.json.gz",
+          "label": "graph_20000_s20261031.json",
+          "download": true,
+          "bytes": 737918,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_20000_s20261101.json.gz",
+          "label": "graph_20000_s20261101.json",
+          "download": true,
+          "bytes": 738124,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_20000_s20261102.json.gz",
+          "label": "graph_20000_s20261102.json",
+          "download": true,
+          "bytes": 737534,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_3500_s20261031.json.gz",
+          "label": "graph_3500_s20261031.json",
+          "download": true,
+          "bytes": 737843,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_3500_s20261101.json.gz",
+          "label": "graph_3500_s20261101.json",
+          "download": true,
+          "bytes": 738005,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/graph_3500_s20261102.json.gz",
+          "label": "graph_3500_s20261102.json",
+          "download": true,
+          "bytes": 737311,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/test/full/raw.json.gz",
+          "label": "raw.json",
+          "download": true,
+          "bytes": 774819,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/geometry.json.gz",
+          "label": "geometry.json",
+          "download": true,
+          "bytes": 1303575,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/global_3500_s20261031.json.gz",
+          "label": "global_3500_s20261031.json",
+          "download": true,
+          "bytes": 745965,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/global_3500_s20261101.json.gz",
+          "label": "global_3500_s20261101.json",
+          "download": true,
+          "bytes": 746655,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/global_3500_s20261102.json.gz",
+          "label": "global_3500_s20261102.json",
+          "download": true,
+          "bytes": 746736,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_10000_mean3.json.gz",
+          "label": "graph_10000_mean3.json",
+          "download": true,
+          "bytes": 743213,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_10000_s20261031.json.gz",
+          "label": "graph_10000_s20261031.json",
+          "download": true,
+          "bytes": 742629,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_10000_s20261101.json.gz",
+          "label": "graph_10000_s20261101.json",
+          "download": true,
+          "bytes": 744644,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_10000_s20261102.json.gz",
+          "label": "graph_10000_s20261102.json",
+          "download": true,
+          "bytes": 743756,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_20000_long_mean3.json.gz",
+          "label": "graph_20000_long_mean3.json",
+          "download": true,
+          "bytes": 742418,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_20000_long_s20261031.json.gz",
+          "label": "graph_20000_long_s20261031.json",
+          "download": true,
+          "bytes": 744041,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_20000_long_s20261101.json.gz",
+          "label": "graph_20000_long_s20261101.json",
+          "download": true,
+          "bytes": 743772,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_20000_long_s20261102.json.gz",
+          "label": "graph_20000_long_s20261102.json",
+          "download": true,
+          "bytes": 744576,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_20000_s20261031.json.gz",
+          "label": "graph_20000_s20261031.json",
+          "download": true,
+          "bytes": 743755,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_20000_s20261101.json.gz",
+          "label": "graph_20000_s20261101.json",
+          "download": true,
+          "bytes": 744913,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_20000_s20261102.json.gz",
+          "label": "graph_20000_s20261102.json",
+          "download": true,
+          "bytes": 744332,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_3500_s20261031.json.gz",
+          "label": "graph_3500_s20261031.json",
+          "download": true,
+          "bytes": 743798,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_3500_s20261101.json.gz",
+          "label": "graph_3500_s20261101.json",
+          "download": true,
+          "bytes": 743604,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/graph_3500_s20261102.json.gz",
+          "label": "graph_3500_s20261102.json",
+          "download": true,
+          "bytes": 744033,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/full/raw.json.gz",
+          "label": "raw.json",
+          "download": true,
+          "bytes": 779804,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/geometry.json.gz",
+          "label": "geometry.json",
+          "download": true,
+          "bytes": 326413,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/global_3500_s20261031.json.gz",
+          "label": "global_3500_s20261031.json",
+          "download": true,
+          "bytes": 186788,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_attention_s20261031.json.gz",
+          "label": "graph_10000_attention_s20261031.json",
+          "download": true,
+          "bytes": 186827,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_consistency_s20261031.json.gz",
+          "label": "graph_10000_consistency_s20261031.json",
+          "download": true,
+          "bytes": 186741,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_density_s20261031.json.gz",
+          "label": "graph_10000_density_s20261031.json",
+          "download": true,
+          "bytes": 186294,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_geometry_s20261031.json.gz",
+          "label": "graph_10000_geometry_s20261031.json",
+          "download": true,
+          "bytes": 186764,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_masked_s20261031.json.gz",
+          "label": "graph_10000_masked_s20261031.json",
+          "download": true,
+          "bytes": 186838,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_multiscale_s20261031.json.gz",
+          "label": "graph_10000_multiscale_s20261031.json",
+          "download": true,
+          "bytes": 186605,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_normal_s20261031.json.gz",
+          "label": "graph_10000_normal_s20261031.json",
+          "download": true,
+          "bytes": 187075,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_residual_s20261031.json.gz",
+          "label": "graph_10000_residual_s20261031.json",
+          "download": true,
+          "bytes": 186774,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_reweight_s20261031.json.gz",
+          "label": "graph_10000_reweight_s20261031.json",
+          "download": true,
+          "bytes": 186777,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_s20261031.json.gz",
+          "label": "graph_10000_s20261031.json",
+          "download": true,
+          "bytes": 186473,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_strongaug_s20261031.json.gz",
+          "label": "graph_10000_strongaug_s20261031.json",
+          "download": true,
+          "bytes": 186529,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_10000_wide_s20261031.json.gz",
+          "label": "graph_10000_wide_s20261031.json",
+          "download": true,
+          "bytes": 186748,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_20000_long_s20261031.json.gz",
+          "label": "graph_20000_long_s20261031.json",
+          "download": true,
+          "bytes": 186604,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_20000_s20261031.json.gz",
+          "label": "graph_20000_s20261031.json",
+          "download": true,
+          "bytes": 186558,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/graph_3500_s20261031.json.gz",
+          "label": "graph_3500_s20261031.json",
+          "download": true,
+          "bytes": 187177,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/evaluation/validation/screen/raw.json.gz",
+          "label": "raw.json",
+          "download": true,
+          "bytes": 194199,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/geometry.json.gz",
+          "label": "geometry.json",
+          "download": true,
+          "bytes": 80081,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/global_3500_s20261031.json.gz",
+          "label": "global_3500_s20261031.json",
+          "download": true,
+          "bytes": 81426,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/global_3500_s20261101.json.gz",
+          "label": "global_3500_s20261101.json",
+          "download": true,
+          "bytes": 81227,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/global_3500_s20261102.json.gz",
+          "label": "global_3500_s20261102.json",
+          "download": true,
+          "bytes": 81297,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_10000_mean3.json.gz",
+          "label": "graph_10000_mean3.json",
+          "download": true,
+          "bytes": 81676,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_10000_s20261031.json.gz",
+          "label": "graph_10000_s20261031.json",
+          "download": true,
+          "bytes": 81788,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_10000_s20261101.json.gz",
+          "label": "graph_10000_s20261101.json",
+          "download": true,
+          "bytes": 81814,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_10000_s20261102.json.gz",
+          "label": "graph_10000_s20261102.json",
+          "download": true,
+          "bytes": 81864,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_20000_long_mean3.json.gz",
+          "label": "graph_20000_long_mean3.json",
+          "download": true,
+          "bytes": 81677,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_20000_long_s20261031.json.gz",
+          "label": "graph_20000_long_s20261031.json",
+          "download": true,
+          "bytes": 81743,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_20000_long_s20261101.json.gz",
+          "label": "graph_20000_long_s20261101.json",
+          "download": true,
+          "bytes": 81654,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_20000_long_s20261102.json.gz",
+          "label": "graph_20000_long_s20261102.json",
+          "download": true,
+          "bytes": 81776,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_20000_s20261031.json.gz",
+          "label": "graph_20000_s20261031.json",
+          "download": true,
+          "bytes": 81697,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_20000_s20261101.json.gz",
+          "label": "graph_20000_s20261101.json",
+          "download": true,
+          "bytes": 81649,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_20000_s20261102.json.gz",
+          "label": "graph_20000_s20261102.json",
+          "download": true,
+          "bytes": 81802,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_3500_s20261031.json.gz",
+          "label": "graph_3500_s20261031.json",
+          "download": true,
+          "bytes": 81760,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_3500_s20261101.json.gz",
+          "label": "graph_3500_s20261101.json",
+          "download": true,
+          "bytes": 81760,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/graph_3500_s20261102.json.gz",
+          "label": "graph_3500_s20261102.json",
+          "download": true,
+          "bytes": 81730,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/test/full/raw.json.gz",
+          "label": "raw.json",
+          "download": true,
+          "bytes": 49440,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/geometry.json.gz",
+          "label": "geometry.json",
+          "download": true,
+          "bytes": 81371,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/global_3500_s20261031.json.gz",
+          "label": "global_3500_s20261031.json",
+          "download": true,
+          "bytes": 82863,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/global_3500_s20261101.json.gz",
+          "label": "global_3500_s20261101.json",
+          "download": true,
+          "bytes": 82915,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/global_3500_s20261102.json.gz",
+          "label": "global_3500_s20261102.json",
+          "download": true,
+          "bytes": 82849,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_10000_mean3.json.gz",
+          "label": "graph_10000_mean3.json",
+          "download": true,
+          "bytes": 82873,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_10000_s20261031.json.gz",
+          "label": "graph_10000_s20261031.json",
+          "download": true,
+          "bytes": 83259,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_10000_s20261101.json.gz",
+          "label": "graph_10000_s20261101.json",
+          "download": true,
+          "bytes": 82659,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_10000_s20261102.json.gz",
+          "label": "graph_10000_s20261102.json",
+          "download": true,
+          "bytes": 82947,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_20000_long_mean3.json.gz",
+          "label": "graph_20000_long_mean3.json",
+          "download": true,
+          "bytes": 82703,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_20000_long_s20261031.json.gz",
+          "label": "graph_20000_long_s20261031.json",
+          "download": true,
+          "bytes": 82844,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_20000_long_s20261101.json.gz",
+          "label": "graph_20000_long_s20261101.json",
+          "download": true,
+          "bytes": 82981,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_20000_long_s20261102.json.gz",
+          "label": "graph_20000_long_s20261102.json",
+          "download": true,
+          "bytes": 82842,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_20000_s20261031.json.gz",
+          "label": "graph_20000_s20261031.json",
+          "download": true,
+          "bytes": 82916,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_20000_s20261101.json.gz",
+          "label": "graph_20000_s20261101.json",
+          "download": true,
+          "bytes": 82995,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_20000_s20261102.json.gz",
+          "label": "graph_20000_s20261102.json",
+          "download": true,
+          "bytes": 82961,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_3500_s20261031.json.gz",
+          "label": "graph_3500_s20261031.json",
+          "download": true,
+          "bytes": 83274,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_3500_s20261101.json.gz",
+          "label": "graph_3500_s20261101.json",
+          "download": true,
+          "bytes": 83060,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/graph_3500_s20261102.json.gz",
+          "label": "graph_3500_s20261102.json",
+          "download": true,
+          "bytes": 83085,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/full/raw.json.gz",
+          "label": "raw.json",
+          "download": true,
+          "bytes": 50228,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/geometry.json.gz",
+          "label": "geometry.json",
+          "download": true,
+          "bytes": 21425,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/global_3500_s20261031.json.gz",
+          "label": "global_3500_s20261031.json",
+          "download": true,
+          "bytes": 21725,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_attention_s20261031.json.gz",
+          "label": "graph_10000_attention_s20261031.json",
+          "download": true,
+          "bytes": 21764,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_consistency_s20261031.json.gz",
+          "label": "graph_10000_consistency_s20261031.json",
+          "download": true,
+          "bytes": 21693,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_density_s20261031.json.gz",
+          "label": "graph_10000_density_s20261031.json",
+          "download": true,
+          "bytes": 21734,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_geometry_s20261031.json.gz",
+          "label": "graph_10000_geometry_s20261031.json",
+          "download": true,
+          "bytes": 21718,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_masked_s20261031.json.gz",
+          "label": "graph_10000_masked_s20261031.json",
+          "download": true,
+          "bytes": 21709,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_multiscale_s20261031.json.gz",
+          "label": "graph_10000_multiscale_s20261031.json",
+          "download": true,
+          "bytes": 21698,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_normal_s20261031.json.gz",
+          "label": "graph_10000_normal_s20261031.json",
+          "download": true,
+          "bytes": 21746,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_residual_s20261031.json.gz",
+          "label": "graph_10000_residual_s20261031.json",
+          "download": true,
+          "bytes": 21700,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_reweight_s20261031.json.gz",
+          "label": "graph_10000_reweight_s20261031.json",
+          "download": true,
+          "bytes": 21680,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_s20261031.json.gz",
+          "label": "graph_10000_s20261031.json",
+          "download": true,
+          "bytes": 21734,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_strongaug_s20261031.json.gz",
+          "label": "graph_10000_strongaug_s20261031.json",
+          "download": true,
+          "bytes": 21707,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_10000_wide_s20261031.json.gz",
+          "label": "graph_10000_wide_s20261031.json",
+          "download": true,
+          "bytes": 21706,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_20000_long_s20261031.json.gz",
+          "label": "graph_20000_long_s20261031.json",
+          "download": true,
+          "bytes": 21689,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_20000_s20261031.json.gz",
+          "label": "graph_20000_s20261031.json",
+          "download": true,
+          "bytes": 21693,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/graph_3500_s20261031.json.gz",
+          "label": "graph_3500_s20261031.json",
+          "download": true,
+          "bytes": 21783,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/per_building/paired/validation/screen/raw.json.gz",
+          "label": "raw.json",
+          "download": true,
+          "bytes": 13575,
+          "kind": "per_building"
+        },
+        {
+          "url": "studies/scaling/downloads/oversight/final_numeric_review.json",
+          "label": "final_numeric_review.json",
+          "download": true,
+          "bytes": 27716,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/真实点云定性探针_中文说明.txt",
+          "label": "真实点云定性探针_中文说明.txt",
+          "download": true,
+          "bytes": 1829,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/qualitative_class_decision_appendix.json",
+          "label": "qualitative_class_decision_appendix.json",
+          "download": true,
+          "bytes": 47059,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/qualitative_support_domain_diagnostic.json",
+          "label": "qualitative_support_domain_diagnostic.json",
+          "download": true,
+          "bytes": 127750,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/class_semantics_source.json",
+          "label": "class_semantics_source.json",
+          "download": true,
+          "bytes": 2869,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/class_semantics_source.txt",
+          "label": "class_semantics_source.txt",
+          "download": true,
+          "bytes": 778,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/independent_input_audit.json",
+          "label": "independent_input_audit.json",
+          "download": true,
+          "bytes": 18285,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/optical_2023_feasibility.json",
+          "label": "optical_2023_feasibility.json",
+          "download": true,
+          "bytes": 3771,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/completion_v3.json",
+          "label": "completion_v3.json",
+          "download": true,
+          "bytes": 6116,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/qualitative_viewer_export_audit.json",
+          "label": "qualitative_viewer_export_audit.json",
+          "download": true,
+          "bytes": 10125,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/qualitative_viewer_browser_audit.json",
+          "label": "qualitative_viewer_browser_audit.json",
+          "download": true,
+          "bytes": 8384,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/qualitative_posthoc_4156_screenshot_audit.json",
+          "label": "qualitative_posthoc_4156_screenshot_audit.json",
+          "download": true,
+          "bytes": 2551,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/qualitative_result.json",
+          "label": "qualitative_result.json",
+          "download": true,
+          "bytes": 17167,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/recipe_freeze.json",
+          "label": "recipe_freeze.json",
+          "download": true,
+          "bytes": 33607,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/input_group_audit.json",
+          "label": "input_group_audit.json",
+          "download": true,
+          "bytes": 7935,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/result_independent_audit.json",
+          "label": "result_independent_audit.json",
+          "download": true,
+          "bytes": 16607,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/real/deployment_source_binding_timing_correction.json",
+          "label": "deployment_source_binding_timing_correction.json",
+          "download": true,
+          "bytes": 1533,
+          "kind": "evidence"
+        },
+        {
+          "url": "studies/scaling/figures/calibration_trajectories.pdf",
+          "label": "calibration_trajectories.pdf",
+          "download": true,
+          "bytes": 20507,
+          "kind": "figure_pdf"
+        },
+        {
+          "url": "studies/scaling/figures/data_scaling.pdf",
+          "label": "data_scaling.pdf",
+          "download": true,
+          "bytes": 17015,
+          "kind": "figure_pdf"
+        },
+        {
+          "url": "studies/scaling/figures/family_comparison.pdf",
+          "label": "family_comparison.pdf",
+          "download": true,
+          "bytes": 15029,
+          "kind": "figure_pdf"
+        },
+        {
+          "url": "studies/scaling/downloads/family_summary.csv",
+          "label": "family_summary.csv",
+          "download": true,
+          "bytes": 1527,
+          "kind": "aggregate"
+        },
+        {
+          "url": "studies/scaling/real/raw_quality_preview_dl_qualitative.html",
+          "label": "真实20栋完整离线3D＋RGB＋DL预览",
+          "download": false,
+          "bytes": 6381093,
+          "kind": "interactive"
+        }
+      ],
+      "keyMetrics": [
+        {
+          "label": "训练教师",
+          "value": 20000,
+          "unit": "栋",
+          "detail": "自动teacher＋模拟观测；不是实测点云训练数量。"
+        },
+        {
+          "label": "完成模型实例",
+          "value": 26,
+          "unit": "个",
+          "detail": "主规模/预算及获准模块复验，选型不使用测试城市。"
+        },
+        {
+          "label": "源选单模型限幅损失",
+          "value": "0.5123",
+          "unit": "m",
+          "detail": "raw=1.0940 m；含失败/缺覆盖罚分。"
+        },
+        {
+          "label": "原生LoD2生成",
+          "value": "2369/2400",
+          "unit": "槽",
+          "detail": "200栋×12条件；生成不等于水密或完整有效性认证。"
+        }
+      ],
+      "findings": [
+        "源预选graph_20000_long_s20261031在新城市同污染机制下满足逐栋clean保护、失败与覆盖门槛。",
+        "同源训练teacher与模拟点云不能证明美国或真实AHN点云精度，也未证明标注节省。",
+        "附加真实AHN5探针的本栋足迹内class6仍有3492/37199记录被删除；它是生产分类风险诊断，非独立误删率。"
+      ],
+      "limitations": [
+        "Automatic3DBAG Roofer-lineage teachers, not independent human GT",
+        "Synthetic point observations, no real AHN/3DEP training claim",
+        "Exact teacher roof-projection footprint and teacher ground are common priors; registration and footprint errors are not tested",
+        "No optical CNN or spatial image fusion tested in this ladder",
+        "No US precision, annotation saving, new architecture or SOTA claim",
+        "Only screened modules were repeated; screening50 is part of source200, so module selection is exploratory.",
+        "Three-seed family means average separately reconstructed errors, not the probability-mean ensemble.",
+        "Source/final use identical12 simulated corruption mechanisms; new cities do not establish real-point-cloud accuracy.",
+        "Native LoD2 status and edge-incidence diagnostics do not certify watertightness or complete solid validity.",
+        "Terrain input changed before this round; old-round absolute scores cannot be subtracted to attribute model improvement.",
+        "Bootstrap intervals omit teacher bias, new-city uncertainty, multiple-comparison selection effects and population seed uncertainty.",
+        "真实20栋来自source训练城市的固定ID，teacher与AHN同源；三partition均值是新的真实推理适配，分数未作真实域校准。",
+        "RGB2023只用于质量预览，原prepared optical_features8仍缺失，主实验没有RGB输入。"
+      ],
+      "columns": [
+        "Family",
+        "源平均损失 (m)",
+        "新城平均损失 (m)",
+        "seed数",
+        "新城seed SD (m)",
+        "平均覆盖",
+        "共同域3D边F1"
+      ],
+      "tableRows": [
+        [
+          "raw",
+          "1.2461",
+          "1.0940",
+          "1",
+          "—",
+          "0.9854",
+          "0.5412"
+        ],
+        [
+          "geometry",
+          "1.2518",
+          "1.1041",
+          "1",
+          "—",
+          "0.9841",
+          "0.5450"
+        ],
+        [
+          "graph_10000",
+          "0.6863",
+          "0.5153",
+          "3",
+          "0.0033",
+          "0.9869",
+          "0.6603"
+        ],
+        [
+          "global_3500",
+          "0.7121",
+          "0.5536",
+          "3",
+          "0.0041",
+          "0.9861",
+          "0.6491"
+        ],
+        [
+          "graph_3500",
+          "0.6842",
+          "0.5161",
+          "3",
+          "0.0017",
+          "0.9869",
+          "0.6586"
+        ],
+        [
+          "graph_20000",
+          "0.6837",
+          "0.5147",
+          "3",
+          "0.0003",
+          "0.9869",
+          "0.6601"
+        ],
+        [
+          "graph_20000_long",
+          "0.6833",
+          "0.5128",
+          "3",
+          "0.0007",
+          "0.9869",
+          "0.6619"
+        ]
+      ],
+      "metricsDefinition": "Family行是分别重建后seed损失均值；源选部署单模型另列。不能与概率均值集成或其他轮的绝对指标混同。",
+      "primaryReportUrl": "studies/scaling/report.html",
+      "artifactCount": 168,
+      "totalBytes": 59597969,
+      "original_and_published_hashes_in": "studies/report_package_manifest.json",
+      "status": "complete",
+      "navLabel": "20,000训练 / 200栋原生3D",
+      "locationTag": "10 SOURCE CITIES / 2 FRESH CITIES",
+      "viewerTitle": "逐栋检查：教师、原始基线与筛点后屋面",
+      "viewerNote": "200栋 × 12条件 × 19流程，按需加载全部原生屋面和原始XYZ。这里是教师驱动的合成观测，没有对应真实RGB。点击上方“真实20栋”检查AHN5原始点云、RGB和误删风险。",
+      "viewerUrl": "./native/",
+      "viewerKind": "native",
+      "viewerHeight": 1800,
+      "regionInfo": {
+        "name": "规模与真实域",
+        "area": "Groningen / Maastricht",
+        "geo": "独立城市受控测试 · Leiden真实探针",
+        "description": "两万栋扩大训练，再用真实点云检查迁移失效。独立城市受控改善与真实精度分开判断。",
+        "facts": [
+          [
+            "训练",
+            "10城市 · 20,000自动教师"
+          ],
+          [
+            "原生测试",
+            "200栋 × 12条件 × 19流程"
+          ],
+          [
+            "真实探针",
+            "Leiden · 20栋已见训练ID"
+          ]
+        ]
+      },
+      "number": 7,
+      "question": "10源城市自动3DBAG教师；同12种模拟污染；两座新城市200栋native测试。另附20栋Leiden实测AHN5定性迁移探针。 Family行是分别重建后seed损失均值；源选部署单模型另列。不能与概率均值集成或其他轮的绝对指标混同。",
+      "metricNotes": [
+        "10源城市自动3DBAG教师；同12种模拟污染；两座新城市200栋native测试。另附20栋Leiden实测AHN5定性迁移探针。",
+        "Family行是分别重建后seed损失均值；源选部署单模型另列。不能与概率均值集成或其他轮的绝对指标混同。"
+      ],
+      "tableNote": "各轮分母、损失与数据域不同，请只在同轮同条件比较。生成成功不是独立几何精度；三seed均值不等于概率集成。",
+      "observationLabel": "受控结果为模拟观测；真实迁移另列日期和证据范围",
+      "resources": [
+        {
+          "label": "完整报告 · 全部图表与逐栋下载",
+          "url": "studies/scaling/index.html"
+        },
+        {
+          "label": "真实20栋 · RGB与保留/删除点",
+          "url": "studies/scaling/real/raw_quality_preview_dl_qualitative.html"
+        },
+        {
+          "label": "下一步：RGB＋点云＋屋面实例",
+          "url": "./next/"
+        }
+      ]
     }
-  ]
+  ],
+  "defaultChapter": "scaling",
+  "publicationDate": "2026-10-21"
 }

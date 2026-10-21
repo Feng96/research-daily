@@ -1,0 +1,9 @@
+AHN5官方分类语义核实
+
+官方来源：https://www.ahn.nl/eerste-deel-van-ahn-5-is-beschikbaar
+发布：2023-12-22（不是本批点云采集日期）
+
+AHN官方说明：AHN4将整个建筑归为class6；AHN5则仅将屋顶归为该建筑类别，其余建筑部分归为overig（其他）。
+因此本批AHN5的class6具有明确屋顶生产分类语义，删除class6应作为屋顶支持点损失风险检查，不能只当作一般建筑分类；但仍不是独立人工GT，不能称已证实误删率。class1并非树木GT；该新闻未把overig明确映射到数字1，不能仅凭这篇新闻作更强的数字分类映射声明。
+
+既有v3预览、推理结果、completion和中文readout原字节未变；本说明不调整模型、阈值、分数或mask。

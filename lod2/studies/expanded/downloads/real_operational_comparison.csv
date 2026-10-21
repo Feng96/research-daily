@@ -1,0 +1,15 @@
+method,fixed_denominator,native_lod2_generated,native_lod1_fallback,all_status_counts,independent_accuracy_evaluated
+raw,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+geometry,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+legacy_image,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+teacher_global_hard,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+teacher_support_hard,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+teacher_support_abstain,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+semantic2_point,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+semantic2_late,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+semantic2_late_aug,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+semantic2_gated,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+semantic2_gated_ssl,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+semantic2_gated_ssl_guard,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+teacher_graph_cls_hard,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False
+teacher_relative_xyz_hard,226,223,0,"{""native_lod2_generated"": 223, ""native_no_geometry"": 3}",False

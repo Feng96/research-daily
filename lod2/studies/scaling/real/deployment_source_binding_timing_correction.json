@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-21T08:37:37.232051+00:00",
+  "corrects_receipt": "paired_real_feasibility/qualitative_dl/deployment_source_binding.json",
+  "receipt_sha256": "132600ab39fbe63253d7892ad3fdfbdbc7775f791dca6164108aca2f5c2a0cbc",
+  "correction": "The status string in that new sidecar incorrectly says before_qualitative_GPU. Its own qualitative_result_already_present=true records that this sidecar was written after the run. It is deployment identity metadata, not a new pre-inference freeze.",
+  "actual_before_inference_freezes": [
+    "recipe_freeze.json",
+    "implementation_freeze.json",
+    "oversight/real20_qualitative_prefit_review.json"
+  ],
+  "source_selected_identity_supplied_by_root_before_run": true,
+  "inference_code_or_recipe_changed_after_freeze": false,
+  "viewer_export_code_frozen_in_implementation_receipt_before_results": true,
+  "postrun_audit_does_not_change_points_scores_masks_or_cutoff": true,
+  "_publication": {
+    "original_source_sha256": "4aea2129b5fb8d012cebd42389ed20d968c6106feb8d34eea642ea6b7859905e",
+    "original_source": "source:scaling/paired_real_feasibility/qualitative_dl/deployment_source_binding_timing_correction.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

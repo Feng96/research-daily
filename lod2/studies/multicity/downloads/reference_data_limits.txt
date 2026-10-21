@@ -1,0 +1,76 @@
+Government building mesh audit and controlled-experiment candidates
+
+Replay (read-only sources; all outputs stay in this directory):
+  sbatch mesh_audit/run_audit.sbatch
+or run audit_meshes.py then finalize_meshes.py with the GIS PYTHONPATH above.
+
+training_manifest.json is incremental while audit_complete=false. Do not freeze
+training splits until audit_complete=true and split_group has been finalized.
+The audit does not create a split, sample synthetic points, or train any model.
+
+Boston: local OBJ XY + [731100,2902900] US survey feet, EPSG2249 to EPSG26986.
+Z is NAVD88 US survey feet according to official documentation, converted by
+1200/3937. No additional 0.34-degree rotation. Ground is catalog Gnd_El_Ft,
+not mesh minimum: model bottoms can penetrate terrain.
+Source documentation: https://maps.bostonplans.org/3d/3D_Data_Documentation.pdf
+Archives: https://maps.bostonplans.org/3d/Bos3d_BldgModels_20251204_OBJ/
+Most current nonflat candidates in these two downloaded tiles have catalog LoD
+1.5, not LoD2. The geometry, rather than that label, motivates the controlled
+roof task. This does not upgrade them to a certified LoD2 dataset. Mostly 2011
+photogrammetry; model/edit/export dates are not acquisition dates.
+
+Philadelphia: public FileGDB has WGS84 XY but unknown physical Z units/datum.
+GDB ZScale/ZUnits describe storage precision, not independently verified metres.
+Official metadata has blank coordinate-system/altitude detail and blank lineage:
+https://www.pasda.psu.edu/uci/FullMetadataDisplay.aspx?file=Philadelphia_Building_3DModels.xml
+Only dimensionless per-axis bbox geometry is allowed for controlled training.
+This changes aspect ratios, slopes and angles. Do not pool physical normal,
+slope, height, or metre accuracy metrics with Boston. Dataset publication label
+2015 is not a verified per-building observation epoch. The downloaded data cover
+only central Philadelphia, not the whole city.
+
+No authoritative semantic RoofSurface labels were found. roof_triangles are a
+mesh-derived upper-envelope proxy: nonvertical triangles (slope <=85 degrees),
+four barycentric interior probes all within tolerance of the highest mesh
+surface. Flat roofs are preserved; occluded/partly occluded triangles are not
+promoted to roof labels. Adjacent coplanar triangles are grouped before treating
+their boundaries as structure: raw triangulation edges are not roof ridges.
+This proxy may still include exposed sloped architectural surfaces and must not
+be described as human roof-face GT. The selection is geometry-driven and does
+not inspect any learning/test outcomes.
+
+NPZ interface:
+  Boston triangles_m and roof_triangles: [N,3,3], absolute EPSG26986 XY metres,
+      NAVD88 Z metres; not local/centered. full_triangles same frame.
+  Philadelphia triangles_dimensionless and roof_triangles: [N,3,3], each source
+      axis normalized independently to its full-model bounding box.
+      full_triangles_projectedXY_rawZ preserves projected XY and unknown raw Z.
+  roof_source_face: [N], original polygon/triangle face index.
+  roof_plane_id: [N], connected coplanar upper-envelope patch id.
+  full_source_face: source face index for each full triangulated surface.
+  full_component_id/roof_component_id: vertex-welded source shell component.
+      Stable string component identities and parent binding are in manifest.
+  upper_envelope_mask/ambiguous_upper_mask: masks over full_triangles.
+JSON files preserve original polygon rings (including holes) and metadata.
+Manifest footprint_candidate is the roof upper-envelope projection in WORLD
+projected XY even for Philadelphia, not its normalized training coordinates.
+
+Stable identities and leakage protection:
+  source_id/parent_building_id bind every face, disconnected shell and future
+  noisy/augmented/sample realization of a model to the same group. Source archive
+  and original-geometry SHA256 are recorded; world geometry fingerprint is
+  coordinate-aware, so identical architectural shapes elsewhere do not merge.
+  Final split_group unions parent records whose world roof footprints are within
+  0.25 metres, conservatively keeping connected row houses together. Freeze
+  spatial groups before augmentation, and do not relax adjacency after seeing
+  validation losses. Boston pitched candidates come from a single tile; random
+  triangle or point splits are invalid geographic generalization tests.
+
+Topology checks report edge incidence after vertex welding and optional existing
+vertex collinear noding. Closed edge incidence is necessary but does not verify
+self-intersections, winding consistency, nonintersecting shells, or certified
+solid validity. Unclosed source meshes are explicitly flagged, not repaired.
+
+All meshes are historical government reference geometry of unverified accuracy,
+not certified independent measurement GT. All future mesh-sampled points/noise
+must be called simulated controls, never real 3DEP or NAIP observations.

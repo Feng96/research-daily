@@ -1,0 +1,122 @@
+{
+  "created_utc": "2026-10-21T08:34:30.482504+00:00",
+  "protocol_sha256": "88b0d89f7a545268a847856a78ec99f154da8beb932dda1ab41a324f0247ac7f",
+  "screen_selection_sha256": "c650fdd967e1710d8bfae525874b311fbd4ac6788f4bca2e7dc5b0e43165f0e3",
+  "full_summary_path": "source:scaling/reports/source_family_selection_input.json",
+  "full_summary_sha256": "d495cd9c7d9d42bd85698a8aaede3121f8e5430c02d10d3a3431324815cfc1db",
+  "families": {
+    "graph_10000": {
+      "mean_seed_primary_loss_m": 0.6862826073372316,
+      "seed_losses_m": [
+        0.6827365911378697,
+        0.6906299176115966,
+        0.6854813132622283
+      ],
+      "all_seeds_eligible": false,
+      "seed_methods": [
+        "graph_10000_s20261031",
+        "graph_10000_s20261101",
+        "graph_10000_s20261102"
+      ]
+    },
+    "global_3500": {
+      "mean_seed_primary_loss_m": 0.7120967465401565,
+      "seed_losses_m": [
+        0.7069286461589127,
+        0.7090558385164445,
+        0.7203057549451123
+      ],
+      "all_seeds_eligible": false,
+      "seed_methods": [
+        "global_3500_s20261031",
+        "global_3500_s20261101",
+        "global_3500_s20261102"
+      ]
+    },
+    "graph_3500": {
+      "mean_seed_primary_loss_m": 0.6841846025805974,
+      "seed_losses_m": [
+        0.685665998054385,
+        0.686270475491283,
+        0.6806173341961245
+      ],
+      "all_seeds_eligible": false,
+      "seed_methods": [
+        "graph_3500_s20261031",
+        "graph_3500_s20261101",
+        "graph_3500_s20261102"
+      ]
+    },
+    "graph_20000": {
+      "mean_seed_primary_loss_m": 0.6836554078550795,
+      "seed_losses_m": [
+        0.6821102340316907,
+        0.6874072009785682,
+        0.6814487885549796
+      ],
+      "all_seeds_eligible": false,
+      "seed_methods": [
+        "graph_20000_s20261031",
+        "graph_20000_s20261101",
+        "graph_20000_s20261102"
+      ]
+    },
+    "graph_20000_long": {
+      "mean_seed_primary_loss_m": 0.683252810209552,
+      "seed_losses_m": [
+        0.6811221276108099,
+        0.6873147655755872,
+        0.6813215374422588
+      ],
+      "all_seeds_eligible": true,
+      "seed_methods": [
+        "graph_20000_long_s20261031",
+        "graph_20000_long_s20261101",
+        "graph_20000_long_s20261102"
+      ]
+    }
+  },
+  "eligible_family_order": [
+    "graph_20000_long"
+  ],
+  "source_selected_family": "graph_20000_long",
+  "eligible_baselines": [
+    "raw"
+  ],
+  "source_selected_baseline": "raw",
+  "primary_deployment_seed": 20261031,
+  "ensemble_families": [
+    "graph_10000",
+    "graph_20000_long"
+  ],
+  "primary_method": "graph_20000_long_s20261031",
+  "fixed_final_methods": [
+    "raw",
+    "geometry",
+    "graph_10000_s20261031",
+    "graph_10000_s20261101",
+    "graph_10000_s20261102",
+    "global_3500_s20261031",
+    "global_3500_s20261101",
+    "global_3500_s20261102",
+    "graph_3500_s20261031",
+    "graph_3500_s20261101",
+    "graph_3500_s20261102",
+    "graph_20000_s20261031",
+    "graph_20000_s20261101",
+    "graph_20000_s20261102",
+    "graph_20000_long_s20261031",
+    "graph_20000_long_s20261101",
+    "graph_20000_long_s20261102",
+    "graph_10000_mean3",
+    "graph_20000_long_mean3"
+  ],
+  "interpretation": "Rank families by mean of three separately reconstructed seeds; no best-seed selection. Ensembles are extra inference budget and separate comparisons.",
+  "final_labels_used": false,
+  "_publication": {
+    "original_source_sha256": "645f41e5b04f418d7155e816705699a883135b0ce6011069b086f8ed847ce99b",
+    "original_source": "source:scaling/reports/source_family_selection.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

@@ -1,0 +1,2746 @@
+{
+  "split": "validation",
+  "methods": [
+    "raw",
+    "geometry",
+    "global_cls_hard",
+    "graph_cls_hard",
+    "graph_reweight_hard",
+    "graph_normal_hard",
+    "graph_support_balanced_hard",
+    "graph_support_hard",
+    "graph_normal_guard",
+    "graph_support_guard",
+    "geometry_support_guard",
+    "weighted_ransac_support",
+    "residual_veto"
+  ],
+  "fixed_buildings": 80,
+  "fixed_logical_pairs": 12480,
+  "metric": "building-macro strict nativeLoD2 vertical loss capped10m; failures/fallback/missing=10m",
+  "reference": "automatic 3DBAG teachers, synthetic observations; not independent measured roof GT",
+  "diagnostic_version": 2,
+  "normal_plane_junction": "planeorientation-heightmatch withoutXY; secondaryplaneXYintersection separate; junctionF1 is2Dprojectionbuffer, not3Dridgeaccuracy; sourcecoplanargroups nothumanrooflabels",
+  "secondary_XY_plane_overlap_used_for_selection": false,
+  "support_diagnostic": "distance<=1m to a true sampled roof input; evaluation-only, includes density effects",
+  "bootstrap_unit": "physical building; all12corruptions are averaged within building before bootstrap",
+  "source_rows_sha256": "97c2250260de7c20c302224eeaa5b5f38abeef1e568e0b54c334bf39303c3493",
+  "summaries": [
+    {
+      "method": "raw",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 1.297975456835917,
+      "paired_primary_delta_vs_raw_m": 0.0,
+      "paired_building_bootstrap95_m": [
+        0.0,
+        0.0
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9764629154491548,
+      "any_roof_coverage_macro": 0.9764629154491548,
+      "any_roof_conditional_mae_macro_m": 1.1024968568870144,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 10.884009911617447,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 925,
+      "activation_clouds": 0,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 1.0229166666666667,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.7845282028007826,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.7896912577785266,
+      "plane_XY_intersection_precision_secondary_macro": 0.6838475986449165,
+      "plane_XY_intersection_recall_secondary_macro": 0.6821518812333995,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.5378793835054547,
+      "observed_support_capped_loss_macro_m": 0.995836688335851,
+      "missing_support_capped_loss_macro_m": 3.861606790877469,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0344100000000141",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000186",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000320",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000403",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000792",
+          0.0
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0344100000000141",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000186",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000320",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000403",
+          0.0
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000792",
+          0.0
+        ]
+      ]
+    },
+    {
+      "method": "geometry",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 1.2755693424884242,
+      "paired_primary_delta_vs_raw_m": -0.02240611434749234,
+      "paired_building_bootstrap95_m": [
+        -0.05218517279945153,
+        0.00013405756194366278
+      ],
+      "clean_paired_harm_m": 2.676735629815754e-05,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9784625128027161,
+      "any_roof_coverage_macro": 0.9784625128027161,
+      "any_roof_conditional_mae_macro_m": 1.0973278250156597,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 10.767598292789092,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 931,
+      "activation_clouds": 536,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 1.0041666666666667,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.7882544784242179,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.7895859070073018,
+      "plane_XY_intersection_precision_secondary_macro": 0.6852339387677018,
+      "plane_XY_intersection_recall_secondary_macro": 0.6850502850024736,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.5412846548279766,
+      "observed_support_capped_loss_macro_m": 0.9675565153872234,
+      "missing_support_capped_loss_macro_m": 3.887386113417852,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -0.7787381843975597
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357271",
+          -0.3469356597486719
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004144",
+          -0.24047233872742738
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000002064",
+          -0.20727808517821533
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -0.1717497716916897
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000357284",
+          0.21705105052192922
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004132",
+          0.15267645554590126
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004044",
+          0.13845986975150687
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000001122",
+          0.12340565316083858
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000022970",
+          0.10710902674590705
+        ]
+      ]
+    },
+    {
+      "method": "global_cls_hard",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.7532377466014263,
+      "paired_primary_delta_vs_raw_m": -0.5447377102344907,
+      "paired_building_bootstrap95_m": [
+        -0.5893423607385178,
+        -0.49775428475925626
+      ],
+      "clean_paired_harm_m": 0.0010128752468995634,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_conditional_mae_macro_m": 0.5568184457168354,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.788107806983726,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 934,
+      "activation_clouds": 539,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.83125,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9328183136670406,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8346925534304319,
+      "plane_XY_intersection_precision_secondary_macro": 0.7797218616678528,
+      "plane_XY_intersection_recall_secondary_macro": 0.7795918243326457,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6212210897786015,
+      "observed_support_capped_loss_macro_m": 0.5876626845157319,
+      "missing_support_capped_loss_macro_m": 1.9594889883854665,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.1660478237190113
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.0182627568005576
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -0.9559605243127695
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357271",
+          -0.9263685704609879
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000002064",
+          -0.8899922856679456
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          0.0063509751714348195
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.05938253273523186
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004132",
+          -0.17333314223445076
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.18074348335343546
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.1913390401973991
+        ]
+      ]
+    },
+    {
+      "method": "graph_cls_hard",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.7001120822072369,
+      "paired_primary_delta_vs_raw_m": -0.59786337462868,
+      "paired_building_bootstrap95_m": [
+        -0.6436118756477295,
+        -0.5527557135969987
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9784625128027161,
+      "any_roof_coverage_macro": 0.9784625128027161,
+      "any_roof_conditional_mae_macro_m": 0.50400836318865,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.496491744053941,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 934,
+      "activation_clouds": 559,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.8427083333333333,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9593340145029531,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8393772227263568,
+      "plane_XY_intersection_precision_secondary_macro": 0.7895640256110078,
+      "plane_XY_intersection_recall_secondary_macro": 0.7893635889621776,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6241973350051967,
+      "observed_support_capped_loss_macro_m": 0.5662080762897067,
+      "missing_support_capped_loss_macro_m": 1.7829491141546947,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.165630364209626
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.149755805132498
+        ],
+        [
+          "NL.IMBAG.Pand.0546100000022504",
+          -1.0698063707233902
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.0184015250495824
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000002064",
+          -0.9868279541905132
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          -0.048877282397026135
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.0750693127828823
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.198309919290064
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.2543496792980316
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357284",
+          -0.2562907261492835
+        ]
+      ]
+    },
+    {
+      "method": "graph_reweight_hard",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.7034561417566703,
+      "paired_primary_delta_vs_raw_m": -0.5945193150792465,
+      "paired_building_bootstrap95_m": [
+        -0.6420513592601512,
+        -0.5457586220230941
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9774514833909513,
+      "any_roof_coverage_macro": 0.9774514833909513,
+      "any_roof_conditional_mae_macro_m": 0.495912900247802,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.4404011893688065,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 932,
+      "activation_clouds": 559,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.8489583333333334,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9636291918712341,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8405708536897288,
+      "plane_XY_intersection_precision_secondary_macro": 0.7903040761367528,
+      "plane_XY_intersection_recall_secondary_macro": 0.7890903778996474,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6218840395550481,
+      "observed_support_capped_loss_macro_m": 0.5654220458561964,
+      "missing_support_capped_loss_macro_m": 1.7944828549930458,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.1655647021786977
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.1503281532233067
+        ],
+        [
+          "NL.IMBAG.Pand.0546100000022504",
+          -1.0696201891449295
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.0183661546733938
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357271",
+          -0.9517837625878247
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0503100000004638",
+          0.053566604362928004
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          -0.03473433688580627
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.07928908413383744
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.19803755274218693
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.254279111054513
+        ]
+      ]
+    },
+    {
+      "method": "graph_normal_hard",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.7054336343529727,
+      "paired_primary_delta_vs_raw_m": -0.5925418224829443,
+      "paired_building_bootstrap95_m": [
+        -0.6392486580863541,
+        -0.5502972330465241
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9785249018887854,
+      "any_roof_coverage_macro": 0.9785249018887854,
+      "any_roof_conditional_mae_macro_m": 0.5134161564721919,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.532663640590535,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 935,
+      "activation_clouds": 558,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.8447916666666667,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9605192019644687,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8406871360383649,
+      "plane_XY_intersection_precision_secondary_macro": 0.7888804228998276,
+      "plane_XY_intersection_recall_secondary_macro": 0.7887486803823329,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6213634837717786,
+      "observed_support_capped_loss_macro_m": 0.5693946737927619,
+      "missing_support_capped_loss_macro_m": 1.796653501999167,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.1656427364071476
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.138068620831572
+        ],
+        [
+          "NL.IMBAG.Pand.0546100000022504",
+          -1.0695368712232916
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.01840004882634
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357271",
+          -0.9491693048161599
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          -0.048654505241749836
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.07580981483933692
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.19837621124129165
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.2443995631584878
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357284",
+          -0.2795668469153026
+        ]
+      ]
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.7026482724185427,
+      "paired_primary_delta_vs_raw_m": -0.595327184417374,
+      "paired_building_bootstrap95_m": [
+        -0.6414815262127279,
+        -0.5501941646840326
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_conditional_mae_macro_m": 0.5055493488699554,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.506055504273589,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 935,
+      "activation_clouds": 561,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.8489583333333334,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9622137284322488,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8411703645904628,
+      "plane_XY_intersection_precision_secondary_macro": 0.7891280981758315,
+      "plane_XY_intersection_recall_secondary_macro": 0.7889983684749324,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6221291756667665,
+      "observed_support_capped_loss_macro_m": 0.5625154340661557,
+      "missing_support_capped_loss_macro_m": 1.8103369338219044,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.1652288085245206
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.1560343030095848
+        ],
+        [
+          "NL.IMBAG.Pand.0546100000022504",
+          -1.081228514856609
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.0183647886561125
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357271",
+          -0.9556364985045652
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          -0.04879742192965166
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.09139810457496626
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.1937325454558445
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.2536715379949918
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357284",
+          -0.2800200988423784
+        ]
+      ]
+    },
+    {
+      "method": "graph_support_hard",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.7027222937566908,
+      "paired_primary_delta_vs_raw_m": -0.595253163079226,
+      "paired_building_bootstrap95_m": [
+        -0.6376166327253423,
+        -0.5519697132267202
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_conditional_mae_macro_m": 0.5075650630752939,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.557415142987548,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 935,
+      "activation_clouds": 561,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.8427083333333333,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9581861981438486,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8411203208236624,
+      "plane_XY_intersection_precision_secondary_macro": 0.788697113371014,
+      "plane_XY_intersection_recall_secondary_macro": 0.7885662695360423,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6222786433184747,
+      "observed_support_capped_loss_macro_m": 0.5664519055266025,
+      "missing_support_capped_loss_macro_m": 1.79923889350238,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.1650913844219175
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.129925606358228
+        ],
+        [
+          "NL.IMBAG.Pand.0546100000022504",
+          -1.0645321991027423
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.0183095613489976
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357271",
+          -0.9458707928059512
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          -0.04379953533400354
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.15542202378534695
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.19625302711348636
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.25370292098803177
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000281947",
+          -0.2597748650446415
+        ]
+      ]
+    },
+    {
+      "method": "graph_normal_guard",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.7111391956405408,
+      "paired_primary_delta_vs_raw_m": -0.586836261195376,
+      "paired_building_bootstrap95_m": [
+        -0.633613118651592,
+        -0.5433277581541369
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_conditional_mae_macro_m": 0.5199794431510157,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.721425015599459,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 934,
+      "activation_clouds": 558,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.85,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9569133357210102,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8395037448338414,
+      "plane_XY_intersection_precision_secondary_macro": 0.7860033852662587,
+      "plane_XY_intersection_recall_secondary_macro": 0.7858699619999139,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6187746568802379,
+      "observed_support_capped_loss_macro_m": 0.5716814871429826,
+      "missing_support_capped_loss_macro_m": 1.8234052795299516,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.1655063596273563
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.1362139175600408
+        ],
+        [
+          "NL.IMBAG.Pand.0546100000022504",
+          -1.0644658075003717
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.018419646111916
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000002064",
+          -1.0111759689251925
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          -0.04689180535474869
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.17304241477052343
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.19836271140175735
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.20351679614904386
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357284",
+          -0.25637299803010066
+        ]
+      ]
+    },
+    {
+      "method": "graph_support_guard",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.7044417017001708,
+      "paired_primary_delta_vs_raw_m": -0.5935337551357461,
+      "paired_building_bootstrap95_m": [
+        -0.6378285362159835,
+        -0.5494955433798149
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_conditional_mae_macro_m": 0.5089934187519217,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.594910320627045,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 933,
+      "activation_clouds": 558,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.834375,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9563383261094527,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8410383957102289,
+      "plane_XY_intersection_precision_secondary_macro": 0.7874125813102456,
+      "plane_XY_intersection_recall_secondary_macro": 0.7872813596179756,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6231675522190007,
+      "observed_support_capped_loss_macro_m": 0.5678929595171441,
+      "missing_support_capped_loss_macro_m": 1.8025300500502273,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.1655063596273563
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.120910163108974
+        ],
+        [
+          "NL.IMBAG.Pand.0546100000022504",
+          -1.07489833924079
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.018419646111916
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000002064",
+          -1.0146161757701515
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          -0.04661927749647593
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.13608840962342747
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.19660420239780685
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.2541629276354637
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357284",
+          -0.256705561759972
+        ]
+      ]
+    },
+    {
+      "method": "geometry_support_guard",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.7226703106503941,
+      "paired_primary_delta_vs_raw_m": -0.5753051461855228,
+      "paired_building_bootstrap95_m": [
+        -0.6206260810453144,
+        -0.5283535896897587
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_conditional_mae_macro_m": 0.53161290270805,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.833675600134688,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 936,
+      "activation_clouds": 559,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.8385416666666666,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9511546361470102,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8382329712970303,
+      "plane_XY_intersection_precision_secondary_macro": 0.7855660224607774,
+      "plane_XY_intersection_recall_secondary_macro": 0.7854365819290046,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6191648227962784,
+      "observed_support_capped_loss_macro_m": 0.5746502158079687,
+      "missing_support_capped_loss_macro_m": 1.8697237261122075,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.1655174818706462
+        ],
+        [
+          "NL.IMBAG.Pand.0546100000022504",
+          -1.064228335965853
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.018426707072779
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000002064",
+          -1.0081104224762347
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.0062085522861972
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          -0.04722228544361671
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.060586726601410956
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.1544852421023565
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001879",
+          -0.15848921700142807
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.25403826403004065
+        ]
+      ]
+    },
+    {
+      "method": "weighted_ransac_support",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 1.0395614367516621,
+      "paired_primary_delta_vs_raw_m": -0.2584140200842547,
+      "paired_building_bootstrap95_m": [
+        -0.3442456503021743,
+        -0.16454393196275618
+      ],
+      "clean_paired_harm_m": 0.27098542907693624,
+      "clean_gate_le_20mm": false,
+      "strict_native_roof_coverage_macro": 0.9743808801496548,
+      "any_roof_coverage_macro": 0.9743808801496548,
+      "any_roof_conditional_mae_macro_m": 0.8161689596333539,
+      "conditional_mae_building_clouds_with_values": 936,
+      "normal_error_conditional_macro_deg": 11.743285949614881,
+      "native_lod2_success_clouds": 936,
+      "topology_edge_pass_clouds": 922,
+      "activation_clouds": 878,
+      "fallback_clouds": 42,
+      "plane_count_absolute_error_macro": 1.5302083333333334,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.957696048709306,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.7143573806641936,
+      "plane_XY_intersection_precision_secondary_macro": 0.6867358203234512,
+      "plane_XY_intersection_recall_secondary_macro": 0.6866228316462902,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.44688794105551183,
+      "observed_support_capped_loss_macro_m": 0.8889873513510428,
+      "missing_support_capped_loss_macro_m": 2.4285266219364305,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.157655244542511
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.0924833009539416
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.0216708811327073
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001423",
+          -0.8010963216323862
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000002064",
+          -0.7767355275498499
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0344100000000141",
+          0.9736280282001708
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004132",
+          0.6830434521762051
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000243363",
+          0.49601503485503934
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          0.4614881939090292
+        ],
+        [
+          "NL.IMBAG.Pand.0344100000000186",
+          0.45348018725467226
+        ]
+      ]
+    },
+    {
+      "method": "residual_veto",
+      "fixed_buildings": 80,
+      "cases_per_building": 12,
+      "logical_cloud_denominator": 960,
+      "primary_capped_loss_10m_macro": 0.6961681044873284,
+      "paired_primary_delta_vs_raw_m": -0.6018073523485885,
+      "paired_building_bootstrap95_m": [
+        -0.64561321620228,
+        -0.5568904768407439
+      ],
+      "clean_paired_harm_m": 0.0,
+      "clean_gate_le_20mm": true,
+      "strict_native_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_coverage_macro": 0.9785475468163215,
+      "any_roof_conditional_mae_macro_m": 0.49952651631241995,
+      "conditional_mae_building_clouds_with_values": 940,
+      "normal_error_conditional_macro_deg": 7.551859336811835,
+      "native_lod2_success_clouds": 940,
+      "topology_edge_pass_clouds": 935,
+      "activation_clouds": 561,
+      "fallback_clouds": 0,
+      "plane_count_absolute_error_macro": 0.85,
+      "orientation_height_match_area_precision_diagnostic_macro": 0.9610967446726458,
+      "orientation_height_match_area_recall_diagnostic_macro": 0.8400651991941385,
+      "plane_XY_intersection_precision_secondary_macro": 0.7895582418895075,
+      "plane_XY_intersection_recall_secondary_macro": 0.7894262583592355,
+      "roof_junction_2D_projection_buffer_f1_diagnostic_macro": 0.6229621000947618,
+      "observed_support_capped_loss_macro_m": 0.5616347155881127,
+      "missing_support_capped_loss_macro_m": 1.787736711580776,
+      "route_counts": {},
+      "best_buildings": [
+        [
+          "NL.IMBAG.Pand.0392100000001417",
+          -1.1650913844219175
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001811",
+          -1.1396485450532008
+        ],
+        [
+          "NL.IMBAG.Pand.0546100000022504",
+          -1.0645321991027423
+        ],
+        [
+          "NL.IMBAG.Pand.0392100000001468",
+          -1.0183095613489976
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000357271",
+          -0.9458825404338699
+        ]
+      ],
+      "worst_buildings": [
+        [
+          "NL.IMBAG.Pand.0599100000175549",
+          -0.04379953533400354
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004389",
+          -0.19827044563796567
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000209522",
+          -0.21041364932220866
+        ],
+        [
+          "NL.IMBAG.Pand.0503100000004320",
+          -0.25370292098803177
+        ],
+        [
+          "NL.IMBAG.Pand.0599100000281947",
+          -0.2597748650446369
+        ]
+      ]
+    }
+  ],
+  "per_case": [
+    {
+      "method": "raw",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "raw",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 2.2122546144294395,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 2.266428196071847,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 77
+    },
+    {
+      "method": "raw",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 2.1219592897853206,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 2.1383274809817436,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4531994480420229,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4585619649908076,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "raw",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.28725592010956336,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.2829538568249586,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.1534550661275254,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 3.191775905613839,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.17893775992847422,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1729033423860742,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "raw",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "raw",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.8734441803483484,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.8743179606978462,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "raw",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.6767778722941402,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.974363160396603,
+      "any_roof_conditional_mae_macro_m": 0.4490697106445333,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 72
+    },
+    {
+      "method": "raw",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "geometry",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10882009885070454,
+      "paired_delta_vs_raw_m": 2.676735629815754e-05,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.10270902837370147,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "geometry",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 2.230114982203466,
+      "paired_delta_vs_raw_m": 0.017860367774026383,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 2.283344633150535,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 78
+    },
+    {
+      "method": "geometry",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 2.121861876065659,
+      "paired_delta_vs_raw_m": -9.741371966144746e-05,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 2.1382300672620826,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4542163200044368,
+      "paired_delta_vs_raw_m": 0.001016871962413883,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4595794604559867,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 78
+    },
+    {
+      "method": "geometry",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.29428912599465396,
+      "paired_delta_vs_raw_m": 0.0070332058850905155,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.28998621672194286,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.2966203338780911,
+      "paired_delta_vs_raw_m": -0.013840088417310487,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.29074636357840083,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.218466319717043,
+      "paired_delta_vs_raw_m": 0.06501125358951762,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 3.2508873527362803,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "geometry",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.19305682049521894,
+      "paired_delta_vs_raw_m": 0.01411906056674474,
+      "strict_coverage_macro": 0.9983583286393387,
+      "any_roof_conditional_mae_macro_m": 0.17730186875758303,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5868813613865352,
+      "paired_delta_vs_raw_m": 0.004759669869639654,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.584906121848084,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "geometry",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.8739706603872726,
+      "paired_delta_vs_raw_m": 0.0005264800389240896,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.8748220219710887,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "geometry",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.31148832521854913,
+      "paired_delta_vs_raw_m": -0.36528954707559114,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.30848482186213627,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "geometry",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10980620674130592,
+      "paired_delta_vs_raw_m": 0.0010128752468995634,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.10369513626430286,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5049026324935664,
+      "paired_delta_vs_raw_m": -1.7073519819358733,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5009019215492592,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4738969547319069,
+      "paired_delta_vs_raw_m": -1.6480623350534134,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.46898830663666746,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.45247621377085984,
+      "paired_delta_vs_raw_m": -0.0007232342711631073,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.45783873071964454,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.27401720124432877,
+      "paired_delta_vs_raw_m": -0.01323871886523469,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.2696527026459442,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.9765684133935388,
+      "paired_delta_vs_raw_m": -1.1768866527339863,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.9990548329354865,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.18451576949908793,
+      "paired_delta_vs_raw_m": 0.005578009570613765,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.17854572245111985,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.30761727065922884,
+      "paired_delta_vs_raw_m": -1.5658269096891198,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.30537277849626715,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 78
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.24542429721152975,
+      "paired_delta_vs_raw_m": -0.4313535750826105,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.24124921628075463,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "global_cls_hard",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4593702340301909,
+      "paired_delta_vs_raw_m": -1.752884380399249,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4545375379551594,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.46983602632238847,
+      "paired_delta_vs_raw_m": -1.6521232634629317,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.46492862188148176,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4531994480420229,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4585619649908076,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.2604951463129276,
+      "paired_delta_vs_raw_m": -0.026760773796635783,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.255490157118038,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.423818698054479,
+      "paired_delta_vs_raw_m": -1.7296363680730464,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.4795803061722583,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.16986913886445162,
+      "paired_delta_vs_raw_m": -0.009068621064022581,
+      "strict_coverage_macro": 0.9983583286393387,
+      "any_roof_conditional_mae_macro_m": 0.15375297117585146,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3211786413564889,
+      "paired_delta_vs_raw_m": -1.5522655389918598,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.3155621604966273,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.22515632253772538,
+      "paired_delta_vs_raw_m": -0.45162154975641505,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.2196848974656434,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_cls_hard",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.45859535012332986,
+      "paired_delta_vs_raw_m": -1.7536592643061097,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.45376276788355907,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.46651432669669496,
+      "paired_delta_vs_raw_m": -1.6554449630886254,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4616053798881438,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 78
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4681533781728935,
+      "paired_delta_vs_raw_m": 0.014953930130870518,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.47351589512167813,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.32982316191699124,
+      "paired_delta_vs_raw_m": 0.042567241807427846,
+      "strict_coverage_macro": 0.9872463838614276,
+      "any_roof_conditional_mae_macro_m": 0.20305568857251544,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.411498466614188,
+      "paired_delta_vs_raw_m": -1.7419565995133373,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.4538212887181317,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.16574544808974453,
+      "paired_delta_vs_raw_m": -0.013192311838729662,
+      "strict_coverage_macro": 0.9983583286393387,
+      "any_roof_conditional_mae_macro_m": 0.14957998722125015,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.2955870367283574,
+      "paired_delta_vs_raw_m": -1.5778571436199909,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.2899721435960289,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.22713520177167607,
+      "paired_delta_vs_raw_m": -0.44964267052246426,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.22166377669959408,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_reweight_hard",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.457664959042172,
+      "paired_delta_vs_raw_m": -1.7545896553872677,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.45283245451987736,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4756304212945833,
+      "paired_delta_vs_raw_m": -1.646328868490737,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.47072147448603224,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4531994480420229,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4585619649908076,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.2547547088820552,
+      "paired_delta_vs_raw_m": -0.03250121122750817,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.24911633406335992,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.4837305071512903,
+      "paired_delta_vs_raw_m": -1.669724558976235,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.5794024344215556,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.1546421257316133,
+      "paired_delta_vs_raw_m": -0.02429563419686092,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1485018842910524,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.34142596058074254,
+      "paired_delta_vs_raw_m": -1.5320182197676058,
+      "strict_coverage_macro": 0.9991069976721694,
+      "any_roof_conditional_mae_macro_m": 0.333240916091857,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.22573415054502366,
+      "paired_delta_vs_raw_m": -0.4510437217491166,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.22026272547294168,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_hard",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4574020221160843,
+      "paired_delta_vs_raw_m": -1.7548525923133553,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.45256679369807334,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.46686787764339843,
+      "paired_delta_vs_raw_m": -1.6550914121419218,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.461963602798801,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4531994480420229,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4585619649908076,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.2545064550592684,
+      "paired_delta_vs_raw_m": -0.03274946505029503,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.24889101340369776,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.472548021275905,
+      "paired_delta_vs_raw_m": -1.6809070448516201,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.506595500068645,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.1684006975678765,
+      "paired_delta_vs_raw_m": -0.010537062360597697,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.16227735084792677,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3162651359049161,
+      "paired_delta_vs_raw_m": -1.5571790444434321,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.3106521178284599,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.22416828044687404,
+      "paired_delta_vs_raw_m": -0.4526095918472663,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.21869685537479205,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4576226313755007,
+      "paired_delta_vs_raw_m": -1.754631983053939,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4527899914208982,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4710950852232084,
+      "paired_delta_vs_raw_m": -1.650864204562112,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4661861384146574,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.453199127252187,
+      "paired_delta_vs_raw_m": -3.207898359419703e-07,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4585616442009717,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.24540204074342592,
+      "paired_delta_vs_raw_m": -0.04185387936613749,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.2397641301518719,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.460204326434727,
+      "paired_delta_vs_raw_m": -1.693250739692798,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.51670668748668,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.16189403050989062,
+      "paired_delta_vs_raw_m": -0.017043729418583585,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.15620034342837635,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3370030434860284,
+      "paired_delta_vs_raw_m": -1.5364411368623199,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.33132642180340643,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.22782590908915354,
+      "paired_delta_vs_raw_m": -0.4489519632049868,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.22235448401707156,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_hard",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.49110698222339,
+      "paired_delta_vs_raw_m": -1.72114763220605,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4915949349191944,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.486085852227409,
+      "paired_delta_vs_raw_m": -1.6358734375579111,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4811769054188579,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4531994480420229,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4585619649908076,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.22964825997506408,
+      "paired_delta_vs_raw_m": -0.05760766013449929,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.22402718312374845,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.4953855679963513,
+      "paired_delta_vs_raw_m": -1.6580694981311737,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.5916923496151163,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.17437568903972664,
+      "paired_delta_vs_raw_m": -0.0045620708887475605,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.16830253773483203,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3597678170620542,
+      "paired_delta_vs_raw_m": -1.5136763632862942,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.35419495592888606,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.2256794001543037,
+      "paired_delta_vs_raw_m": -0.4510984721398367,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.22020797508222167,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_normal_guard",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.45795020253323404,
+      "paired_delta_vs_raw_m": -1.754304411896206,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.45312537814663295,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.46883984805719237,
+      "paired_delta_vs_raw_m": -1.6531194417281276,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4639309012486413,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4531994480420229,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4585619649908076,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.23677034730910904,
+      "paired_delta_vs_raw_m": -0.050485572800454334,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.23106863256022678,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.4564717138360217,
+      "paired_delta_vs_raw_m": -1.6969833522915034,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.5094973962275706,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.16845779126145816,
+      "paired_delta_vs_raw_m": -0.010479968667016061,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1623860096336108,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.36477943620486586,
+      "paired_delta_vs_raw_m": -1.5086647441434824,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.35916390824484,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 78
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.2284103021919774,
+      "paired_delta_vs_raw_m": -0.448367570102163,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.2229388290719795,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "graph_support_guard",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.49044073293394924,
+      "paired_delta_vs_raw_m": -1.7218138814954904,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.49105770633344414,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4665217348728049,
+      "paired_delta_vs_raw_m": -1.6554375549125155,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4616127880642538,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4531994480420229,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4585619649908076,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.22640393327007585,
+      "paired_delta_vs_raw_m": -0.060851986839487546,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.22077202760335468,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.625974421995192,
+      "paired_delta_vs_raw_m": -1.5274806441323334,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.7171336742433376,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.15154603958123553,
+      "paired_delta_vs_raw_m": -0.027391720347238663,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1454237124080271,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4106219746461851,
+      "paired_delta_vs_raw_m": -1.4628222057021634,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4084473965405766,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.22891411149709723,
+      "paired_delta_vs_raw_m": -0.44786376079704315,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.22344268642501525,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "geometry_support_guard",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.37977876057134263,
+      "paired_delta_vs_raw_m": 0.27098542907693624,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.37451598548481585,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.9135993538989385,
+      "paired_delta_vs_raw_m": -1.298655260530501,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.9121824891839383,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.9540692070357448,
+      "paired_delta_vs_raw_m": -1.1678900827495755,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.9512866521018497,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 78
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.0400393678817772,
+      "paired_delta_vs_raw_m": 0.5868399198397543,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.0415043298002602,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5340802881533715,
+      "paired_delta_vs_raw_m": 0.24682436804380817,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5356114734699193,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 78
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.6696592088735507,
+      "paired_delta_vs_raw_m": 0.359198786578149,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.6752610564557486,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 77
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.5787829397224507,
+      "paired_delta_vs_raw_m": -1.5746721264050745,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.645181045101768,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.44511148191296945,
+      "paired_delta_vs_raw_m": 0.2661737219844952,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.43961271443603495,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.7958855469124504,
+      "paired_delta_vs_raw_m": 0.2137638553955547,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.7953071613593992,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.636441516352504,
+      "paired_delta_vs_raw_m": -1.2370026639958442,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.6327829890898725,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5554690200842307,
+      "paired_delta_vs_raw_m": -0.12130885220990954,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5601871638524338,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "weighted_ransac_support",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.9718205496206154,
+      "paired_delta_vs_raw_m": 0.35477466396115154,
+      "strict_coverage_macro": 0.6994044569672131,
+      "any_roof_conditional_mae_macro_m": 1.408205381963143,
+      "native_lod2_success": 56,
+      "topology_edge_passes": 56
+    },
+    {
+      "method": "residual_veto",
+      "case": "clean",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.10879333149440637,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1026822610174033,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "residual_veto",
+      "case": "dense_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.45769779619618134,
+      "paired_delta_vs_raw_m": -1.7545568182332585,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.45286515624157886,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "residual_veto",
+      "case": "flat_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.47346552630595884,
+      "paired_delta_vs_raw_m": -1.6484937634793617,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.4685565794974077,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "residual_veto",
+      "case": "hole",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.4522038241731682,
+      "paired_delta_vs_raw_m": -0.0009956238688547073,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.45756634112195294,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "residual_veto",
+      "case": "low_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.24110575893696393,
+      "paired_delta_vs_raw_m": -0.046150161172599444,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.2355373257323214,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "residual_veto",
+      "case": "noise",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3104604222954016,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.304566949998745,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "residual_veto",
+      "case": "occlusion_heavy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 1.380880631081099,
+      "paired_delta_vs_raw_m": -1.772574435046426,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 1.4202138700178715,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "residual_veto",
+      "case": "scattered_tree",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.16077053077948744,
+      "paired_delta_vs_raw_m": -0.018167229148986767,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.1550781833437592,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "residual_veto",
+      "case": "sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.5821216915168957,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.5801464519784444,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "residual_veto",
+      "case": "tilted_canopy",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.3135368402614478,
+      "paired_delta_vs_raw_m": -1.5599073400869006,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.30785963403920696,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 79
+    },
+    {
+      "method": "residual_veto",
+      "case": "tree_multiple",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 0.25593501514746586,
+      "paired_delta_vs_raw_m": -0.42084285714667435,
+      "strict_coverage_macro": 0.9993787368026041,
+      "any_roof_conditional_mae_macro_m": 0.2517598264660651,
+      "native_lod2_success": 80,
+      "topology_edge_passes": 80
+    },
+    {
+      "method": "residual_veto",
+      "case": "very_sparse",
+      "fixed_buildings": 80,
+      "primary_capped_loss_10m_macro": 3.617045885659464,
+      "paired_delta_vs_raw_m": 0.0,
+      "strict_coverage_macro": 0.7494044569672131,
+      "any_roof_conditional_mae_macro_m": 1.510138649621571,
+      "native_lod2_success": 60,
+      "topology_edge_passes": 60
+    }
+  ],
+  "stress_wording": "training-unseen stresses were visible in validation/development; not unseen final mechanisms",
+  "single_seed_hard_family_roof_rank": "exploratory seed20261023; mean3 methods use3 independently trained checkpoints",
+  "no_case_label_in_interventions": true,
+  "automatic_final_promotion": false,
+  "_publication": {
+    "original_source_sha256": "a81aa85f111eb9fcbc566b559e4811cffedf73ec596bbdccac6c74a8db641b78",
+    "original_source": "source:expanded/reports_reconstruction/comparison_validation_101b0fa19bef_v2.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

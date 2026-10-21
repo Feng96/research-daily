@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-21T08:57:18.660Z",
+  "status": "passed",
+  "fixedPosthocID": "NL.IMBAG.Pand.0546100000004156",
+  "selection": "Root requested this previously reported high-class6-deletion example; posthoc nonrandom qualitative diagnosis only",
+  "class6RemovedCountRank": 2,
+  "class6Removed": 1508,
+  "class6Candidates": 2887,
+  "annotation": "事后高风险定性样例（非随机）：NL.IMBAG.Pand.0546100000004156｜按官方AHN5 class6删除数排序第2/20，删除1508/2887。本图是5m缓冲原候选，含邻楼/环境；class6为屋顶生产分类、非独立人工GT。不能据图称真值误删或树木去除率。RGB/teacher仅作显示。",
+  "browserOnlyAnnotationSourceHTMLUnchanged": true,
+  "scope": "Visual behavior only; no independent accuracy or causal claim",
+  "checks": {
+    "id": "NL.IMBAG.Pand.0546100000004156",
+    "rgbId": "NL.IMBAG.Pand.0546100000004156",
+    "candidateShown": 3056,
+    "candidateOriginal": 3056,
+    "teacherShown": true,
+    "mode": "candidate",
+    "originalCamera": {
+      "active": 5,
+      "teacher": true,
+      "yaw": -0.6,
+      "pitch": 0.92,
+      "zoom": 1
+    }
+  },
+  "screenshots": [
+    {
+      "mode": "decision",
+      "file": "qualitative_posthoc_4156_keep_removed.png",
+      "sha256": "93ce032097a3433e59c0e6ae2408ca89782b3c279c355c3ff9f4ab29086cf01a"
+    },
+    {
+      "mode": "score",
+      "file": "qualitative_posthoc_4156_score.png",
+      "sha256": "3af46b7aa10664ecf08869462f2e5e8c9c5370342addc4638584bf42289db916"
+    }
+  ],
+  "htmlSHA256": "baaafcc04f009692e2088087cff778b49103c3a93fddc1f04b4307c4c4779228",
+  "appendixSHA256": "e624f135912f405aeb4917bd900d5f0d4ec4556739ec36751fdaca7034fed2c3",
+  "allSourcesUnchanged": true,
+  "pageErrors": [],
+  "renderingRequests": [
+    "file://source:scaling/paired_real_feasibility/reports/raw_quality_preview_dl_qualitative.html"
+  ],
+  "codeSHA256": "cc81eb644b3926fe98240ea36d714a3b063092e6e208c1304e2b40bc1958c742",
+  "_publication": {
+    "original_source_sha256": "58b5e3a8dda890ff8043292d758dc9bb9c65d171a7844eb4e7628e77bfa1d769",
+    "original_source": "source:scaling/paired_real_feasibility/reports/qualitative_posthoc_4156_screenshot_audit.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

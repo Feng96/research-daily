@@ -1,0 +1,2706 @@
+{
+  "status": "complete",
+  "split": "test",
+  "created_utc": "2026-10-21T09:16:49.174708+00:00",
+  "methods": {
+    "global_3500_s20261031": {
+      "all": {
+        "roof_kept": 2144492,
+        "roof_removed": 9822,
+        "contamination_kept": 151139,
+        "contamination_removed": 862547,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.995440776042861,
+        "contamination_rejection": 0.8509015612329657,
+        "micro_point_accuracy": 0.9491916035353536
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306119,
+          "roof_removed": 1081,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9964811197916666,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9964811197916666
+        },
+        "dense_canopy": {
+          "roof_kept": 153988,
+          "roof_removed": 252,
+          "contamination_kept": 5967,
+          "contamination_removed": 146993,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9983661825726141,
+          "contamination_rejection": 0.9609898012552301,
+          "micro_point_accuracy": 0.979755859375
+        },
+        "flat_canopy": {
+          "roof_kept": 153427,
+          "roof_removed": 625,
+          "contamination_kept": 11539,
+          "contamination_removed": 141609,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9959429283618518,
+          "contamination_rejection": 0.9246545824953639,
+          "micro_point_accuracy": 0.9604036458333334
+        },
+        "hole": {
+          "roof_kept": 305760,
+          "roof_removed": 1440,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9953125,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9953125
+        },
+        "low_canopy": {
+          "roof_kept": 149986,
+          "roof_removed": 2369,
+          "contamination_kept": 71362,
+          "contamination_removed": 83483,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9844507892750484,
+          "contamination_rejection": 0.5391391391391391,
+          "micro_point_accuracy": 0.759990234375
+        },
+        "noise": {
+          "roof_kept": 305456,
+          "roof_removed": 1744,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9943229166666666,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9943229166666666
+        },
+        "occlusion_heavy": {
+          "roof_kept": 155852,
+          "roof_removed": 323,
+          "contamination_kept": 14397,
+          "contamination_removed": 136628,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9979318072674884,
+          "contamination_rejection": 0.9046714120178778,
+          "micro_point_accuracy": 0.9520833333333333
+        },
+        "scattered_tree": {
+          "roof_kept": 214466,
+          "roof_removed": 442,
+          "contamination_kept": 29541,
+          "contamination_removed": 62751,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9979433059727884,
+          "contamination_rejection": 0.6799180860746327,
+          "micro_point_accuracy": 0.9023990885416666
+        },
+        "sparse": {
+          "roof_kept": 76741,
+          "roof_removed": 59,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 0.9992317708333334,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9992317708333334
+        },
+        "tilted_canopy": {
+          "roof_kept": 151123,
+          "roof_removed": 935,
+          "contamination_kept": 12157,
+          "contamination_removed": 142985,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9938510305278249,
+          "contamination_rejection": 0.9216395302368153,
+          "micro_point_accuracy": 0.9573828125
+        },
+        "tree_multiple": {
+          "roof_kept": 152398,
+          "roof_removed": 528,
+          "contamination_kept": 6176,
+          "contamination_removed": 148098,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.996547349698547,
+          "contamination_rejection": 0.9599673308528981,
+          "micro_point_accuracy": 0.9781770833333333
+        },
+        "very_sparse": {
+          "roof_kept": 19176,
+          "roof_removed": 24,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 0.99875,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.99875
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1072175,
+          "roof_removed": 6956,
+          "contamination_kept": 76877,
+          "contamination_removed": 427992,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9935540726751433,
+          "contamination_rejection": 0.8477288167821752,
+          "micro_point_accuracy": 0.9470751262626262
+        },
+        "Maastricht": {
+          "roof_kept": 1072317,
+          "roof_removed": 2866,
+          "contamination_kept": 74262,
+          "contamination_removed": 434555,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9973344072590433,
+          "contamination_rejection": 0.8540496878052424,
+          "micro_point_accuracy": 0.9513080808080808
+        }
+      },
+      "cutoff": 0.13753245770931244,
+      "prediction_metadata_sha256": "108d315204955d2b00bb0d3887a698d5fc135e298153d65c6ac495e33af54342"
+    },
+    "global_3500_s20261101": {
+      "all": {
+        "roof_kept": 2145573,
+        "roof_removed": 8741,
+        "contamination_kept": 166683,
+        "contamination_removed": 847003,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9959425599053805,
+        "contamination_rejection": 0.8355674242319614,
+        "micro_point_accuracy": 0.9446262626262626
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306323,
+          "roof_removed": 877,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9971451822916667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9971451822916667
+        },
+        "dense_canopy": {
+          "roof_kept": 154017,
+          "roof_removed": 223,
+          "contamination_kept": 7435,
+          "contamination_removed": 145525,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9985542012448133,
+          "contamination_rejection": 0.9513925209205021,
+          "micro_point_accuracy": 0.9750716145833334
+        },
+        "flat_canopy": {
+          "roof_kept": 153382,
+          "roof_removed": 670,
+          "contamination_kept": 12280,
+          "contamination_removed": 140868,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9956508192039052,
+          "contamination_rejection": 0.9198161255778724,
+          "micro_point_accuracy": 0.9578450520833334
+        },
+        "hole": {
+          "roof_kept": 305240,
+          "roof_removed": 1960,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9936197916666667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9936197916666667
+        },
+        "low_canopy": {
+          "roof_kept": 150613,
+          "roof_removed": 1742,
+          "contamination_kept": 79228,
+          "contamination_removed": 75617,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9885661776771356,
+          "contamination_rejection": 0.4883399528560819,
+          "micro_point_accuracy": 0.73642578125
+        },
+        "noise": {
+          "roof_kept": 306024,
+          "roof_removed": 1176,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.996171875,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.996171875
+        },
+        "occlusion_heavy": {
+          "roof_kept": 155895,
+          "roof_removed": 280,
+          "contamination_kept": 15653,
+          "contamination_removed": 135372,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.998207139426925,
+          "contamination_rejection": 0.8963549081277934,
+          "micro_point_accuracy": 0.948134765625
+        },
+        "scattered_tree": {
+          "roof_kept": 214513,
+          "roof_removed": 395,
+          "contamination_kept": 31116,
+          "contamination_removed": 61176,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9981620042064512,
+          "contamination_rejection": 0.6628526849564426,
+          "micro_point_accuracy": 0.8974251302083334
+        },
+        "sparse": {
+          "roof_kept": 76748,
+          "roof_removed": 52,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 0.9993229166666666,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9993229166666666
+        },
+        "tilted_canopy": {
+          "roof_kept": 151121,
+          "roof_removed": 937,
+          "contamination_kept": 13802,
+          "contamination_removed": 141340,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9938378776519486,
+          "contamination_rejection": 0.9110363409005943,
+          "micro_point_accuracy": 0.952021484375
+        },
+        "tree_multiple": {
+          "roof_kept": 152508,
+          "roof_removed": 418,
+          "contamination_kept": 7169,
+          "contamination_removed": 147105,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.997266651844683,
+          "contamination_rejection": 0.9535307310369862,
+          "micro_point_accuracy": 0.975302734375
+        },
+        "very_sparse": {
+          "roof_kept": 19189,
+          "roof_removed": 11,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 0.9994270833333333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9994270833333333
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1073431,
+          "roof_removed": 5700,
+          "contamination_kept": 84546,
+          "contamination_removed": 420323,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9947179721461065,
+          "contamination_rejection": 0.8325387377715804,
+          "micro_point_accuracy": 0.9430265151515151
+        },
+        "Maastricht": {
+          "roof_kept": 1072142,
+          "roof_removed": 3041,
+          "contamination_kept": 82137,
+          "contamination_removed": 426680,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9971716442689291,
+          "contamination_rejection": 0.838572610584945,
+          "micro_point_accuracy": 0.9462260101010102
+        }
+      },
+      "cutoff": 0.11596072465181351,
+      "prediction_metadata_sha256": "11b478dacdcf2b0f98838623a728dedb213b5af323a21dc88a12497fad5207a5"
+    },
+    "global_3500_s20261102": {
+      "all": {
+        "roof_kept": 2143901,
+        "roof_removed": 10413,
+        "contamination_kept": 148663,
+        "contamination_removed": 865023,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.995166442774823,
+        "contamination_rejection": 0.8533441322066202,
+        "micro_point_accuracy": 0.9497866161616162
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 305743,
+          "roof_removed": 1457,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9952571614583333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9952571614583333
+        },
+        "dense_canopy": {
+          "roof_kept": 153925,
+          "roof_removed": 315,
+          "contamination_kept": 6051,
+          "contamination_removed": 146909,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9979577282157677,
+          "contamination_rejection": 0.9604406380753138,
+          "micro_point_accuracy": 0.97927734375
+        },
+        "flat_canopy": {
+          "roof_kept": 153404,
+          "roof_removed": 648,
+          "contamination_kept": 10633,
+          "contamination_removed": 142515,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.995793628125568,
+          "contamination_rejection": 0.9305704286050095,
+          "micro_point_accuracy": 0.9632779947916666
+        },
+        "hole": {
+          "roof_kept": 305271,
+          "roof_removed": 1929,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.993720703125,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.993720703125
+        },
+        "low_canopy": {
+          "roof_kept": 150349,
+          "roof_removed": 2006,
+          "contamination_kept": 73606,
+          "contamination_removed": 81239,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9868333825604674,
+          "contamination_rejection": 0.5246472278730343,
+          "micro_point_accuracy": 0.7538671875
+        },
+        "noise": {
+          "roof_kept": 305791,
+          "roof_removed": 1409,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9954134114583333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9954134114583333
+        },
+        "occlusion_heavy": {
+          "roof_kept": 155791,
+          "roof_removed": 384,
+          "contamination_kept": 11523,
+          "contamination_removed": 139502,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.997541219785497,
+          "contamination_rejection": 0.9237013739447112,
+          "micro_point_accuracy": 0.961240234375
+        },
+        "scattered_tree": {
+          "roof_kept": 214394,
+          "roof_removed": 514,
+          "contamination_kept": 29138,
+          "contamination_removed": 63154,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9976082788914327,
+          "contamination_rejection": 0.6842846617258267,
+          "micro_point_accuracy": 0.9034765625
+        },
+        "sparse": {
+          "roof_kept": 76657,
+          "roof_removed": 143,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 0.9981380208333334,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9981380208333334
+        },
+        "tilted_canopy": {
+          "roof_kept": 151004,
+          "roof_removed": 1054,
+          "contamination_kept": 12183,
+          "contamination_removed": 142959,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9930684344131845,
+          "contamination_rejection": 0.9214719418339328,
+          "micro_point_accuracy": 0.9569108072916667
+        },
+        "tree_multiple": {
+          "roof_kept": 152390,
+          "roof_removed": 536,
+          "contamination_kept": 5529,
+          "contamination_removed": 148745,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9964950368151917,
+          "contamination_rejection": 0.9641611677923694,
+          "micro_point_accuracy": 0.9802571614583333
+        },
+        "very_sparse": {
+          "roof_kept": 19182,
+          "roof_removed": 18,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 0.9990625,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9990625
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1072017,
+          "roof_removed": 7114,
+          "contamination_kept": 74846,
+          "contamination_removed": 430023,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9934076585697196,
+          "contamination_rejection": 0.8517516425052836,
+          "micro_point_accuracy": 0.9482575757575757
+        },
+        "Maastricht": {
+          "roof_kept": 1071884,
+          "roof_removed": 3299,
+          "contamination_kept": 73817,
+          "contamination_removed": 435000,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9969316851177893,
+          "contamination_rejection": 0.8549242655021353,
+          "micro_point_accuracy": 0.9513156565656565
+        }
+      },
+      "cutoff": 0.14033624529838562,
+      "prediction_metadata_sha256": "6cbf0e466010bdb3653d25bcdce28cf712948615aef1ce7402ae1eb004eabc5a"
+    },
+    "graph_10000_mean3": {
+      "all": {
+        "roof_kept": 2146313,
+        "roof_removed": 8001,
+        "contamination_kept": 37024,
+        "contamination_removed": 976662,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9962860567215364,
+        "contamination_rejection": 0.963475869253398,
+        "micro_point_accuracy": 0.9857875631313131
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 307045,
+          "roof_removed": 155,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9994954427083333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9994954427083333
+        },
+        "dense_canopy": {
+          "roof_kept": 153937,
+          "roof_removed": 303,
+          "contamination_kept": 210,
+          "contamination_removed": 152750,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9980355290456432,
+          "contamination_rejection": 0.9986270920502092,
+          "micro_point_accuracy": 0.998330078125
+        },
+        "flat_canopy": {
+          "roof_kept": 153061,
+          "roof_removed": 991,
+          "contamination_kept": 1034,
+          "contamination_removed": 152114,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9935671072105523,
+          "contamination_rejection": 0.9932483610625016,
+          "micro_point_accuracy": 0.993408203125
+        },
+        "hole": {
+          "roof_kept": 307162,
+          "roof_removed": 38,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9998763020833333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9998763020833333
+        },
+        "low_canopy": {
+          "roof_kept": 148967,
+          "roof_removed": 3388,
+          "contamination_kept": 25721,
+          "contamination_removed": 129124,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9777624626694233,
+          "contamination_rejection": 0.8338919564726016,
+          "micro_point_accuracy": 0.905244140625
+        },
+        "noise": {
+          "roof_kept": 307200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156043,
+          "roof_removed": 132,
+          "contamination_kept": 578,
+          "contamination_removed": 150447,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9991547943012646,
+          "contamination_rejection": 0.9961728190696905,
+          "micro_point_accuracy": 0.9976888020833333
+        },
+        "scattered_tree": {
+          "roof_kept": 214050,
+          "roof_removed": 858,
+          "contamination_kept": 7126,
+          "contamination_removed": 85166,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9960075939471774,
+          "contamination_rejection": 0.9227885407185888,
+          "micro_point_accuracy": 0.9740104166666667
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150427,
+          "roof_removed": 1631,
+          "contamination_kept": 1653,
+          "contamination_removed": 153489,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9892738297228689,
+          "contamination_rejection": 0.9893452450013536,
+          "micro_point_accuracy": 0.9893098958333333
+        },
+        "tree_multiple": {
+          "roof_kept": 152421,
+          "roof_removed": 505,
+          "contamination_kept": 702,
+          "contamination_removed": 153572,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9966977492381937,
+          "contamination_rejection": 0.9954496545108055,
+          "micro_point_accuracy": 0.9960709635416667
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074709,
+          "roof_removed": 4422,
+          "contamination_kept": 18984,
+          "contamination_removed": 485885,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9959022583912426,
+          "contamination_rejection": 0.9623981666531318,
+          "micro_point_accuracy": 0.9852234848484849
+        },
+        "Maastricht": {
+          "roof_kept": 1071604,
+          "roof_removed": 3579,
+          "contamination_kept": 18040,
+          "contamination_removed": 490777,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9966712643336064,
+          "contamination_rejection": 0.9645452097709,
+          "micro_point_accuracy": 0.9863516414141414
+        }
+      },
+      "cutoff": 0.42866864800453186,
+      "prediction_metadata_sha256": "42dce49654fb23ca3abc3650968fba9774197cc0614823ba69f2650a59945729"
+    },
+    "graph_10000_s20261031": {
+      "all": {
+        "roof_kept": 2146111,
+        "roof_removed": 8203,
+        "contamination_kept": 39886,
+        "contamination_removed": 973800,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9961922913744236,
+        "contamination_rejection": 0.9606525097515404,
+        "micro_point_accuracy": 0.9848203914141415
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306732,
+          "roof_removed": 468,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9984765625,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9984765625
+        },
+        "dense_canopy": {
+          "roof_kept": 153922,
+          "roof_removed": 318,
+          "contamination_kept": 273,
+          "contamination_removed": 152687,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9979382780082987,
+          "contamination_rejection": 0.9982152196652719,
+          "micro_point_accuracy": 0.998076171875
+        },
+        "flat_canopy": {
+          "roof_kept": 153005,
+          "roof_removed": 1047,
+          "contamination_kept": 1349,
+          "contamination_removed": 151799,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9932035935917742,
+          "contamination_rejection": 0.9911915271502076,
+          "micro_point_accuracy": 0.9922005208333333
+        },
+        "hole": {
+          "roof_kept": 307198,
+          "roof_removed": 2,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9999934895833333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9999934895833333
+        },
+        "low_canopy": {
+          "roof_kept": 149239,
+          "roof_removed": 3116,
+          "contamination_kept": 27053,
+          "contamination_removed": 127792,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.979547766729021,
+          "contamination_rejection": 0.8252898059349673,
+          "micro_point_accuracy": 0.9017936197916666
+        },
+        "noise": {
+          "roof_kept": 307193,
+          "roof_removed": 7,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9999772135416667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9999772135416667
+        },
+        "occlusion_heavy": {
+          "roof_kept": 155997,
+          "roof_removed": 178,
+          "contamination_kept": 784,
+          "contamination_removed": 150241,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9988602529214022,
+          "contamination_rejection": 0.9948088064889918,
+          "micro_point_accuracy": 0.9968684895833333
+        },
+        "scattered_tree": {
+          "roof_kept": 213949,
+          "roof_removed": 959,
+          "contamination_kept": 7409,
+          "contamination_removed": 84883,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9955376254024978,
+          "contamination_rejection": 0.9197221861049711,
+          "micro_point_accuracy": 0.9727604166666667
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150435,
+          "roof_removed": 1623,
+          "contamination_kept": 2159,
+          "contamination_removed": 152983,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9893264412263741,
+          "contamination_rejection": 0.9860837168529476,
+          "micro_point_accuracy": 0.9876888020833333
+        },
+        "tree_multiple": {
+          "roof_kept": 152441,
+          "roof_removed": 485,
+          "contamination_kept": 859,
+          "contamination_removed": 153415,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.996828531446582,
+          "contamination_rejection": 0.9944319846506865,
+          "micro_point_accuracy": 0.995625
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074465,
+          "roof_removed": 4666,
+          "contamination_kept": 20487,
+          "contamination_removed": 484382,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9956761505322338,
+          "contamination_rejection": 0.9594211567753219,
+          "micro_point_accuracy": 0.9841205808080808
+        },
+        "Maastricht": {
+          "roof_kept": 1071646,
+          "roof_removed": 3537,
+          "contamination_kept": 19399,
+          "contamination_removed": 489418,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9967103274512339,
+          "contamination_rejection": 0.961874308444883,
+          "micro_point_accuracy": 0.9855202020202021
+        }
+      },
+      "cutoff": 0.378459095954895,
+      "prediction_metadata_sha256": "e16b96e5996a03a675baa6b51cdd3227a5f5f0ba37f4a3aaa29b10a9dd18a385"
+    },
+    "graph_10000_s20261101": {
+      "all": {
+        "roof_kept": 2146497,
+        "roof_removed": 7817,
+        "contamination_kept": 41907,
+        "contamination_removed": 971779,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9963714667406887,
+        "contamination_rejection": 0.958658795721752,
+        "micro_point_accuracy": 0.9843042929292929
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 307024,
+          "roof_removed": 176,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9994270833333333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9994270833333333
+        },
+        "dense_canopy": {
+          "roof_kept": 153921,
+          "roof_removed": 319,
+          "contamination_kept": 282,
+          "contamination_removed": 152678,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9979317946058092,
+          "contamination_rejection": 0.9981563807531381,
+          "micro_point_accuracy": 0.9980436197916667
+        },
+        "flat_canopy": {
+          "roof_kept": 153061,
+          "roof_removed": 991,
+          "contamination_kept": 1919,
+          "contamination_removed": 151229,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9935671072105523,
+          "contamination_rejection": 0.9874696372136756,
+          "micro_point_accuracy": 0.99052734375
+        },
+        "hole": {
+          "roof_kept": 306701,
+          "roof_removed": 499,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9983756510416667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9983756510416667
+        },
+        "low_canopy": {
+          "roof_kept": 149722,
+          "roof_removed": 2633,
+          "contamination_kept": 28117,
+          "contamination_removed": 126728,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9827179941583801,
+          "contamination_rejection": 0.8184184184184184,
+          "micro_point_accuracy": 0.89990234375
+        },
+        "noise": {
+          "roof_kept": 307118,
+          "roof_removed": 82,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9997330729166667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9997330729166667
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156032,
+          "roof_removed": 143,
+          "contamination_kept": 871,
+          "contamination_removed": 150154,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9990843604930366,
+          "contamination_rejection": 0.9942327429233571,
+          "micro_point_accuracy": 0.99669921875
+        },
+        "scattered_tree": {
+          "roof_kept": 214061,
+          "roof_removed": 847,
+          "contamination_kept": 7574,
+          "contamination_removed": 84718,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9960587786401623,
+          "contamination_rejection": 0.9179343821783037,
+          "micro_point_accuracy": 0.972587890625
+        },
+        "sparse": {
+          "roof_kept": 76796,
+          "roof_removed": 4,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 0.9999479166666667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9999479166666667
+        },
+        "tilted_canopy": {
+          "roof_kept": 150454,
+          "roof_removed": 1604,
+          "contamination_kept": 2097,
+          "contamination_removed": 153045,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9894513935471991,
+          "contamination_rejection": 0.9864833507367444,
+          "micro_point_accuracy": 0.9879524739583333
+        },
+        "tree_multiple": {
+          "roof_kept": 152407,
+          "roof_removed": 519,
+          "contamination_kept": 1047,
+          "contamination_removed": 153227,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9966062016923217,
+          "contamination_rejection": 0.9932133736079961,
+          "micro_point_accuracy": 0.99490234375
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074944,
+          "roof_removed": 4187,
+          "contamination_kept": 21917,
+          "contamination_removed": 482952,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9961200262062715,
+          "contamination_rejection": 0.9565887388609718,
+          "micro_point_accuracy": 0.9835202020202021
+        },
+        "Maastricht": {
+          "roof_kept": 1071553,
+          "roof_removed": 3630,
+          "contamination_kept": 19990,
+          "contamination_removed": 488827,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.996623830547916,
+          "contamination_rejection": 0.9607127906496835,
+          "micro_point_accuracy": 0.9850883838383838
+        }
+      },
+      "cutoff": 0.3720487952232361,
+      "prediction_metadata_sha256": "3cd4699396bd0cd1ef8ceef3bf5769d2148053bf4f40399b209787a9b9960872"
+    },
+    "graph_10000_s20261102": {
+      "all": {
+        "roof_kept": 2145696,
+        "roof_removed": 8618,
+        "contamination_kept": 39760,
+        "contamination_removed": 973926,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9959996546464442,
+        "contamination_rejection": 0.9607768085975341,
+        "micro_point_accuracy": 0.9847291666666667
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306844,
+          "roof_removed": 356,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9988411458333334,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9988411458333334
+        },
+        "dense_canopy": {
+          "roof_kept": 153974,
+          "roof_removed": 266,
+          "contamination_kept": 286,
+          "contamination_removed": 152674,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9982754149377593,
+          "contamination_rejection": 0.998130230125523,
+          "micro_point_accuracy": 0.998203125
+        },
+        "flat_canopy": {
+          "roof_kept": 153011,
+          "roof_removed": 1041,
+          "contamination_kept": 1488,
+          "contamination_removed": 151660,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9932425414795004,
+          "contamination_rejection": 0.9902839083762113,
+          "micro_point_accuracy": 0.991767578125
+        },
+        "hole": {
+          "roof_kept": 306772,
+          "roof_removed": 428,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9986067708333334,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9986067708333334
+        },
+        "low_canopy": {
+          "roof_kept": 149137,
+          "roof_removed": 3218,
+          "contamination_kept": 26789,
+          "contamination_removed": 128056,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9788782777066719,
+          "contamination_rejection": 0.8269947366721561,
+          "micro_point_accuracy": 0.9023209635416667
+        },
+        "noise": {
+          "roof_kept": 307188,
+          "roof_removed": 12,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9999609375,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9999609375
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156015,
+          "roof_removed": 160,
+          "contamination_kept": 897,
+          "contamination_removed": 150128,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9989755082439571,
+          "contamination_rejection": 0.994060585995696,
+          "micro_point_accuracy": 0.9965592447916667
+        },
+        "scattered_tree": {
+          "roof_kept": 213945,
+          "roof_removed": 963,
+          "contamination_kept": 7371,
+          "contamination_removed": 84921,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9955190127868669,
+          "contamination_rejection": 0.9201339227668703,
+          "micro_point_accuracy": 0.97287109375
+        },
+        "sparse": {
+          "roof_kept": 76797,
+          "roof_removed": 3,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 0.9999609375,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9999609375
+        },
+        "tilted_canopy": {
+          "roof_kept": 150400,
+          "roof_removed": 1658,
+          "contamination_kept": 2103,
+          "contamination_removed": 153039,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9890962658985387,
+          "contamination_rejection": 0.9864446764899254,
+          "micro_point_accuracy": 0.9877571614583334
+        },
+        "tree_multiple": {
+          "roof_kept": 152413,
+          "roof_removed": 513,
+          "contamination_kept": 826,
+          "contamination_removed": 153448,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9966454363548383,
+          "contamination_rejection": 0.9946458897805204,
+          "micro_point_accuracy": 0.9956412760416666
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074324,
+          "roof_removed": 4807,
+          "contamination_kept": 20371,
+          "contamination_removed": 484498,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9955454898432164,
+          "contamination_rejection": 0.9596509193473951,
+          "micro_point_accuracy": 0.984104797979798
+        },
+        "Maastricht": {
+          "roof_kept": 1071372,
+          "roof_removed": 3811,
+          "contamination_kept": 19389,
+          "contamination_removed": 489428,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9964554871124265,
+          "contamination_rejection": 0.9618939618762737,
+          "micro_point_accuracy": 0.9853535353535353
+        }
+      },
+      "cutoff": 0.38722676038742065,
+      "prediction_metadata_sha256": "9c4b96a75bb9d586fdf948aa750b3e0b096b58dcb6b2d74ac7bd69a795023a2f"
+    },
+    "graph_20000_long_mean3": {
+      "all": {
+        "roof_kept": 2145454,
+        "roof_removed": 8860,
+        "contamination_kept": 31721,
+        "contamination_removed": 981965,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9958873219038636,
+        "contamination_rejection": 0.9687072722716896,
+        "micro_point_accuracy": 0.9871903409090909
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 307130,
+          "roof_removed": 70,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9997721354166667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9997721354166667
+        },
+        "dense_canopy": {
+          "roof_kept": 153995,
+          "roof_removed": 245,
+          "contamination_kept": 187,
+          "contamination_removed": 152773,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9984115663900415,
+          "contamination_rejection": 0.9987774581589958,
+          "micro_point_accuracy": 0.99859375
+        },
+        "flat_canopy": {
+          "roof_kept": 153193,
+          "roof_removed": 859,
+          "contamination_kept": 630,
+          "contamination_removed": 152518,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9944239607405292,
+          "contamination_rejection": 0.995886332175412,
+          "micro_point_accuracy": 0.9951529947916666
+        },
+        "hole": {
+          "roof_kept": 306543,
+          "roof_removed": 657,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.997861328125,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.997861328125
+        },
+        "low_canopy": {
+          "roof_kept": 147922,
+          "roof_removed": 4433,
+          "contamination_kept": 22635,
+          "contamination_removed": 132210,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.970903481999278,
+          "contamination_rejection": 0.8538215634989829,
+          "micro_point_accuracy": 0.9118880208333333
+        },
+        "noise": {
+          "roof_kept": 307200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156077,
+          "roof_removed": 98,
+          "contamination_kept": 432,
+          "contamination_removed": 150593,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9993724987994237,
+          "contamination_rejection": 0.9971395464327099,
+          "micro_point_accuracy": 0.9982747395833333
+        },
+        "scattered_tree": {
+          "roof_kept": 214051,
+          "roof_removed": 857,
+          "contamination_kept": 6264,
+          "contamination_removed": 86028,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9960122471010852,
+          "contamination_rejection": 0.9321284618385125,
+          "micro_point_accuracy": 0.9768196614583333
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150897,
+          "roof_removed": 1161,
+          "contamination_kept": 988,
+          "contamination_removed": 154154,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9923647555538019,
+          "contamination_rejection": 0.9936316406904642,
+          "micro_point_accuracy": 0.9930045572916667
+        },
+        "tree_multiple": {
+          "roof_kept": 152446,
+          "roof_removed": 480,
+          "contamination_kept": 585,
+          "contamination_removed": 153689,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9968612269986791,
+          "contamination_rejection": 0.9962080454256712,
+          "micro_point_accuracy": 0.996533203125
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074377,
+          "roof_removed": 4754,
+          "contamination_kept": 16023,
+          "contamination_removed": 488846,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9955946034355421,
+          "contamination_rejection": 0.9682630543764819,
+          "micro_point_accuracy": 0.9868832070707071
+        },
+        "Maastricht": {
+          "roof_kept": 1071077,
+          "roof_removed": 4106,
+          "contamination_kept": 15698,
+          "contamination_removed": 493119,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9961811152148053,
+          "contamination_rejection": 0.9691480434026379,
+          "micro_point_accuracy": 0.9874974747474747
+        }
+      },
+      "cutoff": 0.47043702006340027,
+      "prediction_metadata_sha256": "cad4c4072e0d76329220db48bebcc12929732e2fa32d708f486f74bb0eabf58c"
+    },
+    "graph_20000_long_s20261031": {
+      "all": {
+        "roof_kept": 2144942,
+        "roof_removed": 9372,
+        "contamination_kept": 33653,
+        "contamination_removed": 980033,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9956496592418747,
+        "contamination_rejection": 0.9668013566331192,
+        "micro_point_accuracy": 0.9864188762626263
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306775,
+          "roof_removed": 425,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9986165364583334,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9986165364583334
+        },
+        "dense_canopy": {
+          "roof_kept": 154012,
+          "roof_removed": 228,
+          "contamination_kept": 208,
+          "contamination_removed": 152752,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9985217842323652,
+          "contamination_rejection": 0.9986401673640167,
+          "micro_point_accuracy": 0.9985807291666666
+        },
+        "flat_canopy": {
+          "roof_kept": 153109,
+          "roof_removed": 943,
+          "contamination_kept": 846,
+          "contamination_removed": 152302,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9938786903123621,
+          "contamination_rejection": 0.9944759317784104,
+          "micro_point_accuracy": 0.9941764322916666
+        },
+        "hole": {
+          "roof_kept": 306179,
+          "roof_removed": 1021,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9966764322916667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9966764322916667
+        },
+        "low_canopy": {
+          "roof_kept": 148354,
+          "roof_removed": 4001,
+          "contamination_kept": 23734,
+          "contamination_removed": 131111,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9737389649174625,
+          "contamination_rejection": 0.846724143498337,
+          "micro_point_accuracy": 0.909716796875
+        },
+        "noise": {
+          "roof_kept": 307198,
+          "roof_removed": 2,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9999934895833333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9999934895833333
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156055,
+          "roof_removed": 120,
+          "contamination_kept": 434,
+          "contamination_removed": 150591,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9992316311829679,
+          "contamination_rejection": 0.9971263035921205,
+          "micro_point_accuracy": 0.9981966145833333
+        },
+        "scattered_tree": {
+          "roof_kept": 214030,
+          "roof_removed": 878,
+          "contamination_kept": 6434,
+          "contamination_removed": 85858,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.995914530869023,
+          "contamination_rejection": 0.9302864820352793,
+          "micro_point_accuracy": 0.9761979166666667
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150796,
+          "roof_removed": 1262,
+          "contamination_kept": 1280,
+          "contamination_removed": 153862,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9917005353220482,
+          "contamination_rejection": 0.9917494940119375,
+          "micro_point_accuracy": 0.9917252604166666
+        },
+        "tree_multiple": {
+          "roof_kept": 152434,
+          "roof_removed": 492,
+          "contamination_kept": 717,
+          "contamination_removed": 153557,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9967827576736461,
+          "contamination_rejection": 0.9953524249063355,
+          "micro_point_accuracy": 0.996064453125
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074165,
+          "roof_removed": 4966,
+          "contamination_kept": 17083,
+          "contamination_removed": 487786,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9953981490662394,
+          "contamination_rejection": 0.966163499838572,
+          "micro_point_accuracy": 0.9860801767676768
+        },
+        "Maastricht": {
+          "roof_kept": 1070777,
+          "roof_removed": 4406,
+          "contamination_kept": 16570,
+          "contamination_removed": 492247,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.995902092946038,
+          "contamination_rejection": 0.9674342641853555,
+          "micro_point_accuracy": 0.9867575757575757
+        }
+      },
+      "cutoff": 0.43206343054771423,
+      "prediction_metadata_sha256": "c4ce8ae33c8e600ca4f5adc5b894bfe88d0fa818565c9fca82b7562b92853f8f"
+    },
+    "graph_20000_long_s20261101": {
+      "all": {
+        "roof_kept": 2145059,
+        "roof_removed": 9255,
+        "contamination_kept": 33368,
+        "contamination_removed": 980318,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9957039688736182,
+        "contamination_rejection": 0.9670825087847716,
+        "micro_point_accuracy": 0.9865457702020202
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 307097,
+          "roof_removed": 103,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9996647135416666,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9996647135416666
+        },
+        "dense_canopy": {
+          "roof_kept": 153964,
+          "roof_removed": 276,
+          "contamination_kept": 229,
+          "contamination_removed": 152731,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9982105809128631,
+          "contamination_rejection": 0.9985028765690377,
+          "micro_point_accuracy": 0.9983561197916667
+        },
+        "flat_canopy": {
+          "roof_kept": 153180,
+          "roof_removed": 872,
+          "contamination_kept": 896,
+          "contamination_removed": 152252,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9943395736504557,
+          "contamination_rejection": 0.9941494502050304,
+          "micro_point_accuracy": 0.9942447916666667
+        },
+        "hole": {
+          "roof_kept": 306466,
+          "roof_removed": 734,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9976106770833333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9976106770833333
+        },
+        "low_canopy": {
+          "roof_kept": 147949,
+          "roof_removed": 4406,
+          "contamination_kept": 23514,
+          "contamination_removed": 131331,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9710806996816645,
+          "contamination_rejection": 0.8481449191126611,
+          "micro_point_accuracy": 0.9091145833333333
+        },
+        "noise": {
+          "roof_kept": 307200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156072,
+          "roof_removed": 103,
+          "contamination_kept": 501,
+          "contamination_removed": 150524,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9993404834320474,
+          "contamination_rejection": 0.9966826684323787,
+          "micro_point_accuracy": 0.9980338541666667
+        },
+        "scattered_tree": {
+          "roof_kept": 213909,
+          "roof_removed": 999,
+          "contamination_kept": 6407,
+          "contamination_removed": 85885,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.995351499246189,
+          "contamination_rejection": 0.930579031768734,
+          "micro_point_accuracy": 0.9758919270833334
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150786,
+          "roof_removed": 1272,
+          "contamination_kept": 1149,
+          "contamination_removed": 153993,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9916347709426666,
+          "contamination_rejection": 0.9925938817341532,
+          "micro_point_accuracy": 0.992119140625
+        },
+        "tree_multiple": {
+          "roof_kept": 152436,
+          "roof_removed": 490,
+          "contamination_kept": 672,
+          "contamination_removed": 153602,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.996795835894485,
+          "contamination_rejection": 0.9956441137197454,
+          "micro_point_accuracy": 0.9962174479166667
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074071,
+          "roof_removed": 5060,
+          "contamination_kept": 16916,
+          "contamination_removed": 487953,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9953110419402278,
+          "contamination_rejection": 0.9664942787138842,
+          "micro_point_accuracy": 0.9861262626262626
+        },
+        "Maastricht": {
+          "roof_kept": 1070988,
+          "roof_removed": 4195,
+          "contamination_kept": 16452,
+          "contamination_removed": 492365,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9960983386084044,
+          "contamination_rejection": 0.9676661746757675,
+          "micro_point_accuracy": 0.9869652777777778
+        }
+      },
+      "cutoff": 0.45084288716316223,
+      "prediction_metadata_sha256": "88707a7e1821c6f34f31ba5dcb306a8f373b515da48e6ba5022b5e7240692760"
+    },
+    "graph_20000_long_s20261102": {
+      "all": {
+        "roof_kept": 2146059,
+        "roof_removed": 8255,
+        "contamination_kept": 34244,
+        "contamination_removed": 979442,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9961681537603153,
+        "contamination_rejection": 0.9662183358554819,
+        "micro_point_accuracy": 0.9865849116161616
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 307174,
+          "roof_removed": 26,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9999153645833333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9999153645833333
+        },
+        "dense_canopy": {
+          "roof_kept": 153975,
+          "roof_removed": 265,
+          "contamination_kept": 220,
+          "contamination_removed": 152740,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9982818983402489,
+          "contamination_rejection": 0.9985617154811716,
+          "micro_point_accuracy": 0.9984212239583333
+        },
+        "flat_canopy": {
+          "roof_kept": 153207,
+          "roof_removed": 845,
+          "contamination_kept": 938,
+          "contamination_removed": 152210,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9945148391452237,
+          "contamination_rejection": 0.9938752056833913,
+          "micro_point_accuracy": 0.9941959635416666
+        },
+        "hole": {
+          "roof_kept": 306728,
+          "roof_removed": 472,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9984635416666666,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9984635416666666
+        },
+        "low_canopy": {
+          "roof_kept": 148342,
+          "roof_removed": 4013,
+          "contamination_kept": 23916,
+          "contamination_removed": 130929,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9736602015030685,
+          "contamination_rejection": 0.8455487745810326,
+          "micro_point_accuracy": 0.9090852864583333
+        },
+        "noise": {
+          "roof_kept": 307196,
+          "roof_removed": 4,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9999869791666667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9999869791666667
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156062,
+          "roof_removed": 113,
+          "contamination_kept": 486,
+          "contamination_removed": 150539,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9992764526972947,
+          "contamination_rejection": 0.9967819897367985,
+          "micro_point_accuracy": 0.9980501302083333
+        },
+        "scattered_tree": {
+          "roof_kept": 213972,
+          "roof_removed": 936,
+          "contamination_kept": 6579,
+          "contamination_removed": 85713,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9956446479423754,
+          "contamination_rejection": 0.9287153816148745,
+          "micro_point_accuracy": 0.975537109375
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150959,
+          "roof_removed": 1099,
+          "contamination_kept": 1388,
+          "contamination_removed": 153754,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9927724947059675,
+          "contamination_rejection": 0.9910533575691947,
+          "micro_point_accuracy": 0.991904296875
+        },
+        "tree_multiple": {
+          "roof_kept": 152444,
+          "roof_removed": 482,
+          "contamination_kept": 717,
+          "contamination_removed": 153557,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9968481487778402,
+          "contamination_rejection": 0.9953524249063355,
+          "micro_point_accuracy": 0.9960970052083333
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074580,
+          "roof_removed": 4551,
+          "contamination_kept": 17422,
+          "contamination_removed": 487447,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.995782717760865,
+          "contamination_rejection": 0.9654920385288065,
+          "micro_point_accuracy": 0.9861281565656566
+        },
+        "Maastricht": {
+          "roof_kept": 1071479,
+          "roof_removed": 3704,
+          "contamination_kept": 16822,
+          "contamination_removed": 491995,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9965550050549534,
+          "contamination_rejection": 0.9669389977143059,
+          "micro_point_accuracy": 0.9870416666666667
+        }
+      },
+      "cutoff": 0.4330222010612488,
+      "prediction_metadata_sha256": "f41858251fe7800d1f008773e2ada801f8410d118fd5d2d4ee1cbf47ae1d7ef9"
+    },
+    "graph_20000_s20261031": {
+      "all": {
+        "roof_kept": 2145995,
+        "roof_removed": 8319,
+        "contamination_kept": 39952,
+        "contamination_removed": 973734,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9961384459275667,
+        "contamination_rejection": 0.9605874008322104,
+        "micro_point_accuracy": 0.9847629419191919
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306778,
+          "roof_removed": 422,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9986263020833334,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9986263020833334
+        },
+        "dense_canopy": {
+          "roof_kept": 153953,
+          "roof_removed": 287,
+          "contamination_kept": 290,
+          "contamination_removed": 152670,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9981392634854772,
+          "contamination_rejection": 0.9981040794979079,
+          "micro_point_accuracy": 0.9981217447916667
+        },
+        "flat_canopy": {
+          "roof_kept": 153075,
+          "roof_removed": 977,
+          "contamination_kept": 1719,
+          "contamination_removed": 151429,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9936579856152468,
+          "contamination_rejection": 0.9887755635071956,
+          "micro_point_accuracy": 0.9912239583333333
+        },
+        "hole": {
+          "roof_kept": 307002,
+          "roof_removed": 198,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.99935546875,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.99935546875
+        },
+        "low_canopy": {
+          "roof_kept": 149198,
+          "roof_removed": 3157,
+          "contamination_kept": 27040,
+          "contamination_removed": 127805,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9792786583965082,
+          "contamination_rejection": 0.8253737608576318,
+          "micro_point_accuracy": 0.9017024739583334
+        },
+        "noise": {
+          "roof_kept": 307120,
+          "roof_removed": 80,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9997395833333333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9997395833333333
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156038,
+          "roof_removed": 137,
+          "contamination_kept": 631,
+          "contamination_removed": 150394,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9991227789338882,
+          "contamination_rejection": 0.9958218837940739,
+          "micro_point_accuracy": 0.9975
+        },
+        "scattered_tree": {
+          "roof_kept": 214044,
+          "roof_removed": 864,
+          "contamination_kept": 7291,
+          "contamination_removed": 85001,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9959796750237311,
+          "contamination_rejection": 0.9210007367919213,
+          "micro_point_accuracy": 0.9734537760416667
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150403,
+          "roof_removed": 1655,
+          "contamination_kept": 2153,
+          "contamination_removed": 152989,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9891159952123532,
+          "contamination_rejection": 0.9861223910997666,
+          "micro_point_accuracy": 0.9876041666666666
+        },
+        "tree_multiple": {
+          "roof_kept": 152384,
+          "roof_removed": 542,
+          "contamination_kept": 828,
+          "contamination_removed": 153446,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9964558021526752,
+          "contamination_rejection": 0.9946329258332577,
+          "micro_point_accuracy": 0.9955403645833333
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074703,
+          "roof_removed": 4428,
+          "contamination_kept": 20518,
+          "contamination_removed": 484351,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9958966983619227,
+          "contamination_rejection": 0.9593597547086472,
+          "micro_point_accuracy": 0.9842512626262626
+        },
+        "Maastricht": {
+          "roof_kept": 1071292,
+          "roof_removed": 3891,
+          "contamination_kept": 19434,
+          "contamination_removed": 489383,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9963810811740885,
+          "contamination_rejection": 0.961805521435015,
+          "micro_point_accuracy": 0.9852746212121212
+        }
+      },
+      "cutoff": 0.37983831763267517,
+      "prediction_metadata_sha256": "34a03397dffab382d9590c21c5ef3dbbaaded8fb5ea296301803a3b1f8e76044"
+    },
+    "graph_20000_s20261101": {
+      "all": {
+        "roof_kept": 2146263,
+        "roof_removed": 8051,
+        "contamination_kept": 40454,
+        "contamination_removed": 973232,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9962628474772015,
+        "contamination_rejection": 0.9600921784457909,
+        "micro_point_accuracy": 0.9846890782828283
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306831,
+          "roof_removed": 369,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.998798828125,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.998798828125
+        },
+        "dense_canopy": {
+          "roof_kept": 153920,
+          "roof_removed": 320,
+          "contamination_kept": 271,
+          "contamination_removed": 152689,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9979253112033195,
+          "contamination_rejection": 0.9982282949790795,
+          "micro_point_accuracy": 0.998076171875
+        },
+        "flat_canopy": {
+          "roof_kept": 153086,
+          "roof_removed": 966,
+          "contamination_kept": 2108,
+          "contamination_removed": 151040,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9937293900760782,
+          "contamination_rejection": 0.9862355368662993,
+          "micro_point_accuracy": 0.9899934895833333
+        },
+        "hole": {
+          "roof_kept": 307082,
+          "roof_removed": 118,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9996158854166667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9996158854166667
+        },
+        "low_canopy": {
+          "roof_kept": 149205,
+          "roof_removed": 3150,
+          "contamination_kept": 27027,
+          "contamination_removed": 127818,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9793246037215714,
+          "contamination_rejection": 0.8254577157802965,
+          "micro_point_accuracy": 0.901767578125
+        },
+        "noise": {
+          "roof_kept": 307098,
+          "roof_removed": 102,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.99966796875,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.99966796875
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156075,
+          "roof_removed": 100,
+          "contamination_kept": 635,
+          "contamination_removed": 150390,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9993596926524732,
+          "contamination_rejection": 0.9957953981128952,
+          "micro_point_accuracy": 0.997607421875
+        },
+        "scattered_tree": {
+          "roof_kept": 214020,
+          "roof_removed": 888,
+          "contamination_kept": 7452,
+          "contamination_removed": 84840,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9958679993299459,
+          "contamination_rejection": 0.9192562735665063,
+          "micro_point_accuracy": 0.9728515625
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150488,
+          "roof_removed": 1570,
+          "contamination_kept": 2001,
+          "contamination_removed": 153141,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9896749924370963,
+          "contamination_rejection": 0.9871021386858491,
+          "micro_point_accuracy": 0.9883756510416667
+        },
+        "tree_multiple": {
+          "roof_kept": 152458,
+          "roof_removed": 468,
+          "contamination_kept": 960,
+          "contamination_removed": 153314,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9969396963237122,
+          "contamination_rejection": 0.9937773053139219,
+          "micro_point_accuracy": 0.9953515625
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074516,
+          "roof_removed": 4615,
+          "contamination_kept": 20663,
+          "contamination_removed": 484206,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9957234107814529,
+          "contamination_rejection": 0.9590725514935557,
+          "micro_point_accuracy": 0.9840416666666667
+        },
+        "Maastricht": {
+          "roof_kept": 1071747,
+          "roof_removed": 3436,
+          "contamination_kept": 19791,
+          "contamination_removed": 489026,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9968042649483855,
+          "contamination_rejection": 0.9611038939343615,
+          "micro_point_accuracy": 0.9853364898989899
+        }
+      },
+      "cutoff": 0.3821414113044739,
+      "prediction_metadata_sha256": "3cd63448556cb98d47cee21e0caa51f1e048346ffaac88b671c98a387680a61c"
+    },
+    "graph_20000_s20261102": {
+      "all": {
+        "roof_kept": 2146355,
+        "roof_removed": 7959,
+        "contamination_kept": 41367,
+        "contamination_removed": 972319,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9963055524867777,
+        "contamination_rejection": 0.9591915050617252,
+        "micro_point_accuracy": 0.9844299242424243
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306992,
+          "roof_removed": 208,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9993229166666666,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9993229166666666
+        },
+        "dense_canopy": {
+          "roof_kept": 153927,
+          "roof_removed": 313,
+          "contamination_kept": 301,
+          "contamination_removed": 152659,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9979706950207469,
+          "contamination_rejection": 0.9980321652719665,
+          "micro_point_accuracy": 0.9980013020833334
+        },
+        "flat_canopy": {
+          "roof_kept": 153155,
+          "roof_removed": 897,
+          "contamination_kept": 2878,
+          "contamination_removed": 150270,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9941772907849298,
+          "contamination_rejection": 0.9812077206362473,
+          "micro_point_accuracy": 0.9877115885416666
+        },
+        "hole": {
+          "roof_kept": 307128,
+          "roof_removed": 72,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.999765625,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.999765625
+        },
+        "low_canopy": {
+          "roof_kept": 149010,
+          "roof_removed": 3345,
+          "contamination_kept": 26807,
+          "contamination_removed": 128038,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9780446982376686,
+          "contamination_rejection": 0.8268784913946204,
+          "micro_point_accuracy": 0.9018489583333333
+        },
+        "noise": {
+          "roof_kept": 307136,
+          "roof_removed": 64,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9997916666666666,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9997916666666666
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156035,
+          "roof_removed": 140,
+          "contamination_kept": 802,
+          "contamination_removed": 150223,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9991035697134625,
+          "contamination_rejection": 0.9946896209236882,
+          "micro_point_accuracy": 0.99693359375
+        },
+        "scattered_tree": {
+          "roof_kept": 214074,
+          "roof_removed": 834,
+          "contamination_kept": 7460,
+          "contamination_removed": 84832,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9961192696409626,
+          "contamination_rejection": 0.9191695921640012,
+          "micro_point_accuracy": 0.9730013020833334
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150496,
+          "roof_removed": 1562,
+          "contamination_kept": 2331,
+          "contamination_removed": 152811,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9897276039406017,
+          "contamination_rejection": 0.9849750551108017,
+          "micro_point_accuracy": 0.9873274739583333
+        },
+        "tree_multiple": {
+          "roof_kept": 152402,
+          "roof_removed": 524,
+          "contamination_kept": 788,
+          "contamination_removed": 153486,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9965735061402247,
+          "contamination_rejection": 0.9948922047785109,
+          "micro_point_accuracy": 0.9957291666666667
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074835,
+          "roof_removed": 4296,
+          "contamination_kept": 21482,
+          "contamination_removed": 483387,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9960190190069602,
+          "contamination_rejection": 0.9574503485062462,
+          "micro_point_accuracy": 0.9837260101010101
+        },
+        "Maastricht": {
+          "roof_kept": 1071520,
+          "roof_removed": 3663,
+          "contamination_kept": 19885,
+          "contamination_removed": 488932,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9965931380983516,
+          "contamination_rejection": 0.9609191516792874,
+          "micro_point_accuracy": 0.9851338383838384
+        }
+      },
+      "cutoff": 0.38537469506263733,
+      "prediction_metadata_sha256": "8e8ac751d236dd480374fb6655d709b52eb8efe6627ae671cce5ade2f9f3913f"
+    },
+    "graph_3500_s20261031": {
+      "all": {
+        "roof_kept": 2146637,
+        "roof_removed": 7677,
+        "contamination_kept": 43847,
+        "contamination_removed": 969839,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9964364526248263,
+        "contamination_rejection": 0.9567449880929597,
+        "micro_point_accuracy": 0.9837361111111111
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306304,
+          "roof_removed": 896,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9970833333333333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9970833333333333
+        },
+        "dense_canopy": {
+          "roof_kept": 153982,
+          "roof_removed": 258,
+          "contamination_kept": 323,
+          "contamination_removed": 152637,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9983272821576763,
+          "contamination_rejection": 0.9978883368200837,
+          "micro_point_accuracy": 0.9981087239583334
+        },
+        "flat_canopy": {
+          "roof_kept": 153163,
+          "roof_removed": 889,
+          "contamination_kept": 2220,
+          "contamination_removed": 150928,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9942292213018981,
+          "contamination_rejection": 0.9855042181419281,
+          "micro_point_accuracy": 0.9898795572916667
+        },
+        "hole": {
+          "roof_kept": 306865,
+          "roof_removed": 335,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9989095052083333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9989095052083333
+        },
+        "low_canopy": {
+          "roof_kept": 150101,
+          "roof_removed": 2254,
+          "contamination_kept": 28998,
+          "contamination_removed": 125847,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9852056053296577,
+          "contamination_rejection": 0.8127288578901483,
+          "micro_point_accuracy": 0.8982682291666667
+        },
+        "noise": {
+          "roof_kept": 306952,
+          "roof_removed": 248,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9991927083333333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9991927083333333
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156004,
+          "roof_removed": 171,
+          "contamination_kept": 811,
+          "contamination_removed": 150214,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9989050744357292,
+          "contamination_rejection": 0.9946300281410363,
+          "micro_point_accuracy": 0.9968033854166667
+        },
+        "scattered_tree": {
+          "roof_kept": 214161,
+          "roof_removed": 747,
+          "contamination_kept": 7954,
+          "contamination_removed": 84338,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9965240940309341,
+          "contamination_rejection": 0.9138170155593117,
+          "micro_point_accuracy": 0.9716764322916667
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150643,
+          "roof_removed": 1415,
+          "contamination_kept": 2578,
+          "contamination_removed": 152564,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9906943403175105,
+          "contamination_rejection": 0.9833829652834177,
+          "micro_point_accuracy": 0.987001953125
+        },
+        "tree_multiple": {
+          "roof_kept": 152462,
+          "roof_removed": 464,
+          "contamination_kept": 963,
+          "contamination_removed": 153311,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9969658527653898,
+          "contamination_rejection": 0.993757859393028,
+          "micro_point_accuracy": 0.9953548177083333
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074943,
+          "roof_removed": 4188,
+          "contamination_kept": 22837,
+          "contamination_removed": 482032,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9961190995347182,
+          "contamination_rejection": 0.9547664839790124,
+          "micro_point_accuracy": 0.9829387626262627
+        },
+        "Maastricht": {
+          "roof_kept": 1071694,
+          "roof_removed": 3489,
+          "contamination_kept": 21010,
+          "contamination_removed": 487807,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9967549710142366,
+          "contamination_rejection": 0.9587081406478164,
+          "micro_point_accuracy": 0.9845334595959596
+        }
+      },
+      "cutoff": 0.3090237081050873,
+      "prediction_metadata_sha256": "1deeaec7e073aabf079f5aa6803a4a57ce1b47f8de5e4c3e884c4a0268351d72"
+    },
+    "graph_3500_s20261101": {
+      "all": {
+        "roof_kept": 2145820,
+        "roof_removed": 8494,
+        "contamination_kept": 40485,
+        "contamination_removed": 973201,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.9960572135723947,
+        "contamination_rejection": 0.9600615969836813,
+        "micro_point_accuracy": 0.9845394570707071
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306218,
+          "roof_removed": 982,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9968033854166667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9968033854166667
+        },
+        "dense_canopy": {
+          "roof_kept": 153989,
+          "roof_removed": 251,
+          "contamination_kept": 288,
+          "contamination_removed": 152672,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9983726659751038,
+          "contamination_rejection": 0.9981171548117155,
+          "micro_point_accuracy": 0.9982454427083334
+        },
+        "flat_canopy": {
+          "roof_kept": 153171,
+          "roof_removed": 881,
+          "contamination_kept": 1760,
+          "contamination_removed": 151388,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9942811518188663,
+          "contamination_rejection": 0.988507848617024,
+          "micro_point_accuracy": 0.9914029947916667
+        },
+        "hole": {
+          "roof_kept": 307070,
+          "roof_removed": 130,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9995768229166667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9995768229166667
+        },
+        "low_canopy": {
+          "roof_kept": 149345,
+          "roof_removed": 3010,
+          "contamination_kept": 27028,
+          "contamination_removed": 127817,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9802435102228348,
+          "contamination_rejection": 0.8254512577093223,
+          "micro_point_accuracy": 0.9022200520833333
+        },
+        "noise": {
+          "roof_kept": 306920,
+          "roof_removed": 280,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9990885416666667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9990885416666667
+        },
+        "occlusion_heavy": {
+          "roof_kept": 155989,
+          "roof_removed": 186,
+          "contamination_kept": 758,
+          "contamination_removed": 150267,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9988090283336001,
+          "contamination_rejection": 0.9949809634166529,
+          "micro_point_accuracy": 0.9969270833333334
+        },
+        "scattered_tree": {
+          "roof_kept": 214011,
+          "roof_removed": 897,
+          "contamination_kept": 7416,
+          "contamination_removed": 84876,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9958261209447764,
+          "contamination_rejection": 0.9196463398777792,
+          "micro_point_accuracy": 0.972939453125
+        },
+        "sparse": {
+          "roof_kept": 76788,
+          "roof_removed": 12,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 0.99984375,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.99984375
+        },
+        "tilted_canopy": {
+          "roof_kept": 150677,
+          "roof_removed": 1381,
+          "contamination_kept": 2337,
+          "contamination_removed": 152805,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9909179392074077,
+          "contamination_rejection": 0.9849363808639827,
+          "micro_point_accuracy": 0.9878971354166667
+        },
+        "tree_multiple": {
+          "roof_kept": 152442,
+          "roof_removed": 484,
+          "contamination_kept": 898,
+          "contamination_removed": 153376,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9968350705570014,
+          "contamination_rejection": 0.9941791876790645,
+          "micro_point_accuracy": 0.9955013020833333
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074140,
+          "roof_removed": 4991,
+          "contamination_kept": 20728,
+          "contamination_removed": 484141,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9953749822774065,
+          "contamination_rejection": 0.9589438052247217,
+          "micro_point_accuracy": 0.9837632575757576
+        },
+        "Maastricht": {
+          "roof_kept": 1071680,
+          "roof_removed": 3503,
+          "contamination_kept": 19757,
+          "contamination_removed": 489060,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9967419499750275,
+          "contamination_rejection": 0.9611707156010904,
+          "micro_point_accuracy": 0.9853156565656566
+        }
+      },
+      "cutoff": 0.3656831681728363,
+      "prediction_metadata_sha256": "e9eac7162c09d0f8220e01acc39d3648772e7289fff50e3c5a57253659655987"
+    },
+    "graph_3500_s20261102": {
+      "all": {
+        "roof_kept": 2146364,
+        "roof_removed": 7950,
+        "contamination_kept": 41635,
+        "contamination_removed": 972051,
+        "valid_observation_occurrences": 3168000,
+        "roof_retention": 0.996309730150758,
+        "contamination_rejection": 0.9589271233892941,
+        "micro_point_accuracy": 0.9843481691919191
+      },
+      "by_case": {
+        "clean": {
+          "roof_kept": 306788,
+          "roof_removed": 412,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9986588541666667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9986588541666667
+        },
+        "dense_canopy": {
+          "roof_kept": 153914,
+          "roof_removed": 326,
+          "contamination_kept": 264,
+          "contamination_removed": 152696,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9978864107883817,
+          "contamination_rejection": 0.9982740585774058,
+          "micro_point_accuracy": 0.9980794270833333
+        },
+        "flat_canopy": {
+          "roof_kept": 153088,
+          "roof_removed": 964,
+          "contamination_kept": 2526,
+          "contamination_removed": 150622,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9937423727053203,
+          "contamination_rejection": 0.9835061509128424,
+          "micro_point_accuracy": 0.9886393229166667
+        },
+        "hole": {
+          "roof_kept": 306970,
+          "roof_removed": 230,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9992513020833333,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9992513020833333
+        },
+        "low_canopy": {
+          "roof_kept": 149372,
+          "roof_removed": 2983,
+          "contamination_kept": 27309,
+          "contamination_removed": 127536,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9804207279052214,
+          "contamination_rejection": 0.823636539765572,
+          "micro_point_accuracy": 0.9013932291666666
+        },
+        "noise": {
+          "roof_kept": 307001,
+          "roof_removed": 199,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9993522135416667,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 0.9993522135416667
+        },
+        "occlusion_heavy": {
+          "roof_kept": 156046,
+          "roof_removed": 129,
+          "contamination_kept": 593,
+          "contamination_removed": 150432,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9991740035216904,
+          "contamination_rejection": 0.9960734977652707,
+          "micro_point_accuracy": 0.9976497395833334
+        },
+        "scattered_tree": {
+          "roof_kept": 214063,
+          "roof_removed": 845,
+          "contamination_kept": 7533,
+          "contamination_removed": 84759,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9960680849479777,
+          "contamination_rejection": 0.9183786243661423,
+          "micro_point_accuracy": 0.9727278645833334
+        },
+        "sparse": {
+          "roof_kept": 76800,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 76800,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        },
+        "tilted_canopy": {
+          "roof_kept": 150708,
+          "roof_removed": 1350,
+          "contamination_kept": 2491,
+          "contamination_removed": 152651,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9911218087834905,
+          "contamination_rejection": 0.9839437418622939,
+          "micro_point_accuracy": 0.9874967447916667
+        },
+        "tree_multiple": {
+          "roof_kept": 152414,
+          "roof_removed": 512,
+          "contamination_kept": 919,
+          "contamination_removed": 153355,
+          "valid_observation_occurrences": 307200,
+          "roof_retention": 0.9966519754652577,
+          "contamination_rejection": 0.9940430662328066,
+          "micro_point_accuracy": 0.995341796875
+        },
+        "very_sparse": {
+          "roof_kept": 19200,
+          "roof_removed": 0,
+          "contamination_kept": 0,
+          "contamination_removed": 0,
+          "valid_observation_occurrences": 19200,
+          "roof_retention": 1.0,
+          "contamination_rejection": null,
+          "micro_point_accuracy": 1.0
+        }
+      },
+      "by_city": {
+        "Groningen": {
+          "roof_kept": 1074555,
+          "roof_removed": 4576,
+          "contamination_kept": 21664,
+          "contamination_removed": 483205,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9957595509720322,
+          "contamination_rejection": 0.9570898589535107,
+          "micro_point_accuracy": 0.9834343434343434
+        },
+        "Maastricht": {
+          "roof_kept": 1071809,
+          "roof_removed": 3374,
+          "contamination_kept": 19971,
+          "contamination_removed": 488846,
+          "valid_observation_occurrences": 1584000,
+          "roof_retention": 0.9968619295505974,
+          "contamination_rejection": 0.9607501321693261,
+          "micro_point_accuracy": 0.985261994949495
+        }
+      },
+      "cutoff": 0.3665897250175476,
+      "prediction_metadata_sha256": "51749b6ff8cae91996d2b68f2781940ea1ec1aef9b667bb34177badec14ed7a4"
+    }
+  },
+  "buildings": 600,
+  "clouds": 7200,
+  "catalog_sha256": "9b1786973b8d89426927ccec25493ada6bce828fb145d4f264298b68540a8d5d",
+  "unique_observation_occurrences_only": true,
+  "automatic_teacher_synthetic_labels": true,
+  "used_for_selection": false,
+  "metric_weighting": "Micro over valid synthetic observation occurrences; per-condition/city diagnostics. Native building-macro loss is primary.",
+  "_publication": {
+    "original_source_sha256": "7fb83e9bb09711472ed3e1104bbda9480cc18594c65b836956275980ddcd56b5",
+    "original_source": "source:scaling/reports/test_point_diagnostics.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

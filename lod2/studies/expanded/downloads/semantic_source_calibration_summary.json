@@ -1,0 +1,330 @@
+{
+  "status": "complete",
+  "rows": [
+    {
+      "model": "semantic2_gated",
+      "seed": 20261023,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.8250000000000001,
+      "source_validation_CE": 0.26863861083984375,
+      "roof_retention": 0.995010495185852,
+      "vegetation_or_mixed_hedge_rejection": 0.6601391434669495,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9070835113525391
+    },
+    {
+      "model": "semantic2_gated",
+      "seed": 20261024,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.9500000000000002,
+      "source_validation_CE": 0.25816357135772705,
+      "roof_retention": 0.9954443573951721,
+      "vegetation_or_mixed_hedge_rejection": 0.49580880999565125,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9083674550056458
+    },
+    {
+      "model": "semantic2_gated",
+      "seed": 20261025,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.8750000000000001,
+      "source_validation_CE": 0.2671864330768585,
+      "roof_retention": 0.9951792359352112,
+      "vegetation_or_mixed_hedge_rejection": 0.6509601473808289,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9055342674255371
+    },
+    {
+      "model": "semantic2_gated_ssl",
+      "seed": 20261023,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.8600000000000001,
+      "source_validation_CE": 0.2663298547267914,
+      "roof_retention": 0.9951550960540771,
+      "vegetation_or_mixed_hedge_rejection": 0.6775102615356445,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9096726179122925
+    },
+    {
+      "model": "semantic2_gated_ssl",
+      "seed": 20261024,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.9000000000000001,
+      "source_validation_CE": 0.26073938608169556,
+      "roof_retention": 0.9951792359352112,
+      "vegetation_or_mixed_hedge_rejection": 0.6117115616798401,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9074230194091797
+    },
+    {
+      "model": "semantic2_gated_ssl",
+      "seed": 20261025,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.8800000000000001,
+      "source_validation_CE": 0.2764943540096283,
+      "roof_retention": 0.9952273964881897,
+      "vegetation_or_mixed_hedge_rejection": 0.6528624892234802,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9057676792144775
+    },
+    {
+      "model": "semantic2_late_aug",
+      "seed": 20261023,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.9450000000000002,
+      "source_validation_CE": 0.26620593667030334,
+      "roof_retention": 0.995299756526947,
+      "vegetation_or_mixed_hedge_rejection": 0.48741453886032104,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9097150564193726
+    },
+    {
+      "model": "semantic2_late_aug",
+      "seed": 20261024,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.8650000000000001,
+      "source_validation_CE": 0.252127468585968,
+      "roof_retention": 0.9951310157775879,
+      "vegetation_or_mixed_hedge_rejection": 0.6898282170295715,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9106594324111938
+    },
+    {
+      "model": "semantic2_late_aug",
+      "seed": 20261025,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.8750000000000001,
+      "source_validation_CE": 0.2685796320438385,
+      "roof_retention": 0.9952033162117004,
+      "vegetation_or_mixed_hedge_rejection": 0.6489863991737366,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9050408601760864
+    },
+    {
+      "model": "semantic2_late",
+      "seed": 20261023,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.9150000000000001,
+      "source_validation_CE": 0.2742314040660858,
+      "roof_retention": 0.9953479170799255,
+      "vegetation_or_mixed_hedge_rejection": 0.6367873549461365,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.9047702550888062
+    },
+    {
+      "model": "semantic2_late",
+      "seed": 20261024,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.8800000000000001,
+      "source_validation_CE": 0.27610450983047485,
+      "roof_retention": 0.9950827956199646,
+      "vegetation_or_mixed_hedge_rejection": 0.613114595413208,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.8988545536994934
+    },
+    {
+      "model": "semantic2_late",
+      "seed": 20261025,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.9350000000000002,
+      "source_validation_CE": 0.2735268175601959,
+      "roof_retention": 0.9951310157775879,
+      "vegetation_or_mixed_hedge_rejection": 0.5967897176742554,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.8983186483383179
+    },
+    {
+      "model": "semantic2_point",
+      "seed": 20261023,
+      "temperature": 1.3,
+      "vegetation_cutoff": 0.8600000000000001,
+      "source_validation_CE": 0.37677305936813354,
+      "roof_retention": 0.9952515363693237,
+      "vegetation_or_mixed_hedge_rejection": 0.4877117872238159,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.8424350619316101
+    },
+    {
+      "model": "semantic2_point",
+      "seed": 20261024,
+      "temperature": 1.0,
+      "vegetation_cutoff": 0.9350000000000002,
+      "source_validation_CE": 0.3704510033130646,
+      "roof_retention": 0.995299756526947,
+      "vegetation_or_mixed_hedge_rejection": 0.41066524386405945,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.843140721321106
+    },
+    {
+      "model": "semantic2_point",
+      "seed": 20261025,
+      "temperature": 1.0,
+      "vegetation_cutoff": 0.9200000000000002,
+      "source_validation_CE": 0.37832075357437134,
+      "roof_retention": 0.9951068758964539,
+      "vegetation_or_mixed_hedge_rejection": 0.4255751669406891,
+      "unique_source_validation_points": 188481,
+      "accuracy": 0.8419840931892395
+    }
+  ],
+  "summary": [
+    {
+      "family": "semantic2_gated",
+      "completed_seeds": 3,
+      "seeds": [
+        20261023,
+        20261024,
+        20261025
+      ],
+      "accuracy": {
+        "mean": 0.9069950779279073,
+        "minimum": 0.9055342674255371,
+        "maximum": 0.9083674550056458
+      },
+      "roof_retention": {
+        "mean": 0.9952113628387451,
+        "minimum": 0.995010495185852,
+        "maximum": 0.9954443573951721
+      },
+      "vegetation_or_mixed_hedge_rejection": {
+        "mean": 0.6023027002811432,
+        "minimum": 0.49580880999565125,
+        "maximum": 0.6601391434669495
+      },
+      "source_validation_CE": {
+        "mean": 0.2646628717581431,
+        "minimum": 0.25816357135772705,
+        "maximum": 0.26863861083984375
+      }
+    },
+    {
+      "family": "semantic2_gated_ssl",
+      "completed_seeds": 3,
+      "seeds": [
+        20261023,
+        20261024,
+        20261025
+      ],
+      "accuracy": {
+        "mean": 0.9076211055119833,
+        "minimum": 0.9057676792144775,
+        "maximum": 0.9096726179122925
+      },
+      "roof_retention": {
+        "mean": 0.995187242825826,
+        "minimum": 0.9951550960540771,
+        "maximum": 0.9952273964881897
+      },
+      "vegetation_or_mixed_hedge_rejection": {
+        "mean": 0.6473614374796549,
+        "minimum": 0.6117115616798401,
+        "maximum": 0.6775102615356445
+      },
+      "source_validation_CE": {
+        "mean": 0.2678545316060384,
+        "minimum": 0.26073938608169556,
+        "maximum": 0.2764943540096283
+      }
+    },
+    {
+      "family": "semantic2_late",
+      "completed_seeds": 3,
+      "seeds": [
+        20261023,
+        20261024,
+        20261025
+      ],
+      "accuracy": {
+        "mean": 0.9006478190422058,
+        "minimum": 0.8983186483383179,
+        "maximum": 0.9047702550888062
+      },
+      "roof_retention": {
+        "mean": 0.995187242825826,
+        "minimum": 0.9950827956199646,
+        "maximum": 0.9953479170799255
+      },
+      "vegetation_or_mixed_hedge_rejection": {
+        "mean": 0.6155638893445333,
+        "minimum": 0.5967897176742554,
+        "maximum": 0.6367873549461365
+      },
+      "source_validation_CE": {
+        "mean": 0.2746209104855855,
+        "minimum": 0.2735268175601959,
+        "maximum": 0.27610450983047485
+      }
+    },
+    {
+      "family": "semantic2_late_aug",
+      "completed_seeds": 3,
+      "seeds": [
+        20261023,
+        20261024,
+        20261025
+      ],
+      "accuracy": {
+        "mean": 0.9084717830022176,
+        "minimum": 0.9050408601760864,
+        "maximum": 0.9106594324111938
+      },
+      "roof_retention": {
+        "mean": 0.9952113628387451,
+        "minimum": 0.9951310157775879,
+        "maximum": 0.995299756526947
+      },
+      "vegetation_or_mixed_hedge_rejection": {
+        "mean": 0.6087430516878763,
+        "minimum": 0.48741453886032104,
+        "maximum": 0.6898282170295715
+      },
+      "source_validation_CE": {
+        "mean": 0.2623043457667033,
+        "minimum": 0.252127468585968,
+        "maximum": 0.2685796320438385
+      }
+    },
+    {
+      "family": "semantic2_point",
+      "completed_seeds": 3,
+      "seeds": [
+        20261023,
+        20261024,
+        20261025
+      ],
+      "accuracy": {
+        "mean": 0.8425199588139852,
+        "minimum": 0.8419840931892395,
+        "maximum": 0.843140721321106
+      },
+      "roof_retention": {
+        "mean": 0.9952193895975748,
+        "minimum": 0.9951068758964539,
+        "maximum": 0.995299756526947
+      },
+      "vegetation_or_mixed_hedge_rejection": {
+        "mean": 0.4413173993428548,
+        "minimum": 0.41066524386405945,
+        "maximum": 0.4877117872238159
+      },
+      "source_validation_CE": {
+        "mean": 0.37518160541852313,
+        "minimum": 0.3704510033130646,
+        "maximum": 0.37832075357437134
+      }
+    }
+  ],
+  "source": "ISPRS officialTraining single scene; spatialtrain/sourcevalidation separation; unique-point aggregation",
+  "unique_source_validation_points": 188481,
+  "checkpoint_and_temperature_threshold_selected_on_these_source_validation_points": true,
+  "target_US_labels_or_accuracy": false,
+  "optical_inputs": "SharedR,G,NIR andhandderived8features, not a spatialimageCNN; no syntheticNAIPimagery.",
+  "gated_vs_late_aug": "Same modalitydrop/spectralassociationshuffle augmentation; gatingaddslearnedscalarperpoint. Not fullcrossattention or metriccoregistration.",
+  "SSL": "Labelledsourcereplay+unlabelledBackBay EMAconsistency, not purelylabel-freesourcepretraining. Source CEselection afteradaptation isnot evidenceofUS accuracyimprovement.",
+  "_publication": {
+    "original_source_sha256": "d567c941920394416ecede0480a3ee5f01028cb848062a7192621a4c640f5ed2",
+    "original_source": "source:expanded/reports/semantic_source_calibration_summary.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

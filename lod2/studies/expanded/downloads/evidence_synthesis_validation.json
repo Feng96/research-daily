@@ -1,0 +1,2521 @@
+{
+  "split": "validation",
+  "status": "reporting_diagnostics_only",
+  "main_cohort_contrasts": [
+    {
+      "candidate": "graph_cls_hard",
+      "reference": "global_cls_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": -0.05312566439418935,
+      "building_bootstrap_CI95": [
+        -0.07628019504844812,
+        -0.02972688349923843
+      ],
+      "buildings_mean_benefit_over_2cm": 39,
+      "buildings_mean_harm_over_2cm": 9,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": -0.0010128752468995634,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.045532398463375465,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.004060928409518508,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.0007232342711631073,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.013522054931401106,
+          "benefited_over_2cm": 26,
+          "harmed_over_2cm": 15
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": -0.55274971533906,
+          "benefited_over_2cm": 30,
+          "harmed_over_2cm": 9
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.014646630634636348,
+          "benefited_over_2cm": 25,
+          "harmed_over_2cm": 15
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.01356137069726005,
+          "benefited_over_2cm": 13,
+          "harmed_over_2cm": 9
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": -0.020267974673804378,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 5
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "graph_reweight_hard",
+      "reference": "graph_cls_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": 0.0033440595494334284,
+      "building_bootstrap_CI95": [
+        -0.010116681892221957,
+        0.020424845111115027
+      ],
+      "buildings_mean_benefit_over_2cm": 8,
+      "buildings_mean_harm_over_2cm": 10,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0007748839068610021,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0033216996256934237,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.014953930130870518,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.06932801560406363,
+          "benefited_over_2cm": 13,
+          "harmed_over_2cm": 16
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": -0.012320231440290746,
+          "benefited_over_2cm": 7,
+          "harmed_over_2cm": 6
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.004123690774707081,
+          "benefited_over_2cm": 8,
+          "harmed_over_2cm": 12
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.025591604628131436,
+          "benefited_over_2cm": 10,
+          "harmed_over_2cm": 7
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.0019788792339506893,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "graph_normal_hard",
+      "reference": "graph_cls_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": 0.005321552145735746,
+      "building_bootstrap_CI95": [
+        -0.006047614845330978,
+        0.01744837743289824
+      ],
+      "buildings_mean_benefit_over_2cm": 7,
+      "buildings_mean_harm_over_2cm": 11,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0017052749880188136,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.00579439497219499,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0057404374308723735,
+          "benefited_over_2cm": 14,
+          "harmed_over_2cm": 20
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": 0.05991180909681151,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.01522701313283834,
+          "benefited_over_2cm": 13,
+          "harmed_over_2cm": 8
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.0202473192242537,
+          "benefited_over_2cm": 9,
+          "harmed_over_2cm": 13
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.0005778280072982924,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "graph_support_balanced_hard",
+      "reference": "graph_cls_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": 0.002536190211305936,
+      "building_bootstrap_CI95": [
+        -0.009624633532414007,
+        0.01612258606888383
+      ],
+      "buildings_mean_benefit_over_2cm": 9,
+      "buildings_mean_harm_over_2cm": 10,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0019682119141065874,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.002968148678989875,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.005988691253659244,
+          "benefited_over_2cm": 15,
+          "harmed_over_2cm": 19
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": 0.04872932322142619,
+          "benefited_over_2cm": 6,
+          "harmed_over_2cm": 5
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.0014684412965751208,
+          "benefited_over_2cm": 13,
+          "harmed_over_2cm": 8
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.004913505451572805,
+          "benefited_over_2cm": 8,
+          "harmed_over_2cm": 16
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": -0.0009880420908513182,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "graph_support_hard",
+      "reference": "graph_reweight_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": -0.0007338479999794946,
+      "building_bootstrap_CI95": [
+        -0.019190888367894936,
+        0.01508230466635233
+      ],
+      "buildings_mean_benefit_over_2cm": 9,
+      "buildings_mean_harm_over_2cm": 12,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0009727187478291869,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.004580758526513521,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 3
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": -0.014954250920706458,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.08442112117356536,
+          "benefited_over_2cm": 18,
+          "harmed_over_2cm": 12
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": 0.04870585982053901,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.0038514175798539233,
+          "benefited_over_2cm": 15,
+          "harmed_over_2cm": 8
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.04141600675767098,
+          "benefited_over_2cm": 9,
+          "harmed_over_2cm": 13
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.0006907073174774875,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "graph_cls_mean3_hard",
+      "reference": "graph_cls_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": -0.00548465714863582,
+      "building_bootstrap_CI95": [
+        -0.01604595279178091,
+        0.0050246351291195306
+      ],
+      "buildings_mean_benefit_over_2cm": 12,
+      "buildings_mean_harm_over_2cm": 5,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0007088553782140017,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.001407626734490499,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.01429547081360894,
+          "benefited_over_2cm": 16,
+          "harmed_over_2cm": 15
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": -0.002969150521749719,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.008547271184831555,
+          "benefited_over_2cm": 8,
+          "harmed_over_2cm": 8
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.03847306870326685,
+          "benefited_over_2cm": 10,
+          "harmed_over_2cm": 5
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.0005855575525317262,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "graph_support_mean3_hard",
+      "reference": "graph_support_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": -0.006929947641867151,
+      "building_bootstrap_CI95": [
+        -0.013321493527948721,
+        -0.001266774776145425
+      ],
+      "buildings_mean_benefit_over_2cm": 12,
+      "buildings_mean_harm_over_2cm": 4,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": -3.6402725757134215e-05,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": -2.277923557823389e-05,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.0012287883747379986,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 3
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 3.207898359419703e-07,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.008233629047014954,
+          "benefited_over_2cm": 11,
+          "harmed_over_2cm": 18
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": -0.0319005128676089,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": 0.004704204813396523,
+          "benefited_over_2cm": 6,
+          "harmed_over_2cm": 7
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0652131298630657,
+          "benefited_over_2cm": 13,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": -0.0001534900353812742,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "graph_support_guard",
+      "reference": "graph_support_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": 0.0017194079434799884,
+      "building_bootstrap_CI95": [
+        -0.004379848717953118,
+        0.007304429522963957
+      ],
+      "buildings_mean_benefit_over_2cm": 6,
+      "buildings_mean_harm_over_2cm": 10,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.00032757115773339625,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0022552371660161294,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 3.207898359419703e-07,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.008631693434316844,
+          "benefited_over_2cm": 14,
+          "harmed_over_2cm": 24
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": -0.0037326125987053684,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": 0.006563760751567521,
+          "benefited_over_2cm": 8,
+          "harmed_over_2cm": 17
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.027776392718837462,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 14
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.0005843931028238751,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "graph_support_mean3_guard",
+      "reference": "graph_support_mean3_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": 0.003628947783949671,
+      "building_bootstrap_CI95": [
+        -0.003064198059154639,
+        0.009583233396524627
+      ],
+      "buildings_mean_benefit_over_2cm": 4,
+      "buildings_mean_harm_over_2cm": 11,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 3.6402725757134215e-05,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.00032127620765791105,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0010265327045041294,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.01664786305042862,
+          "benefited_over_2cm": 12,
+          "harmed_over_2cm": 17
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": 0.020339951881150495,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": 0.004532350995615823,
+          "benefited_over_2cm": 10,
+          "harmed_over_2cm": 17
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.03425760625031008,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 12
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.0017341811018373415,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "weighted_ransac_support",
+      "reference": "graph_support_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": 0.3368391429949714,
+      "building_bootstrap_CI95": [
+        0.268727753167037,
+        0.4097598719871044
+      ],
+      "buildings_mean_benefit_over_2cm": 2,
+      "buildings_mean_harm_over_2cm": 70,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.27098542907693624,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 53
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.4559767225234378,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 44
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.4829741218125364,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 48
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.5868402406295902,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 55
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.2886782474099457,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 47
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.359198786578149,
+          "benefited_over_2cm": 7,
+          "harmed_over_2cm": 55
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": 0.11857861328772348,
+          "benefited_over_2cm": 11,
+          "harmed_over_2cm": 25
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": 0.28321745140307875,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 52
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.2137638553955547,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 26
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.2994384728664755,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 50
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.3276431109950772,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 51
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.35477466396115154,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 4
+        }
+      ]
+    },
+    {
+      "candidate": "residual_veto",
+      "reference": "graph_support_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": -0.00655418926936244,
+      "building_bootstrap_CI95": [
+        -0.019201251266920204,
+        0.0026415240505986465
+      ],
+      "buildings_mean_benefit_over_2cm": 8,
+      "buildings_mean_harm_over_2cm": 2,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": 7.516482068067251e-05,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.0023704410827503474,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 3
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": -0.0009953030790187654,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.004296281806461959,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": -0.07932369535362813,
+          "benefited_over_2cm": 9,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.001123499730403181,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.023466203224580633,
+          "benefited_over_2cm": 12,
+          "harmed_over_2cm": 5
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.028109106058312378,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "global_relative_xyz_hard",
+      "reference": "global_cls_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": 0.0013098177584424133,
+      "building_bootstrap_CI95": [
+        -0.014230635455985553,
+        0.01679010684492902
+      ],
+      "buildings_mean_benefit_over_2cm": 15,
+      "buildings_mean_harm_over_2cm": 17,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": -0.0010128752468995634,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.013845267388485813,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 6
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.003027820492789349,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.0023049255273230873,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.0012543726965351556,
+          "benefited_over_2cm": 17,
+          "harmed_over_2cm": 15
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": -0.0031427694968716897,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": 0.02744361772189674,
+          "benefited_over_2cm": 10,
+          "harmed_over_2cm": 16
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.003582006250282555,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 3
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.01669289222602444,
+          "benefited_over_2cm": 10,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.0008367388730060413,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "global_height_only_hard",
+      "reference": "global_cls_hard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": 0.07964013627437717,
+      "building_bootstrap_CI95": [
+        0.045271117116609444,
+        0.11858879402283301
+      ],
+      "buildings_mean_benefit_over_2cm": 12,
+      "buildings_mean_harm_over_2cm": 49,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.03686456712550945,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.11341685226736072,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 11
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.2301723692925391,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 18
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.009153185228939714,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 3
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.012547126702015904,
+          "benefited_over_2cm": 18,
+          "harmed_over_2cm": 24
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.031801502972388165,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": -0.44632699102053264,
+          "benefited_over_2cm": 26,
+          "harmed_over_2cm": 10
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.0022227250749796003,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.011043573990133098,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.7657396371272782,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 50
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.008734245244265002,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 9
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.18475829143760908,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 2
+        }
+      ]
+    },
+    {
+      "candidate": "observation_router_safe",
+      "reference": "graph_support_mean3_guard",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": 0.5958793677021182,
+      "building_bootstrap_CI95": [
+        0.5508283880995661,
+        0.6401149525812663
+      ],
+      "buildings_mean_benefit_over_2cm": 0,
+      "buildings_mean_harm_over_2cm": 80,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": 1.7543334860818594,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 76
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": 1.6489788411606363,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 74
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.05492882000522248,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 25
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": 1.716883708169155,
+          "benefited_over_2cm": 6,
+          "harmed_over_2cm": 69
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": 0.004337920437542267,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 4
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": 1.5291452501055325,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 73
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.44194438646547063,
+          "benefited_over_2cm": 8,
+          "harmed_over_2cm": 39
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "observation_router_geometryfallback",
+      "reference": "geometry",
+      "building_denominator": 80,
+      "cloud_denominator": 960,
+      "paired_mean_delta_m": -0.005210020742442233,
+      "building_bootstrap_CI95": [
+        -0.01055820903176265,
+        -0.0004516362486483394
+      ],
+      "buildings_mean_benefit_over_2cm": 13,
+      "buildings_mean_harm_over_2cm": 3,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 80,
+          "mean_delta_m": -6.317008205529175e-05,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 80,
+          "mean_delta_m": 0.0005289193623351674,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "hole",
+          "buildings": 80,
+          "mean_delta_m": -0.001016871962413883,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "low_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.016617621526082323,
+          "benefited_over_2cm": 6,
+          "harmed_over_2cm": 3
+        },
+        {
+          "case": "noise",
+          "buildings": 80,
+          "mean_delta_m": 0.013997287608131431,
+          "benefited_over_2cm": 11,
+          "harmed_over_2cm": 18
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 80,
+          "mean_delta_m": -0.01172081481945276,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "scattered_tree",
+          "buildings": 80,
+          "mean_delta_m": -0.014015568379464518,
+          "benefited_over_2cm": 16,
+          "harmed_over_2cm": 10
+        },
+        {
+          "case": "sparse",
+          "buildings": 80,
+          "mean_delta_m": -0.004759669869639654,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tilted_canopy",
+          "buildings": 80,
+          "mean_delta_m": -0.028852739240664955,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "tree_multiple",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 80,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    }
+  ],
+  "separate_completion_cohort_contrasts": [
+    {
+      "candidate": "pretrained_roofdiffusion_native",
+      "reference": "raster_linear_native",
+      "building_denominator": 10,
+      "cloud_denominator": 60,
+      "paired_mean_delta_m": 0.09343950575006552,
+      "building_bootstrap_CI95": [
+        -0.018802946672070463,
+        0.2262249792314492
+      ],
+      "buildings_mean_benefit_over_2cm": 3,
+      "buildings_mean_harm_over_2cm": 6,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 10,
+          "mean_delta_m": -0.009037391201549935,
+          "benefited_over_2cm": 4,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 10,
+          "mean_delta_m": 0.32545329025860353,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 6
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 10,
+          "mean_delta_m": 0.2866188101248529,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 8
+        },
+        {
+          "case": "hole",
+          "buildings": 10,
+          "mean_delta_m": -0.14943593233746671,
+          "benefited_over_2cm": 7,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 10,
+          "mean_delta_m": 0.10792571365880872,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 6
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 10,
+          "mean_delta_m": -0.000887456002855258,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 5
+        }
+      ]
+    },
+    {
+      "candidate": "hybrid_global_cls_linear_native",
+      "reference": "raster_linear_native",
+      "building_denominator": 10,
+      "cloud_denominator": 60,
+      "paired_mean_delta_m": -0.7724520180432427,
+      "building_bootstrap_CI95": [
+        -0.897656004390239,
+        -0.6592468154435119
+      ],
+      "buildings_mean_benefit_over_2cm": 10,
+      "buildings_mean_harm_over_2cm": 0,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 10,
+          "mean_delta_m": 0.008234744874121045,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 10,
+          "mean_delta_m": -2.1167942355240963,
+          "benefited_over_2cm": 10,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 10,
+          "mean_delta_m": -1.7543007042892644,
+          "benefited_over_2cm": 9,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "hole",
+          "buildings": 10,
+          "mean_delta_m": -1.0747958079093678e-12,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 10,
+          "mean_delta_m": -0.7718519133184539,
+          "benefited_over_2cm": 7,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 10,
+          "mean_delta_m": -6.88446522012498e-13,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "hybrid_graph_support_linear_native",
+      "reference": "hybrid_global_cls_linear_native",
+      "building_denominator": 10,
+      "cloud_denominator": 60,
+      "paired_mean_delta_m": -0.19228223994278718,
+      "building_bootstrap_CI95": [
+        -0.2952798566290582,
+        -0.09949834903528568
+      ],
+      "buildings_mean_benefit_over_2cm": 8,
+      "buildings_mean_harm_over_2cm": 0,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 10,
+          "mean_delta_m": -0.008243068615820628,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 10,
+          "mean_delta_m": -0.09012850125240017,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 10,
+          "mean_delta_m": -0.022484340434137044,
+          "benefited_over_2cm": 1,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "hole",
+          "buildings": 10,
+          "mean_delta_m": 1.907229929543064e-12,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 10,
+          "mean_delta_m": -1.0328375293563883,
+          "benefited_over_2cm": 9,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 10,
+          "mean_delta_m": 1.1566581026301038e-13,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "hybrid_graph_support_selective_native",
+      "reference": "hybrid_graph_support_linear_native",
+      "building_denominator": 10,
+      "cloud_denominator": 60,
+      "paired_mean_delta_m": 0.21426240771386254,
+      "building_bootstrap_CI95": [
+        0.05942417027811414,
+        0.39439878351347324
+      ],
+      "buildings_mean_benefit_over_2cm": 2,
+      "buildings_mean_harm_over_2cm": 7,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 10,
+          "mean_delta_m": -0.0476049317335652,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 10,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 10,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "hole",
+          "buildings": 10,
+          "mean_delta_m": 0.491579260780035,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 5
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 10,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 10,
+          "mean_delta_m": 0.8416001172367056,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 6
+        }
+      ]
+    },
+    {
+      "candidate": "hybrid_global_cls_selective_native",
+      "reference": "hybrid_global_cls_linear_native",
+      "building_denominator": 10,
+      "cloud_denominator": 60,
+      "paired_mean_delta_m": 0.2200610020183491,
+      "building_bootstrap_CI95": [
+        0.05990890047098129,
+        0.4061207303429009
+      ],
+      "buildings_mean_benefit_over_2cm": 2,
+      "buildings_mean_harm_over_2cm": 7,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 10,
+          "mean_delta_m": -0.04644955032033031,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 10,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 10,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "hole",
+          "buildings": 10,
+          "mean_delta_m": 0.4915792607819423,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 5
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 10,
+          "mean_delta_m": 0.033636184411661496,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 3
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 10,
+          "mean_delta_m": 0.8416001172368214,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 6
+        }
+      ]
+    },
+    {
+      "candidate": "learned_quality_router_native",
+      "reference": "support_count_router_native",
+      "building_denominator": 10,
+      "cloud_denominator": 60,
+      "paired_mean_delta_m": -0.08730313362151224,
+      "building_bootstrap_CI95": [
+        -0.1774109681736807,
+        -1.057987031316543e-13
+      ],
+      "buildings_mean_benefit_over_2cm": 3,
+      "buildings_mean_harm_over_2cm": 0,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 10,
+          "mean_delta_m": 0.023067345623802374,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 10,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 10,
+          "mean_delta_m": 0.0,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "hole",
+          "buildings": 10,
+          "mean_delta_m": -0.5212859993642075,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 10,
+          "mean_delta_m": -0.025600147988350953,
+          "benefited_over_2cm": 2,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 10,
+          "mean_delta_m": -3.1739610939496287e-13,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    },
+    {
+      "candidate": "learned_quality_router_native",
+      "reference": "hybrid_global_cls_linear_native",
+      "building_denominator": 10,
+      "cloud_denominator": 60,
+      "paired_mean_delta_m": -0.007508817809185234,
+      "building_bootstrap_CI95": [
+        -0.029902285487575047,
+        0.017287898475527197
+      ],
+      "buildings_mean_benefit_over_2cm": 4,
+      "buildings_mean_harm_over_2cm": 2,
+      "by_condition": [
+        {
+          "case": "clean",
+          "buildings": 10,
+          "mean_delta_m": -0.023382204696527954,
+          "benefited_over_2cm": 3,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "dense_canopy",
+          "buildings": 10,
+          "mean_delta_m": 3.469446951953614e-17,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "flat_canopy",
+          "buildings": 10,
+          "mean_delta_m": 2.2204460492503132e-17,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        },
+        {
+          "case": "hole",
+          "buildings": 10,
+          "mean_delta_m": -0.02970673858226518,
+          "benefited_over_2cm": 5,
+          "harmed_over_2cm": 2
+        },
+        {
+          "case": "occlusion_heavy",
+          "buildings": 10,
+          "mean_delta_m": 0.0080360364233106,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 1
+        },
+        {
+          "case": "very_sparse",
+          "buildings": 10,
+          "mean_delta_m": 3.7105041261753513e-13,
+          "benefited_over_2cm": 0,
+          "harmed_over_2cm": 0
+        }
+      ]
+    }
+  ],
+  "main_loss_decomposition": [
+    {
+      "method": "geometry",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 1.2755693424884242,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.007041538639506272,
+      "covered_grid_capped_error_component_m": 1.0601944705155848,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "geometry_support_guard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7226703106503941,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.5081457788136089,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "global_cls_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7532377466014263,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.5387132147646411,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "global_height_only_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 22,
+      "mean_total_capped_loss_m": 0.8328778828758033,
+      "native_failure_penalty_component_m": 0.22916666666666666,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.5975200177056849,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "global_large_basic_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.8115540101713533,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.5970294783345681,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "global_relative_xyz_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7545475643598685,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.5400230325230833,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "global_small_basic_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7749236396452525,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.5603991078084672,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "global_small_diverse_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7355537316245633,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.5210291997877781,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_cls_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7001120822072369,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.007041538639506272,
+      "covered_grid_capped_error_component_m": 0.4847372102343972,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_cls_mean3_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.694627425058601,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.007041538639506272,
+      "covered_grid_capped_error_component_m": 0.4792525530857613,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_normal_guard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7111391956405408,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.49661466380375563,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_normal_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7054336343529727,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.006417647778814169,
+      "covered_grid_capped_error_component_m": 0.49068265324082516,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_reweight_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7034561417566703,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.01715183275715333,
+      "covered_grid_capped_error_component_m": 0.4779709756661836,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_support_balanced_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7026482724185427,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.48812374058175745,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_support_guard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7044417017001708,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.4899171698633856,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_support_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.7027222937566908,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.4881977619199056,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_support_mean3_abstain",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.729798728394811,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.012993919591887225,
+      "covered_grid_capped_error_component_m": 0.5084714754695904,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_support_mean3_guard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.6994212938987734,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.4848967620619882,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_support_mean3_hard",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.6957923461148237,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.007041538639506272,
+      "covered_grid_capped_error_component_m": 0.480417474141984,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "graph_support_mean3_residual",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.6917832109887433,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.007041538639506272,
+      "covered_grid_capped_error_component_m": 0.4764083390159036,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "observation_router_geometryfallback",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 1.2703593217459823,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.007041538639506272,
+      "covered_grid_capped_error_component_m": 1.0549844497731429,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "observation_router_safe",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 1.2953006616008915,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.027037512175119346,
+      "covered_grid_capped_error_component_m": 1.0599298160924389,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "raw",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 1.297975456835917,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.027037512175119346,
+      "covered_grid_capped_error_component_m": 1.0626046113274643,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "residual_veto",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 20,
+      "mean_total_capped_loss_m": 0.6961681044873284,
+      "native_failure_penalty_component_m": 0.20833333333333334,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.48164357265054314,
+      "components_sum_to_original_fixed_denominator_loss": true
+    },
+    {
+      "method": "weighted_ransac_support",
+      "cloud_denominator": 960,
+      "native_failed_or_nonLoD2": 24,
+      "mean_total_capped_loss_m": 1.0395614367516621,
+      "native_failure_penalty_component_m": 0.25,
+      "successful_model_uncovered_grid_penalty_component_m": 0.00619119850345185,
+      "covered_grid_capped_error_component_m": 0.7833702382482103,
+      "components_sum_to_original_fixed_denominator_loss": true
+    }
+  ],
+  "point_diagnostics_available_models": [
+    {
+      "model": "global_cls_s20261023",
+      "cutoff": 0.16499999165534973,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9950724187923797,
+      "micro_roof_retention": 0.9951381155293558,
+      "roof_retention_per_cloud_q05": 0.9721216482351159,
+      "clouds_roof_retention_below_99percent": 452,
+      "micro_contaminant_rejection": 0.8196449222598192,
+      "macro_brier": 0.03380660649604178
+    },
+    {
+      "model": "global_cls_s20261024",
+      "cutoff": 0.22499999403953552,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9949192955379759,
+      "micro_roof_retention": 0.9950897689812993,
+      "roof_retention_per_cloud_q05": 0.9731098307852832,
+      "clouds_roof_retention_below_99percent": 438,
+      "micro_contaminant_rejection": 0.8093093093093093,
+      "macro_brier": 0.034675697373950716
+    },
+    {
+      "model": "global_cls_s20261025",
+      "cutoff": 0.1550000011920929,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9948527862788348,
+      "micro_roof_retention": 0.995025862624673,
+      "roof_retention_per_cloud_q05": 0.9688655155642023,
+      "clouds_roof_retention_below_99percent": 511,
+      "micro_contaminant_rejection": 0.8259162490541254,
+      "macro_brier": 0.03233671838949189
+    },
+    {
+      "model": "global_height_only_s20261023",
+      "cutoff": 0.12999999523162842,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9957923586722257,
+      "micro_roof_retention": 0.9953398373333155,
+      "roof_retention_per_cloud_q05": 1.0,
+      "clouds_roof_retention_below_99percent": 177,
+      "micro_contaminant_rejection": 0.6494469905721887,
+      "macro_brier": 0.06137665549305954
+    },
+    {
+      "model": "global_large_basic_s20261023",
+      "cutoff": 0.28999999165534973,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9950843328109754,
+      "micro_roof_retention": 0.9950247512097751,
+      "roof_retention_per_cloud_q05": 0.9838709677419355,
+      "clouds_roof_retention_below_99percent": 345,
+      "micro_contaminant_rejection": 0.6703573621164747,
+      "macro_brier": 0.07048650630074137
+    },
+    {
+      "model": "global_relative_xyz_s20261023",
+      "cutoff": 0.1550000011920929,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9951176672750244,
+      "micro_roof_retention": 0.9950675406833424,
+      "roof_retention_per_cloud_q05": 0.9771794552141121,
+      "clouds_roof_retention_below_99percent": 414,
+      "micro_contaminant_rejection": 0.8163623211166793,
+      "macro_brier": 0.033752895750071475
+    },
+    {
+      "model": "global_small_basic_s20261023",
+      "cutoff": 0.0949999988079071,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.995141687201353,
+      "micro_roof_retention": 0.9950730977578316,
+      "roof_retention_per_cloud_q05": 0.9941341925523952,
+      "clouds_roof_retention_below_99percent": 260,
+      "micro_contaminant_rejection": 0.7006039319826959,
+      "macro_brier": 0.06522970055002117
+    },
+    {
+      "model": "global_small_diverse_s20261023",
+      "cutoff": 0.16499999165534973,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9952296834493312,
+      "micro_roof_retention": 0.9950453123853853,
+      "roof_retention_per_cloud_q05": 0.9827586206896551,
+      "clouds_roof_retention_below_99percent": 358,
+      "micro_contaminant_rejection": 0.7919456699171438,
+      "macro_brier": 0.03623748258822117
+    },
+    {
+      "model": "graph_cls_s20261023",
+      "cutoff": 0.47999998927116394,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9943717677127317,
+      "micro_roof_retention": 0.9950542037045681,
+      "roof_retention_per_cloud_q05": 0.9686520376175548,
+      "clouds_roof_retention_below_99percent": 615,
+      "micro_contaminant_rejection": 0.9470869443135688,
+      "macro_brier": 0.013142606701478638
+    },
+    {
+      "model": "graph_cls_s20261024",
+      "cutoff": 0.4449999928474426,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9944371242160133,
+      "micro_roof_retention": 0.9950680963907913,
+      "roof_retention_per_cloud_q05": 0.9666666666666667,
+      "clouds_roof_retention_below_99percent": 643,
+      "micro_contaminant_rejection": 0.9474331700956107,
+      "macro_brier": 0.01286902036968543
+    },
+    {
+      "model": "graph_cls_s20261025",
+      "cutoff": 0.5,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9943593313358948,
+      "micro_roof_retention": 0.9950792105397698,
+      "roof_retention_per_cloud_q05": 0.9639335812066926,
+      "clouds_roof_retention_below_99percent": 641,
+      "micro_contaminant_rejection": 0.9513415951609295,
+      "macro_brier": 0.012310067265154939
+    },
+    {
+      "model": "graph_normal_s20261023",
+      "cutoff": 0.4699999988079071,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9945475867369192,
+      "micro_roof_retention": 0.9950603164865063,
+      "roof_retention_per_cloud_q05": 0.9687451018808777,
+      "clouds_roof_retention_below_99percent": 621,
+      "micro_contaminant_rejection": 0.9434985698852577,
+      "macro_brier": 0.01387659447145162,
+      "normal_error_roof_deg": 5.841726779937744,
+      "normal_error_contamination_underlying_roof_deg": 22.893638610839844
+    },
+    {
+      "model": "graph_normal_s20261024",
+      "cutoff": 0.4699999988079071,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9945781450421455,
+      "micro_roof_retention": 0.9950136370607966,
+      "roof_retention_per_cloud_q05": 0.9667623363544814,
+      "clouds_roof_retention_below_99percent": 638,
+      "micro_contaminant_rejection": 0.945776997282544,
+      "macro_brier": 0.013181239706460535,
+      "normal_error_roof_deg": 6.411586761474609,
+      "normal_error_contamination_underlying_roof_deg": 21.90444564819336
+    },
+    {
+      "model": "graph_normal_s20261025",
+      "cutoff": 0.42499998211860657,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9945809855972655,
+      "micro_roof_retention": 0.9950197498427348,
+      "roof_retention_per_cloud_q05": 0.9705882352941176,
+      "clouds_roof_retention_below_99percent": 635,
+      "micro_contaminant_rejection": 0.9479257387339797,
+      "macro_brier": 0.012766289045853571,
+      "normal_error_roof_deg": 6.328117847442627,
+      "normal_error_contamination_underlying_roof_deg": 22.122812271118164
+    },
+    {
+      "model": "graph_reweight_s20261023",
+      "cutoff": 0.75,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9947370601963279,
+      "micro_roof_retention": 0.9951158872313988,
+      "roof_retention_per_cloud_q05": 0.9736772486772487,
+      "clouds_roof_retention_below_99percent": 579,
+      "micro_contaminant_rejection": 0.9471619004107118,
+      "macro_brier": 0.016160888595887345
+    },
+    {
+      "model": "graph_reweight_s20261024",
+      "cutoff": 0.7899999618530273,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9946317252633714,
+      "micro_roof_retention": 0.9951470068485386,
+      "roof_retention_per_cloud_q05": 0.9699905660377358,
+      "clouds_roof_retention_below_99percent": 642,
+      "micro_contaminant_rejection": 0.9530382204708671,
+      "macro_brier": 0.015156537541047892
+    },
+    {
+      "model": "graph_reweight_s20261025",
+      "cutoff": 0.7549999952316284,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9945477459777676,
+      "micro_roof_retention": 0.9950764320025252,
+      "roof_retention_per_cloud_q05": 0.9715791158048735,
+      "clouds_roof_retention_below_99percent": 614,
+      "micro_contaminant_rejection": 0.9555831584357733,
+      "macro_brier": 0.013797229857504801
+    },
+    {
+      "model": "graph_support_balanced_s20261023",
+      "cutoff": 0.48499998450279236,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9944547415789745,
+      "micro_roof_retention": 0.9950725420503826,
+      "roof_retention_per_cloud_q05": 0.9694915254237289,
+      "clouds_roof_retention_below_99percent": 638,
+      "micro_contaminant_rejection": 0.944570561052336,
+      "macro_brier": 0.013666141961678832,
+      "normal_error_roof_deg": 6.008058547973633,
+      "normal_error_contamination_underlying_roof_deg": 15.399063110351562,
+      "residual_MAE_roof_m": 0.08252301067113876,
+      "residual_MAE_contamination_m": 0.923215389251709
+    },
+    {
+      "model": "graph_support_balanced_s20261024",
+      "cutoff": 0.44999998807907104,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9945173734715361,
+      "micro_roof_retention": 0.9950503137524257,
+      "roof_retention_per_cloud_q05": 0.9678825096182302,
+      "clouds_roof_retention_below_99percent": 664,
+      "micro_contaminant_rejection": 0.9481006362939802,
+      "macro_brier": 0.012802110054562756,
+      "normal_error_roof_deg": 5.831865310668945,
+      "normal_error_contamination_underlying_roof_deg": 14.493138313293457,
+      "residual_MAE_roof_m": 0.06961843371391296,
+      "residual_MAE_contamination_m": 0.86273592710495
+    },
+    {
+      "model": "graph_support_balanced_s20261025",
+      "cutoff": 0.42499998211860657,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9946750573716084,
+      "micro_roof_retention": 0.9950375324811004,
+      "roof_retention_per_cloud_q05": 0.9718727992957746,
+      "clouds_roof_retention_below_99percent": 621,
+      "micro_contaminant_rejection": 0.9488371096928941,
+      "macro_brier": 0.012576645266345854,
+      "normal_error_roof_deg": 6.005167484283447,
+      "normal_error_contamination_underlying_roof_deg": 14.8997802734375,
+      "residual_MAE_roof_m": 0.06949488073587418,
+      "residual_MAE_contamination_m": 0.9255414009094238
+    },
+    {
+      "model": "graph_support_s20261023",
+      "cutoff": 0.7749999761581421,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9943949445561621,
+      "micro_roof_retention": 0.9951092187420117,
+      "roof_retention_per_cloud_q05": 0.9639089606627839,
+      "clouds_roof_retention_below_99percent": 639,
+      "micro_contaminant_rejection": 0.9444527728996825,
+      "macro_brier": 0.017411306439190605,
+      "normal_error_roof_deg": 5.354678153991699,
+      "normal_error_contamination_underlying_roof_deg": 13.161718368530273,
+      "residual_MAE_roof_m": 0.058330848813056946,
+      "residual_MAE_contamination_m": 0.8426552414894104
+    },
+    {
+      "model": "graph_support_s20261024",
+      "cutoff": 0.7849999666213989,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9946915189215578,
+      "micro_roof_retention": 0.995150896800681,
+      "roof_retention_per_cloud_q05": 0.9701999817368276,
+      "clouds_roof_retention_below_99percent": 595,
+      "micro_contaminant_rejection": 0.9492832769377936,
+      "macro_brier": 0.015992483392745647,
+      "normal_error_roof_deg": 5.678079605102539,
+      "normal_error_contamination_underlying_roof_deg": 13.749370574951172,
+      "residual_MAE_roof_m": 0.06964997947216034,
+      "residual_MAE_contamination_m": 0.8623830676078796
+    },
+    {
+      "model": "graph_support_s20261025",
+      "cutoff": 0.7400000095367432,
+      "group_key": "all",
+      "group": "all",
+      "clouds": 6000,
+      "macro_roof_retention": 0.9948633927187444,
+      "micro_roof_retention": 0.9950347539438558,
+      "roof_retention_per_cloud_q05": 0.9741681511642702,
+      "clouds_roof_retention_below_99percent": 605,
+      "micro_contaminant_rejection": 0.9416972439951837,
+      "macro_brier": 0.01737215943062351,
+      "normal_error_roof_deg": 6.2824859619140625,
+      "normal_error_contamination_underlying_roof_deg": 14.938834190368652,
+      "residual_MAE_roof_m": 0.07136061042547226,
+      "residual_MAE_contamination_m": 0.9321584105491638
+    }
+  ],
+  "input_sha256": {
+    "reports_reconstruction/per_building_validation_05ea51d6b5fb_v2.json": "1e019f1af8185778b013cece8da706b59349aa5c81bb9ef8f131413003892aad",
+    "reports_reconstruction/per_building_validation_09f6a31e1aca_v2.json": "073c9e142b5a56d995bdc2aa6e9114f03dbc38c408a463c614a5537fcc26ea09",
+    "reports_reconstruction/per_building_validation_0dc3032dfb92_v2.json": "fc6148b377654c39179c386d2f36a9518ea1ce2d9ddcb9b9259ec6a443cde293",
+    "reports_reconstruction/per_building_validation_101b0fa19bef_v2.json": "97c2250260de7c20c302224eeaa5b5f38abeef1e568e0b54c334bf39303c3493",
+    "reports_reconstruction/per_building_validation_37ad45e2caa6_v2.json": "e58bd7c6e10259f28a066fcdd58e06642ce2b91ce65e8ca4c866390b1bc9c75b",
+    "reports_reconstruction/per_building_validation_3ae1e03d822c_v2.json": "33e7245baf5455d805ae0913c631a2e5366b46c7a4f1aa6b23454038ab96c4a7",
+    "reports_reconstruction/per_building_validation_6773e367b515_v2.json": "47204ac22acd7ec3a35e7424da8d92b47ff4848e6fffa6df9112c7d9b0957d45",
+    "reports_reconstruction/per_building_validation_7bb1c49cbeab_v2.json": "734a20327049e52d3a953847be7ac4cfa7d78f75c9d0f00e69f4888157b254f3",
+    "reports_reconstruction/per_building_validation_869d59d60c9d_v2.json": "fdd12c6d773eaaf75101a77cb0c2397508aaf8fe6ebb85531aa44d6da70b36e2",
+    "reports_reconstruction/per_building_validation_a81a1adcb743_v2.json": "a661f8a19ade5a0629d6ead57a09ae7e75b3c4eebccecbc3b850e4b104721d9c",
+    "reports_reconstruction/per_building_validation_ac9e06c7f507_v2.json": "572fac6ebe1eb99bd94632f70055463dfdbaab390ff69a6b4526651c40ffbf64",
+    "reports_reconstruction/per_building_validation_ce7a2baa0267_v2.json": "7c0972a6192b3b833e372ebef33036bff546d0925cf0936b1322ea81fefeb381",
+    "reports_reconstruction/per_building_validation_f9020839b89f_v2.json": "cefca568bf3653125c7170e79675b1a1b2203fe00602df43c994ba9b3a5f3e7d",
+    "reports/completion_v2_validation_per_building.json": "6c6ba27ba4e3853a7e21b65b634b2e322a58b3f977b32dea02dfb3f6e10e3d20",
+    "reports/hybrid_validation_geometry_per_building.json": "9a08262903acbcddd24e252f584b60740fda611202cd41ec4afcb8301fc72c53",
+    "reports/hybrid_validation_global_cls_per_building.json": "3b59d09cf40a854213a299bc0510db5e124fc87fd367d91ecbdb6fdb1ac2b320",
+    "reports/hybrid_validation_graph_support_per_building.json": "9e3338301b1b4ae886bdd1ad96a5067ae8e164bb032eeab12569c4f8c2f30990",
+    "reports/completion_router_validation_global_cls_per_building.json": "8c9470c951e272aeda0d285bb9bc7230b5b55d339074fca13a128c4908c5fba9",
+    "reports/completion_router_validation_graph_support_per_building.json": "b66c5d85d7c3ff9e9b24e1e0fa222cbd832dd4334c7fca3b8d7e7124bc366cd8",
+    "reports/learned_quality_validation_per_building.json": "4f64e7b76c623aa04007e8f832a67e5df1b484a6c5c5e8af9f6bd7ea9208437c",
+    "reports/quality_count_validation_per_building.json": "2907e3789ca2cae1002744ec79116cf46e27b9d99673d1fc2a470f5e3a00d41e"
+  },
+  "bootstrap_unit": "physical building, all conditions together; 5000 draws, percentile95",
+  "bootstrap_does_not_cover_training_seed_variance_or_teacher_bias": true,
+  "intervals_are_exploratory_not_multiple_comparison_corrected": true,
+  "comparisons_chosen_after_partial_source_results_before_final": true,
+  "no_selection_or_thresholds_changed": true,
+  "interpretation_limits": [
+    "Automatic 3DBAG teacher and synthetic observation recovery.",
+    "No independent US roof accuracy inferred.",
+    "Ensembles use more inference/checkpoint budget than a single seed.",
+    "Auxiliary heads plus classification use distinct losses; no claim of new architecture.",
+    "Completion cohort is smaller and cannot be ranked against main cohort."
+  ],
+  "hypotheses_for_future_experiments_not_claims_proven_here": [
+    "Learn plane support and reconstruction risk rather than optimizing point labels alone.",
+    "Condition selective completion on spatial support, while protecting observed clean roof facets.",
+    "Use genuine multimodal observations and independent target-region roof GT to test domain transfer."
+  ],
+  "_publication": {
+    "original_source_sha256": "853c89bc8a37c60ff277ea5998ad30ee6e659bad742e9708d541d40d4b3b6ad0",
+    "original_source": "source:expanded/reports/evidence_synthesis_validation.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

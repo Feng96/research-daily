@@ -1,0 +1,1733 @@
+{
+  "id": "expanded",
+  "title": "多区域与多方法扩展",
+  "subtitle": "受控方法比较、补面侧实验与226栋真实观测",
+  "date": "2026-10-20",
+  "scope": "主实验64栋×12合成条件；补面侧实验16栋×6条件；Boston/DC五片区226栋真实生成和掩码诊断。",
+  "summary": "源验证预选局部图网络流程在受控留出降低限幅损失；真实14方法生成率相同，尚无美国精度收益证据。",
+  "reportUrl": "studies/expanded/index.html",
+  "figures": [
+    {
+      "url": "studies/expanded/figures/stages/comparison_test_37ad45e2caa6_v2.png",
+      "caption": "comparison_test_37ad45e2caa6_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_test_7bb1c49cbeab_v2.png",
+      "caption": "comparison_test_7bb1c49cbeab_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_test_a81a1adcb743_v2.png",
+      "caption": "comparison_test_a81a1adcb743_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_05ea51d6b5fb_v2.png",
+      "caption": "comparison_validation_05ea51d6b5fb_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_09f6a31e1aca_v2.png",
+      "caption": "comparison_validation_09f6a31e1aca_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_0dc3032dfb92_v2.png",
+      "caption": "comparison_validation_0dc3032dfb92_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_101b0fa19bef_v2.png",
+      "caption": "comparison_validation_101b0fa19bef_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_37ad45e2caa6_v2.png",
+      "caption": "comparison_validation_37ad45e2caa6_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_3ae1e03d822c_v2.png",
+      "caption": "comparison_validation_3ae1e03d822c_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_3cc4a72ad385.png",
+      "caption": "comparison_validation_3cc4a72ad385.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_6773e367b515_v2.png",
+      "caption": "comparison_validation_6773e367b515_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_7bb1c49cbeab_v2.png",
+      "caption": "comparison_validation_7bb1c49cbeab_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_869d59d60c9d_v2.png",
+      "caption": "comparison_validation_869d59d60c9d_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_a81a1adcb743_v2.png",
+      "caption": "comparison_validation_a81a1adcb743_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_ac9e06c7f507_v2.png",
+      "caption": "comparison_validation_ac9e06c7f507_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_ce7a2baa0267_v2.png",
+      "caption": "comparison_validation_ce7a2baa0267_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_d7439bee2477.png",
+      "caption": "comparison_validation_d7439bee2477.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/comparison_validation_f9020839b89f_v2.png",
+      "caption": "comparison_validation_f9020839b89f_v2.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/stages/weighted_ransac_failure_posthoc.png",
+      "caption": "weighted_ransac_failure_posthoc.png；Existing stage/ablation plot; formal aggregate and latest *_v2 metrics govern interpretation."
+    },
+    {
+      "url": "studies/expanded/figures/real_native_generation.png",
+      "caption": "真实226栋×14方法的native生成情况；不是独立几何精度。"
+    },
+    {
+      "url": "studies/expanded/figures/test_completion_conditions.png",
+      "caption": "test_completion_conditions.png；原实验已生成图，适用范围见正式报告。"
+    },
+    {
+      "url": "studies/expanded/figures/test_main_comparison.png",
+      "caption": "主受控留出方法比较：自动3DBAG教师，包含失败/缺覆盖10m罚分。"
+    },
+    {
+      "url": "studies/expanded/figures/test_paired_uncertainty.png",
+      "caption": "建筑配对的探索性不确定性诊断，不覆盖教师偏差或训练seed变异。"
+    },
+    {
+      "url": "studies/expanded/figures/validation_completion_conditions.png",
+      "caption": "validation_completion_conditions.png；原实验已生成图，适用范围见正式报告。"
+    },
+    {
+      "url": "studies/expanded/figures/validation_data_and_corruption.png",
+      "caption": "validation_data_and_corruption.png；原实验已生成图，适用范围见正式报告。"
+    },
+    {
+      "url": "studies/expanded/figures/validation_input_domain_shift.png",
+      "caption": "validation_input_domain_shift.png；原实验已生成图，适用范围见正式报告。"
+    },
+    {
+      "url": "studies/expanded/figures/validation_main_comparison.png",
+      "caption": "validation_main_comparison.png；原实验已生成图，适用范围见正式报告。"
+    },
+    {
+      "url": "studies/expanded/figures/validation_paired_uncertainty.png",
+      "caption": "validation_paired_uncertainty.png；原实验已生成图，适用范围见正式报告。"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "studies/expanded/downloads/final_experiment_result.json",
+      "label": "final_experiment_result.json",
+      "download": true,
+      "bytes": 1569640,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/main_heldout_comparison.csv",
+      "label": "main_heldout_comparison.csv",
+      "download": true,
+      "bytes": 4238,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/completion_heldout_comparison.csv",
+      "label": "completion_heldout_comparison.csv",
+      "download": true,
+      "bytes": 1050,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/real_operational_comparison.csv",
+      "label": "real_operational_comparison.csv",
+      "download": true,
+      "bytes": 1476,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/实验报告.txt",
+      "label": "实验报告.txt",
+      "download": true,
+      "bytes": 21897,
+      "kind": "result_text"
+    },
+    {
+      "url": "studies/expanded/downloads/核心结论.txt",
+      "label": "核心结论.txt",
+      "download": true,
+      "bytes": 4569,
+      "kind": "result_text"
+    },
+    {
+      "url": "studies/expanded/downloads/方法说明.txt",
+      "label": "方法说明.txt",
+      "download": true,
+      "bytes": 5420,
+      "kind": "result_text"
+    },
+    {
+      "url": "studies/expanded/downloads/下一阶段DL设计_建议.txt",
+      "label": "下一阶段DL设计_建议.txt",
+      "download": true,
+      "bytes": 7447,
+      "kind": "result_text"
+    },
+    {
+      "url": "studies/expanded/downloads/evidence_synthesis_validation.json",
+      "label": "evidence_synthesis_validation.json",
+      "download": true,
+      "bytes": 80662,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/evidence_synthesis_test.json",
+      "label": "evidence_synthesis_test.json",
+      "download": true,
+      "bytes": 79101,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/plotted_validation_summary.json",
+      "label": "plotted_validation_summary.json",
+      "download": true,
+      "bytes": 16146,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/plotted_test_summary.json",
+      "label": "plotted_test_summary.json",
+      "download": true,
+      "bytes": 15225,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/semantic_source_calibration_summary.json",
+      "label": "semantic_source_calibration_summary.json",
+      "download": true,
+      "bytes": 11083,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/SSL_unique_point_diagnostics.json",
+      "label": "SSL_unique_point_diagnostics.json",
+      "download": true,
+      "bytes": 7113,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/method_selection.json",
+      "label": "method_selection.json",
+      "download": true,
+      "bytes": 47706,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/input_domain_shift.json",
+      "label": "input_domain_shift.json",
+      "download": true,
+      "bytes": 836901,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/completion_router_test_global_cls_result.json",
+      "label": "completion_router_test_global_cls_result.json",
+      "download": true,
+      "bytes": 3541,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/completion_router_test_graph_support_result.json",
+      "label": "completion_router_test_graph_support_result.json",
+      "download": true,
+      "bytes": 3586,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/completion_router_validation_global_cls_result.json",
+      "label": "completion_router_validation_global_cls_result.json",
+      "download": true,
+      "bytes": 3543,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/completion_router_validation_graph_support_result.json",
+      "label": "completion_router_validation_graph_support_result.json",
+      "download": true,
+      "bytes": 3592,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/completion_v2_test_result.json",
+      "label": "completion_v2_test_result.json",
+      "download": true,
+      "bytes": 7276,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/completion_v2_validation_result.json",
+      "label": "completion_v2_validation_result.json",
+      "download": true,
+      "bytes": 7251,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/completion_validation_result.json",
+      "label": "completion_validation_result.json",
+      "download": true,
+      "bytes": 7246,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/data_scale_ablation_result.json",
+      "label": "data_scale_ablation_result.json",
+      "download": true,
+      "bytes": 9173,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/height_only_control_result.json",
+      "label": "height_only_control_result.json",
+      "download": true,
+      "bytes": 3491,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/hybrid_test_geometry_result.json",
+      "label": "hybrid_test_geometry_result.json",
+      "download": true,
+      "bytes": 2712,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/hybrid_test_global_cls_result.json",
+      "label": "hybrid_test_global_cls_result.json",
+      "download": true,
+      "bytes": 2796,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/hybrid_test_graph_support_result.json",
+      "label": "hybrid_test_graph_support_result.json",
+      "download": true,
+      "bytes": 2820,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/hybrid_validation_geometry_result.json",
+      "label": "hybrid_validation_geometry_result.json",
+      "download": true,
+      "bytes": 2721,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/hybrid_validation_global_cls_result.json",
+      "label": "hybrid_validation_global_cls_result.json",
+      "download": true,
+      "bytes": 2797,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/hybrid_validation_graph_support_result.json",
+      "label": "hybrid_validation_graph_support_result.json",
+      "download": true,
+      "bytes": 2824,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/learned_quality_gate_training_result.json",
+      "label": "learned_quality_gate_training_result.json",
+      "download": true,
+      "bytes": 2074,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/learned_quality_test_result.json",
+      "label": "learned_quality_test_result.json",
+      "download": true,
+      "bytes": 3916,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/learned_quality_validation_result.json",
+      "label": "learned_quality_validation_result.json",
+      "download": true,
+      "bytes": 3918,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/quality_count_test_result.json",
+      "label": "quality_count_test_result.json",
+      "download": true,
+      "bytes": 2324,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/quality_count_validation_result.json",
+      "label": "quality_count_validation_result.json",
+      "download": true,
+      "bytes": 2328,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/relative_xyz_control_result.json",
+      "label": "relative_xyz_control_result.json",
+      "download": true,
+      "bytes": 3482,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/real/native_generation_summary.json",
+      "label": "native_generation_summary.json",
+      "download": true,
+      "bytes": 22500,
+      "kind": "evidence"
+    },
+    {
+      "url": "studies/expanded/downloads/real/real14_mask_change_summary.json.gz",
+      "label": "real14_mask_change_summary.json",
+      "download": true,
+      "bytes": 93816,
+      "kind": "evidence"
+    },
+    {
+      "url": "studies/expanded/downloads/real/source_classification_audit.json.gz",
+      "label": "source_classification_audit.json",
+      "download": true,
+      "bytes": 27714,
+      "kind": "evidence"
+    },
+    {
+      "url": "studies/expanded/downloads/real/source_classification_conclusion.txt",
+      "label": "source_classification_conclusion.txt",
+      "download": true,
+      "bytes": 1003,
+      "kind": "evidence"
+    },
+    {
+      "url": "studies/expanded/downloads/real/real14_native_outcome_audit.json.gz",
+      "label": "real14_native_outcome_audit.json",
+      "download": true,
+      "bytes": 25793,
+      "kind": "evidence"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/global_cls_s20261023.json.gz",
+      "label": "global_cls_s20261023.json",
+      "download": true,
+      "bytes": 2042,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/global_cls_s20261024.json.gz",
+      "label": "global_cls_s20261024.json",
+      "download": true,
+      "bytes": 2041,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/global_cls_s20261025.json.gz",
+      "label": "global_cls_s20261025.json",
+      "download": true,
+      "bytes": 2053,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/global_height_only_s20261023.json.gz",
+      "label": "global_height_only_s20261023.json",
+      "download": true,
+      "bytes": 1930,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/global_large_basic_s20261023.json.gz",
+      "label": "global_large_basic_s20261023.json",
+      "download": true,
+      "bytes": 2048,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/global_relative_xyz_s20261023.json.gz",
+      "label": "global_relative_xyz_s20261023.json",
+      "download": true,
+      "bytes": 2060,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/global_small_basic_s20261023.json.gz",
+      "label": "global_small_basic_s20261023.json",
+      "download": true,
+      "bytes": 2019,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/global_small_diverse_s20261023.json.gz",
+      "label": "global_small_diverse_s20261023.json",
+      "download": true,
+      "bytes": 2053,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_cls_s20261023.json.gz",
+      "label": "graph_cls_s20261023.json",
+      "download": true,
+      "bytes": 2025,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_cls_s20261024.json.gz",
+      "label": "graph_cls_s20261024.json",
+      "download": true,
+      "bytes": 2035,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_cls_s20261025.json.gz",
+      "label": "graph_cls_s20261025.json",
+      "download": true,
+      "bytes": 2003,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_normal_s20261023.json.gz",
+      "label": "graph_normal_s20261023.json",
+      "download": true,
+      "bytes": 2507,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_normal_s20261024.json.gz",
+      "label": "graph_normal_s20261024.json",
+      "download": true,
+      "bytes": 2508,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_normal_s20261025.json.gz",
+      "label": "graph_normal_s20261025.json",
+      "download": true,
+      "bytes": 2519,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_reweight_s20261023.json.gz",
+      "label": "graph_reweight_s20261023.json",
+      "download": true,
+      "bytes": 2028,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_reweight_s20261024.json.gz",
+      "label": "graph_reweight_s20261024.json",
+      "download": true,
+      "bytes": 2042,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_reweight_s20261025.json.gz",
+      "label": "graph_reweight_s20261025.json",
+      "download": true,
+      "bytes": 2054,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_balanced_s20261023.json.gz",
+      "label": "graph_support_balanced_s20261023.json",
+      "download": true,
+      "bytes": 2916,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_balanced_s20261024.json.gz",
+      "label": "graph_support_balanced_s20261024.json",
+      "download": true,
+      "bytes": 2935,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_balanced_s20261025.json.gz",
+      "label": "graph_support_balanced_s20261025.json",
+      "download": true,
+      "bytes": 2940,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_s20261023.json.gz",
+      "label": "graph_support_s20261023.json",
+      "download": true,
+      "bytes": 2918,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_s20261024.json.gz",
+      "label": "graph_support_s20261024.json",
+      "download": true,
+      "bytes": 2945,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_diagnostics/graph_support_s20261025.json.gz",
+      "label": "graph_support_s20261025.json",
+      "download": true,
+      "bytes": 2928,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_cls_s20261023.json.gz",
+      "label": "global_cls_s20261023.json",
+      "download": true,
+      "bytes": 1866,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_cls_s20261024.json.gz",
+      "label": "global_cls_s20261024.json",
+      "download": true,
+      "bytes": 1868,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_cls_s20261025.json.gz",
+      "label": "global_cls_s20261025.json",
+      "download": true,
+      "bytes": 1847,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_height_only_s20261023.json.gz",
+      "label": "global_height_only_s20261023.json",
+      "download": true,
+      "bytes": 1806,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_large_basic_s20261023.json.gz",
+      "label": "global_large_basic_s20261023.json",
+      "download": true,
+      "bytes": 1877,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_relative_xyz_s20261023.json.gz",
+      "label": "global_relative_xyz_s20261023.json",
+      "download": true,
+      "bytes": 1861,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_small_basic_s20261023.json.gz",
+      "label": "global_small_basic_s20261023.json",
+      "download": true,
+      "bytes": 1907,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/global_small_diverse_s20261023.json.gz",
+      "label": "global_small_diverse_s20261023.json",
+      "download": true,
+      "bytes": 1879,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_cls_s20261023.json.gz",
+      "label": "graph_cls_s20261023.json",
+      "download": true,
+      "bytes": 1849,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_cls_s20261024.json.gz",
+      "label": "graph_cls_s20261024.json",
+      "download": true,
+      "bytes": 1849,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_cls_s20261025.json.gz",
+      "label": "graph_cls_s20261025.json",
+      "download": true,
+      "bytes": 1857,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_normal_s20261023.json.gz",
+      "label": "graph_normal_s20261023.json",
+      "download": true,
+      "bytes": 2234,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_normal_s20261024.json.gz",
+      "label": "graph_normal_s20261024.json",
+      "download": true,
+      "bytes": 2234,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_normal_s20261025.json.gz",
+      "label": "graph_normal_s20261025.json",
+      "download": true,
+      "bytes": 2249,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_reweight_s20261023.json.gz",
+      "label": "graph_reweight_s20261023.json",
+      "download": true,
+      "bytes": 1879,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_reweight_s20261024.json.gz",
+      "label": "graph_reweight_s20261024.json",
+      "download": true,
+      "bytes": 1861,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_reweight_s20261025.json.gz",
+      "label": "graph_reweight_s20261025.json",
+      "download": true,
+      "bytes": 1860,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_balanced_s20261023.json.gz",
+      "label": "graph_support_balanced_s20261023.json",
+      "download": true,
+      "bytes": 2603,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_balanced_s20261024.json.gz",
+      "label": "graph_support_balanced_s20261024.json",
+      "download": true,
+      "bytes": 2585,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_balanced_s20261025.json.gz",
+      "label": "graph_support_balanced_s20261025.json",
+      "download": true,
+      "bytes": 2632,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_s20261023.json.gz",
+      "label": "graph_support_s20261023.json",
+      "download": true,
+      "bytes": 2620,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_s20261024.json.gz",
+      "label": "graph_support_s20261024.json",
+      "download": true,
+      "bytes": 2578,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reports_point_test_diagnostics/graph_support_s20261025.json.gz",
+      "label": "graph_support_s20261025.json",
+      "download": true,
+      "bytes": 2602,
+      "kind": "point_diagnostic"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_test_37ad45e2caa6_v2.json",
+      "label": "comparison_test_37ad45e2caa6_v2.json",
+      "download": true,
+      "bytes": 30280,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_test_7bb1c49cbeab_v2.json",
+      "label": "comparison_test_7bb1c49cbeab_v2.json",
+      "download": true,
+      "bytes": 52359,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_test_a81a1adcb743_v2.json",
+      "label": "comparison_test_a81a1adcb743_v2.json",
+      "download": true,
+      "bytes": 146895,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_05ea51d6b5fb_v2.json",
+      "label": "comparison_validation_05ea51d6b5fb_v2.json",
+      "download": true,
+      "bytes": 59403,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_09f6a31e1aca_v2.json",
+      "label": "comparison_validation_09f6a31e1aca_v2.json",
+      "download": true,
+      "bytes": 45199,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_0dc3032dfb92_v2.json",
+      "label": "comparison_validation_0dc3032dfb92_v2.json",
+      "download": true,
+      "bytes": 44901,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_101b0fa19bef_v2.json",
+      "label": "comparison_validation_101b0fa19bef_v2.json",
+      "download": true,
+      "bytes": 95816,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_37ad45e2caa6_v2.json",
+      "label": "comparison_validation_37ad45e2caa6_v2.json",
+      "download": true,
+      "bytes": 30403,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_3ae1e03d822c_v2.json",
+      "label": "comparison_validation_3ae1e03d822c_v2.json",
+      "download": true,
+      "bytes": 30230,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_3cc4a72ad385.json",
+      "label": "comparison_validation_3cc4a72ad385.json",
+      "download": true,
+      "bytes": 15117,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_6773e367b515_v2.json",
+      "label": "comparison_validation_6773e367b515_v2.json",
+      "download": true,
+      "bytes": 23038,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_7bb1c49cbeab_v2.json",
+      "label": "comparison_validation_7bb1c49cbeab_v2.json",
+      "download": true,
+      "bytes": 52595,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_869d59d60c9d_v2.json",
+      "label": "comparison_validation_869d59d60c9d_v2.json",
+      "download": true,
+      "bytes": 37828,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_a81a1adcb743_v2.json",
+      "label": "comparison_validation_a81a1adcb743_v2.json",
+      "download": true,
+      "bytes": 147679,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_ac9e06c7f507_v2.json",
+      "label": "comparison_validation_ac9e06c7f507_v2.json",
+      "download": true,
+      "bytes": 52137,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_ce7a2baa0267_v2.json",
+      "label": "comparison_validation_ce7a2baa0267_v2.json",
+      "download": true,
+      "bytes": 37523,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_d7439bee2477.json",
+      "label": "comparison_validation_d7439bee2477.json",
+      "download": true,
+      "bytes": 8139,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_f9020839b89f_v2.json",
+      "label": "comparison_validation_f9020839b89f_v2.json",
+      "download": true,
+      "bytes": 30381,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_test_37ad45e2caa6_v2.csv",
+      "label": "comparison_test_37ad45e2caa6_v2.csv",
+      "download": true,
+      "bytes": 2078,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_test_7bb1c49cbeab_v2.csv",
+      "label": "comparison_test_7bb1c49cbeab_v2.csv",
+      "download": true,
+      "bytes": 3099,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_test_a81a1adcb743_v2.csv",
+      "label": "comparison_test_a81a1adcb743_v2.csv",
+      "download": true,
+      "bytes": 7237,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_05ea51d6b5fb_v2.csv",
+      "label": "comparison_validation_05ea51d6b5fb_v2.csv",
+      "download": true,
+      "bytes": 3347,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_09f6a31e1aca_v2.csv",
+      "label": "comparison_validation_09f6a31e1aca_v2.csv",
+      "download": true,
+      "bytes": 2746,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_0dc3032dfb92_v2.csv",
+      "label": "comparison_validation_0dc3032dfb92_v2.csv",
+      "download": true,
+      "bytes": 2707,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_101b0fa19bef_v2.csv",
+      "label": "comparison_validation_101b0fa19bef_v2.csv",
+      "download": true,
+      "bytes": 4945,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_37ad45e2caa6_v2.csv",
+      "label": "comparison_validation_37ad45e2caa6_v2.csv",
+      "download": true,
+      "bytes": 2054,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_3ae1e03d822c_v2.csv",
+      "label": "comparison_validation_3ae1e03d822c_v2.csv",
+      "download": true,
+      "bytes": 2052,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_3cc4a72ad385.csv",
+      "label": "comparison_validation_3cc4a72ad385.csv",
+      "download": true,
+      "bytes": 1155,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_6773e367b515_v2.csv",
+      "label": "comparison_validation_6773e367b515_v2.csv",
+      "download": true,
+      "bytes": 1737,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_7bb1c49cbeab_v2.csv",
+      "label": "comparison_validation_7bb1c49cbeab_v2.csv",
+      "download": true,
+      "bytes": 3079,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_869d59d60c9d_v2.csv",
+      "label": "comparison_validation_869d59d60c9d_v2.csv",
+      "download": true,
+      "bytes": 2409,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_a81a1adcb743_v2.csv",
+      "label": "comparison_validation_a81a1adcb743_v2.csv",
+      "download": true,
+      "bytes": 7300,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_ac9e06c7f507_v2.csv",
+      "label": "comparison_validation_ac9e06c7f507_v2.csv",
+      "download": true,
+      "bytes": 3028,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_ce7a2baa0267_v2.csv",
+      "label": "comparison_validation_ce7a2baa0267_v2.csv",
+      "download": true,
+      "bytes": 2376,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_d7439bee2477.csv",
+      "label": "comparison_validation_d7439bee2477.csv",
+      "download": true,
+      "bytes": 861,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/comparison_validation_f9020839b89f_v2.csv",
+      "label": "comparison_validation_f9020839b89f_v2.csv",
+      "download": true,
+      "bytes": 2063,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_test_37ad45e2caa6.csv",
+      "label": "ridge3d_test_37ad45e2caa6.csv",
+      "download": true,
+      "bytes": 5415,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_test_7bb1c49cbeab.csv",
+      "label": "ridge3d_test_7bb1c49cbeab.csv",
+      "download": true,
+      "bytes": 9725,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_test_a81a1adcb743.csv",
+      "label": "ridge3d_test_a81a1adcb743.csv",
+      "download": true,
+      "bytes": 28047,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_test_all25_common_teacher_edges.csv",
+      "label": "ridge3d_test_all25_common_teacher_edges.csv",
+      "download": true,
+      "bytes": 4057,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_05ea51d6b5fb.csv",
+      "label": "ridge3d_validation_05ea51d6b5fb.csv",
+      "download": true,
+      "bytes": 10840,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_101b0fa19bef.csv",
+      "label": "ridge3d_validation_101b0fa19bef.csv",
+      "download": true,
+      "bytes": 17716,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_37ad45e2caa6.csv",
+      "label": "ridge3d_validation_37ad45e2caa6.csv",
+      "download": true,
+      "bytes": 5407,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_7bb1c49cbeab.csv",
+      "label": "ridge3d_validation_7bb1c49cbeab.csv",
+      "download": true,
+      "bytes": 9695,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_a81a1adcb743.csv",
+      "label": "ridge3d_validation_a81a1adcb743.csv",
+      "download": true,
+      "bytes": 27976,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_ac9e06c7f507.csv",
+      "label": "ridge3d_validation_ac9e06c7f507.csv",
+      "download": true,
+      "bytes": 9477,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_ce7a2baa0267.csv",
+      "label": "ridge3d_validation_ce7a2baa0267.csv",
+      "download": true,
+      "bytes": 6654,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_test_37ad45e2caa6_common_teacher_edge_summary.json",
+      "label": "ridge3d_test_37ad45e2caa6_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 34610,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_test_7bb1c49cbeab_common_teacher_edge_summary.json",
+      "label": "ridge3d_test_7bb1c49cbeab_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 53881,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_test_a81a1adcb743_common_teacher_edge_summary.json",
+      "label": "ridge3d_test_a81a1adcb743_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 137026,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_05ea51d6b5fb_common_teacher_edge_summary.json",
+      "label": "ridge3d_validation_05ea51d6b5fb_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 51800,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_101b0fa19bef_common_teacher_edge_summary.json",
+      "label": "ridge3d_validation_101b0fa19bef_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 83614,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_37ad45e2caa6_common_teacher_edge_summary.json",
+      "label": "ridge3d_validation_37ad45e2caa6_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 26422,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_7bb1c49cbeab_common_teacher_edge_summary.json",
+      "label": "ridge3d_validation_7bb1c49cbeab_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 45671,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_a81a1adcb743_common_teacher_edge_summary.json",
+      "label": "ridge3d_validation_a81a1adcb743_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 128772,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_ac9e06c7f507_common_teacher_edge_summary.json",
+      "label": "ridge3d_validation_ac9e06c7f507_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 45452,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/ridge3d_validation_ce7a2baa0267_common_teacher_edge_summary.json",
+      "label": "ridge3d_validation_ce7a2baa0267_common_teacher_edge_summary.json",
+      "download": true,
+      "bytes": 3147,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_test_37ad45e2caa6_v2.txt",
+      "label": "results_test_37ad45e2caa6_v2.txt",
+      "download": true,
+      "bytes": 1299,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_test_7bb1c49cbeab_v2.txt",
+      "label": "results_test_7bb1c49cbeab_v2.txt",
+      "download": true,
+      "bytes": 1768,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_test_a81a1adcb743_v2.txt",
+      "label": "results_test_a81a1adcb743_v2.txt",
+      "download": true,
+      "bytes": 3780,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_05ea51d6b5fb_v2.txt",
+      "label": "results_validation_05ea51d6b5fb_v2.txt",
+      "download": true,
+      "bytes": 1908,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_09f6a31e1aca_v2.txt",
+      "label": "results_validation_09f6a31e1aca_v2.txt",
+      "download": true,
+      "bytes": 1618,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_0dc3032dfb92_v2.txt",
+      "label": "results_validation_0dc3032dfb92_v2.txt",
+      "download": true,
+      "bytes": 1607,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_101b0fa19bef_v2.txt",
+      "label": "results_validation_101b0fa19bef_v2.txt",
+      "download": true,
+      "bytes": 2670,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_37ad45e2caa6_v2.txt",
+      "label": "results_validation_37ad45e2caa6_v2.txt",
+      "download": true,
+      "bytes": 1305,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_3ae1e03d822c_v2.txt",
+      "label": "results_validation_3ae1e03d822c_v2.txt",
+      "download": true,
+      "bytes": 1295,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_3cc4a72ad385.txt",
+      "label": "results_validation_3cc4a72ad385.txt",
+      "download": true,
+      "bytes": 825,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_6773e367b515_v2.txt",
+      "label": "results_validation_6773e367b515_v2.txt",
+      "download": true,
+      "bytes": 1148,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_7bb1c49cbeab_v2.txt",
+      "label": "results_validation_7bb1c49cbeab_v2.txt",
+      "download": true,
+      "bytes": 1774,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_869d59d60c9d_v2.txt",
+      "label": "results_validation_869d59d60c9d_v2.txt",
+      "download": true,
+      "bytes": 1462,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_a81a1adcb743_v2.txt",
+      "label": "results_validation_a81a1adcb743_v2.txt",
+      "download": true,
+      "bytes": 3787,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_ac9e06c7f507_v2.txt",
+      "label": "results_validation_ac9e06c7f507_v2.txt",
+      "download": true,
+      "bytes": 1757,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_ce7a2baa0267_v2.txt",
+      "label": "results_validation_ce7a2baa0267_v2.txt",
+      "download": true,
+      "bytes": 1447,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_d7439bee2477.txt",
+      "label": "results_validation_d7439bee2477.txt",
+      "download": true,
+      "bytes": 684,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/results_validation_f9020839b89f_v2.txt",
+      "label": "results_validation_f9020839b89f_v2.txt",
+      "download": true,
+      "bytes": 1304,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_test_37ad45e2caa6_v2.csv.gz",
+      "label": "per_building_test_37ad45e2caa6_v2.csv",
+      "download": true,
+      "bytes": 388015,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_test_7bb1c49cbeab_v2.csv.gz",
+      "label": "per_building_test_7bb1c49cbeab_v2.csv",
+      "download": true,
+      "bytes": 542444,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_test_a81a1adcb743_v2.csv.gz",
+      "label": "per_building_test_a81a1adcb743_v2.csv",
+      "download": true,
+      "bytes": 1111553,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_05ea51d6b5fb_v2.csv.gz",
+      "label": "per_building_validation_05ea51d6b5fb_v2.csv",
+      "download": true,
+      "bytes": 717212,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_09f6a31e1aca_v2.csv.gz",
+      "label": "per_building_validation_09f6a31e1aca_v2.csv",
+      "download": true,
+      "bytes": 604895,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_0dc3032dfb92_v2.csv.gz",
+      "label": "per_building_validation_0dc3032dfb92_v2.csv",
+      "download": true,
+      "bytes": 610248,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_101b0fa19bef_v2.csv.gz",
+      "label": "per_building_validation_101b0fa19bef_v2.csv",
+      "download": true,
+      "bytes": 1064492,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_37ad45e2caa6_v2.csv.gz",
+      "label": "per_building_validation_37ad45e2caa6_v2.csv",
+      "download": true,
+      "bytes": 485898,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_3ae1e03d822c_v2.csv.gz",
+      "label": "per_building_validation_3ae1e03d822c_v2.csv",
+      "download": true,
+      "bytes": 494125,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_3cc4a72ad385.csv.gz",
+      "label": "per_building_validation_3cc4a72ad385.csv",
+      "download": true,
+      "bytes": 245606,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_6773e367b515_v2.csv.gz",
+      "label": "per_building_validation_6773e367b515_v2.csv",
+      "download": true,
+      "bytes": 401767,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_7bb1c49cbeab_v2.csv.gz",
+      "label": "per_building_validation_7bb1c49cbeab_v2.csv",
+      "download": true,
+      "bytes": 657690,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_869d59d60c9d_v2.csv.gz",
+      "label": "per_building_validation_869d59d60c9d_v2.csv",
+      "download": true,
+      "bytes": 546616,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_a81a1adcb743_v2.csv.gz",
+      "label": "per_building_validation_a81a1adcb743_v2.csv",
+      "download": true,
+      "bytes": 1314091,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_ac9e06c7f507_v2.csv.gz",
+      "label": "per_building_validation_ac9e06c7f507_v2.csv",
+      "download": true,
+      "bytes": 665675,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_ce7a2baa0267_v2.csv.gz",
+      "label": "per_building_validation_ce7a2baa0267_v2.csv",
+      "download": true,
+      "bytes": 553419,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_d7439bee2477.csv.gz",
+      "label": "per_building_validation_d7439bee2477.csv",
+      "download": true,
+      "bytes": 137944,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_validation_f9020839b89f_v2.csv.gz",
+      "label": "per_building_validation_f9020839b89f_v2.csv",
+      "download": true,
+      "bytes": 478911,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/per_building/per_building_test_a81a1adcb743_v2.json.gz",
+      "label": "per_building_test_a81a1adcb743_v2.json",
+      "download": true,
+      "bytes": 1650890,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/weighted_ransac_failure_posthoc.csv",
+      "label": "weighted_ransac_failure_posthoc.csv",
+      "download": true,
+      "bytes": 20162,
+      "kind": "evidence"
+    },
+    {
+      "url": "studies/expanded/downloads/reconstruction/weighted_ransac_failure_posthoc.json",
+      "label": "weighted_ransac_failure_posthoc.json",
+      "download": true,
+      "bytes": 109724,
+      "kind": "evidence"
+    },
+    {
+      "url": "studies/expanded/figures/real_native_generation.pdf",
+      "label": "real_native_generation.pdf",
+      "download": true,
+      "bytes": 21373,
+      "kind": "figure_pdf"
+    },
+    {
+      "url": "studies/expanded/figures/test_experiment_figures.pdf",
+      "label": "test_experiment_figures.pdf",
+      "download": true,
+      "bytes": 47716,
+      "kind": "figure_pdf"
+    },
+    {
+      "url": "studies/expanded/figures/validation_experiment_figures.pdf",
+      "label": "validation_experiment_figures.pdf",
+      "download": true,
+      "bytes": 52761,
+      "kind": "figure_pdf"
+    }
+  ],
+  "keyMetrics": [
+    {
+      "label": "主受控留出",
+      "value": 64,
+      "unit": "栋×12条件",
+      "detail": "源验证预选method=graph_support_mean3_residual"
+    },
+    {
+      "label": "预选方法限幅损失",
+      "value": "0.9345",
+      "unit": "m",
+      "detail": "raw=1.4471 m；不是通常成功屋顶MAE。"
+    },
+    {
+      "label": "真实观测",
+      "value": 226,
+      "unit": "栋×14方法",
+      "detail": "各方法223个LoD2输出、3个无几何；并未评独立屋面精度。"
+    }
+  ],
+  "findings": [
+    "局部点云分类是本轮受控任务的主要收益来源；复杂辅助头和集成的额外贡献尚不充分。",
+    "筛点与补面分别处理；选择性修补仍漏修部分稀疏/空洞样本。",
+    "真实光学/点云语义/SSL确有不同mask干预，但生成率和源区F1不能替代当地屋面精度。"
+  ],
+  "limitations": [
+    "自动3DBAG教师＋模拟污染是受控证据；美国真实区域没有被接受的独立同期屋面GT。",
+    "主native多数方法仅首seed；三seed点诊断不等于全部native三次重建。",
+    "真实区域包括适配、开发及未见观测区域，角色分开呈现；无标签曝光不等于独立验证。",
+    "跨轮地面与输入条件已变，不可直接横比数字归因。"
+  ],
+  "columns": [
+    "方法",
+    "建筑",
+    "槽位分母",
+    "限幅损失 (m)",
+    "相对raw差 (m)",
+    "clean损伤>2cm",
+    "LoD2生成",
+    "严格覆盖"
+  ],
+  "tableRows": [
+    [
+      "graph_support_mean3_hard",
+      "64",
+      "768",
+      "0.9274",
+      "-0.5196",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "graph_cls_mean3_hard",
+      "64",
+      "768",
+      "0.9325",
+      "-0.5146",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "graph_support_mean3_residual",
+      "64",
+      "768",
+      "0.9345",
+      "-0.5126",
+      "0",
+      "745",
+      "0.9691"
+    ],
+    [
+      "graph_support_mean3_guard",
+      "64",
+      "768",
+      "0.9346",
+      "-0.5124",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "residual_veto",
+      "64",
+      "768",
+      "0.9370",
+      "-0.5100",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "graph_support_balanced_hard",
+      "64",
+      "768",
+      "0.9393",
+      "-0.5077",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "graph_cls_hard",
+      "64",
+      "768",
+      "0.9398",
+      "-0.5073",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "graph_normal_hard",
+      "64",
+      "768",
+      "0.9421",
+      "-0.5049",
+      "0",
+      "745",
+      "0.9692"
+    ],
+    [
+      "graph_normal_guard",
+      "64",
+      "768",
+      "0.9436",
+      "-0.5035",
+      "0",
+      "745",
+      "0.9692"
+    ],
+    [
+      "geometry_support_guard",
+      "64",
+      "768",
+      "0.9495",
+      "-0.4975",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "graph_support_guard",
+      "64",
+      "768",
+      "0.9519",
+      "-0.4952",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "graph_support_hard",
+      "64",
+      "768",
+      "0.9520",
+      "-0.4951",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "graph_reweight_hard",
+      "64",
+      "768",
+      "0.9520",
+      "-0.4951",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "graph_support_mean3_abstain",
+      "64",
+      "768",
+      "0.9641",
+      "-0.4830",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "global_cls_hard",
+      "64",
+      "768",
+      "0.9892",
+      "-0.4578",
+      "1",
+      "745",
+      "0.9686"
+    ],
+    [
+      "global_small_diverse_hard",
+      "64",
+      "768",
+      "0.9904",
+      "-0.4567",
+      "1",
+      "745",
+      "0.9699"
+    ],
+    [
+      "global_relative_xyz_hard",
+      "64",
+      "768",
+      "1.0101",
+      "-0.4370",
+      "1",
+      "745",
+      "0.9699"
+    ],
+    [
+      "global_small_basic_hard",
+      "64",
+      "768",
+      "1.0235",
+      "-0.4235",
+      "1",
+      "745",
+      "0.9699"
+    ],
+    [
+      "global_height_only_hard",
+      "64",
+      "768",
+      "1.0334",
+      "-0.4137",
+      "0",
+      "745",
+      "0.9699"
+    ],
+    [
+      "global_large_basic_hard",
+      "64",
+      "768",
+      "1.0491",
+      "-0.3980",
+      "2",
+      "746",
+      "0.9712"
+    ],
+    [
+      "weighted_ransac_support",
+      "64",
+      "768",
+      "1.2990",
+      "-0.1481",
+      "30",
+      "742",
+      "0.9660"
+    ],
+    [
+      "observation_router_geometryfallback",
+      "64",
+      "768",
+      "1.4161",
+      "-0.0310",
+      "0",
+      "745",
+      "0.9695"
+    ],
+    [
+      "geometry",
+      "64",
+      "768",
+      "1.4198",
+      "-0.0272",
+      "1",
+      "745",
+      "0.9696"
+    ],
+    [
+      "observation_router_safe",
+      "64",
+      "768",
+      "1.4406",
+      "-0.0065",
+      "0",
+      "745",
+      "0.9688"
+    ],
+    [
+      "raw",
+      "64",
+      "768",
+      "1.4471",
+      "0.0000",
+      "0",
+      "745",
+      "0.9688"
+    ]
+  ],
+  "metricsDefinition": "逐栋宏平均的10m限幅垂直损失包含失败与缺覆盖罚分；每栋12条件配对；不是通常成功屋顶MAE。",
+  "primaryReportUrl": "studies/expanded/report.html",
+  "artifactCount": 216,
+  "totalBytes": 23840013,
+  "original_and_published_hashes_in": "studies/report_package_manifest.json",
+  "status": "complete"
+}

@@ -1,0 +1,163 @@
+{
+  "status": "passed",
+  "phase": "export-check",
+  "completed_utc": "2026-10-21T07:10:39.946022+00:00",
+  "model_count": 16,
+  "models": [
+    {
+      "method": "global_3500_s20261031",
+      "checkpoint_sha256": "8a50b6e826176a041b9a5f8b3622955ff5423ce2bf0a79eabb9d3d86f30c1f3d",
+      "prediction_receipt_sha256": "ae3877d7a3f805ef65c6e6f13d1951f380e100fa63d4dba4c6e7cceed14325ea",
+      "probabilities_sha256": "88976548fb4de910147e5fd3fda7d0442b4a3c3be0b5e52d6f0fb47b9b0a34a1",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_attention_s20261031",
+      "checkpoint_sha256": "2f6b431f0ba232ce20ead2d2132debbdfe52010bcbf68d94ffbb83550d3d52ec",
+      "prediction_receipt_sha256": "7bb2b5290579933e958d967ffd984ad49803c17bd4f0ac67eb592e7beace1be1",
+      "probabilities_sha256": "eaba889f293f77c47fd89ff6e5ad4c478376027193b4e7f482ff762941898197",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_consistency_s20261031",
+      "checkpoint_sha256": "4b66b5f48756ec1421eaca61803317c8ff4caa9994ed19d724e4d6971353d3d4",
+      "prediction_receipt_sha256": "c8fea5c1a7b43d1489e8a1d3197551c098f24ed5f7adf271c51c07a81d6cce39",
+      "probabilities_sha256": "9434db6e994bb87628f68040a162f38f86fb0b5e0702209a1353f1037e8d7372",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_density_s20261031",
+      "checkpoint_sha256": "7e470a1900b658cc8676eed6122d36645c83efc953e035618e95ad09fcd7a239",
+      "prediction_receipt_sha256": "318494f3b7ef49dc93f4d24b4eb51af2a682b9f2a337f67c2409912216becacb",
+      "probabilities_sha256": "1e59985143b02ef9b8180baeb081df2cfbf399e8eeb25a2047f685007f0b35b1",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_geometry_s20261031",
+      "checkpoint_sha256": "6e97b133c47a45fcac002536a4d6aeebc6156ff22fc5bce78e890f1f90979bba",
+      "prediction_receipt_sha256": "ee6316a6b448cceaeb85d442f43924c3762beaed2dc26a292e60d8ecada71322",
+      "probabilities_sha256": "abe8b22a42dc4bc35e37c4b76d5cbd642fc37a301395305eb1115d9c16488f59",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_masked_s20261031",
+      "checkpoint_sha256": "b02e9aabab110a1b7b97c05b1a3863e3c8e2529918c18a943af0faaab0393232",
+      "prediction_receipt_sha256": "00495dca56e685007cca1db80fe14231586bae9dc95060aeeca66f4a9ff044b0",
+      "probabilities_sha256": "99261a06e61df57c672579b9fc510defb0ecc23a7e6634f57f8e6ebf3193b4d9",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_multiscale_s20261031",
+      "checkpoint_sha256": "a4ae7361608c1ef771d45880ab889ac43d93885065e73fc7db97f75913aaca91",
+      "prediction_receipt_sha256": "2040ffb0927d005363fbe05135bb1bad64cb890c50452131b7f9f28c9d50791c",
+      "probabilities_sha256": "394cf0ab942df5a256a803edd4513f5b139fa14596b1895c26415585cc808d78",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_normal_s20261031",
+      "checkpoint_sha256": "667a8ac833ad887cbb9fed1f096a9f42a6166d5ac6d574e13a77516039cc6cff",
+      "prediction_receipt_sha256": "b30398b6be9f112364ad58988207069357b2eab681ab70625fa1f860f7fdedc9",
+      "probabilities_sha256": "f2150c815b3cf62898c880d3fe2a1fc29ee2e834561a40d0f3ddd521574f2c91",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_residual_s20261031",
+      "checkpoint_sha256": "cc58bda0a6c11a36e4cb62a932c9b628a105d1141882b08dd7817a4a2d1091dd",
+      "prediction_receipt_sha256": "60334250b60f4d74b39ec7c496ae3eda044e159f1ba921b5880ae49829b9594b",
+      "probabilities_sha256": "c8f414595ef80abd682183aae949e5c996b2c9398a31f2a6be81ff1b071d536b",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_reweight_s20261031",
+      "checkpoint_sha256": "078f902e47afa3f2084f4cc540bcf05ef06e66f20ba79d23a38ad79395d668fa",
+      "prediction_receipt_sha256": "059419215ec965f295a2fa2233b46f485df4606bf9e637988c89bca060c62c02",
+      "probabilities_sha256": "97b230c9c1b26a66e9c277efbaa0c256aeba26be568fbe2d80fa74cab6c22a38",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_s20261031",
+      "checkpoint_sha256": "04b58e8bd152d7dbee0c81fcca4f664a77b492f08b68740141da8fe376ec8ac9",
+      "prediction_receipt_sha256": "2c2dbcde513602fd337f052bd8179af5c5053f7b965130b31f92fe4edf605b10",
+      "probabilities_sha256": "8984fdaf9348c738fafb9fdc132539c466c14ca5f6c8353caaf52882ea561ce2",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_strongaug_s20261031",
+      "checkpoint_sha256": "d9055ed4c59149dd733d79406181c3714fae2420ab9005333f4645f085211109",
+      "prediction_receipt_sha256": "0d5659c59ec58a3f94e6337a0fb516764435ce5d28abd69a1216dc7d6c604d12",
+      "probabilities_sha256": "62facf0b4843a4091682f45de4d256ac27f426e08fdbca19f98449950f876100",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_10000_wide_s20261031",
+      "checkpoint_sha256": "4498ffd0014a26fcca783a7c68ad8a5158ec195f347ed4d3fc25821dddc9a63b",
+      "prediction_receipt_sha256": "423cff6395d67e6bb2bad20ed452f6fa216a6560520a93c9f1788fb275c02778",
+      "probabilities_sha256": "1f442090142134cf47623454f8bde0c7304a1796dce0d82df2d2df8392c7ad25",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_20000_long_s20261031",
+      "checkpoint_sha256": "0899d4f194dbad868ebf63f267dc6a54e7723491ab96c91347dfe323088d56b1",
+      "prediction_receipt_sha256": "c612a6b64e49cf3891a255bdffabe50967cd68daecd87408bef171877b17a70f",
+      "probabilities_sha256": "6c2673e2d4de14ebdae5e2342f86f3b0868d3cc05695cb184200d784c86b7a8e",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_20000_s20261031",
+      "checkpoint_sha256": "f87a713f5a91553152c1ce0c344d00731978a52cf9a7a2a3262ca55a67c21ab3",
+      "prediction_receipt_sha256": "aff7e3f21f7d1cc92937d2ef34c865151918ab96baf9bfc8400ecdc741a69724",
+      "probabilities_sha256": "b299f2b722c690599736a4ab6594a7bef0f46dba3854db3da2c7c698965132fc",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    },
+    {
+      "method": "graph_3500_s20261031",
+      "checkpoint_sha256": "24fc29d3ead72ffc125079f00543742e3c9b5df9b2ea868ee0b9ab468b3bb32d",
+      "prediction_receipt_sha256": "5aa81a8bacc56c36441236e2445647e51b55db247eb7a672ed54434d03556db0",
+      "probabilities_sha256": "24e5491e0fa5934db38ab3ef1e052394c62fe15826d06a42688a276b3e2b902b",
+      "full_source_clouds": 6000,
+      "all_source_probabilities_bitwise_equal_to_independent_loaded_forward": true,
+      "maximum_absolute_probability_difference": 0.0
+    }
+  ],
+  "predict_code_sha256": "c3e0eb6583ed708fd6736a284594ec082fe8b1033079654fa72d36208cd751bf",
+  "validator_code_sha256": "c0775e815e1ea6e39cbed453cf054882511d55bd976b916ef48adae077992f86",
+  "source_validation_labels_read": false,
+  "final_data_read": false,
+  "scope": "Full calibration labels used only in calibration phase; export check reads source x/valid, never source validation y.",
+  "_publication": {
+    "original_source_sha256": "c38e2631f4a1506c1c63427bb7b18e1b33083d2de9e2f003ec9a13deb55900bf",
+    "original_source": "source:scaling/reports/inference_correction_source_forward_replay.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

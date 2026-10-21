@@ -1,0 +1,108 @@
+{
+  "status": "complete",
+  "models": [
+    {
+      "method": "global_relative_xyz",
+      "seed": 20261023,
+      "checkpoint": "source:expanded/models/global_relative_xyz_s20261023.pt",
+      "sha256": "70668b61144b06fdea258ddb920f8eff2c4ea73151583122a8271a905063d1e5",
+      "cutoff": 0.1550000011920929,
+      "validation": {
+        "roof_retention": 0.9950675368309021,
+        "simulated_contamination_rejected": 0.8163623809814453,
+        "unique_observation_occurrences": 2640000,
+        "source_validation_roof_retention_target": 0.995
+      },
+      "history": [
+        {
+          "epoch": 5,
+          "source_validation_BCE": 0.18851378560066223,
+          "elapsed_s": 14.565169095993042
+        },
+        {
+          "epoch": 10,
+          "source_validation_BCE": 0.16731034219264984,
+          "elapsed_s": 28.62597632408142
+        },
+        {
+          "epoch": 15,
+          "source_validation_BCE": 0.2020549178123474,
+          "elapsed_s": 42.5960533618927
+        },
+        {
+          "epoch": 20,
+          "source_validation_BCE": 0.1669977903366089,
+          "elapsed_s": 56.639307737350464
+        },
+        {
+          "epoch": 25,
+          "source_validation_BCE": 0.16441334784030914,
+          "elapsed_s": 70.90222239494324
+        },
+        {
+          "epoch": 30,
+          "source_validation_BCE": 0.15890030562877655,
+          "elapsed_s": 84.82511734962463
+        },
+        {
+          "epoch": 35,
+          "source_validation_BCE": 0.1741260588169098,
+          "elapsed_s": 98.87213468551636
+        },
+        {
+          "epoch": 40,
+          "source_validation_BCE": 0.14080215990543365,
+          "elapsed_s": 113.13306522369385
+        },
+        {
+          "epoch": 45,
+          "source_validation_BCE": 0.152145653963089,
+          "elapsed_s": 127.19314479827881
+        },
+        {
+          "epoch": 50,
+          "source_validation_BCE": 0.16654497385025024,
+          "elapsed_s": 141.2600393295288
+        },
+        {
+          "epoch": 55,
+          "source_validation_BCE": 0.15393882989883423,
+          "elapsed_s": 155.2657175064087
+        },
+        {
+          "epoch": 60,
+          "source_validation_BCE": 0.15556049346923828,
+          "elapsed_s": 169.2504060268402
+        },
+        {
+          "epoch": 65,
+          "source_validation_BCE": 0.15738040208816528,
+          "elapsed_s": 183.32350134849548
+        },
+        {
+          "epoch": 70,
+          "source_validation_BCE": 0.1660025268793106,
+          "elapsed_s": 197.36572265625
+        },
+        {
+          "epoch": 75,
+          "source_validation_BCE": 0.16715654730796814,
+          "elapsed_s": 211.376531124115
+        },
+        {
+          "epoch": 80,
+          "source_validation_BCE": 0.16708512604236603,
+          "elapsed_s": 225.26451349258423
+        }
+      ],
+      "elapsed_seconds": 226.62092328071594
+    }
+  ],
+  "final_test_not_used": true,
+  "_publication": {
+    "original_source_sha256": "60ccfac42b34223b8dc59eb6f83a99d4a2bd951485cde2c134b19c685ddfa8f6",
+    "original_source": "source:expanded/reports/relative_xyz_control_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

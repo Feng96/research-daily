@@ -1,0 +1,242 @@
+{
+  "status": "complete",
+  "summaries": [
+    {
+      "case": "all",
+      "method": "original_raw_native",
+      "fixed_denominator": 96,
+      "primary_capped_loss_10m": 1.8751350247748972,
+      "strict_coverage": 0.9479166666666666,
+      "native_lod2_success": 91
+    },
+    {
+      "case": "all",
+      "method": "pretrained_roofdiffusion_native",
+      "fixed_denominator": 96,
+      "primary_capped_loss_10m": 1.3866989902939675,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 96
+    },
+    {
+      "case": "all",
+      "method": "raster_linear_native",
+      "fixed_denominator": 96,
+      "primary_capped_loss_10m": 1.2297156187871432,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 96
+    },
+    {
+      "case": "all",
+      "method": "raster_nearest_native",
+      "fixed_denominator": 96,
+      "primary_capped_loss_10m": 1.314836017881389,
+      "strict_coverage": 0.9964192708333334,
+      "native_lod2_success": 96
+    },
+    {
+      "case": "clean",
+      "method": "original_raw_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.13506111402569443,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "clean",
+      "method": "pretrained_roofdiffusion_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.09934774817242925,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "clean",
+      "method": "raster_linear_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.07158922855139661,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "clean",
+      "method": "raster_nearest_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.06823413577444895,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "dense_canopy",
+      "method": "original_raw_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.246134536915132,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "dense_canopy",
+      "method": "pretrained_roofdiffusion_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 3.177966032030658,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "dense_canopy",
+      "method": "raster_linear_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.6133497101833294,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "dense_canopy",
+      "method": "raster_nearest_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.6007140504863697,
+      "strict_coverage": 0.978515625,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "flat_canopy",
+      "method": "original_raw_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.2593760389481474,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "flat_canopy",
+      "method": "pretrained_roofdiffusion_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.079709195075971,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "flat_canopy",
+      "method": "raster_linear_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 1.9046709176938688,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "flat_canopy",
+      "method": "raster_nearest_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.0716792800473023,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "hole",
+      "method": "original_raw_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.3828862554106577,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "hole",
+      "method": "pretrained_roofdiffusion_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.1705241852828183,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "hole",
+      "method": "raster_linear_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.24705073664820446,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "hole",
+      "method": "raster_nearest_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.23123752452286284,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "occlusion_heavy",
+      "method": "original_raw_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.2896538442518004,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "occlusion_heavy",
+      "method": "pretrained_roofdiffusion_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.5068521174093608,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "occlusion_heavy",
+      "method": "raster_linear_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.266526222844033,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "occlusion_heavy",
+      "method": "raster_nearest_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 2.4007412536958497,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "very_sparse",
+      "method": "original_raw_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 3.9376983590979506,
+      "strict_coverage": 0.6875,
+      "native_lod2_success": 11
+    },
+    {
+      "case": "very_sparse",
+      "method": "pretrained_roofdiffusion_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.285794663792567,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "very_sparse",
+      "method": "raster_linear_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.27510689680202616,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    },
+    {
+      "case": "very_sparse",
+      "method": "raster_nearest_native",
+      "fixed_denominator": 16,
+      "primary_capped_loss_10m": 0.5164098627614999,
+      "strict_coverage": 1.0,
+      "native_lod2_success": 16
+    }
+  ],
+  "source_roofs": 16,
+  "conditions": 6,
+  "logical_pairs": 384,
+  "derived_outputs_not_real_observations": true,
+  "same_cohort_comparisons_only": true,
+  "independent_measured_GT": false,
+  "elapsed_seconds": 17.194681644439697,
+  "_publication": {
+    "original_source_sha256": "e072c9afc2cad72304ed883f8408e1643eb8ff04163c4cab23e3d9e9de3cacc8",
+    "original_source": "source:expanded/reports/completion_v2_test_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

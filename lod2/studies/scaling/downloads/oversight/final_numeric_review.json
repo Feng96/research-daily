@@ -1,0 +1,647 @@
+{
+  "status": "passed_independent_final_numeric_integrity",
+  "created_utc": "2026-10-21T09:16:53.857844+00:00",
+  "primary_method": "graph_20000_long_s20261031",
+  "fixed_final_methods": [
+    "raw",
+    "geometry",
+    "graph_10000_s20261031",
+    "graph_10000_s20261101",
+    "graph_10000_s20261102",
+    "global_3500_s20261031",
+    "global_3500_s20261101",
+    "global_3500_s20261102",
+    "graph_3500_s20261031",
+    "graph_3500_s20261101",
+    "graph_3500_s20261102",
+    "graph_20000_s20261031",
+    "graph_20000_s20261101",
+    "graph_20000_s20261102",
+    "graph_20000_long_s20261031",
+    "graph_20000_long_s20261101",
+    "graph_20000_long_s20261102",
+    "graph_10000_mean3",
+    "graph_20000_long_mean3"
+  ],
+  "denominator": {
+    "methods": 19,
+    "parent_buildings": 200,
+    "conditions": 12,
+    "slots": 45600
+  },
+  "metrics": {
+    "raw": {
+      "loss_m": 1.094044631553961,
+      "strict_coverage": 0.9853834729347051,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 0.0,
+      "clean_mean_delta_m": 0.0,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 0,
+      "deletion_active_clean_count": 0,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.5411725439075514
+    },
+    "geometry": {
+      "loss_m": 1.104115773374105,
+      "strict_coverage": 0.9841390790801772,
+      "native_success_count": 2369,
+      "eligible_including_coverage": false,
+      "clean_harmed_count": 1,
+      "clean_max_harm_m": 0.07217389956281554,
+      "clean_mean_delta_m": -0.001179110228096601,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1313,
+      "deletion_active_clean_count": 26,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.5449900013276858
+    },
+    "graph_10000_s20261031": {
+      "loss_m": 0.5161391843327396,
+      "strict_coverage": 0.9869037241155871,
+      "native_success_count": 2369,
+      "eligible_including_coverage": false,
+      "clean_harmed_count": 1,
+      "clean_max_harm_m": 0.0658569933368781,
+      "clean_mean_delta_m": -0.0015597875441810244,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1407,
+      "deletion_active_clean_count": 6,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.659921535632794
+    },
+    "graph_10000_s20261101": {
+      "loss_m": 0.5181022088162457,
+      "strict_coverage": 0.9869001321615641,
+      "native_success_count": 2369,
+      "eligible_including_coverage": false,
+      "clean_harmed_count": 1,
+      "clean_max_harm_m": 0.48391482713075773,
+      "clean_mean_delta_m": 0.002419574135653789,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1408,
+      "deletion_active_clean_count": 1,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6599065938305894
+    },
+    "graph_10000_s20261102": {
+      "loss_m": 0.5116544439354288,
+      "strict_coverage": 0.9869001321615641,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 0.012662368396165302,
+      "clean_mean_delta_m": -0.0005456807664093407,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1406,
+      "deletion_active_clean_count": 3,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.66122065836584
+    },
+    "global_3500_s20261031": {
+      "loss_m": 0.5577044871398497,
+      "strict_coverage": 0.9856922105541861,
+      "native_success_count": 2367,
+      "eligible_including_coverage": false,
+      "clean_harmed_count": 2,
+      "clean_max_harm_m": 1.6660979236803495,
+      "clean_mean_delta_m": 0.007902199733314937,
+      "new_native_failure_count": 2,
+      "deleted_points_cloud_count": 1403,
+      "deletion_active_clean_count": 5,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6496828285309382
+    },
+    "global_3500_s20261101": {
+      "loss_m": 0.5535683552778662,
+      "strict_coverage": 0.9865255438875193,
+      "native_success_count": 2369,
+      "eligible_including_coverage": false,
+      "clean_harmed_count": 2,
+      "clean_max_harm_m": 1.2565228578811827,
+      "clean_mean_delta_m": 0.005572000514068747,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1396,
+      "deletion_active_clean_count": 4,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6476604561210811
+    },
+    "global_3500_s20261102": {
+      "loss_m": 0.5494709149854755,
+      "strict_coverage": 0.9861088772208527,
+      "native_success_count": 2368,
+      "eligible_including_coverage": false,
+      "clean_harmed_count": 2,
+      "clean_max_harm_m": 0.32811146519826595,
+      "clean_mean_delta_m": 0.00307483410194461,
+      "new_native_failure_count": 1,
+      "deleted_points_cloud_count": 1399,
+      "deletion_active_clean_count": 3,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6498617969793128
+    },
+    "graph_3500_s20261031": {
+      "loss_m": 0.5141727665313772,
+      "strict_coverage": 0.9869001321615641,
+      "native_success_count": 2369,
+      "eligible_including_coverage": false,
+      "clean_harmed_count": 1,
+      "clean_max_harm_m": 0.6778784432982854,
+      "clean_mean_delta_m": 0.003466183134106204,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1409,
+      "deletion_active_clean_count": 4,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6589003365510712
+    },
+    "graph_3500_s20261101": {
+      "loss_m": 0.5173225043994267,
+      "strict_coverage": 0.9869001321615641,
+      "native_success_count": 2369,
+      "eligible_including_coverage": false,
+      "clean_harmed_count": 2,
+      "clean_max_harm_m": 1.2751577851912232,
+      "clean_mean_delta_m": 0.012118018136731055,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1410,
+      "deletion_active_clean_count": 4,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6599881774361176
+    },
+    "graph_3500_s20261102": {
+      "loss_m": 0.5168884557910919,
+      "strict_coverage": 0.9868870574489205,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 0.01641494935462097,
+      "clean_mean_delta_m": 0.00014744339065872754,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1405,
+      "deletion_active_clean_count": 3,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6570125537819875
+    },
+    "graph_20000_s20261031": {
+      "loss_m": 0.5143259695704778,
+      "strict_coverage": 0.9869037241155871,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 0.017050818463763773,
+      "clean_mean_delta_m": 8.525409231881887e-05,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1403,
+      "deletion_active_clean_count": 2,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6613253425264566
+    },
+    "graph_20000_s20261101": {
+      "loss_m": 0.5148038889392287,
+      "strict_coverage": 0.9869001321615641,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 0.0,
+      "clean_mean_delta_m": -0.00023704469380979364,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1405,
+      "deletion_active_clean_count": 2,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6618189343472664
+    },
+    "graph_20000_s20261102": {
+      "loss_m": 0.5149465199924339,
+      "strict_coverage": 0.9869037241155871,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 8.61609757255577e-05,
+      "clean_mean_delta_m": -0.0008325765719743188,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1404,
+      "deletion_active_clean_count": 3,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6570104816095182
+    },
+    "graph_20000_long_s20261031": {
+      "loss_m": 0.5123316077996095,
+      "strict_coverage": 0.9869001321615641,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 0.0,
+      "clean_mean_delta_m": 0.0,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1405,
+      "deletion_active_clean_count": 0,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6609475685500079
+    },
+    "graph_20000_long_s20261101": {
+      "loss_m": 0.5125401174878738,
+      "strict_coverage": 0.9869037241155871,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 1.4843666916397602e-05,
+      "clean_mean_delta_m": 7.4218334581988e-08,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1403,
+      "deletion_active_clean_count": 1,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6618972692627149
+    },
+    "graph_20000_long_s20261102": {
+      "loss_m": 0.5135884877985172,
+      "strict_coverage": 0.9869037241155871,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 0.0,
+      "clean_mean_delta_m": -0.00015083832415041298,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1406,
+      "deletion_active_clean_count": 1,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6628895214248637
+    },
+    "graph_10000_mean3": {
+      "loss_m": 0.5152196637651565,
+      "strict_coverage": 0.9868942544186174,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 0.013342776934568867,
+      "clean_mean_delta_m": 6.671388467284434e-05,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1403,
+      "deletion_active_clean_count": 2,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6602948627532853
+    },
+    "graph_20000_long_mean3": {
+      "loss_m": 0.5135917127239779,
+      "strict_coverage": 0.9869037241155871,
+      "native_success_count": 2369,
+      "eligible_including_coverage": true,
+      "clean_harmed_count": 0,
+      "clean_max_harm_m": 0.0,
+      "clean_mean_delta_m": -1.3876122473277519e-14,
+      "new_native_failure_count": 0,
+      "deleted_points_cloud_count": 1403,
+      "deletion_active_clean_count": 1,
+      "common_teacher_edge_positive_clouds": 1332,
+      "common_teacher_edge_positive_buildings": 111,
+      "ridge3d_common_domain_f1": 0.6608475456562235
+    }
+  },
+  "families": {
+    "raw": {
+      "seed_methods": [
+        "raw"
+      ],
+      "seed_losses_m": [
+        1.094044631553961
+      ],
+      "mean_seed_loss_m": 1.094044631553961,
+      "seed_sample_std_m": null,
+      "all_seeds_safety_diagnostic_passed": true
+    },
+    "geometry": {
+      "seed_methods": [
+        "geometry"
+      ],
+      "seed_losses_m": [
+        1.104115773374105
+      ],
+      "mean_seed_loss_m": 1.104115773374105,
+      "seed_sample_std_m": null,
+      "all_seeds_safety_diagnostic_passed": false
+    },
+    "graph_10000": {
+      "seed_methods": [
+        "graph_10000_s20261031",
+        "graph_10000_s20261101",
+        "graph_10000_s20261102"
+      ],
+      "seed_losses_m": [
+        0.5161391843327396,
+        0.5181022088162457,
+        0.5116544439354288
+      ],
+      "mean_seed_loss_m": 0.5152986123614713,
+      "seed_sample_std_m": 0.0033050474911467246,
+      "all_seeds_safety_diagnostic_passed": false
+    },
+    "global_3500": {
+      "seed_methods": [
+        "global_3500_s20261031",
+        "global_3500_s20261101",
+        "global_3500_s20261102"
+      ],
+      "seed_losses_m": [
+        0.5577044871398497,
+        0.5535683552778662,
+        0.5494709149854755
+      ],
+      "mean_seed_loss_m": 0.5535812524677305,
+      "seed_sample_std_m": 0.004116801228921689,
+      "all_seeds_safety_diagnostic_passed": false
+    },
+    "graph_3500": {
+      "seed_methods": [
+        "graph_3500_s20261031",
+        "graph_3500_s20261101",
+        "graph_3500_s20261102"
+      ],
+      "seed_losses_m": [
+        0.5141727665313772,
+        0.5173225043994267,
+        0.5168884557910919
+      ],
+      "mean_seed_loss_m": 0.5161279089072986,
+      "seed_sample_std_m": 0.0017070547241351123,
+      "all_seeds_safety_diagnostic_passed": false
+    },
+    "graph_20000": {
+      "seed_methods": [
+        "graph_20000_s20261031",
+        "graph_20000_s20261101",
+        "graph_20000_s20261102"
+      ],
+      "seed_losses_m": [
+        0.5143259695704778,
+        0.5148038889392287,
+        0.5149465199924339
+      ],
+      "mean_seed_loss_m": 0.5146921261673801,
+      "seed_sample_std_m": 0.00032502137533694495,
+      "all_seeds_safety_diagnostic_passed": true
+    },
+    "graph_20000_long": {
+      "seed_methods": [
+        "graph_20000_long_s20261031",
+        "graph_20000_long_s20261101",
+        "graph_20000_long_s20261102"
+      ],
+      "seed_losses_m": [
+        0.5123316077996095,
+        0.5125401174878738,
+        0.5135884877985172
+      ],
+      "mean_seed_loss_m": 0.5128200710286668,
+      "seed_sample_std_m": 0.0006735854226937087,
+      "all_seeds_safety_diagnostic_passed": true
+    }
+  },
+  "paired_family_mean_vs_raw_city_stratified_group_CI": {
+    "raw": {
+      "mean_parent_delta_m": 0.0,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        0.0,
+        0.0
+      ]
+    },
+    "geometry": {
+      "mean_parent_delta_m": 0.010071141820144024,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.009639178305537704,
+        0.030930368962604354
+      ]
+    },
+    "graph_10000": {
+      "mean_parent_delta_m": -0.5787460191924895,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.6083021777882281,
+        -0.5491802950942336
+      ]
+    },
+    "global_3500": {
+      "mean_parent_delta_m": -0.5404633790862303,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.5724274999021602,
+        -0.5093952541087531
+      ]
+    },
+    "graph_3500": {
+      "mean_parent_delta_m": -0.5779167226466623,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.6081782217537546,
+        -0.5481118305756804
+      ]
+    },
+    "graph_20000": {
+      "mean_parent_delta_m": -0.5793525053865808,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.6092562398950536,
+        -0.5499015724574148
+      ]
+    },
+    "graph_20000_long": {
+      "mean_parent_delta_m": -0.581224560525294,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.6105223924045632,
+        -0.552251675332294
+      ]
+    }
+  },
+  "ladder_contrasts_reporting_only": {
+    "graph_3500_minus_global_3500": {
+      "mean_parent_delta_m": -0.03745334356043184,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.05177791261288366,
+        -0.02420583939704698
+      ]
+    },
+    "graph_10000_minus_graph_3500": {
+      "mean_parent_delta_m": -0.0008292965458272242,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.0036850765743286734,
+        0.0018777788533432644
+      ]
+    },
+    "graph_20000_minus_graph_10000": {
+      "mean_parent_delta_m": -0.0006064861940912234,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.003070745513255594,
+        0.002006979142419108
+      ]
+    },
+    "graph_20000_long_minus_graph_20000": {
+      "mean_parent_delta_m": -0.001872055138713354,
+      "parent_buildings": 200,
+      "adjacency_clusters": 150,
+      "fixed_city_parent_weights": {
+        "Groningen": 0.5,
+        "Maastricht": 0.5
+      },
+      "cluster_bootstrap_95_m": [
+        -0.005282861751535091,
+        0.0012782251613277869
+      ]
+    }
+  },
+  "primary_error_decomposition": {
+    "deployment_method": "graph_20000_long_s20261031",
+    "mean_primary_loss_m": 0.5123316077996095,
+    "strict_missing_coverage_penalty_component_m": 0.13099867838435816,
+    "remaining_covered_cell_capped_error_component_m": 0.3813329294152513,
+    "native_failed_or_non_LoD2_slots": 31,
+    "native_LoD2_slots_failing_edge_incidence_diagnostic": 3,
+    "condition_contribution_to_overall_loss_m": {
+      "clean": 0.009166530906391657,
+      "sparse": 0.04447029535806122,
+      "very_sparse": 0.20424943654472108,
+      "noise": 0.02151793550231224,
+      "hole": 0.021010743486904605,
+      "scattered_tree": 0.015041680655041946,
+      "dense_canopy": 0.03172098253324089,
+      "flat_canopy": 0.030145140355079078,
+      "low_canopy": 0.01940928816624617,
+      "tree_multiple": 0.02510277674239413,
+      "tilted_canopy": 0.021612862156877168,
+      "occlusion_heavy": 0.06888393539233928
+    }
+  },
+  "final_primary_safety_diagnostic_passed": true,
+  "no_post_test_selection": true,
+  "bound_sha256": {
+    "source:scaling/oversight/final_unlock.json": "06f0463a0cdd4be0afef2406b55de7378e6672dca53ac871d87cd68291ddd489",
+    "source:scaling/reports_reconstruction/test_full_summary.json": "543e4ef1ec46af71cf50154e617a90b4329344e1ec6514e37656fb4e5f949eaf",
+    "source:scaling/reports_reconstruction/native_design_freeze.json": "03a81756528024b0c36b6587ad2c49d4f72f6022fd3d83c0302eca1090dc8cc4",
+    "source:scaling/reports/method_selection.json": "ffcbd35a50cb5d64b3f82c1380a57223a667f4c7b3035b059cafd285e78f83d5",
+    "source:scaling/reports/source_family_selection.json": "645f41e5b04f418d7155e816705699a883135b0ce6011069b086f8ed847ce99b",
+    "source:scaling/oversight/audit_final_results.py": "0501acaf09f9dd75a34b9b273b1f014505161c20a8280eb38cffea559af11edc",
+    "source:scaling/reports_reconstruction/evaluation/test/full/raw.json": "5a0e04984fbec03f0b12287622b6c9de2c2ecedc96abf56a6d5c79fc5584ed30",
+    "source:scaling/reports_reconstruction/paired/test/full/raw.json": "23c87642f7d0436da959f3f10c25a8db5bb6f896777ed7382635347f6c8281c1",
+    "source:scaling/reports_reconstruction/evaluation/test/full/geometry.json": "12fb5259f928b39fc210ea7ece9cc5e3995ec0d1dc8b897bbcdcce12dbcafa14",
+    "source:scaling/reports_reconstruction/paired/test/full/geometry.json": "c6618b386c30c224e81526f93787d995dfecd9ab7fb6b4f9948990d94f43b1fb",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_10000_s20261031.json": "752c999bfeb94755a3059cf918bf8861edf8565c31963d2ea87988b686efa781",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_10000_s20261031.json": "31f3d33cb0224896b63ef5dd76605949b71b89ead99749599bdfef9113671f9a",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_10000_s20261101.json": "4bb24a18e2f8fceed9d78e458a6994ceabd4e11fa507ddb706698ff4caa24928",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_10000_s20261101.json": "f044337fa1d9b55ba39e1753281e8040c05f5ac70c6a8d20f87eeb45dc45d110",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_10000_s20261102.json": "611262adc42534114665359347eefc5d83ba1f1a5dce3c6aa01de2ace9c2faf4",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_10000_s20261102.json": "b418477bcc7205329cb8f68bf154ccdd3103b7c08dbaea23c37a63a412de4bae",
+    "source:scaling/reports_reconstruction/evaluation/test/full/global_3500_s20261031.json": "1f1a10c9fcb8df55d48f55c38e9b8d79de3873930d7afc4fc4348693ec5d019c",
+    "source:scaling/reports_reconstruction/paired/test/full/global_3500_s20261031.json": "3e2de288a847d11b97d1e96619bb9ed180d065550dc9b3a193a216c8a7606355",
+    "source:scaling/reports_reconstruction/evaluation/test/full/global_3500_s20261101.json": "0de4804219df31b7a02899c5e98dd583ce2a9c9ae76676948ef18f64c15786ab",
+    "source:scaling/reports_reconstruction/paired/test/full/global_3500_s20261101.json": "3e839673d3e4a553fe77e94e482456399a80d3f685d034324492a1a45ae87e8a",
+    "source:scaling/reports_reconstruction/evaluation/test/full/global_3500_s20261102.json": "329f7d4207146bd1b31444ca4f2e476905b969d518b59b2fddd09f80b476a100",
+    "source:scaling/reports_reconstruction/paired/test/full/global_3500_s20261102.json": "e58adbeca0b14cc9a4955deff8dc81e1438c467321dc664c2b99f97adcb7c943",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_3500_s20261031.json": "c11e8b6cc10ab930352430905a56917d4ddd12d619084d0ff4d28a98c48748c1",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_3500_s20261031.json": "de1168f1cafba08a8c409d1564595a8be405b12c1fffb57851fdb07c66359320",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_3500_s20261101.json": "0832ef6e16860fef335121c3260b1c737598aefa9147fdd37b81868a5e832aeb",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_3500_s20261101.json": "6a74ba8a6eb1862b55701e64fdd121132377b9029f248682002aeed99020803b",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_3500_s20261102.json": "3fa13806f40e46b8404f31598b230fe9fd0603e3d6006817d65db4ee3828babb",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_3500_s20261102.json": "e8707fc2993b25fc3a4d3bf77cc829bfee6b917586cb9a10a7d351d298944f01",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_20000_s20261031.json": "33ba453313c71def92939504cf84a74f24e9fbf5237bfcd8516a6f8e2a315263",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_20000_s20261031.json": "51acd3a93b9f1ee3062c984cc2a210ae5d9993b789ba75ad3fec540d8211fcdd",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_20000_s20261101.json": "a75bda9277fa97932ed0416aef9164bbc58d60f14231c99444e6752b6f001f66",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_20000_s20261101.json": "dee11a842f80e7c54e202f96117671ffd01d95c2a6fa4ac57db3fedc784edc67",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_20000_s20261102.json": "d709562943af881ce6f136b12058eb50c429b610081e4925b7c594136cfe92a8",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_20000_s20261102.json": "b75bc85879425d1131df552ea15caa5a0d6e3a36f661d746caff094bde725750",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_20000_long_s20261031.json": "f6f74f7632207a0036212e79c4c2d8086281e12741b89551d9d5f4418bca36d2",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_20000_long_s20261031.json": "d3128e5fe0a2345456bbee32bee991ee122a8e85c32fd5260a1ec8c69bc51d1c",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_20000_long_s20261101.json": "f151350c55c5319b777eb2dedd20041f318932709dcc6802a046d7f8bd5be62f",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_20000_long_s20261101.json": "536c1aec40461a0f10abcf1746c0146ba6fa5613ee9b8e2cbc1851abfd9e2f14",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_20000_long_s20261102.json": "79f2c3b5415e2e1ad4b1bc1ce0701fcfea8720ca57bf2ebb02e8a7c93ab69331",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_20000_long_s20261102.json": "2386b41b8ba0d90a32232d6b520c1222bbd77f9d0196856cd73c16d7ddd92378",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_10000_mean3.json": "9a339009b414f82019c93024b0d4892963c0e3badb461019f9e6f2f3c9dba559",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_10000_mean3.json": "5bab02ede5ca92c361cbc75864cea70149648b1702e57f9e03c3092cac077bcc",
+    "source:scaling/reports_reconstruction/evaluation/test/full/graph_20000_long_mean3.json": "f7f9831a11d92e069f2eb546353bd9f9d7e30b47bf3f84fe5dc53359826c9d96",
+    "source:scaling/reports_reconstruction/paired/test/full/graph_20000_long_mean3.json": "3fa29b200a1d5e1a7465e7cfb851d29845cd19db627365270f2ce17b1e39d79c",
+    "source:scaling/reports_reconstruction/all_fits_complete_test_full_be11c6fc5d113a54.json": "cc0d53ea6562d76164a180b3d8f55d911cadeaa36e67a11fe174c2d696f52885"
+  },
+  "limits": [
+    "Independently aggregates frozen native evaluation rows; not an independent human roof groundtruth or a second full geometric scoring engine.",
+    "Group intervals condition on the fixed two cities and trained seeds; no national or city-population confidence guarantee.",
+    "Four ladder contrast analyses were specified here after source selection before final scores were read, not originally preregistered; no retuning or reselection."
+  ],
+  "_publication": {
+    "original_source_sha256": "01cfc5c7c018dc132eb350b6c07a564c209d1358588de6dfb3f77279d59e0836",
+    "original_source": "source:scaling/oversight/final_numeric_review.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

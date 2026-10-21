@@ -1,0 +1,215 @@
+{
+  "status": "complete",
+  "real_observations": true,
+  "training": "3DBAG synthetic teacher observations for point networks; ISPRS real semantic source for optical MLP",
+  "local_supervision": false,
+  "source_cutoffs_unchanged": true,
+  "rows": [
+    {
+      "id": "Boston_BOS-0ONA1-2JP57-OU1ZS",
+      "original_candidate_records": 689,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 0,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-0ONA1-2JP57-OU1ZS.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-4HPQA-W5GXR-6QJBE",
+      "original_candidate_records": 13,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 0,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-4HPQA-W5GXR-6QJBE.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-CQPOV-IS0KK-C9UFK",
+      "original_candidate_records": 2948,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 26,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-CQPOV-IS0KK-C9UFK.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-EPQQX-42UEH-SW4LQ",
+      "original_candidate_records": 2331,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 39,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-EPQQX-42UEH-SW4LQ.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-G0V1F-GLIOQ-727YL",
+      "original_candidate_records": 11863,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 448,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-G0V1F-GLIOQ-727YL.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-GNG1E-45LN5-TSILF",
+      "original_candidate_records": 2130,
+      "pointnet_rejected": 2,
+      "edgeconv_rejected": 69,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-GNG1E-45LN5-TSILF.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-ILUWZ-ZCJSN-N5BQW",
+      "original_candidate_records": 11,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 0,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-ILUWZ-ZCJSN-N5BQW.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+      "original_candidate_records": 5294,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 216,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-J2N1I-SRHA7-BV6WK.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-JU295-77PG4-5G5PZ",
+      "original_candidate_records": 22,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 0,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-JU295-77PG4-5G5PZ.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-JXPYV-X1TS0-PPO07",
+      "original_candidate_records": 2443,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 155,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-JXPYV-X1TS0-PPO07.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-LK8QJ-46RFH-1IJSL",
+      "original_candidate_records": 1792,
+      "pointnet_rejected": 30,
+      "edgeconv_rejected": 79,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-LK8QJ-46RFH-1IJSL.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-NO3EN-TAWDQ-MG62Z",
+      "original_candidate_records": 1004,
+      "pointnet_rejected": 45,
+      "edgeconv_rejected": 87,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-NO3EN-TAWDQ-MG62Z.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-PLZ05-3H27Y-3PBSK",
+      "original_candidate_records": 3992,
+      "pointnet_rejected": 1,
+      "edgeconv_rejected": 356,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-PLZ05-3H27Y-3PBSK.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-T3QFD-JQMKR-GHCNH",
+      "original_candidate_records": 24,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 0,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-T3QFD-JQMKR-GHCNH.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-UJDC6-0LXIR-PT904",
+      "original_candidate_records": 495,
+      "pointnet_rejected": 117,
+      "edgeconv_rejected": 162,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-UJDC6-0LXIR-PT904.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-YVP2H-D3R1Z-AIT7H",
+      "original_candidate_records": 6350,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 114,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-YVP2H-D3R1Z-AIT7H.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+      "original_candidate_records": 6131,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 204,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-Z67B7-RDBMY-U36E1.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    },
+    {
+      "id": "Boston_BOS-ZX2T4-0BM20-S7FO9",
+      "original_candidate_records": 12,
+      "pointnet_rejected": 0,
+      "edgeconv_rejected": 0,
+      "optical_rejected": 0,
+      "optical_valid_fraction": 1.0,
+      "prediction_path": "source:multicity/paired_inputs/boston/predictions/Boston_BOS-ZX2T4-0BM20-S7FO9.npz",
+      "raw_source_indices_unchanged": true,
+      "roof_GT_available": false
+    }
+  ],
+  "elapsed_seconds": 2.8043715953826904,
+  "point_or_roof_accuracy_measured": false,
+  "_publication": {
+    "original_source_sha256": "b674fa6ddbc509cf1f489e4f443ed1e78b7b4a3ed3853e3df76ccddfd4a939e4",
+    "original_source": "source:multicity/reports/boston_inference_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

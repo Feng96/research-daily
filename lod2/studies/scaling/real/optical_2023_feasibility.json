@@ -1,0 +1,57 @@
+{
+  "utc": "2026-10-21T05:39:29.802535+00:00",
+  "status": "available_validated_as_separate_RGB_input",
+  "fixed_building_denominator": 20,
+  "downloaded_image_bytes": 429694,
+  "added_metadata_bytes": 92489,
+  "download_budget_bytes": 70000000,
+  "all_received_before_deadline": true,
+  "source": "official PDOK year-specific2023_orthoHR RGB WMS, not current imagery",
+  "actual_pixel_acquisition_day": null,
+  "official_dataset_acquisition_interval": [
+    "2023-01-01",
+    "2023-06-01"
+  ],
+  "time_relation_to_AHN5": "same2023 product year; no claim of same flight or exact per-building acquisition day",
+  "source_crs": "EPSG:28992",
+  "height_input_crs": "EPSG:7415 with matching RDNew horizontal CRS",
+  "export_pixel_size_m": [
+    0.08,
+    0.08
+  ],
+  "official_NGR_nominal_dataset_resolution_m": 0.075,
+  "service_title_nominal_resolution_cm": 8,
+  "registration_metadata": "Official WMS rendered onto requested north-up RDNew grid. Same horizontal CRS as observedAHN points; all98227candidate XY fall inside their patch. This verifies transform/coverage only, not measured image-LiDAR alignment accuracy. No XY/Z correction or estimated shift.",
+  "not_quick_or_current_layer": true,
+  "near_infrared_acquired": false,
+  "NDVI_available": false,
+  "all_scientific_prepared_inputs_and_point_optical_features_unchanged": true,
+  "main16_config_experiment_independent": true,
+  "no_model_training_or_inference": true,
+  "no_validation_or_final_city_data_read": true,
+  "all_sources_unchanged": true,
+  "source_metadata_url": "https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/84ae8387-a93b-4a70-ac5c-6bb47792c1b4/formatters/xml",
+  "metadata_sha256": "654f51c41438d33a9245f7d80df8459962480770b046233181c1e18503da7cf8",
+  "capabilities_sha256": "30e411329dc093e2a06868bdd617517fcdcfb21c51483d6d5d10191488ec0aa6",
+  "limitations": [
+    "Official acquisition window covers the national2023 product, not the exact flight day of each Leiden pixel.",
+    "Official GetCapabilities offers image/jpeg only. JPEG response bytes preserved; encoded display RGB is not lossless raw-sensor data.",
+    "WMS is a rendered RGB orthomosaic with color balancing, not calibrated multispectral reflectance.",
+    "Source metadata nominal resolution0.075m versus advertised8cm layer title; export grid explicitly0.08m.",
+    "No NIR or derivedNDVI supplied. Frozen candidate optical_features_8/optical_valid remain unchanged.",
+    "Original roof projection prior is not an independent footprint or surveyed registration control.",
+    "Georeferencing is defined by the official requested RDNew grid; actual point-image registration accuracy has not been established."
+  ],
+  "contact_sheet_path": "paired_real_feasibility/reports/pdok_rgb2023_contact_sheet.png",
+  "contact_sheet_sha256": "a50541084391e96b4000c93a61f340cde0779097e4f7222c8e6eab3e67d8c3d6",
+  "contact_sheet_outline_is_teacher_prior_not_independent_GCP": true,
+  "prepare_code_sha256": "f4ccbc275f9689beb5046c4784c32043274a77594ca9164157ac15025ac3f749",
+  "manifest_path": "paired_real_feasibility/optical_patches/manifest.json",
+  "manifest_sha256": "2d69a6a38ed3b3b5edb1b13742a17a4bda2fee523324574ab94839fb2b4c7dfd",
+  "_publication": {
+    "original_source_sha256": "2fe5a60c88debad29ac78d3c47e92ad5ea5f3b3bea69b5d11f1885a392369d22",
+    "original_source": "source:scaling/paired_real_feasibility/reports/optical_2023_feasibility.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

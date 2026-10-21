@@ -1,0 +1,486 @@
+{
+  "status": "complete",
+  "training": {
+    "pointnet": {
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.2746875492334366,
+          "validation_BCE": 0.31598222255706787
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.1866602808833122,
+          "validation_BCE": 0.2524053156375885
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.16068183332681657,
+          "validation_BCE": 0.24461862444877625
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.14007505857944488,
+          "validation_BCE": 0.2393254041671753
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.13155273482203483,
+          "validation_BCE": 0.20436707139015198
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.1288041250705719,
+          "validation_BCE": 0.20906484127044678
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.11950690379738807,
+          "validation_BCE": 0.1927797645330429
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.11392767304182053,
+          "validation_BCE": 0.18959301710128784
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.11578376519680023,
+          "validation_BCE": 0.18182766437530518
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.10786036683619023,
+          "validation_BCE": 0.2027965486049652
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.10634547266364097,
+          "validation_BCE": 0.1929406076669693
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.10476236760616303,
+          "validation_BCE": 0.20020723342895508
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.09825535473227501,
+          "validation_BCE": 0.187355175614357
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.09918540908396244,
+          "validation_BCE": 0.17846114933490753
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.09731102392077445,
+          "validation_BCE": 0.1944309026002884
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.09557220466434956,
+          "validation_BCE": 0.1986161172389984
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.09488650606572628,
+          "validation_BCE": 0.17045192420482635
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.0928149086534977,
+          "validation_BCE": 0.18323037028312683
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.09252232445776462,
+          "validation_BCE": 0.18621544539928436
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.09021402677893639,
+          "validation_BCE": 0.16820764541625977
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.0872615870833397,
+          "validation_BCE": 0.17874673008918762
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.08686643585562706,
+          "validation_BCE": 0.17641356587409973
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.08590545454621315,
+          "validation_BCE": 0.17631779611110687
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.0845810207426548,
+          "validation_BCE": 0.17555907368659973
+        },
+        {
+          "epoch": 25,
+          "train_loss": 0.08449564671516419,
+          "validation_BCE": 0.1711214929819107
+        },
+        {
+          "epoch": 26,
+          "train_loss": 0.08437809252738952,
+          "validation_BCE": 0.17197035253047943
+        },
+        {
+          "epoch": 27,
+          "train_loss": 0.08198583520948886,
+          "validation_BCE": 0.1717585027217865
+        },
+        {
+          "epoch": 28,
+          "train_loss": 0.08251820127665997,
+          "validation_BCE": 0.16992628574371338
+        },
+        {
+          "epoch": 29,
+          "train_loss": 0.08198245957493783,
+          "validation_BCE": 0.16940395534038544
+        },
+        {
+          "epoch": 30,
+          "train_loss": 0.08146998269855976,
+          "validation_BCE": 0.16949205100536346
+        }
+      ],
+      "parameters": 50692,
+      "validation": {
+        "roof_retention": 0.9953016311383447,
+        "simulated_vegetation_rejection": 0.6303496623065743,
+        "roof_f1": 0.9616749609745033,
+        "unique_observations": 348160,
+        "roof_observations": 289675,
+        "simulated_vegetation_observations": 58485,
+        "cutoff_roof_probability": 0.09999999999999999
+      },
+      "cutoff": 0.09999999999999999,
+      "checkpoint_sha256": "9164cfe6a0f138d542406c603c2c02c73461bc8332ba3e9d9ac2051d85f970be"
+    },
+    "edgeconv": {
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.24173196548223497,
+          "validation_BCE": 0.240482896566391
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.1288615783751011,
+          "validation_BCE": 0.18390843272209167
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.10702785885334015,
+          "validation_BCE": 0.16371960937976837
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.09753554654121399,
+          "validation_BCE": 0.1600770205259323
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.0900621203482151,
+          "validation_BCE": 0.13315671682357788
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.0767167045623064,
+          "validation_BCE": 0.13285796344280243
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.07770748601853847,
+          "validation_BCE": 0.14351506531238556
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.07150115545094013,
+          "validation_BCE": 0.16249223053455353
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.06247348067164421,
+          "validation_BCE": 0.11854881048202515
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.060311772547662255,
+          "validation_BCE": 0.11988691240549088
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.06012696792185306,
+          "validation_BCE": 0.11683531105518341
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.05334156516194344,
+          "validation_BCE": 0.1003742590546608
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.05172899498045445,
+          "validation_BCE": 0.09714143723249435
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.0520312468111515,
+          "validation_BCE": 0.10356568545103073
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.049222640193998815,
+          "validation_BCE": 0.10649619251489639
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.04520275858044624,
+          "validation_BCE": 0.10938584059476852
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.04469659473747015,
+          "validation_BCE": 0.08455522358417511
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.042871720500290394,
+          "validation_BCE": 0.0809539258480072
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.0407751329690218,
+          "validation_BCE": 0.08791498839855194
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.04055441700667143,
+          "validation_BCE": 0.08393779397010803
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.038813350431621076,
+          "validation_BCE": 0.08556962013244629
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.038707998342812064,
+          "validation_BCE": 0.07829108834266663
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.0378617662191391,
+          "validation_BCE": 0.0731072649359703
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.03735228834301233,
+          "validation_BCE": 0.07855083793401718
+        },
+        {
+          "epoch": 25,
+          "train_loss": 0.036544358655810356,
+          "validation_BCE": 0.07473939657211304
+        },
+        {
+          "epoch": 26,
+          "train_loss": 0.03624447749182582,
+          "validation_BCE": 0.07414403557777405
+        },
+        {
+          "epoch": 27,
+          "train_loss": 0.03593048605322838,
+          "validation_BCE": 0.07512405514717102
+        },
+        {
+          "epoch": 28,
+          "train_loss": 0.03551076203212142,
+          "validation_BCE": 0.07321786880493164
+        },
+        {
+          "epoch": 29,
+          "train_loss": 0.03575256566703319,
+          "validation_BCE": 0.07233711332082748
+        },
+        {
+          "epoch": 30,
+          "train_loss": 0.0349273821413517,
+          "validation_BCE": 0.07251511514186859
+        }
+      ],
+      "parameters": 59076,
+      "validation": {
+        "roof_retention": 0.9950151031328213,
+        "simulated_vegetation_rejection": 0.8618791143028127,
+        "roof_f1": 0.9837504095674967,
+        "unique_observations": 348160,
+        "roof_observations": 289675,
+        "simulated_vegetation_observations": 58485,
+        "cutoff_roof_probability": 0.22
+      },
+      "cutoff": 0.22,
+      "checkpoint_sha256": "6ac20517d330dbcaeaa65a5549eca97a6bd91f67b2c09c57e3dec05032bfbfd7"
+    }
+  },
+  "independent_city_controlled_test": {
+    "pointnet": {
+      "pooled": {
+        "roof_retention": 0.9616593299465338,
+        "simulated_vegetation_rejection": 0.533043356250877,
+        "roof_f1": 0.9146821168787039,
+        "unique_observations": 430080,
+        "roof_observations": 330302,
+        "simulated_vegetation_observations": 99778,
+        "cutoff_roof_probability": 0.09999999999999999
+      },
+      "quality_cases": {
+        "clean": {
+          "roof_retention": 0.93450927734375,
+          "simulated_vegetation_rejection": 0.0,
+          "roof_f1": 0.966146079823316,
+          "unique_observations": 81920,
+          "roof_observations": 81920,
+          "simulated_vegetation_observations": 0,
+          "cutoff_roof_probability": 0.09999999999999999
+        },
+        "dense_canopy": {
+          "roof_retention": 0.9852365748853734,
+          "simulated_vegetation_rejection": 0.8251993145071157,
+          "roof_f1": 0.914717452110055,
+          "unique_observations": 81920,
+          "roof_observations": 41657,
+          "simulated_vegetation_observations": 40263,
+          "cutoff_roof_probability": 0.09999999999999999
+        },
+        "hole": {
+          "roof_retention": 0.9451416015625,
+          "simulated_vegetation_rejection": 0.0,
+          "roof_f1": 0.9717972211414155,
+          "unique_observations": 81920,
+          "roof_observations": 81920,
+          "simulated_vegetation_observations": 0,
+          "cutoff_roof_probability": 0.09999999999999999
+        },
+        "scattered_tree": {
+          "roof_retention": 0.9878010239555022,
+          "simulated_vegetation_rejection": 0.39740287615368103,
+          "roof_f1": 0.9124107833549837,
+          "unique_observations": 81920,
+          "roof_observations": 63284,
+          "simulated_vegetation_observations": 18636,
+          "cutoff_roof_probability": 0.09999999999999999
+        },
+        "sparse": {
+          "roof_retention": 0.944384765625,
+          "simulated_vegetation_rejection": 0.0,
+          "roof_f1": 0.9713970015820798,
+          "unique_observations": 20480,
+          "roof_observations": 20480,
+          "simulated_vegetation_observations": 0,
+          "cutoff_roof_probability": 0.09999999999999999
+        },
+        "unseen_flat_canopy": {
+          "roof_retention": 0.9932019200311883,
+          "simulated_vegetation_rejection": 0.307125908168008,
+          "roof_f1": 0.7402725943683202,
+          "unique_observations": 81920,
+          "roof_observations": 41041,
+          "simulated_vegetation_observations": 40879,
+          "cutoff_roof_probability": 0.09999999999999999
+        }
+      },
+      "checkpoint_sha256": "9164cfe6a0f138d542406c603c2c02c73461bc8332ba3e9d9ac2051d85f970be"
+    },
+    "edgeconv": {
+      "pooled": {
+        "roof_retention": 0.9828944420560578,
+        "simulated_vegetation_rejection": 0.5973561306099541,
+        "roof_f1": 0.934076984271984,
+        "unique_observations": 430080,
+        "roof_observations": 330302,
+        "simulated_vegetation_observations": 99778,
+        "cutoff_roof_probability": 0.22
+      },
+      "quality_cases": {
+        "clean": {
+          "roof_retention": 0.97506103515625,
+          "simulated_vegetation_rejection": 0.0,
+          "roof_f1": 0.9873730662496832,
+          "unique_observations": 81920,
+          "roof_observations": 81920,
+          "simulated_vegetation_observations": 0,
+          "cutoff_roof_probability": 0.22
+        },
+        "dense_canopy": {
+          "roof_retention": 0.9851405526082051,
+          "simulated_vegetation_rejection": 0.9617018105953357,
+          "roof_f1": 0.974346189916545,
+          "unique_observations": 81920,
+          "roof_observations": 41657,
+          "simulated_vegetation_observations": 40263,
+          "cutoff_roof_probability": 0.22
+        },
+        "hole": {
+          "roof_retention": 0.982666015625,
+          "simulated_vegetation_rejection": 0.0,
+          "roof_f1": 0.9912572343307474,
+          "unique_observations": 81920,
+          "roof_observations": 81920,
+          "simulated_vegetation_observations": 0,
+          "cutoff_roof_probability": 0.22
+        },
+        "scattered_tree": {
+          "roof_retention": 0.9866474938373049,
+          "simulated_vegetation_rejection": 0.6826572225799528,
+          "roof_f1": 0.9486542537432485,
+          "unique_observations": 81920,
+          "roof_observations": 63284,
+          "simulated_vegetation_observations": 18636,
+          "cutoff_roof_probability": 0.22
+        },
+        "sparse": {
+          "roof_retention": 0.98564453125,
+          "simulated_vegetation_rejection": 0.0,
+          "roof_f1": 0.992770373284808,
+          "unique_observations": 20480,
+          "roof_observations": 20480,
+          "simulated_vegetation_observations": 0,
+          "cutoff_roof_probability": 0.22
+        },
+        "unseen_flat_canopy": {
+          "roof_retention": 0.9895470383275261,
+          "simulated_vegetation_rejection": 0.1996134934807603,
+          "roof_f1": 0.710173818766831,
+          "unique_observations": 81920,
+          "roof_observations": 41041,
+          "simulated_vegetation_observations": 40879,
+          "cutoff_roof_probability": 0.22
+        }
+      },
+      "checkpoint_sha256": "6ac20517d330dbcaeaa65a5549eca97a6bd91f67b2c09c57e3dec05032bfbfd7"
+    }
+  },
+  "independent_measured_GT": false,
+  "real_NAIP_3DEP_validation": false,
+  "elapsed_seconds": 44.02272963523865,
+  "max_gpu_memory_GB": 1.123379712,
+  "post_test_retuning": false,
+  "_publication": {
+    "original_source_sha256": "fee35ddda2b691f9eaf40dfe6e1db8144b4bf2fa9abb050f301f885972a309c3",
+    "original_source": "source:multicity/reports/h100_training_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

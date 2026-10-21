@@ -1,0 +1,324 @@
+{
+  "status": "complete",
+  "reference_kind": "automatic teacher geometry; not independent measured GT",
+  "observations": "synthetic, no real NAIP or3DEP in this branch",
+  "buildings": 24,
+  "cases": 6,
+  "groups": [
+    "raw",
+    "geometry",
+    "pointnet_hard",
+    "edgeconv_hard",
+    "edgeconv_guard"
+  ],
+  "fixed_pairs": 720,
+  "summaries": [
+    {
+      "case": "clean",
+      "group": "raw",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.4037849638056743,
+      "capped_loss_10m_macro": 0.4029145509982648
+    },
+    {
+      "case": "clean",
+      "group": "geometry",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.41006744464178374,
+      "capped_loss_10m_macro": 0.40919730013813904
+    },
+    {
+      "case": "clean",
+      "group": "pointnet_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.5456745492917361,
+      "capped_loss_10m_macro": 0.5444146971658682
+    },
+    {
+      "case": "clean",
+      "group": "edgeconv_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.48416127882313803,
+      "capped_loss_10m_macro": 0.4815502740792634
+    },
+    {
+      "case": "clean",
+      "group": "edgeconv_guard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.5182743785666037,
+      "capped_loss_10m_macro": 0.5156637536501053
+    },
+    {
+      "case": "sparse",
+      "group": "raw",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.6093266810338445,
+      "capped_loss_10m_macro": 1.5561199793639513
+    },
+    {
+      "case": "sparse",
+      "group": "geometry",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.6182392977812174,
+      "capped_loss_10m_macro": 1.5650321612787834
+    },
+    {
+      "case": "sparse",
+      "group": "pointnet_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.6343836262327989,
+      "capped_loss_10m_macro": 1.5811769245629055
+    },
+    {
+      "case": "sparse",
+      "group": "edgeconv_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.608483305485051,
+      "capped_loss_10m_macro": 1.5559827969913667
+    },
+    {
+      "case": "sparse",
+      "group": "edgeconv_guard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.6094916180069496,
+      "capped_loss_10m_macro": 1.5562844815045154
+    },
+    {
+      "case": "hole",
+      "group": "raw",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.8420596230956917,
+      "capped_loss_10m_macro": 0.8235885805876665
+    },
+    {
+      "case": "hole",
+      "group": "geometry",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.8611804794555121,
+      "capped_loss_10m_macro": 0.8428457092919913
+    },
+    {
+      "case": "hole",
+      "group": "pointnet_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.0847867531520081,
+      "capped_loss_10m_macro": 1.0279505375112967
+    },
+    {
+      "case": "hole",
+      "group": "edgeconv_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.8613584173725831,
+      "capped_loss_10m_macro": 0.8428875144212079
+    },
+    {
+      "case": "hole",
+      "group": "edgeconv_guard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.870449282480941,
+      "capped_loss_10m_macro": 0.8519785302561805
+    },
+    {
+      "case": "scattered_tree",
+      "group": "raw",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.5949923186304694,
+      "capped_loss_10m_macro": 0.5798459170744384
+    },
+    {
+      "case": "scattered_tree",
+      "group": "geometry",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.6683493566072757,
+      "capped_loss_10m_macro": 0.651420053999142
+    },
+    {
+      "case": "scattered_tree",
+      "group": "pointnet_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.5748540714511561,
+      "capped_loss_10m_macro": 0.567385763984309
+    },
+    {
+      "case": "scattered_tree",
+      "group": "edgeconv_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.5871088998009739,
+      "capped_loss_10m_macro": 0.5862631767519888
+    },
+    {
+      "case": "scattered_tree",
+      "group": "edgeconv_guard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 0.5217607716192564,
+      "capped_loss_10m_macro": 0.5201693344349199
+    },
+    {
+      "case": "dense_canopy",
+      "group": "raw",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 2.1350633199629048,
+      "capped_loss_10m_macro": 2.103819198602812
+    },
+    {
+      "case": "dense_canopy",
+      "group": "geometry",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 2.2093697978130518,
+      "capped_loss_10m_macro": 2.1745942183428
+    },
+    {
+      "case": "dense_canopy",
+      "group": "pointnet_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.26535355062318,
+      "capped_loss_10m_macro": 1.255053032191863
+    },
+    {
+      "case": "dense_canopy",
+      "group": "edgeconv_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.5920448928614563,
+      "capped_loss_10m_macro": 1.5413390008414638
+    },
+    {
+      "case": "dense_canopy",
+      "group": "edgeconv_guard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.4887201079542878,
+      "capped_loss_10m_macro": 1.4490168118939042
+    },
+    {
+      "case": "unseen_flat_canopy",
+      "group": "raw",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 2.2321509980979095,
+      "capped_loss_10m_macro": 2.2155329923946847
+    },
+    {
+      "case": "unseen_flat_canopy",
+      "group": "geometry",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 2.2158534538606594,
+      "capped_loss_10m_macro": 2.2033683404484026
+    },
+    {
+      "case": "unseen_flat_canopy",
+      "group": "pointnet_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 1.6684167452528398,
+      "capped_loss_10m_macro": 1.6517986870443486
+    },
+    {
+      "case": "unseen_flat_canopy",
+      "group": "edgeconv_hard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 2.108771025474173,
+      "capped_loss_10m_macro": 2.0934245739788895
+    },
+    {
+      "case": "unseen_flat_canopy",
+      "group": "edgeconv_guard",
+      "fixed_building_denominator": 24,
+      "models_with_roof": 24,
+      "lod2_success": 24,
+      "coverage_macro": 1.0,
+      "roof_mae_m_all_buildings": 2.0980130351425195,
+      "capped_loss_10m_macro": 2.0826668113226585
+    }
+  ],
+  "retuned_on_test": false,
+  "_publication": {
+    "original_source_sha256": "7e56fe65536ce0f46c3fc835267c3c8138828a23dd7962b96fafdee459216533",
+    "original_source": "source:multicity/reports/controlled_reconstruction_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

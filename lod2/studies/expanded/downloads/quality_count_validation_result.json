@@ -1,0 +1,68 @@
+{
+  "status": "complete",
+  "summaries": [
+    {
+      "case": "all",
+      "method": "support_count_router_native",
+      "fixed_denominator": 60,
+      "primary_capped_loss_10m": 0.695187705142392,
+      "native_lod2_success": 60,
+      "activation_count": 38
+    },
+    {
+      "case": "clean",
+      "method": "support_count_router_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.059352131747880996,
+      "native_lod2_success": 10,
+      "activation_count": 1
+    },
+    {
+      "case": "dense_canopy",
+      "method": "support_count_router_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.5249029265798696,
+      "native_lod2_success": 10,
+      "activation_count": 10
+    },
+    {
+      "case": "flat_canopy",
+      "method": "support_count_router_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.287955038485777,
+      "native_lod2_success": 10,
+      "activation_count": 10
+    },
+    {
+      "case": "hole",
+      "method": "support_count_router_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.9307013933313601,
+      "native_lod2_success": 10,
+      "activation_count": 0
+    },
+    {
+      "case": "occlusion_heavy",
+      "method": "support_count_router_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 2.0920436492782666,
+      "native_lod2_success": 10,
+      "activation_count": 7
+    },
+    {
+      "case": "very_sparse",
+      "method": "support_count_router_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.27617109143119783,
+      "native_lod2_success": 10,
+      "activation_count": 10
+    }
+  ],
+  "protocol_sha256": "5f74fc7b14d308b8d1577db2eed8cae6d83cdc900f6be6c2b4c3f9550bbae713",
+  "_publication": {
+    "original_source_sha256": "30d1f21f8e884e38533579e523f7dfbd5b0c92e0bf93cadc3d03256431c2ed8b",
+    "original_source": "source:expanded/reports/quality_count_validation_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

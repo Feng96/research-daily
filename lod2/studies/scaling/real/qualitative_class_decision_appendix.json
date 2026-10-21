@@ -1,0 +1,1352 @@
+{
+  "utc": "2026-10-21T08:40:34.031420+00:00",
+  "status": "descriptive_counts_complete",
+  "fixed_building_denominator": 20,
+  "per_building_candidate_records": 98227,
+  "unique_source_records": 91612,
+  "contains_cross_building_buffer_duplicate_records": true,
+  "class_semantics": {
+    "1": "AHN other/unclassified heterogeneous targets; NOT vegetation/tree GT",
+    "6": "Official AHN5 production roof classification, not independently human-annotated local GT"
+  },
+  "class_by_keep_removed": {
+    "1": {
+      "candidate_records": 19081,
+      "kept": 16101,
+      "removed": 2980,
+      "removed_fraction_of_production_class": 0.15617630103244065
+    },
+    "6": {
+      "candidate_records": 79146,
+      "kept": 72417,
+      "removed": 6729,
+      "removed_fraction_of_production_class": 0.08502008945493139
+    }
+  },
+  "per_building": [
+    {
+      "id": "NL.IMBAG.Pand.0546100000003629",
+      "classes": {
+        "1": {
+          "candidate_records": 713,
+          "kept": 705,
+          "removed": 8,
+          "removed_fraction_of_production_class": 0.011220196353436185
+        },
+        "6": {
+          "candidate_records": 6223,
+          "kept": 6035,
+          "removed": 188,
+          "removed_fraction_of_production_class": 0.03021050940061064
+        }
+      },
+      "production_class6_removed": 188,
+      "production_class6_candidate_records": 6223,
+      "production_class6_removed_fraction": 0.03021050940061064,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005073",
+      "classes": {
+        "1": {
+          "candidate_records": 263,
+          "kept": 263,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 2404,
+          "kept": 2404,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 2404,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004149",
+      "classes": {
+        "1": {
+          "candidate_records": 273,
+          "kept": 272,
+          "removed": 1,
+          "removed_fraction_of_production_class": 0.003663003663003663
+        },
+        "6": {
+          "candidate_records": 2662,
+          "kept": 1539,
+          "removed": 1123,
+          "removed_fraction_of_production_class": 0.4218632607062359
+        }
+      },
+      "production_class6_removed": 1123,
+      "production_class6_candidate_records": 2662,
+      "production_class6_removed_fraction": 0.4218632607062359,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003619",
+      "classes": {
+        "1": {
+          "candidate_records": 325,
+          "kept": 322,
+          "removed": 3,
+          "removed_fraction_of_production_class": 0.009230769230769232
+        },
+        "6": {
+          "candidate_records": 5819,
+          "kept": 5627,
+          "removed": 192,
+          "removed_fraction_of_production_class": 0.03299536002749613
+        }
+      },
+      "production_class6_removed": 192,
+      "production_class6_candidate_records": 5819,
+      "production_class6_removed_fraction": 0.03299536002749613,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000000956",
+      "classes": {
+        "1": {
+          "candidate_records": 5560,
+          "kept": 5263,
+          "removed": 297,
+          "removed_fraction_of_production_class": 0.05341726618705036
+        },
+        "6": {
+          "candidate_records": 12834,
+          "kept": 10843,
+          "removed": 1991,
+          "removed_fraction_of_production_class": 0.1551347981923017
+        }
+      },
+      "production_class6_removed": 1991,
+      "production_class6_candidate_records": 12834,
+      "production_class6_removed_fraction": 0.1551347981923017,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004156",
+      "classes": {
+        "1": {
+          "candidate_records": 169,
+          "kept": 169,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 2887,
+          "kept": 1379,
+          "removed": 1508,
+          "removed_fraction_of_production_class": 0.5223415310010392
+        }
+      },
+      "production_class6_removed": 1508,
+      "production_class6_candidate_records": 2887,
+      "production_class6_removed_fraction": 0.5223415310010392,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002345",
+      "classes": {
+        "1": {
+          "candidate_records": 266,
+          "kept": 266,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 4747,
+          "kept": 4725,
+          "removed": 22,
+          "removed_fraction_of_production_class": 0.004634506003791869
+        }
+      },
+      "production_class6_removed": 22,
+      "production_class6_candidate_records": 4747,
+      "production_class6_removed_fraction": 0.004634506003791869,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003600",
+      "classes": {
+        "1": {
+          "candidate_records": 1025,
+          "kept": 1025,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 5995,
+          "kept": 5995,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 5995,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003601",
+      "classes": {
+        "1": {
+          "candidate_records": 1317,
+          "kept": 1287,
+          "removed": 30,
+          "removed_fraction_of_production_class": 0.022779043280182234
+        },
+        "6": {
+          "candidate_records": 5103,
+          "kept": 5073,
+          "removed": 30,
+          "removed_fraction_of_production_class": 0.005878894767783657
+        }
+      },
+      "production_class6_removed": 30,
+      "production_class6_candidate_records": 5103,
+      "production_class6_removed_fraction": 0.005878894767783657,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005062",
+      "classes": {
+        "1": {
+          "candidate_records": 636,
+          "kept": 632,
+          "removed": 4,
+          "removed_fraction_of_production_class": 0.006289308176100629
+        },
+        "6": {
+          "candidate_records": 2208,
+          "kept": 1762,
+          "removed": 446,
+          "removed_fraction_of_production_class": 0.20199275362318841
+        }
+      },
+      "production_class6_removed": 446,
+      "production_class6_candidate_records": 2208,
+      "production_class6_removed_fraction": 0.20199275362318841,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003648",
+      "classes": {
+        "1": {
+          "candidate_records": 956,
+          "kept": 659,
+          "removed": 297,
+          "removed_fraction_of_production_class": 0.3106694560669456
+        },
+        "6": {
+          "candidate_records": 2110,
+          "kept": 2072,
+          "removed": 38,
+          "removed_fraction_of_production_class": 0.01800947867298578
+        }
+      },
+      "production_class6_removed": 38,
+      "production_class6_candidate_records": 2110,
+      "production_class6_removed_fraction": 0.01800947867298578,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005058",
+      "classes": {
+        "1": {
+          "candidate_records": 2755,
+          "kept": 523,
+          "removed": 2232,
+          "removed_fraction_of_production_class": 0.8101633393829402
+        },
+        "6": {
+          "candidate_records": 1749,
+          "kept": 1742,
+          "removed": 7,
+          "removed_fraction_of_production_class": 0.004002287021154946
+        }
+      },
+      "production_class6_removed": 7,
+      "production_class6_candidate_records": 1749,
+      "production_class6_removed_fraction": 0.004002287021154946,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005074",
+      "classes": {
+        "1": {
+          "candidate_records": 454,
+          "kept": 440,
+          "removed": 14,
+          "removed_fraction_of_production_class": 0.030837004405286344
+        },
+        "6": {
+          "candidate_records": 1754,
+          "kept": 1754,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 1754,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003746",
+      "classes": {
+        "1": {
+          "candidate_records": 864,
+          "kept": 864,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 4270,
+          "kept": 4256,
+          "removed": 14,
+          "removed_fraction_of_production_class": 0.003278688524590164
+        }
+      },
+      "production_class6_removed": 14,
+      "production_class6_candidate_records": 4270,
+      "production_class6_removed_fraction": 0.003278688524590164,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003976",
+      "classes": {
+        "1": {
+          "candidate_records": 364,
+          "kept": 364,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 6648,
+          "kept": 6601,
+          "removed": 47,
+          "removed_fraction_of_production_class": 0.007069795427196149
+        }
+      },
+      "production_class6_removed": 47,
+      "production_class6_candidate_records": 6648,
+      "production_class6_removed_fraction": 0.007069795427196149,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003739",
+      "classes": {
+        "1": {
+          "candidate_records": 197,
+          "kept": 197,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 3344,
+          "kept": 3340,
+          "removed": 4,
+          "removed_fraction_of_production_class": 0.0011961722488038277
+        }
+      },
+      "production_class6_removed": 4,
+      "production_class6_candidate_records": 3344,
+      "production_class6_removed_fraction": 0.0011961722488038277,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003952",
+      "classes": {
+        "1": {
+          "candidate_records": 1835,
+          "kept": 1741,
+          "removed": 94,
+          "removed_fraction_of_production_class": 0.05122615803814714
+        },
+        "6": {
+          "candidate_records": 1908,
+          "kept": 1908,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 1908,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005049",
+      "classes": {
+        "1": {
+          "candidate_records": 498,
+          "kept": 498,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 1704,
+          "kept": 1700,
+          "removed": 4,
+          "removed_fraction_of_production_class": 0.002347417840375587
+        }
+      },
+      "production_class6_removed": 4,
+      "production_class6_candidate_records": 1704,
+      "production_class6_removed_fraction": 0.002347417840375587,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002942",
+      "classes": {
+        "1": {
+          "candidate_records": 234,
+          "kept": 234,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 1809,
+          "kept": 1783,
+          "removed": 26,
+          "removed_fraction_of_production_class": 0.014372581536760642
+        }
+      },
+      "production_class6_removed": 26,
+      "production_class6_candidate_records": 1809,
+      "production_class6_removed_fraction": 0.014372581536760642,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004178",
+      "classes": {
+        "1": {
+          "candidate_records": 377,
+          "kept": 377,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 2968,
+          "kept": 1879,
+          "removed": 1089,
+          "removed_fraction_of_production_class": 0.3669137466307278
+        }
+      },
+      "production_class6_removed": 1089,
+      "production_class6_candidate_records": 2968,
+      "production_class6_removed_fraction": 0.3669137466307278,
+      "posthoc_visual_triage_only": true
+    }
+  ],
+  "ranked_by_production_class6_removed_count": [
+    {
+      "id": "NL.IMBAG.Pand.0546100000000956",
+      "classes": {
+        "1": {
+          "candidate_records": 5560,
+          "kept": 5263,
+          "removed": 297,
+          "removed_fraction_of_production_class": 0.05341726618705036
+        },
+        "6": {
+          "candidate_records": 12834,
+          "kept": 10843,
+          "removed": 1991,
+          "removed_fraction_of_production_class": 0.1551347981923017
+        }
+      },
+      "production_class6_removed": 1991,
+      "production_class6_candidate_records": 12834,
+      "production_class6_removed_fraction": 0.1551347981923017,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004156",
+      "classes": {
+        "1": {
+          "candidate_records": 169,
+          "kept": 169,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 2887,
+          "kept": 1379,
+          "removed": 1508,
+          "removed_fraction_of_production_class": 0.5223415310010392
+        }
+      },
+      "production_class6_removed": 1508,
+      "production_class6_candidate_records": 2887,
+      "production_class6_removed_fraction": 0.5223415310010392,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004149",
+      "classes": {
+        "1": {
+          "candidate_records": 273,
+          "kept": 272,
+          "removed": 1,
+          "removed_fraction_of_production_class": 0.003663003663003663
+        },
+        "6": {
+          "candidate_records": 2662,
+          "kept": 1539,
+          "removed": 1123,
+          "removed_fraction_of_production_class": 0.4218632607062359
+        }
+      },
+      "production_class6_removed": 1123,
+      "production_class6_candidate_records": 2662,
+      "production_class6_removed_fraction": 0.4218632607062359,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004178",
+      "classes": {
+        "1": {
+          "candidate_records": 377,
+          "kept": 377,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 2968,
+          "kept": 1879,
+          "removed": 1089,
+          "removed_fraction_of_production_class": 0.3669137466307278
+        }
+      },
+      "production_class6_removed": 1089,
+      "production_class6_candidate_records": 2968,
+      "production_class6_removed_fraction": 0.3669137466307278,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005062",
+      "classes": {
+        "1": {
+          "candidate_records": 636,
+          "kept": 632,
+          "removed": 4,
+          "removed_fraction_of_production_class": 0.006289308176100629
+        },
+        "6": {
+          "candidate_records": 2208,
+          "kept": 1762,
+          "removed": 446,
+          "removed_fraction_of_production_class": 0.20199275362318841
+        }
+      },
+      "production_class6_removed": 446,
+      "production_class6_candidate_records": 2208,
+      "production_class6_removed_fraction": 0.20199275362318841,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003619",
+      "classes": {
+        "1": {
+          "candidate_records": 325,
+          "kept": 322,
+          "removed": 3,
+          "removed_fraction_of_production_class": 0.009230769230769232
+        },
+        "6": {
+          "candidate_records": 5819,
+          "kept": 5627,
+          "removed": 192,
+          "removed_fraction_of_production_class": 0.03299536002749613
+        }
+      },
+      "production_class6_removed": 192,
+      "production_class6_candidate_records": 5819,
+      "production_class6_removed_fraction": 0.03299536002749613,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003629",
+      "classes": {
+        "1": {
+          "candidate_records": 713,
+          "kept": 705,
+          "removed": 8,
+          "removed_fraction_of_production_class": 0.011220196353436185
+        },
+        "6": {
+          "candidate_records": 6223,
+          "kept": 6035,
+          "removed": 188,
+          "removed_fraction_of_production_class": 0.03021050940061064
+        }
+      },
+      "production_class6_removed": 188,
+      "production_class6_candidate_records": 6223,
+      "production_class6_removed_fraction": 0.03021050940061064,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003976",
+      "classes": {
+        "1": {
+          "candidate_records": 364,
+          "kept": 364,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 6648,
+          "kept": 6601,
+          "removed": 47,
+          "removed_fraction_of_production_class": 0.007069795427196149
+        }
+      },
+      "production_class6_removed": 47,
+      "production_class6_candidate_records": 6648,
+      "production_class6_removed_fraction": 0.007069795427196149,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003648",
+      "classes": {
+        "1": {
+          "candidate_records": 956,
+          "kept": 659,
+          "removed": 297,
+          "removed_fraction_of_production_class": 0.3106694560669456
+        },
+        "6": {
+          "candidate_records": 2110,
+          "kept": 2072,
+          "removed": 38,
+          "removed_fraction_of_production_class": 0.01800947867298578
+        }
+      },
+      "production_class6_removed": 38,
+      "production_class6_candidate_records": 2110,
+      "production_class6_removed_fraction": 0.01800947867298578,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003601",
+      "classes": {
+        "1": {
+          "candidate_records": 1317,
+          "kept": 1287,
+          "removed": 30,
+          "removed_fraction_of_production_class": 0.022779043280182234
+        },
+        "6": {
+          "candidate_records": 5103,
+          "kept": 5073,
+          "removed": 30,
+          "removed_fraction_of_production_class": 0.005878894767783657
+        }
+      },
+      "production_class6_removed": 30,
+      "production_class6_candidate_records": 5103,
+      "production_class6_removed_fraction": 0.005878894767783657,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002942",
+      "classes": {
+        "1": {
+          "candidate_records": 234,
+          "kept": 234,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 1809,
+          "kept": 1783,
+          "removed": 26,
+          "removed_fraction_of_production_class": 0.014372581536760642
+        }
+      },
+      "production_class6_removed": 26,
+      "production_class6_candidate_records": 1809,
+      "production_class6_removed_fraction": 0.014372581536760642,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002345",
+      "classes": {
+        "1": {
+          "candidate_records": 266,
+          "kept": 266,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 4747,
+          "kept": 4725,
+          "removed": 22,
+          "removed_fraction_of_production_class": 0.004634506003791869
+        }
+      },
+      "production_class6_removed": 22,
+      "production_class6_candidate_records": 4747,
+      "production_class6_removed_fraction": 0.004634506003791869,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003746",
+      "classes": {
+        "1": {
+          "candidate_records": 864,
+          "kept": 864,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 4270,
+          "kept": 4256,
+          "removed": 14,
+          "removed_fraction_of_production_class": 0.003278688524590164
+        }
+      },
+      "production_class6_removed": 14,
+      "production_class6_candidate_records": 4270,
+      "production_class6_removed_fraction": 0.003278688524590164,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005058",
+      "classes": {
+        "1": {
+          "candidate_records": 2755,
+          "kept": 523,
+          "removed": 2232,
+          "removed_fraction_of_production_class": 0.8101633393829402
+        },
+        "6": {
+          "candidate_records": 1749,
+          "kept": 1742,
+          "removed": 7,
+          "removed_fraction_of_production_class": 0.004002287021154946
+        }
+      },
+      "production_class6_removed": 7,
+      "production_class6_candidate_records": 1749,
+      "production_class6_removed_fraction": 0.004002287021154946,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003739",
+      "classes": {
+        "1": {
+          "candidate_records": 197,
+          "kept": 197,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 3344,
+          "kept": 3340,
+          "removed": 4,
+          "removed_fraction_of_production_class": 0.0011961722488038277
+        }
+      },
+      "production_class6_removed": 4,
+      "production_class6_candidate_records": 3344,
+      "production_class6_removed_fraction": 0.0011961722488038277,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005049",
+      "classes": {
+        "1": {
+          "candidate_records": 498,
+          "kept": 498,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 1704,
+          "kept": 1700,
+          "removed": 4,
+          "removed_fraction_of_production_class": 0.002347417840375587
+        }
+      },
+      "production_class6_removed": 4,
+      "production_class6_candidate_records": 1704,
+      "production_class6_removed_fraction": 0.002347417840375587,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003600",
+      "classes": {
+        "1": {
+          "candidate_records": 1025,
+          "kept": 1025,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 5995,
+          "kept": 5995,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 5995,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003952",
+      "classes": {
+        "1": {
+          "candidate_records": 1835,
+          "kept": 1741,
+          "removed": 94,
+          "removed_fraction_of_production_class": 0.05122615803814714
+        },
+        "6": {
+          "candidate_records": 1908,
+          "kept": 1908,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 1908,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005073",
+      "classes": {
+        "1": {
+          "candidate_records": 263,
+          "kept": 263,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 2404,
+          "kept": 2404,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 2404,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005074",
+      "classes": {
+        "1": {
+          "candidate_records": 454,
+          "kept": 440,
+          "removed": 14,
+          "removed_fraction_of_production_class": 0.030837004405286344
+        },
+        "6": {
+          "candidate_records": 1754,
+          "kept": 1754,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 1754,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    }
+  ],
+  "ranked_by_production_class6_removed_fraction": [
+    {
+      "id": "NL.IMBAG.Pand.0546100000004156",
+      "classes": {
+        "1": {
+          "candidate_records": 169,
+          "kept": 169,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 2887,
+          "kept": 1379,
+          "removed": 1508,
+          "removed_fraction_of_production_class": 0.5223415310010392
+        }
+      },
+      "production_class6_removed": 1508,
+      "production_class6_candidate_records": 2887,
+      "production_class6_removed_fraction": 0.5223415310010392,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004149",
+      "classes": {
+        "1": {
+          "candidate_records": 273,
+          "kept": 272,
+          "removed": 1,
+          "removed_fraction_of_production_class": 0.003663003663003663
+        },
+        "6": {
+          "candidate_records": 2662,
+          "kept": 1539,
+          "removed": 1123,
+          "removed_fraction_of_production_class": 0.4218632607062359
+        }
+      },
+      "production_class6_removed": 1123,
+      "production_class6_candidate_records": 2662,
+      "production_class6_removed_fraction": 0.4218632607062359,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004178",
+      "classes": {
+        "1": {
+          "candidate_records": 377,
+          "kept": 377,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 2968,
+          "kept": 1879,
+          "removed": 1089,
+          "removed_fraction_of_production_class": 0.3669137466307278
+        }
+      },
+      "production_class6_removed": 1089,
+      "production_class6_candidate_records": 2968,
+      "production_class6_removed_fraction": 0.3669137466307278,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005062",
+      "classes": {
+        "1": {
+          "candidate_records": 636,
+          "kept": 632,
+          "removed": 4,
+          "removed_fraction_of_production_class": 0.006289308176100629
+        },
+        "6": {
+          "candidate_records": 2208,
+          "kept": 1762,
+          "removed": 446,
+          "removed_fraction_of_production_class": 0.20199275362318841
+        }
+      },
+      "production_class6_removed": 446,
+      "production_class6_candidate_records": 2208,
+      "production_class6_removed_fraction": 0.20199275362318841,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000000956",
+      "classes": {
+        "1": {
+          "candidate_records": 5560,
+          "kept": 5263,
+          "removed": 297,
+          "removed_fraction_of_production_class": 0.05341726618705036
+        },
+        "6": {
+          "candidate_records": 12834,
+          "kept": 10843,
+          "removed": 1991,
+          "removed_fraction_of_production_class": 0.1551347981923017
+        }
+      },
+      "production_class6_removed": 1991,
+      "production_class6_candidate_records": 12834,
+      "production_class6_removed_fraction": 0.1551347981923017,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003619",
+      "classes": {
+        "1": {
+          "candidate_records": 325,
+          "kept": 322,
+          "removed": 3,
+          "removed_fraction_of_production_class": 0.009230769230769232
+        },
+        "6": {
+          "candidate_records": 5819,
+          "kept": 5627,
+          "removed": 192,
+          "removed_fraction_of_production_class": 0.03299536002749613
+        }
+      },
+      "production_class6_removed": 192,
+      "production_class6_candidate_records": 5819,
+      "production_class6_removed_fraction": 0.03299536002749613,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003629",
+      "classes": {
+        "1": {
+          "candidate_records": 713,
+          "kept": 705,
+          "removed": 8,
+          "removed_fraction_of_production_class": 0.011220196353436185
+        },
+        "6": {
+          "candidate_records": 6223,
+          "kept": 6035,
+          "removed": 188,
+          "removed_fraction_of_production_class": 0.03021050940061064
+        }
+      },
+      "production_class6_removed": 188,
+      "production_class6_candidate_records": 6223,
+      "production_class6_removed_fraction": 0.03021050940061064,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003648",
+      "classes": {
+        "1": {
+          "candidate_records": 956,
+          "kept": 659,
+          "removed": 297,
+          "removed_fraction_of_production_class": 0.3106694560669456
+        },
+        "6": {
+          "candidate_records": 2110,
+          "kept": 2072,
+          "removed": 38,
+          "removed_fraction_of_production_class": 0.01800947867298578
+        }
+      },
+      "production_class6_removed": 38,
+      "production_class6_candidate_records": 2110,
+      "production_class6_removed_fraction": 0.01800947867298578,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002942",
+      "classes": {
+        "1": {
+          "candidate_records": 234,
+          "kept": 234,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 1809,
+          "kept": 1783,
+          "removed": 26,
+          "removed_fraction_of_production_class": 0.014372581536760642
+        }
+      },
+      "production_class6_removed": 26,
+      "production_class6_candidate_records": 1809,
+      "production_class6_removed_fraction": 0.014372581536760642,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003976",
+      "classes": {
+        "1": {
+          "candidate_records": 364,
+          "kept": 364,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 6648,
+          "kept": 6601,
+          "removed": 47,
+          "removed_fraction_of_production_class": 0.007069795427196149
+        }
+      },
+      "production_class6_removed": 47,
+      "production_class6_candidate_records": 6648,
+      "production_class6_removed_fraction": 0.007069795427196149,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003601",
+      "classes": {
+        "1": {
+          "candidate_records": 1317,
+          "kept": 1287,
+          "removed": 30,
+          "removed_fraction_of_production_class": 0.022779043280182234
+        },
+        "6": {
+          "candidate_records": 5103,
+          "kept": 5073,
+          "removed": 30,
+          "removed_fraction_of_production_class": 0.005878894767783657
+        }
+      },
+      "production_class6_removed": 30,
+      "production_class6_candidate_records": 5103,
+      "production_class6_removed_fraction": 0.005878894767783657,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002345",
+      "classes": {
+        "1": {
+          "candidate_records": 266,
+          "kept": 266,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 4747,
+          "kept": 4725,
+          "removed": 22,
+          "removed_fraction_of_production_class": 0.004634506003791869
+        }
+      },
+      "production_class6_removed": 22,
+      "production_class6_candidate_records": 4747,
+      "production_class6_removed_fraction": 0.004634506003791869,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005058",
+      "classes": {
+        "1": {
+          "candidate_records": 2755,
+          "kept": 523,
+          "removed": 2232,
+          "removed_fraction_of_production_class": 0.8101633393829402
+        },
+        "6": {
+          "candidate_records": 1749,
+          "kept": 1742,
+          "removed": 7,
+          "removed_fraction_of_production_class": 0.004002287021154946
+        }
+      },
+      "production_class6_removed": 7,
+      "production_class6_candidate_records": 1749,
+      "production_class6_removed_fraction": 0.004002287021154946,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003746",
+      "classes": {
+        "1": {
+          "candidate_records": 864,
+          "kept": 864,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 4270,
+          "kept": 4256,
+          "removed": 14,
+          "removed_fraction_of_production_class": 0.003278688524590164
+        }
+      },
+      "production_class6_removed": 14,
+      "production_class6_candidate_records": 4270,
+      "production_class6_removed_fraction": 0.003278688524590164,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005049",
+      "classes": {
+        "1": {
+          "candidate_records": 498,
+          "kept": 498,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 1704,
+          "kept": 1700,
+          "removed": 4,
+          "removed_fraction_of_production_class": 0.002347417840375587
+        }
+      },
+      "production_class6_removed": 4,
+      "production_class6_candidate_records": 1704,
+      "production_class6_removed_fraction": 0.002347417840375587,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003739",
+      "classes": {
+        "1": {
+          "candidate_records": 197,
+          "kept": 197,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 3344,
+          "kept": 3340,
+          "removed": 4,
+          "removed_fraction_of_production_class": 0.0011961722488038277
+        }
+      },
+      "production_class6_removed": 4,
+      "production_class6_candidate_records": 3344,
+      "production_class6_removed_fraction": 0.0011961722488038277,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003600",
+      "classes": {
+        "1": {
+          "candidate_records": 1025,
+          "kept": 1025,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 5995,
+          "kept": 5995,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 5995,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003952",
+      "classes": {
+        "1": {
+          "candidate_records": 1835,
+          "kept": 1741,
+          "removed": 94,
+          "removed_fraction_of_production_class": 0.05122615803814714
+        },
+        "6": {
+          "candidate_records": 1908,
+          "kept": 1908,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 1908,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005073",
+      "classes": {
+        "1": {
+          "candidate_records": 263,
+          "kept": 263,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        },
+        "6": {
+          "candidate_records": 2404,
+          "kept": 2404,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 2404,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005074",
+      "classes": {
+        "1": {
+          "candidate_records": 454,
+          "kept": 440,
+          "removed": 14,
+          "removed_fraction_of_production_class": 0.030837004405286344
+        },
+        "6": {
+          "candidate_records": 1754,
+          "kept": 1754,
+          "removed": 0,
+          "removed_fraction_of_production_class": 0.0
+        }
+      },
+      "production_class6_removed": 0,
+      "production_class6_candidate_records": 1754,
+      "production_class6_removed_fraction": 0.0,
+      "posthoc_visual_triage_only": true
+    }
+  ],
+  "source_selected_checkpoint": "graph_20000_long_s20261031",
+  "checkpoint_sha256": "0899d4f194dbad868ebf63f267dc6a54e7723491ab96c91347dfe323088d56b1",
+  "unchanged_calibration_cutoff": 0.43206343054771423,
+  "no_points_scores_masks_or_thresholds_changed": true,
+  "not_GT_accuracy_or_tree_removal_rate": true,
+  "class6_disagreement_is_not_automatically_a_ground_truth_error": true,
+  "case_ranking_posthoc_for_visual_diagnosis_not_model_selection_or_tuning": true,
+  "main_source_final_flow_affected": false,
+  "main_validation_test_read": false,
+  "source_hashes": {
+    "source:scaling/paired_real_feasibility/qualitative_dl/qualitative_result.json": "534bc9aa9b0c65c0f5bea52dac04b9f75ff4b4ff85e8f58adc5b102ff6057ccf",
+    "source:scaling/paired_real_feasibility/prepared_buildings.json": "37b471e7595b180d8346997634de50d60588b30e9f9b72544e25fe026d7090ea",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003629.npz": "fcfe819c8c204bb8129a531d4411c9abe327de321155b75238105b561716cecb",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003629.npz": "f8d4e7b1b539a5566ace3f1ca5cb3a30d825ec70dbbcb16d13ff72692c1564c8",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005073.npz": "edcd120512149941c6eda51a292700efbcda2aa7e118a5fb0d88b0f2afce3cf4",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005073.npz": "f9b7dd756fcaba95dea784fc27219322316182f7ef911ef9fa5ab7efb65f54bc",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004149.npz": "20a8f003c5f0c9a6580158e3df3fd20abe10e204015d755ffeae737ea12bec40",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004149.npz": "fb946ad6ca464d3d1928ad5db1ba35c3d9e4ec480c87794c6978ca06ba5b46bc",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003619.npz": "f0f0dfb6b1cee9340cba6c2e5e6e01af44b2fa516dc3a38fdbabdeec08022150",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003619.npz": "d3c71a7bf5f91627e6e8d2c026aef710eed95278cfa50938dd8b0ea744405277",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000000956.npz": "9af2513066496a30d98bcde713e6a966744607f8a1ea9ef252949dbb4f29a83c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000000956.npz": "8c663f0844219957b52a96686094b2ca59aaf1cc8cdd6077c4895417e98aa568",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004156.npz": "fffb198e6794c25059fd436909184300038247337f95c0255221da19b80a02c8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004156.npz": "0fb605bb5acddc86f7093ee87c422adecd8b7e80f16671e78d088711ac7a19a1",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002345.npz": "f1aa54d1dcacbc8ee6b9bccae424087c0a42245159dab4327ab172cfd4b92586",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002345.npz": "2c05ac6fbfb1b17df7dca6884df4fe86c8ac6f83dd4e393f8b8bfd27dab45bb2",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003600.npz": "13c62621894fc068227d5a175db6fa82b18befb4462403c06107d91f031d1e68",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003600.npz": "2c718d20d2981e3702b1c606870bf636ea540b98d526adfea2a9cf6bcc458f3e",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003601.npz": "54cb67ee5a97e10b3473a57f3369a5fc90fdbb657e2723588261065649102934",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003601.npz": "0eeb2298f10dc84940e2ec568511b6a324ac8d13858927f799e5e624ac504350",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005062.npz": "125a1480ef792b84efac16f85adddd68f8fd37846d53c2adbbd191c2aeaf900c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005062.npz": "3abcd5b54dec995f9e60f22f82d1f57c1d0932afa775c1376a6711a3e3cf45b0",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003648.npz": "76f200c0e400da62bc38c5761dd43b9e7beed517373b35faf2a42713ba3ccf2c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003648.npz": "2a48fdd6d2a2d8ed0c2cee3b5f9e56c5c10057df52f1a8b978142e7c13394cdf",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005058.npz": "b05d0e76e677980c536c10b18d3110b2751467a67f0398d46cde8ce6879dce5f",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005058.npz": "c59c6c712c311e97bfeef9e371e9047e8c1ad7bbf5518fb9fb35f584dbcf3fcc",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005074.npz": "78d243bdb22d767833687d5b844d40474379379b3e055720164dd2eeceda56d8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005074.npz": "2f47b9ea68390405023639f860e55bb8fd36eb72d83d48e69d73d5a425487484",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003746.npz": "68238db52047fc3a4ecbfb6b9db8857087c20ccfc1c5e7ef7263a717176a0c3d",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003746.npz": "86753b1fed6851dfcae99ba46d67b145fb1e5bdec5d2e9f45fdcc642bd0598a0",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003976.npz": "781990fce929df5c5ef4a6c9fa6c8c05e4660befedef08e372b3d09deb1596ee",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003976.npz": "949b4da5b344b3fbfe3ee48867d5791594a1ec993b5c3d3f6e4cbe94d4a31b7e",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003739.npz": "0c72411585c96e0f2ed9c322f5feca0b770fab5b88202002e527a3c5c7135574",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003739.npz": "50e79814fdc9a0c442b32ffe6cd47a56079d738f489ed0b0ce247c544217b71c",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003952.npz": "46466be37f59ea4f0d207285cee679e1c5e2843c44c545f66ae6251970ae51c8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003952.npz": "3aa86e64f5618de93ad0697ef3f58b69cb9ed72c61e749ef5d693302161bb310",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005049.npz": "f57c8c26f62a11f6e1ba09eac181d8a5a506939a5f8fcb37c466632fd7d82c13",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005049.npz": "df4beb6354cc82d5d8bf11b1b476360ff775bda9cf8e95222f24c90d2e96020c",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002942.npz": "08fe4b8c85b9f1d102181c0c7b3333687742318264e983afa3b398336b1461dd",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002942.npz": "210341c34f653c4c92a58f7094055d82d8b8fbad29138fa4931fa6488bf3d8d1",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004178.npz": "592ceed4895da2893481e52358c7e0da832de2df151ada9919f5b7172190e47e",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004178.npz": "8bd6e2be70e5a350ca39d6ee86844ed1928b0c58ce712e8ce1fe26fed0364094"
+  },
+  "audit_code_sha256": "99013bf425f0c8d88cca75866a2eafeb5e43960feabc5ceb035a43b2d3fc0d15",
+  "_publication": {
+    "original_source_sha256": "e624f135912f405aeb4917bd900d5f0d4ec4556739ec36751fdaca7034fed2c3",
+    "original_source": "source:scaling/paired_real_feasibility/reports/qualitative_class_decision_appendix.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

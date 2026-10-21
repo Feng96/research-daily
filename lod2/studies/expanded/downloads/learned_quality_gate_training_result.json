@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "models": [
+    {
+      "method": "learned_quality_gate",
+      "seed": 20261028,
+      "sha256": "50fea3e33eeed8434f02f918a01586ab981bcf042a530b83a17db46fb9d4d0fc",
+      "checkpoint": "source:expanded/models/learned_quality_gate_s20261028.pt",
+      "training_clouds": 500,
+      "training_loss": 0.15984751284122467,
+      "script_sha256": "d234ef25af823058718910ed7c5ecf459ec054adb968ee4ef288b0fdd15abac1",
+      "no_validation_read": true
+    },
+    {
+      "method": "learned_quality_gate",
+      "seed": 20261029,
+      "sha256": "56a40137cfa98648c935f95a72ffb5a56b66cc548f734ed086c48d25deb4680b",
+      "checkpoint": "source:expanded/models/learned_quality_gate_s20261029.pt",
+      "training_clouds": 500,
+      "training_loss": 0.10257291048765182,
+      "script_sha256": "d234ef25af823058718910ed7c5ecf459ec054adb968ee4ef288b0fdd15abac1",
+      "no_validation_read": true
+    },
+    {
+      "method": "learned_quality_gate",
+      "seed": 20261030,
+      "sha256": "019cd73f05306aaf18cb6ab2b253c649a6aa46a30baf711145cc3c1c64fb4647",
+      "checkpoint": "source:expanded/models/learned_quality_gate_s20261030.pt",
+      "training_clouds": 500,
+      "training_loss": 0.15249542891979218,
+      "script_sha256": "d234ef25af823058718910ed7c5ecf459ec054adb968ee4ef288b0fdd15abac1",
+      "no_validation_read": true
+    }
+  ],
+  "training_roofs": 100,
+  "training_clouds": 500,
+  "fixed_last_epoch_no_validation_selection": true,
+  "elapsed_seconds": 7.560304164886475,
+  "_publication": {
+    "original_source_sha256": "8ed3a5fe820aa4850ee1edad0c91499725b085bdfd43116a4c29a7c0f3a3ba3c",
+    "original_source": "source:expanded/reports/learned_quality_gate_training_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

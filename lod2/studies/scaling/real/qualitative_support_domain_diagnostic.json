@@ -1,0 +1,3525 @@
+{
+  "created_utc": "2026-10-21T08:52:20.417163+00:00",
+  "status": "read_only_domain_support_diagnostic_complete",
+  "fixed_building_denominator": 20,
+  "per_building_candidate_records": 98227,
+  "unique_candidate_source_records": 91612,
+  "per_building_buffer_overlaps_duplicate_physical_returns": true,
+  "real_candidate_rule": "all source classes except 2/7/9, actual z minus median8NN observed class2 ground in [2,100]m; no teacher roof labeling or Z correction",
+  "candidate_buffer_m": 5,
+  "geometric_region_definitions": {
+    "inside_exact_footprint": "Original immutable teacher roof-projection polygon covers XY, including its exact boundary; no XY shift/tolerance used.",
+    "outside_exact_within_5m_buffer": "Outside original exact polygon but covered by its original Shapely buffer(5), no fitting or correction.",
+    "outside_5m_buffer": "Outside that 5m polygon buffer; expected zero from frozen preparation.",
+    "outside_own_inside_another_selected20_prior": "Outside own polygon and within another of the fixed20 source-train teacher roof-projection polygons. Lower bound: unselected neighboring buildings are not tested."
+  },
+  "real_regions_class_by_keep_removed": {
+    "inside_exact_footprint": {
+      "1": {
+        "candidate_records": 2691,
+        "kept": 2364,
+        "removed": 327
+      },
+      "6": {
+        "candidate_records": 37199,
+        "kept": 33707,
+        "removed": 3492
+      }
+    },
+    "outside_exact_within_5m_buffer": {
+      "1": {
+        "candidate_records": 16390,
+        "kept": 13737,
+        "removed": 2653
+      },
+      "6": {
+        "candidate_records": 41947,
+        "kept": 38710,
+        "removed": 3237
+      }
+    },
+    "outside_5m_buffer": {
+      "1": {
+        "candidate_records": 0,
+        "kept": 0,
+        "removed": 0
+      },
+      "6": {
+        "candidate_records": 0,
+        "kept": 0,
+        "removed": 0
+      }
+    },
+    "outside_own_inside_another_selected20_prior": {
+      "1": {
+        "candidate_records": 186,
+        "kept": 186,
+        "removed": 0
+      },
+      "6": {
+        "candidate_records": 5320,
+        "kept": 4582,
+        "removed": 738
+      }
+    }
+  },
+  "synthetic_native_xy": {
+    "generator_sha256": "2a3b25c889c78fc6cbd35ade61517eb77acdf2ce9c8b8f2e126938b2281bf5ae",
+    "scope": "Replay only the same20 frozen Leiden source-train teachers, all12 frozen cases and case-index variants. Main calibration/validation/test arrays, labels, catalogs and geometry were not opened.",
+    "actual_counts": {
+      "native_observation_records": 105600,
+      "inside_exact_footprint": 105600,
+      "outside_exact_footprint": 0,
+      "outside_farther_than_1mm": 0
+    },
+    "per_case": {
+      "clean": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "sparse": {
+        "native_observation_records": 2560,
+        "inside_exact_footprint": 2560,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "very_sparse": {
+        "native_observation_records": 640,
+        "inside_exact_footprint": 640,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "noise": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "hole": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "scattered_tree": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "dense_canopy": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "flat_canopy": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "low_canopy": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "tree_multiple": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "tilted_canopy": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      },
+      "occlusion_heavy": {
+        "native_observation_records": 10240,
+        "inside_exact_footprint": 10240,
+        "outside_exact_footprint": 0,
+        "outside_farther_than_1mm": 0
+      }
+    },
+    "code_evidence": "prepare_data.samples draws barycentric XY on teacher roof triangles. observed obtains both roof and synthetic contaminants from samples; contamination/noise changes Z only; native observed XYZ is returned at tuple index5. No 5m neighboring-building pool is admitted.",
+    "native_vs_augmentation": "train.strong_view separately adds 0.02m XY standard-deviation feature noise for configurations that call it. This does not modify stored native observed XYZ and does not provide a 5m neighbor-building support pool.",
+    "returned_synthetic_label_arrays_inspected": false,
+    "is_new_training_or_evaluation": false
+  },
+  "interpretation_boundaries": [
+    "This establishes an input-support domain risk, not a single-factor causal explanation of score/mask differences.",
+    "Official AHN5 class6 is roof production classification, not independent human local GT; class1 is heterogeneous other, not tree GT.",
+    "The previous6729 class6 removed records include outside-own-footprint context; they cannot all be called removals of this building roof.",
+    "Even inside-own class6 disagreement is a diagnostic, not a verified local error rate; polygons and teacher share AHN upstream.",
+    "Neighbor overlap is measured only against the other19 fixed selected source-train priors; it is a lower bound and not an independently surveyed neighbor label.",
+    "Other possible domain differences remain: real density/noise/occlusion, observed scalar ground versus teacher ground, variable building-buffer context, and three512-point partition means versus main controlled single512 input.",
+    "No local threshold tuning, model selection, GPU forward, XYZ correction, data modification or main val/test access occurred."
+  ],
+  "per_building": [
+    {
+      "id": "NL.IMBAG.Pand.0546100000003629",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 6936,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 281,
+              "kept": 277,
+              "removed": 4
+            },
+            "6": {
+              "candidate_records": 2031,
+              "kept": 1977,
+              "removed": 54
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 432,
+              "kept": 428,
+              "removed": 4
+            },
+            "6": {
+              "candidate_records": 4192,
+              "kept": 4058,
+              "removed": 134
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005073",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 2667,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 31,
+              "kept": 31,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 773,
+              "kept": 773,
+              "removed": 0
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 232,
+              "kept": 232,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 1631,
+              "kept": 1631,
+              "removed": 0
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004149",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 2935,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 30,
+              "kept": 30,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 874,
+              "kept": 472,
+              "removed": 402
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 243,
+              "kept": 242,
+              "removed": 1
+            },
+            "6": {
+              "candidate_records": 1788,
+              "kept": 1067,
+              "removed": 721
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003619",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 6144,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 124,
+              "kept": 121,
+              "removed": 3
+            },
+            "6": {
+              "candidate_records": 2048,
+              "kept": 1946,
+              "removed": 102
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 201,
+              "kept": 201,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 3771,
+              "kept": 3681,
+              "removed": 90
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000000956",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 18394,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 672,
+              "kept": 536,
+              "removed": 136
+            },
+            "6": {
+              "candidate_records": 12083,
+              "kept": 10184,
+              "removed": 1899
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 4888,
+              "kept": 4727,
+              "removed": 161
+            },
+            "6": {
+              "candidate_records": 751,
+              "kept": 659,
+              "removed": 92
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004156",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 3056,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 17,
+              "kept": 17,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 933,
+              "kept": 462,
+              "removed": 471
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 152,
+              "kept": 152,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 1954,
+              "kept": 917,
+              "removed": 1037
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 20,
+              "kept": 20,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 885,
+              "kept": 446,
+              "removed": 439
+            }
+          }
+        },
+        "other_selected20_prior_hits": [
+          {
+            "id": "NL.IMBAG.Pand.0546100000004178",
+            "candidate_records": 905,
+            "class6_records": 885
+          }
+        ],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002345",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 5013,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 53,
+              "kept": 53,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 1639,
+              "kept": 1635,
+              "removed": 4
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 213,
+              "kept": 213,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 3108,
+              "kept": 3090,
+              "removed": 18
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003600",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 7020,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 87,
+              "kept": 87,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 1900,
+              "kept": 1900,
+              "removed": 0
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 938,
+              "kept": 938,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 4095,
+              "kept": 4095,
+              "removed": 0
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 66,
+              "kept": 66,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 1813,
+              "kept": 1813,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [
+          {
+            "id": "NL.IMBAG.Pand.0546100000003601",
+            "candidate_records": 1879,
+            "class6_records": 1813
+          }
+        ],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003601",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 6420,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 100,
+              "kept": 97,
+              "removed": 3
+            },
+            "6": {
+              "candidate_records": 2042,
+              "kept": 2035,
+              "removed": 7
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 1217,
+              "kept": 1190,
+              "removed": 27
+            },
+            "6": {
+              "candidate_records": 3061,
+              "kept": 3038,
+              "removed": 23
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 83,
+              "kept": 83,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 1769,
+              "kept": 1754,
+              "removed": 15
+            }
+          }
+        },
+        "other_selected20_prior_hits": [
+          {
+            "id": "NL.IMBAG.Pand.0546100000003600",
+            "candidate_records": 1852,
+            "class6_records": 1769
+          }
+        ],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005062",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 2844,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 3,
+              "kept": 3,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 837,
+              "kept": 657,
+              "removed": 180
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 633,
+              "kept": 629,
+              "removed": 4
+            },
+            "6": {
+              "candidate_records": 1371,
+              "kept": 1105,
+              "removed": 266
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003648",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 3066,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 109,
+              "kept": 92,
+              "removed": 17
+            },
+            "6": {
+              "candidate_records": 904,
+              "kept": 886,
+              "removed": 18
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 847,
+              "kept": 567,
+              "removed": 280
+            },
+            "6": {
+              "candidate_records": 1206,
+              "kept": 1186,
+              "removed": 20
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005058",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 4504,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 206,
+              "kept": 42,
+              "removed": 164
+            },
+            "6": {
+              "candidate_records": 842,
+              "kept": 836,
+              "removed": 6
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 2549,
+              "kept": 481,
+              "removed": 2068
+            },
+            "6": {
+              "candidate_records": 907,
+              "kept": 906,
+              "removed": 1
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005074",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 2208,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 120,
+              "kept": 120,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 871,
+              "kept": 871,
+              "removed": 0
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 334,
+              "kept": 320,
+              "removed": 14
+            },
+            "6": {
+              "candidate_records": 883,
+              "kept": 883,
+              "removed": 0
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003746",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 5134,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 332,
+              "kept": 332,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 2397,
+              "kept": 2388,
+              "removed": 9
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 532,
+              "kept": 532,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 1873,
+              "kept": 1868,
+              "removed": 5
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003976",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 7012,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 69,
+              "kept": 69,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 2276,
+              "kept": 2276,
+              "removed": 0
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 295,
+              "kept": 295,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 4372,
+              "kept": 4325,
+              "removed": 47
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003739",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 3541,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 46,
+              "kept": 46,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 1097,
+              "kept": 1097,
+              "removed": 0
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 151,
+              "kept": 151,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 2247,
+              "kept": 2243,
+              "removed": 4
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003952",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 3743,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 145,
+              "kept": 145,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 987,
+              "kept": 987,
+              "removed": 0
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 1690,
+              "kept": 1596,
+              "removed": 94
+            },
+            "6": {
+              "candidate_records": 921,
+              "kept": 921,
+              "removed": 0
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005049",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 2202,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 112,
+              "kept": 112,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 807,
+              "kept": 807,
+              "removed": 0
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 386,
+              "kept": 386,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 897,
+              "kept": 893,
+              "removed": 4
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002942",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 2043,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 134,
+              "kept": 134,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 912,
+              "kept": 901,
+              "removed": 11
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 100,
+              "kept": 100,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 897,
+              "kept": 882,
+              "removed": 15
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          }
+        },
+        "other_selected20_prior_hits": [],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004178",
+      "role": "selected_source_train_qualitative_only",
+      "real_observed": {
+        "candidate_records": 3345,
+        "exact_boundary_records": 0,
+        "inside_original_matches_frozen_strict_predicate": true,
+        "regions_class_by_keep_removed": {
+          "inside_exact_footprint": {
+            "1": {
+              "candidate_records": 20,
+              "kept": 20,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 946,
+              "kept": 617,
+              "removed": 329
+            }
+          },
+          "outside_exact_within_5m_buffer": {
+            "1": {
+              "candidate_records": 357,
+              "kept": 357,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 2022,
+              "kept": 1262,
+              "removed": 760
+            }
+          },
+          "outside_5m_buffer": {
+            "1": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 0,
+              "kept": 0,
+              "removed": 0
+            }
+          },
+          "outside_own_inside_another_selected20_prior": {
+            "1": {
+              "candidate_records": 17,
+              "kept": 17,
+              "removed": 0
+            },
+            "6": {
+              "candidate_records": 853,
+              "kept": 569,
+              "removed": 284
+            }
+          }
+        },
+        "other_selected20_prior_hits": [
+          {
+            "id": "NL.IMBAG.Pand.0546100000004156",
+            "candidate_records": 870,
+            "class6_records": 853
+          }
+        ],
+        "other_prior_test_is_lower_bound_not_all_nearby_buildings": true
+      },
+      "synthetic_native_train_only_replay": [
+        {
+          "case": "clean",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "sparse",
+          "native_observation_records": 128,
+          "inside_exact_footprint": 128,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "very_sparse",
+          "native_observation_records": 32,
+          "inside_exact_footprint": 32,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "noise",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "hole",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "scattered_tree",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "dense_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "flat_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "low_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tree_multiple",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "tilted_canopy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        },
+        {
+          "case": "occlusion_heavy",
+          "native_observation_records": 512,
+          "inside_exact_footprint": 512,
+          "outside_exact_footprint": 0,
+          "outside_farther_than_1mm": 0,
+          "max_outside_distance_m": 0.0
+        }
+      ]
+    }
+  ],
+  "all_frozen_sources_unchanged": true,
+  "source_hashes_before": {
+    "source:scaling/paired_real_feasibility/prepared_buildings.json": "37b471e7595b180d8346997634de50d60588b30e9f9b72544e25fe026d7090ea",
+    "source:scaling/paired_real_feasibility/selection_freeze.json": "3d693f5ccc47b9768577951f4c7ae5e9b7e2723e0310a8012ed89c8a677afd81",
+    "source:scaling/paired_real_feasibility/qualitative_dl/qualitative_result.json": "534bc9aa9b0c65c0f5bea52dac04b9f75ff4b4ff85e8f58adc5b102ff6057ccf",
+    "source:scaling/tools/prepare_data.py": "2a3b25c889c78fc6cbd35ade61517eb77acdf2ce9c8b8f2e126938b2281bf5ae",
+    "source:scaling/tools/common.py": "3825e51d537e8f0e37efcab4b096e7b407f89097e4969351923427f96798e261",
+    "source:scaling/tools_paired/prepare_ahn_real.py": "af3e0c9ea3521be06fd1cde15f13d930db4546b22587649d9f2b18fe06b1420a",
+    "source:scaling/tools/train.py": "8d1576845bb34e64cd41179e1ee7bb8b074611856a40a7551e7f0da780405b17",
+    "source:scaling/paired_real_feasibility/reports/raw_quality_preview.html": "1768441f0abbc72c6a9554650a4fcbe22699c0c3f3f42bb64618563797e7ba24",
+    "source:scaling/paired_real_feasibility/reports/raw_quality_preview_rgb2023.html": "eec158500910d291eae41b60e9532c6b11ffa990f2129113bc4b046e1277c17d",
+    "source:scaling/paired_real_feasibility/reports/raw_quality_preview_dl_qualitative.html": "baaafcc04f009692e2088087cff778b49103c3a93fddc1f04b4307c4c4779228",
+    "source:scaling/paired_real_feasibility/reports/qualitative_class_decision_appendix.json": "e624f135912f405aeb4917bd900d5f0d4ec4556739ec36751fdaca7034fed2c3",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003629.npz": "a7661e6492732e687b6df687ed909fa68836ba7ba68450183e13ad4ba7b5ec50",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003629.npz": "fcfe819c8c204bb8129a531d4411c9abe327de321155b75238105b561716cecb",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003629.npz": "f8d4e7b1b539a5566ace3f1ca5cb3a30d825ec70dbbcb16d13ff72692c1564c8",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005073.npz": "c9e944ef7efe5836a8ead7e712608d1cd3179fa32890a3db6bbca968b2db886e",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005073.npz": "edcd120512149941c6eda51a292700efbcda2aa7e118a5fb0d88b0f2afce3cf4",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005073.npz": "f9b7dd756fcaba95dea784fc27219322316182f7ef911ef9fa5ab7efb65f54bc",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000004149.npz": "f61b90377518e54ff526812356613cdb8d540e41ad8bd2c52608d9eecf145fc8",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004149.npz": "20a8f003c5f0c9a6580158e3df3fd20abe10e204015d755ffeae737ea12bec40",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004149.npz": "fb946ad6ca464d3d1928ad5db1ba35c3d9e4ec480c87794c6978ca06ba5b46bc",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003619.npz": "08c62a7b1fb161a8f46d9bec9da5060e4cb2e685feafd0794c863c7effa3140e",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003619.npz": "f0f0dfb6b1cee9340cba6c2e5e6e01af44b2fa516dc3a38fdbabdeec08022150",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003619.npz": "d3c71a7bf5f91627e6e8d2c026aef710eed95278cfa50938dd8b0ea744405277",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000000956.npz": "21c3b0c32d90fc8fd4034e6f40fa05b2ffa8f1593f1a152683830ae443b50b30",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000000956.npz": "9af2513066496a30d98bcde713e6a966744607f8a1ea9ef252949dbb4f29a83c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000000956.npz": "8c663f0844219957b52a96686094b2ca59aaf1cc8cdd6077c4895417e98aa568",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000004156.npz": "e141c4d5d7770262888bbdc388c90e6ddadb99b872ce9bf7cb7809ec6b68f260",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004156.npz": "fffb198e6794c25059fd436909184300038247337f95c0255221da19b80a02c8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004156.npz": "0fb605bb5acddc86f7093ee87c422adecd8b7e80f16671e78d088711ac7a19a1",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000002345.npz": "a57fa8377ae21105efa1182546e5e0683266f5e0fbc3886743459ebb1623fa90",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002345.npz": "f1aa54d1dcacbc8ee6b9bccae424087c0a42245159dab4327ab172cfd4b92586",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002345.npz": "2c05ac6fbfb1b17df7dca6884df4fe86c8ac6f83dd4e393f8b8bfd27dab45bb2",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003600.npz": "ccd84e90cda080616aca987e8907b425e5b871e54b5a12942997d6edc9acfeae",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003600.npz": "13c62621894fc068227d5a175db6fa82b18befb4462403c06107d91f031d1e68",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003600.npz": "2c718d20d2981e3702b1c606870bf636ea540b98d526adfea2a9cf6bcc458f3e",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003601.npz": "92c725aa4c478e38bac70753a0f17854f522c091b1a92c0de659e4d07cc4ef2e",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003601.npz": "54cb67ee5a97e10b3473a57f3369a5fc90fdbb657e2723588261065649102934",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003601.npz": "0eeb2298f10dc84940e2ec568511b6a324ac8d13858927f799e5e624ac504350",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005062.npz": "30a0ad2f3ee60f12edc10dff4b242ae34e2cb766073d7c21faa4b19fa76507d0",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005062.npz": "125a1480ef792b84efac16f85adddd68f8fd37846d53c2adbbd191c2aeaf900c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005062.npz": "3abcd5b54dec995f9e60f22f82d1f57c1d0932afa775c1376a6711a3e3cf45b0",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003648.npz": "ba0cec1f532a20dfcae5b4db36958fc85d6837dbc88baf27ac76af402c655405",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003648.npz": "76f200c0e400da62bc38c5761dd43b9e7beed517373b35faf2a42713ba3ccf2c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003648.npz": "2a48fdd6d2a2d8ed0c2cee3b5f9e56c5c10057df52f1a8b978142e7c13394cdf",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005058.npz": "bd6837991cf825fbed38a50f09926d44b106e87e659bde481b7e0cfbcb0ff5c4",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005058.npz": "b05d0e76e677980c536c10b18d3110b2751467a67f0398d46cde8ce6879dce5f",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005058.npz": "c59c6c712c311e97bfeef9e371e9047e8c1ad7bbf5518fb9fb35f584dbcf3fcc",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005074.npz": "0a38b7b63abffc0cdf63cf267799119a097faf18fce2a288e23a86e4b285b8bc",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005074.npz": "78d243bdb22d767833687d5b844d40474379379b3e055720164dd2eeceda56d8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005074.npz": "2f47b9ea68390405023639f860e55bb8fd36eb72d83d48e69d73d5a425487484",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003746.npz": "587dda7414f8fa2a9288eb95b78f6b5bcb37d6a4296419892aec9e1133e86cfd",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003746.npz": "68238db52047fc3a4ecbfb6b9db8857087c20ccfc1c5e7ef7263a717176a0c3d",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003746.npz": "86753b1fed6851dfcae99ba46d67b145fb1e5bdec5d2e9f45fdcc642bd0598a0",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003976.npz": "e8c3112abc1abf45d940683622ce8b01e79c3381fe6b4c1fede79bd415aa8479",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003976.npz": "781990fce929df5c5ef4a6c9fa6c8c05e4660befedef08e372b3d09deb1596ee",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003976.npz": "949b4da5b344b3fbfe3ee48867d5791594a1ec993b5c3d3f6e4cbe94d4a31b7e",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003739.npz": "0a77c3fb3bde4c4b25dae5751fb2a00d9a1282bf4cb11ba409212f301db69d76",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003739.npz": "0c72411585c96e0f2ed9c322f5feca0b770fab5b88202002e527a3c5c7135574",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003739.npz": "50e79814fdc9a0c442b32ffe6cd47a56079d738f489ed0b0ce247c544217b71c",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003952.npz": "cb7a423d4728715f2fbc32450a65051db170f6036eb16c892dab98f6b7d38fd5",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003952.npz": "46466be37f59ea4f0d207285cee679e1c5e2843c44c545f66ae6251970ae51c8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003952.npz": "3aa86e64f5618de93ad0697ef3f58b69cb9ed72c61e749ef5d693302161bb310",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005049.npz": "767325cc476b24ab5d4fbb2247e3d15f32032a0d7a030dacfc3f6241e873aadd",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005049.npz": "f57c8c26f62a11f6e1ba09eac181d8a5a506939a5f8fcb37c466632fd7d82c13",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005049.npz": "df4beb6354cc82d5d8bf11b1b476360ff775bda9cf8e95222f24c90d2e96020c",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000002942.npz": "2478aa0374e0568b0807535d5d110816f63d3f0211512000bbcebd88b30d1302",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002942.npz": "08fe4b8c85b9f1d102181c0c7b3333687742318264e983afa3b398336b1461dd",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002942.npz": "210341c34f653c4c92a58f7094055d82d8b8fbad29138fa4931fa6488bf3d8d1",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000004178.npz": "e63e527aa968434efb26eb3e11d44932b1ed532a2e7efc1721efbcc0efd9365a",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004178.npz": "592ceed4895da2893481e52358c7e0da832de2df151ada9919f5b7172190e47e",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004178.npz": "8bd6e2be70e5a350ca39d6ee86844ed1928b0c58ce712e8ce1fe26fed0364094"
+  },
+  "source_hashes_after": {
+    "source:scaling/paired_real_feasibility/prepared_buildings.json": "37b471e7595b180d8346997634de50d60588b30e9f9b72544e25fe026d7090ea",
+    "source:scaling/paired_real_feasibility/selection_freeze.json": "3d693f5ccc47b9768577951f4c7ae5e9b7e2723e0310a8012ed89c8a677afd81",
+    "source:scaling/paired_real_feasibility/qualitative_dl/qualitative_result.json": "534bc9aa9b0c65c0f5bea52dac04b9f75ff4b4ff85e8f58adc5b102ff6057ccf",
+    "source:scaling/tools/prepare_data.py": "2a3b25c889c78fc6cbd35ade61517eb77acdf2ce9c8b8f2e126938b2281bf5ae",
+    "source:scaling/tools/common.py": "3825e51d537e8f0e37efcab4b096e7b407f89097e4969351923427f96798e261",
+    "source:scaling/tools_paired/prepare_ahn_real.py": "af3e0c9ea3521be06fd1cde15f13d930db4546b22587649d9f2b18fe06b1420a",
+    "source:scaling/tools/train.py": "8d1576845bb34e64cd41179e1ee7bb8b074611856a40a7551e7f0da780405b17",
+    "source:scaling/paired_real_feasibility/reports/raw_quality_preview.html": "1768441f0abbc72c6a9554650a4fcbe22699c0c3f3f42bb64618563797e7ba24",
+    "source:scaling/paired_real_feasibility/reports/raw_quality_preview_rgb2023.html": "eec158500910d291eae41b60e9532c6b11ffa990f2129113bc4b046e1277c17d",
+    "source:scaling/paired_real_feasibility/reports/raw_quality_preview_dl_qualitative.html": "baaafcc04f009692e2088087cff778b49103c3a93fddc1f04b4307c4c4779228",
+    "source:scaling/paired_real_feasibility/reports/qualitative_class_decision_appendix.json": "e624f135912f405aeb4917bd900d5f0d4ec4556739ec36751fdaca7034fed2c3",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003629.npz": "a7661e6492732e687b6df687ed909fa68836ba7ba68450183e13ad4ba7b5ec50",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003629.npz": "fcfe819c8c204bb8129a531d4411c9abe327de321155b75238105b561716cecb",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003629.npz": "f8d4e7b1b539a5566ace3f1ca5cb3a30d825ec70dbbcb16d13ff72692c1564c8",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005073.npz": "c9e944ef7efe5836a8ead7e712608d1cd3179fa32890a3db6bbca968b2db886e",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005073.npz": "edcd120512149941c6eda51a292700efbcda2aa7e118a5fb0d88b0f2afce3cf4",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005073.npz": "f9b7dd756fcaba95dea784fc27219322316182f7ef911ef9fa5ab7efb65f54bc",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000004149.npz": "f61b90377518e54ff526812356613cdb8d540e41ad8bd2c52608d9eecf145fc8",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004149.npz": "20a8f003c5f0c9a6580158e3df3fd20abe10e204015d755ffeae737ea12bec40",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004149.npz": "fb946ad6ca464d3d1928ad5db1ba35c3d9e4ec480c87794c6978ca06ba5b46bc",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003619.npz": "08c62a7b1fb161a8f46d9bec9da5060e4cb2e685feafd0794c863c7effa3140e",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003619.npz": "f0f0dfb6b1cee9340cba6c2e5e6e01af44b2fa516dc3a38fdbabdeec08022150",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003619.npz": "d3c71a7bf5f91627e6e8d2c026aef710eed95278cfa50938dd8b0ea744405277",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000000956.npz": "21c3b0c32d90fc8fd4034e6f40fa05b2ffa8f1593f1a152683830ae443b50b30",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000000956.npz": "9af2513066496a30d98bcde713e6a966744607f8a1ea9ef252949dbb4f29a83c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000000956.npz": "8c663f0844219957b52a96686094b2ca59aaf1cc8cdd6077c4895417e98aa568",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000004156.npz": "e141c4d5d7770262888bbdc388c90e6ddadb99b872ce9bf7cb7809ec6b68f260",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004156.npz": "fffb198e6794c25059fd436909184300038247337f95c0255221da19b80a02c8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004156.npz": "0fb605bb5acddc86f7093ee87c422adecd8b7e80f16671e78d088711ac7a19a1",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000002345.npz": "a57fa8377ae21105efa1182546e5e0683266f5e0fbc3886743459ebb1623fa90",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002345.npz": "f1aa54d1dcacbc8ee6b9bccae424087c0a42245159dab4327ab172cfd4b92586",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002345.npz": "2c05ac6fbfb1b17df7dca6884df4fe86c8ac6f83dd4e393f8b8bfd27dab45bb2",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003600.npz": "ccd84e90cda080616aca987e8907b425e5b871e54b5a12942997d6edc9acfeae",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003600.npz": "13c62621894fc068227d5a175db6fa82b18befb4462403c06107d91f031d1e68",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003600.npz": "2c718d20d2981e3702b1c606870bf636ea540b98d526adfea2a9cf6bcc458f3e",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003601.npz": "92c725aa4c478e38bac70753a0f17854f522c091b1a92c0de659e4d07cc4ef2e",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003601.npz": "54cb67ee5a97e10b3473a57f3369a5fc90fdbb657e2723588261065649102934",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003601.npz": "0eeb2298f10dc84940e2ec568511b6a324ac8d13858927f799e5e624ac504350",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005062.npz": "30a0ad2f3ee60f12edc10dff4b242ae34e2cb766073d7c21faa4b19fa76507d0",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005062.npz": "125a1480ef792b84efac16f85adddd68f8fd37846d53c2adbbd191c2aeaf900c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005062.npz": "3abcd5b54dec995f9e60f22f82d1f57c1d0932afa775c1376a6711a3e3cf45b0",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003648.npz": "ba0cec1f532a20dfcae5b4db36958fc85d6837dbc88baf27ac76af402c655405",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003648.npz": "76f200c0e400da62bc38c5761dd43b9e7beed517373b35faf2a42713ba3ccf2c",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003648.npz": "2a48fdd6d2a2d8ed0c2cee3b5f9e56c5c10057df52f1a8b978142e7c13394cdf",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005058.npz": "bd6837991cf825fbed38a50f09926d44b106e87e659bde481b7e0cfbcb0ff5c4",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005058.npz": "b05d0e76e677980c536c10b18d3110b2751467a67f0398d46cde8ce6879dce5f",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005058.npz": "c59c6c712c311e97bfeef9e371e9047e8c1ad7bbf5518fb9fb35f584dbcf3fcc",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005074.npz": "0a38b7b63abffc0cdf63cf267799119a097faf18fce2a288e23a86e4b285b8bc",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005074.npz": "78d243bdb22d767833687d5b844d40474379379b3e055720164dd2eeceda56d8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005074.npz": "2f47b9ea68390405023639f860e55bb8fd36eb72d83d48e69d73d5a425487484",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003746.npz": "587dda7414f8fa2a9288eb95b78f6b5bcb37d6a4296419892aec9e1133e86cfd",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003746.npz": "68238db52047fc3a4ecbfb6b9db8857087c20ccfc1c5e7ef7263a717176a0c3d",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003746.npz": "86753b1fed6851dfcae99ba46d67b145fb1e5bdec5d2e9f45fdcc642bd0598a0",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003976.npz": "e8c3112abc1abf45d940683622ce8b01e79c3381fe6b4c1fede79bd415aa8479",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003976.npz": "781990fce929df5c5ef4a6c9fa6c8c05e4660befedef08e372b3d09deb1596ee",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003976.npz": "949b4da5b344b3fbfe3ee48867d5791594a1ec993b5c3d3f6e4cbe94d4a31b7e",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003739.npz": "0a77c3fb3bde4c4b25dae5751fb2a00d9a1282bf4cb11ba409212f301db69d76",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003739.npz": "0c72411585c96e0f2ed9c322f5feca0b770fab5b88202002e527a3c5c7135574",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003739.npz": "50e79814fdc9a0c442b32ffe6cd47a56079d738f489ed0b0ce247c544217b71c",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000003952.npz": "cb7a423d4728715f2fbc32450a65051db170f6036eb16c892dab98f6b7d38fd5",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003952.npz": "46466be37f59ea4f0d207285cee679e1c5e2843c44c545f66ae6251970ae51c8",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000003952.npz": "3aa86e64f5618de93ad0697ef3f58b69cb9ed72c61e749ef5d693302161bb310",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000005049.npz": "767325cc476b24ab5d4fbb2247e3d15f32032a0d7a030dacfc3f6241e873aadd",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005049.npz": "f57c8c26f62a11f6e1ba09eac181d8a5a506939a5f8fcb37c466632fd7d82c13",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000005049.npz": "df4beb6354cc82d5d8bf11b1b476360ff775bda9cf8e95222f24c90d2e96020c",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000002942.npz": "2478aa0374e0568b0807535d5d110816f63d3f0211512000bbcebd88b30d1302",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002942.npz": "08fe4b8c85b9f1d102181c0c7b3333687742318264e983afa3b398336b1461dd",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000002942.npz": "210341c34f653c4c92a58f7094055d82d8b8fbad29138fa4931fa6488bf3d8d1",
+    "source:scaling/teacher_data/meshes/NL.IMBAG.Pand.0546100000004178.npz": "e63e527aa968434efb26eb3e11d44932b1ed532a2e7efc1721efbcc0efd9365a",
+    "source:scaling/paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004178.npz": "592ceed4895da2893481e52358c7e0da832de2df151ada9919f5b7172190e47e",
+    "source:scaling/paired_real_feasibility/qualitative_dl/predictions/NL_IMBAG_Pand_0546100000004178.npz": "8bd6e2be70e5a350ca39d6ee86844ed1928b0c58ce712e8ce1fe26fed0364094"
+  },
+  "audit_code_sha256": "cd6c3238d2c56bd51a14b3176f778801285cdd996fb4d764f05aebe2d3dd561c",
+  "main_validation_test_read": false,
+  "main_scientific_flow_modified": false,
+  "_publication": {
+    "original_source_sha256": "2f976ebae90417c3779038ef330f9f86d70d6ad2d12864a907bd345e1feb09fe",
+    "original_source": "source:scaling/paired_real_feasibility/reports/qualitative_support_domain_diagnostic.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

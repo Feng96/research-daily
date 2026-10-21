@@ -1,0 +1,460 @@
+{
+  "id": "multicity",
+  "title": "小规模多城迁移试验",
+  "subtitle": "24栋受控模拟屋面＋18栋Boston真实观测",
+  "date": "2026-10-20",
+  "scope": "自动3DBAG教师＋合成点云的受控实验；Boston NAIP＋3DEP仅做真实迁移与生成诊断。",
+  "summary": "受控污染下筛点改变屋面结果；真实Boston没有独立同期屋面GT，生成成功不能代表精度。",
+  "reportUrl": "studies/multicity/index.html",
+  "figures": [
+    {
+      "url": "studies/multicity/figures/controlled_roof_comparison.png",
+      "caption": "24栋×6条件×5流程；自动教师和合成观测，不是美国实测精度。"
+    },
+    {
+      "url": "studies/multicity/figures/controlled_roof_comparison.svg",
+      "caption": "controlled_roof_comparison.svg；原实验已生成图，适用范围见正式报告。"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "studies/multicity/downloads/pilot_results.pdf",
+      "label": "pilot_results.pdf",
+      "download": true,
+      "bytes": 25477,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/controlled_roof_metrics.csv",
+      "label": "controlled_roof_metrics.csv",
+      "download": true,
+      "bytes": 2343,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/controlled_reconstruction_result.json",
+      "label": "controlled_reconstruction_result.json",
+      "download": true,
+      "bytes": 9914,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/paired_controlled_comparisons.json",
+      "label": "paired_controlled_comparisons.json",
+      "download": true,
+      "bytes": 9767,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/boston_inference_result.json",
+      "label": "boston_inference_result.json",
+      "download": true,
+      "bytes": 8343,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/boston_reconstruction_result.json",
+      "label": "boston_reconstruction_result.json",
+      "download": true,
+      "bytes": 4391,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/boston_reconstruction_v2_result.json",
+      "label": "boston_reconstruction_v2_result.json",
+      "download": true,
+      "bytes": 5100,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/boston_reconstruction_v2_topology.json",
+      "label": "boston_reconstruction_v2_topology.json",
+      "download": true,
+      "bytes": 28132,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/h100_training_result.json",
+      "label": "h100_training_result.json",
+      "download": true,
+      "bytes": 15410,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/experiment_summary.txt",
+      "label": "experiment_summary.txt",
+      "download": true,
+      "bytes": 4401,
+      "kind": "result_text"
+    },
+    {
+      "url": "studies/multicity/downloads/supervisor_final_review.json",
+      "label": "supervisor_final_review.json",
+      "download": true,
+      "bytes": 23476,
+      "kind": "aggregate"
+    },
+    {
+      "url": "studies/multicity/downloads/supervisor_final_review_brief.txt",
+      "label": "supervisor_final_review_brief.txt",
+      "download": true,
+      "bytes": 2217,
+      "kind": "result_text"
+    },
+    {
+      "url": "studies/multicity/downloads/per_building/controlled_reconstruction_per_building.json.gz",
+      "label": "controlled_reconstruction_per_building.json",
+      "download": true,
+      "bytes": 21551,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/multicity/downloads/per_building/boston_reconstruction_per_instance.json.gz",
+      "label": "boston_reconstruction_per_instance.json",
+      "download": true,
+      "bytes": 1227,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/multicity/downloads/per_building/boston_reconstruction_v2_per_instance.json.gz",
+      "label": "boston_reconstruction_v2_per_instance.json",
+      "download": true,
+      "bytes": 1697,
+      "kind": "per_building"
+    },
+    {
+      "url": "studies/multicity/downloads/mesh_admission_summary.json",
+      "label": "audit_summary.json",
+      "download": true,
+      "bytes": 2246,
+      "kind": "evidence"
+    },
+    {
+      "url": "studies/multicity/downloads/reference_data_limits.txt",
+      "label": "README.txt",
+      "download": true,
+      "bytes": 4936,
+      "kind": "source_documentation"
+    }
+  ],
+  "keyMetrics": [
+    {
+      "label": "受控建筑",
+      "value": 24,
+      "unit": "栋",
+      "detail": "六种固定模拟条件，五条处理流程。"
+    },
+    {
+      "label": "真实Boston输入",
+      "value": 18,
+      "unit": "实例",
+      "detail": "1个OSM足迹、17个历史mesh投影先验；有5个微小碎片实例。"
+    },
+    {
+      "label": "原始流程全部parts成功",
+      "value": "5/18",
+      "unit": "实例",
+      "detail": "77个统一归约后的parts；仅描述native生成，非精度。"
+    }
+  ],
+  "findings": [
+    "干净屋面筛点也可能受损；污染条件的改善不等于无条件优于raw。",
+    "Boston先保留v1足迹退化导致的失败，再统一0.01m网格归约得到v2；原始观测和预测mask不变。",
+    "Boston光学筛点在本批真实候选上未删除点；不能据此判定光学融合普遍无效。"
+  ],
+  "limitations": [
+    "17/18footprints are historical mesh-derived input priors.",
+    "5/18sourceinstances are tiny2–6m2fragments, retained in every group.",
+    "NativeLoD2 success describes output generation, not geometric correctness.",
+    "2011reference,2013–14LiDAR,2014NAIP and2026OSM are not temporally equivalent.",
+    "自动教师非独立人工GT；24栋结果不能作美国总体推断。",
+    "各轮输入/地面/评估契约不同，不能跨轮直接相减归因。"
+  ],
+  "columns": [
+    "条件",
+    "方法",
+    "建筑分母",
+    "LoD2生成",
+    "平均覆盖",
+    "屋面MAE (m)",
+    "限幅损失 (m)"
+  ],
+  "tableRows": [
+    [
+      "clean",
+      "raw",
+      "24",
+      "24",
+      "1.0000",
+      "0.4038",
+      "0.4029"
+    ],
+    [
+      "clean",
+      "geometry",
+      "24",
+      "24",
+      "1.0000",
+      "0.4101",
+      "0.4092"
+    ],
+    [
+      "clean",
+      "pointnet_hard",
+      "24",
+      "24",
+      "1.0000",
+      "0.5457",
+      "0.5444"
+    ],
+    [
+      "clean",
+      "edgeconv_hard",
+      "24",
+      "24",
+      "1.0000",
+      "0.4842",
+      "0.4816"
+    ],
+    [
+      "clean",
+      "edgeconv_guard",
+      "24",
+      "24",
+      "1.0000",
+      "0.5183",
+      "0.5157"
+    ],
+    [
+      "sparse",
+      "raw",
+      "24",
+      "24",
+      "1.0000",
+      "1.6093",
+      "1.5561"
+    ],
+    [
+      "sparse",
+      "geometry",
+      "24",
+      "24",
+      "1.0000",
+      "1.6182",
+      "1.5650"
+    ],
+    [
+      "sparse",
+      "pointnet_hard",
+      "24",
+      "24",
+      "1.0000",
+      "1.6344",
+      "1.5812"
+    ],
+    [
+      "sparse",
+      "edgeconv_hard",
+      "24",
+      "24",
+      "1.0000",
+      "1.6085",
+      "1.5560"
+    ],
+    [
+      "sparse",
+      "edgeconv_guard",
+      "24",
+      "24",
+      "1.0000",
+      "1.6095",
+      "1.5563"
+    ],
+    [
+      "hole",
+      "raw",
+      "24",
+      "24",
+      "1.0000",
+      "0.8421",
+      "0.8236"
+    ],
+    [
+      "hole",
+      "geometry",
+      "24",
+      "24",
+      "1.0000",
+      "0.8612",
+      "0.8428"
+    ],
+    [
+      "hole",
+      "pointnet_hard",
+      "24",
+      "24",
+      "1.0000",
+      "1.0848",
+      "1.0280"
+    ],
+    [
+      "hole",
+      "edgeconv_hard",
+      "24",
+      "24",
+      "1.0000",
+      "0.8614",
+      "0.8429"
+    ],
+    [
+      "hole",
+      "edgeconv_guard",
+      "24",
+      "24",
+      "1.0000",
+      "0.8704",
+      "0.8520"
+    ],
+    [
+      "scattered_tree",
+      "raw",
+      "24",
+      "24",
+      "1.0000",
+      "0.5950",
+      "0.5798"
+    ],
+    [
+      "scattered_tree",
+      "geometry",
+      "24",
+      "24",
+      "1.0000",
+      "0.6683",
+      "0.6514"
+    ],
+    [
+      "scattered_tree",
+      "pointnet_hard",
+      "24",
+      "24",
+      "1.0000",
+      "0.5749",
+      "0.5674"
+    ],
+    [
+      "scattered_tree",
+      "edgeconv_hard",
+      "24",
+      "24",
+      "1.0000",
+      "0.5871",
+      "0.5863"
+    ],
+    [
+      "scattered_tree",
+      "edgeconv_guard",
+      "24",
+      "24",
+      "1.0000",
+      "0.5218",
+      "0.5202"
+    ],
+    [
+      "dense_canopy",
+      "raw",
+      "24",
+      "24",
+      "1.0000",
+      "2.1351",
+      "2.1038"
+    ],
+    [
+      "dense_canopy",
+      "geometry",
+      "24",
+      "24",
+      "1.0000",
+      "2.2094",
+      "2.1746"
+    ],
+    [
+      "dense_canopy",
+      "pointnet_hard",
+      "24",
+      "24",
+      "1.0000",
+      "1.2654",
+      "1.2551"
+    ],
+    [
+      "dense_canopy",
+      "edgeconv_hard",
+      "24",
+      "24",
+      "1.0000",
+      "1.5920",
+      "1.5413"
+    ],
+    [
+      "dense_canopy",
+      "edgeconv_guard",
+      "24",
+      "24",
+      "1.0000",
+      "1.4887",
+      "1.4490"
+    ],
+    [
+      "unseen_flat_canopy",
+      "raw",
+      "24",
+      "24",
+      "1.0000",
+      "2.2322",
+      "2.2155"
+    ],
+    [
+      "unseen_flat_canopy",
+      "geometry",
+      "24",
+      "24",
+      "1.0000",
+      "2.2159",
+      "2.2034"
+    ],
+    [
+      "unseen_flat_canopy",
+      "pointnet_hard",
+      "24",
+      "24",
+      "1.0000",
+      "1.6684",
+      "1.6518"
+    ],
+    [
+      "unseen_flat_canopy",
+      "edgeconv_hard",
+      "24",
+      "24",
+      "1.0000",
+      "2.1088",
+      "2.0934"
+    ],
+    [
+      "unseen_flat_canopy",
+      "edgeconv_guard",
+      "24",
+      "24",
+      "1.0000",
+      "2.0980",
+      "2.0827"
+    ]
+  ],
+  "metricsDefinition": "MAE与10m限幅损失是不同指标；此表来自24栋自动教师及模拟点云，同条件配对。真实Boston不报告屋面精度。",
+  "primaryReportUrl": "studies/multicity/downloads/pilot_results.pdf",
+  "artifactCount": 19,
+  "totalBytes": 360404,
+  "original_and_published_hashes_in": "studies/report_package_manifest.json",
+  "status": "complete"
+}

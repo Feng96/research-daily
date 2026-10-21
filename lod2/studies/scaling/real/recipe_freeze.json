@@ -1,0 +1,790 @@
+{
+  "utc": "2026-10-21T08:12:43.750284+00:00",
+  "status": "frozen_before_source_selected_checkpoint",
+  "scope": "Qualitative real-domain adaptation probe on20source-train city IDs, not independent validation",
+  "source_manifest": "paired_real_feasibility/prepared_buildings.json",
+  "source_manifest_sha256": "37b471e7595b180d8346997634de50d60588b30e9f9b72544e25fe026d7090ea",
+  "fixed_building_denominator": 20,
+  "total_per_building_candidate_records": 98227,
+  "original_candidate_points_or_indices_modified": false,
+  "code_sha256": {
+    "tools_paired/infer_real_qualitative.py": "4d6d8d189b6ea6f3652f9d4e5418f7701a8fa0830826b672c42d505ea22f1500",
+    "tools/prepare_data.py": "2a3b25c889c78fc6cbd35ade61517eb77acdf2ce9c8b8f2e126938b2281bf5ae",
+    "tools/network.py": "9e2043306bf4f5ea76220daa039415696b8926f2772de10c3845c006bf14e239",
+    "tools/predict.py": "c3e0eb6583ed708fd6736a284594ec082fe8b1033079654fa72d36208cd751bf",
+    "tools/common.py": "3825e51d537e8f0e37efcab4b096e7b407f89097e4969351923427f96798e261"
+  },
+  "source_input_sha256": {
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003629.npz": "fcfe819c8c204bb8129a531d4411c9abe327de321155b75238105b561716cecb",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005073.npz": "edcd120512149941c6eda51a292700efbcda2aa7e118a5fb0d88b0f2afce3cf4",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004149.npz": "20a8f003c5f0c9a6580158e3df3fd20abe10e204015d755ffeae737ea12bec40",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003619.npz": "f0f0dfb6b1cee9340cba6c2e5e6e01af44b2fa516dc3a38fdbabdeec08022150",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000000956.npz": "9af2513066496a30d98bcde713e6a966744607f8a1ea9ef252949dbb4f29a83c",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004156.npz": "fffb198e6794c25059fd436909184300038247337f95c0255221da19b80a02c8",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002345.npz": "f1aa54d1dcacbc8ee6b9bccae424087c0a42245159dab4327ab172cfd4b92586",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003600.npz": "13c62621894fc068227d5a175db6fa82b18befb4462403c06107d91f031d1e68",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003601.npz": "54cb67ee5a97e10b3473a57f3369a5fc90fdbb657e2723588261065649102934",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005062.npz": "125a1480ef792b84efac16f85adddd68f8fd37846d53c2adbbd191c2aeaf900c",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003648.npz": "76f200c0e400da62bc38c5761dd43b9e7beed517373b35faf2a42713ba3ccf2c",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005058.npz": "b05d0e76e677980c536c10b18d3110b2751467a67f0398d46cde8ce6879dce5f",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005074.npz": "78d243bdb22d767833687d5b844d40474379379b3e055720164dd2eeceda56d8",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003746.npz": "68238db52047fc3a4ecbfb6b9db8857087c20ccfc1c5e7ef7263a717176a0c3d",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003976.npz": "781990fce929df5c5ef4a6c9fa6c8c05e4660befedef08e372b3d09deb1596ee",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003739.npz": "0c72411585c96e0f2ed9c322f5feca0b770fab5b88202002e527a3c5c7135574",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003952.npz": "46466be37f59ea4f0d207285cee679e1c5e2843c44c545f66ae6251970ae51c8",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005049.npz": "f57c8c26f62a11f6e1ba09eac181d8a5a506939a5f8fcb37c466632fd7d82c13",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002942.npz": "08fe4b8c85b9f1d102181c0c7b3333687742318264e983afa3b398336b1461dd",
+    "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004178.npz": "592ceed4895da2893481e52358c7e0da832de2df151ada9919f5b7172190e47e"
+  },
+  "group_npz": "paired_real_feasibility/qualitative_dl/grouped_inputs.npz",
+  "group_npz_sha256": "3dfd27098febbbdd3cf9d6f86a0d44e0015b88bcaea9f9b167d16a7979efda60",
+  "groups": 597,
+  "group_shape": [
+    512,
+    4
+  ],
+  "passes": 3,
+  "sampling": "Each pass IDhashseed PCG64 permutation without replacement of all candidates; consecutive groups512; last group repeats only its own original points to512; firstn valid, paddingfalse.",
+  "seed_formula": "little_endian_uint64(SHA256('AHN-real-qualitative-v1|'+id+'|'+pass_index)[:8])",
+  "features": "For each unpadded group: origin=[teacher-footprint XY centroid,median(original groupZ)]; scale=max(max(ptp(groupXY)),10)/2; Float32[(XYZ-origin)/scale,(Z-actual_frozen_ground_scalar)/30]. Padding repeats these exact feature rows.",
+  "ground_boundary": "Existing observed class2 median scalar ground_z, not teacher ground_m and not perpointterrain. Candidate admission previously used8NN terrain; main synthetic training featureheight used teacher ground_m. Definitions differ and can create domain shift.",
+  "votes": "Each original point is valid once per pass and contributes exactly3 votes total. Padding has0 votes; repeated source indices never add voting weight.",
+  "aggregation": "Float32 pointwise mean of3 Float32 sigmoid outputs. keep=mean>=single_checkpoint_cutoff, unchanged calibrationcutoff. No local recalibration.",
+  "inference_adaptation_boundary": "Random partitions and3pass averaging are newly declared real-domain inference adaptation, different from controlled single512input. Scores are not calibrated real-world roof probabilities.",
+  "checkpoint_policy": "Only frozen source_family_selection.primary_method firstseed singlecheckpoint; exact checkpointSHA required. raw/geometry => not_applicable, no substitute DL.",
+  "RGB_features_used": false,
+  "official_class6_or_teacher_roof_used_for_features_or_threshold_selection": false,
+  "teacher_footprint_prior_used": true,
+  "same_upstream_teacher_not_independent_GT": true,
+  "not_independent_source_validation": true,
+  "fixed_grouping_before_checkpoint_selection": true,
+  "GPU_execution_performed": false,
+  "records": [
+    {
+      "id": "NL.IMBAG.Pand.0546100000003629",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003629.npz",
+      "source_input_sha256": "fcfe819c8c204bb8129a531d4411c9abe327de321155b75238105b561716cecb",
+      "n_original": 6936,
+      "source_indices_sha256": "cac6f057ed8ec278ed4de3c63a60ff74046f6c59bd86f352bebd32f6e452648a",
+      "group_range": [
+        0,
+        42
+      ],
+      "footprint_centroid_xy": [
+        91297.84195403274,
+        463890.57696770603
+      ],
+      "actual_ground_scalar_z": 0.512,
+      "teacher_ground_metadata_not_used": 0.4449999928474426,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.06700000715255738,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 9529165461938111994,
+          "permutation_sha256": "767e5dfcc0beba38dd4f8567420f8f2ce563e100986ce105fad7645fabdb96f8"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 12177047928267716492,
+          "permutation_sha256": "c75c060e0e6e8462310361c0c18873f6cb120c262f7f0a43d74eed3e8e650b3e"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 236942857376357335,
+          "permutation_sha256": "006887b37c2ed143480c7761696ef1834df721650426c7abdf89f431cedeacfe"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005073",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005073.npz",
+      "source_input_sha256": "edcd120512149941c6eda51a292700efbcda2aa7e118a5fb0d88b0f2afce3cf4",
+      "n_original": 2667,
+      "source_indices_sha256": "f797af21e23ddc5bc304ba93c58dacd56446a933669c1e4212e9d9e3531f6158",
+      "group_range": [
+        42,
+        60
+      ],
+      "footprint_centroid_xy": [
+        90912.37390198291,
+        463666.3262739157
+      ],
+      "actual_ground_scalar_z": 0.365,
+      "teacher_ground_metadata_not_used": 0.39899998903274536,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": -0.03399998903274537,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 3048561214751254479,
+          "permutation_sha256": "88f87da7c81e02e40614c9458a43328fa4c8952f4e7203f44a508f134ec87ae2"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 13720442261996153383,
+          "permutation_sha256": "9fb2653f4402f0743eafe7abb3e69bb338bb3fbbd3c500d54b289a7a539b2885"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 1621488236830075695,
+          "permutation_sha256": "98a40eabfe4aca84385ef048c399c713a0602ca31a3c53b2c2571d277b3e27cc"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004149",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004149.npz",
+      "source_input_sha256": "20a8f003c5f0c9a6580158e3df3fd20abe10e204015d755ffeae737ea12bec40",
+      "n_original": 2935,
+      "source_indices_sha256": "ee48a55a0e3fd3d1aad33b8a3463d1b76086d5042e7f428e87d0c80c1fcb8994",
+      "group_range": [
+        60,
+        78
+      ],
+      "footprint_centroid_xy": [
+        91517.55304104004,
+        463500.21733653574
+      ],
+      "actual_ground_scalar_z": 0.382,
+      "teacher_ground_metadata_not_used": 0.2720000147819519,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.1099999852180481,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 13605367525021141590,
+          "permutation_sha256": "3a28dbee411c5aba6fa954d0685dd804b95ff792683c7e31bfe91049639e3b81"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 13866030574225679886,
+          "permutation_sha256": "a5884d1400554f571a43cd9c48afb444924ec57d7a613b04ccf6defd17cc938d"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 9078389750440007562,
+          "permutation_sha256": "61be715d785af09a2a35d15404ac1affa945893b51b800b95b13880693018ef6"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003619",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003619.npz",
+      "source_input_sha256": "f0f0dfb6b1cee9340cba6c2e5e6e01af44b2fa516dc3a38fdbabdeec08022150",
+      "n_original": 6144,
+      "source_indices_sha256": "dda9cba0e2b1165b20cc721e304e28928784f056f30325eb811a90bb644af0db",
+      "group_range": [
+        78,
+        114
+      ],
+      "footprint_centroid_xy": [
+        91291.39559515439,
+        463844.08874252765
+      ],
+      "actual_ground_scalar_z": 0.511,
+      "teacher_ground_metadata_not_used": 0.4950000047683716,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.015999995231628428,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 16747688158320746543,
+          "permutation_sha256": "65c6d2aa7dc051946cc374f31811fa2ceea87b6b019b95a57fc689a35fccb21e"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 11320753433689215128,
+          "permutation_sha256": "7b2ea405991e8b02b9912006bbefacb6f681672d7daa247e8d30081f970e7d1b"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 2570331652139165923,
+          "permutation_sha256": "95bd707cc094ba3d155e8a07307327f3938bce4e7366fac0aa0810204d6f7058"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000000956",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000000956.npz",
+      "source_input_sha256": "9af2513066496a30d98bcde713e6a966744607f8a1ea9ef252949dbb4f29a83c",
+      "n_original": 18394,
+      "source_indices_sha256": "d89c313c39ed01fe83e5a7ce72a7a72a717437427fe3ddc2fdee88274f91f4f7",
+      "group_range": [
+        114,
+        222
+      ],
+      "footprint_centroid_xy": [
+        91731.2417930985,
+        463751.65841481945
+      ],
+      "actual_ground_scalar_z": 0.595,
+      "teacher_ground_metadata_not_used": 0.4970000088214874,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.09799999117851255,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 16961621090784012598,
+          "permutation_sha256": "0c1874e10f2330cff49579cb117cb97a12462f7086acfaa63d9e65367c0ad9a8"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 13146832317127894886,
+          "permutation_sha256": "5793af640d14bf448c2ede73cce2064deb3b11d12388e68ece0cb7addbfcfd53"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 6188114960798237056,
+          "permutation_sha256": "ba334717ae635a707d8da551c9e4c04b7a14e38d808716566ec8ef96060f610e"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004156",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004156.npz",
+      "source_input_sha256": "fffb198e6794c25059fd436909184300038247337f95c0255221da19b80a02c8",
+      "n_original": 3056,
+      "source_indices_sha256": "4a96eced8179c010d2c39d282d3f6027528b3fd081fc013bfb804e2637938b68",
+      "group_range": [
+        222,
+        240
+      ],
+      "footprint_centroid_xy": [
+        91524.04368209887,
+        463466.91391640215
+      ],
+      "actual_ground_scalar_z": 0.447,
+      "teacher_ground_metadata_not_used": 0.24199999868869781,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.2050000013113022,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 437409684273173051,
+          "permutation_sha256": "fe58da48626d7918680d4ce4975987525cc42e7b349ac6613b4340f14b9fe2f7"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 804365355352607497,
+          "permutation_sha256": "d85337c7b7a4a3e8bb1629f7c17a6846a150d74b55c2d1f84111153316fdb5b8"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 16203614830862493764,
+          "permutation_sha256": "3797213bf2fb11b8a61b57718a66f2a91f4f25a269b75daccbd751cf3d641caa"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002345",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002345.npz",
+      "source_input_sha256": "f1aa54d1dcacbc8ee6b9bccae424087c0a42245159dab4327ab172cfd4b92586",
+      "n_original": 5013,
+      "source_indices_sha256": "553cd189e74ffd3b7e9a29d396a7c892dbf4d9fc6a4c6f8c49853a4658f5dc74",
+      "group_range": [
+        240,
+        270
+      ],
+      "footprint_centroid_xy": [
+        91035.82076560863,
+        463535.58133121184
+      ],
+      "actual_ground_scalar_z": 0.484,
+      "teacher_ground_metadata_not_used": 0.43700000643730164,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.04699999356269835,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 3171176455013617067,
+          "permutation_sha256": "9c087173fe97e78d90422c60a0d2171524c8d02265f42f49760fc09865789d67"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 12309875117570052466,
+          "permutation_sha256": "b7141e85cc2b23a7e061e7687b5addd04f6d39cd69c9d98bc635b96fcd18af6c"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 15626202127336523790,
+          "permutation_sha256": "10357d84bf792b306b7f3e17e1939b9a4b0513285c5f2df56e0d60b3c0dd01c7"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003600",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003600.npz",
+      "source_input_sha256": "13c62621894fc068227d5a175db6fa82b18befb4462403c06107d91f031d1e68",
+      "n_original": 7020,
+      "source_indices_sha256": "1e3f5fedd27323491616347c6076e3d9e302c0b6eeae8c9d29fac84ca22f1285",
+      "group_range": [
+        270,
+        312
+      ],
+      "footprint_centroid_xy": [
+        91229.68177608552,
+        463762.2090504076
+      ],
+      "actual_ground_scalar_z": 0.47600000000000003,
+      "teacher_ground_metadata_not_used": 0.4410000145435333,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.03499998545646671,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 10529691104739546143,
+          "permutation_sha256": "66d43b73a05ea0d7d120653431f542ee81a59a244dfa3c560670530d62d14622"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 4331852360439971627,
+          "permutation_sha256": "e07094ef2b437ea518e293ef98be534cb362a0fdde70d52160089bca3a940bbc"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 3455007802109936546,
+          "permutation_sha256": "c7422293342d8f14b5985bb0e14c713ca08f736947eb81cd8d63d7a7872d0588"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003601",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003601.npz",
+      "source_input_sha256": "54cb67ee5a97e10b3473a57f3369a5fc90fdbb657e2723588261065649102934",
+      "n_original": 6420,
+      "source_indices_sha256": "c1031f56fb02dc9f3c73d5b6362d89b18baa15782998fdc20bfa8400a5508666",
+      "group_range": [
+        312,
+        351
+      ],
+      "footprint_centroid_xy": [
+        91225.68943788107,
+        463758.57385341596
+      ],
+      "actual_ground_scalar_z": 0.485,
+      "teacher_ground_metadata_not_used": 0.4480000138282776,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.0369999861717224,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 657398754405736725,
+          "permutation_sha256": "c880d3d87c949f45653e8d1d11b90f56641d9b344e2725570a73b630eb220104"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 9815405112811256843,
+          "permutation_sha256": "2a6517cde864df23d7db241c57cfd522e34213d5756285ae13fa27ed5310aa7b"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 15455279749714728277,
+          "permutation_sha256": "a510da0860c1ec6ceac293c38c6dc9c6ad3012e13f13e929f1ebe08b055e61f1"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005062",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005062.npz",
+      "source_input_sha256": "125a1480ef792b84efac16f85adddd68f8fd37846d53c2adbbd191c2aeaf900c",
+      "n_original": 2844,
+      "source_indices_sha256": "182d70c048ed5c1f6ad0ccead54834d9ac7887d84fd97265ee375f5051ff301b",
+      "group_range": [
+        351,
+        369
+      ],
+      "footprint_centroid_xy": [
+        90971.23593007604,
+        463579.6249224658
+      ],
+      "actual_ground_scalar_z": 0.437,
+      "teacher_ground_metadata_not_used": 0.42899999022483826,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.008000009775161743,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 15557794804555728569,
+          "permutation_sha256": "ac57bf0ab30eb364487328e6cf85e43c26682bbe96d569ab00abbce0e05749dd"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 3585582379988465697,
+          "permutation_sha256": "7618e02c24b1d001ab878aa8fc096988c1378085699a36077f8b7d0b0dfa96e9"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 7490186255764433127,
+          "permutation_sha256": "1357b18837efd3717bffb67bba5ce4c86c6057472f490359a0b76e5ec77e9c6d"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003648",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003648.npz",
+      "source_input_sha256": "76f200c0e400da62bc38c5761dd43b9e7beed517373b35faf2a42713ba3ccf2c",
+      "n_original": 3066,
+      "source_indices_sha256": "4f1aa2c90a864a76a2e57da3e0e68374affacffffef8a7f22b2b00f9e24a87f8",
+      "group_range": [
+        369,
+        387
+      ],
+      "footprint_centroid_xy": [
+        91316.17990284148,
+        463699.76730065973
+      ],
+      "actual_ground_scalar_z": 0.519,
+      "teacher_ground_metadata_not_used": 0.4230000078678131,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.0959999921321869,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 13024305165394884368,
+          "permutation_sha256": "30999b40127281613e684e465a8f72995b4c9ce26610ebb37d0d39969033cf03"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 9891109777880246677,
+          "permutation_sha256": "61c3c8ee0d2dab49af97649d0b1d7bf55d27544c8f65f7b7d3b9d1c55b4400bc"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 1978376572246891225,
+          "permutation_sha256": "7ed7547944ef7c6f14122e28e98b078a310c858c364de5904c9d517a2850fa77"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005058",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005058.npz",
+      "source_input_sha256": "b05d0e76e677980c536c10b18d3110b2751467a67f0398d46cde8ce6879dce5f",
+      "n_original": 4504,
+      "source_indices_sha256": "0f55f073be9d0658a32f85bb343c70a62c2873f75761533311638ef67f324ecb",
+      "group_range": [
+        387,
+        414
+      ],
+      "footprint_centroid_xy": [
+        90966.52886624298,
+        463652.5596791116
+      ],
+      "actual_ground_scalar_z": 0.402,
+      "teacher_ground_metadata_not_used": 0.4059999883174896,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": -0.0039999883174896,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 4387588032809893324,
+          "permutation_sha256": "68e426bcac5c36fc9997b4d49a7919ef9c9223ca6e93f4db8ad8f7a3945d34ac"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 11930559676265704720,
+          "permutation_sha256": "d3f922b23746d5916e00d36eb923bb9e470154a89d7962e1bb8a64d618260447"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 12460390453685689054,
+          "permutation_sha256": "a01a953dc3ce5bc73ad75c88d6b0ee755f7b271f748ef534175e93bc8b3ff14a"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005074",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005074.npz",
+      "source_input_sha256": "78d243bdb22d767833687d5b844d40474379379b3e055720164dd2eeceda56d8",
+      "n_original": 2208,
+      "source_indices_sha256": "8d4712dc9eab4cdda7bb80888d5276d61e799b80bbcefa310fa20844fe89762c",
+      "group_range": [
+        414,
+        429
+      ],
+      "footprint_centroid_xy": [
+        90937.48831261108,
+        463688.82950391824
+      ],
+      "actual_ground_scalar_z": 0.34,
+      "teacher_ground_metadata_not_used": 0.4009999930858612,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": -0.06099999308586118,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 13874851704031663633,
+          "permutation_sha256": "5995443f15f3646b42f22b9ee93f5bf5f452d98342ea8af0f68b751501763c75"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 13273876601480984223,
+          "permutation_sha256": "700910706843b599993ac5ce0bd80a6d5b91b7cc78c474f0ef42b0dd92e80c18"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 4449837852440592132,
+          "permutation_sha256": "499941f7228f1ed36bb384dcfee174158a09e397213f686e062d23bb953d3673"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003746",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003746.npz",
+      "source_input_sha256": "68238db52047fc3a4ecbfb6b9db8857087c20ccfc1c5e7ef7263a717176a0c3d",
+      "n_original": 5134,
+      "source_indices_sha256": "6decce6de5ef5d4940d81a35e202a27ba09346e60d012a42e33aeab05d14c585",
+      "group_range": [
+        429,
+        462
+      ],
+      "footprint_centroid_xy": [
+        91198.30444232166,
+        463752.19304973184
+      ],
+      "actual_ground_scalar_z": 0.506,
+      "teacher_ground_metadata_not_used": 0.46399998664855957,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.042000013351440435,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 1737961606607271082,
+          "permutation_sha256": "e54e62e0e36bdbaefac3b7511d32026c01bd33d6d016860ca8ed4d35dc9b60c3"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 200295230040831394,
+          "permutation_sha256": "ff863c3f84459d881b53f82d77d0a77660521277533ba1994bd5835d1871d879"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 13392278967455508932,
+          "permutation_sha256": "cdff6305cec52a3722ca5d854b8901c4e7755cf3cf27c83b8736d373652f05f7"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003976",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003976.npz",
+      "source_input_sha256": "781990fce929df5c5ef4a6c9fa6c8c05e4660befedef08e372b3d09deb1596ee",
+      "n_original": 7012,
+      "source_indices_sha256": "db19e24ae9bc660e1f011461aa1039828ec92546aa56477bba13d5fde8c6b289",
+      "group_range": [
+        462,
+        504
+      ],
+      "footprint_centroid_xy": [
+        91181.34635149133,
+        463773.40497486264
+      ],
+      "actual_ground_scalar_z": 0.494,
+      "teacher_ground_metadata_not_used": 0.4359999895095825,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.058000010490417475,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 16179881865537195214,
+          "permutation_sha256": "6357a13e6868057b3dd576998ebae8341b1efac069ce4ec392e3b1ec306b90ec"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 16643336559100813177,
+          "permutation_sha256": "86e403ac3deb95e36e15edd9aa3d9ae8342ffab156b393840b0afa0a5dff2821"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 16613970121438261845,
+          "permutation_sha256": "8a12531ae4fefb1d18dfd10307c54537091f34a2d12279f1e9721fc82b229560"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003739",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003739.npz",
+      "source_input_sha256": "0c72411585c96e0f2ed9c322f5feca0b770fab5b88202002e527a3c5c7135574",
+      "n_original": 3541,
+      "source_indices_sha256": "879e5eece9ab0d8a4ade1661145b7655daba268322a0efcfe7c8361074cb1d38",
+      "group_range": [
+        504,
+        525
+      ],
+      "footprint_centroid_xy": [
+        91326.47758887798,
+        463840.1287679641
+      ],
+      "actual_ground_scalar_z": 0.498,
+      "teacher_ground_metadata_not_used": 0.46000000834465027,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.03799999165534973,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 7564334074821060407,
+          "permutation_sha256": "5dd8e80ec06ca70514e9a144531a46385538337abe602e10be81fff6da1cf36f"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 7704222302830469601,
+          "permutation_sha256": "55475d8747aae30c54460677e99e127e7b51e8667248ac62abcd9b5c42638382"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 17872846781376469931,
+          "permutation_sha256": "eeffd47b8334fcbfc9ab92090110315bcdf4f7ce03b3a0fdd6480840132acb32"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000003952",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000003952.npz",
+      "source_input_sha256": "46466be37f59ea4f0d207285cee679e1c5e2843c44c545f66ae6251970ae51c8",
+      "n_original": 3743,
+      "source_indices_sha256": "64b9bf87cf0e1d6cd1453e8c6f4433d05819eea974a74df1148a33bce8016b6f",
+      "group_range": [
+        525,
+        549
+      ],
+      "footprint_centroid_xy": [
+        91301.02205935704,
+        463786.6928651358
+      ],
+      "actual_ground_scalar_z": 0.506,
+      "teacher_ground_metadata_not_used": 0.22100000083446503,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.284999999165535,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 6881336361605008750,
+          "permutation_sha256": "dc038200223e59971e107e8a96b6e5011fee2ff0535224c4138eb7180fa1da84"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 2449533173278344975,
+          "permutation_sha256": "30ae30cfaee166c313a85380580d4d16b3cd7dd5e4ce7c50d5ea285343c88302"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 6252347632941379487,
+          "permutation_sha256": "83c3811da3ff9d23d8c23cbcdb6bff6946a17712d365aa270070ba1b91a99053"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000005049",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000005049.npz",
+      "source_input_sha256": "f57c8c26f62a11f6e1ba09eac181d8a5a506939a5f8fcb37c466632fd7d82c13",
+      "n_original": 2202,
+      "source_indices_sha256": "484ad9d48f75e778d7f2d9741e050fd48e0247e195214bde78104e0e3ddc2997",
+      "group_range": [
+        549,
+        564
+      ],
+      "footprint_centroid_xy": [
+        90884.32773122602,
+        463643.8697408615
+      ],
+      "actual_ground_scalar_z": 0.34500000000000003,
+      "teacher_ground_metadata_not_used": 0.36500000953674316,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": -0.020000009536743135,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 16972704658137038241,
+          "permutation_sha256": "967b7a299e5cac6731f543b47b5778f4e5b177ba1fcd644b497b8b1ab270e4dd"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 15477320401527684516,
+          "permutation_sha256": "71a6debdfecfc1bd06d34794104a8c2c6b0a4ff7b8836989abe673613c349fe0"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 214256961233534095,
+          "permutation_sha256": "79591356b06882a949acd33d067579bdebbc0587c6bbd56a64325ffbb13af19a"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000002942",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000002942.npz",
+      "source_input_sha256": "08fe4b8c85b9f1d102181c0c7b3333687742318264e983afa3b398336b1461dd",
+      "n_original": 2043,
+      "source_indices_sha256": "9945f2b22050729d6e41e9c31b2d6fbd3d7c847f6fe4a17856807cc3fcc5fe73",
+      "group_range": [
+        564,
+        576
+      ],
+      "footprint_centroid_xy": [
+        91266.47276819336,
+        463708.4671473887
+      ],
+      "actual_ground_scalar_z": 0.508,
+      "teacher_ground_metadata_not_used": 0.44699999690055847,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.061000003099441535,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 16235667036745232816,
+          "permutation_sha256": "ec2ae6197f38440dfdd53b524c488c36d577a2213d795ac76c188dabe524eb7f"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 17399019931963959116,
+          "permutation_sha256": "89a711e3781db7bd940ab22bec2d34b428e7b7d61c5c033b2007bddf8f22fb42"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 4411721316266151133,
+          "permutation_sha256": "6c08ed1217e78494d27834ae26fcaae611190d29fc29841ebe660b8232a07932"
+        }
+      ],
+      "zero_candidates": false
+    },
+    {
+      "id": "NL.IMBAG.Pand.0546100000004178",
+      "source_input": "paired_real_feasibility/buildings/NL_IMBAG_Pand_0546100000004178.npz",
+      "source_input_sha256": "592ceed4895da2893481e52358c7e0da832de2df151ada9919f5b7172190e47e",
+      "n_original": 3345,
+      "source_indices_sha256": "64f05dd8be7e5b7e7536cb6e84243bc0007764d879dfeec24d56284f3d9b4106",
+      "group_range": [
+        576,
+        597
+      ],
+      "footprint_centroid_xy": [
+        91528.17665496566,
+        463470.38570343534
+      ],
+      "actual_ground_scalar_z": 0.446,
+      "teacher_ground_metadata_not_used": 0.26899999380111694,
+      "ground_difference_actual_scalar_minus_teacher_metadata_m": 0.17700000619888306,
+      "partitions": [
+        {
+          "repeat": 0,
+          "seed_uint64": 3133859257409436292,
+          "permutation_sha256": "c5ea6fd224ffe8a1cf8c2b95eeca9f7bf18626a70071542de17de22dda8be075"
+        },
+        {
+          "repeat": 1,
+          "seed_uint64": 15472318465605902082,
+          "permutation_sha256": "abe3d47fd9caeba502898546defd79849587b07a1bab1d103b968c2c9202a5b2"
+        },
+        {
+          "repeat": 2,
+          "seed_uint64": 3589574686498783512,
+          "permutation_sha256": "12c22b053eee762fd8296cb4a5f02e08ecb92e38c5bda45a13b88b783d496674"
+        }
+      ],
+      "zero_candidates": false
+    }
+  ],
+  "_publication": {
+    "original_source_sha256": "632b5f639390237397796dd1243f8c3c5bea6a1552d2549c3e27be99d3e896e9",
+    "original_source": "source:scaling/paired_real_feasibility/qualitative_dl/recipe_freeze.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

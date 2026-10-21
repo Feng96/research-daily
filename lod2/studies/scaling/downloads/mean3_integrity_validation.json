@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "split": "validation",
+  "created_utc": "2026-10-21T08:35:09.518151+00:00",
+  "methods": [
+    {
+      "method": "graph_10000_mean3",
+      "checkpoint_sha256": {
+        "source:scaling/models/graph_10000_s20261031.pt": "04b58e8bd152d7dbee0c81fcca4f664a77b492f08b68740141da8fe376ec8ac9",
+        "source:scaling/models/graph_10000_s20261101.pt": "5be4438748570b7aab91e2f8f497a61d8b79823fc4146ec7890b921267ee7b76",
+        "source:scaling/models/graph_10000_s20261102.pt": "8fb91978c8890b31b79b79183989fe00105e46b7ee9535437bb68903c85b9ab1"
+      },
+      "single_prediction_receipt_sha256": {
+        "source:scaling/predictions/validation/graph_10000_s20261031/results.json": "2c2dbcde513602fd337f052bd8179af5c5053f7b965130b31f92fe4edf605b10",
+        "source:scaling/predictions/validation/graph_10000_s20261101/results.json": "16390d4a37858c8b10d79c00ed4b1a8b83416085072c9c17e29ba32d33033d08",
+        "source:scaling/predictions/validation/graph_10000_s20261102/results.json": "e0856c6edf4efe2f239c29de99b42e3fa811a902672d6bde4d3205f3f94a7dc5"
+      },
+      "ensemble_prediction_receipt_sha256": "eefeb925e32b01f2f90d637859977af749a41aafc89dccb6d9f27dacaa2acccb",
+      "clouds": 6000,
+      "export_is_exact_mean_of_three_loaded_single_model_exports": true,
+      "maximum_probability_difference": 0.0,
+      "frozen_calibration_sha256": "c083e26eeb23f6c4af95148f2bec5e5d31369c241b6a76e35ce3d5110517a1e9",
+      "independent_calibration_cutoff": 0.42866864800453186,
+      "recorded_calibration_cutoff": 0.42866864800453186,
+      "calibration_roof_retention": 0.9950002028822621,
+      "independent_loaded_calibration_replay_passed": true
+    },
+    {
+      "method": "graph_20000_long_mean3",
+      "checkpoint_sha256": {
+        "source:scaling/models/graph_20000_long_s20261031.pt": "0899d4f194dbad868ebf63f267dc6a54e7723491ab96c91347dfe323088d56b1",
+        "source:scaling/models/graph_20000_long_s20261101.pt": "13cc96011f29cdf232d6636dd5336503eaa1354ed57f56b9f640da44b739afcb",
+        "source:scaling/models/graph_20000_long_s20261102.pt": "ad2a7f523b694e5a7b7b6c28116b87c31f533d24ccbfb47fb05a4b1e7d6e33d0"
+      },
+      "single_prediction_receipt_sha256": {
+        "source:scaling/predictions/validation/graph_20000_long_s20261031/results.json": "c612a6b64e49cf3891a255bdffabe50967cd68daecd87408bef171877b17a70f",
+        "source:scaling/predictions/validation/graph_20000_long_s20261101/results.json": "bc4195a1846c6dadf89f050a2d27721872dae1a8798677d20d573b0b2c1eca0d",
+        "source:scaling/predictions/validation/graph_20000_long_s20261102/results.json": "3c71f526d975223b1781962bd36e7a8864d4bd43159797c38be5b143f4a9c86d"
+      },
+      "ensemble_prediction_receipt_sha256": "96cab224fe5c5b0bd35b5f72934a8401fe7278e111965f204cd0653af91be915",
+      "clouds": 6000,
+      "export_is_exact_mean_of_three_loaded_single_model_exports": true,
+      "maximum_probability_difference": 0.0,
+      "frozen_calibration_sha256": "d88878beaec32584104d540e0565e1dc68aad0155e9114ce54eccef16327d529",
+      "independent_calibration_cutoff": 0.47043702006340027,
+      "recorded_calibration_cutoff": 0.47043702006340027,
+      "calibration_roof_retention": 0.9950002028822621,
+      "independent_loaded_calibration_replay_passed": true
+    }
+  ],
+  "validator_code_sha256": "38fcd9eb63e14b59e624345d2ca2390b722858090339dc7db2cbed329f3225f6",
+  "selection_sha256": "645f41e5b04f418d7155e816705699a883135b0ce6011069b086f8ed847ce99b",
+  "validation_labels_read": false,
+  "final_labels_read": false,
+  "calibration_labels_read": true,
+  "weights_cutoffs_or_selection_modified": false,
+  "_publication": {
+    "original_source_sha256": "0034c87e676ca673752688c513843fdfcd59848c8a9df7e8606011d66182531e",
+    "original_source": "source:scaling/reports/mean3_integrity_validation.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

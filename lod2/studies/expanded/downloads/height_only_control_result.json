@@ -1,0 +1,108 @@
+{
+  "status": "complete",
+  "models": [
+    {
+      "method": "global_height_only",
+      "seed": 20261023,
+      "checkpoint": "source:expanded/models/global_height_only_s20261023.pt",
+      "sha256": "3e3315aa2d61013e96309d17f71057e15d7c4e89ed90bebe78bbf27f6bd50aae",
+      "cutoff": 0.12999999523162842,
+      "validation": {
+        "roof_retention": 0.9953398704528809,
+        "simulated_contamination_rejected": 0.6494470238685608,
+        "unique_observation_occurrences": 2640000,
+        "source_validation_roof_retention_target": 0.995
+      },
+      "history": [
+        {
+          "epoch": 5,
+          "source_validation_BCE": 0.23869945108890533,
+          "elapsed_s": 21.08522605895996
+        },
+        {
+          "epoch": 10,
+          "source_validation_BCE": 0.22978070378303528,
+          "elapsed_s": 41.399280071258545
+        },
+        {
+          "epoch": 15,
+          "source_validation_BCE": 0.23614555597305298,
+          "elapsed_s": 61.62365913391113
+        },
+        {
+          "epoch": 20,
+          "source_validation_BCE": 0.22943946719169617,
+          "elapsed_s": 81.62273454666138
+        },
+        {
+          "epoch": 25,
+          "source_validation_BCE": 0.21729138493537903,
+          "elapsed_s": 101.74618196487427
+        },
+        {
+          "epoch": 30,
+          "source_validation_BCE": 0.23090596497058868,
+          "elapsed_s": 121.87404274940491
+        },
+        {
+          "epoch": 35,
+          "source_validation_BCE": 0.2278275042772293,
+          "elapsed_s": 141.98583006858826
+        },
+        {
+          "epoch": 40,
+          "source_validation_BCE": 0.22466792166233063,
+          "elapsed_s": 162.12286233901978
+        },
+        {
+          "epoch": 45,
+          "source_validation_BCE": 0.22659507393836975,
+          "elapsed_s": 182.22689414024353
+        },
+        {
+          "epoch": 50,
+          "source_validation_BCE": 0.2268400639295578,
+          "elapsed_s": 201.7710165977478
+        },
+        {
+          "epoch": 55,
+          "source_validation_BCE": 0.24442242085933685,
+          "elapsed_s": 217.16964030265808
+        },
+        {
+          "epoch": 60,
+          "source_validation_BCE": 0.23679107427597046,
+          "elapsed_s": 230.98229432106018
+        },
+        {
+          "epoch": 65,
+          "source_validation_BCE": 0.24524478614330292,
+          "elapsed_s": 244.73951053619385
+        },
+        {
+          "epoch": 70,
+          "source_validation_BCE": 0.24675187468528748,
+          "elapsed_s": 258.57740092277527
+        },
+        {
+          "epoch": 75,
+          "source_validation_BCE": 0.24903179705142975,
+          "elapsed_s": 272.47196674346924
+        },
+        {
+          "epoch": 80,
+          "source_validation_BCE": 0.2490500658750534,
+          "elapsed_s": 286.34187507629395
+        }
+      ],
+      "elapsed_seconds": 287.679949760437
+    }
+  ],
+  "final_test_not_used": true,
+  "_publication": {
+    "original_source_sha256": "6737f5605f6d88cb09a3391bb7cd5f4823a162d49a353b56feb9ebc435cef217",
+    "original_source": "source:expanded/reports/height_only_control_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

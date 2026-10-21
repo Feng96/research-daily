@@ -1,0 +1,707 @@
+{
+  "created_utc": "2026-10-20T21:06:10.543791+00:00",
+  "reviewer": "/root/lod2_supervisor",
+  "status": "completed_with_scientific_limitations",
+  "scope": "Independent read-only audit of scientific inputs/models/outputs; this report and requestedbrief are the only fileswritten byreviewer.",
+  "controlled": {
+    "fixed_buildings": 24,
+    "quality_cases": 6,
+    "method_groups": 5,
+    "per_building_records": 720,
+    "unique_records": 720,
+    "all30_native_runs_successful": true,
+    "all720_native_lod2_success": true,
+    "all720_grid_coverage": 1.0,
+    "summary_means_independently_recomputed": true,
+    "reference_kind": "automatic3DBAG teacher geometry; controlled synthetic-observation recovery",
+    "mae_m_building_macro_by_case": [
+      {
+        "case": "clean",
+        "raw": 0.4037849638056743,
+        "geometry": 0.41006744464178374,
+        "pointnet_hard": 0.5456745492917361,
+        "edgeconv_hard": 0.48416127882313803,
+        "edgeconv_guard": 0.5182743785666037
+      },
+      {
+        "case": "sparse",
+        "raw": 1.6093266810338445,
+        "geometry": 1.6182392977812174,
+        "pointnet_hard": 1.6343836262327989,
+        "edgeconv_hard": 1.608483305485051,
+        "edgeconv_guard": 1.6094916180069496
+      },
+      {
+        "case": "hole",
+        "raw": 0.8420596230956917,
+        "geometry": 0.8611804794555121,
+        "pointnet_hard": 1.0847867531520081,
+        "edgeconv_hard": 0.8613584173725831,
+        "edgeconv_guard": 0.870449282480941
+      },
+      {
+        "case": "scattered_tree",
+        "raw": 0.5949923186304694,
+        "geometry": 0.6683493566072757,
+        "pointnet_hard": 0.5748540714511561,
+        "edgeconv_hard": 0.5871088998009739,
+        "edgeconv_guard": 0.5217607716192564
+      },
+      {
+        "case": "dense_canopy",
+        "raw": 2.1350633199629048,
+        "geometry": 2.2093697978130518,
+        "pointnet_hard": 1.26535355062318,
+        "edgeconv_hard": 1.5920448928614563,
+        "edgeconv_guard": 1.4887201079542878
+      },
+      {
+        "case": "unseen_flat_canopy",
+        "raw": 2.2321509980979095,
+        "geometry": 2.2158534538606594,
+        "pointnet_hard": 1.6684167452528398,
+        "edgeconv_hard": 2.108771025474173,
+        "edgeconv_guard": 2.0980130351425195
+      }
+    ],
+    "interpretation": "DL can reduce syntheticcanopy-induced geometry errors, but pointclassification ranking does not determine finalroofranking. AllthreeDLinterventions worsen cleancase meanroofMAE; guard is not a universal safeguard.",
+    "no_post_test_model_or_threshold_retuning_observed": true
+  },
+  "integrity": {
+    "checkpoint_hashes_unchanged": {
+      "pointnet": true,
+      "edgeconv": true
+    },
+    "controlled_test_npz_hash_matches": true,
+    "controlled_script_hash_matches": true,
+    "boston_v2_script_hash_matches": true,
+    "boston_source_hash_checks": {
+      "source_raw_npz": true,
+      "source_raster": true,
+      "feature_script": true,
+      "all18_building_npz_hashes": true
+    },
+    "boston18candidateXYZ_byte_exact_against_raw_sourceindices": "independentlyverified in priorread-onlyaudit,47544records/47544uniquerawrows",
+    "boston_v1_v2_selection_arrays_byte_identical": 126,
+    "raw_and_two_optical_method_clouds_byte_identical": true,
+    "optical_cloud_hashes": {
+      "raw": "e51078e69faa989a863cec3fe16bb90b21cf7874603d5eecaec7590bd770a354",
+      "image_hard": "e51078e69faa989a863cec3fe16bb90b21cf7874603d5eecaec7590bd770a354",
+      "image_guard": "e51078e69faa989a863cec3fe16bb90b21cf7874603d5eecaec7590bd770a354"
+    },
+    "GT_roof_normals_used_as_model_input": false,
+    "GT_roof_geometry_read_for_fitselection": false
+  },
+  "boston": {
+    "real_observations": true,
+    "raw_roi_points": 436503,
+    "naip_shape_bands_height_width": [
+      4,
+      313,
+      300
+    ],
+    "unique_candidate_records": 47544,
+    "parent_instances": 18,
+    "large_source_instances_at_least30m2": 13,
+    "tiny_source_instances": 5,
+    "independent_roof_accuracy_measured": false,
+    "point_accuracy_measured": false,
+    "inference_deletions": {
+      "pointnet_rejected": 195,
+      "edgeconv_rejected": 1955,
+      "optical_rejected": 0
+    },
+    "generation_recomputed_from_native": [
+      {
+        "group": "raw",
+        "strict_parent_success": 5,
+        "strict_parent_denominator": 18,
+        "original_part_success": 45,
+        "original_part_denominator": 76,
+        "repaired_native_part_success": 46,
+        "repaired_native_part_denominator": 77,
+        "largest_part_success": 14,
+        "candidate_records": 47544
+      },
+      {
+        "group": "geometry",
+        "strict_parent_success": 4,
+        "strict_parent_denominator": 18,
+        "original_part_success": 44,
+        "original_part_denominator": 76,
+        "repaired_native_part_success": 45,
+        "repaired_native_part_denominator": 77,
+        "largest_part_success": 14,
+        "candidate_records": 44386
+      },
+      {
+        "group": "pointnet_hard",
+        "strict_parent_success": 4,
+        "strict_parent_denominator": 18,
+        "original_part_success": 44,
+        "original_part_denominator": 76,
+        "repaired_native_part_success": 45,
+        "repaired_native_part_denominator": 77,
+        "largest_part_success": 14,
+        "candidate_records": 47349
+      },
+      {
+        "group": "edgeconv_hard",
+        "strict_parent_success": 5,
+        "strict_parent_denominator": 18,
+        "original_part_success": 44,
+        "original_part_denominator": 76,
+        "repaired_native_part_success": 45,
+        "repaired_native_part_denominator": 77,
+        "largest_part_success": 14,
+        "candidate_records": 45589
+      },
+      {
+        "group": "edgeconv_guard",
+        "strict_parent_success": 5,
+        "strict_parent_denominator": 18,
+        "original_part_success": 44,
+        "original_part_denominator": 76,
+        "repaired_native_part_success": 45,
+        "repaired_native_part_denominator": 77,
+        "largest_part_success": 14,
+        "candidate_records": 46867
+      },
+      {
+        "group": "image_hard",
+        "strict_parent_success": 5,
+        "strict_parent_denominator": 18,
+        "original_part_success": 45,
+        "original_part_denominator": 76,
+        "repaired_native_part_success": 46,
+        "repaired_native_part_denominator": 77,
+        "largest_part_success": 14,
+        "candidate_records": 47544
+      },
+      {
+        "group": "image_guard",
+        "strict_parent_success": 5,
+        "strict_parent_denominator": 18,
+        "original_part_success": 45,
+        "original_part_denominator": 76,
+        "repaired_native_part_success": 46,
+        "repaired_native_part_denominator": 77,
+        "largest_part_success": 14,
+        "candidate_records": 47544
+      }
+    ],
+    "interpretation": "NoDLgroup improves strictwhole-instance orlargestpart nativegeneration here. Opticalmethodsreceive byte-identicalclouds toraw because no pointcrossed opticalcutoff; this is inactivity, not validatedtreeprotection."
+  },
+  "topology_adaptation": {
+    "original_parts": 76,
+    "repaired_native_parts": 77,
+    "original_part_to_two_children": [
+      "Boston_BOS-G0V1F-GLIOQ-727YL__part0"
+    ],
+    "collapsed_original_parts": 0,
+    "source_area_m2": 10883.08952666095,
+    "sum_symmetric_difference_area_m2": 7.89792069158293,
+    "max_recorded_hausdorff_distance_m": 7.307475026231947,
+    "original_polygon_holes": 49,
+    "adapted_polygon_holes": 20,
+    "parts_with_changed_hole_count": 13,
+    "ring_change_audit": [
+      {
+        "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part0",
+        "holes_before": 1,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part2",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part3",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part4",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-4HPQA-W5GXR-6QJBE",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-CQPOV-IS0KK-C9UFK__part0",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-CQPOV-IS0KK-C9UFK__part1",
+        "holes_before": 5,
+        "holes_after": 1,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-CQPOV-IS0KK-C9UFK__part2",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-EPQQX-42UEH-SW4LQ__part0",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-EPQQX-42UEH-SW4LQ__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-G0V1F-GLIOQ-727YL__part0",
+        "holes_before": 7,
+        "holes_after": 4,
+        "adapted_components": 2
+      },
+      {
+        "original_part": "Boston_BOS-G0V1F-GLIOQ-727YL__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-G0V1F-GLIOQ-727YL__part2",
+        "holes_before": 2,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-G0V1F-GLIOQ-727YL__part3",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part0",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part2",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part3",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part4",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part5",
+        "holes_before": 1,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part6",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part7",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-ILUWZ-ZCJSN-N5BQW",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part0",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part2",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part3",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part4",
+        "holes_before": 1,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part5",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part6",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part7",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part8",
+        "holes_before": 6,
+        "holes_after": 5,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part9",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part10",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part11",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part12",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part13",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part14",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part15",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-JU295-77PG4-5G5PZ",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part0",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part2",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part3",
+        "holes_before": 1,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part4",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part5",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part6",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part7",
+        "holes_before": 2,
+        "holes_after": 1,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-LK8QJ-46RFH-1IJSL__part0",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-LK8QJ-46RFH-1IJSL__part1",
+        "holes_before": 1,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-NO3EN-TAWDQ-MG62Z__part0",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-NO3EN-TAWDQ-MG62Z__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-NO3EN-TAWDQ-MG62Z__part2",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-PLZ05-3H27Y-3PBSK",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-T3QFD-JQMKR-GHCNH",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-UJDC6-0LXIR-PT904__part0",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-UJDC6-0LXIR-PT904__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-UJDC6-0LXIR-PT904__part2",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-UJDC6-0LXIR-PT904__part3",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-YVP2H-D3R1Z-AIT7H__part0",
+        "holes_before": 16,
+        "holes_after": 7,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-YVP2H-D3R1Z-AIT7H__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part0",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part1",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part2",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part3",
+        "holes_before": 2,
+        "holes_after": 1,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part4",
+        "holes_before": 1,
+        "holes_after": 1,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part5",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part6",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part7",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part8",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part9",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part10",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part11",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part12",
+        "holes_before": 3,
+        "holes_after": 0,
+        "adapted_components": 1
+      },
+      {
+        "original_part": "Boston_BOS-ZX2T4-0BM20-S7FO9",
+        "holes_before": 0,
+        "holes_after": 0,
+        "adapted_components": 1
+      }
+    ],
+    "original_part_success_counts_recomputed": {
+      "raw": 45,
+      "geometry": 44,
+      "pointnet_hard": 44,
+      "edgeconv_hard": 44,
+      "edgeconv_guard": 44,
+      "image_hard": 45,
+      "image_guard": 45
+    }
+  },
+  "permitted_conclusion": "This pilot demonstrates that learnedpointinterventions can affectexplicitroofreconstruction underknownsyntheticcontamination, while higherpointclassification quality and moredeletions do not ensure betterroofgeometry or cleancase preservation. Frozenmodeltransfer onrealBoston inputs is operationallydemonstrated, but actualroofaccuracy remainsunknown.",
+  "not_supported": [
+    "improvedrealBostonroofaccuracy",
+    "independentGTqualitycertification",
+    "allUSgeneralization",
+    "publishedmethodnovelty",
+    "reduced3Dannotationrequirement",
+    "reliableoccludedroofcompletion",
+    "opticaltreefilteringsuccessfromzerodeletions"
+  ],
+  "limitations": [
+    "All controlled clouds are sampled and corrupted from automatic3DBAG teacher roofs; none are realNAIP/3DEP observations.",
+    "3DBAG inherits automaticRoofer structural errors; city separation does not make teacher geometry independent measured roofGT.",
+    "Reference footprint and teacher-derived ground are available priors in the controlled branch.",
+    "The24controlled buildings are a fixed small diagnostic sample, with one training seed and six dependent quality variants perbuilding; no population significance claim.",
+    "Controlled MAE is one-metre-grid vertical agreement with teacher roof surfaces; it does not certify ridge topology, fullsolid validity, or real-world accuracy.",
+    "Validation99.5percent retention is a pooled calibration target, not a guarantee for eachbuilding, quality condition, testcity orUStransfer.",
+    "Boston17of18footprints are historical mesh-derivedXY priors; oneOSMmatch is a separate delivery, not certified independent positionalGT.",
+    "Boston5of18sourceinstances are tiny fragments; nativepartgeneration and largestpartsuccess are supplementary generation diagnostics.",
+    "Boston historical models are2011, realLiDAR2013-14, NAIP2014, OSMsnapshot2026; no accepted independent roofGT or targetsemantic labels.",
+    "NoBoston accuracy improvement follows from nativeLoD2 generation, pointdeletion counts, or zeroopticaldeletions.",
+    "EPT-derivedGPStimeflag0 is invalid for these retainedvalues; originalsourceflag1 is independentlydocumented.",
+    "Bostonv1failed globally due vector topology at the native interface; this is an execution failure rather than a scoredDLcomparison.",
+    "Bostonv2uses common deterministic1cm precision topology adaptation; recordedHausdorffdistance can exceed1cm due topology collapse, so1cmgrid is not a1cm maximumgeometrydisplacement guarantee."
+  ],
+  "_publication": {
+    "original_source_sha256": "03b13822bc195993c2804c4174c1b62910ae1579d07de5fc3c82cebc4a6c2bde",
+    "original_source": "source:multicity/reports/supervisor_final_review.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

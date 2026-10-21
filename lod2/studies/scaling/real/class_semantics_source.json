@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-21T08:55:27.666912+00:00",
+  "status": "official_semantics_verified",
+  "source_title": "Eerste deel van AHN 5 is beschikbaar!",
+  "source_url": "https://www.ahn.nl/eerste-deel-van-ahn-5-is-beschikbaar",
+  "source_publication_date": "2023-12-22",
+  "source_publication_date_is_not_point_acquisition": true,
+  "http_status": 200,
+  "final_url": "https://www.ahn.nl/eerste-deel-van-ahn-5-is-beschikbaar",
+  "archived_html_sha256": "47ee588c91626461cecee4c74cf6c0a55db2df131d71c5cd24fb056bb9f93802",
+  "verified_dutch_excerpts": [
+    "alleen de daken als gebouw aangemerkt",
+    "De rest van het gebouw is aangemerkt als overig"
+  ],
+  "chinese_paraphrase": "AHN官方说明：AHN4将整个建筑归为class6；AHN5则仅将屋顶归为该建筑类别，其余建筑部分归为overig（其他）。",
+  "class6_implication": "For this actual AHN5 delivery, production class6 has explicit roof semantics rather than only generic ASPRS whole-building semantics. Deleting it is a meaningful roof-support domain-risk diagnostic, not independent human-GT error verification.",
+  "class1_boundary": "Observed class1 is heterogeneous other/unclassified, never tree GT. The cited article places non-roof building parts in overig but does not explicitly state a numeric class code for overig; no stronger numeric taxonomy claim is inferred from this article alone.",
+  "specific_counts_source": "qualitative_support_domain_diagnostic.json",
+  "counts_are_not_independent_accuracy_or_tree_removal_rate": true,
+  "no_inference_threshold_score_mask_or_main_code_changes": true,
+  "existing_frozen_files_unchanged": true,
+  "existing_frozen_hashes": {
+    "source:scaling/paired_real_feasibility/reports/raw_quality_preview_dl_qualitative.html": "baaafcc04f009692e2088087cff778b49103c3a93fddc1f04b4307c4c4779228",
+    "source:scaling/paired_real_feasibility/reports/真实点云定性探针_中文说明.txt": "4f49ff06b4a1dbb8aab4ec0659f03e3233a1903c70e56e3ba7c8703b5590cad2",
+    "source:scaling/paired_real_feasibility/reports/completion_v3.json": "fe2c3f58c7671fe14328f8cc12ce3466c922571dda76c1f2332faf86d474bdc6",
+    "source:scaling/paired_real_feasibility/qualitative_dl/qualitative_result.json": "534bc9aa9b0c65c0f5bea52dac04b9f75ff4b4ff85e8f58adc5b102ff6057ccf"
+  },
+  "_publication": {
+    "original_source_sha256": "30b00aba3fa25b04962f519d4182fcc3ba9a379ec191c2366278417e5cad946a",
+    "original_source": "source:scaling/paired_real_feasibility/reports/class_semantics_source.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}

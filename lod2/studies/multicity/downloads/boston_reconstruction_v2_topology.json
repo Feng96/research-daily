@@ -1,0 +1,762 @@
+[
+  {
+    "id": "Boston_BOS-0ONA1-2JP57-OU1ZS",
+    "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part0",
+    "original_area_m2": 179.71763155814264,
+    "adapted_parts": 1,
+    "adapted_area_m2": 179.70505000029578,
+    "symmetric_difference_area_m2": 0.14433806767187948,
+    "hausdorff_distance_m": 1.6570770814588294,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-0ONA1-2JP57-OU1ZS",
+    "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part1",
+    "original_area_m2": 5.418095604828381,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.396700000150869,
+    "symmetric_difference_area_m2": 0.02801370294978579,
+    "hausdorff_distance_m": 0.004898369646978355,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-0ONA1-2JP57-OU1ZS",
+    "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part2",
+    "original_area_m2": 4.855436355671029,
+    "adapted_parts": 1,
+    "adapted_area_m2": 4.844200000086985,
+    "symmetric_difference_area_m2": 0.02540776287011542,
+    "hausdorff_distance_m": 0.005814823992497404,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-0ONA1-2JP57-OU1ZS",
+    "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part3",
+    "original_area_m2": 5.026782061681534,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.040799999968603,
+    "symmetric_difference_area_m2": 0.019504729903167067,
+    "hausdorff_distance_m": 0.005136908834301872,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-0ONA1-2JP57-OU1ZS",
+    "original_part": "Boston_BOS-0ONA1-2JP57-OU1ZS__part4",
+    "original_area_m2": 5.880384243922377,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.870049999937666,
+    "symmetric_difference_area_m2": 0.014702313174644717,
+    "hausdorff_distance_m": 0.003657089864497939,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-4HPQA-W5GXR-6QJBE",
+    "original_part": "Boston_BOS-4HPQA-W5GXR-6QJBE",
+    "original_area_m2": 1.9719220563725492,
+    "adapted_parts": 1,
+    "adapted_area_m2": 1.9649499999603257,
+    "symmetric_difference_area_m2": 0.013135938114827286,
+    "hausdorff_distance_m": 0.004526513426820813,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-CQPOV-IS0KK-C9UFK",
+    "original_part": "Boston_BOS-CQPOV-IS0KK-C9UFK__part0",
+    "original_area_m2": 326.8580497039681,
+    "adapted_parts": 1,
+    "adapted_area_m2": 326.9264999999882,
+    "symmetric_difference_area_m2": 0.18878880687818284,
+    "hausdorff_distance_m": 0.0061711340509019415,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-CQPOV-IS0KK-C9UFK",
+    "original_part": "Boston_BOS-CQPOV-IS0KK-C9UFK__part1",
+    "original_area_m2": 799.9837954660928,
+    "adapted_parts": 1,
+    "adapted_area_m2": 799.8894499999907,
+    "symmetric_difference_area_m2": 0.45383830600341046,
+    "hausdorff_distance_m": 5.081081365066705,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-CQPOV-IS0KK-C9UFK",
+    "original_part": "Boston_BOS-CQPOV-IS0KK-C9UFK__part2",
+    "original_area_m2": 5.6307531550328385,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.65160000002801,
+    "symmetric_difference_area_m2": 0.027473088564532344,
+    "hausdorff_distance_m": 0.005049203698748546,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-EPQQX-42UEH-SW4LQ",
+    "original_part": "Boston_BOS-EPQQX-42UEH-SW4LQ__part0",
+    "original_area_m2": 482.55371769976796,
+    "adapted_parts": 1,
+    "adapted_area_m2": 482.5483000001267,
+    "symmetric_difference_area_m2": 0.21070765187790247,
+    "hausdorff_distance_m": 0.0056175463569720216,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-EPQQX-42UEH-SW4LQ",
+    "original_part": "Boston_BOS-EPQQX-42UEH-SW4LQ__part1",
+    "original_area_m2": 70.39662211747324,
+    "adapted_parts": 1,
+    "adapted_area_m2": 70.37499999974709,
+    "symmetric_difference_area_m2": 0.0644071613905208,
+    "hausdorff_distance_m": 0.0054709800520014226,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-G0V1F-GLIOQ-727YL",
+    "original_part": "Boston_BOS-G0V1F-GLIOQ-727YL__part0",
+    "original_area_m2": 2218.070658178579,
+    "adapted_parts": 2,
+    "adapted_area_m2": 2218.2136500024762,
+    "symmetric_difference_area_m2": 0.882584521238005,
+    "hausdorff_distance_m": 5.120190700112126,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-G0V1F-GLIOQ-727YL",
+    "original_part": "Boston_BOS-G0V1F-GLIOQ-727YL__part1",
+    "original_area_m2": 5.861626934831436,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.855399999634037,
+    "symmetric_difference_area_m2": 0.020182781663378006,
+    "hausdorff_distance_m": 0.005511990311620463,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-G0V1F-GLIOQ-727YL",
+    "original_part": "Boston_BOS-G0V1F-GLIOQ-727YL__part2",
+    "original_area_m2": 671.5256678514509,
+    "adapted_parts": 1,
+    "adapted_area_m2": 671.4388999994658,
+    "symmetric_difference_area_m2": 0.33188175298449724,
+    "hausdorff_distance_m": 3.4722984921917517,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-G0V1F-GLIOQ-727YL",
+    "original_part": "Boston_BOS-G0V1F-GLIOQ-727YL__part3",
+    "original_area_m2": 173.68142956954398,
+    "adapted_parts": 1,
+    "adapted_area_m2": 173.77264999916937,
+    "symmetric_difference_area_m2": 0.20120841340538753,
+    "hausdorff_distance_m": 0.005544240196755536,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-GNG1E-45LN5-TSILF",
+    "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part0",
+    "original_area_m2": 9.588589829819554,
+    "adapted_parts": 1,
+    "adapted_area_m2": 9.567249999871915,
+    "symmetric_difference_area_m2": 0.06153211392913427,
+    "hausdorff_distance_m": 0.005602065935141998,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-GNG1E-45LN5-TSILF",
+    "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part1",
+    "original_area_m2": 117.60911166095673,
+    "adapted_parts": 1,
+    "adapted_area_m2": 117.63595000035116,
+    "symmetric_difference_area_m2": 0.08606616812165069,
+    "hausdorff_distance_m": 0.005602065935141998,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-GNG1E-45LN5-TSILF",
+    "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part2",
+    "original_area_m2": 43.39474346276329,
+    "adapted_parts": 1,
+    "adapted_area_m2": 43.43160000000647,
+    "symmetric_difference_area_m2": 0.0677953001573104,
+    "hausdorff_distance_m": 0.006268633213306016,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-GNG1E-45LN5-TSILF",
+    "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part3",
+    "original_area_m2": 44.51694307876288,
+    "adapted_parts": 1,
+    "adapted_area_m2": 44.49175000006511,
+    "symmetric_difference_area_m2": 0.04919500252659559,
+    "hausdorff_distance_m": 0.0050637427380084065,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-GNG1E-45LN5-TSILF",
+    "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part4",
+    "original_area_m2": 15.288388068638191,
+    "adapted_parts": 1,
+    "adapted_area_m2": 15.295250000049215,
+    "symmetric_difference_area_m2": 0.049007339086865984,
+    "hausdorff_distance_m": 0.9063504721225554,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-GNG1E-45LN5-TSILF",
+    "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part5",
+    "original_area_m2": 289.57172641712094,
+    "adapted_parts": 1,
+    "adapted_area_m2": 289.4790499996667,
+    "symmetric_difference_area_m2": 0.18043324029258404,
+    "hausdorff_distance_m": 2.570271326071884,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-GNG1E-45LN5-TSILF",
+    "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part6",
+    "original_area_m2": 1.6117356029443402,
+    "adapted_parts": 1,
+    "adapted_area_m2": 1.6123500000163098,
+    "symmetric_difference_area_m2": 0.009219746554565712,
+    "hausdorff_distance_m": 0.006029313293192371,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-GNG1E-45LN5-TSILF",
+    "original_part": "Boston_BOS-GNG1E-45LN5-TSILF__part7",
+    "original_area_m2": 8.260481567259067,
+    "adapted_parts": 1,
+    "adapted_area_m2": 8.24230000005027,
+    "symmetric_difference_area_m2": 0.02532724786381962,
+    "hausdorff_distance_m": 0.005354857941697375,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-ILUWZ-ZCJSN-N5BQW",
+    "original_part": "Boston_BOS-ILUWZ-ZCJSN-N5BQW",
+    "original_area_m2": 2.963994077243714,
+    "adapted_parts": 1,
+    "adapted_area_m2": 2.973450000038004,
+    "symmetric_difference_area_m2": 0.021782668369487432,
+    "hausdorff_distance_m": 0.0054897021983011185,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part0",
+    "original_area_m2": 422.31741540267774,
+    "adapted_parts": 1,
+    "adapted_area_m2": 422.25200000180763,
+    "symmetric_difference_area_m2": 0.23038375334202651,
+    "hausdorff_distance_m": 1.773992795833556,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part1",
+    "original_area_m2": 5.636709190168685,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.631000000030675,
+    "symmetric_difference_area_m2": 0.016958141014557476,
+    "hausdorff_distance_m": 0.00496582417347699,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part2",
+    "original_area_m2": 4.085030183305726,
+    "adapted_parts": 1,
+    "adapted_area_m2": 4.081050000064675,
+    "symmetric_difference_area_m2": 0.01859831006918372,
+    "hausdorff_distance_m": 0.0041789417037856194,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part3",
+    "original_area_m2": 5.1222969692666815,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.111099999978329,
+    "symmetric_difference_area_m2": 0.018402700993850413,
+    "hausdorff_distance_m": 0.004925465576722931,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part4",
+    "original_area_m2": 296.56016221048435,
+    "adapted_parts": 1,
+    "adapted_area_m2": 296.43950000112056,
+    "symmetric_difference_area_m2": 0.1315679440310577,
+    "hausdorff_distance_m": 6.938012545250795,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part5",
+    "original_area_m2": 4.837169218713725,
+    "adapted_parts": 1,
+    "adapted_area_m2": 4.832999999982451,
+    "symmetric_difference_area_m2": 0.024346896650449618,
+    "hausdorff_distance_m": 0.004694788165608739,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part6",
+    "original_area_m2": 5.465045946235217,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.473299999957689,
+    "symmetric_difference_area_m2": 0.021239049375267383,
+    "hausdorff_distance_m": 0.004938244275364486,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part7",
+    "original_area_m2": 5.025950534361039,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.013900000159477,
+    "symmetric_difference_area_m2": 0.029627234858883293,
+    "hausdorff_distance_m": 0.005417713954704466,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part8",
+    "original_area_m2": 646.9927710172361,
+    "adapted_parts": 1,
+    "adapted_area_m2": 647.2601499998688,
+    "symmetric_difference_area_m2": 0.6216192761043735,
+    "hausdorff_distance_m": 1.5604929347056158,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part9",
+    "original_area_m2": 11.014069395620963,
+    "adapted_parts": 1,
+    "adapted_area_m2": 11.018649999943207,
+    "symmetric_difference_area_m2": 0.026510288620226564,
+    "hausdorff_distance_m": 0.0060010228971588645,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part10",
+    "original_area_m2": 0.8388451181246256,
+    "adapted_parts": 1,
+    "adapted_area_m2": 0.8469000000287139,
+    "symmetric_difference_area_m2": 0.010441036230191632,
+    "hausdorff_distance_m": 0.006690936759011629,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part11",
+    "original_area_m2": 0.9242773353619447,
+    "adapted_parts": 1,
+    "adapted_area_m2": 0.9215000000457222,
+    "symmetric_difference_area_m2": 0.006371682174414547,
+    "hausdorff_distance_m": 0.004720359575284988,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part12",
+    "original_area_m2": 0.7349782652112676,
+    "adapted_parts": 1,
+    "adapted_area_m2": 0.7335999999821127,
+    "symmetric_difference_area_m2": 0.007407195089330111,
+    "hausdorff_distance_m": 0.0054647675224423434,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part13",
+    "original_area_m2": 0.49666412818981287,
+    "adapted_parts": 1,
+    "adapted_area_m2": 0.4957999999886844,
+    "symmetric_difference_area_m2": 0.005989375595661702,
+    "hausdorff_distance_m": 0.005127854268304148,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part14",
+    "original_area_m2": 2.981898732425141,
+    "adapted_parts": 1,
+    "adapted_area_m2": 2.968649999949464,
+    "symmetric_difference_area_m2": 0.01624334506782733,
+    "hausdorff_distance_m": 0.005473572341688083,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-J2N1I-SRHA7-BV6WK",
+    "original_part": "Boston_BOS-J2N1I-SRHA7-BV6WK__part15",
+    "original_area_m2": 2.981989113576601,
+    "adapted_parts": 1,
+    "adapted_area_m2": 2.987700000037771,
+    "symmetric_difference_area_m2": 0.009460659689539472,
+    "hausdorff_distance_m": 0.00454391529319659,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-JU295-77PG4-5G5PZ",
+    "original_part": "Boston_BOS-JU295-77PG4-5G5PZ",
+    "original_area_m2": 4.030954641782803,
+    "adapted_parts": 1,
+    "adapted_area_m2": 4.020450000007969,
+    "symmetric_difference_area_m2": 0.016401505105659027,
+    "hausdorff_distance_m": 0.006175577237113593,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-JXPYV-X1TS0-PPO07",
+    "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part0",
+    "original_area_m2": 31.715508385158817,
+    "adapted_parts": 1,
+    "adapted_area_m2": 31.729800000283973,
+    "symmetric_difference_area_m2": 0.052838871429490515,
+    "hausdorff_distance_m": 0.7910782055364075,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-JXPYV-X1TS0-PPO07",
+    "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part1",
+    "original_area_m2": 43.125685775068305,
+    "adapted_parts": 1,
+    "adapted_area_m2": 43.13845000039831,
+    "symmetric_difference_area_m2": 0.12190444090099574,
+    "hausdorff_distance_m": 0.006159561325822875,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-JXPYV-X1TS0-PPO07",
+    "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part2",
+    "original_area_m2": 7.907024508186021,
+    "adapted_parts": 1,
+    "adapted_area_m2": 7.906350000040057,
+    "symmetric_difference_area_m2": 0.011266685482519311,
+    "hausdorff_distance_m": 0.004826938750447637,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-JXPYV-X1TS0-PPO07",
+    "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part3",
+    "original_area_m2": 46.28274371248801,
+    "adapted_parts": 1,
+    "adapted_area_m2": 46.27940000007062,
+    "symmetric_difference_area_m2": 0.05600347408436907,
+    "hausdorff_distance_m": 1.6836315077517612,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-JXPYV-X1TS0-PPO07",
+    "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part4",
+    "original_area_m2": 8.028718941549576,
+    "adapted_parts": 1,
+    "adapted_area_m2": 8.035750000074739,
+    "symmetric_difference_area_m2": 0.020369963654508952,
+    "hausdorff_distance_m": 0.006194091726293625,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-JXPYV-X1TS0-PPO07",
+    "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part5",
+    "original_area_m2": 229.2668554680015,
+    "adapted_parts": 1,
+    "adapted_area_m2": 229.31545000024602,
+    "symmetric_difference_area_m2": 0.18504089031091292,
+    "hausdorff_distance_m": 0.006109245587976535,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-JXPYV-X1TS0-PPO07",
+    "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part6",
+    "original_area_m2": 4.811681451225844,
+    "adapted_parts": 1,
+    "adapted_area_m2": 4.8150000000820725,
+    "symmetric_difference_area_m2": 0.01404251813449416,
+    "hausdorff_distance_m": 0.0038678698823584063,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-JXPYV-X1TS0-PPO07",
+    "original_part": "Boston_BOS-JXPYV-X1TS0-PPO07__part7",
+    "original_area_m2": 298.35859270047786,
+    "adapted_parts": 1,
+    "adapted_area_m2": 298.3406500004488,
+    "symmetric_difference_area_m2": 0.19358131939434314,
+    "hausdorff_distance_m": 1.758043077525198,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-LK8QJ-46RFH-1IJSL",
+    "original_part": "Boston_BOS-LK8QJ-46RFH-1IJSL__part0",
+    "original_area_m2": 7.198367399457974,
+    "adapted_parts": 1,
+    "adapted_area_m2": 7.200400000091696,
+    "symmetric_difference_area_m2": 0.01738661884291542,
+    "hausdorff_distance_m": 0.0051691219243640806,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-LK8QJ-46RFH-1IJSL",
+    "original_part": "Boston_BOS-LK8QJ-46RFH-1IJSL__part1",
+    "original_area_m2": 247.87944341971166,
+    "adapted_parts": 1,
+    "adapted_area_m2": 247.79784999998685,
+    "symmetric_difference_area_m2": 0.20693859067790976,
+    "hausdorff_distance_m": 3.43402002013426,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-NO3EN-TAWDQ-MG62Z",
+    "original_part": "Boston_BOS-NO3EN-TAWDQ-MG62Z__part0",
+    "original_area_m2": 151.8313288632434,
+    "adapted_parts": 1,
+    "adapted_area_m2": 151.72820000010503,
+    "symmetric_difference_area_m2": 0.2320281497150094,
+    "hausdorff_distance_m": 0.005691792563189608,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-NO3EN-TAWDQ-MG62Z",
+    "original_part": "Boston_BOS-NO3EN-TAWDQ-MG62Z__part1",
+    "original_area_m2": 2.5850003014127045,
+    "adapted_parts": 1,
+    "adapted_area_m2": 2.58780000000929,
+    "symmetric_difference_area_m2": 0.008380823287815328,
+    "hausdorff_distance_m": 0.002188260236431009,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-NO3EN-TAWDQ-MG62Z",
+    "original_part": "Boston_BOS-NO3EN-TAWDQ-MG62Z__part2",
+    "original_area_m2": 47.68592658537176,
+    "adapted_parts": 1,
+    "adapted_area_m2": 47.664499999990774,
+    "symmetric_difference_area_m2": 0.09076613140365328,
+    "hausdorff_distance_m": 0.006188447382374231,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-PLZ05-3H27Y-3PBSK",
+    "original_part": "Boston_BOS-PLZ05-3H27Y-3PBSK",
+    "original_area_m2": 592.9920407353209,
+    "adapted_parts": 1,
+    "adapted_area_m2": 592.9914999991448,
+    "symmetric_difference_area_m2": 0.09326095073693182,
+    "hausdorff_distance_m": 0.002965636375163032,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-T3QFD-JQMKR-GHCNH",
+    "original_part": "Boston_BOS-T3QFD-JQMKR-GHCNH",
+    "original_area_m2": 5.284838201257001,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.286150000010583,
+    "symmetric_difference_area_m2": 0.018546324955369252,
+    "hausdorff_distance_m": 0.004376372534585712,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-UJDC6-0LXIR-PT904",
+    "original_part": "Boston_BOS-UJDC6-0LXIR-PT904__part0",
+    "original_area_m2": 68.24806878383508,
+    "adapted_parts": 1,
+    "adapted_area_m2": 68.26175000031249,
+    "symmetric_difference_area_m2": 0.07112343688497627,
+    "hausdorff_distance_m": 0.006064817578182651,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-UJDC6-0LXIR-PT904",
+    "original_part": "Boston_BOS-UJDC6-0LXIR-PT904__part1",
+    "original_area_m2": 2.364854111412983,
+    "adapted_parts": 1,
+    "adapted_area_m2": 2.3629499999561636,
+    "symmetric_difference_area_m2": 0.012322703560436046,
+    "hausdorff_distance_m": 0.006143669476629823,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-UJDC6-0LXIR-PT904",
+    "original_part": "Boston_BOS-UJDC6-0LXIR-PT904__part2",
+    "original_area_m2": 1.2153400277143567,
+    "adapted_parts": 1,
+    "adapted_area_m2": 1.2139499999591905,
+    "symmetric_difference_area_m2": 0.008603835501079576,
+    "hausdorff_distance_m": 0.005324288183632147,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-UJDC6-0LXIR-PT904",
+    "original_part": "Boston_BOS-UJDC6-0LXIR-PT904__part3",
+    "original_area_m2": 5.439524807392979,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.451349999682227,
+    "symmetric_difference_area_m2": 0.04476691175278219,
+    "hausdorff_distance_m": 0.005591340607291657,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-YVP2H-D3R1Z-AIT7H",
+    "original_part": "Boston_BOS-YVP2H-D3R1Z-AIT7H__part0",
+    "original_area_m2": 853.8655663459211,
+    "adapted_parts": 1,
+    "adapted_area_m2": 853.8925000010363,
+    "symmetric_difference_area_m2": 0.7964085977894888,
+    "hausdorff_distance_m": 3.714429040609694,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-YVP2H-D3R1Z-AIT7H",
+    "original_part": "Boston_BOS-YVP2H-D3R1Z-AIT7H__part1",
+    "original_area_m2": 14.79910075991181,
+    "adapted_parts": 1,
+    "adapted_area_m2": 14.812850000065989,
+    "symmetric_difference_area_m2": 0.028041048909565432,
+    "hausdorff_distance_m": 0.0049007389726014716,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part0",
+    "original_area_m2": 69.21361584504875,
+    "adapted_parts": 1,
+    "adapted_area_m2": 69.20735000054178,
+    "symmetric_difference_area_m2": 0.08167906934269445,
+    "hausdorff_distance_m": 0.5494964694201491,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part1",
+    "original_area_m2": 5.267775819667053,
+    "adapted_parts": 1,
+    "adapted_area_m2": 5.265800000005855,
+    "symmetric_difference_area_m2": 0.015575868003476668,
+    "hausdorff_distance_m": 0.005134192162160299,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part2",
+    "original_area_m2": 223.38307614593967,
+    "adapted_parts": 1,
+    "adapted_area_m2": 223.43314999970346,
+    "symmetric_difference_area_m2": 0.10110390043944285,
+    "hausdorff_distance_m": 0.3817461228599799,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part3",
+    "original_area_m2": 479.27345765634436,
+    "adapted_parts": 1,
+    "adapted_area_m2": 479.29504999991036,
+    "symmetric_difference_area_m2": 0.44580797815727696,
+    "hausdorff_distance_m": 2.180251434598368,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part4",
+    "original_area_m2": 88.12823285740438,
+    "adapted_parts": 1,
+    "adapted_area_m2": 88.16304999980981,
+    "symmetric_difference_area_m2": 0.18121750414269575,
+    "hausdorff_distance_m": 0.005728464024366563,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part5",
+    "original_area_m2": 3.5562038633453543,
+    "adapted_parts": 1,
+    "adapted_area_m2": 3.564350000084791,
+    "symmetric_difference_area_m2": 0.018984039566001847,
+    "hausdorff_distance_m": 0.005735073691103753,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part6",
+    "original_area_m2": 4.236899605089995,
+    "adapted_parts": 1,
+    "adapted_area_m2": 4.2411499998774325,
+    "symmetric_difference_area_m2": 0.010728419569947474,
+    "hausdorff_distance_m": 0.005280013718312182,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part7",
+    "original_area_m2": 70.25023599069004,
+    "adapted_parts": 1,
+    "adapted_area_m2": 70.23069999992302,
+    "symmetric_difference_area_m2": 0.10962431735084129,
+    "hausdorff_distance_m": 0.005413426609775743,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part8",
+    "original_area_m2": 4.68253975330018,
+    "adapted_parts": 1,
+    "adapted_area_m2": 4.663699999923364,
+    "symmetric_difference_area_m2": 0.01909559396396037,
+    "hausdorff_distance_m": 0.006581242912628923,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part9",
+    "original_area_m2": 4.626207590668207,
+    "adapted_parts": 1,
+    "adapted_area_m2": 4.618350000188575,
+    "symmetric_difference_area_m2": 0.021385399185146037,
+    "hausdorff_distance_m": 0.005628580207037786,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part10",
+    "original_area_m2": 4.669100017165763,
+    "adapted_parts": 1,
+    "adapted_area_m2": 4.682550000108214,
+    "symmetric_difference_area_m2": 0.016480135822574793,
+    "hausdorff_distance_m": 0.004027233441034449,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part11",
+    "original_area_m2": 2.1811785478050414,
+    "adapted_parts": 1,
+    "adapted_area_m2": 2.193300000073522,
+    "symmetric_difference_area_m2": 0.018683177771030447,
+    "hausdorff_distance_m": 0.005994618058892056,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-Z67B7-RDBMY-U36E1",
+    "original_part": "Boston_BOS-Z67B7-RDBMY-U36E1__part12",
+    "original_area_m2": 338.8415551115952,
+    "adapted_parts": 1,
+    "adapted_area_m2": 338.8042500004955,
+    "symmetric_difference_area_m2": 0.17591831179076453,
+    "hausdorff_distance_m": 7.307475026231947,
+    "collapsed_as_explicit_failure": false
+  },
+  {
+    "id": "Boston_BOS-ZX2T4-0BM20-S7FO9",
+    "original_part": "Boston_BOS-ZX2T4-0BM20-S7FO9",
+    "original_area_m2": 3.6087228471566988,
+    "adapted_parts": 1,
+    "adapted_area_m2": 3.6087499999537247,
+    "symmetric_difference_area_m2": 0.009912469462763624,
+    "hausdorff_distance_m": 0.0035813617806108983,
+    "collapsed_as_explicit_failure": false
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "status": "complete",
+  "summaries": [
+    {
+      "case": "all",
+      "method": "hybrid_global_cls_linear_native",
+      "fixed_denominator": 60,
+      "primary_capped_loss_10m": 0.615393389330065,
+      "native_lod2_success": 60,
+      "fallback_count": 0,
+      "activated_count": 29
+    },
+    {
+      "case": "clean",
+      "method": "hybrid_global_cls_linear_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.1058016820682113,
+      "native_lod2_success": 10,
+      "fallback_count": 0,
+      "activated_count": 1
+    },
+    {
+      "case": "dense_canopy",
+      "method": "hybrid_global_cls_linear_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.5249029265798696,
+      "native_lod2_success": 10,
+      "fallback_count": 0,
+      "activated_count": 10
+    },
+    {
+      "case": "flat_canopy",
+      "method": "hybrid_global_cls_linear_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.287955038485777,
+      "native_lod2_success": 10,
+      "fallback_count": 0,
+      "activated_count": 10
+    },
+    {
+      "case": "hole",
+      "method": "hybrid_global_cls_linear_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.4391221325494179,
+      "native_lod2_success": 10,
+      "fallback_count": 0,
+      "activated_count": 0
+    },
+    {
+      "case": "occlusion_heavy",
+      "method": "hybrid_global_cls_linear_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 2.0584074648666055,
+      "native_lod2_success": 10,
+      "fallback_count": 0,
+      "activated_count": 8
+    },
+    {
+      "case": "very_sparse",
+      "method": "hybrid_global_cls_linear_native",
+      "fixed_denominator": 10,
+      "primary_capped_loss_10m": 0.27617109143050944,
+      "native_lod2_success": 10,
+      "fallback_count": 0,
+      "activated_count": 0
+    }
+  ],
+  "protocol_sha256": "c75efae13e755041de63f84f2d0649ee86a92634b5c46835c26ada4f83d9a8a7",
+  "script_sha256": "fbb13c3ab614caec34445fea294eeb3abe6307ff5be2e237637194d31cbaafc0",
+  "prediction_sha256": "df42397bb247a0b94f4edfb4a2c8574edbaae5adfcd19195685cc02397624de8",
+  "same_cohort_comparisons_only": true,
+  "elapsed_seconds": 6.958761930465698,
+  "_publication": {
+    "original_source_sha256": "dfb3b0a4df41b419d74663759d9dec6f6e6041216085ec45fb9405ea3f825671",
+    "original_source": "source:expanded/reports/hybrid_validation_global_cls_result.json",
+    "published_sha256_location": "https://feng96.github.io/research-daily/lod2/studies/report_package_manifest.json (artifact entry by href)",
+    "notice": "All pre-existing scientific hash values remain original-source hashes. Paths are public provenance labels; published-copy SHA is in the package manifest. Metrics/numeric values were not changed."
+  }
+}
