@@ -1,0 +1,52 @@
+{
+  "status": "complete",
+  "scope": "post-hoc published synthetic test only; never used by warning-head training or routing",
+  "groups": {
+    "all": {
+      "clouds": 2400,
+      "roof_retention_at_least_99pct": 2160,
+      "roof_retention_exact100pct": 1967,
+      "roof_retention_min": 0.373046875,
+      "mean_roof_retention": 0.995131597079605,
+      "median_roof_points": 284.0
+    },
+    "loss_improved_no_ridge": {
+      "clouds": 121,
+      "roof_retention_at_least_99pct": 111,
+      "roof_retention_exact100pct": 104,
+      "roof_retention_min": 0.7817460317460317,
+      "mean_roof_retention": 0.9939681243097871,
+      "median_roof_points": 252.0
+    },
+    "height_harm_gt20cm": {
+      "clouds": 28,
+      "roof_retention_at_least_99pct": 16,
+      "roof_retention_exact100pct": 12,
+      "roof_retention_min": 0.373046875,
+      "mean_roof_retention": 0.9550017546758813,
+      "median_roof_points": 281.0
+    },
+    "ridge_harm_gt_point2": {
+      "clouds": 29,
+      "roof_retention_at_least_99pct": 26,
+      "roof_retention_exact100pct": 25,
+      "roof_retention_min": 0.7962962962962963,
+      "mean_roof_retention": 0.9918131038820694,
+      "median_roof_points": 236.0
+    }
+  },
+  "lower_loss_missing_ridge": {
+    "clouds": 121,
+    "raw_also_no_predicted_ridges": 58,
+    "raw_had_predicted_ridges_but_dl_none": 63,
+    "clean_f1_at_least_point5": 89,
+    "removed_no_synthetic_roof_points": 104
+  },
+  "inference": "A preserved synthetic roof label does not imply full roof observation or correct planar topology. This audit separates deletion from other unresolved mechanisms; it does not identify a causal mechanism.",
+  "label_status": "automatic synthetic roof/contamination label, not independent real point annotation",
+  "bound_paths_sha256": {
+    "/nfs/home/yfeng21/lod2_scaling_20261021/controlled/test/y.npy": "b9804310adba33794ab4c3ed7c57432f9e51e58ef1f9a88c3f3c9eebd45c67c3",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/controlled/test/valid.npy": "f107a9394d5cd215ef2db3cbd4266e9234c86b02fdebe5e640e0ff8a4d9a06fa",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/predictions/test/graph_20000_long_s20261031/probabilities.npz": "5ef2bd0567b8770e6b8c885387a035ea81ca84ee78b2c989b97b1448936e9b76"
+  }
+}

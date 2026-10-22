@@ -1,0 +1,326 @@
+{
+  "source": {
+    "logistic": {
+      "n": 2400,
+      "risk_count": 75,
+      "risk_prevalence": 0.03125,
+      "average_precision": 0.08459172520306721,
+      "roc_auc": 0.789121146953405,
+      "warning": {
+        "threshold": 0.7463914550175956,
+        "warning_count": 240,
+        "warning_fraction": 0.1,
+        "caught_risk_count": 25,
+        "precision": 0.10416666666666667,
+        "recall": 0.3333333333333333
+      },
+      "by_heldout_city": {
+        "Amersfoort": {
+          "n": 240,
+          "risk_count": 13,
+          "risk_prevalence": 0.05416666666666667,
+          "average_precision": 0.12430260834681617,
+          "roc_auc": 0.7099288376821417,
+          "convergence_warnings": 0
+        },
+        "Arnhem": {
+          "n": 240,
+          "risk_count": 9,
+          "risk_prevalence": 0.0375,
+          "average_precision": 0.10073621233909505,
+          "roc_auc": 0.7873977873977874,
+          "convergence_warnings": 0
+        },
+        "Delft": {
+          "n": 240,
+          "risk_count": 1,
+          "risk_prevalence": 0.004166666666666667,
+          "average_precision": 0.043478260869565216,
+          "roc_auc": 0.9079497907949791,
+          "convergence_warnings": 0
+        },
+        "Haarlem": {
+          "n": 240,
+          "risk_count": 3,
+          "risk_prevalence": 0.0125,
+          "average_precision": 0.06149425287356322,
+          "roc_auc": 0.8748241912798875,
+          "convergence_warnings": 0
+        },
+        "Leiden": {
+          "n": 240,
+          "risk_count": 4,
+          "risk_prevalence": 0.016666666666666666,
+          "average_precision": 0.05686804889315283,
+          "roc_auc": 0.8029661016949152,
+          "convergence_warnings": 0
+        },
+        "Nijmegen": {
+          "n": 240,
+          "risk_count": 12,
+          "risk_prevalence": 0.05,
+          "average_precision": 0.111827420952606,
+          "roc_auc": 0.7682748538011697,
+          "convergence_warnings": 0
+        },
+        "Rotterdam": {
+          "n": 240,
+          "risk_count": 11,
+          "risk_prevalence": 0.04583333333333333,
+          "average_precision": 0.11901596450716051,
+          "roc_auc": 0.7987296546248512,
+          "convergence_warnings": 0
+        },
+        "Tilburg": {
+          "n": 240,
+          "risk_count": 5,
+          "risk_prevalence": 0.020833333333333332,
+          "average_precision": 0.17127933311525392,
+          "roc_auc": 0.8502127659574468,
+          "convergence_warnings": 0
+        },
+        "Utrecht": {
+          "n": 240,
+          "risk_count": 7,
+          "risk_prevalence": 0.029166666666666667,
+          "average_precision": 0.30206624964459106,
+          "roc_auc": 0.8534641324340895,
+          "convergence_warnings": 0
+        },
+        "Zwolle": {
+          "n": 240,
+          "risk_count": 10,
+          "risk_prevalence": 0.041666666666666664,
+          "average_precision": 0.193624213836478,
+          "roc_auc": 0.8356521739130435,
+          "convergence_warnings": 0
+        }
+      },
+      "oof_routing": {
+        "clouds": 2400,
+        "buildings": 200,
+        "primary_capped_loss_10m": 0.7915187071809842,
+        "delta_vs_raw_m": -0.4545594526288655,
+        "loss_improved_over_2cm": 759,
+        "loss_harmed_over_2cm": 81,
+        "loss_harmed_over_20cm": 23,
+        "native_success": 2347,
+        "new_failures": 0,
+        "common_positive_ridge_clouds": 1500,
+        "ridge_f1": 0.5514485592915749,
+        "ridge_improved_over_point2": 187,
+        "ridge_harmed_over_point2": 31,
+        "teacher_positive_no_predicted_ridges": 459,
+        "loss_improved_but_still_no_ridges": 127,
+        "fallback_count": 240
+      },
+      "full_fit_convergence_warnings": 0
+    },
+    "small_mlp": {
+      "n": 2400,
+      "risk_count": 75,
+      "risk_prevalence": 0.03125,
+      "average_precision": 0.10313638044129261,
+      "roc_auc": 0.7600860215053764,
+      "warning": {
+        "threshold": 0.01142784941518244,
+        "warning_count": 240,
+        "warning_fraction": 0.1,
+        "caught_risk_count": 22,
+        "precision": 0.09166666666666666,
+        "recall": 0.29333333333333333
+      },
+      "by_heldout_city": {
+        "Amersfoort": {
+          "n": 240,
+          "risk_count": 13,
+          "risk_prevalence": 0.05416666666666667,
+          "average_precision": 0.11230933552560544,
+          "roc_auc": 0.6811250423585224,
+          "convergence_warnings": 1
+        },
+        "Arnhem": {
+          "n": 240,
+          "risk_count": 9,
+          "risk_prevalence": 0.0375,
+          "average_precision": 0.08515265126078411,
+          "roc_auc": 0.7787397787397787,
+          "convergence_warnings": 1
+        },
+        "Delft": {
+          "n": 240,
+          "risk_count": 1,
+          "risk_prevalence": 0.004166666666666667,
+          "average_precision": 0.018518518518518517,
+          "roc_auc": 0.7782426778242678,
+          "convergence_warnings": 1
+        },
+        "Haarlem": {
+          "n": 240,
+          "risk_count": 3,
+          "risk_prevalence": 0.0125,
+          "average_precision": 0.04031604054859869,
+          "roc_auc": 0.8045007032348804,
+          "convergence_warnings": 1
+        },
+        "Leiden": {
+          "n": 240,
+          "risk_count": 4,
+          "risk_prevalence": 0.016666666666666666,
+          "average_precision": 0.04594892812105926,
+          "roc_auc": 0.7817796610169491,
+          "convergence_warnings": 1
+        },
+        "Nijmegen": {
+          "n": 240,
+          "risk_count": 12,
+          "risk_prevalence": 0.05,
+          "average_precision": 0.3212337366446369,
+          "roc_auc": 0.8304093567251462,
+          "convergence_warnings": 1
+        },
+        "Rotterdam": {
+          "n": 240,
+          "risk_count": 11,
+          "risk_prevalence": 0.04583333333333333,
+          "average_precision": 0.16784222103502056,
+          "roc_auc": 0.7562524811433108,
+          "convergence_warnings": 1
+        },
+        "Tilburg": {
+          "n": 240,
+          "risk_count": 5,
+          "risk_prevalence": 0.020833333333333332,
+          "average_precision": 0.1292338515906285,
+          "roc_auc": 0.8374468085106384,
+          "convergence_warnings": 1
+        },
+        "Utrecht": {
+          "n": 240,
+          "risk_count": 7,
+          "risk_prevalence": 0.029166666666666667,
+          "average_precision": 0.2835380500688375,
+          "roc_auc": 0.8638871857755978,
+          "convergence_warnings": 1
+        },
+        "Zwolle": {
+          "n": 240,
+          "risk_count": 10,
+          "risk_prevalence": 0.041666666666666664,
+          "average_precision": 0.1702748681049065,
+          "roc_auc": 0.8047826086956522,
+          "convergence_warnings": 1
+        }
+      },
+      "oof_routing": {
+        "clouds": 2400,
+        "buildings": 200,
+        "primary_capped_loss_10m": 0.7732156490148875,
+        "delta_vs_raw_m": -0.47286251079496217,
+        "loss_improved_over_2cm": 759,
+        "loss_harmed_over_2cm": 86,
+        "loss_harmed_over_20cm": 26,
+        "native_success": 2347,
+        "new_failures": 0,
+        "common_positive_ridge_clouds": 1500,
+        "ridge_f1": 0.5537285164179563,
+        "ridge_improved_over_point2": 191,
+        "ridge_harmed_over_point2": 32,
+        "teacher_positive_no_predicted_ridges": 469,
+        "loss_improved_but_still_no_ridges": 132,
+        "fallback_count": 240
+      },
+      "full_fit_convergence_warnings": 1
+    }
+  },
+  "retrospective_test": {
+    "logistic": {
+      "n": 2400,
+      "risk_count": 55,
+      "risk_prevalence": 0.022916666666666665,
+      "average_precision": 0.07185258067849228,
+      "roc_auc": 0.7950765652258189,
+      "warning": {
+        "threshold": 0.7463914550175956,
+        "warning_count": 222,
+        "warning_fraction": 0.0925,
+        "caught_risk_count": 14,
+        "precision": 0.06306306306306306,
+        "recall": 0.2545454545454545
+      },
+      "exploratory_routing": {
+        "clouds": 2400,
+        "buildings": 200,
+        "primary_capped_loss_10m": 0.6317050808138082,
+        "delta_vs_raw_m": -0.46233955074015265,
+        "loss_improved_over_2cm": 768,
+        "loss_harmed_over_2cm": 73,
+        "loss_harmed_over_20cm": 18,
+        "native_success": 2369,
+        "new_failures": 0,
+        "common_positive_ridge_clouds": 1332,
+        "ridge_f1": 0.6474604412072751,
+        "ridge_improved_over_point2": 240,
+        "ridge_harmed_over_point2": 23,
+        "teacher_positive_no_predicted_ridges": 294,
+        "loss_improved_but_still_no_ridges": 77,
+        "fallback_count": 222
+      }
+    },
+    "small_mlp": {
+      "n": 2400,
+      "risk_count": 55,
+      "risk_prevalence": 0.022916666666666665,
+      "average_precision": 0.08049993432410445,
+      "roc_auc": 0.7777088583058732,
+      "warning": {
+        "threshold": 0.01142784941518244,
+        "warning_count": 246,
+        "warning_fraction": 0.1025,
+        "caught_risk_count": 17,
+        "precision": 0.06910569105691057,
+        "recall": 0.3090909090909091
+      },
+      "exploratory_routing": {
+        "clouds": 2400,
+        "buildings": 200,
+        "primary_capped_loss_10m": 0.6160769162492205,
+        "delta_vs_raw_m": -0.4779677153047406,
+        "loss_improved_over_2cm": 774,
+        "loss_harmed_over_2cm": 62,
+        "loss_harmed_over_20cm": 16,
+        "native_success": 2369,
+        "new_failures": 0,
+        "common_positive_ridge_clouds": 1332,
+        "ridge_f1": 0.646570298642113,
+        "ridge_improved_over_point2": 235,
+        "ridge_harmed_over_point2": 23,
+        "teacher_positive_no_predicted_ridges": 304,
+        "loss_improved_but_still_no_ridges": 84,
+        "fallback_count": 246
+      }
+    }
+  },
+  "freeze_sha256": "6d20f9e0cc1ac82cf929419ed6f126ec8109b7f8171be7940930248e4d49954e",
+  "warning": "Existing test was already published. Exploratory transfer diagnostic, not a new independent confirmatory evaluation.",
+  "teacher_status": "same-source automatic synthetic reference",
+  "baseline_unrouted": {
+    "clouds": 2400,
+    "buildings": 200,
+    "primary_capped_loss_10m": 0.5123316077996094,
+    "delta_vs_raw_m": -0.5817130237543514,
+    "loss_improved_over_2cm": 950,
+    "loss_harmed_over_2cm": 97,
+    "loss_harmed_over_20cm": 28,
+    "native_success": 2369,
+    "new_failures": 0,
+    "common_positive_ridge_clouds": 1332,
+    "ridge_f1": 0.6609475685500078,
+    "ridge_improved_over_point2": 271,
+    "ridge_harmed_over_point2": 29,
+    "teacher_positive_no_predicted_ridges": 319,
+    "loss_improved_but_still_no_ridges": 121
+  },
+  "checkpoints_unchanged": true,
+  "compute": "CPU small models on Slurm; no point encoder or reconstruction retraining"
+}

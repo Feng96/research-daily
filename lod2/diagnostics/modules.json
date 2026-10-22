@@ -1,0 +1,117 @@
+{
+  "baseline_loss": 0.6132932403750257,
+  "rows": [
+    {
+      "method": "graph_10000_normal",
+      "loss": 0.615346347884463,
+      "delta_vs_graph10000": 0.002053107509437213,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.9799908424908425,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_masked",
+      "loss": 0.6163863894254391,
+      "delta_vs_graph10000": 0.0030931490504133574,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.9799908424908425,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_residual",
+      "loss": 0.6164924626190144,
+      "delta_vs_graph10000": 0.0031992222439886087,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.9799908424908425,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_geometry",
+      "loss": 0.6167866783298346,
+      "delta_vs_graph10000": 0.0034934379548088312,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.9799908424908425,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_attention",
+      "loss": 0.6177502434538136,
+      "delta_vs_graph10000": 0.0044570030787878245,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.9799908424908425,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_reweight",
+      "loss": 0.6194195436533475,
+      "delta_vs_graph10000": 0.006126303278321754,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.9799908424908425,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_density",
+      "loss": 0.6213717020247558,
+      "delta_vs_graph10000": 0.008078461649730029,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.98,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_wide",
+      "loss": 0.6227320783932764,
+      "delta_vs_graph10000": 0.009438838018250628,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.98,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_multiscale",
+      "loss": 0.6247053037610644,
+      "delta_vs_graph10000": 0.011412063386038618,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.98,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_strongaug",
+      "loss": 0.6260537954470474,
+      "delta_vs_graph10000": 0.012760555072021673,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.98,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    },
+    {
+      "method": "graph_10000_consistency",
+      "loss": 0.6318833163808873,
+      "delta_vs_graph10000": 0.0185900760058616,
+      "harmed_clean_buildings": 0,
+      "new_failures": 0,
+      "coverage": 0.978347323972324,
+      "eligible": true,
+      "reason": "source-screen only, one seed, 50 buildings; not a new test comparison"
+    }
+  ],
+  "original_promoted_modules": [],
+  "full_repeats_only_for_baseline_families": true
+}

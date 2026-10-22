@@ -1,0 +1,294 @@
+{
+  "features": [
+    "log_n",
+    "height_q10",
+    "height_q50",
+    "height_q90",
+    "height_span",
+    "xy_span_x",
+    "xy_span_y",
+    "log_density_bbox",
+    "xy_occupancy_raw",
+    "nn_distance50",
+    "nn_distance90",
+    "local_roughness50",
+    "local_roughness90",
+    "p_q10",
+    "p_q50",
+    "p_q90",
+    "p_entropy",
+    "p_threshold_near",
+    "seed_std_mean",
+    "seed_std90",
+    "seed_keep_disagreement",
+    "retained_fraction",
+    "xy_occupancy_retained",
+    "xy_cell_fraction_retained",
+    "height_retained_q10",
+    "height_retained_q90",
+    "raw_native_success",
+    "dl_native_success",
+    "raw_planes",
+    "dl_planes",
+    "plane_count_delta"
+  ],
+  "source": {
+    "logistic": {
+      "n": 2400,
+      "risk_count": 75,
+      "risk_prevalence": 0.03125,
+      "average_precision": 0.08459172520306721,
+      "roc_auc": 0.789121146953405,
+      "warning": {
+        "threshold": 0.7463914550175956,
+        "warning_count": 240,
+        "warning_fraction": 0.1,
+        "caught_risk_count": 25,
+        "precision": 0.10416666666666667,
+        "recall": 0.3333333333333333
+      },
+      "by_heldout_city": {
+        "Amersfoort": {
+          "n": 240,
+          "risk_count": 13,
+          "risk_prevalence": 0.05416666666666667,
+          "average_precision": 0.12430260834681617,
+          "roc_auc": 0.7099288376821417,
+          "convergence_warnings": 0
+        },
+        "Arnhem": {
+          "n": 240,
+          "risk_count": 9,
+          "risk_prevalence": 0.0375,
+          "average_precision": 0.10073621233909505,
+          "roc_auc": 0.7873977873977874,
+          "convergence_warnings": 0
+        },
+        "Delft": {
+          "n": 240,
+          "risk_count": 1,
+          "risk_prevalence": 0.004166666666666667,
+          "average_precision": 0.043478260869565216,
+          "roc_auc": 0.9079497907949791,
+          "convergence_warnings": 0
+        },
+        "Haarlem": {
+          "n": 240,
+          "risk_count": 3,
+          "risk_prevalence": 0.0125,
+          "average_precision": 0.06149425287356322,
+          "roc_auc": 0.8748241912798875,
+          "convergence_warnings": 0
+        },
+        "Leiden": {
+          "n": 240,
+          "risk_count": 4,
+          "risk_prevalence": 0.016666666666666666,
+          "average_precision": 0.05686804889315283,
+          "roc_auc": 0.8029661016949152,
+          "convergence_warnings": 0
+        },
+        "Nijmegen": {
+          "n": 240,
+          "risk_count": 12,
+          "risk_prevalence": 0.05,
+          "average_precision": 0.111827420952606,
+          "roc_auc": 0.7682748538011697,
+          "convergence_warnings": 0
+        },
+        "Rotterdam": {
+          "n": 240,
+          "risk_count": 11,
+          "risk_prevalence": 0.04583333333333333,
+          "average_precision": 0.11901596450716051,
+          "roc_auc": 0.7987296546248512,
+          "convergence_warnings": 0
+        },
+        "Tilburg": {
+          "n": 240,
+          "risk_count": 5,
+          "risk_prevalence": 0.020833333333333332,
+          "average_precision": 0.17127933311525392,
+          "roc_auc": 0.8502127659574468,
+          "convergence_warnings": 0
+        },
+        "Utrecht": {
+          "n": 240,
+          "risk_count": 7,
+          "risk_prevalence": 0.029166666666666667,
+          "average_precision": 0.30206624964459106,
+          "roc_auc": 0.8534641324340895,
+          "convergence_warnings": 0
+        },
+        "Zwolle": {
+          "n": 240,
+          "risk_count": 10,
+          "risk_prevalence": 0.041666666666666664,
+          "average_precision": 0.193624213836478,
+          "roc_auc": 0.8356521739130435,
+          "convergence_warnings": 0
+        }
+      },
+      "oof_routing": {
+        "clouds": 2400,
+        "buildings": 200,
+        "primary_capped_loss_10m": 0.7915187071809842,
+        "delta_vs_raw_m": -0.4545594526288655,
+        "loss_improved_over_2cm": 759,
+        "loss_harmed_over_2cm": 81,
+        "loss_harmed_over_20cm": 23,
+        "native_success": 2347,
+        "new_failures": 0,
+        "common_positive_ridge_clouds": 1500,
+        "ridge_f1": 0.5514485592915749,
+        "ridge_improved_over_point2": 187,
+        "ridge_harmed_over_point2": 31,
+        "teacher_positive_no_predicted_ridges": 459,
+        "loss_improved_but_still_no_ridges": 127,
+        "fallback_count": 240
+      },
+      "full_fit_convergence_warnings": 0
+    },
+    "small_mlp": {
+      "n": 2400,
+      "risk_count": 75,
+      "risk_prevalence": 0.03125,
+      "average_precision": 0.10313638044129261,
+      "roc_auc": 0.7600860215053764,
+      "warning": {
+        "threshold": 0.01142784941518244,
+        "warning_count": 240,
+        "warning_fraction": 0.1,
+        "caught_risk_count": 22,
+        "precision": 0.09166666666666666,
+        "recall": 0.29333333333333333
+      },
+      "by_heldout_city": {
+        "Amersfoort": {
+          "n": 240,
+          "risk_count": 13,
+          "risk_prevalence": 0.05416666666666667,
+          "average_precision": 0.11230933552560544,
+          "roc_auc": 0.6811250423585224,
+          "convergence_warnings": 1
+        },
+        "Arnhem": {
+          "n": 240,
+          "risk_count": 9,
+          "risk_prevalence": 0.0375,
+          "average_precision": 0.08515265126078411,
+          "roc_auc": 0.7787397787397787,
+          "convergence_warnings": 1
+        },
+        "Delft": {
+          "n": 240,
+          "risk_count": 1,
+          "risk_prevalence": 0.004166666666666667,
+          "average_precision": 0.018518518518518517,
+          "roc_auc": 0.7782426778242678,
+          "convergence_warnings": 1
+        },
+        "Haarlem": {
+          "n": 240,
+          "risk_count": 3,
+          "risk_prevalence": 0.0125,
+          "average_precision": 0.04031604054859869,
+          "roc_auc": 0.8045007032348804,
+          "convergence_warnings": 1
+        },
+        "Leiden": {
+          "n": 240,
+          "risk_count": 4,
+          "risk_prevalence": 0.016666666666666666,
+          "average_precision": 0.04594892812105926,
+          "roc_auc": 0.7817796610169491,
+          "convergence_warnings": 1
+        },
+        "Nijmegen": {
+          "n": 240,
+          "risk_count": 12,
+          "risk_prevalence": 0.05,
+          "average_precision": 0.3212337366446369,
+          "roc_auc": 0.8304093567251462,
+          "convergence_warnings": 1
+        },
+        "Rotterdam": {
+          "n": 240,
+          "risk_count": 11,
+          "risk_prevalence": 0.04583333333333333,
+          "average_precision": 0.16784222103502056,
+          "roc_auc": 0.7562524811433108,
+          "convergence_warnings": 1
+        },
+        "Tilburg": {
+          "n": 240,
+          "risk_count": 5,
+          "risk_prevalence": 0.020833333333333332,
+          "average_precision": 0.1292338515906285,
+          "roc_auc": 0.8374468085106384,
+          "convergence_warnings": 1
+        },
+        "Utrecht": {
+          "n": 240,
+          "risk_count": 7,
+          "risk_prevalence": 0.029166666666666667,
+          "average_precision": 0.2835380500688375,
+          "roc_auc": 0.8638871857755978,
+          "convergence_warnings": 1
+        },
+        "Zwolle": {
+          "n": 240,
+          "risk_count": 10,
+          "risk_prevalence": 0.041666666666666664,
+          "average_precision": 0.1702748681049065,
+          "roc_auc": 0.8047826086956522,
+          "convergence_warnings": 1
+        }
+      },
+      "oof_routing": {
+        "clouds": 2400,
+        "buildings": 200,
+        "primary_capped_loss_10m": 0.7732156490148875,
+        "delta_vs_raw_m": -0.47286251079496217,
+        "loss_improved_over_2cm": 759,
+        "loss_harmed_over_2cm": 86,
+        "loss_harmed_over_20cm": 26,
+        "native_success": 2347,
+        "new_failures": 0,
+        "common_positive_ridge_clouds": 1500,
+        "ridge_f1": 0.5537285164179563,
+        "ridge_improved_over_point2": 191,
+        "ridge_harmed_over_point2": 32,
+        "teacher_positive_no_predicted_ridges": 469,
+        "loss_improved_but_still_no_ridges": 132,
+        "fallback_count": 240
+      },
+      "full_fit_convergence_warnings": 1
+    }
+  },
+  "label": "delta capped loss >0.2m OR positive-teacher ridge F1 drop >0.2 OR new native failure versus raw",
+  "architecture": "fixed logistic and 31→32→16→1 MLP; no hyperparameter search",
+  "threshold": "90th percentile of source leave-one-city-out predictions, fixed 10% inspection budget",
+  "source_validation_was_used_in_previous_experiments": true,
+  "this_process_read_test_rows_before_freeze": false,
+  "main_model_reselected": false,
+  "inference_uses_teacher_labels": false,
+  "inference_uses_city_or_case_names": false,
+  "scope": "exploratory learned warning, not verified reconstruction improvement",
+  "source_paths_sha256": {
+    "/nfs/home/yfeng21/lod2_scaling_20261021/reports_reconstruction/validation_screen_summary.json": "886a5e20757223f959e8b2410862362c9c57c43a0d9ef093ac2f5dbd4b507fef",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/reports/source_screen_selection.json": "c650fdd967e1710d8bfae525874b311fbd4ac6788f4bca2e7dc5b0e43165f0e3",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/controlled/validation_preparation.json": "ec1300ceaaeed0b8e2d7a38ac643c7142ad227d2489b1553be32ff1c234718dc",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/controlled/validation_catalog.json": "7278c34a1114d28578cc03a6e767cd8eee9c76a5b11478aab8275ae306dde541",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/controlled/validation/x.npy": "f0dc12ae1e5a964655914dc45d5f06a92224e893bfc3aeae74a76101bb2460bf",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/controlled/validation/valid.npy": "2d15266abb320d8cee63bc2738ce058926b6032b29b942204262b928079ba4bd",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/predictions/validation/graph_20000_long_s20261031/results.json": "c612a6b64e49cf3891a255bdffabe50967cd68daecd87408bef171877b17a70f",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/predictions/validation/graph_20000_long_s20261031/probabilities.npz": "6c2673e2d4de14ebdae5e2342f86f3b0868d3cc05695cb184200d784c86b7a8e",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/predictions/validation/graph_20000_long_s20261101/results.json": "bc4195a1846c6dadf89f050a2d27721872dae1a8798677d20d573b0b2c1eca0d",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/predictions/validation/graph_20000_long_s20261101/probabilities.npz": "46a37afbafbb004a0bc089c77c3233b20b84b8e696faa6b3fea173e1b1ec9db7",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/predictions/validation/graph_20000_long_s20261102/results.json": "3c71f526d975223b1781962bd36e7a8864d4bd43159797c38be5b143f4a9c86d",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/predictions/validation/graph_20000_long_s20261102/probabilities.npz": "f88679c06c92247964ba11f9f39a91d5feec0d5f9f419b227ee7e3110aecb6c0",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/reports_reconstruction/evaluation/validation/full/raw.json": "399492ee427ecac66e687e2e315637a554ee5552c098f92eef38dde001e3add6",
+    "/nfs/home/yfeng21/lod2_scaling_20261021/reports_reconstruction/evaluation/validation/full/graph_20000_long_s20261031.json": "64dfd5750cc48a37f359e6ccdeeed6c4da4522d2cd3649fd06d183b0730ffb8d"
+  }
+}
