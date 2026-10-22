@@ -1,0 +1,10 @@
+{
+  "probability_file_sha256": "35f42d0a54ca9d5f601dab15dac6a04fdc1a51dcfb89fcfde5984a54f0624f04",
+  "source_checkpoint_sha256": "7d2fdd4c5dc5862e71d7f133839182c60bd03abc5b274214e6a947c6a878a964",
+  "probability_classes": [
+    "roof",
+    "vegetation_or_hedge",
+    "other"
+  ],
+  "derived_input_for_existing_DL_arm_only": true
+}

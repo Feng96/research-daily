@@ -1,0 +1,70 @@
+{
+  "schema": "matched-paper-core-v1",
+  "status": "frozen_before_run",
+  "config": {
+    "schema": "paper-naip-core-adaptation-v1",
+    "seeds": [
+      20261023,
+      20261024,
+      20261025
+    ],
+    "iterations": 900,
+    "cue_distance_m": 2.0,
+    "max_boundary_displacement_m": 2.0,
+    "compass_directions": 8,
+    "angle_tolerance_deg": 24.0,
+    "rho_quantization_m": 0.5,
+    "minimum_line_length_m": 3.0,
+    "maximum_image_lines_per_building": 180,
+    "minimum_edge_length_m": 1.5,
+    "minimum_face_area_ratio": 0.25,
+    "maximum_face_area_ratio": 2.0,
+    "boundary_fit_tolerance_m": 0.2,
+    "boundary_sigma_m": 0.5,
+    "homogeneity_penalty_m": 2.0,
+    "complexity_weight": 0.02,
+    "temperature_initial": 0.1,
+    "temperature_final": 0.001,
+    "image_loss_weight": 0.0,
+    "new_training": false,
+    "target_GT_input": false
+  },
+  "imagery": {
+    "path": "/nfs/home/yfeng21/lod2_pilot_20261017/data/imagery/naip2014_roi_rgbnir_epsg26985.tif",
+    "sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+    "crs": "EPSG:26985",
+    "pixel_size_m": 1.0,
+    "bands": [
+      "R",
+      "G",
+      "B"
+    ],
+    "actual_optical_input": true
+  },
+  "selected_ids": [
+    "usbf-v1-dc-row84575-osm-67521488",
+    "usbf-v1-dc-row84595-osm-67521431",
+    "usbf-v1-dc-row85199-osm-67521425",
+    "usbf-v1-dc-row84681-osm-67521385",
+    "usbf-v1-dc-row84655-osm-67521498",
+    "usbf-v1-dc-row84674-osm-67521381",
+    "usbf-v1-dc-row84898-osm-66347628",
+    "usbf-v1-dc-row84764-osm-67528254"
+  ],
+  "input_blocks": [
+    "raw",
+    "guarded"
+  ],
+  "initial_reconstruction": "one shared native execution per building/block",
+  "paper_adaptation": true,
+  "original_paper_reproduced": false,
+  "ours": "frozen point-MLP-guided local plane reassignment, not a new trained full correction model",
+  "new_training": false,
+  "target_GT": false,
+  "code_sha256": {
+    "config.json": "e4f2c2781b8dbad85b5d5e5e01aa311fae972f14b4e174fa2025c39c7309e580",
+    "progressive.py": "6fec6fc500febde04feb7c01d490c21be948485bf7dcda3644b61398643c811d",
+    "run_compare.py": "5bcaa554e764c35812a71dbdf7c5e4ff444f8cc64db415ddd0d3e2db67e7135f",
+    "local_repair.py": "c5dece23c001a986f05676fe185ab5c8417b5f5c794436a2ead01d7036ffa33b"
+  }
+}

@@ -1,0 +1,3186 @@
+{
+  "schema": "paper-naip-matched-v1",
+  "status": "complete",
+  "building_count": 8,
+  "paired_settings": 16,
+  "optimizer_seeds_per_setting": 3,
+  "original_paper_reproduced": false,
+  "core_idea_adaptation_implemented": true,
+  "new_training": false,
+  "independent_US_GT": false,
+  "blocks": {
+    "raw": {
+      "initial": {
+        "changed_buildings": 0,
+        "shell_passed": 8,
+        "changed_and_shell_passed": 0,
+        "reassigned_components": 0,
+        "total_partition_change_m2": 0.0
+      },
+      "paper": {
+        "changed_buildings": 2,
+        "shell_passed": 8,
+        "changed_and_shell_passed": 2,
+        "reassigned_components": 0,
+        "total_partition_change_m2": 28.0542459881405
+      },
+      "ours": {
+        "changed_buildings": 2,
+        "shell_passed": 7,
+        "changed_and_shell_passed": 1,
+        "reassigned_components": 3,
+        "total_partition_change_m2": 0.09065067750315486
+      }
+    },
+    "guarded": {
+      "initial": {
+        "changed_buildings": 0,
+        "shell_passed": 8,
+        "changed_and_shell_passed": 0,
+        "reassigned_components": 0,
+        "total_partition_change_m2": 0.0
+      },
+      "paper": {
+        "changed_buildings": 2,
+        "shell_passed": 8,
+        "changed_and_shell_passed": 2,
+        "reassigned_components": 0,
+        "total_partition_change_m2": 4.648577868276073
+      },
+      "ours": {
+        "changed_buildings": 2,
+        "shell_passed": 7,
+        "changed_and_shell_passed": 1,
+        "reassigned_components": 2,
+        "total_partition_change_m2": 0.13705883235669994
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "block": "raw",
+      "input": {
+        "id": "usbf-v1-dc-row84575-osm-67521488",
+        "block": "raw",
+        "original_XYZ_sha256": "68936c855e8e0697d5d399b6d4622d90ef8c9946d64a03cf7d55869e84f7da53",
+        "all_source_indices_sha256": "c5eb1c20e3a24cc719f324a79d19bc47ce34446e037b41679d4a6e9604955250",
+        "shared_selected_source_indices_sha256": "c5eb1c20e3a24cc719f324a79d19bc47ce34446e037b41679d4a6e9604955250",
+        "shared_point_count": 11321,
+        "shared_footprint_sha256": "fd9aa7360ae0f65a142cc6c8087b4f05fec4b40a87ca57ef53ee0812d9d888a4",
+        "shared_initial_model_sha256": "b08b342f1830a6d45143caf51aa2fdb82b52e9d9e2295de0378ae1a13a224aaa",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 886,
+              "noded_unique_edges": 443,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 443,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 13,
+            "roof_vertices": 183,
+            "original_candidate_point_count": 11321,
+            "original_echo_coverage": 0.9997350057415423,
+            "original_echo_mean_absolute_residual_m": 0.7727179878909164,
+            "original_echo_median_absolute_residual_m": 0.0409768647977522,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 1460.1352820002212,
+            "area_after_m2": 1460.1352820002212
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 886,
+              "noded_unique_edges": 443,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 443,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 13,
+            "roof_vertices": 183,
+            "original_candidate_point_count": 11321,
+            "original_echo_coverage": 0.9993816800635986,
+            "original_echo_mean_absolute_residual_m": 0.760241685021957,
+            "original_echo_median_absolute_residual_m": 0.040752595250893364,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 1.4323007312859488,
+            "mean_common_grid_height_change_m": 0.016840253596076146,
+            "changed_partition_area_m2": 27.300123108724776,
+            "symmetric_difference_area_m2": 10.629907539718607,
+            "hausdorff_displacement_m": 0.6429666347967319,
+            "area_before_m2": 1460.1352820002212,
+            "area_after_m2": 1470.5314535010102
+          },
+          "changed": true,
+          "seed": 20261025,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.9522943405845898,
+                "closeness": 0.706440823181519,
+                "complexity": 12.292675870153541,
+                "observations": 4940
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.9350222460925579
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.9522943405845898,
+                "closeness": 0.706440823181519,
+                "complexity": 12.292675870153541,
+                "observations": 4940
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.8437046175822616
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.9283934955616174,
+                "closeness": 0.6838492540837169,
+                "complexity": 12.227212073895029,
+                "observations": 4940
+              },
+              "quality_passed": true,
+              "changed": true,
+              "seconds": 0.8474787632003427
+            }
+          ],
+          "initial_energy": {
+            "total": 0.9522943405845898,
+            "closeness": 0.706440823181519,
+            "complexity": 12.292675870153541,
+            "observations": 4940
+          },
+          "final_energy": {
+            "total": 0.9283934955616174,
+            "closeness": 0.6838492540837169,
+            "complexity": 12.227212073895029,
+            "observations": 4940
+          },
+          "proposal_counts": {
+            "no_image_pair": 399,
+            "Q1_line": 163,
+            "Q3_corner": 179,
+            "invalid_proposal": 365,
+            "Q2_compass": 159,
+            "invalid_partition": 85
+          },
+          "accepted_counts": {
+            "Q1_line": 29,
+            "Q2_compass": 4,
+            "Q3_corner": 1
+          },
+          "image_lines": 100,
+          "image_corners": 3
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 886,
+              "noded_unique_edges": 443,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 443,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 13,
+            "roof_vertices": 183,
+            "original_candidate_point_count": 11321,
+            "original_echo_coverage": 0.9997350057415423,
+            "original_echo_mean_absolute_residual_m": 0.7727179878909164,
+            "original_echo_median_absolute_residual_m": 0.0409768647977522,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 1460.1352820002212,
+            "area_after_m2": 1460.1352820002212
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "block": "guarded",
+      "input": {
+        "id": "usbf-v1-dc-row84575-osm-67521488",
+        "block": "guarded",
+        "original_XYZ_sha256": "68936c855e8e0697d5d399b6d4622d90ef8c9946d64a03cf7d55869e84f7da53",
+        "all_source_indices_sha256": "c5eb1c20e3a24cc719f324a79d19bc47ce34446e037b41679d4a6e9604955250",
+        "shared_selected_source_indices_sha256": "396fdb3f042ae755e0cd030996a1344652f7bdced33371d8f5a36982f59be3a0",
+        "shared_point_count": 11091,
+        "shared_footprint_sha256": "fd9aa7360ae0f65a142cc6c8087b4f05fec4b40a87ca57ef53ee0812d9d888a4",
+        "shared_initial_model_sha256": "064867486496489e3d583fcf9b73639cb38eab42643d6e1f2d5b6f8ca4ea50f6",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 910,
+              "noded_unique_edges": 455,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 455,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 13,
+            "roof_vertices": 185,
+            "original_candidate_point_count": 11321,
+            "original_echo_coverage": 0.9997350057415423,
+            "original_echo_mean_absolute_residual_m": 0.7775460052750851,
+            "original_echo_median_absolute_residual_m": 0.04031015779112579,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 1459.9809429999552,
+            "area_after_m2": 1459.9809429999552
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 910,
+              "noded_unique_edges": 455,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 455,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 13,
+            "roof_vertices": 185,
+            "original_candidate_point_count": 11321,
+            "original_echo_coverage": 0.9997350057415423,
+            "original_echo_mean_absolute_residual_m": 0.7737807874681993,
+            "original_echo_median_absolute_residual_m": 0.04029794497926886,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 3.592077087651816,
+            "mean_common_grid_height_change_m": 0.006304561257512629,
+            "changed_partition_area_m2": 3.151795395773158,
+            "symmetric_difference_area_m2": 0.10658291828486455,
+            "hausdorff_displacement_m": 0.15146010373534544,
+            "area_before_m2": 1459.9809429999552,
+            "area_after_m2": 1459.978268001283
+          },
+          "changed": true,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.8507468538841652,
+                "closeness": 0.6046298289226231,
+                "complexity": 12.305851248077106,
+                "observations": 4921
+              },
+              "quality_passed": true,
+              "changed": true,
+              "seconds": 0.9017924107611179
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.8867178203063805,
+                "closeness": 0.6393547035784365,
+                "complexity": 12.3681558363972,
+                "observations": 4921
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.8554919641464949
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.8867178203063805,
+                "closeness": 0.6393547035784365,
+                "complexity": 12.3681558363972,
+                "observations": 4921
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.9039951348677278
+            }
+          ],
+          "initial_energy": {
+            "total": 0.8867178203063805,
+            "closeness": 0.6393547035784365,
+            "complexity": 12.3681558363972,
+            "observations": 4921
+          },
+          "final_energy": {
+            "total": 0.8507468538841652,
+            "closeness": 0.6046298289226231,
+            "complexity": 12.305851248077106,
+            "observations": 4921
+          },
+          "proposal_counts": {
+            "Q2_compass": 142,
+            "invalid_proposal": 325,
+            "Q3_corner": 162,
+            "Q1_line": 168,
+            "no_image_pair": 428,
+            "invalid_partition": 83
+          },
+          "accepted_counts": {
+            "Q1_line": 39,
+            "Q2_compass": 9
+          },
+          "image_lines": 100,
+          "image_corners": 3
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 892,
+              "noded_unique_edges": 446,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 446,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 13,
+            "roof_vertices": 185,
+            "original_candidate_point_count": 11321,
+            "original_echo_coverage": 0.9997350057415423,
+            "original_echo_mean_absolute_residual_m": 0.78091040772694,
+            "original_echo_median_absolute_residual_m": 0.0402915365690113,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 8.78601301947132,
+            "mean_common_grid_height_change_m": 0.015238730147621365,
+            "changed_partition_area_m2": 0.08643778171981875,
+            "symmetric_difference_area_m2": 0.062367454020331205,
+            "hausdorff_displacement_m": 0.0003753595325236913,
+            "area_before_m2": 1459.9809429999552,
+            "area_after_m2": 1459.9809430008804
+          },
+          "changed": true,
+          "reassigned_components": 1
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "block": "raw",
+      "input": {
+        "id": "usbf-v1-dc-row84595-osm-67521431",
+        "block": "raw",
+        "original_XYZ_sha256": "72d96582843b9eb12568c9c2ec8ecff628517c7bc502d4ac839847fb7e31a226",
+        "all_source_indices_sha256": "33e2c238aaf181e8664b672dd1c8dffdbca9de6285fd74e5b024abc0b65da7bb",
+        "shared_selected_source_indices_sha256": "33e2c238aaf181e8664b672dd1c8dffdbca9de6285fd74e5b024abc0b65da7bb",
+        "shared_point_count": 1280,
+        "shared_footprint_sha256": "7fc6fe874df4b4b27f8565c3ab3d28065816bbe8aa41d972d3fbc600ba28c0a0",
+        "shared_initial_model_sha256": "19da25f4c3bf9877f88835d9f5009a3743dc4236eb6d21f92d1e05b49f36e9dc",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 76,
+              "noded_unique_edges": 38,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 38,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 3,
+            "roof_vertices": 16,
+            "original_candidate_point_count": 1280,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 1.0702682025556134,
+            "original_echo_median_absolute_residual_m": 0.048233810102505714,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 293.0102144999459,
+            "area_after_m2": 293.0102144999459
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 76,
+              "noded_unique_edges": 38,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 38,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 3,
+            "roof_vertices": 16,
+            "original_candidate_point_count": 1280,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 1.0702682025556134,
+            "original_echo_median_absolute_residual_m": 0.048233810102505714,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 293.0102144999459,
+            "area_after_m2": 293.0102144999459
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.5933066390351207,
+                "closeness": 0.43437270698452474,
+                "complexity": 7.9466966025298005,
+                "observations": 952
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.22764724120497704
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.5933066390351207,
+                "closeness": 0.43437270698452474,
+                "complexity": 7.9466966025298005,
+                "observations": 952
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.21605658158659935
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.5933066390351207,
+                "closeness": 0.43437270698452474,
+                "complexity": 7.9466966025298005,
+                "observations": 952
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.1877431608736515
+            }
+          ],
+          "initial_energy": {
+            "total": 0.5933066390351207,
+            "closeness": 0.43437270698452474,
+            "complexity": 7.9466966025298005,
+            "observations": 952
+          },
+          "final_energy": {
+            "total": 0.5933066390351207,
+            "closeness": 0.43437270698452474,
+            "complexity": 7.9466966025298005,
+            "observations": 952
+          },
+          "proposal_counts": {
+            "Q1_line": 259,
+            "Q3_corner": 225,
+            "invalid_proposal": 486,
+            "no_image_pair": 199,
+            "Q2_compass": 217,
+            "invalid_partition": 153
+          },
+          "accepted_counts": {
+            "Q2_compass": 3,
+            "Q1_line": 6
+          },
+          "image_lines": 21,
+          "image_corners": 1
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 76,
+              "noded_unique_edges": 38,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 38,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 3,
+            "roof_vertices": 16,
+            "original_candidate_point_count": 1280,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 1.0702682025556134,
+            "original_echo_median_absolute_residual_m": 0.048233810102505714,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 293.0102144999459,
+            "area_after_m2": 293.0102144999459
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "block": "guarded",
+      "input": {
+        "id": "usbf-v1-dc-row84595-osm-67521431",
+        "block": "guarded",
+        "original_XYZ_sha256": "72d96582843b9eb12568c9c2ec8ecff628517c7bc502d4ac839847fb7e31a226",
+        "all_source_indices_sha256": "33e2c238aaf181e8664b672dd1c8dffdbca9de6285fd74e5b024abc0b65da7bb",
+        "shared_selected_source_indices_sha256": "6adaca4e32bc75d14761c0654e972719687f5ed239c78974faa593e9d72e62d2",
+        "shared_point_count": 1177,
+        "shared_footprint_sha256": "7fc6fe874df4b4b27f8565c3ab3d28065816bbe8aa41d972d3fbc600ba28c0a0",
+        "shared_initial_model_sha256": "94648c6107d3b8760193432da364df338a362f2a245dc9056e2baa52adeb7292",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 50,
+              "noded_unique_edges": 25,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 25,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 10,
+            "original_candidate_point_count": 1280,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 1.0764183413659214,
+            "original_echo_median_absolute_residual_m": 0.04845862835137282,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 293.0189639998879,
+            "area_after_m2": 293.0189639998879
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 50,
+              "noded_unique_edges": 25,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 25,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 10,
+            "original_candidate_point_count": 1280,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 1.0764183413659214,
+            "original_echo_median_absolute_residual_m": 0.04845862835137282,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 293.0189639998879,
+            "area_after_m2": 293.0189639998879
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.20493394630162148,
+                "closeness": 0.0957419003798856,
+                "complexity": 5.459602296086794,
+                "observations": 885
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.19680034928023815
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.20493394630162148,
+                "closeness": 0.0957419003798856,
+                "complexity": 5.459602296086794,
+                "observations": 885
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.1995856910943985
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.20493394630162148,
+                "closeness": 0.0957419003798856,
+                "complexity": 5.459602296086794,
+                "observations": 885
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.2101525515317917
+            }
+          ],
+          "initial_energy": {
+            "total": 0.20493394630162148,
+            "closeness": 0.0957419003798856,
+            "complexity": 5.459602296086794,
+            "observations": 885
+          },
+          "final_energy": {
+            "total": 0.20493394630162148,
+            "closeness": 0.0957419003798856,
+            "complexity": 5.459602296086794,
+            "observations": 885
+          },
+          "proposal_counts": {
+            "no_image_pair": 164,
+            "Q2_compass": 248,
+            "Q3_corner": 263,
+            "invalid_proposal": 542,
+            "Q1_line": 225,
+            "invalid_partition": 150
+          },
+          "accepted_counts": {
+            "Q2_compass": 4,
+            "Q1_line": 5
+          },
+          "image_lines": 21,
+          "image_corners": 1
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 50,
+              "noded_unique_edges": 25,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 25,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 10,
+            "original_candidate_point_count": 1280,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 1.0764183413659214,
+            "original_echo_median_absolute_residual_m": 0.04845862835137282,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 293.0189639998879,
+            "area_after_m2": 293.0189639998879
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "block": "raw",
+      "input": {
+        "id": "usbf-v1-dc-row85199-osm-67521425",
+        "block": "raw",
+        "original_XYZ_sha256": "d2b792ae6584e6255a1dca8cf48560e9ca923bc56511d1cc63f2a362746c7ec6",
+        "all_source_indices_sha256": "2d4efd5853a7612c7c9e8cc5848f949c52f8d48f2eabe17886bb19f5159e33db",
+        "shared_selected_source_indices_sha256": "2d4efd5853a7612c7c9e8cc5848f949c52f8d48f2eabe17886bb19f5159e33db",
+        "shared_point_count": 5400,
+        "shared_footprint_sha256": "f39f2a87b67972e9494bf2fdddfa099da174b129bc73409d2c290c1896fb0c02",
+        "shared_initial_model_sha256": "3ac70beaadf0eb9711bd06d6b34351a9c9c93c3000a3842b866133b893ff7668",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 246,
+              "noded_unique_edges": 123,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 123,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 6,
+            "roof_vertices": 69,
+            "original_candidate_point_count": 5400,
+            "original_echo_coverage": 0.9998148148148148,
+            "original_echo_mean_absolute_residual_m": 0.4048052424751197,
+            "original_echo_median_absolute_residual_m": 0.08588527571887283,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 1507.7819470005143,
+            "area_after_m2": 1507.7819470005143
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 246,
+              "noded_unique_edges": 123,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 123,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 6,
+            "roof_vertices": 69,
+            "original_candidate_point_count": 5400,
+            "original_echo_coverage": 0.9998148148148148,
+            "original_echo_mean_absolute_residual_m": 0.4048052424751197,
+            "original_echo_median_absolute_residual_m": 0.08588527571887283,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 1507.7819470005143,
+            "area_after_m2": 1507.7819470005143
+          },
+          "changed": false,
+          "seed": 20261024,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 1.6958658266388595,
+                "closeness": 1.4662751381757289,
+                "complexity": 11.47953442315654,
+                "observations": 1580
+              },
+              "quality_passed": false,
+              "changed": true,
+              "seconds": 0.41498539969325066
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 1.7088614243054168,
+                "closeness": 1.4901819753413716,
+                "complexity": 10.933972448202251,
+                "observations": 1580
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.42864707857370377
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 1.5856344309764525,
+                "closeness": 1.3590825628566554,
+                "complexity": 11.327593405989852,
+                "observations": 1580
+              },
+              "quality_passed": false,
+              "changed": true,
+              "seconds": 0.3774334816262126
+            }
+          ],
+          "initial_energy": {
+            "total": 1.7088614243054168,
+            "closeness": 1.4901819753413716,
+            "complexity": 10.933972448202251,
+            "observations": 1580
+          },
+          "final_energy": {
+            "total": 1.7088614243054168,
+            "closeness": 1.4901819753413716,
+            "complexity": 10.933972448202251,
+            "observations": 1580
+          },
+          "proposal_counts": {
+            "no_image_pair": 408,
+            "Q2_compass": 153,
+            "invalid_proposal": 352,
+            "Q1_line": 160,
+            "Q3_corner": 179,
+            "invalid_partition": 90
+          },
+          "accepted_counts": {
+            "Q2_compass": 7,
+            "Q3_corner": 2,
+            "Q1_line": 24
+          },
+          "image_lines": 60,
+          "image_corners": 2
+        },
+        "ours": {
+          "quality": {
+            "passed": false,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 236,
+              "noded_unique_edges": 118,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 3,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 115,
+              "all_edges_have_two_incidences": false,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 6,
+            "roof_vertices": 71,
+            "original_candidate_point_count": 5400,
+            "original_echo_coverage": 0.9998148148148148,
+            "original_echo_mean_absolute_residual_m": 0.44353295541974147,
+            "original_echo_median_absolute_residual_m": 0.08624826280637876,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 7.073078740132196,
+            "mean_common_grid_height_change_m": 0.05790135657375468,
+            "changed_partition_area_m2": 0.05062105063688118,
+            "symmetric_difference_area_m2": 0.026604873521697735,
+            "hausdorff_displacement_m": 0.00043028889854784884,
+            "area_before_m2": 1507.7819470005143,
+            "area_after_m2": 1507.7819470009615
+          },
+          "changed": true,
+          "reassigned_components": 1
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "block": "guarded",
+      "input": {
+        "id": "usbf-v1-dc-row85199-osm-67521425",
+        "block": "guarded",
+        "original_XYZ_sha256": "d2b792ae6584e6255a1dca8cf48560e9ca923bc56511d1cc63f2a362746c7ec6",
+        "all_source_indices_sha256": "2d4efd5853a7612c7c9e8cc5848f949c52f8d48f2eabe17886bb19f5159e33db",
+        "shared_selected_source_indices_sha256": "2d4efd5853a7612c7c9e8cc5848f949c52f8d48f2eabe17886bb19f5159e33db",
+        "shared_point_count": 5400,
+        "shared_footprint_sha256": "f39f2a87b67972e9494bf2fdddfa099da174b129bc73409d2c290c1896fb0c02",
+        "shared_initial_model_sha256": "3ac70beaadf0eb9711bd06d6b34351a9c9c93c3000a3842b866133b893ff7668",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": true,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 246,
+              "noded_unique_edges": 123,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 123,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 6,
+            "roof_vertices": 69,
+            "original_candidate_point_count": 5400,
+            "original_echo_coverage": 0.9998148148148148,
+            "original_echo_mean_absolute_residual_m": 0.4048052424751197,
+            "original_echo_median_absolute_residual_m": 0.08588527571887283,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 1507.7819470005143,
+            "area_after_m2": 1507.7819470005143
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 246,
+              "noded_unique_edges": 123,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 123,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 6,
+            "roof_vertices": 69,
+            "original_candidate_point_count": 5400,
+            "original_echo_coverage": 0.9998148148148148,
+            "original_echo_mean_absolute_residual_m": 0.4048052424751197,
+            "original_echo_median_absolute_residual_m": 0.08588527571887283,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 1507.7819470005143,
+            "area_after_m2": 1507.7819470005143
+          },
+          "changed": false,
+          "seed": 20261024,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 1.6958658266388595,
+                "closeness": 1.4662751381757289,
+                "complexity": 11.47953442315654,
+                "observations": 1580
+              },
+              "quality_passed": false,
+              "changed": true,
+              "seconds": 0.4157669432461262
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 1.7088614243054168,
+                "closeness": 1.4901819753413716,
+                "complexity": 10.933972448202251,
+                "observations": 1580
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.42337240651249886
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 1.5856344309764525,
+                "closeness": 1.3590825628566554,
+                "complexity": 11.327593405989852,
+                "observations": 1580
+              },
+              "quality_passed": false,
+              "changed": true,
+              "seconds": 0.39010112453252077
+            }
+          ],
+          "initial_energy": {
+            "total": 1.7088614243054168,
+            "closeness": 1.4901819753413716,
+            "complexity": 10.933972448202251,
+            "observations": 1580
+          },
+          "final_energy": {
+            "total": 1.7088614243054168,
+            "closeness": 1.4901819753413716,
+            "complexity": 10.933972448202251,
+            "observations": 1580
+          },
+          "proposal_counts": {
+            "no_image_pair": 408,
+            "Q2_compass": 153,
+            "invalid_proposal": 352,
+            "Q1_line": 160,
+            "Q3_corner": 179,
+            "invalid_partition": 90
+          },
+          "accepted_counts": {
+            "Q2_compass": 7,
+            "Q3_corner": 2,
+            "Q1_line": 24
+          },
+          "image_lines": 60,
+          "image_corners": 2
+        },
+        "ours": {
+          "quality": {
+            "passed": false,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 236,
+              "noded_unique_edges": 118,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 3,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 115,
+              "all_edges_have_two_incidences": false,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 6,
+            "roof_vertices": 71,
+            "original_candidate_point_count": 5400,
+            "original_echo_coverage": 0.9998148148148148,
+            "original_echo_mean_absolute_residual_m": 0.44353295541974147,
+            "original_echo_median_absolute_residual_m": 0.08624826280637876,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 7.073078740132196,
+            "mean_common_grid_height_change_m": 0.05790135657375468,
+            "changed_partition_area_m2": 0.05062105063688118,
+            "symmetric_difference_area_m2": 0.026604873521697735,
+            "hausdorff_displacement_m": 0.00043028889854784884,
+            "area_before_m2": 1507.7819470005143,
+            "area_after_m2": 1507.7819470009615
+          },
+          "changed": true,
+          "reassigned_components": 1
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "block": "raw",
+      "input": {
+        "id": "usbf-v1-dc-row84681-osm-67521385",
+        "block": "raw",
+        "original_XYZ_sha256": "61b3de549cadbc53798b90692b84c901742e183458ce966b523f24f4bd6df6f8",
+        "all_source_indices_sha256": "fdb22206819285f254ed20dbf728986e31876196a0c40b60a1c059a093e7ae99",
+        "shared_selected_source_indices_sha256": "fdb22206819285f254ed20dbf728986e31876196a0c40b60a1c059a093e7ae99",
+        "shared_point_count": 1793,
+        "shared_footprint_sha256": "0845e716c51457a0b110ed7cb9e274ae017a1b4aef00791a2e8e790e6aeebf6e",
+        "shared_initial_model_sha256": "0db56684c49563e19ec0f1003976e3bdc41e4288f84a8b87bf6ecfdf5c5c5fe0",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 176,
+              "noded_unique_edges": 88,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 88,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 6,
+            "roof_vertices": 41,
+            "original_candidate_point_count": 1793,
+            "original_echo_coverage": 0.9994422755158952,
+            "original_echo_mean_absolute_residual_m": 1.4327613371794246,
+            "original_echo_median_absolute_residual_m": 0.05610951466707803,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 186.36885949979828,
+            "area_after_m2": 186.36885949979828
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 176,
+              "noded_unique_edges": 88,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 88,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 6,
+            "roof_vertices": 41,
+            "original_candidate_point_count": 1793,
+            "original_echo_coverage": 0.9899609592861126,
+            "original_echo_mean_absolute_residual_m": 1.4161516715017288,
+            "original_echo_median_absolute_residual_m": 0.05519481905265877,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 6.236416557411047,
+            "mean_common_grid_height_change_m": 0.0017395862093002104,
+            "changed_partition_area_m2": 0.7541228794157235,
+            "symmetric_difference_area_m2": 0.7413743614394617,
+            "hausdorff_displacement_m": 0.15562331745721972,
+            "area_before_m2": 186.36885949979828,
+            "area_after_m2": 185.65019649999113
+          },
+          "changed": true,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 1.6413776993571674,
+                "closeness": 1.4428797426723958,
+                "complexity": 9.924897834238577,
+                "observations": 1594
+              },
+              "quality_passed": true,
+              "changed": true,
+              "seconds": 0.20306930784136057
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 1.6420068104650434,
+                "closeness": 1.443508844777497,
+                "complexity": 9.924898284377312,
+                "observations": 1594
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.2185211693868041
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 1.6420068104650434,
+                "closeness": 1.443508844777497,
+                "complexity": 9.924898284377312,
+                "observations": 1594
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.17720059119164944
+            }
+          ],
+          "initial_energy": {
+            "total": 1.6420068104650434,
+            "closeness": 1.443508844777497,
+            "complexity": 9.924898284377312,
+            "observations": 1594
+          },
+          "final_energy": {
+            "total": 1.6413776993571674,
+            "closeness": 1.4428797426723958,
+            "complexity": 9.924897834238577,
+            "observations": 1594
+          },
+          "proposal_counts": {
+            "no_image_pair": 397,
+            "Q2_compass": 165,
+            "invalid_proposal": 377,
+            "Q3_corner": 164,
+            "Q1_line": 174,
+            "invalid_partition": 92
+          },
+          "accepted_counts": {
+            "Q1_line": 19,
+            "Q2_compass": 1
+          },
+          "image_lines": 20,
+          "image_corners": 3
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 152,
+              "noded_unique_edges": 76,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 76,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 6,
+            "roof_vertices": 41,
+            "original_candidate_point_count": 1793,
+            "original_echo_coverage": 0.9988845510317903,
+            "original_echo_mean_absolute_residual_m": 1.4544898492668805,
+            "original_echo_median_absolute_residual_m": 0.054753692728127135,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 6.340219837275711,
+            "mean_common_grid_height_change_m": 0.18432112180449875,
+            "changed_partition_area_m2": 0.04002962686627368,
+            "symmetric_difference_area_m2": 0.027281108890019126,
+            "hausdorff_displacement_m": 0.0006200008944106714,
+            "area_before_m2": 186.36885949979828,
+            "area_after_m2": 186.3688594999867
+          },
+          "changed": true,
+          "reassigned_components": 2
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "block": "guarded",
+      "input": {
+        "id": "usbf-v1-dc-row84681-osm-67521385",
+        "block": "guarded",
+        "original_XYZ_sha256": "61b3de549cadbc53798b90692b84c901742e183458ce966b523f24f4bd6df6f8",
+        "all_source_indices_sha256": "fdb22206819285f254ed20dbf728986e31876196a0c40b60a1c059a093e7ae99",
+        "shared_selected_source_indices_sha256": "4a6c2f21c7f7d60a7a1199dedbe50d488f831cf15fddaab4367f0cf7c659b219",
+        "shared_point_count": 1782,
+        "shared_footprint_sha256": "0845e716c51457a0b110ed7cb9e274ae017a1b4aef00791a2e8e790e6aeebf6e",
+        "shared_initial_model_sha256": "3e00ff17eae135fa47a158171b07e31c841b90223afcedcf70b965a4a41a4ad2",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 80,
+              "noded_unique_edges": 40,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 40,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 16,
+            "original_candidate_point_count": 1793,
+            "original_echo_coverage": 0.9988845510317903,
+            "original_echo_mean_absolute_residual_m": 1.427689366730727,
+            "original_echo_median_absolute_residual_m": 0.05589317478742828,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 186.3573889993908,
+            "area_after_m2": 186.3573889993908
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 80,
+              "noded_unique_edges": 40,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 40,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 16,
+            "original_candidate_point_count": 1793,
+            "original_echo_coverage": 0.9854991634132738,
+            "original_echo_mean_absolute_residual_m": 1.397879320437508,
+            "original_echo_median_absolute_residual_m": 0.05434921450607533,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 4.618527782440651e-13,
+            "mean_common_grid_height_change_m": 1.194432088629041e-13,
+            "changed_partition_area_m2": 1.496782472502915,
+            "symmetric_difference_area_m2": 1.4909487885145387,
+            "hausdorff_displacement_m": 0.17261075799977801,
+            "area_before_m2": 186.3573889993908,
+            "area_after_m2": 184.88796899988472
+          },
+          "changed": true,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.3036085377225339,
+                "closeness": 0.17166747065097157,
+                "complexity": 6.597053353578115,
+                "observations": 865
+              },
+              "quality_passed": true,
+              "changed": true,
+              "seconds": 0.16421968769282103
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.3047020321437385,
+                "closeness": 0.17276110259754135,
+                "complexity": 6.597046477309858,
+                "observations": 865
+              },
+              "quality_passed": true,
+              "changed": true,
+              "seconds": 0.16350895259529352
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.3047678186348649,
+                "closeness": 0.17282672544134553,
+                "complexity": 6.597054659675968,
+                "observations": 865
+              },
+              "quality_passed": true,
+              "changed": true,
+              "seconds": 0.16172641329467297
+            }
+          ],
+          "initial_energy": {
+            "total": 0.3058613130560695,
+            "closeness": 0.17392035738791528,
+            "complexity": 6.597047783407711,
+            "observations": 865
+          },
+          "final_energy": {
+            "total": 0.3036085377225339,
+            "closeness": 0.17166747065097157,
+            "complexity": 6.597053353578115,
+            "observations": 865
+          },
+          "proposal_counts": {
+            "no_image_pair": 301,
+            "Q2_compass": 185,
+            "invalid_proposal": 425,
+            "Q3_corner": 211,
+            "Q1_line": 203,
+            "invalid_partition": 128
+          },
+          "accepted_counts": {
+            "Q1_line": 12,
+            "Q2_compass": 2
+          },
+          "image_lines": 20,
+          "image_corners": 3
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 80,
+              "noded_unique_edges": 40,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 40,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 16,
+            "original_candidate_point_count": 1793,
+            "original_echo_coverage": 0.9988845510317903,
+            "original_echo_mean_absolute_residual_m": 1.427689366730727,
+            "original_echo_median_absolute_residual_m": 0.05589317478742828,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 186.3573889993908,
+            "area_after_m2": 186.3573889993908
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "block": "raw",
+      "input": {
+        "id": "usbf-v1-dc-row84655-osm-67521498",
+        "block": "raw",
+        "original_XYZ_sha256": "d7a8c5639c6cb771bea05b5132afd9c8c22b2e1899c198888be1b9a05d20d684",
+        "all_source_indices_sha256": "359fd8fbe97217425a694df0475e39a536ff729b130de55948d64ea59dfc0d20",
+        "shared_selected_source_indices_sha256": "359fd8fbe97217425a694df0475e39a536ff729b130de55948d64ea59dfc0d20",
+        "shared_point_count": 114,
+        "shared_footprint_sha256": "4ac4b7fbe53ad0ef3f972dbb041acc4df144eb016a44f89a6e0fc298f166e657",
+        "shared_initial_model_sha256": "78a510100077c4dc0171e9be00871208d8858b46ba5f42ac3ab5ab82e2995c0d",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 38,
+              "noded_unique_edges": 19,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 19,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 8,
+            "original_candidate_point_count": 114,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 0.08660192184267856,
+            "original_echo_median_absolute_residual_m": 0.042729368935955137,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 31.142107499773974,
+            "area_after_m2": 31.142107499773974
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 38,
+              "noded_unique_edges": 19,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 19,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 8,
+            "original_candidate_point_count": 114,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 0.08660192184267856,
+            "original_echo_median_absolute_residual_m": 0.042729368935955137,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 31.142107499773974,
+            "area_after_m2": 31.142107499773974
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.467408642390069,
+                "closeness": 0.3640053832021458,
+                "complexity": 5.170162959396159,
+                "observations": 259
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.07947907038033009
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.467408642390069,
+                "closeness": 0.3640053832021458,
+                "complexity": 5.170162959396159,
+                "observations": 259
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.08342843595892191
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.467408642390069,
+                "closeness": 0.3640053832021458,
+                "complexity": 5.170162959396159,
+                "observations": 259
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.09988769795745611
+            }
+          ],
+          "initial_energy": {
+            "total": 0.467408642390069,
+            "closeness": 0.3640053832021458,
+            "complexity": 5.170162959396159,
+            "observations": 259
+          },
+          "final_energy": {
+            "total": 0.467408642390069,
+            "closeness": 0.3640053832021458,
+            "complexity": 5.170162959396159,
+            "observations": 259
+          },
+          "proposal_counts": {
+            "Q1_line": 133,
+            "no_image_pair": 481,
+            "invalid_proposal": 309,
+            "Q3_corner": 152,
+            "Q2_compass": 134,
+            "invalid_partition": 66
+          },
+          "accepted_counts": {
+            "Q1_line": 1
+          },
+          "image_lines": 5,
+          "image_corners": 0
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 38,
+              "noded_unique_edges": 19,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 19,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 8,
+            "original_candidate_point_count": 114,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 0.08660192184267856,
+            "original_echo_median_absolute_residual_m": 0.042729368935955137,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 31.142107499773974,
+            "area_after_m2": 31.142107499773974
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "block": "guarded",
+      "input": {
+        "id": "usbf-v1-dc-row84655-osm-67521498",
+        "block": "guarded",
+        "original_XYZ_sha256": "d7a8c5639c6cb771bea05b5132afd9c8c22b2e1899c198888be1b9a05d20d684",
+        "all_source_indices_sha256": "359fd8fbe97217425a694df0475e39a536ff729b130de55948d64ea59dfc0d20",
+        "shared_selected_source_indices_sha256": "359fd8fbe97217425a694df0475e39a536ff729b130de55948d64ea59dfc0d20",
+        "shared_point_count": 114,
+        "shared_footprint_sha256": "4ac4b7fbe53ad0ef3f972dbb041acc4df144eb016a44f89a6e0fc298f166e657",
+        "shared_initial_model_sha256": "78a510100077c4dc0171e9be00871208d8858b46ba5f42ac3ab5ab82e2995c0d",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": true,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 38,
+              "noded_unique_edges": 19,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 19,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 8,
+            "original_candidate_point_count": 114,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 0.08660192184267856,
+            "original_echo_median_absolute_residual_m": 0.042729368935955137,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 31.142107499773974,
+            "area_after_m2": 31.142107499773974
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 38,
+              "noded_unique_edges": 19,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 19,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 8,
+            "original_candidate_point_count": 114,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 0.08660192184267856,
+            "original_echo_median_absolute_residual_m": 0.042729368935955137,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 31.142107499773974,
+            "area_after_m2": 31.142107499773974
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.467408642390069,
+                "closeness": 0.3640053832021458,
+                "complexity": 5.170162959396159,
+                "observations": 259
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.08056829497218132
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.467408642390069,
+                "closeness": 0.3640053832021458,
+                "complexity": 5.170162959396159,
+                "observations": 259
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.08662257622927427
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.467408642390069,
+                "closeness": 0.3640053832021458,
+                "complexity": 5.170162959396159,
+                "observations": 259
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.10003689955919981
+            }
+          ],
+          "initial_energy": {
+            "total": 0.467408642390069,
+            "closeness": 0.3640053832021458,
+            "complexity": 5.170162959396159,
+            "observations": 259
+          },
+          "final_energy": {
+            "total": 0.467408642390069,
+            "closeness": 0.3640053832021458,
+            "complexity": 5.170162959396159,
+            "observations": 259
+          },
+          "proposal_counts": {
+            "Q1_line": 133,
+            "no_image_pair": 481,
+            "invalid_proposal": 309,
+            "Q3_corner": 152,
+            "Q2_compass": 134,
+            "invalid_partition": 66
+          },
+          "accepted_counts": {
+            "Q1_line": 1
+          },
+          "image_lines": 5,
+          "image_corners": 0
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 38,
+              "noded_unique_edges": 19,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 19,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 8,
+            "original_candidate_point_count": 114,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 0.08660192184267856,
+            "original_echo_median_absolute_residual_m": 0.042729368935955137,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 31.142107499773974,
+            "area_after_m2": 31.142107499773974
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "block": "raw",
+      "input": {
+        "id": "usbf-v1-dc-row84674-osm-67521381",
+        "block": "raw",
+        "original_XYZ_sha256": "b4bae17557a4845b84c1a70550c3445fb484c852cdb79789efb9d2dee5c6b1ae",
+        "all_source_indices_sha256": "b7eb54cc7b4eda0bab21d46e3c4acb522ca9b35226087db591aabc57ff06b963",
+        "shared_selected_source_indices_sha256": "b7eb54cc7b4eda0bab21d46e3c4acb522ca9b35226087db591aabc57ff06b963",
+        "shared_point_count": 362,
+        "shared_footprint_sha256": "462ddd3aa9f77b21cd019bb451b86e4acbe2528e89aa6b31c54b69c58a73390a",
+        "shared_initial_model_sha256": "f8f2280d26138da5f9eaca1781ae7d4d50cfa61903becf55e4b0caf53c158579",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 50,
+              "noded_unique_edges": 25,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 25,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 10,
+            "original_candidate_point_count": 362,
+            "original_echo_coverage": 0.9972375690607734,
+            "original_echo_mean_absolute_residual_m": 0.4649589876317398,
+            "original_echo_median_absolute_residual_m": 0.03801862659348387,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 90.68735799985971,
+            "area_after_m2": 90.68735799985971
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 50,
+              "noded_unique_edges": 25,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 25,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 10,
+            "original_candidate_point_count": 362,
+            "original_echo_coverage": 0.9972375690607734,
+            "original_echo_mean_absolute_residual_m": 0.4649589876317398,
+            "original_echo_median_absolute_residual_m": 0.03801862659348387,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 90.68735799985971,
+            "area_after_m2": 90.68735799985971
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.1534919974465244,
+                "closeness": 0.04418352435231374,
+                "complexity": 5.465423654710532,
+                "observations": 503
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.06855606473982334
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.1534919974465244,
+                "closeness": 0.04418352435231374,
+                "complexity": 5.465423654710532,
+                "observations": 503
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.06091659050434828
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.1534919974465244,
+                "closeness": 0.04418352435231374,
+                "complexity": 5.465423654710532,
+                "observations": 503
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.06533793359994888
+            }
+          ],
+          "initial_energy": {
+            "total": 0.1534919974465244,
+            "closeness": 0.04418352435231374,
+            "complexity": 5.465423654710532,
+            "observations": 503
+          },
+          "final_energy": {
+            "total": 0.1534919974465244,
+            "closeness": 0.04418352435231374,
+            "complexity": 5.465423654710532,
+            "observations": 503
+          },
+          "proposal_counts": {
+            "no_image_pair": 580,
+            "Q3_corner": 97,
+            "invalid_proposal": 246,
+            "Q1_line": 110,
+            "Q2_compass": 113,
+            "invalid_partition": 64
+          },
+          "accepted_counts": {
+            "Q1_line": 3
+          },
+          "image_lines": 9,
+          "image_corners": 0
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 50,
+              "noded_unique_edges": 25,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 25,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 10,
+            "original_candidate_point_count": 362,
+            "original_echo_coverage": 0.9972375690607734,
+            "original_echo_mean_absolute_residual_m": 0.4649589876317398,
+            "original_echo_median_absolute_residual_m": 0.03801862659348387,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 90.68735799985971,
+            "area_after_m2": 90.68735799985971
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "block": "guarded",
+      "input": {
+        "id": "usbf-v1-dc-row84674-osm-67521381",
+        "block": "guarded",
+        "original_XYZ_sha256": "b4bae17557a4845b84c1a70550c3445fb484c852cdb79789efb9d2dee5c6b1ae",
+        "all_source_indices_sha256": "b7eb54cc7b4eda0bab21d46e3c4acb522ca9b35226087db591aabc57ff06b963",
+        "shared_selected_source_indices_sha256": "b7eb54cc7b4eda0bab21d46e3c4acb522ca9b35226087db591aabc57ff06b963",
+        "shared_point_count": 362,
+        "shared_footprint_sha256": "462ddd3aa9f77b21cd019bb451b86e4acbe2528e89aa6b31c54b69c58a73390a",
+        "shared_initial_model_sha256": "f8f2280d26138da5f9eaca1781ae7d4d50cfa61903becf55e4b0caf53c158579",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": true,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 50,
+              "noded_unique_edges": 25,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 25,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 10,
+            "original_candidate_point_count": 362,
+            "original_echo_coverage": 0.9972375690607734,
+            "original_echo_mean_absolute_residual_m": 0.4649589876317398,
+            "original_echo_median_absolute_residual_m": 0.03801862659348387,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 90.68735799985971,
+            "area_after_m2": 90.68735799985971
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 50,
+              "noded_unique_edges": 25,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 25,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 10,
+            "original_candidate_point_count": 362,
+            "original_echo_coverage": 0.9972375690607734,
+            "original_echo_mean_absolute_residual_m": 0.4649589876317398,
+            "original_echo_median_absolute_residual_m": 0.03801862659348387,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 90.68735799985971,
+            "area_after_m2": 90.68735799985971
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.1534919974465244,
+                "closeness": 0.04418352435231374,
+                "complexity": 5.465423654710532,
+                "observations": 503
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.06998207606375217
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.1534919974465244,
+                "closeness": 0.04418352435231374,
+                "complexity": 5.465423654710532,
+                "observations": 503
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.06053194496780634
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.1534919974465244,
+                "closeness": 0.04418352435231374,
+                "complexity": 5.465423654710532,
+                "observations": 503
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.06859025545418262
+            }
+          ],
+          "initial_energy": {
+            "total": 0.1534919974465244,
+            "closeness": 0.04418352435231374,
+            "complexity": 5.465423654710532,
+            "observations": 503
+          },
+          "final_energy": {
+            "total": 0.1534919974465244,
+            "closeness": 0.04418352435231374,
+            "complexity": 5.465423654710532,
+            "observations": 503
+          },
+          "proposal_counts": {
+            "no_image_pair": 580,
+            "Q3_corner": 97,
+            "invalid_proposal": 246,
+            "Q1_line": 110,
+            "Q2_compass": 113,
+            "invalid_partition": 64
+          },
+          "accepted_counts": {
+            "Q1_line": 3
+          },
+          "image_lines": 9,
+          "image_corners": 0
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 50,
+              "noded_unique_edges": 25,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 25,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 10,
+            "original_candidate_point_count": 362,
+            "original_echo_coverage": 0.9972375690607734,
+            "original_echo_mean_absolute_residual_m": 0.4649589876317398,
+            "original_echo_median_absolute_residual_m": 0.03801862659348387,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 90.68735799985971,
+            "area_after_m2": 90.68735799985971
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "block": "raw",
+      "input": {
+        "id": "usbf-v1-dc-row84898-osm-66347628",
+        "block": "raw",
+        "original_XYZ_sha256": "ef6d50ef0be24d830fe91e14bbd453fa6a1c2e6c15913eadbc7ef1eac9cf7be8",
+        "all_source_indices_sha256": "ffb3e3893055ed713a3a50da2e3a13529671def6725dc370a4d904df2c1a087e",
+        "shared_selected_source_indices_sha256": "ffb3e3893055ed713a3a50da2e3a13529671def6725dc370a4d904df2c1a087e",
+        "shared_point_count": 249,
+        "shared_footprint_sha256": "2ae7c836166beb2dbfb1661d6322b7c097187bb88b9da463acb5c181f2049af0",
+        "shared_initial_model_sha256": "e9a79fc87790b517414b9bcc244e881bca6d084d1f2392b1885f9cd8e17c9f0a",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 82,
+              "noded_unique_edges": 41,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 41,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 3,
+            "roof_vertices": 21,
+            "original_candidate_point_count": 249,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 2.6899324381500587,
+            "original_echo_median_absolute_residual_m": 0.08872902955940987,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 52.81417200020572,
+            "area_after_m2": 52.81417200020572
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 82,
+              "noded_unique_edges": 41,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 41,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 3,
+            "roof_vertices": 21,
+            "original_candidate_point_count": 249,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 2.6899324381500587,
+            "original_echo_median_absolute_residual_m": 0.08872902955940987,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 52.81417200020572,
+            "area_after_m2": 52.81417200020572
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.7590090174254425,
+                "closeness": 0.6064720255172823,
+                "complexity": 7.626849595408006,
+                "observations": 387
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.05704895965754986
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.7590090174254425,
+                "closeness": 0.6064720255172823,
+                "complexity": 7.626849595408006,
+                "observations": 387
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.06706162355840206
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.7590090174254425,
+                "closeness": 0.6064720255172823,
+                "complexity": 7.626849595408006,
+                "observations": 387
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.06537207309156656
+            }
+          ],
+          "initial_energy": {
+            "total": 0.7590090174254425,
+            "closeness": 0.6064720255172823,
+            "complexity": 7.626849595408006,
+            "observations": 387
+          },
+          "final_energy": {
+            "total": 0.7590090174254425,
+            "closeness": 0.6064720255172823,
+            "complexity": 7.626849595408006,
+            "observations": 387
+          },
+          "proposal_counts": {
+            "no_image_pair": 729,
+            "Q1_line": 49,
+            "invalid_proposal": 146,
+            "Q2_compass": 59,
+            "Q3_corner": 63,
+            "invalid_partition": 6
+          },
+          "accepted_counts": {
+            "Q1_line": 3
+          },
+          "image_lines": 8,
+          "image_corners": 0
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 82,
+              "noded_unique_edges": 41,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 41,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 3,
+            "roof_vertices": 21,
+            "original_candidate_point_count": 249,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 2.6899324381500587,
+            "original_echo_median_absolute_residual_m": 0.08872902955940987,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 52.81417200020572,
+            "area_after_m2": 52.81417200020572
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "block": "guarded",
+      "input": {
+        "id": "usbf-v1-dc-row84898-osm-66347628",
+        "block": "guarded",
+        "original_XYZ_sha256": "ef6d50ef0be24d830fe91e14bbd453fa6a1c2e6c15913eadbc7ef1eac9cf7be8",
+        "all_source_indices_sha256": "ffb3e3893055ed713a3a50da2e3a13529671def6725dc370a4d904df2c1a087e",
+        "shared_selected_source_indices_sha256": "1d1b2ab152e3c378da060f8c54c05c75cbf1d1ad3a3bde13486a9ccdf81fddc1",
+        "shared_point_count": 233,
+        "shared_footprint_sha256": "2ae7c836166beb2dbfb1661d6322b7c097187bb88b9da463acb5c181f2049af0",
+        "shared_initial_model_sha256": "a89a39d8bbef7cf4f2a1db09b23a19ef543a5d43727d21bfa77e1f0b87a53823",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 38,
+              "noded_unique_edges": 19,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 19,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 8,
+            "original_candidate_point_count": 249,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 4.4066708934938985,
+            "original_echo_median_absolute_residual_m": 0.08151477737722956,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 52.81093450011922,
+            "area_after_m2": 52.81093450011922
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 38,
+              "noded_unique_edges": 19,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 19,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 8,
+            "original_candidate_point_count": 249,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 4.4066708934938985,
+            "original_echo_median_absolute_residual_m": 0.08151477737722956,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 52.81093450011922,
+            "area_after_m2": 52.81093450011922
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.16597443225410313,
+                "closeness": 0.06256694872773594,
+                "complexity": 5.170374176318359,
+                "observations": 255
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.056673286482691765
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.16597443225410313,
+                "closeness": 0.06256694872773594,
+                "complexity": 5.170374176318359,
+                "observations": 255
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.10849835257977247
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.16597443225410313,
+                "closeness": 0.06256694872773594,
+                "complexity": 5.170374176318359,
+                "observations": 255
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.059259526431560516
+            }
+          ],
+          "initial_energy": {
+            "total": 0.16597443225410313,
+            "closeness": 0.06256694872773594,
+            "complexity": 5.170374176318359,
+            "observations": 255
+          },
+          "final_energy": {
+            "total": 0.16597443225410313,
+            "closeness": 0.06256694872773594,
+            "complexity": 5.170374176318359,
+            "observations": 255
+          },
+          "proposal_counts": {
+            "no_image_pair": 654,
+            "Q3_corner": 93,
+            "invalid_proposal": 214,
+            "Q1_line": 71,
+            "Q2_compass": 82,
+            "invalid_partition": 12
+          },
+          "accepted_counts": {
+            "Q1_line": 3
+          },
+          "image_lines": 8,
+          "image_corners": 0
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 38,
+              "noded_unique_edges": 19,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 19,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 8,
+            "original_candidate_point_count": 249,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 4.4066708934938985,
+            "original_echo_median_absolute_residual_m": 0.08151477737722956,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 52.81093450011922,
+            "area_after_m2": 52.81093450011922
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "block": "raw",
+      "input": {
+        "id": "usbf-v1-dc-row84764-osm-67528254",
+        "block": "raw",
+        "original_XYZ_sha256": "1816daff578ca456112055946b02ec9e383dbee1eb6c124963faeadccb7b74c3",
+        "all_source_indices_sha256": "5d181fa2a3fe8a44460b4137177c020fc849468a2b89a478ed1a112a7a9ba210",
+        "shared_selected_source_indices_sha256": "5d181fa2a3fe8a44460b4137177c020fc849468a2b89a478ed1a112a7a9ba210",
+        "shared_point_count": 864,
+        "shared_footprint_sha256": "4c252016c7aeeea4069246fac891c83ba2bf48846c4215ad106556e56bfd35d9",
+        "shared_initial_model_sha256": "e0aef2c576cd34724380773f450d175828c0673ab87be2038afe9df2e3535890",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 44,
+              "noded_unique_edges": 22,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 22,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 9,
+            "original_candidate_point_count": 864,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 4.1762351946018805,
+            "original_echo_median_absolute_residual_m": 0.08175690574342909,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 168.8126654998331,
+            "area_after_m2": 168.8126654998331
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 44,
+              "noded_unique_edges": 22,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 22,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 9,
+            "original_candidate_point_count": 864,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 4.1762351946018805,
+            "original_echo_median_absolute_residual_m": 0.08175690574342909,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 168.8126654998331,
+            "area_after_m2": 168.8126654998331
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.17116502198902148,
+                "closeness": 0.0730188976185887,
+                "complexity": 4.907306218521639,
+                "observations": 824
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.14646195154637098
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.17116502198902148,
+                "closeness": 0.0730188976185887,
+                "complexity": 4.907306218521639,
+                "observations": 824
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.14128218591213226
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.17116502198902148,
+                "closeness": 0.0730188976185887,
+                "complexity": 4.907306218521639,
+                "observations": 824
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.13982568960636854
+            }
+          ],
+          "initial_energy": {
+            "total": 0.17116502198902148,
+            "closeness": 0.0730188976185887,
+            "complexity": 4.907306218521639,
+            "observations": 824
+          },
+          "final_energy": {
+            "total": 0.17116502198902148,
+            "closeness": 0.0730188976185887,
+            "complexity": 4.907306218521639,
+            "observations": 824
+          },
+          "proposal_counts": {
+            "no_image_pair": 366,
+            "Q3_corner": 181,
+            "invalid_proposal": 379,
+            "Q1_line": 179,
+            "Q2_compass": 174,
+            "invalid_partition": 44
+          },
+          "accepted_counts": {
+            "Q1_line": 18
+          },
+          "image_lines": 10,
+          "image_corners": 0
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 44,
+              "noded_unique_edges": 22,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 22,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 2,
+            "roof_vertices": 9,
+            "original_candidate_point_count": 864,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 4.1762351946018805,
+            "original_echo_median_absolute_residual_m": 0.08175690574342909,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 168.8126654998331,
+            "area_after_m2": 168.8126654998331
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "block": "guarded",
+      "input": {
+        "id": "usbf-v1-dc-row84764-osm-67528254",
+        "block": "guarded",
+        "original_XYZ_sha256": "1816daff578ca456112055946b02ec9e383dbee1eb6c124963faeadccb7b74c3",
+        "all_source_indices_sha256": "5d181fa2a3fe8a44460b4137177c020fc849468a2b89a478ed1a112a7a9ba210",
+        "shared_selected_source_indices_sha256": "fcdb471062207fb02eb4ca9e44599a69657739795dfbafc4e97ed3e81515b776",
+        "shared_point_count": 714,
+        "shared_footprint_sha256": "4c252016c7aeeea4069246fac891c83ba2bf48846c4215ad106556e56bfd35d9",
+        "shared_initial_model_sha256": "0df33931798b729212321419dca36d10a4cba80a6ecaef73deab15c3a61a7d21",
+        "NAIP_sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+        "same_pointset_native_execution_reused": false,
+        "both_arms_receive_identical_input": true,
+        "point_coordinates_modified": false,
+        "target_roof_labels_available": false
+      },
+      "methods": {
+        "initial": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 70,
+              "noded_unique_edges": 35,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 35,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 3,
+            "roof_vertices": 15,
+            "original_candidate_point_count": 864,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 4.160533995313564,
+            "original_echo_median_absolute_residual_m": 0.07970764957297405,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 168.8164724998887,
+            "area_after_m2": 168.8164724998887
+          }
+        },
+        "paper": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 70,
+              "noded_unique_edges": 35,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 35,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 3,
+            "roof_vertices": 15,
+            "original_candidate_point_count": 864,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 4.160533995313564,
+            "original_echo_median_absolute_residual_m": 0.07970764957297405,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 168.8164724998887,
+            "area_after_m2": 168.8164724998887
+          },
+          "changed": false,
+          "seed": 20261023,
+          "seed_runs": [
+            {
+              "seed": 20261023,
+              "energy": {
+                "total": 0.5547600135000981,
+                "closeness": 0.39806819244348124,
+                "complexity": 7.834591052830841,
+                "observations": 871
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.15976923517882824
+            },
+            {
+              "seed": 20261024,
+              "energy": {
+                "total": 0.5547600135000981,
+                "closeness": 0.39806819244348124,
+                "complexity": 7.834591052830841,
+                "observations": 871
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.16568598337471485
+            },
+            {
+              "seed": 20261025,
+              "energy": {
+                "total": 0.5547600135000981,
+                "closeness": 0.39806819244348124,
+                "complexity": 7.834591052830841,
+                "observations": 871
+              },
+              "quality_passed": true,
+              "changed": false,
+              "seconds": 0.1524536982178688
+            }
+          ],
+          "initial_energy": {
+            "total": 0.5547600135000981,
+            "closeness": 0.39806819244348124,
+            "complexity": 7.834591052830841,
+            "observations": 871
+          },
+          "final_energy": {
+            "total": 0.5547600135000981,
+            "closeness": 0.39806819244348124,
+            "complexity": 7.834591052830841,
+            "observations": 871
+          },
+          "proposal_counts": {
+            "no_image_pair": 250,
+            "Q2_compass": 227,
+            "invalid_proposal": 473,
+            "Q3_corner": 198,
+            "Q1_line": 225,
+            "invalid_partition": 111
+          },
+          "accepted_counts": {
+            "Q1_line": 19
+          },
+          "image_lines": 10,
+          "image_corners": 0
+        },
+        "ours": {
+          "quality": {
+            "passed": true,
+            "diagnostic": {
+              "edge_tolerance_m": 0.001,
+              "raw_ring_edges": 70,
+              "noded_unique_edges": 35,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "orientation_inconsistent_edges": 0,
+              "edges_with_two_incidences": 35,
+              "all_edges_have_two_incidences": true,
+              "degenerate_edges_discarded": 0
+            },
+            "certified_solid": false
+          },
+          "diagnostics": {
+            "roof_faces": 3,
+            "roof_vertices": 15,
+            "original_candidate_point_count": 864,
+            "original_echo_coverage": 1.0,
+            "original_echo_mean_absolute_residual_m": 4.160533995313564,
+            "original_echo_median_absolute_residual_m": 0.07970764957297405,
+            "echo_fit_is_not_roof_accuracy": true,
+            "maximum_common_grid_height_change_m": 0.0,
+            "mean_common_grid_height_change_m": 0.0,
+            "changed_partition_area_m2": 0.0,
+            "symmetric_difference_area_m2": 0.0,
+            "hausdorff_displacement_m": 0.0,
+            "area_before_m2": 168.8164724998887,
+            "area_after_m2": 168.8164724998887
+          },
+          "changed": false,
+          "reassigned_components": 0
+        }
+      }
+    }
+  ],
+  "mechanism_summary": [
+    {
+      "case": "boundary_shift",
+      "n": 3,
+      "methods": {
+        "initial": {
+          "mean_footprint_IoU": 0.8092725216735771,
+          "mean_boundary_Hausdorff_m": 1.2206555615733703
+        },
+        "paper": {
+          "mean_footprint_IoU": 0.8691720847002772,
+          "mean_boundary_Hausdorff_m": 1.0275329259964898
+        },
+        "ours": {
+          "mean_footprint_IoU": 0.8092725216735771,
+          "mean_boundary_Hausdorff_m": 1.2206555615733703
+        }
+      }
+    },
+    {
+      "case": "orientation",
+      "n": 3,
+      "methods": {
+        "initial": {
+          "mean_footprint_IoU": 0.9123172349304643,
+          "mean_boundary_Hausdorff_m": 0.8487256160270551
+        },
+        "paper": {
+          "mean_footprint_IoU": 0.9101902029845323,
+          "mean_boundary_Hausdorff_m": 0.8488170773513705
+        },
+        "ours": {
+          "mean_footprint_IoU": 0.9123172349304643,
+          "mean_boundary_Hausdorff_m": 0.8487256160270551
+        }
+      }
+    },
+    {
+      "case": "corner_deformation",
+      "n": 3,
+      "methods": {
+        "initial": {
+          "mean_footprint_IoU": 0.9521951219512195,
+          "mean_boundary_Hausdorff_m": 1.4000000000000004
+        },
+        "paper": {
+          "mean_footprint_IoU": 0.9340956975445179,
+          "mean_boundary_Hausdorff_m": 1.3998743169398908
+        },
+        "ours": {
+          "mean_footprint_IoU": 0.9521951219512195,
+          "mean_boundary_Hausdorff_m": 1.4000000000000004
+        }
+      }
+    },
+    {
+      "case": "true_step_control",
+      "n": 3,
+      "methods": {
+        "initial": {
+          "mean_footprint_IoU": 1.0,
+          "mean_boundary_Hausdorff_m": 0.0
+        },
+        "paper": {
+          "mean_footprint_IoU": 1.0,
+          "mean_boundary_Hausdorff_m": 0.0
+        },
+        "ours": {
+          "mean_footprint_IoU": 1.0,
+          "mean_boundary_Hausdorff_m": 0.0
+        }
+      }
+    }
+  ],
+  "config": {
+    "schema": "paper-naip-core-adaptation-v1",
+    "seeds": [
+      20261023,
+      20261024,
+      20261025
+    ],
+    "iterations": 900,
+    "cue_distance_m": 2.0,
+    "max_boundary_displacement_m": 2.0,
+    "compass_directions": 8,
+    "angle_tolerance_deg": 24.0,
+    "rho_quantization_m": 0.5,
+    "minimum_line_length_m": 3.0,
+    "maximum_image_lines_per_building": 180,
+    "minimum_edge_length_m": 1.5,
+    "minimum_face_area_ratio": 0.25,
+    "maximum_face_area_ratio": 2.0,
+    "boundary_fit_tolerance_m": 0.2,
+    "boundary_sigma_m": 0.5,
+    "homogeneity_penalty_m": 2.0,
+    "complexity_weight": 0.02,
+    "temperature_initial": 0.1,
+    "temperature_final": 0.001,
+    "image_loss_weight": 0.0,
+    "new_training": false,
+    "target_GT_input": false
+  },
+  "image_info": {
+    "path": "/nfs/home/yfeng21/lod2_pilot_20261017/data/imagery/naip2014_roi_rgbnir_epsg26985.tif",
+    "sha256": "f8ec746baab1d2e83d2812cd57d5f046f58681e121830bc7f55e3f0200ff6eee",
+    "crs": "EPSG:26985",
+    "pixel_size_m": 1.0,
+    "bands": [
+      "R",
+      "G",
+      "B"
+    ],
+    "actual_optical_input": true
+  },
+  "limits": [
+    "NAIP georeferencing replaces perspective camera projection",
+    "Canny/Hough + Harris replace original detectors",
+    "MDL-inspired objective and annealed Metropolis heuristic; exact original transition probabilities not reproduced",
+    "Existing DL baseline uses point scores for local plane reassignment; no new RGB boundary head",
+    "Observed echo fit and energy are not independent roof accuracy",
+    "Image and LiDAR dates differ by 156 days"
+  ]
+}

@@ -1,0 +1,647 @@
+{
+  "status": "complete",
+  "synthetic_RGB_and_XYZ": true,
+  "real_roof_accuracy": false,
+  "truth_not_given_to_either_arm": true,
+  "rows": [
+    {
+      "id": "analytic-boundary_shift-0",
+      "case": "boundary_shift",
+      "seed": 0,
+      "initial": {
+        "footprint_IoU": 0.8092725216735771,
+        "boundary_Hausdorff_m": 1.2206555615733703,
+        "roof_planes": 1
+      },
+      "paper": {
+        "footprint_IoU": 0.8335819374191481,
+        "boundary_Hausdorff_m": 1.2206555615733699,
+        "roof_planes": 1
+      },
+      "ours": {
+        "footprint_IoU": 0.8092725216735771,
+        "boundary_Hausdorff_m": 1.2206555615733703,
+        "roof_planes": 1
+      },
+      "paper_changed": true,
+      "image_lines": 6,
+      "image_corners": 1,
+      "proposal_counts": {
+        "Q1_line": 304,
+        "invalid_proposal": 613,
+        "Q3_corner": 319,
+        "Q2_compass": 273,
+        "invalid_partition": 274,
+        "no_image_pair": 4
+      },
+      "accepted_counts": {
+        "Q2_compass": 5,
+        "Q1_line": 1
+      },
+      "paper_energy_before": {
+        "total": 1.2987913505100135,
+        "closeness": 1.2206535385978432,
+        "complexity": 3.9068905956085183,
+        "observations": 363
+      },
+      "paper_energy_after": {
+        "total": 1.177758942133146,
+        "closeness": 1.0497591847592838,
+        "complexity": 6.399987868693114,
+        "observations": 363
+      }
+    },
+    {
+      "id": "analytic-orientation-0",
+      "case": "orientation",
+      "seed": 0,
+      "initial": {
+        "footprint_IoU": 0.9123172349304643,
+        "boundary_Hausdorff_m": 0.8487256160270551,
+        "roof_planes": 1
+      },
+      "paper": {
+        "footprint_IoU": 0.9059361390926686,
+        "boundary_Hausdorff_m": 0.8490000000000011,
+        "roof_planes": 1
+      },
+      "ours": {
+        "footprint_IoU": 0.9123172349304643,
+        "boundary_Hausdorff_m": 0.8487256160270551,
+        "roof_planes": 1
+      },
+      "paper_changed": true,
+      "image_lines": 6,
+      "image_corners": 1,
+      "proposal_counts": {
+        "Q1_line": 300,
+        "Q3_corner": 297,
+        "Q2_compass": 303,
+        "invalid_proposal": 627,
+        "invalid_partition": 259
+      },
+      "accepted_counts": {
+        "Q1_line": 3,
+        "Q2_compass": 5
+      },
+      "paper_energy_before": {
+        "total": 0.48105603974305416,
+        "closeness": 0.40291822782602227,
+        "complexity": 3.9068905958515954,
+        "observations": 363
+      },
+      "paper_energy_after": {
+        "total": 0.3903051076571657,
+        "closeness": 0.30374312457248365,
+        "complexity": 4.328099154234102,
+        "observations": 363
+      }
+    },
+    {
+      "id": "analytic-corner_deformation-0",
+      "case": "corner_deformation",
+      "seed": 0,
+      "initial": {
+        "footprint_IoU": 0.9521951219512195,
+        "boundary_Hausdorff_m": 1.4000000000000004,
+        "roof_planes": 1
+      },
+      "paper": {
+        "footprint_IoU": 0.9521951219512195,
+        "boundary_Hausdorff_m": 1.4000000000000004,
+        "roof_planes": 1
+      },
+      "ours": {
+        "footprint_IoU": 0.9521951219512195,
+        "boundary_Hausdorff_m": 1.4000000000000004,
+        "roof_planes": 1
+      },
+      "paper_changed": false,
+      "image_lines": 6,
+      "image_corners": 0,
+      "proposal_counts": {
+        "no_image_pair": 263,
+        "Q3_corner": 216,
+        "invalid_proposal": 402,
+        "Q2_compass": 204,
+        "Q1_line": 217,
+        "invalid_partition": 186
+      },
+      "accepted_counts": {
+        "Q1_line": 5,
+        "Q2_compass": 3
+      },
+      "paper_energy_before": {
+        "total": 0.49146136821157016,
+        "closeness": 0.40361501975599495,
+        "complexity": 4.39231742277876,
+        "observations": 362
+      },
+      "paper_energy_after": {
+        "total": 0.49146136821157016,
+        "closeness": 0.40361501975599495,
+        "complexity": 4.39231742277876,
+        "observations": 362
+      }
+    },
+    {
+      "id": "analytic-true_step_control-0",
+      "case": "true_step_control",
+      "seed": 0,
+      "initial": {
+        "footprint_IoU": 1.0,
+        "boundary_Hausdorff_m": 0.0,
+        "roof_planes": 2
+      },
+      "paper": {
+        "footprint_IoU": 1.0,
+        "boundary_Hausdorff_m": 0.0,
+        "roof_planes": 2
+      },
+      "ours": {
+        "footprint_IoU": 1.0,
+        "boundary_Hausdorff_m": 0.0,
+        "roof_planes": 2
+      },
+      "paper_changed": false,
+      "image_lines": 9,
+      "image_corners": 2,
+      "proposal_counts": {
+        "Q2_compass": 277,
+        "invalid_proposal": 528,
+        "Q3_corner": 295,
+        "Q1_line": 287,
+        "invalid_partition": 184,
+        "no_image_pair": 41
+      },
+      "accepted_counts": {
+        "Q1_line": 33,
+        "Q2_compass": 7,
+        "Q3_corner": 2
+      },
+      "paper_energy_before": {
+        "total": 0.10082986831425882,
+        "closeness": 0.005732118270989442,
+        "complexity": 4.754887502163468,
+        "observations": 915
+      },
+      "paper_energy_after": {
+        "total": 0.10082986831425882,
+        "closeness": 0.005732118270989442,
+        "complexity": 4.754887502163468,
+        "observations": 915
+      }
+    },
+    {
+      "id": "analytic-boundary_shift-1",
+      "case": "boundary_shift",
+      "seed": 1,
+      "initial": {
+        "footprint_IoU": 0.8092725216735771,
+        "boundary_Hausdorff_m": 1.2206555615733703,
+        "roof_planes": 1
+      },
+      "paper": {
+        "footprint_IoU": 0.8913454031941742,
+        "boundary_Hausdorff_m": 0.9819432164161008,
+        "roof_planes": 1
+      },
+      "ours": {
+        "footprint_IoU": 0.8092725216735771,
+        "boundary_Hausdorff_m": 1.2206555615733703,
+        "roof_planes": 1
+      },
+      "paper_changed": true,
+      "image_lines": 7,
+      "image_corners": 1,
+      "proposal_counts": {
+        "Q1_line": 262,
+        "invalid_partition": 231,
+        "Q2_compass": 299,
+        "Q3_corner": 279,
+        "invalid_proposal": 581,
+        "no_image_pair": 60
+      },
+      "accepted_counts": {
+        "Q2_compass": 5,
+        "Q1_line": 7,
+        "Q3_corner": 1
+      },
+      "paper_energy_before": {
+        "total": 1.2096551860348328,
+        "closeness": 1.1315173741226625,
+        "complexity": 3.9068905956085183,
+        "observations": 363
+      },
+      "paper_energy_after": {
+        "total": 0.493853576171019,
+        "closeness": 0.35687304470914394,
+        "complexity": 6.849026573093751,
+        "observations": 363
+      }
+    },
+    {
+      "id": "analytic-orientation-1",
+      "case": "orientation",
+      "seed": 1,
+      "initial": {
+        "footprint_IoU": 0.9123172349304643,
+        "boundary_Hausdorff_m": 0.8487256160270551,
+        "roof_planes": 1
+      },
+      "paper": {
+        "footprint_IoU": 0.9123172349304643,
+        "boundary_Hausdorff_m": 0.8487256160270551,
+        "roof_planes": 1
+      },
+      "ours": {
+        "footprint_IoU": 0.9123172349304643,
+        "boundary_Hausdorff_m": 0.8487256160270551,
+        "roof_planes": 1
+      },
+      "paper_changed": false,
+      "image_lines": 7,
+      "image_corners": 1,
+      "proposal_counts": {
+        "Q1_line": 281,
+        "Q3_corner": 318,
+        "invalid_proposal": 598,
+        "Q2_compass": 301,
+        "invalid_partition": 249
+      },
+      "accepted_counts": {
+        "Q1_line": 16,
+        "Q2_compass": 6,
+        "Q3_corner": 2
+      },
+      "paper_energy_before": {
+        "total": 0.38563226411865764,
+        "closeness": 0.30749445220162575,
+        "complexity": 3.9068905958515954,
+        "observations": 363
+      },
+      "paper_energy_after": {
+        "total": 0.38563226411865764,
+        "closeness": 0.30749445220162575,
+        "complexity": 3.9068905958515954,
+        "observations": 363
+      }
+    },
+    {
+      "id": "analytic-corner_deformation-1",
+      "case": "corner_deformation",
+      "seed": 1,
+      "initial": {
+        "footprint_IoU": 0.9521951219512195,
+        "boundary_Hausdorff_m": 1.4000000000000004,
+        "roof_planes": 1
+      },
+      "paper": {
+        "footprint_IoU": 0.8978968487311151,
+        "boundary_Hausdorff_m": 1.3996229508196718,
+        "roof_planes": 1
+      },
+      "ours": {
+        "footprint_IoU": 0.9521951219512195,
+        "boundary_Hausdorff_m": 1.4000000000000004,
+        "roof_planes": 1
+      },
+      "paper_changed": true,
+      "image_lines": 7,
+      "image_corners": 0,
+      "proposal_counts": {
+        "Q1_line": 224,
+        "invalid_proposal": 441,
+        "Q2_compass": 208,
+        "no_image_pair": 237,
+        "Q3_corner": 231,
+        "invalid_partition": 131
+      },
+      "accepted_counts": {
+        "Q2_compass": 9,
+        "Q1_line": 21
+      },
+      "paper_energy_before": {
+        "total": 0.5659336010864319,
+        "closeness": 0.4780872526308567,
+        "complexity": 4.39231742277876,
+        "observations": 357
+      },
+      "paper_energy_after": {
+        "total": 0.37372515170120246,
+        "closeness": 0.21667092336541435,
+        "complexity": 7.852711416789404,
+        "observations": 357
+      }
+    },
+    {
+      "id": "analytic-true_step_control-1",
+      "case": "true_step_control",
+      "seed": 1,
+      "initial": {
+        "footprint_IoU": 1.0,
+        "boundary_Hausdorff_m": 0.0,
+        "roof_planes": 2
+      },
+      "paper": {
+        "footprint_IoU": 1.0,
+        "boundary_Hausdorff_m": 0.0,
+        "roof_planes": 2
+      },
+      "ours": {
+        "footprint_IoU": 1.0,
+        "boundary_Hausdorff_m": 0.0,
+        "roof_planes": 2
+      },
+      "paper_changed": false,
+      "image_lines": 5,
+      "image_corners": 2,
+      "proposal_counts": {
+        "Q3_corner": 315,
+        "invalid_proposal": 594,
+        "Q2_compass": 293,
+        "Q1_line": 292,
+        "invalid_partition": 251
+      },
+      "accepted_counts": {
+        "Q1_line": 7,
+        "Q3_corner": 2
+      },
+      "paper_energy_before": {
+        "total": 0.10109610268499374,
+        "closeness": 0.005998352641724371,
+        "complexity": 4.754887502163468,
+        "observations": 920
+      },
+      "paper_energy_after": {
+        "total": 0.10109610268499374,
+        "closeness": 0.005998352641724371,
+        "complexity": 4.754887502163468,
+        "observations": 920
+      }
+    },
+    {
+      "id": "analytic-boundary_shift-2",
+      "case": "boundary_shift",
+      "seed": 2,
+      "initial": {
+        "footprint_IoU": 0.8092725216735771,
+        "boundary_Hausdorff_m": 1.2206555615733703,
+        "roof_planes": 1
+      },
+      "paper": {
+        "footprint_IoU": 0.8825889134875091,
+        "boundary_Hausdorff_m": 0.879999999999999,
+        "roof_planes": 1
+      },
+      "ours": {
+        "footprint_IoU": 0.8092725216735771,
+        "boundary_Hausdorff_m": 1.2206555615733703,
+        "roof_planes": 1
+      },
+      "paper_changed": true,
+      "image_lines": 6,
+      "image_corners": 1,
+      "proposal_counts": {
+        "Q1_line": 290,
+        "Q2_compass": 273,
+        "Q3_corner": 306,
+        "invalid_partition": 258,
+        "invalid_proposal": 571,
+        "no_image_pair": 31
+      },
+      "accepted_counts": {
+        "Q1_line": 17,
+        "Q2_compass": 7,
+        "Q3_corner": 2
+      },
+      "paper_energy_before": {
+        "total": 1.4010272777970372,
+        "closeness": 1.3228894658848669,
+        "complexity": 3.9068905956085183,
+        "observations": 369
+      },
+      "paper_energy_after": {
+        "total": 0.883339416686919,
+        "closeness": 0.7098862837721555,
+        "complexity": 8.672656645738176,
+        "observations": 369
+      }
+    },
+    {
+      "id": "analytic-orientation-2",
+      "case": "orientation",
+      "seed": 2,
+      "initial": {
+        "footprint_IoU": 0.9123172349304643,
+        "boundary_Hausdorff_m": 0.8487256160270551,
+        "roof_planes": 1
+      },
+      "paper": {
+        "footprint_IoU": 0.9123172349304643,
+        "boundary_Hausdorff_m": 0.8487256160270551,
+        "roof_planes": 1
+      },
+      "ours": {
+        "footprint_IoU": 0.9123172349304643,
+        "boundary_Hausdorff_m": 0.8487256160270551,
+        "roof_planes": 1
+      },
+      "paper_changed": false,
+      "image_lines": 6,
+      "image_corners": 1,
+      "proposal_counts": {
+        "Q1_line": 280,
+        "Q2_compass": 282,
+        "invalid_partition": 237,
+        "Q3_corner": 338,
+        "invalid_proposal": 607
+      },
+      "accepted_counts": {
+        "Q1_line": 22,
+        "Q3_corner": 2,
+        "Q2_compass": 7
+      },
+      "paper_energy_before": {
+        "total": 0.5347396683957127,
+        "closeness": 0.4566018564786808,
+        "complexity": 3.9068905958515954,
+        "observations": 369
+      },
+      "paper_energy_after": {
+        "total": 0.5347396683957127,
+        "closeness": 0.4566018564786808,
+        "complexity": 3.9068905958515954,
+        "observations": 369
+      }
+    },
+    {
+      "id": "analytic-corner_deformation-2",
+      "case": "corner_deformation",
+      "seed": 2,
+      "initial": {
+        "footprint_IoU": 0.9521951219512195,
+        "boundary_Hausdorff_m": 1.4000000000000004,
+        "roof_planes": 1
+      },
+      "paper": {
+        "footprint_IoU": 0.9521951219512195,
+        "boundary_Hausdorff_m": 1.4000000000000004,
+        "roof_planes": 1
+      },
+      "ours": {
+        "footprint_IoU": 0.9521951219512195,
+        "boundary_Hausdorff_m": 1.4000000000000004,
+        "roof_planes": 1
+      },
+      "paper_changed": false,
+      "image_lines": 6,
+      "image_corners": 1,
+      "proposal_counts": {
+        "no_image_pair": 227,
+        "Q2_compass": 211,
+        "Q3_corner": 242,
+        "invalid_proposal": 364,
+        "Q1_line": 220,
+        "invalid_partition": 145
+      },
+      "accepted_counts": {
+        "Q2_compass": 4,
+        "Q1_line": 2
+      },
+      "paper_energy_before": {
+        "total": 0.5188748006414631,
+        "closeness": 0.4310284521858879,
+        "complexity": 4.39231742277876,
+        "observations": 359
+      },
+      "paper_energy_after": {
+        "total": 0.5188748006414631,
+        "closeness": 0.4310284521858879,
+        "complexity": 4.39231742277876,
+        "observations": 359
+      }
+    },
+    {
+      "id": "analytic-true_step_control-2",
+      "case": "true_step_control",
+      "seed": 2,
+      "initial": {
+        "footprint_IoU": 1.0,
+        "boundary_Hausdorff_m": 0.0,
+        "roof_planes": 2
+      },
+      "paper": {
+        "footprint_IoU": 1.0,
+        "boundary_Hausdorff_m": 0.0,
+        "roof_planes": 2
+      },
+      "ours": {
+        "footprint_IoU": 1.0,
+        "boundary_Hausdorff_m": 0.0,
+        "roof_planes": 2
+      },
+      "paper_changed": false,
+      "image_lines": 7,
+      "image_corners": 2,
+      "proposal_counts": {
+        "Q1_line": 296,
+        "Q3_corner": 325,
+        "invalid_proposal": 594,
+        "Q2_compass": 279,
+        "invalid_partition": 225
+      },
+      "accepted_counts": {
+        "Q1_line": 17,
+        "Q2_compass": 6,
+        "Q3_corner": 1
+      },
+      "paper_energy_before": {
+        "total": 0.0997910809613101,
+        "closeness": 0.004693330918040732,
+        "complexity": 4.754887502163468,
+        "observations": 922
+      },
+      "paper_energy_after": {
+        "total": 0.0997910809613101,
+        "closeness": 0.004693330918040732,
+        "complexity": 4.754887502163468,
+        "observations": 922
+      }
+    }
+  ],
+  "summary": [
+    {
+      "case": "boundary_shift",
+      "n": 3,
+      "methods": {
+        "initial": {
+          "mean_footprint_IoU": 0.8092725216735771,
+          "mean_boundary_Hausdorff_m": 1.2206555615733703
+        },
+        "paper": {
+          "mean_footprint_IoU": 0.8691720847002772,
+          "mean_boundary_Hausdorff_m": 1.0275329259964898
+        },
+        "ours": {
+          "mean_footprint_IoU": 0.8092725216735771,
+          "mean_boundary_Hausdorff_m": 1.2206555615733703
+        }
+      }
+    },
+    {
+      "case": "orientation",
+      "n": 3,
+      "methods": {
+        "initial": {
+          "mean_footprint_IoU": 0.9123172349304643,
+          "mean_boundary_Hausdorff_m": 0.8487256160270551
+        },
+        "paper": {
+          "mean_footprint_IoU": 0.9101902029845323,
+          "mean_boundary_Hausdorff_m": 0.8488170773513705
+        },
+        "ours": {
+          "mean_footprint_IoU": 0.9123172349304643,
+          "mean_boundary_Hausdorff_m": 0.8487256160270551
+        }
+      }
+    },
+    {
+      "case": "corner_deformation",
+      "n": 3,
+      "methods": {
+        "initial": {
+          "mean_footprint_IoU": 0.9521951219512195,
+          "mean_boundary_Hausdorff_m": 1.4000000000000004
+        },
+        "paper": {
+          "mean_footprint_IoU": 0.9340956975445179,
+          "mean_boundary_Hausdorff_m": 1.3998743169398908
+        },
+        "ours": {
+          "mean_footprint_IoU": 0.9521951219512195,
+          "mean_boundary_Hausdorff_m": 1.4000000000000004
+        }
+      }
+    },
+    {
+      "case": "true_step_control",
+      "n": 3,
+      "methods": {
+        "initial": {
+          "mean_footprint_IoU": 1.0,
+          "mean_boundary_Hausdorff_m": 0.0
+        },
+        "paper": {
+          "mean_footprint_IoU": 1.0,
+          "mean_boundary_Hausdorff_m": 0.0
+        },
+        "ours": {
+          "mean_footprint_IoU": 1.0,
+          "mean_boundary_Hausdorff_m": 0.0
+        }
+      }
+    }
+  ]
+}

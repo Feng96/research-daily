@@ -1,4 +1,4 @@
 const hash=location.hash;if(/^#(?:view|chapter)=/.test(hash)||['#visual','#methods','#results','#data','#night-review','#plots'].includes(hash))location.replace('./results.html'+hash);
 function saved(key){try{const v=JSON.parse(localStorage.getItem(key)||'null');if(v&&new URL(v.url).origin===location.origin&&new URL(v.url).pathname.startsWith(new URL('./',location.href).pathname))return v}catch{}return null}
 const last=saved('lod2:last');if(last){const a=document.getElementById('resume-experiment');a.href=last.url;a.textContent='继续：'+last.label+' →';a.hidden=false}
-for(const a of document.querySelectorAll('[data-experiment]')){const v=saved('lod2:experiment:'+a.dataset.experiment);if(v){a.href=v.url;a.title='继续此实验上次的位置'}}
+for(const a of document.querySelectorAll('[data-experiment]')){const v=saved('lod2:experiment:'+a.dataset.experiment);if(v&&!(a.dataset.experiment==='paper'&&!new URL(v.url).pathname.includes('/paper/'))){a.href=v.url;a.title='继续此实验上次的位置'}}
