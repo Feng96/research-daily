@@ -1,0 +1,554 @@
+{
+  "usbf-v1-dc-row84575-osm-67521488": {
+    "id": "usbf-v1-dc-row84575-osm-67521488",
+    "surface_support": [
+      {
+        "surface_index": 156,
+        "area_m2": 224.99271149951016,
+        "support_points": 1244,
+        "mean_roof_score": 0.8227405548095703,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 572,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 157,
+        "area_m2": 2.575066000025304,
+        "support_points": 8,
+        "mean_roof_score": 0.08657655864953995,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 0,
+        "proposed_removed_points": 0,
+        "decision": "unresolved_support"
+      },
+      {
+        "surface_index": 158,
+        "area_m2": 308.8395185004908,
+        "support_points": 1984,
+        "mean_roof_score": 0.8361321687698364,
+        "low_roof_support_fraction": 0.0005040322580645161,
+        "uncertain_support_points": 1049,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 159,
+        "area_m2": 4.060011999953439,
+        "support_points": 21,
+        "mean_roof_score": 0.03858020901679993,
+        "low_roof_support_fraction": 0.2857142857142857,
+        "uncertain_support_points": 17,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 160,
+        "area_m2": 0.03769349999712116,
+        "support_points": 0,
+        "mean_roof_score": null,
+        "low_roof_support_fraction": null,
+        "uncertain_support_points": 0,
+        "proposed_removed_points": 0,
+        "decision": "unresolved_support"
+      },
+      {
+        "surface_index": 161,
+        "area_m2": 83.68709950046096,
+        "support_points": 540,
+        "mean_roof_score": 0.8277431726455688,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 78,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 162,
+        "area_m2": 112.9357289996319,
+        "support_points": 660,
+        "mean_roof_score": 0.7663166522979736,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 163,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 163,
+        "area_m2": 7.016174999945014,
+        "support_points": 39,
+        "mean_roof_score": 0.3894752264022827,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 12,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 164,
+        "area_m2": 66.83531500025923,
+        "support_points": 314,
+        "mean_roof_score": 0.650741457939148,
+        "low_roof_support_fraction": 0.0031847133757961785,
+        "uncertain_support_points": 166,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 165,
+        "area_m2": 184.26998299919924,
+        "support_points": 1038,
+        "mean_roof_score": 0.7294446229934692,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 211,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 166,
+        "area_m2": 101.40865150040908,
+        "support_points": 595,
+        "mean_roof_score": 0.739670991897583,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 297,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 167,
+        "area_m2": 154.1913890009009,
+        "support_points": 846,
+        "mean_roof_score": 0.804660439491272,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 176,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 168,
+        "area_m2": 209.13732649917972,
+        "support_points": 1334,
+        "mean_roof_score": 0.7956671118736267,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 153,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      }
+    ],
+    "proposed_trim_count": 0,
+    "decision": "retain",
+    "dedicated_mesh_DL": false,
+    "observations_reused_for_review": true,
+    "generated_roof_faces": 0,
+    "roof_completion": "not performed; unsupported missing faces remain unresolved",
+    "closure": {
+      "edge_tolerance_m": 0.001,
+      "raw_ring_edges": 950,
+      "noded_unique_edges": 475,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "orientation_inconsistent_edges": 0,
+      "edges_with_two_incidences": 475,
+      "all_edges_have_two_incidences": true,
+      "degenerate_edges_discarded": 0
+    },
+    "closed_solid_certified": false,
+    "selected_stage": "initial"
+  },
+  "usbf-v1-dc-row84595-osm-67521431": {
+    "id": "usbf-v1-dc-row84595-osm-67521431",
+    "surface_support": [
+      {
+        "surface_index": 9,
+        "area_m2": 149.10419400005122,
+        "support_points": 447,
+        "mean_roof_score": 0.7030389904975891,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 155,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 10,
+        "area_m2": 143.91349899983817,
+        "support_points": 560,
+        "mean_roof_score": 0.8616748452186584,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 15,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      }
+    ],
+    "proposed_trim_count": 0,
+    "decision": "retain",
+    "dedicated_mesh_DL": false,
+    "observations_reused_for_review": true,
+    "generated_roof_faces": 0,
+    "roof_completion": "not performed; unsupported missing faces remain unresolved",
+    "closure": {
+      "edge_tolerance_m": 0.001,
+      "raw_ring_edges": 50,
+      "noded_unique_edges": 25,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "orientation_inconsistent_edges": 0,
+      "edges_with_two_incidences": 25,
+      "all_edges_have_two_incidences": true,
+      "degenerate_edges_discarded": 0
+    },
+    "closed_solid_certified": false,
+    "selected_stage": "initial"
+  },
+  "usbf-v1-dc-row85199-osm-67521425": {
+    "id": "usbf-v1-dc-row85199-osm-67521425",
+    "surface_support": [
+      {
+        "surface_index": 41,
+        "area_m2": 18.858426499829484,
+        "support_points": 50,
+        "mean_roof_score": 0.09140526503324509,
+        "low_roof_support_fraction": 0.02,
+        "uncertain_support_points": 36,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 42,
+        "area_m2": 0.8824094999472234,
+        "support_points": 2,
+        "mean_roof_score": 0.17712387442588806,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 0,
+        "proposed_removed_points": 0,
+        "decision": "unresolved_support"
+      },
+      {
+        "surface_index": 43,
+        "area_m2": 2.1747145000904875,
+        "support_points": 6,
+        "mean_roof_score": 0.23612737655639648,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 6,
+        "proposed_removed_points": 0,
+        "decision": "unresolved_support"
+      },
+      {
+        "surface_index": 44,
+        "area_m2": 53.709830000098094,
+        "support_points": 64,
+        "mean_roof_score": 0.15011078119277954,
+        "low_roof_support_fraction": 0.03125,
+        "uncertain_support_points": 48,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 45,
+        "area_m2": 915.5844840006954,
+        "support_points": 2822,
+        "mean_roof_score": 0.8869748115539551,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 176,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 46,
+        "area_m2": 516.572082499854,
+        "support_points": 1489,
+        "mean_roof_score": 0.8315770626068115,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 104,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      }
+    ],
+    "proposed_trim_count": 0,
+    "decision": "retain",
+    "dedicated_mesh_DL": false,
+    "observations_reused_for_review": true,
+    "generated_roof_faces": 0,
+    "roof_completion": "not performed; unsupported missing faces remain unresolved",
+    "closure": {
+      "edge_tolerance_m": 0.001,
+      "raw_ring_edges": 246,
+      "noded_unique_edges": 123,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "orientation_inconsistent_edges": 0,
+      "edges_with_two_incidences": 123,
+      "all_edges_have_two_incidences": true,
+      "degenerate_edges_discarded": 0
+    },
+    "closed_solid_certified": false,
+    "selected_stage": "initial"
+  },
+  "usbf-v1-dc-row84681-osm-67521385": {
+    "id": "usbf-v1-dc-row84681-osm-67521385",
+    "surface_support": [
+      {
+        "surface_index": 27,
+        "area_m2": 2.820177500004623,
+        "support_points": 17,
+        "mean_roof_score": 0.07316739112138748,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 1,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 28,
+        "area_m2": 1.5204569999655018,
+        "support_points": 9,
+        "mean_roof_score": 0.009573559276759624,
+        "low_roof_support_fraction": 0.6666666666666666,
+        "uncertain_support_points": 8,
+        "proposed_removed_points": 0,
+        "decision": "unresolved_support"
+      },
+      {
+        "surface_index": 29,
+        "area_m2": 142.63835899961657,
+        "support_points": 907,
+        "mean_roof_score": 0.735802412033081,
+        "low_roof_support_fraction": 0.002205071664829107,
+        "uncertain_support_points": 288,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 30,
+        "area_m2": 2.5647194999535925,
+        "support_points": 15,
+        "mean_roof_score": 0.1709056794643402,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 9,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 31,
+        "area_m2": 36.82243149988923,
+        "support_points": 244,
+        "mean_roof_score": 0.7555363774299622,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 72,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      }
+    ],
+    "proposed_trim_count": 0,
+    "decision": "retain",
+    "dedicated_mesh_DL": false,
+    "observations_reused_for_review": true,
+    "generated_roof_faces": 0,
+    "roof_completion": "not performed; unsupported missing faces remain unresolved",
+    "closure": {
+      "edge_tolerance_m": 0.001,
+      "raw_ring_edges": 164,
+      "noded_unique_edges": 82,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "orientation_inconsistent_edges": 0,
+      "edges_with_two_incidences": 82,
+      "all_edges_have_two_incidences": true,
+      "degenerate_edges_discarded": 0
+    },
+    "closed_solid_certified": false,
+    "selected_stage": "initial"
+  },
+  "usbf-v1-dc-row84655-osm-67521498": {
+    "id": "usbf-v1-dc-row84655-osm-67521498",
+    "surface_support": [
+      {
+        "surface_index": 7,
+        "area_m2": 14.83398399986961,
+        "support_points": 51,
+        "mean_roof_score": 0.6661893725395203,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 29,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 8,
+        "area_m2": 16.30812349990437,
+        "support_points": 57,
+        "mean_roof_score": 0.7141798734664917,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 42,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      }
+    ],
+    "proposed_trim_count": 0,
+    "decision": "retain",
+    "dedicated_mesh_DL": false,
+    "observations_reused_for_review": true,
+    "generated_roof_faces": 0,
+    "roof_completion": "not performed; unsupported missing faces remain unresolved",
+    "closure": {
+      "edge_tolerance_m": 0.001,
+      "raw_ring_edges": 38,
+      "noded_unique_edges": 19,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "orientation_inconsistent_edges": 0,
+      "edges_with_two_incidences": 19,
+      "all_edges_have_two_incidences": true,
+      "degenerate_edges_discarded": 0
+    },
+    "closed_solid_certified": false,
+    "selected_stage": "initial"
+  },
+  "usbf-v1-dc-row84674-osm-67521381": {
+    "id": "usbf-v1-dc-row84674-osm-67521381",
+    "surface_support": [
+      {
+        "surface_index": 9,
+        "area_m2": 45.081445999857486,
+        "support_points": 169,
+        "mean_roof_score": 0.7402438521385193,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 1,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 10,
+        "area_m2": 45.60591200000222,
+        "support_points": 160,
+        "mean_roof_score": 0.6914758682250977,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 82,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      }
+    ],
+    "proposed_trim_count": 0,
+    "decision": "retain",
+    "dedicated_mesh_DL": false,
+    "observations_reused_for_review": true,
+    "generated_roof_faces": 0,
+    "roof_completion": "not performed; unsupported missing faces remain unresolved",
+    "closure": {
+      "edge_tolerance_m": 0.001,
+      "raw_ring_edges": 50,
+      "noded_unique_edges": 25,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "orientation_inconsistent_edges": 0,
+      "edges_with_two_incidences": 25,
+      "all_edges_have_two_incidences": true,
+      "degenerate_edges_discarded": 0
+    },
+    "closed_solid_certified": false,
+    "selected_stage": "initial"
+  },
+  "usbf-v1-dc-row84898-osm-66347628": {
+    "id": "usbf-v1-dc-row84898-osm-66347628",
+    "surface_support": [
+      {
+        "surface_index": 10,
+        "area_m2": 10.892173500003821,
+        "support_points": 15,
+        "mean_roof_score": 0.10844121873378754,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 0,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 11,
+        "area_m2": 26.46055549998176,
+        "support_points": 81,
+        "mean_roof_score": 0.6239426732063293,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 50,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 12,
+        "area_m2": 15.459420000137076,
+        "support_points": 52,
+        "mean_roof_score": 0.5723888874053955,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 40,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      }
+    ],
+    "proposed_trim_count": 0,
+    "decision": "retain",
+    "dedicated_mesh_DL": false,
+    "observations_reused_for_review": true,
+    "generated_roof_faces": 0,
+    "roof_completion": "not performed; unsupported missing faces remain unresolved",
+    "closure": {
+      "edge_tolerance_m": 0.001,
+      "raw_ring_edges": 58,
+      "noded_unique_edges": 29,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "orientation_inconsistent_edges": 0,
+      "edges_with_two_incidences": 29,
+      "all_edges_have_two_incidences": true,
+      "degenerate_edges_discarded": 0
+    },
+    "closed_solid_certified": false,
+    "selected_stage": "initial"
+  },
+  "usbf-v1-dc-row84764-osm-67528254": {
+    "id": "usbf-v1-dc-row84764-osm-67528254",
+    "surface_support": [
+      {
+        "surface_index": 11,
+        "area_m2": 0.8815710000173239,
+        "support_points": 3,
+        "mean_roof_score": 0.12285774946212769,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 3,
+        "proposed_removed_points": 0,
+        "decision": "unresolved_support"
+      },
+      {
+        "surface_index": 12,
+        "area_m2": 87.19699949951136,
+        "support_points": 222,
+        "mean_roof_score": 0.7681890726089478,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 189,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      },
+      {
+        "surface_index": 13,
+        "area_m2": 80.73342000030381,
+        "support_points": 272,
+        "mean_roof_score": 0.9236226081848145,
+        "low_roof_support_fraction": 0.0,
+        "uncertain_support_points": 236,
+        "proposed_removed_points": 0,
+        "decision": "retain"
+      }
+    ],
+    "proposed_trim_count": 0,
+    "decision": "retain",
+    "dedicated_mesh_DL": false,
+    "observations_reused_for_review": true,
+    "generated_roof_faces": 0,
+    "roof_completion": "not performed; unsupported missing faces remain unresolved",
+    "closure": {
+      "edge_tolerance_m": 0.001,
+      "raw_ring_edges": 62,
+      "noded_unique_edges": 31,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "orientation_inconsistent_edges": 0,
+      "edges_with_two_incidences": 31,
+      "all_edges_have_two_incidences": true,
+      "degenerate_edges_discarded": 0
+    },
+    "closed_solid_certified": false,
+    "selected_stage": "initial"
+  }
+}

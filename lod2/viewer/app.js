@@ -1,11 +1,11 @@
 import * as THREE from '../vendor/three.module.js';
-import {createPointCloudController} from './point_clouds.js?v=20261020-tree';
+import {createPointCloudController} from './point_clouds.js?v=20261022-workflow';
 
 const $=id=>document.getElementById(id);
 const chapter=new URLSearchParams(location.search).get('chapter')||'pilot';
 let GROUPS=[],LABELS={};
 let visibleBuildings=[];
-const BASELINES={pilot:'roofer',optimization:'baseline',overnight:'baseline',tree:'global_geo'};
+const BASELINES={pilot:'roofer',optimization:'baseline',overnight:'baseline',tree:'global_geo',workflow:'initial'};
 let data,selected,group='',basemap='satellite',syncing=false,temporaryHide=false;
 let loadError=false,loaded=false,hashTimer,toastTimer,lastTileError=0,frameToken=0;
 const mapErrors=[];
@@ -114,6 +114,12 @@ function frameAllGroups(){
   check(0);
 }
 function renderMetrics(){
+  if(chapter==='workflow'){
+    const row=selected.workflow;
+    $('metric-note').textContent='阶段检查，不是精度比较；后端未触发修剪，两阶段模型相同。';
+    $('metrics').replaceChildren(...GROUPS.map(key=>{const button=document.createElement('button');button.className='metric'+(key===group?' active':'');button.setAttribute('aria-pressed',String(key===group));for(const [cls,value]of [['metric-name',LABELS[key]],['metric-value',selected.groups[key].roofCount+' 片屋面'],['metric-sub',key==='initial'?'前端筛除 '+row.frontend_removed+' 点；保留 '+row.frontend_kept+' 点':'后端修剪 '+row.post_removed+' 点；不足支撑仍待核查']]){const span=document.createElement('span');span.className=cls;span.textContent=value;button.append(span);}button.onclick=()=>setGroup(key);return button;}));reportHeight();return;
+  }
+
   const paired=$('metric-mode').value==='paired';
   $('metric-note').textContent=paired?'各方法分别与基线取同点交集；负值为误差降低。各交集可能不同，请同时看覆盖。':'全部方法在同一批点上比较；覆盖率指各方法对原留出点的覆盖。';
   $('metrics').replaceChildren(...GROUPS.map(key=>{
@@ -127,7 +133,7 @@ function renderMetrics(){
 }
 function selectBuilding(building,focus=true){
   selected=building;$('model-title').textContent=LABELS[group]+' · '+(building.groups[group].lodClass||building.groups[group].lod||'屋面模型');$('building').value=building.id;$('selected-id').textContent=building.shortId||building.id;
-  $('selected-height').textContent=(building.cohort==='fresh60'?'新增60栋':'原60栋')+' · 跨实验统一显示基准 · 高度1×';
+  $('selected-height').textContent=chapter==='workflow'?'固定流程 · 原始XYZ保留 · 高度1×':(building.cohort==='fresh60'?'新增60栋':'原60栋')+' · 跨实验统一显示基准 · 高度1×';
   imageMap.getSource('selected')?.setData(selectedFeature());geometry(building);renderMetrics();
   if(focus)focusBuilding();saveHash();
 }
@@ -181,15 +187,16 @@ window.addEventListener('resize',()=>{imageMap.resize();modelMap.resize();report
 
 async function init(){
   try{
-    const response=await fetch('../data/'+chapter+'.json.gz');if(!response.ok)throw new Error('模型数据 HTTP '+response.status);
+    const response=await fetch(chapter==='workflow'?'../next/data/viewer.json.gz':'../data/'+chapter+'.json.gz');if(!response.ok)throw new Error('模型数据 HTTP '+response.status);
     const bytes=new Uint8Array(await response.arrayBuffer());let jsonText;
     if(bytes[0]===31&&bytes[1]===139){if(!window.DecompressionStream)throw new Error('此浏览器不支持压缩数据，请使用新版浏览器');jsonText=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();}else{jsonText=new TextDecoder().decode(bytes);}
     data=JSON.parse(jsonText);
     GROUPS=data.groupOrder;LABELS=data.groupLabels;group=GROUPS.includes(group)?group:GROUPS[0];
     data.naip.url='../data/naip2014.png';
     if(!data.buildings.length||data.buildings.length!==data.buildingCount)throw new Error('建筑分母与导出清单不一致');
-    $('chapter-name').textContent={pilot:'01 · 五种重建方法',optimization:'02 · 四组输入优化',overnight:'03 · 120栋扩展复核',tree:'04 · 树冠干扰与语义迁移'}[chapter]||chapter;
+    $('chapter-name').textContent={pilot:'01 · 五种重建方法',optimization:'02 · 四组输入优化',overnight:'03 · 120栋扩展复核',tree:'04 · 树冠干扰与语义迁移',workflow:'固定工作流 v0.1'}[chapter]||chapter;
     $('chapter-detail').textContent=`Georgetown · ${data.buildingCount}栋 · ${GROUPS.length}组方法 · ${chapter==='tree'?'零本地标签迁移 · 待核查':'原始观测2014年'}`;
+    if(chapter==='workflow'){$('chapter-detail').textContent='Georgetown · 8 栋流程验证 · 2 个阶段 · 无精度结论';$('metric-mode').closest('label').hidden=true;document.querySelector('label[for=group-select]').textContent='阶段';document.querySelector('label[for=cohort]').hidden=true;document.querySelector('#baseline-overlay').closest('label').lastChild.textContent='初始屋面轮廓';}
     $('group-select').replaceChildren(...GROUPS.map(key=>{const o=document.createElement('option');o.value=key;o.textContent=LABELS[key];return o;}));$('group-select').disabled=false;
     $('cohort').hidden=!['overnight','tree'].includes(chapter);$('cohort').value=['overnight','tree'].includes(chapter)&&['legacy60','fresh60'].includes(initialHash.get('cohort'))?initialHash.get('cohort'):'all';
     $('metric-mode').value=['overnight','tree'].includes(chapter)?'paired':'common';

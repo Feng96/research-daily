@@ -1,0 +1,106 @@
+{
+  "schema": "lod2-workflow-v0.1",
+  "status": "fixed_minimum_workflow",
+  "name": "optical_point_frontend_then_roof_review",
+  "purpose": "Close one executable input-to-product path before comparing alternative image-fusion positions.",
+  "inputs": {
+    "optical": "NAIP raster with verified band names and acquisition date; RGB, optionally NIR",
+    "elevation": "3DEP original LiDAR points plus ground reference, not bare-earth DEM alone",
+    "footprint": "USBF/OSM/GBA or another declared footprint source, shared across future comparisons",
+    "metadata": "CRS, horizontal/vertical units, acquisition dates or unknown, registration provenance"
+  },
+  "stages": [
+    {
+      "id": "01_inputs",
+      "operation": "Pair and align existing observations; bind files, coordinates and original point indices.",
+      "outputs": [
+        "input_manifest",
+        "original_points",
+        "aligned_footprints",
+        "optical_raster",
+        "acquisition_metadata"
+      ]
+    },
+    {
+      "id": "02_frontend",
+      "operation": "Use optical and point evidence before the first reconstruction; retain uncertain observations.",
+      "outputs": [
+        "roof_vegetation_other_probabilities",
+        "observation_evidence",
+        "retained_original_indices"
+      ],
+      "minimum_implementation": "Reuse frozen source-trained point, optical and fusion MLPs; no new large training. R/G/NIR descriptors are the existing optical features; Blue is not read by these weights.",
+      "not_claimed": [
+        "learned seasonal-change detection",
+        "calibrated target-domain uncertainty",
+        "RGB patch encoder"
+      ]
+    },
+    {
+      "id": "03_reconstruct",
+      "operation": "Reconstruct initial roof planes and a building shell using fixed Roofer settings.",
+      "outputs": [
+        "initial_native_geometry",
+        "initial_roof_surfaces",
+        "native_status"
+      ]
+    },
+    {
+      "id": "04_review",
+      "operation": "Associate original observations and DL evidence with reconstructed roof components; decide retain, conservative trim, or unresolved.",
+      "outputs": [
+        "per_surface_support",
+        "edit_plan",
+        "reviewed_candidates"
+      ],
+      "minimum_implementation": "Reuse semantic probabilities to audit roof support; deterministic aggregation and source-calibrated point thresholds. This is not a newly trained mesh-repair network."
+    },
+    {
+      "id": "05_close",
+      "operation": "Reconstruct after accepted trims, retain native vertical walls and footprint holes, and check shell boundary incidence.",
+      "outputs": [
+        "final_native_geometry",
+        "closure_diagnostic",
+        "repair_log",
+        "unresolved_regions"
+      ],
+      "minimum_implementation": "Native roof/wall/ground extrusion; no unsupported roof bridging or learned full-occlusion completion. Unresolved gaps remain explicit.",
+      "closure_semantics": "Roof surfaces can be discontinuous in height. The building shell uses vertical connecting walls. Courtyards must not be roof-capped. Edge incidence alone does not certify a valid solid."
+    },
+    {
+      "id": "06_product",
+      "operation": "Export every requested building, including unchanged, rejected-edit, fallback and failure cases.",
+      "outputs": [
+        "native_CityJSONSeq",
+        "canonical_models_json",
+        "per_building_status",
+        "point_decision_archive",
+        "web_review"
+      ]
+    }
+  ],
+  "termination": [
+    "native_LoD2_with_shell_diagnostic",
+    "needs_review",
+    "LoD1_fallback",
+    "no_geometry"
+  ],
+  "invariants": [
+    "Input original XYZ, footprints and point indices are immutable.",
+    "No reference roof mesh or target accuracy metric is read by inference or edit selection.",
+    "Production classifications and semantic predictions are not independent roof GT.",
+    "A closed shell is not proof of a geometrically correct roof.",
+    "Future comparisons change the optical-fusion position while retaining shared inputs and reconstruction settings."
+  ],
+  "deferred": [
+    "New RGB/point encoders and learned temporal reliability gates",
+    "Learned roof-instance and adjacency prediction",
+    "A dedicated learned structure-editing or completion head",
+    "Additional quality-control modules and broad method comparisons"
+  ],
+  "future_two_routes": {
+    "A": "Optical and point evidence before first reconstruction, followed by joint structure review.",
+    "B": "Point-driven first reconstruction, followed by optical-assisted structure review.",
+    "status": "interfaces reserved; no comparative effectiveness claim in this run; B is not an exact reproduction of Jung and Sohn 2019"
+  }
+}
