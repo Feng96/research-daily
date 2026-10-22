@@ -1,0 +1,890 @@
+{
+  "status": "complete",
+  "real_buildings": 8,
+  "real_rows": [
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "proposed_components": 1,
+      "accepted_components": 1,
+      "decisions": [
+        {
+          "surface_index": 149,
+          "area_m2": 208.21046350015268,
+          "own_support": 1313,
+          "own_strong_support": 1250,
+          "own_mean_score": 0.9525314569473267,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 150,
+          "area_m2": 155.0458804999832,
+          "own_support": 835,
+          "own_strong_support": 788,
+          "own_mean_score": 0.9387801885604858,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 151,
+          "area_m2": 223.12466150016817,
+          "own_support": 1241,
+          "own_strong_support": 1126,
+          "own_mean_score": 0.9192009568214417,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 152,
+          "area_m2": 101.60949449983178,
+          "own_support": 584,
+          "own_strong_support": 511,
+          "own_mean_score": 0.8815166354179382,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 153,
+          "area_m2": 2.872536999964254,
+          "own_support": 14,
+          "own_strong_support": 0,
+          "own_mean_score": 0.03518995642662048,
+          "action": "candidate_reassign_and_refit",
+          "alternatives": [
+            {
+              "anchor_surface": 152,
+              "support": 4,
+              "strong_support": 0,
+              "local_support_coverage_fraction": 0.0,
+              "eligible": false
+            },
+            {
+              "anchor_surface": 160,
+              "support": 9,
+              "strong_support": 7,
+              "local_support_coverage_fraction": 0.4133791059085991,
+              "eligible": true
+            }
+          ],
+          "selected": {
+            "anchor_surface": 160,
+            "support": 9,
+            "strong_support": 7,
+            "local_support_coverage_fraction": 0.4133791059085991,
+            "eligible": true
+          },
+          "anchor_geometry": "reuse existing observation-fitted anchor exactly; seed refit used for evidence only",
+          "extrapolation_uncertain": true,
+          "reason": "more original roof-like observations agree with an adjacent supported plane; not target truth"
+        },
+        {
+          "surface_index": 154,
+          "area_m2": 1.444721499991079,
+          "own_support": 9,
+          "own_strong_support": 0,
+          "own_mean_score": 0.011472751386463642,
+          "action": "uncertain_no_supported_replacement",
+          "alternatives": [
+            {
+              "anchor_surface": 160,
+              "support": 3,
+              "strong_support": 2,
+              "local_support_coverage_fraction": 0.31214432034995815,
+              "eligible": false
+            }
+          ]
+        },
+        {
+          "surface_index": 155,
+          "area_m2": 8.390296999941237,
+          "own_support": 43,
+          "own_strong_support": 28,
+          "own_mean_score": 0.7113750576972961,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 156,
+          "area_m2": 0.9543255000074777,
+          "own_support": 6,
+          "own_strong_support": 0,
+          "own_mean_score": 0.1296234130859375,
+          "action": "uncertain_no_supported_replacement",
+          "alternatives": [
+            {
+              "anchor_surface": 157,
+              "support": 3,
+              "strong_support": 0,
+              "local_support_coverage_fraction": 0.0,
+              "eligible": false
+            }
+          ]
+        },
+        {
+          "surface_index": 157,
+          "area_m2": 103.95930999954243,
+          "own_support": 634,
+          "own_strong_support": 581,
+          "own_mean_score": 0.9269686341285706,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 158,
+          "area_m2": 70.51795150037479,
+          "own_support": 319,
+          "own_strong_support": 241,
+          "own_mean_score": 0.7917233109474182,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 159,
+          "area_m2": 89.87276100022123,
+          "own_support": 554,
+          "own_strong_support": 510,
+          "own_mean_score": 0.9249336123466492,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 160,
+          "area_m2": 184.42366699987184,
+          "own_support": 1029,
+          "own_strong_support": 958,
+          "own_mean_score": 0.9286758899688721,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 161,
+          "area_m2": 309.55487249990506,
+          "own_support": 1998,
+          "own_strong_support": 1899,
+          "own_mean_score": 0.9511880278587341,
+          "action": "keep",
+          "alternatives": []
+        }
+      ],
+      "shell_before": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 910,
+        "noded_unique_edges": 455,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 455,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_after": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 892,
+        "noded_unique_edges": 446,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 446,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_diagnostic_passed": true,
+      "candidate_is_accuracy_verified": false,
+      "max_absolute_candidate_vertex_change_m": 10.29302300438927,
+      "large_roof_preservation": [
+        {
+          "source_surface": 149,
+          "area_m2": 208.21046350015268,
+          "max_height_change_m": 1.4210854715202004e-14
+        },
+        {
+          "source_surface": 150,
+          "area_m2": 155.0458804999832,
+          "max_height_change_m": 8.597567102697212e-13
+        },
+        {
+          "source_surface": 151,
+          "area_m2": 223.12466150016817,
+          "max_height_change_m": 1.0373923942097463e-12
+        },
+        {
+          "source_surface": 152,
+          "area_m2": 101.60949449983178,
+          "max_height_change_m": 2.4158453015843406e-13
+        },
+        {
+          "source_surface": 157,
+          "area_m2": 103.95930999954243,
+          "max_height_change_m": 1.4210854715202004e-14
+        },
+        {
+          "source_surface": 160,
+          "area_m2": 184.42366699987184,
+          "max_height_change_m": 8.526512829121202e-14
+        },
+        {
+          "source_surface": 161,
+          "area_m2": 309.55487249990506,
+          "max_height_change_m": 1.4210854715202004e-13
+        }
+      ],
+      "original_xyz_sha256": "68936c855e8e0697d5d399b6d4622d90ef8c9946d64a03cf7d55869e84f7da53",
+      "original_xyz_unchanged": true,
+      "point_deletion_change": 0,
+      "caveat": "Same observations inform selection and fit. This is a development candidate, not an independent accuracy measurement."
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "proposed_components": 0,
+      "accepted_components": 0,
+      "decisions": [
+        {
+          "surface_index": 9,
+          "area_m2": 149.09357599984313,
+          "own_support": 443,
+          "own_strong_support": 372,
+          "own_mean_score": 0.8563116788864136,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 10,
+          "area_m2": 143.92538800004482,
+          "own_support": 558,
+          "own_strong_support": 544,
+          "own_mean_score": 0.9697980880737305,
+          "action": "keep",
+          "alternatives": []
+        }
+      ],
+      "shell_before": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 50,
+        "noded_unique_edges": 25,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 25,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_after": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 50,
+        "noded_unique_edges": 25,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 25,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_diagnostic_passed": true,
+      "candidate_is_accuracy_verified": false,
+      "max_absolute_candidate_vertex_change_m": 0,
+      "large_roof_preservation": [
+        {
+          "source_surface": 9,
+          "area_m2": 149.09357599984313,
+          "max_height_change_m": 0.0
+        },
+        {
+          "source_surface": 10,
+          "area_m2": 143.92538800004482,
+          "max_height_change_m": 0.0
+        }
+      ],
+      "original_xyz_sha256": "72d96582843b9eb12568c9c2ec8ecff628517c7bc502d4ac839847fb7e31a226",
+      "original_xyz_unchanged": true,
+      "point_deletion_change": 0,
+      "caveat": "Same observations inform selection and fit. This is a development candidate, not an independent accuracy measurement."
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "proposed_components": 1,
+      "accepted_components": 0,
+      "decisions": [
+        {
+          "surface_index": 41,
+          "area_m2": 0.8824094999472234,
+          "own_support": 2,
+          "own_strong_support": 0,
+          "own_mean_score": 0.5036423206329346,
+          "action": "uncertain_no_supported_replacement",
+          "alternatives": [
+            {
+              "anchor_surface": 46,
+              "support": 0,
+              "strong_support": 0,
+              "local_support_coverage_fraction": 0.0,
+              "eligible": false
+            }
+          ]
+        },
+        {
+          "surface_index": 42,
+          "area_m2": 2.1747145000904875,
+          "own_support": 6,
+          "own_strong_support": 0,
+          "own_mean_score": 0.18785446882247925,
+          "action": "uncertain_no_supported_replacement",
+          "alternatives": [
+            {
+              "anchor_surface": 44,
+              "support": 0,
+              "strong_support": 0,
+              "local_support_coverage_fraction": 0.0,
+              "eligible": false
+            }
+          ]
+        },
+        {
+          "surface_index": 43,
+          "area_m2": 53.70983000009809,
+          "own_support": 58,
+          "own_strong_support": 11,
+          "own_mean_score": 0.30922824144363403,
+          "action": "uncertain_no_supported_replacement",
+          "alternatives": [
+            {
+              "anchor_surface": 44,
+              "support": 0,
+              "strong_support": 0,
+              "local_support_coverage_fraction": 0.0,
+              "eligible": false
+            },
+            {
+              "anchor_surface": 46,
+              "support": 11,
+              "strong_support": 8,
+              "local_support_coverage_fraction": 0.12238324026521068,
+              "eligible": false
+            }
+          ]
+        },
+        {
+          "surface_index": 44,
+          "area_m2": 915.5844840006954,
+          "own_support": 2818,
+          "own_strong_support": 2681,
+          "own_mean_score": 0.9018461108207703,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 45,
+          "area_m2": 18.858426499829484,
+          "own_support": 47,
+          "own_strong_support": 2,
+          "own_mean_score": 0.3005571663379669,
+          "action": "candidate_reassign_and_refit",
+          "alternatives": [
+            {
+              "anchor_surface": 46,
+              "support": 13,
+              "strong_support": 9,
+              "local_support_coverage_fraction": 0.47527034585964,
+              "eligible": true
+            }
+          ],
+          "selected": {
+            "anchor_surface": 46,
+            "support": 13,
+            "strong_support": 9,
+            "local_support_coverage_fraction": 0.47527034585964,
+            "eligible": true
+          },
+          "anchor_geometry": "reuse existing observation-fitted anchor exactly; seed refit used for evidence only",
+          "extrapolation_uncertain": true,
+          "reason": "more original roof-like observations agree with an adjacent supported plane; not target truth"
+        },
+        {
+          "surface_index": 46,
+          "area_m2": 516.572082499854,
+          "own_support": 1480,
+          "own_strong_support": 1224,
+          "own_mean_score": 0.8522211909294128,
+          "action": "keep",
+          "alternatives": []
+        }
+      ],
+      "shell_before": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 246,
+        "noded_unique_edges": 123,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 123,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_after": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 236,
+        "noded_unique_edges": 118,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 3,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 115,
+        "all_edges_have_two_incidences": false,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_diagnostic_passed": false,
+      "candidate_is_accuracy_verified": false,
+      "max_absolute_candidate_vertex_change_m": 8.016921570067055,
+      "large_roof_preservation": [
+        {
+          "source_surface": 44,
+          "area_m2": 915.5844840006954,
+          "max_height_change_m": 2.1316282072803006e-14
+        },
+        {
+          "source_surface": 46,
+          "area_m2": 516.572082499854,
+          "max_height_change_m": 9.237055564881302e-14
+        }
+      ],
+      "original_xyz_sha256": "d2b792ae6584e6255a1dca8cf48560e9ca923bc56511d1cc63f2a362746c7ec6",
+      "original_xyz_unchanged": true,
+      "point_deletion_change": 0,
+      "caveat": "Same observations inform selection and fit. This is a development candidate, not an independent accuracy measurement."
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "proposed_components": 0,
+      "accepted_components": 0,
+      "decisions": [
+        {
+          "surface_index": 14,
+          "area_m2": 44.03408249995861,
+          "own_support": 268,
+          "own_strong_support": 243,
+          "own_mean_score": 0.91839599609375,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 15,
+          "area_m2": 142.32330649943216,
+          "own_support": 899,
+          "own_strong_support": 836,
+          "own_mean_score": 0.9270873069763184,
+          "action": "keep",
+          "alternatives": []
+        }
+      ],
+      "shell_before": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 80,
+        "noded_unique_edges": 40,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 40,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_after": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 80,
+        "noded_unique_edges": 40,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 40,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_diagnostic_passed": true,
+      "candidate_is_accuracy_verified": false,
+      "max_absolute_candidate_vertex_change_m": 0,
+      "large_roof_preservation": [
+        {
+          "source_surface": 15,
+          "area_m2": 142.32330649943216,
+          "max_height_change_m": 0.0
+        }
+      ],
+      "original_xyz_sha256": "61b3de549cadbc53798b90692b84c901742e183458ce966b523f24f4bd6df6f8",
+      "original_xyz_unchanged": true,
+      "point_deletion_change": 0,
+      "caveat": "Same observations inform selection and fit. This is a development candidate, not an independent accuracy measurement."
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "proposed_components": 0,
+      "accepted_components": 0,
+      "decisions": [
+        {
+          "surface_index": 7,
+          "area_m2": 14.83398399986961,
+          "own_support": 51,
+          "own_strong_support": 26,
+          "own_mean_score": 0.6408500075340271,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 8,
+          "area_m2": 16.30812349990437,
+          "own_support": 57,
+          "own_strong_support": 26,
+          "own_mean_score": 0.6287961602210999,
+          "action": "keep",
+          "alternatives": []
+        }
+      ],
+      "shell_before": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 38,
+        "noded_unique_edges": 19,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 19,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_after": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 38,
+        "noded_unique_edges": 19,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 19,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_diagnostic_passed": true,
+      "candidate_is_accuracy_verified": false,
+      "max_absolute_candidate_vertex_change_m": 0,
+      "large_roof_preservation": [],
+      "original_xyz_sha256": "d7a8c5639c6cb771bea05b5132afd9c8c22b2e1899c198888be1b9a05d20d684",
+      "original_xyz_unchanged": true,
+      "point_deletion_change": 0,
+      "caveat": "Same observations inform selection and fit. This is a development candidate, not an independent accuracy measurement."
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "proposed_components": 0,
+      "accepted_components": 0,
+      "decisions": [
+        {
+          "surface_index": 9,
+          "area_m2": 45.081445999857486,
+          "own_support": 166,
+          "own_strong_support": 165,
+          "own_mean_score": 0.9789015054702759,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 10,
+          "area_m2": 45.60591200000222,
+          "own_support": 160,
+          "own_strong_support": 136,
+          "own_mean_score": 0.8786131739616394,
+          "action": "keep",
+          "alternatives": []
+        }
+      ],
+      "shell_before": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 50,
+        "noded_unique_edges": 25,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 25,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_after": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 50,
+        "noded_unique_edges": 25,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 25,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_diagnostic_passed": true,
+      "candidate_is_accuracy_verified": false,
+      "max_absolute_candidate_vertex_change_m": 0,
+      "large_roof_preservation": [],
+      "original_xyz_sha256": "b4bae17557a4845b84c1a70550c3445fb484c852cdb79789efb9d2dee5c6b1ae",
+      "original_xyz_unchanged": true,
+      "point_deletion_change": 0,
+      "caveat": "Same observations inform selection and fit. This is a development candidate, not an independent accuracy measurement."
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "proposed_components": 0,
+      "accepted_components": 0,
+      "decisions": [
+        {
+          "surface_index": 7,
+          "area_m2": 26.35089100014966,
+          "own_support": 58,
+          "own_strong_support": 33,
+          "own_mean_score": 0.6304900050163269,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 8,
+          "area_m2": 26.460043499969558,
+          "own_support": 81,
+          "own_strong_support": 44,
+          "own_mean_score": 0.6184895038604736,
+          "action": "keep",
+          "alternatives": []
+        }
+      ],
+      "shell_before": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 38,
+        "noded_unique_edges": 19,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 19,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_after": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 38,
+        "noded_unique_edges": 19,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 19,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_diagnostic_passed": true,
+      "candidate_is_accuracy_verified": false,
+      "max_absolute_candidate_vertex_change_m": 0,
+      "large_roof_preservation": [],
+      "original_xyz_sha256": "ef6d50ef0be24d830fe91e14bbd453fa6a1c2e6c15913eadbc7ef1eac9cf7be8",
+      "original_xyz_unchanged": true,
+      "point_deletion_change": 0,
+      "caveat": "Same observations inform selection and fit. This is a development candidate, not an independent accuracy measurement."
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "proposed_components": 0,
+      "accepted_components": 0,
+      "decisions": [
+        {
+          "surface_index": 12,
+          "area_m2": 0.1939349999849923,
+          "own_support": 3,
+          "own_strong_support": 0,
+          "own_mean_score": 0.35991743206977844,
+          "action": "uncertain_no_supported_replacement",
+          "alternatives": []
+        },
+        {
+          "surface_index": 13,
+          "area_m2": 80.71587149996941,
+          "own_support": 270,
+          "own_strong_support": 245,
+          "own_mean_score": 0.8715131878852844,
+          "action": "keep",
+          "alternatives": []
+        },
+        {
+          "surface_index": 14,
+          "area_m2": 87.9066659999343,
+          "own_support": 221,
+          "own_strong_support": 88,
+          "own_mean_score": 0.47626233100891113,
+          "action": "keep",
+          "alternatives": []
+        }
+      ],
+      "shell_before": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 70,
+        "noded_unique_edges": 35,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 35,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_after": {
+        "edge_tolerance_m": 0.001,
+        "raw_ring_edges": 70,
+        "noded_unique_edges": 35,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "orientation_inconsistent_edges": 0,
+        "edges_with_two_incidences": 35,
+        "all_edges_have_two_incidences": true,
+        "degenerate_edges_discarded": 0
+      },
+      "shell_diagnostic_passed": true,
+      "candidate_is_accuracy_verified": false,
+      "max_absolute_candidate_vertex_change_m": 0,
+      "large_roof_preservation": [],
+      "original_xyz_sha256": "1816daff578ca456112055946b02ec9e383dbee1eb6c124963faeadccb7b74c3",
+      "original_xyz_unchanged": true,
+      "point_deletion_change": 0,
+      "caveat": "Same observations inform selection and fit. This is a development candidate, not an independent accuracy measurement."
+    }
+  ],
+  "controlled_summary": [
+    {
+      "case": "clean_step",
+      "n": 6,
+      "raw_mae_m": 5.294530246323525e-16,
+      "methods": {
+        "geometry": {
+          "mae_m": 5.294530246323525e-16,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        },
+        "frozen_DL": {
+          "mae_m": 5.294530246323525e-16,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        }
+      }
+    },
+    {
+      "case": "real_raised_detail",
+      "n": 6,
+      "raw_mae_m": 5.294530246323525e-16,
+      "methods": {
+        "geometry": {
+          "mae_m": 5.294530246323525e-16,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        },
+        "frozen_DL": {
+          "mae_m": 5.294530246323525e-16,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        }
+      }
+    },
+    {
+      "case": "real_depressed_detail",
+      "n": 6,
+      "raw_mae_m": 5.321669031369918e-16,
+      "methods": {
+        "geometry": {
+          "mae_m": 5.321669031369918e-16,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        },
+        "frozen_DL": {
+          "mae_m": 5.321669031369918e-16,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        }
+      }
+    },
+    {
+      "case": "model_bump",
+      "n": 6,
+      "raw_mae_m": 0.2000000000000005,
+      "methods": {
+        "geometry": {
+          "mae_m": 6.2345190738394905e-16,
+          "changed_components": 6,
+          "harmed_over_2cm": 0
+        },
+        "frozen_DL": {
+          "mae_m": 6.2345190738394905e-16,
+          "changed_components": 6,
+          "harmed_over_2cm": 0
+        }
+      }
+    },
+    {
+      "case": "model_dip",
+      "n": 6,
+      "raw_mae_m": 0.20000000000000048,
+      "methods": {
+        "geometry": {
+          "mae_m": 6.2345190738394905e-16,
+          "changed_components": 6,
+          "harmed_over_2cm": 0
+        },
+        "frozen_DL": {
+          "mae_m": 6.2345190738394905e-16,
+          "changed_components": 6,
+          "harmed_over_2cm": 0
+        }
+      }
+    },
+    {
+      "case": "scattered_high",
+      "n": 6,
+      "raw_mae_m": 0.2000000000000005,
+      "methods": {
+        "geometry": {
+          "mae_m": 0.2000000000000005,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        },
+        "frozen_DL": {
+          "mae_m": 6.2345190738394905e-16,
+          "changed_components": 6,
+          "harmed_over_2cm": 0
+        }
+      }
+    },
+    {
+      "case": "coherent_canopy",
+      "n": 6,
+      "raw_mae_m": 0.2000000000000005,
+      "methods": {
+        "geometry": {
+          "mae_m": 0.2000000000000005,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        },
+        "frozen_DL": {
+          "mae_m": 0.2000000000000005,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        }
+      }
+    },
+    {
+      "case": "complete_occlusion",
+      "n": 6,
+      "raw_mae_m": 0.2000000000000005,
+      "methods": {
+        "geometry": {
+          "mae_m": 0.2000000000000005,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        },
+        "frozen_DL": {
+          "mae_m": 0.2000000000000005,
+          "changed_components": 0,
+          "harmed_over_2cm": 0
+        }
+      }
+    }
+  ],
+  "proposed_components": 2,
+  "accepted_components": 1,
+  "all_original_xyz_unchanged": true,
+  "new_training": false,
+  "independent_US_GT": false,
+  "optical_boundary_confirmation_implemented": false,
+  "complete_occlusion_completion_implemented": false,
+  "source_code_sha256": "c5dece23c001a986f05676fe185ab5c8417b5f5c794436a2ead01d7036ffa33b"
+}

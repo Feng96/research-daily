@@ -4,13 +4,13 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
   let payload=null,activeId=null,requestToken=0,visibleCount=0,error=null,loading=false;
   const material=new THREE.PointsMaterial({size:3,sizeAttenuation:false,vertexColors:true,transparent:true,opacity:.95,depthWrite:false,depthTest:false,toneMapped:false});
   const cloud=new THREE.Points(new THREE.BufferGeometry(),material);cloud.name='original-3dep-observations';cloud.renderOrder=8;cloud.frustumCulled=false;cloud.visible=false;root.add(cloud);
-  if(['tree','workflow','canopy'].includes(chapter)){for(const [id,value,label]of [['point-mode','removed','本组剔除的候选点'],['point-color','vegetation','DL 植被／篱笆得分']]){const o=document.createElement('option');o.value=value;o.textContent=label;$(id).append(o);}}
+  if(['tree','workflow','canopy','repair','repair'].includes(chapter)){for(const [id,value,label]of [['point-mode','removed','本组剔除的候选点'],['point-color','vegetation','DL 植被／篱笆得分']]){const o=document.createElement('option');o.value=value;o.textContent=label;$(id).append(o);}}
   const enumValue=(key,values,fallback)=>values.includes(initialHash.get(key))?initialHash.get(key):fallback;
   $('show-points').checked=initialHash.get('points')!=='0';
-  $('point-mode').value=enumValue('pointMode',['inside','high','all','train','test',...(['tree','workflow','canopy'].includes(chapter)?['removed']:[])],'inside');
-  if(['workflow','canopy'].includes(chapter)){$('point-mode').querySelector('option[value=test]').remove();$('point-color').querySelector('option[value=split]').textContent='保留候选／其他';}
-  if(chapter==='canopy'){const o=document.createElement('option');o.value='decision';o.textContent='当前方法保留／删除';$('point-color').append(o);}
-  $('point-color').value=enumValue('pointColor',['height','split','class',...(chapter==='canopy'?['decision']:[]),...(['tree','workflow','canopy'].includes(chapter)?['vegetation']:[])],'height');
+  $('point-mode').value=enumValue('pointMode',['inside','high','all','train','test',...(['tree','workflow','canopy','repair','repair'].includes(chapter)?['removed']:[])],'inside');
+  if(['workflow','canopy','repair'].includes(chapter)){$('point-mode').querySelector('option[value=test]').remove();$('point-color').querySelector('option[value=split]').textContent='保留候选／其他';}
+  if(['canopy','repair'].includes(chapter)){const o=document.createElement('option');o.value='decision';o.textContent='当前方法保留／删除';$('point-color').append(o);}
+  $('point-color').value=enumValue('pointColor',['height','split','class',...(['canopy','repair'].includes(chapter)?['decision']:[]),...(['tree','workflow','canopy','repair','repair'].includes(chapter)?['vegetation']:[])],'height');
   $('point-size').value=initialHash.has('pointSize')?Math.max(1,Math.min(6,+initialHash.get('pointSize')||3)):3;
   $('point-through').checked=initialHash.get('pointThrough')!=='0';
   if(initialHash.has('opacity'))$('opacity').value=Math.max(15,Math.min(100,+initialHash.get('opacity')||55));
@@ -37,7 +37,7 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     cloud.geometry.dispose();cloud.geometry=new THREE.BufferGeometry();visibleCount=0;
     if(!payload||payload.id!==getSelected()?.id){appearance();return;}
     const key=chapter+'/'+getGroup(),setId=payload.groupToTrainSet[key];
-    const originalCandidates=new Set(payload.trainSets[payload.groupToTrainSet[['workflow','canopy'].includes(chapter)?chapter+'/raw':'tree/global']]||[]);
+    const originalCandidates=new Set(payload.trainSets[payload.groupToTrainSet[['workflow','canopy','repair'].includes(chapter)?chapter+'/raw':'tree/global']]||[]);
     const scoreKind=payload.groupToScoreModel?.[key]||'fusion',scores=payload.semanticScores?.[scoreKind]||[];
     const train=new Set(payload.trainSets[setId]||[]),test=new Set(payload.tests[chapter]||[]),mode=$('point-mode').value,colorMode=$('point-color').value;
     const indices=[];for(let i=0;i<payload.flags.length;i++){
@@ -63,7 +63,7 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     const tm=m.trainMemberships?.[key],hm=m.testMemberships?.[chapter];
     $('point-membership').textContent=`本组候选 ${fmt(tm?.sourceRecordCount??train.size)} 条 · 留出 ${fmt(hm?.sourceRecordCount??test.size)} 条。颜色和筛选对应当前方法。`;
     const ambiguous=(tm?.ambiguousSourceCoordinates||0)+(hm?.ambiguousSourceCoordinates||0);
-    if(['workflow','canopy'].includes(chapter))$('point-membership').textContent=`当前阶段输入 ${fmt(train.size)} 点 · 原始候选 ${fmt(originalCandidates.size)} 点 · 原始索引精确对应；无独立屋顶GT。`;
+    if(['workflow','canopy','repair'].includes(chapter))$('point-membership').textContent=`当前阶段输入 ${fmt(train.size)} 点 · 原始候选 ${fmt(originalCandidates.size)} 点 · 原始索引精确对应；无独立屋顶GT。`;
     $('point-ambiguity').hidden=!ambiguous;
     $('point-ambiguity').textContent=`旧实验中 ${fmt(ambiguous)} 个成员坐标存在重合回波，按原坐标标记全部匹配源记录；候选记录数与可视回波数可能不同。`;
     $('point-legend').dataset.mode=colorMode;
@@ -78,7 +78,7 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     try{
       let promise=cache.get(b.id);
       if(!promise){promise=(async()=>{
-        const response=await fetch((chapter==='canopy'?'../next/canopy/data/points/':chapter==='workflow'?'../next/data/points/':'../data/'+(chapter==='tree'?'tree-points/':'points/'))+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw new Error('点云 HTTP '+response.status);
+        const response=await fetch((chapter==='repair'?'../repair/data/points/':['canopy','repair'].includes(chapter)?'../next/canopy/data/points/':chapter==='workflow'?'../next/data/points/':'../data/'+(chapter==='tree'?'tree-points/':'points/'))+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw new Error('点云 HTTP '+response.status);
         const bytes=new Uint8Array(await response.arrayBuffer());
         const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);
         const data=JSON.parse(text);if(data.id!==b.id||data.positions.length!==data.flags.length*3)throw new Error('点云清单不一致');return data;

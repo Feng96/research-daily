@@ -56,17 +56,17 @@ function loadChapter(id,options={}){
     state=nativeState;url=target.href;$('viewer').style.height=(c.viewerHeight||1150)+'px';
   }else{url='./viewer/?chapter='+c.id+'&v=20261020-tree#'+new URLSearchParams(state);$('viewer').style.removeProperty('height');}
   $('viewer').src=url;$('open-viewer').href=url;selectedState=state;
-  history.replaceState(null,'','#'+new URLSearchParams({chapter:c.id,...state}));
+  history.replaceState(null,'',location.pathname+location.search+'#'+new URLSearchParams({chapter:c.id,...state}));
   $('next-chapter').textContent=c.number===manifest.chapters.length?'回到第一章 ↑':'下一章 →';$('next-chapter').onclick=()=>{loadChapter(manifest.chapters[c.number%manifest.chapters.length].id);$('chapter').scrollIntoView({behavior:'smooth',block:'start'});};
 }
 window.addEventListener('message',event=>{
   if(event.origin!==location.origin||event.source!==$('viewer').contentWindow)return;const message=event.data;
   if(message?.type==='lod2-height'&&Number.isFinite(message.height)){const target=Math.max(760,Math.min(current?.viewerKind==='native'?6000:2100,Math.ceil(message.height)));if(Math.abs($('viewer').getBoundingClientRect().height-target)>4)$('viewer').style.height=target+'px';}
   if(message?.type==='lod2-native-selection'&&current?.viewerKind==='native'){
-    selectedState={};for(const key of ['building','case','method'])if(typeof message[key]==='string')selectedState[key]=message[key];history.replaceState(null,'','#'+new URLSearchParams({chapter:current.id,...selectedState}));
+    selectedState={};for(const key of ['building','case','method'])if(typeof message[key]==='string')selectedState[key]=message[key];history.replaceState(null,'',location.pathname+location.search+'#'+new URLSearchParams({chapter:current.id,...selectedState}));
     const target=new URL(current.viewerUrl,document.baseURI);for(const [key,value] of Object.entries(selectedState))target.searchParams.set(key,value);$('open-viewer').href=target.href;
   }
-  if(message?.type==='lod2-selection'&&message.chapter===current?.id){selectedState={};for(const k of ['building','group','base','cohort','lng','lat','z','bearing','pitch','points','pointMode','pointColor','pointSize','pointThrough','opacity','models'])if(message[k]!==undefined)selectedState[k]=message[k];const hash=new URLSearchParams({chapter:current.id,...selectedState});history.replaceState(null,'','#'+hash);$('open-viewer').href='./viewer/?chapter='+current.id+'&v=20261020-tree#'+new URLSearchParams(selectedState);}
+  if(message?.type==='lod2-selection'&&message.chapter===current?.id){selectedState={};for(const k of ['building','group','base','cohort','lng','lat','z','bearing','pitch','points','pointMode','pointColor','pointSize','pointThrough','opacity','models'])if(message[k]!==undefined)selectedState[k]=message[k];const hash=new URLSearchParams({chapter:current.id,...selectedState});history.replaceState(null,'',location.pathname+location.search+'#'+hash);$('open-viewer').href='./viewer/?chapter='+current.id+'&v=20261020-tree#'+new URLSearchParams(selectedState);}
 });
 window.addEventListener('hashchange',()=>{if(manifest&&!changing){selectedState=Object.fromEntries(params());loadChapter(params().get('chapter'));}});
 try{

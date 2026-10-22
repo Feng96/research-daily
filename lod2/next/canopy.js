@@ -8,3 +8,6 @@ try{
  }
  window.lod2Canopy={loaded:true,data};
 }catch(error){const el=document.getElementById('canopy-error');el.hidden=false;el.textContent='结果读取失败：'+error.message;}
+
+const resumed=new URLSearchParams(location.search);if(resumed.has('building')&&!location.hash.startsWith('#v01'))frame.src='../viewer/?chapter=canopy#'+resumed;
+window.addEventListener('message',e=>{if(e.origin!==location.origin||e.source!==frame.contentWindow||e.data?.type!=='lod2-selection'||e.data.chapter!=='canopy'||location.hash.startsWith('#v01'))return;const p=new URLSearchParams();for(const k of ['building','group','base','pointMode','pointColor','opacity'])if(e.data[k])p.set(k,e.data[k]);history.replaceState(null,'','?'+p+'#canopy');document.getElementById('canopy-standalone').href='../viewer/?chapter=canopy#'+p;});
