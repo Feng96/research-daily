@@ -1,0 +1,40 @@
+{
+  "title": "A line-based progressive refinement of 3D rooftop models using airborne LiDAR data with single view imagery",
+  "authors": "Jung and Sohn",
+  "year": 2019,
+  "doi": "10.1016/j.isprsjprs.2019.01.003",
+  "sources": [
+    "https://doi.org/10.1016/j.isprsjprs.2019.01.003",
+    "https://ausmlab.com/research/progressive-3d-city-modelling/",
+    "https://www.researchgate.net/publication/331445005_A_line-based_progressive_refinement_of_3D_rooftop_models_using_airborne_LiDAR_data_with_single_view_imagery"
+  ],
+  "inspected_sections": [
+    "2.1.1 optical lines and corners",
+    "2.1.2 collinearity projection",
+    "2.2 topological cue integration",
+    "2.4 MDL",
+    "2.5 MCMC/SA",
+    "3.4.2 unchanged roof-plane count"
+  ],
+  "paper_workflow": [
+    "existing LiDAR roof model",
+    "image lines and corners",
+    "project to existing planes",
+    "compass/topological lines",
+    "MDL with MCMC and simulated annealing",
+    "refined boundaries"
+  ],
+  "completed_control": "point-only MLP front -> fixed Roofer -> joint semantic support review",
+  "control_is_original_paper_algorithm": false,
+  "original_algorithm_reproduced": false,
+  "required_work": [
+    "Implement or obtain Kovesi/Chabat feature extraction, topological proposal kernels and MDL/MCMC/SA optimizer.",
+    "Original perspective experiment requires image calibration and orientation; current NAIP input is a georeferenced orthomosaic.",
+    "For an NAIP adaptation, explicitly replace perspective ray geometry and document differences; do not claim original benchmark reproduction."
+  ],
+  "initial_model_difference": "Current control uses shared Roofer rather than the original Jung 2017 L-model pipeline.",
+  "official_code_search": "No 2019 algorithm implementation located in this scoped search of the paper and author lab pages; absence is not established.",
+  "original_plane_count_preserved": true,
+  "tree_semantic_filter_is_not_its_core_task": true,
+  "conclusion": "Workflow-order control executed. Original algorithm not reproduced or assessed for superiority in this probe."
+}

@@ -1,5 +1,5 @@
 const frame=document.getElementById('workflow-viewer');
-window.addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==frame.contentWindow)return;if(event.data?.type==='lod2-height'&&Number.isFinite(event.data.height))frame.style.height=Math.max(650,Math.min(3500,event.data.height+4))+'px';});
+window.addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==frame.contentWindow)return;if(event.data?.type==='lod2-height'&&Number.isFinite(event.data.height))frame.style.height=Math.max(650,Math.min(3500,event.data.height))+'px';});
 try{
   const response=await fetch('./data/summary.json');if(!response.ok)throw Error('结果 HTTP '+response.status);
   const data=await response.json();

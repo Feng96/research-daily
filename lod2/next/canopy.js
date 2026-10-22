@@ -1,0 +1,10 @@
+const frame=document.getElementById('canopy-viewer');
+window.addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==frame.contentWindow)return;if(event.data?.type==='lod2-height'&&Number.isFinite(event.data.height))frame.style.height=Math.max(650,Math.min(3500,event.data.height))+'px';});
+try{
+ const response=await fetch('./canopy/data/summary.json');if(!response.ok)throw Error('结果 HTTP '+response.status);const data=await response.json();
+ for(const row of data.rows){
+  if(row.id.endsWith('67528254')||row.id.endsWith('66347628'))for(const method of data.methods){const m=row.methods[method],tr=document.createElement('tr');for(const value of ['OSM '+row.id.split('-osm-')[1],data.group_labels[method],m.removed_points,m.roof_surfaces,m.maximum_roof_z_m.toFixed(3)]){const td=document.createElement('td');td.textContent=value;tr.append(td);}const td=document.createElement('td'),button=document.createElement('button');button.className='case canopy-case';button.dataset.building=row.id;button.dataset.method=method;button.textContent='查看 ↗';button.onclick=()=>{const url='../viewer/?chapter=canopy#'+new URLSearchParams({building:row.id,group:method,base:'naip',pointColor:'decision'}),viewer=frame.contentWindow.roofCompare;if(viewer?.loaded){viewer.setGroup(method);viewer.selectBuilding(viewer.data.buildings.find(b=>b.id===row.id),true);}else{frame.src=url;}document.getElementById('canopy-standalone').href=url;frame.scrollIntoView({behavior:'smooth',block:'start'});};td.append(button);tr.append(td);document.getElementById('canopy-focus-rows').append(tr);}
+  const tr=document.createElement('tr');for(const value of ['OSM '+row.id.split('-osm-')[1],...data.methods.map(m=>row.methods[m].removed_points),row.point_overrides_protected]){const td=document.createElement('td');td.textContent=value;tr.append(td);}document.getElementById('canopy-all-rows').append(tr);
+ }
+ window.lod2Canopy={loaded:true,data};
+}catch(error){const el=document.getElementById('canopy-error');el.hidden=false;el.textContent='结果读取失败：'+error.message;}
