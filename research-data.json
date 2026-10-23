@@ -1,5 +1,225 @@
 [
   {
+    "id": "2026-10-22-usbf-six-state-completion",
+    "date": "2026-10-22",
+    "category": "USBF · Production",
+    "title": "Completed and audited the six-state V7 footprint product",
+    "summary": "Production and full source-identity coverage checks completed for Alabama, Arkansas, Arizona, California, Colorado and Connecticut: 25,092,517 buildings, including 913,169 with footprint modifications (about 3.64%).",
+    "status": "Six-state production verified",
+    "note": "This is a production-completeness result, not a new geometry-accuracy evaluation or a claim that the complete package has been uploaded. The frozen production model and scientific rules were unchanged.",
+    "sources": [],
+    "details": "Of 25,092,558 unique source IDs, all valid sources were accounted for with zero missing valid IDs and zero extra IDs. The remaining 41 records are verified invalid original geometries and remain explicitly quarantined. Counts by state: AL 2,846,169; AR 1,759,917; AZ 3,071,363; CA 13,243,143; CO 2,564,259; CT 1,607,666. Completion was recorded at 04:25 EDT on October 22."
+  },
+  {
+    "id": "2026-10-22-usbf-regional-continuation",
+    "date": "2026-10-22",
+    "category": "USBF · Production",
+    "title": "Resumed regional production beyond the completed six states",
+    "summary": "A separate regional generation continued toward the contiguous United States and DC, reusing completed six-state results. The October 22, 14:38 EDT snapshot recorded 31,814 additional buildings and 2,146 modifications around the Delaware–Maryland area.",
+    "status": "Regional production in progress",
+    "note": "These are dated progress counts, not a live monitor or a completed regional or national release. The current region still had 9,112 buildings outstanding at that snapshot.",
+    "sources": [],
+    "details": "The workflow retains complete input context across administrative boundaries, deduplicates shared grids, and separates processing context from delivery geography. Production and export/upload run independently; checkpoint continuation was scheduled, but scheduling alone does not establish successful continuation."
+  },
+  {
+    "id": "2026-10-22-usbf-regional-release-policy",
+    "date": "2026-10-22",
+    "category": "USBF · Data Publishing",
+    "title": "Defined complete regional replacement for incremental releases",
+    "summary": "An accepted region will replace all older current-product records in that region with its complete new output, including unchanged buildings. Older data outside the accepted region remains in the current product.",
+    "status": "Release preparation",
+    "note": "The October 22 handoff recorded the complete six-state package in export and verification preparation; successful public upload of that package was not yet verified. The public repository link is not proof of this new release.",
+    "sources": [
+      {
+        "label": "Public data repository (check its current manifest)",
+        "url": "https://source.coop/opengeos/us-buildings/USBF_v1"
+      }
+    ],
+    "details": "Different old/new building counts are allowed. Region membership follows fixed original ownership, and whole footprints are retained. Missing inputs or failed work cannot be treated as an accepted empty region. The first replacement covers the six completed states; the other 42 states plus DC retain their existing data."
+  },
+  {
+    "id": "2026-10-22-lod2-paper-comparison",
+    "date": "2026-10-22",
+    "category": "LoD2 · Method Comparison",
+    "title": "Completed a matched image-line refinement and DL comparison",
+    "summary": "Compared an adaptation of Jung & Sohn (2019) with the existing DL-assisted local roof reassignment on eight Georgetown buildings under two shared-input settings. All 16 pairs share observations, footprints and the same initial Roofer model; the paper adaptation ran 48 optimization trials across three seeds.",
+    "status": "Matched experiment completed",
+    "note": "This implements the paper’s core ideas with declared substitutions, not the original algorithm in full. Independent target roof ground truth is absent, so no real-world accuracy winner is established.",
+    "sources": [
+      {
+        "label": "Paired experiment and reproducibility package",
+        "url": "https://feng96.github.io/research-daily/lod2/paper/"
+      },
+      {
+        "label": "Jung & Sohn (2019)",
+        "url": "https://doi.org/10.1016/j.isprsjprs.2019.01.003"
+      }
+    ],
+    "details": "The adaptation uses NAIP line/corner cues, contour proposals, fitting and complexity terms, and annealed search while holding roof planes fixed. Twelve analytic cases showed aggregate improvement for boundary shifts but inconsistent orientation/corner behavior. Clean-package replay exactly reproduced one changed candidate from each method. Unchanged models and rejected candidates remain visible."
+  },
+  {
+    "id": "2026-10-22-lod2-local-roof-repair",
+    "date": "2026-10-22",
+    "category": "LoD2 · Roof Repair",
+    "title": "Tested local bumps, depressions and roof-plane reassignment",
+    "summary": "A bounded validation reused frozen point-model scores on eight real buildings and tested 48 analytic cases. Two real local-replacement candidates were proposed; only one passed the fixed shell-edge diagnostic.",
+    "status": "Validation completed; limitations remain",
+    "note": "This is not a newly trained correction network. OSM 67521425 remains unresolved: its proposed changed candidate failed the edge check, and the checked export retains the preceding model. Geometric validity does not establish roof accuracy.",
+    "sources": [
+      {
+        "label": "Local repair methods, cases and models",
+        "url": "https://feng96.github.io/research-daily/lod2/repair/"
+      }
+    ],
+    "details": "The final validation preserves original XYZ and point indices and labels reassigned surfaces as generated geometry. Coherent planar contamination and total occlusion remain unresolved; low support alone does not justify flattening or filling a roof. Earlier invalid development probes were superseded by the corrected final run."
+  },
+  {
+    "id": "2026-10-22-lod2-canopy-controls",
+    "date": "2026-10-22",
+    "category": "LoD2 · Point Selection",
+    "title": "Compared fusion order and guarded canopy filtering",
+    "summary": "Compared the original joint filtering workflow, point-cloud-first reconstruction, and strong point evidence with observed-plane protection on the same eight buildings. In two inspected cases, the guarded method removed 150 and 16 candidate points, compared with 10 and 6 in the original workflow.",
+    "status": "Three-way comparison completed",
+    "note": "Removed-point counts are not tree-classification accuracy. Lower model peaks do not prove a more accurate roof; both remaining canopy and mistakenly removed roof support require independent checks.",
+    "sources": [
+      {
+        "label": "Three methods, point decisions and roof models",
+        "url": "https://feng96.github.io/research-daily/lod2/next/#canopy"
+      }
+    ],
+    "details": "The original fusion rule screened out only 136 of 21,383 candidates. Most suspected residual canopy points never reached the fusion threshold. The revised method allows strong point evidence to act despite optical conflict and protects points near supported planes. No new network was trained for this comparison."
+  },
+  {
+    "id": "2026-10-22-lod2-executable-workflow",
+    "date": "2026-10-22",
+    "category": "LoD2 · Workflow",
+    "title": "Connected real inputs to an eight-building LoD2 workflow",
+    "summary": "Connected NAIP imagery, original 3DEP points and footprints through conservative point filtering, Roofer reconstruction, semantic roof-support review, shell diagnostics and export. All eight cases produced native LoD2 outputs.",
+    "status": "Executable prototype completed",
+    "note": "The first version removed 136 points at the front end but triggered no additional backend trimming. Initial and final models were therefore identical; this verifies execution, not backend effectiveness or improved accuracy.",
+    "sources": [
+      {
+        "label": "Fixed workflow and v0.1 results",
+        "url": "https://feng96.github.io/research-daily/lod2/next/#v01"
+      },
+      {
+        "label": "Unified input-to-validation navigation",
+        "url": "https://feng96.github.io/research-daily/lod2/"
+      }
+    ],
+    "details": "Six roof surfaces with insufficient observed support were retained for review. Fully occluded roof completion is not implemented. The experiment keeps original point decisions, input provenance, failures and fallback records."
+  },
+  {
+    "id": "2026-10-21-lod2-scaled-controlled-study",
+    "date": "2026-10-21",
+    "category": "LoD2 · Controlled Experiments",
+    "title": "Expanded training and evaluated roof-support filtering across cities",
+    "summary": "Completed 26 training runs across 16 configurations, with up to 20,000 training buildings. Evaluation covered 200 buildings in Groningen and Maastricht, 12 simulated observation conditions and 19 reconstruction workflows.",
+    "status": "Controlled evaluation completed",
+    "note": "These results use automatic 3DBAG teacher roofs and simulated point observations. They do not establish accuracy on real AHN/3DEP data or US roofs. RGB imagery is for inspection, not an input to the newly trained point models.",
+    "sources": [
+      {
+        "label": "Controlled results and full experiment archive",
+        "url": "https://feng96.github.io/research-daily/lod2/results.html"
+      },
+      {
+        "label": "Real AHN point diagnostics",
+        "url": "https://feng96.github.io/research-daily/lod2/studies/scaling/real/raw_quality_preview_dl_qualitative.html"
+      }
+    ],
+    "details": "The source-validation-selected local model reduced the mean penalized roof loss from 1.0940 to 0.5123 m. The loss includes failure and missing-coverage penalties; it is not successful-roof MAE. Extra gains from larger training sets and longer training were not clearly established. Real-point diagnostics still showed the risk of removing roof-support points."
+  },
+  {
+    "id": "2026-10-20-lod2-multicity-pilot",
+    "date": "2026-10-20",
+    "category": "LoD2 · Controlled Experiments",
+    "title": "Tested learned filtering and its clean-roof tradeoff",
+    "summary": "A first cross-city study used 500 training, 160 validation and 160 test buildings from 3DBAG. A fixed 24-building subset underwent 720 roof reconstruction comparisons. Learned filtering reduced dense simulated canopy error but also damaged clean roofs.",
+    "status": "Pilot completed",
+    "note": "The controlled experiments use simulated observations. A separate Boston probe on 18 real buildings and 47,544 candidates did not establish a reconstruction-success improvement or independently verified roof accuracy.",
+    "sources": [
+      {
+        "label": "Historical multi-city experiment",
+        "url": "https://feng96.github.io/research-daily/lod2/archive/#chapter=multicity"
+      }
+    ],
+    "details": "For dense simulated canopy, mean vertical error was 2.14 m for raw points, 1.27 m after PointNet filtering and 1.49 m with a local model plus roof protection. On clean roofs the corresponding values were 0.40, 0.55 and 0.52 m. Point-classification quality alone did not determine reconstruction quality."
+  },
+  {
+    "id": "2026-10-20-lod2-expanded-recheck",
+    "date": "2026-10-20",
+    "category": "LoD2 · Input Quality",
+    "title": "Expanded the input-quality comparison to 120 buildings",
+    "summary": "Extended the Georgetown comparison to the original 60 buildings plus 60 additional cases, testing 12 configurations. Local registration and aggressive simplification did not provide consistent benefits across the two groups.",
+    "status": "Expanded comparison completed",
+    "note": "Metrics use held-out observations from the same point-cloud acquisition, not independent roof ground truth. Improvements on the original cases did not consistently transfer to the additional cases.",
+    "sources": [
+      {
+        "label": "Twelve-configuration comparison",
+        "url": "https://feng96.github.io/research-daily/lod2/archive/#chapter=overnight"
+      }
+    ],
+    "details": "Published the initial three experiment chapters together with actual model geometry, candidate/held-out point membership, imagery and per-building inspection. The current archive preserves those historical results."
+  },
+  {
+    "id": "2026-10-19-lod2-registration-filtering",
+    "date": "2026-10-19",
+    "category": "LoD2 · Input Quality",
+    "title": "Separated registration and point filtering in a four-way comparison",
+    "summary": "Compared raw input, registration alone, point filtering alone and their combination on 60 fixed buildings. Combined preprocessing changed common-point mean absolute error from 0.6546 to 0.6513 m, while coverage fell from 99.69% to 93.83%.",
+    "status": "Comparison completed",
+    "note": "The small common-point error reduction does not establish an overall quality gain. These are same-acquisition held-out observations, and the registration groups each included a candidate that failed the fixed edge diagnostic.",
+    "sources": [
+      {
+        "label": "Four-way input-quality experiment",
+        "url": "https://feng96.github.io/research-daily/lod2/archive/#chapter=optimization"
+      }
+    ],
+    "details": "The global footprint translation was 0.25 m west and 1.00 m north; filtering removed 3.65% of candidate points. NAIP did not participate in this preprocessing reconstruction experiment. Original crop membership was fixed, so recovering newly available points after registration remained untested."
+  },
+  {
+    "id": "2026-10-17-lod2-georgetown-pilot",
+    "date": "2026-10-17",
+    "category": "LoD2 · Reconstruction",
+    "title": "Established five reconstruction baselines in Georgetown",
+    "summary": "Built a 60-building pilot using 2014 NAIP imagery, 2014 3DEP points and USBF footprints. Compared native Roofer, LiDAR roof templates, image-oriented templates, free-plane reconstruction and image-assisted plane partitioning.",
+    "status": "Real-input pilot completed",
+    "note": "The best held-out fit in this pilot was Roofer at 0.743 m MAE. Evaluation used a fixed 20% holdout from the same LiDAR acquisition, not independent ground truth. No new deep-learning model was trained in this round.",
+    "sources": [
+      {
+        "label": "Five-method pilot and models",
+        "url": "https://feng96.github.io/research-daily/lod2/archive/#chapter=pilot"
+      }
+    ],
+    "details": "Simple optical orientation cues provided limited gains, and none of the tested alternatives surpassed Roofer on this metric. This motivated closer inspection of registration, contamination, roof support and topology."
+  },
+  {
+    "id": "2026-10-16-lod2-reference-audit",
+    "date": "2026-10-16",
+    "category": "LoD2 · Research Design",
+    "title": "Audited reference data before treating city models as roof truth",
+    "summary": "Reviewed the distinction between footprint-and-height extrusion and roof-structure reconstruction, and audited potential LoD2 reference sources. The research direction narrowed toward using real observations to adapt roof reconstruction across regions.",
+    "status": "Reference audit and study design",
+    "note": "Automatically reconstructed city models and building-energy models are not automatically independent roof ground truth. Pairing, acquisition time, registration, roof detail and fallback geometry need to be checked separately.",
+    "sources": [
+      {
+        "label": "Reference models and audit materials",
+        "url": "https://feng96.github.io/research-daily/lod2/reference/"
+      }
+    ],
+    "details": "The planned evaluation separates point support, plane/ridge structure, coverage, reconstruction failure and shell validity. These are research requirements, not evidence that the proposed method is already accurate."
+  },
+  {
+    "id": "2026-10-16-usbf-manuscript-rebase",
+    "date": "2026-10-16",
+    "category": "USBF · Paper",
+    "title": "Rebased manuscript review on the author-reviewed draft",
+    "summary": "The manuscript discussion identified the author-reviewed USBF draft as the baseline for further sentence-level review and emphasized describing specific footprint-editing scenarios rather than broadly claiming improved accuracy.",
+    "status": "Review direction clarified",
+    "note": "This records a manuscript-review decision, not submission, acceptance or confirmation that every suggested edit was incorporated. Selected visual changes do not override aggregate evaluation results.",
+    "sources": []
+  },
+  {
     "id": "2026-10-16-footprint-production-checkpoint",
     "date": "2026-10-16",
     "category": "Building Footprints",
@@ -110,13 +330,13 @@
     "sources": []
   },
   {
-    "id": "2026-09-18-usbf-data-sample",
-    "date": "2026-09-18",
-    "category": "USBF · Data Sample",
-    "title": "Shared an Orange County building data sample with my advisor",
-    "summary": "Shared a sample of downtown Orange County building data for my advisor to review.",
-    "status": "Shared",
-    "note": "This is the sharing date, not necessarily the date the data was completed. The upload status of the larger area has not been verified.",
+    "id": "2026-09-25-usbf-title-feedback",
+    "date": "2026-09-25",
+    "category": "USBF · Paper",
+    "title": "Received feedback on the paper title",
+    "summary": "My advisor suggested revisions to the paper title and opening text.",
+    "status": "Feedback received",
+    "note": "This is the date of the comments. Whether the suggestions have been incorporated has not been verified.",
     "sources": []
   },
   {
@@ -140,14 +360,13 @@
     "sources": []
   },
   {
-    "id": "2026-09-25-usbf-title-feedback",
-    "date": "2026-09-25",
-    "category": "USBF · Paper",
-    "title": "Received feedback on the paper title",
-    "summary": "My advisor suggested revisions to the paper title and opening text.",
-    "status": "Feedback received",
-    "note": "This is the date of the comments. Whether the suggestions have been incorporated has not been verified.",
+    "id": "2026-09-18-usbf-data-sample",
+    "date": "2026-09-18",
+    "category": "USBF · Data Sample",
+    "title": "Shared an Orange County building data sample with my advisor",
+    "summary": "Shared a sample of downtown Orange County building data for my advisor to review.",
+    "status": "Shared",
+    "note": "This is the sharing date, not necessarily the date the data was completed. The upload status of the larger area has not been verified.",
     "sources": []
   }
 ]
-

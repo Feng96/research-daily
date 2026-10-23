@@ -9,7 +9,7 @@ The entries do not cover every research activity. A blank date does not mean no 
 - `index.html`: page structure
 - `styles.css`: styling
 - `script.js`: calendar and entry display
-- `research-data.json`: four approved public entries
+- `research-data.json`: reviewed public entries
 - `.nojekyll`: serves the static files directly through GitHub Pages
 
 ## Add an entry
@@ -31,9 +31,13 @@ Add only information approved for public release to `research-data.json`. It is 
 ]
 ```
 
-`date` must be a real date in `YYYY-MM-DD` format; `title` and `summary` are required. Keep `id` unique and stable. `status`, `note`, `details`, and `category` are optional. The current `sources` arrays are empty. Entries appear in descending date order. The page uses the original date strings without timezone conversion. Text is rendered as plain text, not HTML.
+`date` must be a real date in `YYYY-MM-DD` format; `title` and `summary` are required. Keep `id` unique and stable. `status`, `note`, `details`, and `category` are optional. Each source is an object with `label` and an absolute HTTPS `url`; valid sources render as links below the entry. Sources can point to related experiments or background material and are not automatically independent validation. Entries appear in descending date order. The page uses the original date strings without timezone conversion. Text is rendered as plain text, not HTML.
 
 To preview locally, run a static HTTP server in this directory, for example `python -m http.server 8000`, then open `http://localhost:8000/`. Opening the HTML file directly may prevent the browser from loading the JSON file.
 
 The repository owner publishes changes by committing approved content. The GitHub Pages publishing source is the root of the `main` branch.
 
+
+## October 22, 2026 history update
+
+Added 14 dated entries from the USBF and LoD2 research histories, preserving all 15 existing entries. Dates use America/New_York. Production completion, release preparation, controlled experiments and real-observation diagnostics are explicitly separated. Public entries contain summaries and public links, not private transcripts or infrastructure credentials.

@@ -110,6 +110,24 @@ function renderEntries() {
       note.textContent = item.note;
       card.append(note);
     }
+    if (Array.isArray(item.sources)) {
+      const links = document.createElement("ul");
+      links.className = "source-links";
+      links.setAttribute("aria-label", "Related experiments and sources");
+      for (const source of item.sources) {
+        if (!source || typeof source.label !== "string" || typeof source.url !== "string") continue;
+        let url;
+        try { url = new URL(source.url); } catch { continue; }
+        if (url.protocol !== "https:") continue;
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = url.href;
+        link.textContent = source.label;
+        li.append(link);
+        links.append(li);
+      }
+      if (links.children.length) card.append(links);
+    }
     entryList.append(card);
   }
 }
@@ -142,4 +160,3 @@ fetch("research-data.json")
     render();
   })
   .catch(() => { loadError = true; render(); });
-
