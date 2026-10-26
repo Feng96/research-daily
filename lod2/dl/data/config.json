@@ -1,0 +1,128 @@
+{
+  "round": "20261026",
+  "status": "frozen_before_training",
+  "seed_for_reconstruction": 20261026,
+  "semantics_seeds": [
+    20261026,
+    20261027,
+    20261028
+  ],
+  "target_inference_buildings": 120,
+  "reconstruction_buildings": [
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "cohort": "fresh60"
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "cohort": "fresh60"
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "cohort": "legacy60"
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "cohort": "fresh60"
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "cohort": "fresh60"
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "cohort": "fresh60"
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "cohort": "fresh60"
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "cohort": "fresh60"
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "cohort": "fresh60"
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "cohort": "fresh60"
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "cohort": "fresh60"
+    }
+  ],
+  "selection": "8 previously discussed engineering cases + lexically first8 unused legacy60 + first8 unused fresh60; no predictions/GT consulted; not representative sampling",
+  "target_GT_available": false,
+  "original_XYZ_immutable": true,
+  "same_footprints_ground_and_native_parameters": true,
+  "native_timeout_seconds": 120,
+  "reconstruction_methods": [
+    "raw",
+    "legacy_guarded",
+    "linear",
+    "point",
+    "fusion",
+    "context",
+    "context_fusion",
+    "gated"
+  ],
+  "scope": "learned semantic point rejection, then fixed geometry reconstruction; no learned occluded-roof completion",
+  "storage": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026",
+  "parent_allocation": 6462885,
+  "maximum_hours": 5
+}

@@ -1,0 +1,499 @@
+{
+  "recorded_utc": "2026-10-26T06:24:10.152962+00:00",
+  "status": "monitoring",
+  "supervisor": "bounded independent stdlib observer; no autonomous code edits or job cancellation",
+  "plan_sha256": "f549f1dd314a2f9446764409e4751138b917fb6251e31605ed4900feeda03408",
+  "immutable_inputs": [
+    {
+      "path": "/nfs/home/yfeng21/lod2_tree_20261020/data/source_train.npz",
+      "same_size_mtime": true,
+      "sha256_rechecked": null,
+      "unchanged": true
+    },
+    {
+      "path": "/nfs/home/yfeng21/lod2_tree_20261020/data/source_test.npz",
+      "same_size_mtime": true,
+      "sha256_rechecked": null,
+      "unchanged": true
+    },
+    {
+      "path": "/nfs/home/yfeng21/lod2_tree_20261020/data/target.npz",
+      "same_size_mtime": true,
+      "sha256_rechecked": null,
+      "unchanged": true
+    },
+    {
+      "path": "/nfs/home/yfeng21/lod2_tree_20261020/data/target_buildings.json",
+      "same_size_mtime": true,
+      "sha256_rechecked": null,
+      "unchanged": true
+    },
+    {
+      "path": "/nfs/home/yfeng21/lod2_pilot_20261017/data/lidar/roi_points.npz",
+      "same_size_mtime": true,
+      "sha256_rechecked": null,
+      "unchanged": true
+    },
+    {
+      "path": "/nfs/home/yfeng21/lod2_pilot_20261017/data/imagery/naip2014_roi_rgbnir_epsg26985.tif",
+      "same_size_mtime": true,
+      "sha256_rechecked": null,
+      "unchanged": true
+    }
+  ],
+  "frozen_source_checks": [
+    {
+      "path": "/nfs/home/yfeng21/lod2_dl_round_20261026/tools/train_models.py",
+      "unchanged": true
+    },
+    {
+      "path": "/nfs/home/yfeng21/lod2_dl_round_20261026/tools/run_training.sh",
+      "unchanged": true
+    },
+    {
+      "path": "/nfs/home/yfeng21/lod2_dl_round_20261026/tools/prepare_data.py",
+      "unchanged": true
+    }
+  ],
+  "training_receipt_audit": {
+    "status": "training_receipts_passed",
+    "reviewed_utc": "2026-10-26T06:24:09.642558+00:00",
+    "checks": {
+      "all_method_seed_pairs_once": true,
+      "source_test_history_disclosed": true,
+      "trainer_test_label_reads_after_freeze": true,
+      "train_only_normalization_declared": true,
+      "test_not_used_for_training_selection": true,
+      "neighborhood_labels_excluded": true,
+      "new_neighborhoods_split_local": true,
+      "shared_optical_bands_correct": true,
+      "normalization_bytes_match": true,
+      "all_per_model_receipts_pass": true,
+      "metrics_bind_frozen_checkpoints": true,
+      "test_started_after_freeze": true,
+      "all_frozen_runs_evaluated": true,
+      "no_target_semantic_accuracy_claim": true,
+      "all_target_runs_reported": true,
+      "pure_tree_and_mixed_hedge_reported_separately": true
+    },
+    "per_model_checks": {
+      "linear_seed20261026": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "point_mlp_seed20261026": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "fusion_mlp_seed20261026": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "local_context_seed20261026": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "context_fusion_seed20261026": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "gated_fusion_seed20261026": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "linear_seed20261027": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "point_mlp_seed20261027": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "fusion_mlp_seed20261027": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "local_context_seed20261027": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "context_fusion_seed20261027": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "gated_fusion_seed20261027": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "linear_seed20261028": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "point_mlp_seed20261028": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "fusion_mlp_seed20261028": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "local_context_seed20261028": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "context_fusion_seed20261028": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      },
+      "gated_fusion_seed20261028": {
+        "checkpoint_under_lustre_round": true,
+        "checkpoint_bytes_match": true,
+        "same_train_ids": true,
+        "same_validation_ids": true,
+        "same_normalization": true,
+        "validation_retention_calibrated": true,
+        "positive_temperatures": true,
+        "same_training_script": true
+      }
+    },
+    "errors": [],
+    "final_evaluated": true,
+    "training_freeze_sha256": "23e82702e377784e3b30611f1a27860eaaf578ccba497cd477333f682c8e877a",
+    "scope": "Receipt consistency; code audit separately documents calibration/fallback and context limitations"
+  },
+  "progress_files": {
+    "reports/browser_failure.json": {
+      "mtime_utc": "2026-10-26T06:13:36+00:00",
+      "bytes": 1264,
+      "status": null
+    },
+    "reports/browser_qa.json": {
+      "mtime_utc": "2026-10-26T06:15:41+00:00",
+      "bytes": 41024,
+      "status": null
+    },
+    "reports/data_audit.json": {
+      "mtime_utc": "2026-10-26T06:01:10+00:00",
+      "bytes": 11790,
+      "status": "complete"
+    },
+    "reports/final_metrics.json": {
+      "mtime_utc": "2026-10-26T06:06:24+00:00",
+      "bytes": 113569,
+      "status": "complete"
+    },
+    "reports/method_summary.json": {
+      "mtime_utc": "2026-10-26T06:08:25+00:00",
+      "bytes": 22767,
+      "status": null
+    },
+    "reports/pipeline_status.json": {
+      "mtime_utc": "2026-10-26T06:07:47+00:00",
+      "bytes": 198,
+      "status": null
+    },
+    "reports/publication_inventory.json": {
+      "mtime_utc": "2026-10-26T06:14:24+00:00",
+      "bytes": 431016,
+      "status": null
+    },
+    "reports/reconstruction_status.json": {
+      "mtime_utc": "2026-10-26T06:08:45+00:00",
+      "bytes": 2982,
+      "status": "complete"
+    },
+    "reports/run_status.json": {
+      "mtime_utc": "2026-10-26T06:06:24+00:00",
+      "bytes": 166,
+      "status": null
+    },
+    "reports/spatial_audit.json": {
+      "mtime_utc": "2026-10-26T06:20:33+00:00",
+      "bytes": 420,
+      "status": "passed"
+    },
+    "reports/spatial_validation_summary.json": {
+      "mtime_utc": "2026-10-26T06:20:10+00:00",
+      "bytes": 169466,
+      "status": "complete"
+    },
+    "reports/spatial_web_summary.json": {
+      "mtime_utc": "2026-10-26T06:20:33+00:00",
+      "bytes": 43040,
+      "status": "complete"
+    },
+    "reports/target_partial.json": {
+      "mtime_utc": "2026-10-26T06:06:23+00:00",
+      "bytes": 8914,
+      "status": null
+    },
+    "reports/test_partial.json": {
+      "mtime_utc": "2026-10-26T06:06:20+00:00",
+      "bytes": 96490,
+      "status": null
+    },
+    "reports/training_audit.json": {
+      "mtime_utc": "2026-10-26T06:08:25+00:00",
+      "bytes": 626,
+      "status": "passed"
+    },
+    "reports/training_design.json": {
+      "mtime_utc": "2026-10-26T06:05:11+00:00",
+      "bytes": 2223,
+      "status": null
+    },
+    "reports/training_freeze.json": {
+      "mtime_utc": "2026-10-26T06:06:13+00:00",
+      "bytes": 49652,
+      "status": null
+    },
+    "reports/training_progress.json": {
+      "mtime_utc": "2026-10-26T06:06:13+00:00",
+      "bytes": 46897,
+      "status": null
+    },
+    "reports/web_export.json": {
+      "mtime_utc": "2026-10-26T06:13:01+00:00",
+      "bytes": 10424,
+      "status": null
+    },
+    "runs/reconstruction24_v1/progress.json": {
+      "mtime_utc": "2026-10-26T06:08:45+00:00",
+      "bytes": 2982,
+      "status": "complete"
+    },
+    "runs/smoke_reconstruction2_v1/progress.json": {
+      "mtime_utc": "2026-10-26T06:06:27+00:00",
+      "bytes": 1061,
+      "status": "complete"
+    }
+  },
+  "checkpoint_count": 18,
+  "checkpoints": [
+    {
+      "path": "runs/linear_seed20261027/model.pt",
+      "bytes": 4364,
+      "mtime_utc": "2026-10-26T06:05:39+00:00"
+    },
+    {
+      "path": "runs/context_fusion_seed20261028/model.pt",
+      "bytes": 140586,
+      "mtime_utc": "2026-10-26T06:06:09+00:00"
+    },
+    {
+      "path": "runs/linear_seed20261028/model.pt",
+      "bytes": 4364,
+      "mtime_utc": "2026-10-26T06:05:58+00:00"
+    },
+    {
+      "path": "runs/local_context_seed20261026/model.pt",
+      "bytes": 126014,
+      "mtime_utc": "2026-10-26T06:05:27+00:00"
+    },
+    {
+      "path": "runs/fusion_mlp_seed20261026/model.pt",
+      "bytes": 63624,
+      "mtime_utc": "2026-10-26T06:05:24+00:00"
+    },
+    {
+      "path": "runs/context_fusion_seed20261026/model.pt",
+      "bytes": 140586,
+      "mtime_utc": "2026-10-26T06:05:30+00:00"
+    },
+    {
+      "path": "runs/context_fusion_seed20261027/model.pt",
+      "bytes": 140586,
+      "mtime_utc": "2026-10-26T06:05:49+00:00"
+    },
+    {
+      "path": "runs/gated_fusion_seed20261026/model.pt",
+      "bytes": 162454,
+      "mtime_utc": "2026-10-26T06:05:34+00:00"
+    },
+    {
+      "path": "runs/gated_fusion_seed20261028/model.pt",
+      "bytes": 162454,
+      "mtime_utc": "2026-10-26T06:06:13+00:00"
+    },
+    {
+      "path": "runs/linear_seed20261026/model.pt",
+      "bytes": 4364,
+      "mtime_utc": "2026-10-26T06:05:20+00:00"
+    },
+    {
+      "path": "runs/fusion_mlp_seed20261028/model.pt",
+      "bytes": 63624,
+      "mtime_utc": "2026-10-26T06:06:02+00:00"
+    },
+    {
+      "path": "runs/point_mlp_seed20261027/model.pt",
+      "bytes": 48988,
+      "mtime_utc": "2026-10-26T06:05:41+00:00"
+    },
+    {
+      "path": "runs/fusion_mlp_seed20261027/model.pt",
+      "bytes": 63624,
+      "mtime_utc": "2026-10-26T06:05:43+00:00"
+    },
+    {
+      "path": "runs/local_context_seed20261027/model.pt",
+      "bytes": 126014,
+      "mtime_utc": "2026-10-26T06:05:45+00:00"
+    },
+    {
+      "path": "runs/gated_fusion_seed20261027/model.pt",
+      "bytes": 162454,
+      "mtime_utc": "2026-10-26T06:05:54+00:00"
+    },
+    {
+      "path": "runs/point_mlp_seed20261028/model.pt",
+      "bytes": 48988,
+      "mtime_utc": "2026-10-26T06:06:00+00:00"
+    },
+    {
+      "path": "runs/local_context_seed20261028/model.pt",
+      "bytes": 126014,
+      "mtime_utc": "2026-10-26T06:06:05+00:00"
+    },
+    {
+      "path": "runs/point_mlp_seed20261026/model.pt",
+      "bytes": 48988,
+      "mtime_utc": "2026-10-26T06:05:22+00:00"
+    }
+  ],
+  "newest_progress_age_minutes": 15.418969933191935,
+  "scheduler": {
+    "6462885": {
+      "returncode": 0,
+      "output": "JobId=6462885 JobName=sys/dashboard/sys/Pytorch_Jupyter UserId=yfeng21(12226) GroupId=tug2106(3319) MCS_label=N/A Priority=3685 Nice=0 Account=isaac-utk0390 QOS=ai-tenn JobState=RUNNING Reason=None Dependency=(null) Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=1-16:48:28 TimeLimit=3-00:00:00 TimeMin=N/A SubmitTime=2026-10-23T09:05:06 EligibleTime=2026-10-23T09:05:06 AccrueTime=2026-10-23T09:05:06 StartTime=2026-10-24T09:35:42 EndTime=2026-10-27T09:35:42 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-24T09:35:42 Scheduler=Backfill Partition=ai-tenn AllocNode:Sid=login2.cn.isaac.utk.edu:3073135 ReqNodeList=(null) ExcNodeList= NodeList=srph1401 BatchHost=srph1401 NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=16,mem=254400M,node=1,billing=16,gres/gpu=1 AllocTRES=cpu=16,mem=254400M,node=1,billing=16,gres/gpu=1 Socks/Node=* NtasksPerN:B:S:C=16:0:*:* CoreSpec=* MinCPUsNode=16 MinMemoryCPU=15900M MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=(null) WorkDir=/nfs/home/yfeng21/ondemand/data/sys/dashboard/batch_connect/sys/Pytorch_Jupyter/output/08c71093-a481-4079-9956-54c532f32c09 StdErr=/nfs/home/yfeng21/ondemand/data/sys/dashboard/batch_connect/sys/Pytorch_Jupyter/output/08c71093-a481-4079-9956-54c532f32c09/output.log StdIn=/dev/null StdOut=/nfs/home/yfeng21/ondemand/data/sys/dashboard/batch_connect/sys/Pytorch_Jupyter/output/08c71093-a481-4079-9956-54c532f32c09/output.log TresPerNode=gres/gpu:1 MailUser=yfeng21@vols.utk.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT",
+      "error": ""
+    }
+  },
+  "issues": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "scientific_limits": {
+    "source": "Official ISPRS Vaihingen point annotations; roof class5; vegetation/mixed hedge classes1,4,7,8; class4 is mixed fence/hedge",
+    "common_optical_bands": [
+      "Red",
+      "Green",
+      "NIR"
+    ],
+    "not_RGB_patch_training": true,
+    "source_test_historically_evaluated": true,
+    "test_policy": "No test-label reads for this round's training, checkpoint, threshold or variant selection; this is not a pristine unseen benchmark",
+    "DC_semantic_GT": false,
+    "DC_roof_GT": false,
+    "DC_observation_gap_days": 156,
+    "target_development_cases": "Eight previously inspected buildings are diagnostics, not independent roof-accuracy validation"
+  },
+  "pending_scientific_review": [
+    "Shared train/val hashes and train-only normalization need explicit training receipts",
+    "All checkpoint/threshold freezes must precede this-round test metrics",
+    "Context labels must never be inputs; source class4 is mixed fence/hedge",
+    "No independent DC tree/roof accuracy or complete occluded-roof claim",
+    "Negative results and seed variation remain visible"
+  ]
+}

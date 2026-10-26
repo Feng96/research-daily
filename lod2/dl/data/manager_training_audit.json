@@ -1,0 +1,208 @@
+{
+  "status": "training_receipts_passed",
+  "reviewed_utc": "2026-10-26T06:24:09.642558+00:00",
+  "checks": {
+    "all_method_seed_pairs_once": true,
+    "source_test_history_disclosed": true,
+    "trainer_test_label_reads_after_freeze": true,
+    "train_only_normalization_declared": true,
+    "test_not_used_for_training_selection": true,
+    "neighborhood_labels_excluded": true,
+    "new_neighborhoods_split_local": true,
+    "shared_optical_bands_correct": true,
+    "normalization_bytes_match": true,
+    "all_per_model_receipts_pass": true,
+    "metrics_bind_frozen_checkpoints": true,
+    "test_started_after_freeze": true,
+    "all_frozen_runs_evaluated": true,
+    "no_target_semantic_accuracy_claim": true,
+    "all_target_runs_reported": true,
+    "pure_tree_and_mixed_hedge_reported_separately": true
+  },
+  "per_model_checks": {
+    "linear_seed20261026": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "point_mlp_seed20261026": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "fusion_mlp_seed20261026": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "local_context_seed20261026": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "context_fusion_seed20261026": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "gated_fusion_seed20261026": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "linear_seed20261027": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "point_mlp_seed20261027": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "fusion_mlp_seed20261027": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "local_context_seed20261027": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "context_fusion_seed20261027": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "gated_fusion_seed20261027": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "linear_seed20261028": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "point_mlp_seed20261028": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "fusion_mlp_seed20261028": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "local_context_seed20261028": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "context_fusion_seed20261028": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    },
+    "gated_fusion_seed20261028": {
+      "checkpoint_under_lustre_round": true,
+      "checkpoint_bytes_match": true,
+      "same_train_ids": true,
+      "same_validation_ids": true,
+      "same_normalization": true,
+      "validation_retention_calibrated": true,
+      "positive_temperatures": true,
+      "same_training_script": true
+    }
+  },
+  "errors": [],
+  "final_evaluated": true,
+  "training_freeze_sha256": "23e82702e377784e3b30611f1a27860eaaf578ccba497cd477333f682c8e877a",
+  "scope": "Receipt consistency; code audit separately documents calibration/fallback and context limitations"
+}

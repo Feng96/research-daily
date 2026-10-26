@@ -1,0 +1,5301 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-26T06:20:10.222712+00:00",
+  "elapsed_seconds": 244.4357590675354,
+  "source_test_opened": false,
+  "target_opened": false,
+  "spatial_design": {
+    "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/reports/spatial_design_freeze.json",
+    "sha256": "0a32cec2044272e61d1c729a095cc48579d79063886540a3ebc9eb32b1dc57b6",
+    "bytes": 7356
+  },
+  "all_fold_training_freeze": {
+    "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/reports/all_fold_training_freeze.json",
+    "sha256": "ad178ed33f622c9120ad90f875b3927355a195108bc3d627ace689caa2274317",
+    "bytes": 127160
+  },
+  "all_models_frozen_utc": "2026-10-26T06:19:59.987862+00:00",
+  "evaluation_started_utc": "2026-10-26T06:20:00.007337+00:00",
+  "models": 48,
+  "source_train_sha256_unchanged": true,
+  "folds": [
+    {
+      "fold": 0,
+      "split_axis": "x",
+      "calibration_evaluation_cut_m": 496976.39,
+      "quadrant_median_xy_m": [
+        497037.22,
+        5419371.45
+      ],
+      "training_rows": 200000,
+      "calibration_rows": 51521,
+      "calibration_roof_records": 9496,
+      "evaluation_rows": 51778,
+      "row_hashes": {
+        "train": "cd42fb20be8dbc92802d3d204492515b3b25b37c27c515c335dcb4900354bdd1",
+        "calibration": "dece0372355abe9bce8196ab6e0b360ecc2d2ed33849d5270e446050ffe70383",
+        "evaluation": "3c0d08c77ac2c303743dd8bae73bffe9547308f49bcd986288b9eb01851e343c"
+      },
+      "selected_train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "selected_calibration_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "minimum_xy_gaps_m": {
+        "train_calibration": 5.021205035135687,
+        "train_evaluation": 5.020089641118366,
+        "calibration_evaluation": 5.000359987036016
+      },
+      "row_intersections": {
+        "train_calibration": 0,
+        "train_evaluation": 0,
+        "calibration_evaluation": 0
+      },
+      "eligible": true,
+      "skip_reason": null
+    },
+    {
+      "fold": 1,
+      "split_axis": "y",
+      "calibration_evaluation_cut_m": 5419306.2,
+      "quadrant_median_xy_m": [
+        497037.22,
+        5419371.45
+      ],
+      "training_rows": 200000,
+      "calibration_rows": 125944,
+      "calibration_roof_records": 27416,
+      "evaluation_rows": 126090,
+      "row_hashes": {
+        "train": "7d13dd11d52e4844e08683140898668f1759441f855473228aa9e967b5ee258c",
+        "calibration": "b7f6aa55dec9d4d7fda9dfe23ad1f8fd83a0078d92e5afd15e612b4b59803883",
+        "evaluation": "8ccf4ff77baa67339fe202aa181187d5d0506587c4c599c0562e564a13fd290f"
+      },
+      "selected_train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "selected_calibration_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "minimum_xy_gaps_m": {
+        "train_calibration": 5.357284760043703,
+        "train_evaluation": 5.010249494562041,
+        "calibration_evaluation": 5.000039999840076
+      },
+      "row_intersections": {
+        "train_calibration": 0,
+        "train_evaluation": 0,
+        "calibration_evaluation": 0
+      },
+      "eligible": true,
+      "skip_reason": null
+    },
+    {
+      "fold": 2,
+      "split_axis": "x",
+      "calibration_evaluation_cut_m": 496955.94,
+      "quadrant_median_xy_m": [
+        497037.22,
+        5419371.45
+      ],
+      "training_rows": 200000,
+      "calibration_rows": 130471,
+      "calibration_roof_records": 15400,
+      "evaluation_rows": 130441,
+      "row_hashes": {
+        "train": "2a21d4af447e21db136b94c4596fc79f6e56a806d82f00028f60067fb5132535",
+        "calibration": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+        "evaluation": "f9392497f30bac31a23be798ed7efe460afad4e831e1cb2c19a252bffd3e43ef"
+      },
+      "selected_train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "selected_calibration_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "minimum_xy_gaps_m": {
+        "train_calibration": 5.029562605720383,
+        "train_evaluation": 5.011686342887095,
+        "calibration_evaluation": 5.005756686067281
+      },
+      "row_intersections": {
+        "train_calibration": 0,
+        "train_evaluation": 0,
+        "calibration_evaluation": 0
+      },
+      "eligible": true,
+      "skip_reason": null
+    },
+    {
+      "fold": 3,
+      "split_axis": "y",
+      "calibration_evaluation_cut_m": 5419405.465,
+      "quadrant_median_xy_m": [
+        497037.22,
+        5419371.45
+      ],
+      "training_rows": 200000,
+      "calibration_rows": 49787,
+      "calibration_roof_records": 11748,
+      "evaluation_rows": 50232,
+      "row_hashes": {
+        "train": "c001c5a0e64522b894d94e6fca22928684a067411a01fe20ad91a94ddc73966e",
+        "calibration": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+        "evaluation": "34665e3a01a9f338c3a418e652ec13fb0644896b08330944a09114788de6e14d"
+      },
+      "selected_train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "selected_calibration_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "minimum_xy_gaps_m": {
+        "train_calibration": 5.00783386306052,
+        "train_evaluation": 5.0152766623303755,
+        "calibration_evaluation": 5.010638681621631
+      },
+      "row_intersections": {
+        "train_calibration": 0,
+        "train_evaluation": 0,
+        "calibration_evaluation": 0
+      },
+      "eligible": true,
+      "skip_reason": null
+    }
+  ],
+  "results": [
+    {
+      "fold": 0,
+      "method": "point_mlp",
+      "seed": 20261026,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            8782,
+            1027,
+            82
+          ],
+          [
+            87,
+            20566,
+            13243
+          ],
+          [
+            105,
+            1788,
+            5930
+          ]
+        ],
+        "accuracy": 0.6835496996706065,
+        "class_iou": {
+          "roof": 0.8709709411881384,
+          "vegetation_or_fence_hedge": 0.5602135599684018,
+          "other": 0.28040476640817097
+        },
+        "mean_iou": 0.5705297558549037,
+        "roof_retention": 0.9883732686280458,
+        "vegetation_or_fence_hedge_rejection": 0.1354437101722917,
+        "tree8_rejection": 0.570534005914072,
+        "fence_hedge4_rejection": 0.12661195779601406,
+        "rejection_fraction": 0.09259833365626817,
+        "nll": 0.6043161749839783
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            8906,
+            1040,
+            82
+          ],
+          [
+            87,
+            20589,
+            13249
+          ],
+          [
+            105,
+            1790,
+            5930
+          ]
+        ],
+        "accuracy": 0.6841708833867666,
+        "class_iou": {
+          "roof": 0.8714285714285714,
+          "vegetation_or_fence_hedge": 0.5601686845327166,
+          "other": 0.28029873321989035
+        },
+        "mean_iou": 0.5706319963937262,
+        "roof_retention": 0.9883326685281213,
+        "vegetation_or_fence_hedge_rejection": 0.13541635961680176,
+        "tree8_rejection": 0.570534005914072,
+        "fence_hedge4_rejection": 0.12661195779601406,
+        "rejection_fraction": 0.09239445324268994,
+        "nll": 0.603532075881958
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9860360350184632,
+        0.9902553109126901
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "6c921bf284584614393578eb0aac7e52eabe77e445b1f6138527aa3c5cd6da9e",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/point_mlp_seed20261026/spatial_evaluation.npz",
+        "sha256": "307d25a4f8ac838f6ed624ac75e084a0a8c09d81ee057dca6a9dada3f511f570",
+        "bytes": 1225615
+      }
+    },
+    {
+      "fold": 0,
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            9367,
+            452,
+            72
+          ],
+          [
+            94,
+            31432,
+            2370
+          ],
+          [
+            209,
+            818,
+            6796
+          ]
+        ],
+        "accuracy": 0.9222049990311955,
+        "class_iou": {
+          "roof": 0.9188738473611928,
+          "vegetation_or_fence_hedge": 0.8938178922823181,
+          "other": 0.6620555284948856
+        },
+        "mean_iou": 0.8249157560461322,
+        "roof_retention": 0.9941360833080578,
+        "vegetation_or_fence_hedge_rejection": 0.5886830304460703,
+        "tree8_rejection": 0.9168551052356931,
+        "fence_hedge4_rejection": 0.9073856975381008,
+        "rejection_fraction": 0.3908738616547181,
+        "nll": 0.22286510467529297
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            9491,
+            465,
+            72
+          ],
+          [
+            94,
+            31455,
+            2376
+          ],
+          [
+            209,
+            820,
+            6796
+          ]
+        ],
+        "accuracy": 0.9220518366873962,
+        "class_iou": {
+          "roof": 0.9186913173942504,
+          "vegetation_or_fence_hedge": 0.893354160749787,
+          "other": 0.6615399591161296
+        },
+        "mean_iou": 0.8245284790867223,
+        "roof_retention": 0.9940167530913442,
+        "vegetation_or_fence_hedge_rejection": 0.588268238761975,
+        "tree8_rejection": 0.9168551052356931,
+        "fence_hedge4_rejection": 0.9073856975381008,
+        "rejection_fraction": 0.3897021901193557,
+        "nll": 0.22331871092319489
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9923066529540431,
+        0.9953485089293411
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "97e36d1b451682594a895a29ed7b46728fa649528b21539d6c7e14ac2854e965",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/fusion_mlp_seed20261026/spatial_evaluation.npz",
+        "sha256": "c2fb6fe1899192c678c79806a0de69aaba580bab096981aa93d88683741f19a5",
+        "bytes": 1230889
+      }
+    },
+    {
+      "fold": 0,
+      "method": "context_fusion",
+      "seed": 20261026,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            9447,
+            295,
+            149
+          ],
+          [
+            25,
+            31242,
+            2629
+          ],
+          [
+            212,
+            757,
+            6854
+          ]
+        ],
+        "accuracy": 0.9211974423561325,
+        "class_iou": {
+          "roof": 0.932760663507109,
+          "vegetation_or_fence_hedge": 0.8939567357216436,
+          "other": 0.6465427789831149
+        },
+        "mean_iou": 0.8244200594039558,
+        "roof_retention": 0.9867556364371651,
+        "vegetation_or_fence_hedge_rejection": 0.8512803870663205,
+        "tree8_rejection": 0.9791268046616803,
+        "fence_hedge4_rejection": 0.9753810082063306,
+        "rejection_fraction": 0.5708002325130789,
+        "nll": 0.2188292294740677
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            9571,
+            308,
+            149
+          ],
+          [
+            25,
+            31265,
+            2635
+          ],
+          [
+            212,
+            759,
+            6854
+          ]
+        ],
+        "accuracy": 0.9210475491521496,
+        "class_iou": {
+          "roof": 0.9323916220165611,
+          "vegetation_or_fence_hedge": 0.8934899405578418,
+          "other": 0.6460552361202753
+        },
+        "mean_iou": 0.8239789328982261,
+        "roof_retention": 0.9867371360191464,
+        "vegetation_or_fence_hedge_rejection": 0.8506411201179072,
+        "tree8_rejection": 0.9791268046616803,
+        "fence_hedge4_rejection": 0.9753810082063306,
+        "rejection_fraction": 0.5690447680482058,
+        "nll": 0.2192959189414978
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9843044023202245,
+        0.9887971005366183
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "ad6a5c825a71db613f158c4a2edea6e2c0ccc6b687469bcd74311bec95be2575",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/context_fusion_seed20261026/spatial_evaluation.npz",
+        "sha256": "c004acff510e6b0407d09ecd2cefabae5d43bab2ff2264208797306f00f5096f",
+        "bytes": 1228662
+      }
+    },
+    {
+      "fold": 0,
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            9470,
+            244,
+            177
+          ],
+          [
+            22,
+            31169,
+            2705
+          ],
+          [
+            192,
+            757,
+            6874
+          ]
+        ],
+        "accuracy": 0.9206161596589808,
+        "class_iou": {
+          "roof": 0.9371598218703612,
+          "vegetation_or_fence_hedge": 0.893171332779322,
+          "other": 0.6421298458664175
+        },
+        "mean_iou": 0.8241536668387003,
+        "roof_retention": 0.9879688605803255,
+        "vegetation_or_fence_hedge_rejection": 0.8432263393910786,
+        "tree8_rejection": 0.9728648460601844,
+        "fence_hedge4_rejection": 0.9624853458382181,
+        "rejection_fraction": 0.5646773881030808,
+        "nll": 0.21888260543346405
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            9594,
+            257,
+            177
+          ],
+          [
+            22,
+            31192,
+            2711
+          ],
+          [
+            192,
+            759,
+            6874
+          ]
+        ],
+        "accuracy": 0.9204681524971996,
+        "class_iou": {
+          "roof": 0.9367311072056239,
+          "vegetation_or_fence_hedge": 0.8927048453106665,
+          "other": 0.6416503313730981
+        },
+        "mean_iou": 0.8236954279631296,
+        "roof_retention": 0.9879337854008775,
+        "vegetation_or_fence_hedge_rejection": 0.8425939572586588,
+        "tree8_rejection": 0.9728648460601844,
+        "fence_hedge4_rejection": 0.9624853458382181,
+        "rejection_fraction": 0.5629417899493994,
+        "nll": 0.21934908628463745
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.9952611625947767,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9856022670837657,
+        0.9898916180788099
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "d7dc225dad1967dd107950102b393ff5432b4ac99e6eef138ba61aa01c8aed6b",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/gated_fusion_seed20261026/spatial_evaluation.npz",
+        "sha256": "bed7649404b3dea41e8bd90962e1532f31a710844bf74b90cf787af2fb93d392",
+        "bytes": 1229489
+      }
+    },
+    {
+      "fold": 0,
+      "method": "point_mlp",
+      "seed": 20261027,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            8743,
+            1087,
+            61
+          ],
+          [
+            69,
+            23171,
+            10656
+          ],
+          [
+            87,
+            1995,
+            5741
+          ]
+        ],
+        "accuracy": 0.7296066653749274,
+        "class_iou": {
+          "roof": 0.8702100129391859,
+          "vegetation_or_fence_hedge": 0.6266158256260479,
+          "other": 0.30965480043149946
+        },
+        "mean_iou": 0.6021602129989111,
+        "roof_retention": 0.9874633505206754,
+        "vegetation_or_fence_hedge_rejection": 0.13786287467547792,
+        "tree8_rejection": 0.5954078970255696,
+        "fence_hedge4_rejection": 0.10902696365767878,
+        "rejection_fraction": 0.09412904475876768,
+        "nll": 0.5192614197731018
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            8867,
+            1100,
+            61
+          ],
+          [
+            69,
+            23196,
+            10660
+          ],
+          [
+            87,
+            1996,
+            5742
+          ]
+        ],
+        "accuracy": 0.7301363513461315,
+        "class_iou": {
+          "roof": 0.8706794972505891,
+          "vegetation_or_fence_hedge": 0.6265633019097269,
+          "other": 0.3096085409252669
+        },
+        "mean_iou": 0.6022837800285277,
+        "roof_retention": 0.9874351814918229,
+        "vegetation_or_fence_hedge_rejection": 0.1378334561532793,
+        "tree8_rejection": 0.5954078970255696,
+        "fence_hedge4_rejection": 0.10902696365767878,
+        "rejection_fraction": 0.09392019776739155,
+        "nll": 0.5186716914176941
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9850608852967783,
+        0.9894361739050753
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "b4c19a633861a2c5c745945f34f078ba3e8409bbb1d5911741b24a94187ab081",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/point_mlp_seed20261027/spatial_evaluation.npz",
+        "sha256": "ab006557e5983ab51ba76039f524492241a9a69c5ae1bf578594ff2cf9ef733b",
+        "bytes": 1227653
+      }
+    },
+    {
+      "fold": 0,
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            9294,
+            366,
+            231
+          ],
+          [
+            82,
+            31607,
+            2207
+          ],
+          [
+            216,
+            809,
+            6798
+          ]
+        ],
+        "accuracy": 0.9242201123813214,
+        "class_iou": {
+          "roof": 0.9121601727353028,
+          "vegetation_or_fence_hedge": 0.9012289355878076,
+          "other": 0.6625085274339733
+        },
+        "mean_iou": 0.8252992119190279,
+        "roof_retention": 0.9952482054392883,
+        "vegetation_or_fence_hedge_rejection": 0.7133880103847061,
+        "tree8_rejection": 0.922769177248217,
+        "fence_hedge4_rejection": 0.9073856975381008,
+        "rejection_fraction": 0.47304785894206547,
+        "nll": 0.20709185302257538
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            9418,
+            379,
+            231
+          ],
+          [
+            82,
+            31632,
+            2211
+          ],
+          [
+            216,
+            810,
+            6799
+          ]
+        ],
+        "accuracy": 0.9241183514233845,
+        "class_iou": {
+          "roof": 0.9120666279294983,
+          "vegetation_or_fence_hedge": 0.900837272882611,
+          "other": 0.662218759131197
+        },
+        "mean_iou": 0.8250408866477686,
+        "roof_retention": 0.9951136816912645,
+        "vegetation_or_fence_hedge_rejection": 0.7128666175386883,
+        "tree8_rejection": 0.922769177248217,
+        "fence_hedge4_rejection": 0.9073856975381008,
+        "rejection_fraction": 0.47160956390745107,
+        "nll": 0.2075149416923523
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9935464452769507,
+        0.9963017337200222
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "473df12412fc3a8cf7033feffa768fc79ee52d9375faa74a42bde87516e64674",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/fusion_mlp_seed20261027/spatial_evaluation.npz",
+        "sha256": "daf699faa5c24a998d7953ab63dd553eb1cd77bbe716b362c0c54abc16b86367",
+        "bytes": 1230729
+      }
+    },
+    {
+      "fold": 0,
+      "method": "context_fusion",
+      "seed": 20261027,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            9476,
+            288,
+            127
+          ],
+          [
+            36,
+            31201,
+            2659
+          ],
+          [
+            200,
+            742,
+            6881
+          ]
+        ],
+        "accuracy": 0.9214880837047084,
+        "class_iou": {
+          "roof": 0.93571640169843,
+          "vegetation_or_fence_hedge": 0.8933459313978125,
+          "other": 0.6486002450749364
+        },
+        "mean_iou": 0.8258875260570596,
+        "roof_retention": 0.9851380042462845,
+        "vegetation_or_fence_hedge_rejection": 0.8416037290535756,
+        "tree8_rejection": 0.9709514698208384,
+        "fence_hedge4_rejection": 0.9660023446658851,
+        "rejection_fraction": 0.5633016857198218,
+        "nll": 0.21723689138889313
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            9600,
+            301,
+            127
+          ],
+          [
+            36,
+            31226,
+            2663
+          ],
+          [
+            200,
+            743,
+            6882
+          ]
+        ],
+        "accuracy": 0.9213951871451196,
+        "class_iou": {
+          "roof": 0.9353078721745908,
+          "vegetation_or_fence_hedge": 0.8929623380708628,
+          "other": 0.6483278379651437
+        },
+        "mean_iou": 0.8255326827368658,
+        "roof_retention": 0.9851416035101715,
+        "vegetation_or_fence_hedge_rejection": 0.840972733971997,
+        "tree8_rejection": 0.9709514698208384,
+        "fence_hedge4_rejection": 0.9660023446658851,
+        "rejection_fraction": 0.5615705511993511,
+        "nll": 0.21762707829475403
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9825810356981485,
+        0.9873306240843839
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "2c5172787c0594cd04805545b94cb87db34f5197b4e3977773fe1e04e42600b8",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/context_fusion_seed20261027/spatial_evaluation.npz",
+        "sha256": "df1d4003b8368647a1258cac95709ea18e802f94a419866248541b5f2ffbdc53",
+        "bytes": 1204378
+      }
+    },
+    {
+      "fold": 0,
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            9488,
+            281,
+            122
+          ],
+          [
+            34,
+            31150,
+            2712
+          ],
+          [
+            201,
+            755,
+            6867
+          ]
+        ],
+        "accuracy": 0.9204611509397403,
+        "class_iou": {
+          "roof": 0.936993877147936,
+          "vegetation_or_fence_hedge": 0.8917325088743845,
+          "other": 0.6443652059679085
+        },
+        "mean_iou": 0.824363863996743,
+        "roof_retention": 0.9897886967950662,
+        "vegetation_or_fence_hedge_rejection": 0.810449610573519,
+        "tree8_rejection": 0.9672986606366325,
+        "fence_hedge4_rejection": 0.9613130128956624,
+        "rejection_fraction": 0.541367951947297,
+        "nll": 0.22240708768367767
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            9612,
+            294,
+            122
+          ],
+          [
+            34,
+            31175,
+            2716
+          ],
+          [
+            201,
+            756,
+            6868
+          ]
+        ],
+        "accuracy": 0.9203715863880413,
+        "class_iou": {
+          "roof": 0.9365682548962292,
+          "vegetation_or_fence_hedge": 0.8913509649749821,
+          "other": 0.6440964081402982
+        },
+        "mean_iou": 0.8240052093371698,
+        "roof_retention": 0.9897287594734743,
+        "vegetation_or_fence_hedge_rejection": 0.8098452468680913,
+        "tree8_rejection": 0.9672986606366325,
+        "fence_hedge4_rejection": 0.9613130128956624,
+        "rejection_fraction": 0.5397079840859053,
+        "nll": 0.22278046607971191
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9875593361461092,
+        0.9915231224750658
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "7293128638a3879aaf4bfa512228101bc2092042210601935697ef1e0a8450b5",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/gated_fusion_seed20261027/spatial_evaluation.npz",
+        "sha256": "a5f1e836eb91733a5c3e564df3d63a403902dd765cd942e397d524febd880f5c",
+        "bytes": 1199520
+      }
+    },
+    {
+      "fold": 0,
+      "method": "point_mlp",
+      "seed": 20261028,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            8711,
+            1044,
+            136
+          ],
+          [
+            56,
+            23211,
+            10629
+          ],
+          [
+            97,
+            2009,
+            5717
+          ]
+        ],
+        "accuracy": 0.7292966479364464,
+        "class_iou": {
+          "roof": 0.8672839506172839,
+          "vegetation_or_fence_hedge": 0.6281902081247125,
+          "other": 0.30756401979771897
+        },
+        "mean_iou": 0.6010127261799051,
+        "roof_retention": 0.9862501263775149,
+        "vegetation_or_fence_hedge_rejection": 0.15329242388482417,
+        "tree8_rejection": 0.571229779092016,
+        "fence_hedge4_rejection": 0.16178194607268465,
+        "rejection_fraction": 0.1046115093974036,
+        "nll": 0.5307503938674927
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            8835,
+            1057,
+            136
+          ],
+          [
+            56,
+            23235,
+            10634
+          ],
+          [
+            97,
+            2011,
+            5717
+          ]
+        ],
+        "accuracy": 0.7297887133531615,
+        "class_iou": {
+          "roof": 0.8677929476475789,
+          "vegetation_or_fence_hedge": 0.6280918011515693,
+          "other": 0.30744823877386396
+        },
+        "mean_iou": 0.6011109958576707,
+        "roof_retention": 0.9860390905464699,
+        "vegetation_or_fence_hedge_rejection": 0.15327929255711129,
+        "tree8_rejection": 0.571229779092016,
+        "fence_hedge4_rejection": 0.16178194607268465,
+        "rejection_fraction": 0.10442659044381784,
+        "nll": 0.5301427245140076
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9835494958850979,
+        0.988156450626734
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "9d3f79f7f1c322568d47e3ee95f12db33f745b4a9f0282aff52f31632993d946",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/point_mlp_seed20261028/spatial_evaluation.npz",
+        "sha256": "e3e0951676aba95f5a9b3d00eedcc03e36eb68b31aad792dc1e0187cceefc260",
+        "bytes": 1230019
+      }
+    },
+    {
+      "fold": 0,
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            9317,
+            413,
+            161
+          ],
+          [
+            88,
+            30957,
+            2851
+          ],
+          [
+            207,
+            758,
+            6858
+          ]
+        ],
+        "accuracy": 0.913233869405154,
+        "class_iou": {
+          "roof": 0.9146868250539957,
+          "vegetation_or_fence_hedge": 0.8827957909145351,
+          "other": 0.6329487771112137
+        },
+        "mean_iou": 0.8101437976932481,
+        "roof_retention": 0.9875644525326054,
+        "vegetation_or_fence_hedge_rejection": 0.7569624734481945,
+        "tree8_rejection": 0.9509479909549486,
+        "fence_hedge4_rejection": 0.9331770222743259,
+        "rejection_fraction": 0.5051152877349351,
+        "nll": 0.23751230537891388
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            9441,
+            426,
+            161
+          ],
+          [
+            88,
+            30981,
+            2856
+          ],
+          [
+            207,
+            760,
+            6858
+          ]
+        ],
+        "accuracy": 0.9131291282011665,
+        "class_iou": {
+          "roof": 0.9145597210113339,
+          "vegetation_or_fence_hedge": 0.8823730454843212,
+          "other": 0.6325401217487548
+        },
+        "mean_iou": 0.8098242960814699,
+        "roof_retention": 0.987335460710012,
+        "vegetation_or_fence_hedge_rejection": 0.7564333087693441,
+        "tree8_rejection": 0.9509479909549486,
+        "fence_hedge4_rejection": 0.9331770222743259,
+        "rejection_fraction": 0.5036308857043532,
+        "nll": 0.23785604536533356
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9849527150222286,
+        0.9893449789874806
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "0990297550a512f87fb360d2c6a484e321bd99b4f4cb4eb9d0d06eb9ef7e09d1",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/fusion_mlp_seed20261028/spatial_evaluation.npz",
+        "sha256": "d5e19a7f3e7854c4b4df42ac3eb73c1c9f4eb0e36fa63f14d129bc2062ac0e03",
+        "bytes": 1226840
+      }
+    },
+    {
+      "fold": 0,
+      "method": "context_fusion",
+      "seed": 20261028,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            9507,
+            276,
+            108
+          ],
+          [
+            46,
+            31053,
+            2797
+          ],
+          [
+            209,
+            758,
+            6856
+          ]
+        ],
+        "accuracy": 0.9187366789381902,
+        "class_iou": {
+          "roof": 0.9370195150798344,
+          "vegetation_or_fence_hedge": 0.8890065845977669,
+          "other": 0.639075316927666
+        },
+        "mean_iou": 0.8217004722017558,
+        "roof_retention": 0.9866545344252351,
+        "vegetation_or_fence_hedge_rejection": 0.8199492565494454,
+        "tree8_rejection": 0.9615585319185945,
+        "fence_hedge4_rejection": 0.9800703399765534,
+        "rejection_fraction": 0.5492927727184654,
+        "nll": 0.22568094730377197
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            9631,
+            289,
+            108
+          ],
+          [
+            46,
+            31077,
+            2802
+          ],
+          [
+            209,
+            760,
+            6856
+          ]
+        ],
+        "accuracy": 0.9186140832013596,
+        "class_iou": {
+          "roof": 0.9365943790722552,
+          "vegetation_or_fence_hedge": 0.888574369531652,
+          "other": 0.6386585933861202
+        },
+        "mean_iou": 0.8212757806633425,
+        "roof_retention": 0.9864379736737136,
+        "vegetation_or_fence_hedge_rejection": 0.8193662490788504,
+        "tree8_rejection": 0.9615585319185945,
+        "fence_hedge4_rejection": 0.9800703399765534,
+        "rejection_fraction": 0.5476650314805516,
+        "nll": 0.2260630875825882
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9839806849575333,
+        0.9885227223228762
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "ecae4bb3469116abe8ce11b382cb936ccac6e740393424992bce834c6d575e6e",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/context_fusion_seed20261028/spatial_evaluation.npz",
+        "sha256": "037e5991c6f285c154fabfdc034e112b14ef2b8c585e77bb7b22c2d0397e6e5e",
+        "bytes": 1228661
+      }
+    },
+    {
+      "fold": 0,
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "evaluation_records": 51778,
+      "evaluation_tree8_records": 5749,
+      "evaluation_roof_records": 10028,
+      "common_optical": {
+        "records": 51610,
+        "confusion": [
+          [
+            9513,
+            249,
+            129
+          ],
+          [
+            40,
+            30922,
+            2934
+          ],
+          [
+            224,
+            743,
+            6856
+          ]
+        ],
+        "accuracy": 0.9163146677000581,
+        "class_iou": {
+          "roof": 0.9367799113737075,
+          "vegetation_or_fence_hedge": 0.8863219445081403,
+          "other": 0.6297997427889032
+        },
+        "mean_iou": 0.8176338662235837,
+        "roof_retention": 0.989283186735416,
+        "vegetation_or_fence_hedge_rejection": 0.7651935331602548,
+        "tree8_rejection": 0.9559923464950426,
+        "fence_hedge4_rejection": 0.9378663540445487,
+        "rejection_fraction": 0.5104437124588258,
+        "nll": 0.22962726652622223
+      },
+      "full_with_point_fallback": {
+        "records": 51778,
+        "confusion": [
+          [
+            9637,
+            262,
+            129
+          ],
+          [
+            40,
+            30946,
+            2939
+          ],
+          [
+            224,
+            745,
+            6856
+          ]
+        ],
+        "accuracy": 0.9161999304724014,
+        "class_iou": {
+          "roof": 0.9363583365720949,
+          "vegetation_or_fence_hedge": 0.8858925913202794,
+          "other": 0.6293950243275498
+        },
+        "mean_iou": 0.8172153174066414,
+        "roof_retention": 0.9890307140007978,
+        "vegetation_or_fence_hedge_rejection": 0.7646573323507737,
+        "tree8_rejection": 0.9559923464950426,
+        "fence_hedge4_rejection": 0.9378663540445487,
+        "rejection_fraction": 0.5089420217080614,
+        "nll": 0.22999663650989532
+      },
+      "calibration_roof_records": 9496,
+      "calibration_roof_retention": 0.995050547598989,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 0.00010530749789385004,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9867966431578654,
+        0.9908902591182986
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "02335c48dfec77de07edad7e79e072e57c124b14f673fa5976a7a54d2df183fb",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/gated_fusion_seed20261028/spatial_evaluation.npz",
+        "sha256": "5c8b2b8a39d88f464a08ee01735c531e3a3c79adabdb3fc3c55d1150c44bd66a",
+        "bytes": 1226756
+      }
+    },
+    {
+      "fold": 1,
+      "method": "point_mlp",
+      "seed": 20261026,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            34322,
+            4690,
+            2221
+          ],
+          [
+            276,
+            42811,
+            5981
+          ],
+          [
+            66,
+            16891,
+            18636
+          ]
+        ],
+        "accuracy": 0.7607113921235324,
+        "class_iou": {
+          "roof": 0.8255441972339146,
+          "vegetation_or_fence_hedge": 0.6059675296182536,
+          "other": 0.42552802831373443
+        },
+        "mean_iou": 0.6190132517219675,
+        "roof_retention": 0.990662818616157,
+        "vegetation_or_fence_hedge_rejection": 0.20406374826771012,
+        "tree8_rejection": 0.556777603199543,
+        "fence_hedge4_rejection": 0.07444253859348199,
+        "rejection_fraction": 0.08386420321858071,
+        "nll": 0.4918396472930908
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            34459,
+            4723,
+            2226
+          ],
+          [
+            276,
+            42821,
+            5986
+          ],
+          [
+            66,
+            16893,
+            18640
+          ]
+        ],
+        "accuracy": 0.7607264652232533,
+        "class_iou": {
+          "roof": 0.8253652694610778,
+          "vegetation_or_fence_hedge": 0.6056804198079181,
+          "other": 0.42546392458514987
+        },
+        "mean_iou": 0.6188365379513819,
+        "roof_retention": 0.9906781298299846,
+        "vegetation_or_fence_hedge_rejection": 0.20400138540838986,
+        "tree8_rejection": 0.556777603199543,
+        "fence_hedge4_rejection": 0.07444253859348199,
+        "rejection_fraction": 0.08374177175033706,
+        "nll": 0.49180132150650024
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9897059368859551,
+        0.9915592898827659
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "7cbb00ba11b9fc6b3a5b2998e4382a5cff096e3794a89ef40e3eaf2dd0ab3f2c",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/point_mlp_seed20261026/spatial_evaluation.npz",
+        "sha256": "f4dcdcb12b914395610713cf783a9756cd4c0c3701481cd5d5311504dd1a51c2",
+        "bytes": 2977220
+      }
+    },
+    {
+      "fold": 1,
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            36981,
+            936,
+            3316
+          ],
+          [
+            300,
+            42714,
+            6054
+          ],
+          [
+            242,
+            2948,
+            32403
+          ]
+        ],
+        "accuracy": 0.8904157465804565,
+        "class_iou": {
+          "roof": 0.8852423698384201,
+          "vegetation_or_fence_hedge": 0.8066550838495241,
+          "other": 0.7206592086826946
+        },
+        "mean_iou": 0.8041855541235462,
+        "roof_retention": 0.9995392040356026,
+        "vegetation_or_fence_hedge_rejection": 0.3116287600880411,
+        "tree8_rejection": 0.7329667190401371,
+        "fence_hedge4_rejection": 0.21132075471698114,
+        "rejection_fraction": 0.12196768710184759,
+        "nll": 0.2980223000049591
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            37118,
+            969,
+            3321
+          ],
+          [
+            300,
+            42724,
+            6059
+          ],
+          [
+            242,
+            2950,
+            32407
+          ]
+        ],
+        "accuracy": 0.890229201364105,
+        "class_iou": {
+          "roof": 0.8848152562574494,
+          "vegetation_or_fence_hedge": 0.8060827893287046,
+          "other": 0.720491785055248
+        },
+        "mean_iou": 0.8037966102138007,
+        "roof_retention": 0.9995170015455951,
+        "vegetation_or_fence_hedge_rejection": 0.3115335248456696,
+        "tree8_rejection": 0.7329667190401371,
+        "fence_hedge4_rejection": 0.21132075471698114,
+        "rejection_fraction": 0.12178602585454834,
+        "nll": 0.29828524589538574
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.999254033057349,
+        0.9996872973139583
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "74a01594955aa4704e73dd66a77ec7dd8e75e0b635a44a144c45be9b1beabd22",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/fusion_mlp_seed20261026/spatial_evaluation.npz",
+        "sha256": "92fc51fb3820cb122fe2d990831fc7fcf380323a1362b1b6ed934e12ab211447",
+        "bytes": 2991276
+      }
+    },
+    {
+      "fold": 1,
+      "method": "context_fusion",
+      "seed": 20261026,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            37182,
+            815,
+            3236
+          ],
+          [
+            407,
+            42773,
+            5888
+          ],
+          [
+            271,
+            3056,
+            32266
+          ]
+        ],
+        "accuracy": 0.8913927589877199,
+        "class_iou": {
+          "roof": 0.8871656605664384,
+          "vegetation_or_fence_hedge": 0.8079676608927255,
+          "other": 0.7215600330970324
+        },
+        "mean_iou": 0.8055644515187321,
+        "roof_retention": 0.9987388742027017,
+        "vegetation_or_fence_hedge_rejection": 0.35895084372707264,
+        "tree8_rejection": 0.8088844450792744,
+        "fence_hedge4_rejection": 0.2339622641509434,
+        "rejection_fraction": 0.14092808235499707,
+        "nll": 0.2787618041038513
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            37319,
+            848,
+            3241
+          ],
+          [
+            407,
+            42783,
+            5893
+          ],
+          [
+            271,
+            3058,
+            32270
+          ]
+        ],
+        "accuracy": 0.8912046950590847,
+        "class_iou": {
+          "roof": 0.8867319298579099,
+          "vegetation_or_fence_hedge": 0.8073939874313537,
+          "other": 0.7213913665526569
+        },
+        "mean_iou": 0.8051724279473068,
+        "roof_retention": 0.9987200540958269,
+        "vegetation_or_fence_hedge_rejection": 0.35884114662917915,
+        "tree8_rejection": 0.8088844450792744,
+        "fence_hedge4_rejection": 0.2339622641509434,
+        "rejection_fraction": 0.1407169482115949,
+        "nll": 0.2790546715259552
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9983263452558288,
+        0.9990212380693436
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "a23ca0f11c1ead8361a56a19eb7ffba9639d56046c0565c2cdb7b520bf7bda67",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/context_fusion_seed20261026/spatial_evaluation.npz",
+        "sha256": "273e647bbb71c244d35b2565d03ba3d32dc4cb3cea8fb1bbed9917f869ef4d11",
+        "bytes": 2995031
+      }
+    },
+    {
+      "fold": 1,
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            37081,
+            831,
+            3321
+          ],
+          [
+            360,
+            42527,
+            6181
+          ],
+          [
+            265,
+            2995,
+            32333
+          ]
+        ],
+        "accuracy": 0.8891686657028929,
+        "class_iou": {
+          "roof": 0.8858760571455875,
+          "vegetation_or_fence_hedge": 0.804004234884864,
+          "other": 0.7169974498281406
+        },
+        "mean_iou": 0.8022925806195307,
+        "roof_retention": 0.9991269129095627,
+        "vegetation_or_fence_hedge_rejection": 0.32954267547077526,
+        "tree8_rejection": 0.7824596486216255,
+        "fence_hedge4_rejection": 0.20240137221269297,
+        "rejection_fraction": 0.12923570622904984,
+        "nll": 0.27717313170433044
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            37218,
+            864,
+            3326
+          ],
+          [
+            360,
+            42537,
+            6186
+          ],
+          [
+            265,
+            2997,
+            32337
+          ]
+        ],
+        "accuracy": 0.8889840590054723,
+        "class_iou": {
+          "roof": 0.885447148668903,
+          "vegetation_or_fence_hedge": 0.8034338168631007,
+          "other": 0.7168318148566868
+        },
+        "mean_iou": 0.8019042601295635,
+        "roof_retention": 0.9991064528593508,
+        "vegetation_or_fence_hedge_rejection": 0.3294419656500214,
+        "tree8_rejection": 0.7824596486216255,
+        "fence_hedge4_rejection": 0.20240137221269297,
+        "rejection_fraction": 0.12904274724403203,
+        "nll": 0.2774684727191925
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9987686807770837,
+        0.999351628388639
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "aefcd94bd67ada6737aee28e416cad45695669e4c9f08ed3d9ad3e6b4f9693cb",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/gated_fusion_seed20261026/spatial_evaluation.npz",
+        "sha256": "2169347a73aaef4307d656dfbd7d86357f124a44c45c1e2b544e403fe68c1880",
+        "bytes": 2991940
+      }
+    },
+    {
+      "fold": 1,
+      "method": "point_mlp",
+      "seed": 20261027,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            33994,
+            5147,
+            2092
+          ],
+          [
+            273,
+            40056,
+            8739
+          ],
+          [
+            90,
+            10265,
+            25238
+          ]
+        ],
+        "accuracy": 0.7886634787996251,
+        "class_iou": {
+          "roof": 0.8172420425040869,
+          "vegetation_or_fence_hedge": 0.6212158808933003,
+          "other": 0.5436412200585904
+        },
+        "mean_iou": 0.6606997144853258,
+        "roof_retention": 0.9935488564984357,
+        "vegetation_or_fence_hedge_rejection": 0.17873155620771175,
+        "tree8_rejection": 0.4407227538923011,
+        "fence_hedge4_rejection": 0.11355060034305317,
+        "rejection_fraction": 0.07321238502232036,
+        "nll": 0.4862231910228729
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            34129,
+            5185,
+            2094
+          ],
+          [
+            273,
+            40058,
+            8752
+          ],
+          [
+            90,
+            10267,
+            25242
+          ]
+        ],
+        "accuracy": 0.788555793480847,
+        "class_iou": {
+          "roof": 0.8170501065332407,
+          "vegetation_or_fence_hedge": 0.6207174401487565,
+          "other": 0.5434815373021854
+        },
+        "mean_iou": 0.6604163613280609,
+        "roof_retention": 0.9935761205564142,
+        "vegetation_or_fence_hedge_rejection": 0.17867693498767395,
+        "tree8_rejection": 0.4407227538923011,
+        "fence_hedge4_rejection": 0.11355060034305317,
+        "rejection_fraction": 0.0730985803790943,
+        "nll": 0.4862442910671234
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9927595160134004,
+        0.9943011545594471
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "8c97ed51260f6944d9210c476650e21534e3f72eece82edfc569f3c4965b7473",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/point_mlp_seed20261027/spatial_evaluation.npz",
+        "sha256": "0795d9d34e275cbfb502b7685f1723fb781f5b007189d7bbbdbdd521a7648a0a",
+        "bytes": 2965224
+      }
+    },
+    {
+      "fold": 1,
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            36925,
+            1163,
+            3145
+          ],
+          [
+            209,
+            44124,
+            4735
+          ],
+          [
+            245,
+            4067,
+            31281
+          ]
+        ],
+        "accuracy": 0.8922585667307418,
+        "class_iou": {
+          "roof": 0.8857677453402739,
+          "vegetation_or_fence_hedge": 0.8126266160816237,
+          "other": 0.7195500655579325
+        },
+        "mean_iou": 0.8059814756599435,
+        "roof_retention": 0.9996604661314966,
+        "vegetation_or_fence_hedge_rejection": 0.2980353794733839,
+        "tree8_rejection": 0.6727610341379803,
+        "fence_hedge4_rejection": 0.1711835334476844,
+        "rejection_fraction": 0.11659014726674821,
+        "nll": 0.29310232400894165
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            37060,
+            1201,
+            3147
+          ],
+          [
+            209,
+            44126,
+            4748
+          ],
+          [
+            245,
+            4069,
+            31285
+          ]
+        ],
+        "accuracy": 0.8919898485208978,
+        "class_iou": {
+          "roof": 0.8852897615976303,
+          "vegetation_or_fence_hedge": 0.8118411127260685,
+          "other": 0.7192946153492435
+        },
+        "mean_iou": 0.8054751632243141,
+        "roof_retention": 0.9996619010819165,
+        "vegetation_or_fence_hedge_rejection": 0.2979442984332661,
+        "tree8_rejection": 0.6727610341379803,
+        "fence_hedge4_rejection": 0.1711835334476844,
+        "rejection_fraction": 0.11640891426758665,
+        "nll": 0.293423593044281
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.999432519745054,
+        0.9997985828164597
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "ba5b22cbf16ec12d90ff69943ef67b66372bfb2a263f9745f77c17481a5ecae1",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/fusion_mlp_seed20261027/spatial_evaluation.npz",
+        "sha256": "33f17bc513dfb3a65cd1c1de4a5043951d3ba01c140ee1e6d672e7ee7f331e36",
+        "bytes": 2989224
+      }
+    },
+    {
+      "fold": 1,
+      "method": "context_fusion",
+      "seed": 20261027,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            37201,
+            1041,
+            2991
+          ],
+          [
+            391,
+            43618,
+            5059
+          ],
+          [
+            250,
+            3482,
+            31861
+          ]
+        ],
+        "accuracy": 0.8950386833367754,
+        "class_iou": {
+          "roof": 0.8884033051535559,
+          "vegetation_or_fence_hedge": 0.8139053199231214,
+          "other": 0.7300368902229453
+        },
+        "mean_iou": 0.8107818384332076,
+        "roof_retention": 0.997404991147867,
+        "vegetation_or_fence_hedge_rejection": 0.39390233961033666,
+        "tree8_rejection": 0.8387373232395372,
+        "fence_hedge4_rejection": 0.2586620926243568,
+        "rejection_fraction": 0.15532908637425136,
+        "nll": 0.2755208909511566
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            37336,
+            1079,
+            2993
+          ],
+          [
+            391,
+            43620,
+            5072
+          ],
+          [
+            250,
+            3484,
+            31865
+          ]
+        ],
+        "accuracy": 0.8947656435879134,
+        "class_iou": {
+          "roof": 0.8879164783942544,
+          "vegetation_or_fence_hedge": 0.813108153450397,
+          "other": 0.729777390985709
+        },
+        "mean_iou": 0.8102673409434535,
+        "roof_retention": 0.9974159582689336,
+        "vegetation_or_fence_hedge_rejection": 0.3937819611678178,
+        "tree8_rejection": 0.8387373232395372,
+        "fence_hedge4_rejection": 0.2586620926243568,
+        "rejection_fraction": 0.1550876358156872,
+        "nll": 0.2758694589138031
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9968786840731609,
+        0.9978609495401547
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "8b031a5714182a2f262d3f1256ae1db264bc26793f8d321350d7851ea6ba2ce4",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/context_fusion_seed20261027/spatial_evaluation.npz",
+        "sha256": "98639ecff64b5b175672449884cfb76eef238b04b41a91e5d00febd6a2932f67",
+        "bytes": 2982063
+      }
+    },
+    {
+      "fold": 1,
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            37328,
+            1026,
+            2879
+          ],
+          [
+            372,
+            43419,
+            5277
+          ],
+          [
+            277,
+            3592,
+            31724
+          ]
+        ],
+        "accuracy": 0.8933785565634581,
+        "class_iou": {
+          "roof": 0.891265937634306,
+          "vegetation_or_fence_hedge": 0.8087583355064635,
+          "other": 0.7251365745502755
+        },
+        "mean_iou": 0.8083869492303483,
+        "roof_retention": 0.9973322338903305,
+        "vegetation_or_fence_hedge_rejection": 0.3975095785440613,
+        "tree8_rejection": 0.8323810884159406,
+        "fence_hedge4_rejection": 0.27615780445969124,
+        "rejection_fraction": 0.15668737191605636,
+        "nll": 0.2744869291782379
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            37463,
+            1064,
+            2881
+          ],
+          [
+            372,
+            43421,
+            5290
+          ],
+          [
+            277,
+            3594,
+            31728
+          ]
+        ],
+        "accuracy": 0.8931080973907526,
+        "class_iou": {
+          "roof": 0.8907672920084647,
+          "vegetation_or_fence_hedge": 0.8079678457788281,
+          "other": 0.7248800548320767
+        },
+        "mean_iou": 0.8078717308731233,
+        "roof_retention": 0.9973435085007728,
+        "vegetation_or_fence_hedge_rejection": 0.3973880977120388,
+        "tree8_rejection": 0.8323810884159406,
+        "fence_hedge4_rejection": 0.27615780445969124,
+        "rejection_fraction": 0.15644380997700055,
+        "nll": 0.2748371362686157
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9967994820727503,
+        0.9977952654454619
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "2e25e4f7a203efea4022d263ae62745a583b82c52c38d6f3d6739f45cb97a97c",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/gated_fusion_seed20261027/spatial_evaluation.npz",
+        "sha256": "1464584ea18accd52c6f3eafa587c1fa81eb912dd5da8dbccbc11898db9dff56",
+        "bytes": 2978764
+      }
+    },
+    {
+      "fold": 1,
+      "method": "point_mlp",
+      "seed": 20261028,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            34248,
+            4829,
+            2156
+          ],
+          [
+            318,
+            41066,
+            7684
+          ],
+          [
+            111,
+            13811,
+            21671
+          ]
+        ],
+        "accuracy": 0.7703703115319237,
+        "class_iou": {
+          "roof": 0.8220440689357208,
+          "vegetation_or_fence_hedge": 0.6065162166952206,
+          "other": 0.47698809235577666
+        },
+        "mean_iou": 0.6351827926622393,
+        "roof_retention": 0.9933305847258264,
+        "vegetation_or_fence_hedge_rejection": 0.1326934050705144,
+        "tree8_rejection": 0.3923010998428796,
+        "fence_hedge4_rejection": 0.035334476843910806,
+        "rejection_fraction": 0.054649149284318556,
+        "nll": 0.4829651713371277
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            34387,
+            4856,
+            2165
+          ],
+          [
+            318,
+            41071,
+            7694
+          ],
+          [
+            111,
+            13813,
+            21675
+          ]
+        ],
+        "accuracy": 0.7703465778412245,
+        "class_iou": {
+          "roof": 0.8219279585056289,
+          "vegetation_or_fence_hedge": 0.6061961270516,
+          "other": 0.4768137621540763
+        },
+        "mean_iou": 0.634979282570435,
+        "roof_retention": 0.993358771251932,
+        "vegetation_or_fence_hedge_rejection": 0.13265285333007354,
+        "tree8_rejection": 0.3923010998428796,
+        "fence_hedge4_rejection": 0.035334476843910806,
+        "rejection_fraction": 0.05456420017447855,
+        "nll": 0.48296770453453064
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9925293870291105,
+        0.9940966252584273
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "e449be7a0333789e2012ce8602d494f55278e3e3e6c0f5d3636a469d12ec1e2e",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/point_mlp_seed20261028/spatial_evaluation.npz",
+        "sha256": "cbdbde1b5527c941445a789d651897d251f784dbc8c2ccd93ba0d26f412e174a",
+        "bytes": 2971518
+      }
+    },
+    {
+      "fold": 1,
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            36971,
+            984,
+            3278
+          ],
+          [
+            254,
+            43107,
+            5707
+          ],
+          [
+            256,
+            3373,
+            31964
+          ]
+        ],
+        "accuracy": 0.8899709279234912,
+        "class_iou": {
+          "roof": 0.8856814316172772,
+          "vegetation_or_fence_hedge": 0.8068694431445952,
+          "other": 0.7170353088967653
+        },
+        "mean_iou": 0.8031953945528792,
+        "roof_retention": 0.9997817282273906,
+        "vegetation_or_fence_hedge_rejection": 0.2619426102551561,
+        "tree8_rejection": 0.648621625482074,
+        "fence_hedge4_rejection": 0.1471698113207547,
+        "rejection_fraction": 0.10240360938567367,
+        "nll": 0.2803724408149719
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            37110,
+            1011,
+            3287
+          ],
+          [
+            254,
+            43112,
+            5717
+          ],
+          [
+            256,
+            3375,
+            31968
+          ]
+        ],
+        "accuracy": 0.8897612816242366,
+        "class_iou": {
+          "roof": 0.88529987117706,
+          "vegetation_or_fence_hedge": 0.806298976977314,
+          "other": 0.7167230903750869
+        },
+        "mean_iou": 0.8027739795098202,
+        "roof_retention": 0.9997826506955177,
+        "vegetation_or_fence_hedge_rejection": 0.26186255933826375,
+        "tree8_rejection": 0.648621625482074,
+        "fence_hedge4_rejection": 0.1471698113207547,
+        "rejection_fraction": 0.10224442858275835,
+        "nll": 0.28068986535072327
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9995869351224803,
+        0.9998856442642053
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "0df2d5fd95a7576cf6e01bdfb21536efc030625e7f3e61bdf2a4721795122f7f",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/fusion_mlp_seed20261028/spatial_evaluation.npz",
+        "sha256": "dc8e8f0fed2df2fda5eef67aeeffe0a289422157bc20b34378a94b50af6ff270",
+        "bytes": 2990244
+      }
+    },
+    {
+      "fold": 1,
+      "method": "context_fusion",
+      "seed": 20261028,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            37057,
+            1006,
+            3170
+          ],
+          [
+            331,
+            43502,
+            5235
+          ],
+          [
+            224,
+            3503,
+            31866
+          ]
+        ],
+        "accuracy": 0.8930131698095223,
+        "class_iou": {
+          "roof": 0.88678568009955,
+          "vegetation_or_fence_hedge": 0.8119528902327491,
+          "other": 0.7242601936451657
+        },
+        "mean_iou": 0.807666254659155,
+        "roof_retention": 0.9980840588848737,
+        "vegetation_or_fence_hedge_rejection": 0.378148691611641,
+        "tree8_rejection": 0.8158834452221111,
+        "fence_hedge4_rejection": 0.2425385934819897,
+        "rejection_fraction": 0.148926874990071,
+        "nll": 0.2771746516227722
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            37196,
+            1033,
+            3179
+          ],
+          [
+            331,
+            43507,
+            5245
+          ],
+          [
+            224,
+            3505,
+            31870
+          ]
+        ],
+        "accuracy": 0.8927987945118566,
+        "class_iou": {
+          "roof": 0.8863999237423444,
+          "vegetation_or_fence_hedge": 0.81137986982712,
+          "other": 0.7239397587624651
+        },
+        "mean_iou": 0.8072398507773099,
+        "roof_retention": 0.9980921561051005,
+        "vegetation_or_fence_hedge_rejection": 0.37803312755944013,
+        "tree8_rejection": 0.8158834452221111,
+        "fence_hedge4_rejection": 0.2425385934819897,
+        "rejection_fraction": 0.14869537631850266,
+        "nll": 0.2774970531463623
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.997623136087863,
+        0.9984687677464154
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "12b5d6b8faf69ce2a24cb868209045ead7c049d520cb70822d99a1a5e5999b31",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/context_fusion_seed20261028/spatial_evaluation.npz",
+        "sha256": "48abaa060b8b8e37e3c4391acc58aa3257061d2c41af5ef6c529e8f820029d3f",
+        "bytes": 2992476
+      }
+    },
+    {
+      "fold": 1,
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "evaluation_records": 126090,
+      "evaluation_tree8_records": 14002,
+      "evaluation_roof_records": 41408,
+      "common_optical": {
+        "records": 125894,
+        "confusion": [
+          [
+            36400,
+            1225,
+            3608
+          ],
+          [
+            191,
+            44379,
+            4498
+          ],
+          [
+            205,
+            4372,
+            31016
+          ]
+        ],
+        "accuracy": 0.8880089599186617,
+        "class_iou": {
+          "roof": 0.8743904489658652,
+          "vegetation_or_fence_hedge": 0.8118357266989847,
+          "other": 0.7097645255040161
+        },
+        "mean_iou": 0.7986635670562886,
+        "roof_retention": 0.9977687774355491,
+        "vegetation_or_fence_hedge_rejection": 0.46333659411429035,
+        "tree8_rejection": 0.869518640194258,
+        "fence_hedge4_rejection": 0.313893653516295,
+        "rejection_fraction": 0.18362273023337092,
+        "nll": 0.29842737317085266
+      },
+      "full_with_point_fallback": {
+        "records": 126090,
+        "confusion": [
+          [
+            36539,
+            1252,
+            3617
+          ],
+          [
+            191,
+            44384,
+            4508
+          ],
+          [
+            205,
+            4374,
+            31020
+          ]
+        ],
+        "accuracy": 0.8878023633912285,
+        "class_iou": {
+          "roof": 0.8740551143431251,
+          "vegetation_or_fence_hedge": 0.8112741962017218,
+          "other": 0.7094501875400238
+        },
+        "mean_iou": 0.7982598326949569,
+        "roof_retention": 0.9977782071097373,
+        "vegetation_or_fence_hedge_rejection": 0.46319499623087423,
+        "tree8_rejection": 0.869518640194258,
+        "fence_hedge4_rejection": 0.313893653516295,
+        "rejection_fraction": 0.18333729875485763,
+        "nll": 0.2987167537212372
+      },
+      "calibration_roof_records": 27416,
+      "calibration_roof_retention": 0.9950029180040852,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 3.647505106507149e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9972762109074339,
+        0.9981878531813976
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "8f7e8cd42779a1a7cbc29b2732f484da543f36c6c5bf524fdd1b5053f16315e7",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/gated_fusion_seed20261028/spatial_evaluation.npz",
+        "sha256": "f79d7464ac404b08f737760863797aa9d6377d8ce4c4d292d9eb0560af784236",
+        "bytes": 2980626
+      }
+    },
+    {
+      "fold": 2,
+      "method": "point_mlp",
+      "seed": 20261026,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            19803,
+            561,
+            0
+          ],
+          [
+            4794,
+            57554,
+            13644
+          ],
+          [
+            2892,
+            11563,
+            19630
+          ]
+        ],
+        "accuracy": 0.7435315583290529,
+        "class_iou": {
+          "roof": 0.7059893048128342,
+          "vegetation_or_fence_hedge": 0.6531617413409596,
+          "other": 0.4112803536633912
+        },
+        "mean_iou": 0.5901437999390616,
+        "roof_retention": 0.995236692201925,
+        "vegetation_or_fence_hedge_rejection": 0.3145725865880619,
+        "tree8_rejection": 0.6392400356930399,
+        "fence_hedge4_rejection": 0.25674662668665665,
+        "rejection_fraction": 0.1929378032980428,
+        "nll": 0.5769448280334473
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            19803,
+            561,
+            0
+          ],
+          [
+            4794,
+            57554,
+            13644
+          ],
+          [
+            2892,
+            11563,
+            19630
+          ]
+        ],
+        "accuracy": 0.7435315583290529,
+        "class_iou": {
+          "roof": 0.7059893048128342,
+          "vegetation_or_fence_hedge": 0.6531617413409596,
+          "other": 0.4112803536633912
+        },
+        "mean_iou": 0.5901437999390616,
+        "roof_retention": 0.995236692201925,
+        "vegetation_or_fence_hedge_rejection": 0.3145725865880619,
+        "tree8_rejection": 0.6392400356930399,
+        "fence_hedge4_rejection": 0.25674662668665665,
+        "rejection_fraction": 0.1929378032980428,
+        "nll": 0.5769448280334473
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9950649350649351,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9941931177647282,
+        0.9960934592777785
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "851c53d75aa4a903a2bd7fc2202e18b35c74f90b8e098ca02f3571abc84cf80a",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/point_mlp_seed20261026/spatial_evaluation.npz",
+        "sha256": "d4a8ca8600ae343071d76e3791a88255c9614b37f37033015f3c7215c92d37ca",
+        "bytes": 3029483
+      }
+    },
+    {
+      "fold": 2,
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            19997,
+            356,
+            11
+          ],
+          [
+            995,
+            72241,
+            2756
+          ],
+          [
+            5453,
+            6679,
+            21953
+          ]
+        ],
+        "accuracy": 0.8754226048558352,
+        "class_iou": {
+          "roof": 0.745822765925705,
+          "vegetation_or_fence_hedge": 0.8700904525034026,
+          "other": 0.5957071529360686
+        },
+        "mean_iou": 0.7372067904550588,
+        "roof_retention": 0.9933706540954625,
+        "vegetation_or_fence_hedge_rejection": 0.8630908516685967,
+        "tree8_rejection": 0.9809637120761452,
+        "fence_hedge4_rejection": 0.7987256371814093,
+        "rejection_fraction": 0.5296034222368734,
+        "nll": 0.34982505440711975
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            19997,
+            356,
+            11
+          ],
+          [
+            995,
+            72241,
+            2756
+          ],
+          [
+            5453,
+            6679,
+            21953
+          ]
+        ],
+        "accuracy": 0.8754226048558352,
+        "class_iou": {
+          "roof": 0.745822765925705,
+          "vegetation_or_fence_hedge": 0.8700904525034026,
+          "other": 0.5957071529360686
+        },
+        "mean_iou": 0.7372067904550588,
+        "roof_retention": 0.9933706540954625,
+        "vegetation_or_fence_hedge_rejection": 0.8630908516685967,
+        "tree8_rejection": 0.9809637120761452,
+        "fence_hedge4_rejection": 0.7987256371814093,
+        "rejection_fraction": 0.5296034222368734,
+        "nll": 0.34982505440711975
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9962337662337662,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9921592590460523,
+        0.9943959456684807
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "3e261a0f9bb38ba0e53ad5b14715889b9e5a4d28d9d7be6f197d1f3ae12c977a",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/fusion_mlp_seed20261026/spatial_evaluation.npz",
+        "sha256": "288820446ce8c0841a95b047e9fa5cef17e78b98a26689e268ad4131a4964769",
+        "bytes": 3021095
+      }
+    },
+    {
+      "fold": 2,
+      "method": "context_fusion",
+      "seed": 20261026,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            20025,
+            327,
+            12
+          ],
+          [
+            2473,
+            69608,
+            3911
+          ],
+          [
+            3669,
+            6126,
+            24290
+          ]
+        ],
+        "accuracy": 0.8733680361236115,
+        "class_iou": {
+          "roof": 0.7554893231721119,
+          "vegetation_or_fence_hedge": 0.8442961974649766,
+          "other": 0.6390759840033677
+        },
+        "mean_iou": 0.7462871682134855,
+        "roof_retention": 0.9968080927126302,
+        "vegetation_or_fence_hedge_rejection": 0.7149963154016212,
+        "tree8_rejection": 0.9693634741225461,
+        "fence_hedge4_rejection": 0.7252623688155923,
+        "rejection_fraction": 0.43035548638848214,
+        "nll": 0.3355081081390381
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            20025,
+            327,
+            12
+          ],
+          [
+            2473,
+            69608,
+            3911
+          ],
+          [
+            3669,
+            6126,
+            24290
+          ]
+        ],
+        "accuracy": 0.8733680361236115,
+        "class_iou": {
+          "roof": 0.7554893231721119,
+          "vegetation_or_fence_hedge": 0.8442961974649766,
+          "other": 0.6390759840033677
+        },
+        "mean_iou": 0.7462871682134855,
+        "roof_retention": 0.9968080927126302,
+        "vegetation_or_fence_hedge_rejection": 0.7149963154016212,
+        "tree8_rejection": 0.9693634741225461,
+        "fence_hedge4_rejection": 0.7252623688155923,
+        "rejection_fraction": 0.43035548638848214,
+        "nll": 0.3355081081390381
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9950649350649351,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9959340946291776,
+        0.9974946906895176
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "cc3b2b2b011c5e593e35c0050eec6de32d6c06474904d8c35b3bc3962de08916",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/context_fusion_seed20261026/spatial_evaluation.npz",
+        "sha256": "79eb2236e1bca4c9fe55f79dc556487ac9bbd1a00970e8c0a74bbaf8407515af",
+        "bytes": 3065365
+      }
+    },
+    {
+      "fold": 2,
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            20048,
+            311,
+            5
+          ],
+          [
+            1788,
+            71417,
+            2787
+          ],
+          [
+            3907,
+            7027,
+            23151
+          ]
+        ],
+        "accuracy": 0.8786807828826826,
+        "class_iou": {
+          "roof": 0.7693311331977436,
+          "vegetation_or_fence_hedge": 0.8570382815312613,
+          "other": 0.6277896792038398
+        },
+        "mean_iou": 0.7513863646442815,
+        "roof_retention": 0.9977411117658613,
+        "vegetation_or_fence_hedge_rejection": 0.7908069270449521,
+        "tree8_rejection": 0.9733789411064843,
+        "fence_hedge4_rejection": 0.75,
+        "rejection_fraction": 0.4787528461143352,
+        "nll": 0.3360671103000641
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            20048,
+            311,
+            5
+          ],
+          [
+            1788,
+            71417,
+            2787
+          ],
+          [
+            3907,
+            7027,
+            23151
+          ]
+        ],
+        "accuracy": 0.8786807828826826,
+        "class_iou": {
+          "roof": 0.7693311331977436,
+          "vegetation_or_fence_hedge": 0.8570382815312613,
+          "other": 0.6277896792038398
+        },
+        "mean_iou": 0.7513863646442815,
+        "roof_retention": 0.9977411117658613,
+        "vegetation_or_fence_hedge_rejection": 0.7908069270449521,
+        "tree8_rejection": 0.9733789411064843,
+        "fence_hedge4_rejection": 0.75,
+        "rejection_fraction": 0.4787528461143352,
+        "nll": 0.3360671103000641
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9963636363636363,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.996988535529286,
+        0.9983059359533959
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "f226c85e3c445e5e027cde915ae62fe9c22d8aa32785411d6366bb6a2b1cb3ec",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/gated_fusion_seed20261026/spatial_evaluation.npz",
+        "sha256": "b4d74d7333bbb67122d0717ef3d17cf0c1880f13326708bd82dec4f57d013e55",
+        "bytes": 3048236
+      }
+    },
+    {
+      "fold": 2,
+      "method": "point_mlp",
+      "seed": 20261027,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            19818,
+            543,
+            3
+          ],
+          [
+            5894,
+            54228,
+            15870
+          ],
+          [
+            3843,
+            9868,
+            20374
+          ]
+        ],
+        "accuracy": 0.7238521630468948,
+        "class_iou": {
+          "roof": 0.6583834424105511,
+          "vegetation_or_fence_hedge": 0.6276170966285893,
+          "other": 0.40782257095960606
+        },
+        "mean_iou": 0.5646077033329155,
+        "roof_retention": 0.996709880180711,
+        "vegetation_or_fence_hedge_rejection": 0.2722786609116749,
+        "tree8_rejection": 0.5026397977394408,
+        "fence_hedge4_rejection": 0.3691904047976012,
+        "rejection_fraction": 0.167677340713426,
+        "nll": 0.6545376181602478
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            19818,
+            543,
+            3
+          ],
+          [
+            5894,
+            54228,
+            15870
+          ],
+          [
+            3843,
+            9868,
+            20374
+          ]
+        ],
+        "accuracy": 0.7238521630468948,
+        "class_iou": {
+          "roof": 0.6583834424105511,
+          "vegetation_or_fence_hedge": 0.6276170966285893,
+          "other": 0.40782257095960606
+        },
+        "mean_iou": 0.5646077033329155,
+        "roof_retention": 0.996709880180711,
+        "vegetation_or_fence_hedge_rejection": 0.2722786609116749,
+        "tree8_rejection": 0.5026397977394408,
+        "fence_hedge4_rejection": 0.3691904047976012,
+        "rejection_fraction": 0.167677340713426,
+        "nll": 0.6545376181602478
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.997012987012987,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9958241981679562,
+        0.997408199133477
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "0cca401533ca6d9cb369f7bbb385991b630fd7c16903d7408c5740bd0fcde0e2",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/point_mlp_seed20261027/spatial_evaluation.npz",
+        "sha256": "ccd38328db6136dbc9f2761900680629aefb878476108a838313d6188cb40757",
+        "bytes": 2992706
+      }
+    },
+    {
+      "fold": 2,
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            19923,
+            392,
+            49
+          ],
+          [
+            1051,
+            71609,
+            3332
+          ],
+          [
+            5217,
+            6281,
+            22587
+          ]
+        ],
+        "accuracy": 0.874870631166581,
+        "class_iou": {
+          "roof": 0.7480850105136677,
+          "vegetation_or_fence_hedge": 0.8662553680517753,
+          "other": 0.6028665990498051
+        },
+        "mean_iou": 0.739068992538416,
+        "roof_retention": 0.995875073659399,
+        "vegetation_or_fence_hedge_rejection": 0.8026634382566586,
+        "tree8_rejection": 0.9552349791790601,
+        "fence_hedge4_rejection": 0.7612443778110944,
+        "rejection_fraction": 0.48732377090025375,
+        "nll": 0.4010831415653229
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            19923,
+            392,
+            49
+          ],
+          [
+            1051,
+            71609,
+            3332
+          ],
+          [
+            5217,
+            6281,
+            22587
+          ]
+        ],
+        "accuracy": 0.874870631166581,
+        "class_iou": {
+          "roof": 0.7480850105136677,
+          "vegetation_or_fence_hedge": 0.8662553680517753,
+          "other": 0.6028665990498051
+        },
+        "mean_iou": 0.739068992538416,
+        "roof_retention": 0.995875073659399,
+        "vegetation_or_fence_hedge_rejection": 0.8026634382566586,
+        "tree8_rejection": 0.9552349791790601,
+        "fence_hedge4_rejection": 0.7612443778110944,
+        "rejection_fraction": 0.48732377090025375,
+        "nll": 0.4010831415653229
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9961688311688311,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9948963853240601,
+        0.9966667138306483
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "719683e19563369d708f72270841afdae5b529957d235d4494d4733ef9c4ce69",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/fusion_mlp_seed20261027/spatial_evaluation.npz",
+        "sha256": "7e75119085fe846eeeb641eeed7d0aaf3468ebce3ccefd3c35f9976ba2e1fcc1",
+        "bytes": 2998548
+      }
+    },
+    {
+      "fold": 2,
+      "method": "context_fusion",
+      "seed": 20261027,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            20127,
+            232,
+            5
+          ],
+          [
+            2920,
+            69968,
+            3104
+          ],
+          [
+            4291,
+            6247,
+            23547
+          ]
+        ],
+        "accuracy": 0.8712138054752724,
+        "class_iou": {
+          "roof": 0.7299002719854941,
+          "vegetation_or_fence_hedge": 0.8483951934619443,
+          "other": 0.6330859816099371
+        },
+        "mean_iou": 0.7371271490191251,
+        "roof_retention": 0.9981339618935376,
+        "vegetation_or_fence_hedge_rejection": 0.8055979576797557,
+        "tree8_rejection": 0.9828970850684117,
+        "fence_hedge4_rejection": 0.7616191904047976,
+        "rejection_fraction": 0.4893783396324775,
+        "nll": 0.365420401096344
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            20127,
+            232,
+            5
+          ],
+          [
+            2920,
+            69968,
+            3104
+          ],
+          [
+            4291,
+            6247,
+            23547
+          ]
+        ],
+        "accuracy": 0.8712138054752724,
+        "class_iou": {
+          "roof": 0.7299002719854941,
+          "vegetation_or_fence_hedge": 0.8483951934619443,
+          "other": 0.6330859816099371
+        },
+        "mean_iou": 0.7371271490191251,
+        "roof_retention": 0.9981339618935376,
+        "vegetation_or_fence_hedge_rejection": 0.8055979576797557,
+        "tree8_rejection": 0.9828970850684117,
+        "fence_hedge4_rejection": 0.7616191904047976,
+        "rejection_fraction": 0.4893783396324775,
+        "nll": 0.365420401096344
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.997012987012987,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9974399181481275,
+        0.9986401054036016
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "011eda79f4d8d04eda53c95db4da9bff34473b5de11928f69180a5004dc12668",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/context_fusion_seed20261027/spatial_evaluation.npz",
+        "sha256": "7cc812ed0496e3e6ea2b92305d981fab69b75cc3cf254c1145451eb8770b611c",
+        "bytes": 3002584
+      }
+    },
+    {
+      "fold": 2,
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            20093,
+            260,
+            11
+          ],
+          [
+            1989,
+            70790,
+            3213
+          ],
+          [
+            3963,
+            6355,
+            23767
+          ]
+        ],
+        "accuracy": 0.8789414371248304,
+        "class_iou": {
+          "roof": 0.7635278917768658,
+          "vegetation_or_fence_hedge": 0.856949168956626,
+          "other": 0.6370312793159827
+        },
+        "mean_iou": 0.7525027800164915,
+        "roof_retention": 0.9972991553722255,
+        "vegetation_or_fence_hedge_rejection": 0.8094404674176229,
+        "tree8_rejection": 0.9841240333135038,
+        "fence_hedge4_rejection": 0.7623688155922039,
+        "rejection_fraction": 0.49315015984238086,
+        "nll": 0.36438706517219543
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            20093,
+            260,
+            11
+          ],
+          [
+            1989,
+            70790,
+            3213
+          ],
+          [
+            3963,
+            6355,
+            23767
+          ]
+        ],
+        "accuracy": 0.8789414371248304,
+        "class_iou": {
+          "roof": 0.7635278917768658,
+          "vegetation_or_fence_hedge": 0.856949168956626,
+          "other": 0.6370312793159827
+        },
+        "mean_iou": 0.7525027800164915,
+        "roof_retention": 0.9972991553722255,
+        "vegetation_or_fence_hedge_rejection": 0.8094404674176229,
+        "tree8_rejection": 0.9841240333135038,
+        "fence_hedge4_rejection": 0.7623688155922039,
+        "rejection_fraction": 0.49315015984238086,
+        "nll": 0.36438706517219543
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9961688311688311,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9964864665308737,
+        0.9979242588741302
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "7a9f73be11eba8cb020e3484b78ee97ec23881840251950d8d4863180d6159de",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/gated_fusion_seed20261027/spatial_evaluation.npz",
+        "sha256": "12102efd976f5f649818f19dace3b47acde8b2f0361f2ead9ba2692a2c7ad83c",
+        "bytes": 2988203
+      }
+    },
+    {
+      "fold": 2,
+      "method": "point_mlp",
+      "seed": 20261028,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            19743,
+            621,
+            0
+          ],
+          [
+            4909,
+            56217,
+            14866
+          ],
+          [
+            2890,
+            11538,
+            19657
+          ]
+        ],
+        "accuracy": 0.733028725630745,
+        "class_iou": {
+          "roof": 0.7010261690871001,
+          "vegetation_or_fence_hedge": 0.6377352497419201,
+          "other": 0.4015648301362587
+        },
+        "mean_iou": 0.580108749655093,
+        "roof_retention": 0.993223335297584,
+        "vegetation_or_fence_hedge_rejection": 0.3032292872933993,
+        "tree8_rejection": 0.6287552052349792,
+        "fence_hedge4_rejection": 0.2582458770614693,
+        "rejection_fraction": 0.18577747794021818,
+        "nll": 0.5943276286125183
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            19743,
+            621,
+            0
+          ],
+          [
+            4909,
+            56217,
+            14866
+          ],
+          [
+            2890,
+            11538,
+            19657
+          ]
+        ],
+        "accuracy": 0.733028725630745,
+        "class_iou": {
+          "roof": 0.7010261690871001,
+          "vegetation_or_fence_hedge": 0.6377352497419201,
+          "other": 0.4015648301362587
+        },
+        "mean_iou": 0.580108749655093,
+        "roof_retention": 0.993223335297584,
+        "vegetation_or_fence_hedge_rejection": 0.3032292872933993,
+        "tree8_rejection": 0.6287552052349792,
+        "fence_hedge4_rejection": 0.2582458770614693,
+        "rejection_fraction": 0.18577747794021818,
+        "nll": 0.5943276286125183
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9950649350649351,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9919997809206617,
+        0.9942608417679787
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "63385c9ec2c2462c113aaae3e19589d5197869f74bfd347b069981f7ce0241c2",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/point_mlp_seed20261028/spatial_evaluation.npz",
+        "sha256": "4d4916be5940421f28446300dbcb49d4c695fe7408b75633f3140a7b8aa3084c",
+        "bytes": 3019192
+      }
+    },
+    {
+      "fold": 2,
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            20004,
+            351,
+            9
+          ],
+          [
+            1382,
+            72115,
+            2495
+          ],
+          [
+            4512,
+            6864,
+            22709
+          ]
+        ],
+        "accuracy": 0.8803060387454865,
+        "class_iou": {
+          "roof": 0.761824967628913,
+          "vegetation_or_fence_hedge": 0.8666939079644741,
+          "other": 0.620651015332477
+        },
+        "mean_iou": 0.7497232969752882,
+        "roof_retention": 0.9960714987232371,
+        "vegetation_or_fence_hedge_rejection": 0.8383119275713233,
+        "tree8_rejection": 0.9751264128494943,
+        "fence_hedge4_rejection": 0.8163418290854573,
+        "rejection_fraction": 0.513151539776604,
+        "nll": 0.32944872975349426
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            20004,
+            351,
+            9
+          ],
+          [
+            1382,
+            72115,
+            2495
+          ],
+          [
+            4512,
+            6864,
+            22709
+          ]
+        ],
+        "accuracy": 0.8803060387454865,
+        "class_iou": {
+          "roof": 0.761824967628913,
+          "vegetation_or_fence_hedge": 0.8666939079644741,
+          "other": 0.620651015332477
+        },
+        "mean_iou": 0.7497232969752882,
+        "roof_retention": 0.9960714987232371,
+        "vegetation_or_fence_hedge_rejection": 0.8383119275713233,
+        "tree8_rejection": 0.9751264128494943,
+        "fence_hedge4_rejection": 0.8163418290854573,
+        "rejection_fraction": 0.513151539776604,
+        "nll": 0.32944872975349426
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9975974025974026,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9951137764628077,
+        0.9968420987264239
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "76ef46fbbfd3674b477ab2a1bc1a97dc96db4cfed18cd0a47cce334070739349",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/fusion_mlp_seed20261028/spatial_evaluation.npz",
+        "sha256": "de9369f9c1e9134ea7cbdf9ce9ef9acd049345acd38727140f0325ed607721c8",
+        "bytes": 3058622
+      }
+    },
+    {
+      "fold": 2,
+      "method": "context_fusion",
+      "seed": 20261028,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            20057,
+            304,
+            3
+          ],
+          [
+            2343,
+            70949,
+            2700
+          ],
+          [
+            4381,
+            6996,
+            22708
+          ]
+        ],
+        "accuracy": 0.8717657791645265,
+        "class_iou": {
+          "roof": 0.7404385705847608,
+          "vegetation_or_fence_hedge": 0.8518104980070115,
+          "other": 0.6172664999456344
+        },
+        "mean_iou": 0.7365051895124689,
+        "roof_retention": 0.9985759182871734,
+        "vegetation_or_fence_hedge_rejection": 0.7858721970733762,
+        "tree8_rejection": 0.974011005353956,
+        "fence_hedge4_rejection": 0.7395052473763118,
+        "rejection_fraction": 0.47776389325442153,
+        "nll": 0.37203869223594666
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            20057,
+            304,
+            3
+          ],
+          [
+            2343,
+            70949,
+            2700
+          ],
+          [
+            4381,
+            6996,
+            22708
+          ]
+        ],
+        "accuracy": 0.8717657791645265,
+        "class_iou": {
+          "roof": 0.7404385705847608,
+          "vegetation_or_fence_hedge": 0.8518104980070115,
+          "other": 0.6172664999456344
+        },
+        "mean_iou": 0.7365051895124689,
+        "roof_retention": 0.9985759182871734,
+        "vegetation_or_fence_hedge_rejection": 0.7858721970733762,
+        "tree8_rejection": 0.974011005353956,
+        "fence_hedge4_rejection": 0.7395052473763118,
+        "rejection_fraction": 0.47776389325442153,
+        "nll": 0.37203869223594666
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9965584415584415,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9979555318135509,
+        0.999008237815856
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "45350b1d23ae5fc587fd3e1821f203ef3afcf6d227f34d49967cfaa9f69a5af2",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/context_fusion_seed20261028/spatial_evaluation.npz",
+        "sha256": "d526e8a573e9f868f4732f8b3f6c4e2d7c794e72f3c8a2895d745524d54fc258",
+        "bytes": 3016435
+      }
+    },
+    {
+      "fold": 2,
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "evaluation_records": 130441,
+      "evaluation_tree8_records": 26896,
+      "evaluation_roof_records": 20364,
+      "common_optical": {
+        "records": 130441,
+        "confusion": [
+          [
+            19994,
+            343,
+            27
+          ],
+          [
+            1042,
+            71266,
+            3684
+          ],
+          [
+            4800,
+            5698,
+            23587
+          ]
+        ],
+        "accuracy": 0.8804516984690396,
+        "class_iou": {
+          "roof": 0.7629550484621842,
+          "vegetation_or_fence_hedge": 0.8687479429010276,
+          "other": 0.6240607471690126
+        },
+        "mean_iou": 0.7519212461774081,
+        "roof_retention": 0.9971518365743469,
+        "vegetation_or_fence_hedge_rejection": 0.7462890830613749,
+        "tree8_rejection": 0.9784726353361095,
+        "fence_hedge4_rejection": 0.762743628185907,
+        "rejection_fraction": 0.4533237249024463,
+        "nll": 0.41176122426986694
+      },
+      "full_with_point_fallback": {
+        "records": 130441,
+        "confusion": [
+          [
+            19994,
+            343,
+            27
+          ],
+          [
+            1042,
+            71266,
+            3684
+          ],
+          [
+            4800,
+            5698,
+            23587
+          ]
+        ],
+        "accuracy": 0.8804516984690396,
+        "class_iou": {
+          "roof": 0.7629550484621842,
+          "vegetation_or_fence_hedge": 0.8687479429010276,
+          "other": 0.6240607471690126
+        },
+        "mean_iou": 0.7519212461774081,
+        "roof_retention": 0.9971518365743469,
+        "vegetation_or_fence_hedge_rejection": 0.7462890830613749,
+        "tree8_rejection": 0.9784726353361095,
+        "fence_hedge4_rejection": 0.762743628185907,
+        "rejection_fraction": 0.4533237249024463,
+        "nll": 0.41176122426986694
+      },
+      "calibration_roof_records": 15400,
+      "calibration_roof_retention": 0.9957142857142857,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 6.493506493506494e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9963202117788871,
+        0.9977959316002244
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "849399d5338c218746e7c30ec1b441f4e8222f35451f8e22d42eea525084fc43",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/gated_fusion_seed20261028/spatial_evaluation.npz",
+        "sha256": "f02ac479ec581f9692a582f90de349ab2d2f0d289a883f5adae342c41e7f42b4",
+        "bytes": 3008850
+      }
+    },
+    {
+      "fold": 3,
+      "method": "point_mlp",
+      "seed": 20261026,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            5936,
+            844,
+            114
+          ],
+          [
+            265,
+            16715,
+            2989
+          ],
+          [
+            14,
+            7409,
+            15946
+          ]
+        ],
+        "accuracy": 0.7683747412008282,
+        "class_iou": {
+          "roof": 0.8275477485013244,
+          "vegetation_or_fence_hedge": 0.5922684430586067,
+          "other": 0.602372317920822
+        },
+        "mean_iou": 0.6740628364935843,
+        "roof_retention": 0.9936176385262547,
+        "vegetation_or_fence_hedge_rejection": 0.15824528018428563,
+        "tree8_rejection": 0.3228052723203183,
+        "fence_hedge4_rejection": 0.08029197080291971,
+        "rejection_fraction": 0.06519748367574454,
+        "nll": 0.5181085467338562
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            5936,
+            844,
+            114
+          ],
+          [
+            265,
+            16715,
+            2989
+          ],
+          [
+            14,
+            7409,
+            15946
+          ]
+        ],
+        "accuracy": 0.7683747412008282,
+        "class_iou": {
+          "roof": 0.8275477485013244,
+          "vegetation_or_fence_hedge": 0.5922684430586067,
+          "other": 0.602372317920822
+        },
+        "mean_iou": 0.6740628364935843,
+        "roof_retention": 0.9936176385262547,
+        "vegetation_or_fence_hedge_rejection": 0.15824528018428563,
+        "tree8_rejection": 0.3228052723203183,
+        "fence_hedge4_rejection": 0.08029197080291971,
+        "rejection_fraction": 0.06519748367574454,
+        "nll": 0.5181085467338562
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9914434581781463,
+        0.995242020261888
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "7f23925441100ace81edf56dd7d802d65ab8a39834225afe2ce576b5d8f98194",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/point_mlp_seed20261026/spatial_evaluation.npz",
+        "sha256": "5cf0d697dda3cabce3415ae5ace75c4b43105062ffa9b30959377eed0a3ea6e1",
+        "bytes": 1163661
+      }
+    },
+    {
+      "fold": 3,
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            6516,
+            221,
+            157
+          ],
+          [
+            140,
+            18113,
+            1716
+          ],
+          [
+            133,
+            2231,
+            21005
+          ]
+        ],
+        "accuracy": 0.908464723682115,
+        "class_iou": {
+          "roof": 0.9091670154876518,
+          "vegetation_or_fence_hedge": 0.8078587038936711,
+          "other": 0.8321448379684653
+        },
+        "mean_iou": 0.849723519116596,
+        "roof_retention": 0.986655062373078,
+        "vegetation_or_fence_hedge_rejection": 0.8085532575492013,
+        "tree8_rejection": 0.9830887838846059,
+        "fence_hedge4_rejection": 0.8310740354535975,
+        "rejection_fraction": 0.33934543717152416,
+        "nll": 0.2431618869304657
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            6516,
+            221,
+            157
+          ],
+          [
+            140,
+            18113,
+            1716
+          ],
+          [
+            133,
+            2231,
+            21005
+          ]
+        ],
+        "accuracy": 0.908464723682115,
+        "class_iou": {
+          "roof": 0.9091670154876518,
+          "vegetation_or_fence_hedge": 0.8078587038936711,
+          "other": 0.8321448379684653
+        },
+        "mean_iou": 0.849723519116596,
+        "roof_retention": 0.986655062373078,
+        "vegetation_or_fence_hedge_rejection": 0.8085532575492013,
+        "tree8_rejection": 0.9830887838846059,
+        "fence_hedge4_rejection": 0.8310740354535975,
+        "rejection_fraction": 0.33934543717152416,
+        "nll": 0.2431618869304657
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9951481103166496,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9836626128430137,
+        0.9891054683107667
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "fcac409bee7b520f7304cde502ce45c0ac921298797d895c47bf2a8e643a31fb",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/fusion_mlp_seed20261026/spatial_evaluation.npz",
+        "sha256": "9f099a32ccb2735303e532aab46cd22b29d766618f3a3e508d2d0ab908e45428",
+        "bytes": 1184319
+      }
+    },
+    {
+      "fold": 3,
+      "method": "context_fusion",
+      "seed": 20261026,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            6473,
+            279,
+            142
+          ],
+          [
+            129,
+            18270,
+            1570
+          ],
+          [
+            138,
+            2544,
+            20687
+          ]
+        ],
+        "accuracy": 0.9044035674470458,
+        "class_iou": {
+          "roof": 0.903924032956291,
+          "vegetation_or_fence_hedge": 0.8015970515970516,
+          "other": 0.8248076233005064
+        },
+        "mean_iou": 0.8434429026179497,
+        "roof_retention": 0.9773716275021758,
+        "vegetation_or_fence_hedge_rejection": 0.7980369572837899,
+        "tree8_rejection": 0.990052225814474,
+        "fence_hedge4_rejection": 0.7539103232533889,
+        "rejection_fraction": 0.3404204491161013,
+        "nll": 0.25824686884880066
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            6473,
+            279,
+            142
+          ],
+          [
+            129,
+            18270,
+            1570
+          ],
+          [
+            138,
+            2544,
+            20687
+          ]
+        ],
+        "accuracy": 0.9044035674470458,
+        "class_iou": {
+          "roof": 0.903924032956291,
+          "vegetation_or_fence_hedge": 0.8015970515970516,
+          "other": 0.8248076233005064
+        },
+        "mean_iou": 0.8434429026179497,
+        "roof_retention": 0.9773716275021758,
+        "vegetation_or_fence_hedge_rejection": 0.7980369572837899,
+        "tree8_rejection": 0.990052225814474,
+        "fence_hedge4_rejection": 0.7539103232533889,
+        "rejection_fraction": 0.3404204491161013,
+        "nll": 0.25824686884880066
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9735861984476906,
+        0.9806253529910847
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "bd7f9ca94bb5a52fad283c43d5155882b8d917924c04996956e794f5962c113f",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/context_fusion_seed20261026/spatial_evaluation.npz",
+        "sha256": "aaec32d5d30e1bb049b49bad468dacd3157ade2ed25c3491b18eaf9053e0909a",
+        "bytes": 1186342
+      }
+    },
+    {
+      "fold": 3,
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            6407,
+            322,
+            165
+          ],
+          [
+            117,
+            17908,
+            1944
+          ],
+          [
+            148,
+            2014,
+            21207
+          ]
+        ],
+        "accuracy": 0.9062350692785476,
+        "class_iou": {
+          "roof": 0.8949573962843973,
+          "vegetation_or_fence_hedge": 0.8028693118134947,
+          "other": 0.8323651778004553
+        },
+        "mean_iou": 0.843397295299449,
+        "roof_retention": 0.9760661444734552,
+        "vegetation_or_fence_hedge_rejection": 0.8209224297661375,
+        "tree8_rejection": 0.9883113653320069,
+        "fence_hedge4_rejection": 0.7705943691345151,
+        "rejection_fraction": 0.35019509476031213,
+        "nll": 0.24882371723651886
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            6407,
+            322,
+            165
+          ],
+          [
+            117,
+            17908,
+            1944
+          ],
+          [
+            148,
+            2014,
+            21207
+          ]
+        ],
+        "accuracy": 0.9062350692785476,
+        "class_iou": {
+          "roof": 0.8949573962843973,
+          "vegetation_or_fence_hedge": 0.8028693118134947,
+          "other": 0.8323651778004553
+        },
+        "mean_iou": 0.843397295299449,
+        "roof_retention": 0.9760661444734552,
+        "vegetation_or_fence_hedge_rejection": 0.8209224297661375,
+        "tree8_rejection": 0.9883113653320069,
+        "fence_hedge4_rejection": 0.7705943691345151,
+        "rejection_fraction": 0.35019509476031213,
+        "nll": 0.24882371723651886
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9721843611850857,
+        0.9794176782625171
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "4aaf8f72b6c726f4e9183db70cad9051986166016eb78e8bd54a05ee98da9d73",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/gated_fusion_seed20261026/spatial_evaluation.npz",
+        "sha256": "ce4a0ae8e223724da9d60fa046ba07f88efda46f0e1b03011eee7c4b53d17f1a",
+        "bytes": 1186191
+      }
+    },
+    {
+      "fold": 3,
+      "method": "point_mlp",
+      "seed": 20261027,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            5894,
+            901,
+            99
+          ],
+          [
+            235,
+            17607,
+            2127
+          ],
+          [
+            9,
+            11472,
+            11888
+          ]
+        ],
+        "accuracy": 0.7045110686415035,
+        "class_iou": {
+          "roof": 0.8257214906136172,
+          "vegetation_or_fence_hedge": 0.5444004699771195,
+          "other": 0.46446571596014846
+        },
+        "mean_iou": 0.6115292255169618,
+        "roof_retention": 0.9949231215549753,
+        "vegetation_or_fence_hedge_rejection": 0.13986679352997144,
+        "tree8_rejection": 0.3044018900770952,
+        "fence_hedge4_rejection": 0.04171011470281543,
+        "rejection_fraction": 0.05663720337633381,
+        "nll": 0.5555426478385925
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            5894,
+            901,
+            99
+          ],
+          [
+            235,
+            17607,
+            2127
+          ],
+          [
+            9,
+            11472,
+            11888
+          ]
+        ],
+        "accuracy": 0.7045110686415035,
+        "class_iou": {
+          "roof": 0.8257214906136172,
+          "vegetation_or_fence_hedge": 0.5444004699771195,
+          "other": 0.46446571596014846
+        },
+        "mean_iou": 0.6115292255169618,
+        "roof_retention": 0.9949231215549753,
+        "vegetation_or_fence_hedge_rejection": 0.13986679352997144,
+        "tree8_rejection": 0.3044018900770952,
+        "fence_hedge4_rejection": 0.04171011470281543,
+        "rejection_fraction": 0.05663720337633381,
+        "nll": 0.5555426478385925
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9929477991135967,
+        0.9963471913176101
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "ad0336e627b0e9b3d98d2a4a918c9bf4a86fdeae986157b33897255706bc9c3c",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/point_mlp_seed20261027/spatial_evaluation.npz",
+        "sha256": "48e60ec13993a18d288642747f5a468b0ff5b734bce92a0886058a2561b5bdfb",
+        "bytes": 1162649
+      }
+    },
+    {
+      "fold": 3,
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            6347,
+            332,
+            215
+          ],
+          [
+            107,
+            18467,
+            1395
+          ],
+          [
+            111,
+            2753,
+            20505
+          ]
+        ],
+        "accuracy": 0.9021938206720815,
+        "class_iou": {
+          "roof": 0.8924353205849269,
+          "vegetation_or_fence_hedge": 0.801032358809751,
+          "other": 0.8208895472196646
+        },
+        "mean_iou": 0.8381190755381142,
+        "roof_retention": 0.9834638816362054,
+        "vegetation_or_fence_hedge_rejection": 0.8065000751164305,
+        "tree8_rejection": 0.9845809500124347,
+        "fence_hedge4_rejection": 0.8581856100104275,
+        "rejection_fraction": 0.3385889472845995,
+        "nll": 0.24905341863632202
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            6347,
+            332,
+            215
+          ],
+          [
+            107,
+            18467,
+            1395
+          ],
+          [
+            111,
+            2753,
+            20505
+          ]
+        ],
+        "accuracy": 0.9021938206720815,
+        "class_iou": {
+          "roof": 0.8924353205849269,
+          "vegetation_or_fence_hedge": 0.801032358809751,
+          "other": 0.8208895472196646
+        },
+        "mean_iou": 0.8381190755381142,
+        "roof_retention": 0.9834638816362054,
+        "vegetation_or_fence_hedge_rejection": 0.8065000751164305,
+        "tree8_rejection": 0.9845809500124347,
+        "fence_hedge4_rejection": 0.8581856100104275,
+        "rejection_fraction": 0.3385889472845995,
+        "nll": 0.24905341863632202
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9801731644635158,
+        0.9862161096007317
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "71af78b67c9f52ff2191c38db3f9b9089d5124c34c1e27df40b161da2e304768",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/fusion_mlp_seed20261027/spatial_evaluation.npz",
+        "sha256": "8e3fd1c0b05b5f5038cc3aa1cc3c8bb7da6935f6645489bab5b54494b512904b",
+        "bytes": 1146739
+      }
+    },
+    {
+      "fold": 3,
+      "method": "context_fusion",
+      "seed": 20261027,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            6382,
+            361,
+            151
+          ],
+          [
+            94,
+            18412,
+            1463
+          ],
+          [
+            127,
+            2610,
+            20632
+          ]
+        ],
+        "accuracy": 0.9043239369326326,
+        "class_iou": {
+          "roof": 0.8969782150386507,
+          "vegetation_or_fence_hedge": 0.802615518744551,
+          "other": 0.825841572269143
+        },
+        "mean_iou": 0.8418117686841149,
+        "roof_retention": 0.9789672178706121,
+        "vegetation_or_fence_hedge_rejection": 0.7897741499323953,
+        "tree8_rejection": 0.991668739119622,
+        "fence_hedge4_rejection": 0.8050052137643379,
+        "rejection_fraction": 0.3331143494186972,
+        "nll": 0.2603773772716522
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            6382,
+            361,
+            151
+          ],
+          [
+            94,
+            18412,
+            1463
+          ],
+          [
+            127,
+            2610,
+            20632
+          ]
+        ],
+        "accuracy": 0.9043239369326326,
+        "class_iou": {
+          "roof": 0.8969782150386507,
+          "vegetation_or_fence_hedge": 0.802615518744551,
+          "other": 0.825841572269143
+        },
+        "mean_iou": 0.8418117686841149,
+        "roof_retention": 0.9789672178706121,
+        "vegetation_or_fence_hedge_rejection": 0.7897741499323953,
+        "tree8_rejection": 0.991668739119622,
+        "fence_hedge4_rejection": 0.8050052137643379,
+        "rejection_fraction": 0.3331143494186972,
+        "nll": 0.2603773772716522
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9753036998264918,
+        0.98209725515705
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "bae555f62f1301618745d9198c96cf00a9b190db30ff8727c167595489808296",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/context_fusion_seed20261027/spatial_evaluation.npz",
+        "sha256": "f87e754f8eed3181b39cd12cb6b7c43a8dded3d4321aded3f2d16b042c11320d",
+        "bytes": 1172144
+      }
+    },
+    {
+      "fold": 3,
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            6447,
+            347,
+            100
+          ],
+          [
+            122,
+            18411,
+            1436
+          ],
+          [
+            123,
+            2568,
+            20678
+          ]
+        ],
+        "accuracy": 0.9065137760789934,
+        "class_iou": {
+          "roof": 0.9030676565345287,
+          "vegetation_or_fence_hedge": 0.804535920293655,
+          "other": 0.8302750451716523
+        },
+        "mean_iou": 0.8459595406666119,
+        "roof_retention": 0.9767914128227444,
+        "vegetation_or_fence_hedge_rejection": 0.7807101006560169,
+        "tree8_rejection": 0.9905496145237503,
+        "fence_hedge4_rejection": 0.7904066736183525,
+        "rejection_fraction": 0.32845596432552954,
+        "nll": 0.25167831778526306
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            6447,
+            347,
+            100
+          ],
+          [
+            122,
+            18411,
+            1436
+          ],
+          [
+            123,
+            2568,
+            20678
+          ]
+        ],
+        "accuracy": 0.9065137760789934,
+        "class_iou": {
+          "roof": 0.9030676565345287,
+          "vegetation_or_fence_hedge": 0.804535920293655,
+          "other": 0.8302750451716523
+        },
+        "mean_iou": 0.8459595406666119,
+        "roof_retention": 0.9767914128227444,
+        "vegetation_or_fence_hedge_rejection": 0.7807101006560169,
+        "tree8_rejection": 0.9905496145237503,
+        "fence_hedge4_rejection": 0.7904066736183525,
+        "rejection_fraction": 0.32845596432552954,
+        "nll": 0.25167831778526306
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9729628002206423,
+        0.9800889681109453
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "a007c70c18152c006cf6f0758dcde24418d008efd01a81e89ded871eada4ac04",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/gated_fusion_seed20261027/spatial_evaluation.npz",
+        "sha256": "cde826912695b6f9de0841df9d6ac8b87d625c807595098d4c67fb75896efcb4",
+        "bytes": 1182237
+      }
+    },
+    {
+      "fold": 3,
+      "method": "point_mlp",
+      "seed": 20261028,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            5934,
+            889,
+            71
+          ],
+          [
+            240,
+            17197,
+            2532
+          ],
+          [
+            11,
+            10115,
+            13243
+          ]
+        ],
+        "accuracy": 0.724120082815735,
+        "class_iou": {
+          "roof": 0.8305108467459762,
+          "vegetation_or_fence_hedge": 0.5552255190004197,
+          "other": 0.5098952718312029
+        },
+        "mean_iou": 0.6318772125258663,
+        "roof_retention": 0.9949231215549753,
+        "vegetation_or_fence_hedge_rejection": 0.1269467674896089,
+        "tree8_rejection": 0.26983337478239244,
+        "fence_hedge4_rejection": 0.04692387904066736,
+        "rejection_fraction": 0.051720019111323456,
+        "nll": 0.5449510216712952
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            5934,
+            889,
+            71
+          ],
+          [
+            240,
+            17197,
+            2532
+          ],
+          [
+            11,
+            10115,
+            13243
+          ]
+        ],
+        "accuracy": 0.724120082815735,
+        "class_iou": {
+          "roof": 0.8305108467459762,
+          "vegetation_or_fence_hedge": 0.5552255190004197,
+          "other": 0.5098952718312029
+        },
+        "mean_iou": 0.6318772125258663,
+        "roof_retention": 0.9949231215549753,
+        "vegetation_or_fence_hedge_rejection": 0.1269467674896089,
+        "tree8_rejection": 0.26983337478239244,
+        "fence_hedge4_rejection": 0.04692387904066736,
+        "rejection_fraction": 0.051720019111323456,
+        "nll": 0.5449510216712952
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9929477991135967,
+        0.9963471913176101
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "b05c4616280eeaba00eedb5a63240966f08e377ea5840f68118702ed2b9fc89a",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/point_mlp_seed20261028/spatial_evaluation.npz",
+        "sha256": "c3c472dd59731c9d48ab44ffa9fb51e9e6d0574439b119f2080da511f4a1424f",
+        "bytes": 1154765
+      }
+    },
+    {
+      "fold": 3,
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            6505,
+            197,
+            192
+          ],
+          [
+            165,
+            18060,
+            1744
+          ],
+          [
+            122,
+            2169,
+            21078
+          ]
+        ],
+        "accuracy": 0.9086438923395446,
+        "class_iou": {
+          "roof": 0.9058626932182148,
+          "vegetation_or_fence_hedge": 0.8085963734049698,
+          "other": 0.8329579134558388
+        },
+        "mean_iou": 0.8491389933596745,
+        "roof_retention": 0.9868001160429359,
+        "vegetation_or_fence_hedge_rejection": 0.8261305022785317,
+        "tree8_rejection": 0.9842079084804775,
+        "fence_hedge4_rejection": 0.848800834202294,
+        "rejection_fraction": 0.34925943621595795,
+        "nll": 0.24416518211364746
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            6505,
+            197,
+            192
+          ],
+          [
+            165,
+            18060,
+            1744
+          ],
+          [
+            122,
+            2169,
+            21078
+          ]
+        ],
+        "accuracy": 0.9086438923395446,
+        "class_iou": {
+          "roof": 0.9058626932182148,
+          "vegetation_or_fence_hedge": 0.8085963734049698,
+          "other": 0.8329579134558388
+        },
+        "mean_iou": 0.8491389933596745,
+        "roof_retention": 0.9868001160429359,
+        "vegetation_or_fence_hedge_rejection": 0.8261305022785317,
+        "tree8_rejection": 0.9842079084804775,
+        "fence_hedge4_rejection": 0.848800834202294,
+        "rejection_fraction": 0.34925943621595795,
+        "nll": 0.24416518211364746
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9951481103166496,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9838220639692017,
+        0.9892359629613758
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "e08137e0c96cfbb8929839d97ddcd809c6de4daa7802d5aa32e35684b20d0ac8",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/fusion_mlp_seed20261028/spatial_evaluation.npz",
+        "sha256": "79a0738b58714c8284f87155f4208017ca32ee37d80fa28475a3e5b3899a8a91",
+        "bytes": 1078437
+      }
+    },
+    {
+      "fold": 3,
+      "method": "context_fusion",
+      "seed": 20261028,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            6501,
+            297,
+            96
+          ],
+          [
+            129,
+            18261,
+            1579
+          ],
+          [
+            145,
+            2194,
+            21030
+          ]
+        ],
+        "accuracy": 0.9116101290014333,
+        "class_iou": {
+          "roof": 0.9069475446428571,
+          "vegetation_or_fence_hedge": 0.8130454140694569,
+          "other": 0.8397220891231433
+        },
+        "mean_iou": 0.8532383492784857,
+        "roof_retention": 0.9737452857557296,
+        "vegetation_or_fence_hedge_rejection": 0.8259301917972858,
+        "tree8_rejection": 0.9936582939567272,
+        "fence_hedge4_rejection": 0.8425443169968717,
+        "rejection_fraction": 0.35083213887561715,
+        "nll": 0.24339602887630463
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            6501,
+            297,
+            96
+          ],
+          [
+            129,
+            18261,
+            1579
+          ],
+          [
+            145,
+            2194,
+            21030
+          ]
+        ],
+        "accuracy": 0.9116101290014333,
+        "class_iou": {
+          "roof": 0.9069475446428571,
+          "vegetation_or_fence_hedge": 0.8130454140694569,
+          "other": 0.8397220891231433
+        },
+        "mean_iou": 0.8532383492784857,
+        "roof_retention": 0.9737452857557296,
+        "vegetation_or_fence_hedge_rejection": 0.8259301917972858,
+        "tree8_rejection": 0.9936582939567272,
+        "fence_hedge4_rejection": 0.8425443169968717,
+        "rejection_fraction": 0.35083213887561715,
+        "nll": 0.24339602887630463
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9696989715514586,
+        0.9772639354673929
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "fc5dede00199efa983b7b270dba78aaeb48bc0dd262016d42a9caf2c8ff3c325",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/context_fusion_seed20261028/spatial_evaluation.npz",
+        "sha256": "3bbc8773f9401cb9f96dca08c60a1286e4036c24fb7f927fa695c72681a40360",
+        "bytes": 1137194
+      }
+    },
+    {
+      "fold": 3,
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "evaluation_records": 50232,
+      "evaluation_tree8_records": 8042,
+      "evaluation_roof_records": 6894,
+      "common_optical": {
+        "records": 50232,
+        "confusion": [
+          [
+            6359,
+            379,
+            156
+          ],
+          [
+            103,
+            18338,
+            1528
+          ],
+          [
+            124,
+            2670,
+            20575
+          ]
+        ],
+        "accuracy": 0.9012581621277274,
+        "class_iou": {
+          "roof": 0.8929925572251088,
+          "vegetation_or_fence_hedge": 0.7966808584585976,
+          "other": 0.8212589310661398
+        },
+        "mean_iou": 0.8369774489166154,
+        "roof_retention": 0.9767914128227444,
+        "vegetation_or_fence_hedge_rejection": 0.826781511342581,
+        "tree8_rejection": 0.9937826411340462,
+        "fence_hedge4_rejection": 0.7549530761209593,
+        "rejection_fraction": 0.35371874502309286,
+        "nll": 0.2527637481689453
+      },
+      "full_with_point_fallback": {
+        "records": 50232,
+        "confusion": [
+          [
+            6359,
+            379,
+            156
+          ],
+          [
+            103,
+            18338,
+            1528
+          ],
+          [
+            124,
+            2670,
+            20575
+          ]
+        ],
+        "accuracy": 0.9012581621277274,
+        "class_iou": {
+          "roof": 0.8929925572251088,
+          "vegetation_or_fence_hedge": 0.7966808584585976,
+          "other": 0.8212589310661398
+        },
+        "mean_iou": 0.8369774489166154,
+        "roof_retention": 0.9767914128227444,
+        "vegetation_or_fence_hedge_rejection": 0.826781511342581,
+        "tree8_rejection": 0.9937826411340462,
+        "fence_hedge4_rejection": 0.7549530761209593,
+        "rejection_fraction": 0.35371874502309286,
+        "nll": 0.2527637481689453
+      },
+      "calibration_roof_records": 11748,
+      "calibration_roof_retention": 0.9950629894450119,
+      "calibration_false_rejection_target": 0.005,
+      "calibration_roof_retention_discreteness": 8.512087163772556e-05,
+      "pointwise_binomial_wilson95_roof_retention": [
+        0.9729628002206423,
+        0.9800889681109453
+      ],
+      "CI_limitation": "Pointwise binomial interval assumes independent returns; spatially correlated roof points violate this. It is not a building-level or geographic confidence interval.",
+      "checkpoint_sha256": "bf78859b5b460e63c7377cb35566840f4675795183a4f7a3e856152a994fde25",
+      "evaluation_output": {
+        "path": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/gated_fusion_seed20261028/spatial_evaluation.npz",
+        "sha256": "6145012ec5e72f2ecc515a96ca3f87e32df4d7f5f8d8ef1f598fc22d64f171ff",
+        "bytes": 1191249
+      }
+    }
+  ],
+  "method_summary": {
+    "point_mlp": {
+      "common_optical": {
+        "roof_retention": {
+          "unweighted_fold_seed_mean": 0.9923552328902567,
+          "fold_seed_std": 0.003228781085652986,
+          "values": [
+            0.9883732686280458,
+            0.9874633505206754,
+            0.9862501263775149,
+            0.990662818616157,
+            0.9935488564984357,
+            0.9933305847258264,
+            0.995236692201925,
+            0.996709880180711,
+            0.993223335297584,
+            0.9936176385262547,
+            0.9949231215549753,
+            0.9949231215549753
+          ]
+        },
+        "tree8_rejection": {
+          "unweighted_fold_seed_mean": 0.48288739290113725,
+          "fold_seed_std": 0.12668193966064298,
+          "values": [
+            0.570534005914072,
+            0.5954078970255696,
+            0.571229779092016,
+            0.556777603199543,
+            0.4407227538923011,
+            0.3923010998428796,
+            0.6392400356930399,
+            0.5026397977394408,
+            0.6287552052349792,
+            0.3228052723203183,
+            0.3044018900770952,
+            0.26983337478239244
+          ]
+        },
+        "mean_iou": {
+          "unweighted_fold_seed_mean": 0.6117439984472279,
+          "fold_seed_std": 0.032765228090048,
+          "values": [
+            0.5705297558549037,
+            0.6021602129989111,
+            0.6010127261799051,
+            0.6190132517219675,
+            0.6606997144853258,
+            0.6351827926622393,
+            0.5901437999390616,
+            0.5646077033329155,
+            0.580108749655093,
+            0.6740628364935843,
+            0.6115292255169618,
+            0.6318772125258663
+          ]
+        }
+      },
+      "full_with_point_fallback": {
+        "roof_retention": {
+          "unweighted_fold_seed_mean": 0.9923378126267642,
+          "fold_seed_std": 0.0032709505231599,
+          "values": [
+            0.9883326685281213,
+            0.9874351814918229,
+            0.9860390905464699,
+            0.9906781298299846,
+            0.9935761205564142,
+            0.993358771251932,
+            0.995236692201925,
+            0.996709880180711,
+            0.993223335297584,
+            0.9936176385262547,
+            0.9949231215549753,
+            0.9949231215549753
+          ]
+        },
+        "tree8_rejection": {
+          "unweighted_fold_seed_mean": 0.48288739290113725,
+          "fold_seed_std": 0.12668193966064298,
+          "values": [
+            0.570534005914072,
+            0.5954078970255696,
+            0.571229779092016,
+            0.556777603199543,
+            0.4407227538923011,
+            0.3923010998428796,
+            0.6392400356930399,
+            0.5026397977394408,
+            0.6287552052349792,
+            0.3228052723203183,
+            0.3044018900770952,
+            0.26983337478239244
+          ]
+        },
+        "mean_iou": {
+          "unweighted_fold_seed_mean": 0.6117157067994404,
+          "fold_seed_std": 0.03269829622036606,
+          "values": [
+            0.5706319963937262,
+            0.6022837800285277,
+            0.6011109958576707,
+            0.6188365379513819,
+            0.6604163613280609,
+            0.634979282570435,
+            0.5901437999390616,
+            0.5646077033329155,
+            0.580108749655093,
+            0.6740628364935843,
+            0.6115292255169618,
+            0.6318772125258663
+          ]
+        }
+      },
+      "evaluation_roof_retention_below_995_cases": 10,
+      "evaluated_fold_seed_cases": 12
+    },
+    "fusion_mlp": {
+      "common_optical": {
+        "roof_retention": {
+          "unweighted_fold_seed_mean": 0.9931805355170633,
+          "fold_seed_std": 0.0054473685854178845,
+          "values": [
+            0.9941360833080578,
+            0.9952482054392883,
+            0.9875644525326054,
+            0.9995392040356026,
+            0.9996604661314966,
+            0.9997817282273906,
+            0.9933706540954625,
+            0.995875073659399,
+            0.9960714987232371,
+            0.986655062373078,
+            0.9834638816362054,
+            0.9868001160429359
+          ]
+        },
+        "tree8_rejection": {
+          "unweighted_fold_seed_mean": 0.8923436998817724,
+          "fold_seed_std": 0.12309285479118239,
+          "values": [
+            0.9168551052356931,
+            0.922769177248217,
+            0.9509479909549486,
+            0.7329667190401371,
+            0.6727610341379803,
+            0.648621625482074,
+            0.9809637120761452,
+            0.9552349791790601,
+            0.9751264128494943,
+            0.9830887838846059,
+            0.9845809500124347,
+            0.9842079084804775
+          ]
+        },
+        "mean_iou": {
+          "unweighted_fold_seed_mean": 0.8030584881648272,
+          "fold_seed_std": 0.03855564329759654,
+          "values": [
+            0.8249157560461322,
+            0.8252992119190279,
+            0.8101437976932481,
+            0.8041855541235462,
+            0.8059814756599435,
+            0.8031953945528792,
+            0.7372067904550588,
+            0.739068992538416,
+            0.7497232969752882,
+            0.849723519116596,
+            0.8381190755381142,
+            0.8491389933596745
+          ]
+        }
+      },
+      "full_with_point_fallback": {
+        "roof_retention": {
+          "unweighted_fold_seed_mean": 0.9931386446121641,
+          "fold_seed_std": 0.005459595876572939,
+          "values": [
+            0.9940167530913442,
+            0.9951136816912645,
+            0.987335460710012,
+            0.9995170015455951,
+            0.9996619010819165,
+            0.9997826506955177,
+            0.9933706540954625,
+            0.995875073659399,
+            0.9960714987232371,
+            0.986655062373078,
+            0.9834638816362054,
+            0.9868001160429359
+          ]
+        },
+        "tree8_rejection": {
+          "unweighted_fold_seed_mean": 0.8923436998817724,
+          "fold_seed_std": 0.12309285479118239,
+          "values": [
+            0.9168551052356931,
+            0.922769177248217,
+            0.9509479909549486,
+            0.7329667190401371,
+            0.6727610341379803,
+            0.648621625482074,
+            0.9809637120761452,
+            0.9552349791790601,
+            0.9751264128494943,
+            0.9830887838846059,
+            0.9845809500124347,
+            0.9842079084804775
+          ]
+        },
+        "mean_iou": {
+          "unweighted_fold_seed_mean": 0.8028683402289202,
+          "fold_seed_std": 0.03851625397537645,
+          "values": [
+            0.8245284790867223,
+            0.8250408866477686,
+            0.8098242960814699,
+            0.8037966102138007,
+            0.8054751632243141,
+            0.8027739795098202,
+            0.7372067904550588,
+            0.739068992538416,
+            0.7497232969752882,
+            0.849723519116596,
+            0.8381190755381142,
+            0.8491389933596745
+          ]
+        }
+      },
+      "evaluation_roof_retention_below_995_cases": 6,
+      "evaluated_fold_seed_cases": 12
+    },
+    "context_fusion": {
+      "common_optical": {
+        "roof_retention": {
+          "unweighted_fold_seed_mean": 0.989698183613832,
+          "fold_seed_std": 0.009001339667983489,
+          "values": [
+            0.9867556364371651,
+            0.9851380042462845,
+            0.9866545344252351,
+            0.9987388742027017,
+            0.997404991147867,
+            0.9980840588848737,
+            0.9968080927126302,
+            0.9981339618935376,
+            0.9985759182871734,
+            0.9773716275021758,
+            0.9789672178706121,
+            0.9737452857557296
+          ]
+        },
+        "tree8_rejection": {
+          "unweighted_fold_seed_mean": 0.9397327369481476,
+          "fold_seed_std": 0.06935198237647242,
+          "values": [
+            0.9791268046616803,
+            0.9709514698208384,
+            0.9615585319185945,
+            0.8088844450792744,
+            0.8387373232395372,
+            0.8158834452221111,
+            0.9693634741225461,
+            0.9828970850684117,
+            0.974011005353956,
+            0.990052225814474,
+            0.991668739119622,
+            0.9936582939567272
+          ]
+        },
+        "mean_iou": {
+          "unweighted_fold_seed_mean": 0.8045360941332914,
+          "fold_seed_std": 0.03982876775637894,
+          "values": [
+            0.8244200594039558,
+            0.8258875260570596,
+            0.8217004722017558,
+            0.8055644515187321,
+            0.8107818384332076,
+            0.807666254659155,
+            0.7462871682134855,
+            0.7371271490191251,
+            0.7365051895124689,
+            0.8434429026179497,
+            0.8418117686841149,
+            0.8532383492784857
+          ]
+        }
+      },
+      "full_with_point_fallback": {
+        "roof_retention": {
+          "unweighted_fold_seed_mean": 0.9896789154745628,
+          "fold_seed_std": 0.009007828088937447,
+          "values": [
+            0.9867371360191464,
+            0.9851416035101715,
+            0.9864379736737136,
+            0.9987200540958269,
+            0.9974159582689336,
+            0.9980921561051005,
+            0.9968080927126302,
+            0.9981339618935376,
+            0.9985759182871734,
+            0.9773716275021758,
+            0.9789672178706121,
+            0.9737452857557296
+          ]
+        },
+        "tree8_rejection": {
+          "unweighted_fold_seed_mean": 0.9397327369481476,
+          "fold_seed_std": 0.06935198237647242,
+          "values": [
+            0.9791268046616803,
+            0.9709514698208384,
+            0.9615585319185945,
+            0.8088844450792744,
+            0.8387373232395372,
+            0.8158834452221111,
+            0.9693634741225461,
+            0.9828970850684117,
+            0.974011005353956,
+            0.990052225814474,
+            0.991668739119622,
+            0.9936582939567272
+          ]
+        },
+        "mean_iou": {
+          "unweighted_fold_seed_mean": 0.8043232952743447,
+          "fold_seed_std": 0.03976949142607353,
+          "values": [
+            0.8239789328982261,
+            0.8255326827368658,
+            0.8212757806633425,
+            0.8051724279473068,
+            0.8102673409434535,
+            0.8072398507773099,
+            0.7462871682134855,
+            0.7371271490191251,
+            0.7365051895124689,
+            0.8434429026179497,
+            0.8418117686841149,
+            0.8532383492784857
+          ]
+        }
+      },
+      "evaluation_roof_retention_below_995_cases": 6,
+      "evaluated_fold_seed_cases": 12
+    },
+    "gated_fusion": {
+      "common_optical": {
+        "roof_retention": {
+          "unweighted_fold_seed_mean": 0.990259145181469,
+          "fold_seed_std": 0.00870216135051526,
+          "values": [
+            0.9879688605803255,
+            0.9897886967950662,
+            0.989283186735416,
+            0.9991269129095627,
+            0.9973322338903305,
+            0.9977687774355491,
+            0.9977411117658613,
+            0.9972991553722255,
+            0.9971518365743469,
+            0.9760661444734552,
+            0.9767914128227444,
+            0.9767914128227444
+          ]
+        },
+        "tree8_rejection": {
+          "unweighted_fold_seed_mean": 0.9407612050974655,
+          "fold_seed_std": 0.06816987554459975,
+          "values": [
+            0.9728648460601844,
+            0.9672986606366325,
+            0.9559923464950426,
+            0.7824596486216255,
+            0.8323810884159406,
+            0.869518640194258,
+            0.9733789411064843,
+            0.9841240333135038,
+            0.9784726353361095,
+            0.9883113653320069,
+            0.9905496145237503,
+            0.9937826411340462
+          ]
+        },
+        "mean_iou": {
+          "unweighted_fold_seed_mean": 0.8048032641405043,
+          "fold_seed_std": 0.03364304265845988,
+          "values": [
+            0.8241536668387003,
+            0.824363863996743,
+            0.8176338662235837,
+            0.8022925806195307,
+            0.8083869492303483,
+            0.7986635670562886,
+            0.7513863646442815,
+            0.7525027800164915,
+            0.7519212461774081,
+            0.843397295299449,
+            0.8459595406666119,
+            0.8369774489166154
+          ]
+        }
+      },
+      "full_with_point_fallback": {
+        "roof_retention": {
+          "unweighted_fold_seed_mean": 0.9902302084313656,
+          "fold_seed_std": 0.00870554714095018,
+          "values": [
+            0.9879337854008775,
+            0.9897287594734743,
+            0.9890307140007978,
+            0.9991064528593508,
+            0.9973435085007728,
+            0.9977782071097373,
+            0.9977411117658613,
+            0.9972991553722255,
+            0.9971518365743469,
+            0.9760661444734552,
+            0.9767914128227444,
+            0.9767914128227444
+          ]
+        },
+        "tree8_rejection": {
+          "unweighted_fold_seed_mean": 0.9407612050974655,
+          "fold_seed_std": 0.06816987554459975,
+          "values": [
+            0.9728648460601844,
+            0.9672986606366325,
+            0.9559923464950426,
+            0.7824596486216255,
+            0.8323810884159406,
+            0.869518640194258,
+            0.9733789411064843,
+            0.9841240333135038,
+            0.9784726353361095,
+            0.9883113653320069,
+            0.9905496145237503,
+            0.9937826411340462
+          ]
+        },
+        "mean_iou": {
+          "unweighted_fold_seed_mean": 0.8045913711771201,
+          "fold_seed_std": 0.03359503331750766,
+          "values": [
+            0.8236954279631296,
+            0.8240052093371698,
+            0.8172153174066414,
+            0.8019042601295635,
+            0.8078717308731233,
+            0.7982598326949569,
+            0.7513863646442815,
+            0.7525027800164915,
+            0.7519212461774081,
+            0.843397295299449,
+            0.8459595406666119,
+            0.8369774489166154
+          ]
+        }
+      },
+      "evaluation_roof_retention_below_995_cases": 6,
+      "evaluated_fold_seed_cases": 12
+    }
+  },
+  "paired_gate_minus_context_fusion": {
+    "common_optical": {
+      "roof_retention": {
+        "mean_delta": 0.0005609615676368344,
+        "paired_values": [
+          {
+            "fold": 0,
+            "seed": 20261026,
+            "delta": 0.0012132241431603852
+          },
+          {
+            "fold": 0,
+            "seed": 20261027,
+            "delta": 0.004650692548781699
+          },
+          {
+            "fold": 0,
+            "seed": 20261028,
+            "delta": 0.0026286523101809456
+          },
+          {
+            "fold": 1,
+            "seed": 20261026,
+            "delta": 0.0003880387068609936
+          },
+          {
+            "fold": 1,
+            "seed": 20261027,
+            "delta": -7.275725753641549e-05
+          },
+          {
+            "fold": 1,
+            "seed": 20261028,
+            "delta": -0.00031528144932457813
+          },
+          {
+            "fold": 2,
+            "seed": 20261026,
+            "delta": 0.0009330190532311766
+          },
+          {
+            "fold": 2,
+            "seed": 20261027,
+            "delta": -0.0008348065213121814
+          },
+          {
+            "fold": 2,
+            "seed": 20261028,
+            "delta": -0.001424081712826486
+          },
+          {
+            "fold": 3,
+            "seed": 20261026,
+            "delta": -0.0013054830287205776
+          },
+          {
+            "fold": 3,
+            "seed": 20261027,
+            "delta": -0.0021758050478677404
+          },
+          {
+            "fold": 3,
+            "seed": 20261028,
+            "delta": 0.003046127067014792
+          }
+        ],
+        "inference_limit": "Correlated seeds/folds are descriptive repeats, not independent geographic samples."
+      },
+      "tree8_rejection": {
+        "mean_delta": 0.0010284681493176555,
+        "paired_values": [
+          {
+            "fold": 0,
+            "seed": 20261026,
+            "delta": -0.0062619586014959205
+          },
+          {
+            "fold": 0,
+            "seed": 20261027,
+            "delta": -0.003652809184205852
+          },
+          {
+            "fold": 0,
+            "seed": 20261028,
+            "delta": -0.005566185423551917
+          },
+          {
+            "fold": 1,
+            "seed": 20261026,
+            "delta": -0.026424796457648836
+          },
+          {
+            "fold": 1,
+            "seed": 20261027,
+            "delta": -0.006356234823596596
+          },
+          {
+            "fold": 1,
+            "seed": 20261028,
+            "delta": 0.05363519497214686
+          },
+          {
+            "fold": 2,
+            "seed": 20261026,
+            "delta": 0.004015466983938176
+          },
+          {
+            "fold": 2,
+            "seed": 20261027,
+            "delta": 0.0012269482450921743
+          },
+          {
+            "fold": 2,
+            "seed": 20261028,
+            "delta": 0.004461629982153492
+          },
+          {
+            "fold": 3,
+            "seed": 20261026,
+            "delta": -0.0017408604824671325
+          },
+          {
+            "fold": 3,
+            "seed": 20261027,
+            "delta": -0.0011191245958716012
+          },
+          {
+            "fold": 3,
+            "seed": 20261028,
+            "delta": 0.00012434717731901745
+          }
+        ],
+        "inference_limit": "Correlated seeds/folds are descriptive repeats, not independent geographic samples."
+      },
+      "mean_iou": {
+        "mean_delta": 0.0002671700072130097,
+        "paired_values": [
+          {
+            "fold": 0,
+            "seed": 20261026,
+            "delta": -0.00026639256525551325
+          },
+          {
+            "fold": 0,
+            "seed": 20261027,
+            "delta": -0.0015236620603166218
+          },
+          {
+            "fold": 0,
+            "seed": 20261028,
+            "delta": -0.0040666059781721
+          },
+          {
+            "fold": 1,
+            "seed": 20261026,
+            "delta": -0.0032718708992014456
+          },
+          {
+            "fold": 1,
+            "seed": 20261027,
+            "delta": -0.0023948892028593516
+          },
+          {
+            "fold": 1,
+            "seed": 20261028,
+            "delta": -0.009002687602866377
+          },
+          {
+            "fold": 2,
+            "seed": 20261026,
+            "delta": 0.005099196430796038
+          },
+          {
+            "fold": 2,
+            "seed": 20261027,
+            "delta": 0.015375630997366385
+          },
+          {
+            "fold": 2,
+            "seed": 20261028,
+            "delta": 0.01541605666493917
+          },
+          {
+            "fold": 3,
+            "seed": 20261026,
+            "delta": -4.5607318500784366e-05
+          },
+          {
+            "fold": 3,
+            "seed": 20261027,
+            "delta": 0.0041477719824970505
+          },
+          {
+            "fold": 3,
+            "seed": 20261028,
+            "delta": -0.016260900361870334
+          }
+        ],
+        "inference_limit": "Correlated seeds/folds are descriptive repeats, not independent geographic samples."
+      }
+    },
+    "full_with_point_fallback": {
+      "roof_retention": {
+        "mean_delta": 0.00055129295680309,
+        "paired_values": [
+          {
+            "fold": 0,
+            "seed": 20261026,
+            "delta": 0.0011966493817311408
+          },
+          {
+            "fold": 0,
+            "seed": 20261027,
+            "delta": 0.004587155963302725
+          },
+          {
+            "fold": 0,
+            "seed": 20261028,
+            "delta": 0.002592740327084231
+          },
+          {
+            "fold": 1,
+            "seed": 20261026,
+            "delta": 0.0003863987635239763
+          },
+          {
+            "fold": 1,
+            "seed": 20261027,
+            "delta": -7.244976816078719e-05
+          },
+          {
+            "fold": 1,
+            "seed": 20261028,
+            "delta": -0.0003139489953631891
+          },
+          {
+            "fold": 2,
+            "seed": 20261026,
+            "delta": 0.0009330190532311766
+          },
+          {
+            "fold": 2,
+            "seed": 20261027,
+            "delta": -0.0008348065213121814
+          },
+          {
+            "fold": 2,
+            "seed": 20261028,
+            "delta": -0.001424081712826486
+          },
+          {
+            "fold": 3,
+            "seed": 20261026,
+            "delta": -0.0013054830287205776
+          },
+          {
+            "fold": 3,
+            "seed": 20261027,
+            "delta": -0.0021758050478677404
+          },
+          {
+            "fold": 3,
+            "seed": 20261028,
+            "delta": 0.003046127067014792
+          }
+        ],
+        "inference_limit": "Correlated seeds/folds are descriptive repeats, not independent geographic samples."
+      },
+      "tree8_rejection": {
+        "mean_delta": 0.0010284681493176555,
+        "paired_values": [
+          {
+            "fold": 0,
+            "seed": 20261026,
+            "delta": -0.0062619586014959205
+          },
+          {
+            "fold": 0,
+            "seed": 20261027,
+            "delta": -0.003652809184205852
+          },
+          {
+            "fold": 0,
+            "seed": 20261028,
+            "delta": -0.005566185423551917
+          },
+          {
+            "fold": 1,
+            "seed": 20261026,
+            "delta": -0.026424796457648836
+          },
+          {
+            "fold": 1,
+            "seed": 20261027,
+            "delta": -0.006356234823596596
+          },
+          {
+            "fold": 1,
+            "seed": 20261028,
+            "delta": 0.05363519497214686
+          },
+          {
+            "fold": 2,
+            "seed": 20261026,
+            "delta": 0.004015466983938176
+          },
+          {
+            "fold": 2,
+            "seed": 20261027,
+            "delta": 0.0012269482450921743
+          },
+          {
+            "fold": 2,
+            "seed": 20261028,
+            "delta": 0.004461629982153492
+          },
+          {
+            "fold": 3,
+            "seed": 20261026,
+            "delta": -0.0017408604824671325
+          },
+          {
+            "fold": 3,
+            "seed": 20261027,
+            "delta": -0.0011191245958716012
+          },
+          {
+            "fold": 3,
+            "seed": 20261028,
+            "delta": 0.00012434717731901745
+          }
+        ],
+        "inference_limit": "Correlated seeds/folds are descriptive repeats, not independent geographic samples."
+      },
+      "mean_iou": {
+        "mean_delta": 0.00026807590277562004,
+        "paired_values": [
+          {
+            "fold": 0,
+            "seed": 20261026,
+            "delta": -0.00028350493509654573
+          },
+          {
+            "fold": 0,
+            "seed": 20261027,
+            "delta": -0.0015274733996959444
+          },
+          {
+            "fold": 0,
+            "seed": 20261028,
+            "delta": -0.0040604632567010635
+          },
+          {
+            "fold": 1,
+            "seed": 20261026,
+            "delta": -0.003268167817743306
+          },
+          {
+            "fold": 1,
+            "seed": 20261027,
+            "delta": -0.0023956100703302896
+          },
+          {
+            "fold": 1,
+            "seed": 20261028,
+            "delta": -0.008980018082352936
+          },
+          {
+            "fold": 2,
+            "seed": 20261026,
+            "delta": 0.005099196430796038
+          },
+          {
+            "fold": 2,
+            "seed": 20261027,
+            "delta": 0.015375630997366385
+          },
+          {
+            "fold": 2,
+            "seed": 20261028,
+            "delta": 0.01541605666493917
+          },
+          {
+            "fold": 3,
+            "seed": 20261026,
+            "delta": -4.5607318500784366e-05
+          },
+          {
+            "fold": 3,
+            "seed": 20261027,
+            "delta": 0.0041477719824970505
+          },
+          {
+            "fold": 3,
+            "seed": 20261028,
+            "delta": -0.016260900361870334
+          }
+        ],
+        "inference_limit": "Correlated seeds/folds are descriptive repeats, not independent geographic samples."
+      }
+    }
+  },
+  "limitations": [
+    "This is a new split in an already used source scene, not newly acquired blind validation data.",
+    "Four folds from one city do not establish US generalization.",
+    "Point labels do not validate LoD2 geometry or occluded roof completion.",
+    "The 99.5 percent constraint is calibrated locally and may fail on a spatially distinct half-quadrant.",
+    "Legacy geometric features use fullscene label-free XYZ context.",
+    "Perpoint binomial confidence intervals ignore spatial dependence; no building-level independent sample count is available."
+  ]
+}

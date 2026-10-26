@@ -1,0 +1,47 @@
+{
+  "status": "audited_negative_and_positive_findings",
+  "recorded_utc": "2026-10-26T06:10:36.755065+00:00",
+  "final_metrics_sha256": "499c38c2db294dddb8c56524526a3a11bcee9ea860478bfd059df008baf65311",
+  "findings": [
+    {
+      "finding": "learned_local_context_improves_source_tree_rejection_over_single_point",
+      "scope": "historically evaluated source official test, common original optical coverage, means of3 seeds",
+      "point_tree_rejection": 0.23240737873298029,
+      "context_tree_rejection": 0.5351645969465176,
+      "meaning": "Promising point-context mechanism; source roof-retention differs and target roof accuracy remains unknown"
+    },
+    {
+      "finding": "gate_has_no_supported_advantage_over_equally_augmented_context_fusion",
+      "common_tree_gain_percentage_points": 0.23432741837250415,
+      "common_mean_iou_change": -0.0060167296670536885,
+      "gate_clean_shift1_shift2": [
+        0.8458741307258606,
+        0.8460429112116495,
+        0.8459108670552572
+      ],
+      "meaning": "Gate output barely changes under this proxy shift. Three initialization seeds do not establish a statistical significance result"
+    },
+    {
+      "finding": "source_validation_99_5_percent_retention_budget_does_not_transfer_to_full_test_scene",
+      "full_scene_roof_retention_by_method": {
+        "linear": 0.9864677328638153,
+        "point_mlp": 0.984936297165774,
+        "fusion_mlp": 0.9877271171105079,
+        "local_context": 0.9882437091922823,
+        "context_fusion": 0.9863515760643631,
+        "gated_fusion": 0.9860734110972538
+      },
+      "meaning": "The99.5% value is a calibration target on source validation, not a certified test or US guarantee"
+    },
+    {
+      "finding": "optical_fusion_sensitive_to_misregistration_proxy",
+      "fusion_tree_rejection_clean_and_shift2m": [
+        0.7714739917211194,
+        0.6778462523097251
+      ],
+      "meaning": "Proxy donor shifts are not real temporal canopy change; no temporal-change solution is established"
+    }
+  ],
+  "recommendation": "Prioritize a separately validated model of observation reliability/roof preservation before adding a more elaborate gate; obtain independent DC roof/tree labels and multiple source spatial splits before accuracy claims",
+  "not_a_model_selection_rule": "These test results are reported as findings; this round fixed every model and reconstruction seed before observing them"
+}

@@ -1,0 +1,386 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-10-26T06:21:07.851336+00:00",
+  "all48_checkpoint_hashes_verified": true,
+  "all_fold_checkpoints_frozen_before_evaluation": true,
+  "source_train_unchanged": true,
+  "official_source_test_or_target_opened_by_this_audit": false,
+  "fold_checks": [
+    {
+      "fold": 0,
+      "ids_disjoint": true,
+      "minimum_XY_gaps_at_least5m": true,
+      "normalization_recomputed_from_training_only": true,
+      "all_new_neighbor_pairs_same_split": true,
+      "no_labels_in_new_neighbor_artifact": true,
+      "all12_checkpoint_hashes_verified": true
+    },
+    {
+      "fold": 1,
+      "ids_disjoint": true,
+      "minimum_XY_gaps_at_least5m": true,
+      "normalization_recomputed_from_training_only": true,
+      "all_new_neighbor_pairs_same_split": true,
+      "no_labels_in_new_neighbor_artifact": true,
+      "all12_checkpoint_hashes_verified": true
+    },
+    {
+      "fold": 2,
+      "ids_disjoint": true,
+      "minimum_XY_gaps_at_least5m": true,
+      "normalization_recomputed_from_training_only": true,
+      "all_new_neighbor_pairs_same_split": true,
+      "no_labels_in_new_neighbor_artifact": true,
+      "all12_checkpoint_hashes_verified": true
+    },
+    {
+      "fold": 3,
+      "ids_disjoint": true,
+      "minimum_XY_gaps_at_least5m": true,
+      "normalization_recomputed_from_training_only": true,
+      "all_new_neighbor_pairs_same_split": true,
+      "no_labels_in_new_neighbor_artifact": true,
+      "all12_checkpoint_hashes_verified": true
+    }
+  ],
+  "prediction_score_checks": [
+    {
+      "fold": 0,
+      "method": "point_mlp",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "context_fusion",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "point_mlp",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "context_fusion",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "point_mlp",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "context_fusion",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 0,
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "point_mlp",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "context_fusion",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "point_mlp",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "context_fusion",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "point_mlp",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "context_fusion",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 1,
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "point_mlp",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "context_fusion",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "point_mlp",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "context_fusion",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "point_mlp",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "context_fusion",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 2,
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "point_mlp",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "context_fusion",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "point_mlp",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "context_fusion",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "point_mlp",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "context_fusion",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    },
+    {
+      "fold": 3,
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "roof_and_tree_metrics_recomputed": true,
+      "frozen_threshold_reject_exact": true
+    }
+  ],
+  "evaluated_run_count": 48,
+  "scope": "Independent split/normalization/neighborhood/checkpoint/saved prediction checks; four folds remain one historical source scene"
+}

@@ -1,0 +1,3633 @@
+{
+  "freeze_utc": "2026-10-26T06:19:59.987862+00:00",
+  "models": [
+    {
+      "method": "point_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/point_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "6c921bf284584614393578eb0aac7e52eabe77e445b1f6138527aa3c5cd6da9e",
+      "frozen_utc": "2026-10-26T06:17:11.022943+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 12,
+      "best_epoch": 6,
+      "best_validation_ce": 0.4269547760486603,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.937678873538971,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.937678873538971,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            7464,
+            1754,
+            278
+          ],
+          [
+            213,
+            20902,
+            4727
+          ],
+          [
+            147,
+            2104,
+            13932
+          ]
+        ],
+        "accuracy": 0.820985617515188,
+        "class_iou": {
+          "roof": 0.7573051948051948,
+          "vegetation_or_fence_hedge": 0.7037710437710438,
+          "other": 0.6575420049084387
+        },
+        "mean_iou": 0.7062060811615591,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.277300518535717,
+        "tree8_rejection": 0.5277140335392763,
+        "fence_hedge4_rejection": 0.16828929068150209,
+        "rejection_fraction": 0.1411463286815085,
+        "nll": 0.4269547760486603
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 4.339136123657227,
+      "fold": 0
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/fusion_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "97e36d1b451682594a895a29ed7b46728fa649528b21539d6c7e14ac2854e965",
+      "frozen_utc": "2026-10-26T06:17:14.890863+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 22,
+      "best_epoch": 16,
+      "best_validation_ce": 0.21540029346942902,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9163901209831238,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9163901209831238,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            8658,
+            579,
+            259
+          ],
+          [
+            65,
+            24293,
+            1484
+          ],
+          [
+            161,
+            1491,
+            14531
+          ]
+        ],
+        "accuracy": 0.9216047825158673,
+        "class_iou": {
+          "roof": 0.8905574984571076,
+          "vegetation_or_fence_hedge": 0.8703425050157638,
+          "other": 0.8106102867343523
+        },
+        "mean_iou": 0.8571700967357412,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.7374816190697314,
+        "tree8_rejection": 0.9415710503089144,
+        "fence_hedge4_rejection": 0.808066759388039,
+        "rejection_fraction": 0.37411929116282683,
+        "nll": 0.21540029346942902
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 3.841418743133545,
+      "fold": 0
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/context_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "ad6a5c825a71db613f158c4a2edea6e2c0ccc6b687469bcd74311bec95be2575",
+      "frozen_utc": "2026-10-26T06:17:19.306601+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 16,
+      "best_epoch": 10,
+      "best_validation_ce": 0.2091565579175949,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            8615,
+            311,
+            570
+          ],
+          [
+            48,
+            24316,
+            1478
+          ],
+          [
+            167,
+            1284,
+            14732
+          ]
+        ],
+        "accuracy": 0.9251179130839852,
+        "class_iou": {
+          "roof": 0.887138296776851,
+          "vegetation_or_fence_hedge": 0.8862484965557459,
+          "other": 0.8080741593988262
+        },
+        "mean_iou": 0.8604869842438077,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.8922684002786162,
+        "tree8_rejection": 0.9805825242718447,
+        "fence_hedge4_rejection": 0.9902642559109874,
+        "rejection_fraction": 0.4602977426680383,
+        "nll": 0.2091565579175949
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 4.399645805358887,
+      "fold": 0
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/gated_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "d7dc225dad1967dd107950102b393ff5432b4ac99e6eef138ba61aa01c8aed6b",
+      "frozen_utc": "2026-10-26T06:17:24.033567+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 16,
+      "best_epoch": 10,
+      "best_validation_ce": 0.2050796002149582,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9952611625947767,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9952845017290161,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            8749,
+            282,
+            465
+          ],
+          [
+            106,
+            24304,
+            1432
+          ],
+          [
+            173,
+            1241,
+            14769
+          ]
+        ],
+        "accuracy": 0.9282040333068069,
+        "class_iou": {
+          "roof": 0.8950383631713555,
+          "vegetation_or_fence_hedge": 0.8881417869541385,
+          "other": 0.8168694690265487
+        },
+        "mean_iou": 0.8666832063840143,
+        "roof_retention": 0.9952611625947767,
+        "vegetation_or_fence_hedge_rejection": 0.8918427366302918,
+        "tree8_rejection": 0.9766107678729038,
+        "fence_hedge4_rejection": 0.9847009735744089,
+        "rejection_fraction": 0.46113235379748063,
+        "nll": 0.2050796002149582
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 4.707743406295776,
+      "fold": 0
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/point_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "b4c19a633861a2c5c745945f34f078ba3e8409bbb1d5911741b24a94187ab081",
+      "frozen_utc": "2026-10-26T06:17:26.038416+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.39650389552116394,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9475277066230774,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9475277066230774,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            8238,
+            1143,
+            115
+          ],
+          [
+            206,
+            21562,
+            4074
+          ],
+          [
+            156,
+            2587,
+            13440
+          ]
+        ],
+        "accuracy": 0.8392694241183207,
+        "class_iou": {
+          "roof": 0.8356664637857577,
+          "vegetation_or_fence_hedge": 0.7291356688759637,
+          "other": 0.6597290398586295
+        },
+        "mean_iou": 0.7415103908401169,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.287787322962619,
+        "tree8_rejection": 0.550838481906443,
+        "fence_hedge4_rejection": 0.15159944367176634,
+        "rejection_fraction": 0.14621222414161217,
+        "nll": 0.39650389552116394
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.9823508262634277,
+      "fold": 0
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/fusion_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "473df12412fc3a8cf7033feffa768fc79ee52d9375faa74a42bde87516e64674",
+      "frozen_utc": "2026-10-26T06:17:28.421486+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.22006870806217194,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.8814679980278015,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.8814679980278015,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            8455,
+            483,
+            558
+          ],
+          [
+            80,
+            24300,
+            1462
+          ],
+          [
+            156,
+            1517,
+            14510
+          ]
+        ],
+        "accuracy": 0.9173929077463558,
+        "class_iou": {
+          "roof": 0.8687833949856145,
+          "vegetation_or_fence_hedge": 0.8727821277207097,
+          "other": 0.7971213536230292
+        },
+        "mean_iou": 0.8462289587764511,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.776062224286046,
+        "tree8_rejection": 0.9278905560458959,
+        "fence_hedge4_rejection": 0.8052851182197497,
+        "rejection_fraction": 0.39376176704644705,
+        "nll": 0.22006870806217194
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.3642425537109375,
+      "fold": 0
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/context_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "2c5172787c0594cd04805545b94cb87db34f5197b4e3977773fe1e04e42600b8",
+      "frozen_utc": "2026-10-26T06:17:32.108105+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.20506121218204498,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 0.7,
+        "threshold": 0.7413654923439026,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 0.7,
+        "threshold": 0.7413654923439026,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            8998,
+            214,
+            284
+          ],
+          [
+            128,
+            24358,
+            1356
+          ],
+          [
+            168,
+            1302,
+            14713
+          ]
+        ],
+        "accuracy": 0.932998194910813,
+        "class_iou": {
+          "roof": 0.9189133986928104,
+          "vegetation_or_fence_hedge": 0.890342861320272,
+          "other": 0.8255063681759525
+        },
+        "mean_iou": 0.8782542093963449,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.8877795836235586,
+        "tree8_rejection": 0.9705207413945278,
+        "fence_hedge4_rejection": 0.9888734353268428,
+        "rejection_fraction": 0.4580074144523592,
+        "nll": 0.19854657351970673
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.683198928833008,
+      "fold": 0
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/gated_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "7293128638a3879aaf4bfa512228101bc2092042210601935697ef1e0a8450b5",
+      "frozen_utc": "2026-10-26T06:17:36.518658+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.1977434754371643,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 0.7,
+        "threshold": 0.7941319942474365,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 0.7,
+        "threshold": 0.7941319942474365,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            9107,
+            212,
+            177
+          ],
+          [
+            116,
+            24345,
+            1381
+          ],
+          [
+            176,
+            1284,
+            14723
+          ]
+        ],
+        "accuracy": 0.9350556083926942,
+        "class_iou": {
+          "roof": 0.9304250102165917,
+          "vegetation_or_fence_hedge": 0.890518691930646,
+          "other": 0.8298855757849051
+        },
+        "mean_iou": 0.8836097593107143,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.871410881510719,
+        "tree8_rejection": 0.9700794351279788,
+        "fence_hedge4_rejection": 0.9791376912378303,
+        "rejection_fraction": 0.4491372450068904,
+        "nll": 0.19121861457824707
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 4.389925718307495,
+      "fold": 0
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/point_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "9d3f79f7f1c322568d47e3ee95f12db33f745b4a9f0282aff52f31632993d946",
+      "frozen_utc": "2026-10-26T06:17:39.396066+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 20,
+      "best_epoch": 14,
+      "best_validation_ce": 0.400526762008667,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.956620454788208,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.956620454788208,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            7561,
+            1601,
+            334
+          ],
+          [
+            171,
+            22149,
+            3522
+          ],
+          [
+            154,
+            2668,
+            13361
+          ]
+        ],
+        "accuracy": 0.8359892082840007,
+        "class_iou": {
+          "roof": 0.769880867528765,
+          "vegetation_or_fence_hedge": 0.7355783600677493,
+          "other": 0.6667498378162583
+        },
+        "mean_iou": 0.7240696884709242,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.3115083971828806,
+        "tree8_rejection": 0.5632833186231244,
+        "fence_hedge4_rejection": 0.19610570236439498,
+        "rejection_fraction": 0.15861493371634866,
+        "nll": 0.400526762008667
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.8709685802459717,
+      "fold": 0
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/fusion_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "0990297550a512f87fb360d2c6a484e321bd99b4f4cb4eb9d0d06eb9ef7e09d1",
+      "frozen_utc": "2026-10-26T06:17:42.340670+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 18,
+      "best_epoch": 12,
+      "best_validation_ce": 0.21891170740127563,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.803991436958313,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.803991436958313,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            8410,
+            491,
+            595
+          ],
+          [
+            34,
+            24200,
+            1608
+          ],
+          [
+            150,
+            1311,
+            14722
+          ]
+        ],
+        "accuracy": 0.918693348343394,
+        "class_iou": {
+          "roof": 0.868801652892562,
+          "vegetation_or_fence_hedge": 0.8754160034727246,
+          "other": 0.8007179375611878
+        },
+        "mean_iou": 0.8483118646421581,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.8250909372339602,
+        "tree8_rejection": 0.9672550750220653,
+        "fence_hedge4_rejection": 0.8970792767732962,
+        "rejection_fraction": 0.42147862036839345,
+        "nll": 0.21891170740127563
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.9395415782928467,
+      "fold": 0
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/context_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "ecae4bb3469116abe8ce11b382cb936ccac6e740393424992bce834c6d575e6e",
+      "frozen_utc": "2026-10-26T06:17:47.626791+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 20,
+      "best_epoch": 14,
+      "best_validation_ce": 0.1951213777065277,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.7390766143798828,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.7390766143798828,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            9133,
+            180,
+            183
+          ],
+          [
+            50,
+            24190,
+            1602
+          ],
+          [
+            160,
+            1190,
+            14833
+          ]
+        ],
+        "accuracy": 0.9346868267308476,
+        "class_iou": {
+          "roof": 0.9409643519472491,
+          "vegetation_or_fence_hedge": 0.8889460532118183,
+          "other": 0.8255231522707035
+        },
+        "mean_iou": 0.8851445191432571,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.876673632071821,
+        "tree8_rejection": 0.9755516328331862,
+        "fence_hedge4_rejection": 0.9652294853963839,
+        "rejection_fraction": 0.45202926961821394,
+        "nll": 0.1951213777065277
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 5.25511908531189,
+      "fold": 0
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold0/runs/gated_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "02335c48dfec77de07edad7e79e072e57c124b14f673fa5976a7a54d2df183fb",
+      "frozen_utc": "2026-10-26T06:17:52.980578+00:00",
+      "train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "validation_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "normalization_sha256": "73edaf934360ab83d9c40ba3253626f0e921523cb005fba8bbe77ba0b2d86a65",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 18,
+      "best_epoch": 12,
+      "best_validation_ce": 0.20053526759147644,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.7900013327598572,
+        "validation_roof_retention": 0.995050547598989,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51521,
+        "calibration_roof_records": 9496
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.7900013327598572,
+        "validation_roof_retention": 0.9950749240280834,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 51725,
+        "calibration_roof_records": 9543
+      },
+      "validation_common": {
+        "records": 51521,
+        "confusion": [
+          [
+            8958,
+            354,
+            184
+          ],
+          [
+            96,
+            24327,
+            1419
+          ],
+          [
+            181,
+            1228,
+            14774
+          ]
+        ],
+        "accuracy": 0.9328040992993148,
+        "class_iou": {
+          "roof": 0.9166069784099048,
+          "vegetation_or_fence_hedge": 0.8870697199533255,
+          "other": 0.8306533228381874
+        },
+        "mean_iou": 0.8781100070671393,
+        "roof_retention": 0.995050547598989,
+        "vegetation_or_fence_hedge_rejection": 0.845329308877022,
+        "tree8_rejection": 0.9683142100617829,
+        "fence_hedge4_rejection": 0.9346314325452016,
+        "rejection_fraction": 0.43380369169853067,
+        "nll": 0.20053526759147644
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 5.3454203605651855,
+      "fold": 0
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/point_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "7cbb00ba11b9fc6b3a5b2998e4382a5cff096e3794a89ef40e3eaf2dd0ab3f2c",
+      "frozen_utc": "2026-10-26T06:17:58.302279+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 13,
+      "best_epoch": 7,
+      "best_validation_ce": 0.6203728914260864,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9306793808937073,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9306793808937073,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            20868,
+            5989,
+            559
+          ],
+          [
+            442,
+            37038,
+            10076
+          ],
+          [
+            30,
+            13563,
+            37379
+          ]
+        ],
+        "accuracy": 0.7565664104681445,
+        "class_iou": {
+          "roof": 0.7482788296041308,
+          "vegetation_or_fence_hedge": 0.5519163140013114,
+          "other": 0.6067330011200026
+        },
+        "mean_iou": 0.6356427149084816,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.10820926907225166,
+        "tree8_rejection": 0.27560743211052885,
+        "fence_hedge4_rejection": 0.003218884120171674,
+        "rejection_fraction": 0.04311440005081624,
+        "nll": 0.5952496528625488
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.6448380947113037,
+      "fold": 1
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/fusion_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "74a01594955aa4704e73dd66a77ec7dd8e75e0b635a44a144c45be9b1beabd22",
+      "frozen_utc": "2026-10-26T06:18:01.620731+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 16,
+      "best_epoch": 10,
+      "best_validation_ce": 0.39467936754226685,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.7,
+        "threshold": 0.9241001009941101,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.7,
+        "threshold": 0.9241001009941101,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            23518,
+            1524,
+            2374
+          ],
+          [
+            423,
+            40925,
+            6208
+          ],
+          [
+            182,
+            6199,
+            44591
+          ]
+        ],
+        "accuracy": 0.8657339770056534,
+        "class_iou": {
+          "roof": 0.8392990971057421,
+          "vegetation_or_fence_hedge": 0.7403353895692758,
+          "other": 0.7487490344897069
+        },
+        "mean_iou": 0.7761278403882416,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.4056060223736227,
+        "tree8_rejection": 0.712065269175798,
+        "fence_hedge4_rejection": 0.16148068669527896,
+        "rejection_fraction": 0.15632344534078638,
+        "nll": 0.3581468164920807
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 3.304487466812134,
+      "fold": 1
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/context_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "a23ca0f11c1ead8361a56a19eb7ffba9639d56046c0565c2cdb7b520bf7bda67",
+      "frozen_utc": "2026-10-26T06:18:05.159217+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.39610785245895386,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9496551156044006,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9496551156044006,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            23640,
+            1756,
+            2020
+          ],
+          [
+            445,
+            41304,
+            5807
+          ],
+          [
+            147,
+            7236,
+            43589
+          ]
+        ],
+        "accuracy": 0.861756018547926,
+        "class_iou": {
+          "roof": 0.844044558697515,
+          "vegetation_or_fence_hedge": 0.7304237108297376,
+          "other": 0.7413221313287641
+        },
+        "mean_iou": 0.7719301336186722,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.39225334342669693,
+        "tree8_rejection": 0.752501191043354,
+        "fence_hedge4_rejection": 0.11534334763948498,
+        "rejection_fraction": 0.15138474242520486,
+        "nll": 0.3725305497646332
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.5159685611724854,
+      "fold": 1
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/gated_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "aefcd94bd67ada6737aee28e416cad45695669e4c9f08ed3d9ad3e6b4f9693cb",
+      "frozen_utc": "2026-10-26T06:18:09.007343+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.40079638361930847,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9590094089508057,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9590094089508057,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            23306,
+            2143,
+            1967
+          ],
+          [
+            445,
+            40711,
+            6400
+          ],
+          [
+            194,
+            6610,
+            44168
+          ]
+        ],
+        "accuracy": 0.8589928857269897,
+        "class_iou": {
+          "roof": 0.8307253608982356,
+          "vegetation_or_fence_hedge": 0.7229927720257863,
+          "other": 0.7443334063600667
+        },
+        "mean_iou": 0.7660171797613629,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.3422281100176634,
+        "tree8_rejection": 0.7411267270128633,
+        "fence_hedge4_rejection": 0.10246781115879829,
+        "rejection_fraction": 0.1314234898049927,
+        "nll": 0.3752015233039856
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.834003210067749,
+      "fold": 1
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/point_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "8c97ed51260f6944d9210c476650e21534e3f72eece82edfc569f3c4965b7473",
+      "frozen_utc": "2026-10-26T06:18:10.716067+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 9,
+      "best_epoch": 3,
+      "best_validation_ce": 0.6546328663825989,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9201314449310303,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9201314449310303,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            19777,
+            6912,
+            727
+          ],
+          [
+            220,
+            38337,
+            8999
+          ],
+          [
+            36,
+            16546,
+            34390
+          ]
+        ],
+        "accuracy": 0.7344851680111796,
+        "class_iou": {
+          "roof": 0.7146935530500145,
+          "vegetation_or_fence_hedge": 0.5398512969273664,
+          "other": 0.5665755049589772
+        },
+        "mean_iou": 0.6070401183121193,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.08951551854655564,
+        "tree8_rejection": 0.2261791329204383,
+        "fence_hedge4_rejection": 0.0037553648068669528,
+        "rejection_fraction": 0.03583338626691228,
+        "nll": 0.6319486498832703
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.673065423965454,
+      "fold": 1
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/fusion_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "ba5b22cbf16ec12d90ff69943ef67b66372bfb2a263f9745f77c17481a5ecae1",
+      "frozen_utc": "2026-10-26T06:18:13.783106+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 15,
+      "best_epoch": 9,
+      "best_validation_ce": 0.40849336981773376,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.7,
+        "threshold": 0.9480586051940918,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.7,
+        "threshold": 0.9480586051940918,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            23360,
+            1891,
+            2165
+          ],
+          [
+            298,
+            42076,
+            5182
+          ],
+          [
+            183,
+            7401,
+            43388
+          ]
+        ],
+        "accuracy": 0.8640665692688814,
+        "class_iou": {
+          "roof": 0.8373660250206115,
+          "vegetation_or_fence_hedge": 0.7401491697157332,
+          "other": 0.7439770915139149
+        },
+        "mean_iou": 0.7738307620834198,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.3590503827067037,
+        "tree8_rejection": 0.639888041924726,
+        "fence_hedge4_rejection": 0.09549356223175966,
+        "rejection_fraction": 0.13957790764149144,
+        "nll": 0.3709585964679718
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 3.042072296142578,
+      "fold": 1
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/context_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "8b031a5714182a2f262d3f1256ae1db264bc26793f8d321350d7851ea6ba2ce4",
+      "frozen_utc": "2026-10-26T06:18:16.928100+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 10,
+      "best_epoch": 4,
+      "best_validation_ce": 0.3851453959941864,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9385862946510315,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9385862946510315,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            23263,
+            2422,
+            1731
+          ],
+          [
+            271,
+            41643,
+            5642
+          ],
+          [
+            138,
+            7269,
+            43565
+          ]
+        ],
+        "accuracy": 0.8612637362637363,
+        "class_iou": {
+          "roof": 0.8360467205750225,
+          "vegetation_or_fence_hedge": 0.7274267647212954,
+          "other": 0.7466792355814551
+        },
+        "mean_iou": 0.7700509069592577,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.37404323324081085,
+        "tree8_rejection": 0.7573844687946641,
+        "fence_hedge4_rejection": 0.12929184549356224,
+        "rejection_fraction": 0.14424664930445277,
+        "nll": 0.37203988432884216
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.1192195415496826,
+      "fold": 1
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/gated_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "2e25e4f7a203efea4022d263ae62745a583b82c52c38d6f3d6739f45cb97a97c",
+      "frozen_utc": "2026-10-26T06:18:20.455223+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 10,
+      "best_epoch": 4,
+      "best_validation_ce": 0.38727137446403503,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9437355399131775,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9437355399131775,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            23431,
+            2463,
+            1522
+          ],
+          [
+            291,
+            41376,
+            5889
+          ],
+          [
+            107,
+            7305,
+            43560
+          ]
+        ],
+        "accuracy": 0.8604379724321921,
+        "class_iou": {
+          "roof": 0.8424174875961746,
+          "vegetation_or_fence_hedge": 0.721791919614821,
+          "other": 0.7461075998150146
+        },
+        "mean_iou": 0.7701056690086702,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.3596601900916814,
+        "tree8_rejection": 0.7592305859933302,
+        "fence_hedge4_rejection": 0.07725321888412018,
+        "rejection_fraction": 0.13937940672044719,
+        "nll": 0.37236300110816956
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.4968528747558594,
+      "fold": 1
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/point_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "e449be7a0333789e2012ce8602d494f55278e3e3e6c0f5d3636a469d12ec1e2e",
+      "frozen_utc": "2026-10-26T06:18:22.765151+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.6217705011367798,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9413050413131714,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9413050413131714,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            20494,
+            6478,
+            444
+          ],
+          [
+            172,
+            38026,
+            9358
+          ],
+          [
+            31,
+            16213,
+            34728
+          ]
+        ],
+        "accuracy": 0.7403925554214572,
+        "class_iou": {
+          "roof": 0.7420254172852022,
+          "vegetation_or_fence_hedge": 0.5413184904693439,
+          "other": 0.5714285714285714
+        },
+        "mean_iou": 0.6182574930610392,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.08413239128606274,
+        "tree8_rejection": 0.21950929013816103,
+        "fence_hedge4_rejection": 0.002682403433476395,
+        "rejection_fraction": 0.03352283554595693,
+        "nll": 0.5965818166732788
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.2870278358459473,
+      "fold": 1
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/fusion_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "0df2d5fd95a7576cf6e01bdfb21536efc030625e7f3e61bdf2a4721795122f7f",
+      "frozen_utc": "2026-10-26T06:18:25.164383+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.405455082654953,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.972972571849823,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.972972571849823,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            23125,
+            1742,
+            2549
+          ],
+          [
+            391,
+            41151,
+            6014
+          ],
+          [
+            172,
+            6538,
+            44262
+          ]
+        ],
+        "accuracy": 0.8617957187321349,
+        "class_iou": {
+          "roof": 0.8265127416991315,
+          "vegetation_or_fence_hedge": 0.7369976359338062,
+          "other": 0.7434618291761149
+        },
+        "mean_iou": 0.7689907356030176,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.3158171418958701,
+        "tree8_rejection": 0.6207717960933778,
+        "fence_hedge4_rejection": 0.12821888412017168,
+        "rejection_fraction": 0.12188750555802579,
+        "nll": 0.3802504241466522
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.3748950958251953,
+      "fold": 1
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/context_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "12b5d6b8faf69ce2a24cb868209045ead7c049d520cb70822d99a1a5e5999b31",
+      "frozen_utc": "2026-10-26T06:18:28.525143+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.41308772563934326,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9445807933807373,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9445807933807373,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            23257,
+            2274,
+            1885
+          ],
+          [
+            284,
+            41687,
+            5585
+          ],
+          [
+            63,
+            7480,
+            43429
+          ]
+        ],
+        "accuracy": 0.8604856126532427,
+        "class_iou": {
+          "roof": 0.8376976551525411,
+          "vegetation_or_fence_hedge": 0.7273948700052347,
+          "other": 0.7431128298141747
+        },
+        "mean_iou": 0.7694017849906502,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.3642863150811675,
+        "tree8_rejection": 0.7457122439256789,
+        "fence_hedge4_rejection": 0.09603004291845493,
+        "rejection_fraction": 0.1412056151940545,
+        "nll": 0.38914066553115845
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.331780433654785,
+      "fold": 1
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold1/runs/gated_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "8f7e8cd42779a1a7cbc29b2732f484da543f36c6c5bf524fdd1b5053f16315e7",
+      "frozen_utc": "2026-10-26T06:18:31.448282+00:00",
+      "train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "validation_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "normalization_sha256": "ea7fd1abb2706e17d9f7a6eb30f7d49c2cd62101dc45dbe5f53727d975e8d488",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 8,
+      "best_epoch": 2,
+      "best_validation_ce": 0.42504987120628357,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.924747109413147,
+        "validation_roof_retention": 0.9950029180040852,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 125944,
+        "calibration_roof_records": 27416
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.924747109413147,
+        "validation_roof_retention": 0.9950045578851413,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 126056,
+        "calibration_roof_records": 27425
+      },
+      "validation_common": {
+        "records": 125944,
+        "confusion": [
+          [
+            22907,
+            2071,
+            2438
+          ],
+          [
+            386,
+            42367,
+            4803
+          ],
+          [
+            197,
+            8407,
+            42368
+          ]
+        ],
+        "accuracy": 0.8546814457219082,
+        "class_iou": {
+          "roof": 0.818136362012929,
+          "vegetation_or_fence_hedge": 0.7300375641865113,
+          "other": 0.7278099393606239
+        },
+        "mean_iou": 0.7586612885200216,
+        "roof_retention": 0.9950029180040852,
+        "vegetation_or_fence_hedge_rejection": 0.4939650096728068,
+        "tree8_rejection": 0.832717960933778,
+        "fence_hedge4_rejection": 0.2709227467811159,
+        "rejection_fraction": 0.19391951978657182,
+        "nll": 0.4143590033054352
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 2.894636869430542,
+      "fold": 1
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/point_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "851c53d75aa4a903a2bd7fc2202e18b35c74f90b8e098ca02f3571abc84cf80a",
+      "frozen_utc": "2026-10-26T06:18:36.203568+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.8481403589248657,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 2.0,
+        "threshold": 0.7581913471221924,
+        "validation_roof_retention": 0.9950649350649351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 2.0,
+        "threshold": 0.7581913471221924,
+        "validation_roof_retention": 0.9950649350649351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15058,
+            342,
+            0
+          ],
+          [
+            6076,
+            59863,
+            10776
+          ],
+          [
+            7512,
+            13332,
+            17512
+          ]
+        ],
+        "accuracy": 0.7084562853047803,
+        "class_iou": {
+          "roof": 0.519456326755899,
+          "vegetation_or_fence_hedge": 0.6622819148347697,
+          "other": 0.35642758283806886
+        },
+        "mean_iou": 0.5127219414762458,
+        "roof_retention": 0.9950649350649351,
+        "vegetation_or_fence_hedge_rejection": 0.385009450563775,
+        "tree8_rejection": 0.627472554952612,
+        "fence_hedge4_rejection": 0.1724709784411277,
+        "rejection_fraction": 0.23494876256026243,
+        "nll": 0.6832103133201599
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.3087706565856934,
+      "fold": 2
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/fusion_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "3e261a0f9bb38ba0e53ad5b14715889b9e5a4d28d9d7be6f197d1f3ae12c977a",
+      "frozen_utc": "2026-10-26T06:18:38.243595+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 9,
+      "best_epoch": 3,
+      "best_validation_ce": 0.5381242036819458,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9962337662337662,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9962337662337662,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15259,
+            130,
+            11
+          ],
+          [
+            2258,
+            72315,
+            2142
+          ],
+          [
+            9478,
+            6592,
+            22286
+          ]
+        ],
+        "accuracy": 0.842026197392524,
+        "class_iou": {
+          "roof": 0.5623157429245284,
+          "vegetation_or_fence_hedge": 0.8667018229322723,
+          "other": 0.5501493495272656
+        },
+        "mean_iou": 0.659722305128022,
+        "roof_retention": 0.9962337662337662,
+        "vegetation_or_fence_hedge_rejection": 0.8630906602359382,
+        "tree8_rejection": 0.9573882817774888,
+        "fence_hedge4_rejection": 0.8391376451077943,
+        "rejection_fraction": 0.5243540710196135,
+        "nll": 0.4512820839881897
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.9912164211273193,
+      "fold": 2
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/context_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "cc3b2b2b011c5e593e35c0050eec6de32d6c06474904d8c35b3bc3962de08916",
+      "frozen_utc": "2026-10-26T06:18:42.311373+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.5399643182754517,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 2.0,
+        "threshold": 0.7453267574310303,
+        "validation_roof_retention": 0.9950649350649351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 2.0,
+        "threshold": 0.7453267574310303,
+        "validation_roof_retention": 0.9950649350649351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15209,
+            187,
+            4
+          ],
+          [
+            2646,
+            70486,
+            3583
+          ],
+          [
+            7999,
+            5919,
+            24438
+          ]
+        ],
+        "accuracy": 0.8441186163975136,
+        "class_iou": {
+          "roof": 0.5839508542906507,
+          "vegetation_or_fence_hedge": 0.8510643435843567,
+          "other": 0.5826478792647164
+        },
+        "mean_iou": 0.6725543590465746,
+        "roof_retention": 0.9950649350649351,
+        "vegetation_or_fence_hedge_rejection": 0.7357100958091638,
+        "tree8_rejection": 0.9637400285078397,
+        "fence_hedge4_rejection": 0.6533996683250415,
+        "rejection_fraction": 0.4423971610549471,
+        "nll": 0.4294506907463074
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 4.0588860511779785,
+      "fold": 2
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/gated_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "f226c85e3c445e5e027cde915ae62fe9c22d8aa32785411d6366bb6a2b1cb3ec",
+      "frozen_utc": "2026-10-26T06:18:46.731516+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.5506414771080017,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 2.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9963636363636363,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 2.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9963636363636363,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15242,
+            154,
+            4
+          ],
+          [
+            2669,
+            71361,
+            2685
+          ],
+          [
+            8029,
+            7759,
+            22568
+          ]
+        ],
+        "accuracy": 0.8367453303799312,
+        "class_iou": {
+          "roof": 0.5840294275423404,
+          "vegetation_or_fence_hedge": 0.843231554568228,
+          "other": 0.5498355463515654
+        },
+        "mean_iou": 0.6590321761540446,
+        "roof_retention": 0.9963636363636363,
+        "vegetation_or_fence_hedge_rejection": 0.7932086293423711,
+        "tree8_rejection": 0.9688664382705244,
+        "fence_hedge4_rejection": 0.7197346600331676,
+        "rejection_fraction": 0.4808884733005802,
+        "nll": 0.4506738483905792
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 4.402505874633789,
+      "fold": 2
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/point_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "0cca401533ca6d9cb369f7bbb385991b630fd7c16903d7408c5740bd0fcde0e2",
+      "frozen_utc": "2026-10-26T06:18:48.480038+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 8,
+      "best_epoch": 1,
+      "best_validation_ce": 0.839520275592804,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 2.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.997012987012987,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 2.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.997012987012987,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15096,
+            304,
+            0
+          ],
+          [
+            7881,
+            56426,
+            12408
+          ],
+          [
+            8070,
+            12382,
+            17904
+          ]
+        ],
+        "accuracy": 0.6854090180959753,
+        "class_iou": {
+          "roof": 0.48151574112468504,
+          "vegetation_or_fence_hedge": 0.631156251048646,
+          "other": 0.3526908833031282
+        },
+        "mean_iou": 0.4884542918254864,
+        "roof_retention": 0.997012987012987,
+        "vegetation_or_fence_hedge_rejection": 0.33713093919051035,
+        "tree8_rejection": 0.50731451149066,
+        "fence_hedge4_rejection": 0.32669983416252074,
+        "rejection_fraction": 0.20711882334005258,
+        "nll": 0.7383202910423279
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.7350358963012695,
+      "fold": 2
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/fusion_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "719683e19563369d708f72270841afdae5b529957d235d4494d4733ef9c4ce69",
+      "frozen_utc": "2026-10-26T06:18:50.053710+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 8,
+      "best_epoch": 1,
+      "best_validation_ce": 0.5356255173683167,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9961688311688311,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9961688311688311,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15264,
+            131,
+            5
+          ],
+          [
+            2625,
+            71445,
+            2645
+          ],
+          [
+            8857,
+            6162,
+            23337
+          ]
+        ],
+        "accuracy": 0.8434518015497697,
+        "class_iou": {
+          "roof": 0.5678148947250948,
+          "vegetation_or_fence_hedge": 0.8607001734772552,
+          "other": 0.5691118372921036
+        },
+        "mean_iou": 0.6658756351648178,
+        "roof_retention": 0.9961688311688311,
+        "vegetation_or_fence_hedge_rejection": 0.8279084924721372,
+        "tree8_rejection": 0.9239040736202455,
+        "fence_hedge4_rejection": 0.8557213930348259,
+        "rejection_fraction": 0.4974132182630623,
+        "nll": 0.46993520855903625
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.5700466632843018,
+      "fold": 2
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/context_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "011eda79f4d8d04eda53c95db4da9bff34473b5de11928f69180a5004dc12668",
+      "frozen_utc": "2026-10-26T06:18:52.829034+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 9,
+      "best_epoch": 3,
+      "best_validation_ce": 0.5543906688690186,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.997012987012987,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.997012987012987,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15266,
+            132,
+            2
+          ],
+          [
+            2786,
+            71296,
+            2633
+          ],
+          [
+            9007,
+            5788,
+            23561
+          ]
+        ],
+        "accuracy": 0.8440419710127155,
+        "class_iou": {
+          "roof": 0.5613944765196925,
+          "vegetation_or_fence_hedge": 0.8627821141162946,
+          "other": 0.5747847088385255
+        },
+        "mean_iou": 0.6663204331581709,
+        "roof_retention": 0.997012987012987,
+        "vegetation_or_fence_hedge_rejection": 0.8192400443198853,
+        "tree8_rejection": 0.9727925179424342,
+        "fence_hedge4_rejection": 0.7164179104477612,
+        "rejection_fraction": 0.49377256248514995,
+        "nll": 0.46463197469711304
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 2.7709779739379883,
+      "fold": 2
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/gated_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "7a9f73be11eba8cb020e3484b78ee97ec23881840251950d8d4863180d6159de",
+      "frozen_utc": "2026-10-26T06:18:55.862245+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 9,
+      "best_epoch": 3,
+      "best_validation_ce": 0.5503872036933899,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9961688311688311,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9961688311688311,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15268,
+            131,
+            1
+          ],
+          [
+            2611,
+            71529,
+            2575
+          ],
+          [
+            8906,
+            6044,
+            23406
+          ]
+        ],
+        "accuracy": 0.8446551340911007,
+        "class_iou": {
+          "roof": 0.5672251736820597,
+          "vegetation_or_fence_hedge": 0.8629388346000724,
+          "other": 0.5718264438581061
+        },
+        "mean_iou": 0.6673301507134127,
+        "roof_retention": 0.9961688311688311,
+        "vegetation_or_fence_hedge_rejection": 0.8288600664798279,
+        "tree8_rejection": 0.9754432468928955,
+        "fence_hedge4_rejection": 0.7860696517412935,
+        "rejection_fraction": 0.4997662315763656,
+        "nll": 0.46167293190956116
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.007918357849121,
+      "fold": 2
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/point_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "63385c9ec2c2462c113aaae3e19589d5197869f74bfd347b069981f7ce0241c2",
+      "frozen_utc": "2026-10-26T06:18:57.900135+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 13,
+      "best_epoch": 7,
+      "best_validation_ce": 0.8471193909645081,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 2.0,
+        "threshold": 0.7434586882591248,
+        "validation_roof_retention": 0.9950649350649351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 2.0,
+        "threshold": 0.7434586882591248,
+        "validation_roof_retention": 0.9950649350649351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            14991,
+            405,
+            4
+          ],
+          [
+            6215,
+            59229,
+            11271
+          ],
+          [
+            7570,
+            13025,
+            17761
+          ]
+        ],
+        "accuracy": 0.7049919139119037,
+        "class_iou": {
+          "roof": 0.5136542744560562,
+          "vegetation_or_fence_hedge": 0.6570414332464363,
+          "other": 0.35786101428542644
+        },
+        "mean_iou": 0.5095189073293063,
+        "roof_retention": 0.9950649350649351,
+        "vegetation_or_fence_hedge_rejection": 0.3819070585934954,
+        "tree8_rejection": 0.6245217434794569,
+        "fence_hedge4_rejection": 0.22056384742951907,
+        "rejection_fraction": 0.23380674632676993,
+        "nll": 0.6937271356582642
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.030411720275879,
+      "fold": 2
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/fusion_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "76ef46fbbfd3674b477ab2a1bc1a97dc96db4cfed18cd0a47cce334070739349",
+      "frozen_utc": "2026-10-26T06:19:00.704585+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.5252484083175659,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 2.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9975974025974026,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 2.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9975974025974026,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15274,
+            110,
+            16
+          ],
+          [
+            2499,
+            72292,
+            1924
+          ],
+          [
+            8046,
+            8193,
+            22117
+          ]
+        ],
+        "accuracy": 0.8406695740815967,
+        "class_iou": {
+          "roof": 0.588706879938331,
+          "vegetation_or_fence_hedge": 0.8503140511421111,
+          "other": 0.5488634107603733
+        },
+        "mean_iou": 0.6626281139469384,
+        "roof_retention": 0.9975974025974026,
+        "vegetation_or_fence_hedge_rejection": 0.8535618848986508,
+        "tree8_rejection": 0.9596389006976919,
+        "fence_hedge4_rejection": 0.8126036484245439,
+        "rejection_fraction": 0.5177625679269723,
+        "nll": 0.42768388986587524
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.729252576828003,
+      "fold": 2
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/context_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "45350b1d23ae5fc587fd3e1821f203ef3afcf6d227f34d49967cfaa9f69a5af2",
+      "frozen_utc": "2026-10-26T06:19:03.520479+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 9,
+      "best_epoch": 3,
+      "best_validation_ce": 0.5408397912979126,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 2.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9965584415584415,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 2.0,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9965584415584415,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15225,
+            174,
+            1
+          ],
+          [
+            2700,
+            71696,
+            2319
+          ],
+          [
+            8843,
+            6444,
+            23069
+          ]
+        ],
+        "accuracy": 0.8430225873949,
+        "class_iou": {
+          "roof": 0.5650818394388153,
+          "vegetation_or_fence_hedge": 0.8603554414217657,
+          "other": 0.5671403284492084
+        },
+        "mean_iou": 0.6641925364365965,
+        "roof_retention": 0.9965584415584415,
+        "vegetation_or_fence_hedge_rejection": 0.7980447109431011,
+        "tree8_rejection": 0.9640151041536422,
+        "fence_hedge4_rejection": 0.7313432835820896,
+        "rejection_fraction": 0.47927892021981894,
+        "nll": 0.45235320925712585
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 2.794093608856201,
+      "fold": 2
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold2/runs/gated_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "849399d5338c218746e7c30ec1b441f4e8222f35451f8e22d42eea525084fc43",
+      "frozen_utc": "2026-10-26T06:19:06.279164+00:00",
+      "train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "validation_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "normalization_sha256": "59993c7b1c635cfc4e96ea30c759977dfea69d5290b535d47274e1e56476efc3",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 8,
+      "best_epoch": 1,
+      "best_validation_ce": 0.5476927757263184,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9957142857142857,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "calibration_full": {
+        "temperature": 1.7,
+        "threshold": 0.7,
+        "validation_roof_retention": 0.9957142857142857,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 130471,
+        "calibration_roof_records": 15400
+      },
+      "validation_common": {
+        "records": 130471,
+        "confusion": [
+          [
+            15205,
+            163,
+            32
+          ],
+          [
+            2768,
+            71323,
+            2624
+          ],
+          [
+            8364,
+            5543,
+            24449
+          ]
+        ],
+        "accuracy": 0.8505874868744778,
+        "class_iou": {
+          "roof": 0.573081561887532,
+          "vegetation_or_fence_hedge": 0.8653498501595467,
+          "other": 0.596142592411977
+        },
+        "mean_iou": 0.6781913348196852,
+        "roof_retention": 0.9957142857142857,
+        "vegetation_or_fence_hedge_rejection": 0.7878641725868474,
+        "tree8_rejection": 0.9495361224336692,
+        "fence_hedge4_rejection": 0.8175787728026535,
+        "rejection_fraction": 0.4729556759739712,
+        "nll": 0.47577381134033203
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 2.698575019836426,
+      "fold": 2
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/point_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "7f23925441100ace81edf56dd7d802d65ab8a39834225afe2ce576b5d8f98194",
+      "frozen_utc": "2026-10-26T06:19:10.425746+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.4149271547794342,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9715790152549744,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9715790152549744,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            10483,
+            1026,
+            239
+          ],
+          [
+            120,
+            23989,
+            4985
+          ],
+          [
+            18,
+            3704,
+            5223
+          ]
+        ],
+        "accuracy": 0.7972964830176552,
+        "class_iou": {
+          "roof": 0.8819619720679791,
+          "vegetation_or_fence_hedge": 0.7092301324503312,
+          "other": 0.36862163878890536
+        },
+        "mean_iou": 0.653271247769072,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.13463257028940676,
+        "tree8_rejection": 0.4703670942061035,
+        "fence_hedge4_rejection": 0.1908237747653806,
+        "rejection_fraction": 0.0808042260027718,
+        "nll": 0.4149271547794342
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.6663923263549805,
+      "fold": 3
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/fusion_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "fcac409bee7b520f7304cde502ce45c0ac921298797d895c47bf2a8e643a31fb",
+      "frozen_utc": "2026-10-26T06:19:14.363875+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 20,
+      "best_epoch": 14,
+      "best_validation_ce": 0.20190618932247162,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.8317837119102478,
+        "validation_roof_retention": 0.9951481103166496,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.8317837119102478,
+        "validation_roof_retention": 0.9951481103166496,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            11074,
+            373,
+            301
+          ],
+          [
+            218,
+            27031,
+            1845
+          ],
+          [
+            85,
+            1193,
+            7667
+          ]
+        ],
+        "accuracy": 0.9193564585132665,
+        "class_iou": {
+          "roof": 0.9189278898016762,
+          "vegetation_or_fence_hedge": 0.8816373124592303,
+          "other": 0.6912812190064016
+        },
+        "mean_iou": 0.8306154737557693,
+        "roof_retention": 0.9951481103166496,
+        "vegetation_or_fence_hedge_rejection": 0.8181411974977658,
+        "tree8_rejection": 0.9504643962848297,
+        "fence_hedge4_rejection": 0.9572471324296142,
+        "rejection_fraction": 0.48647237230602364,
+        "nll": 0.20190618932247162
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 3.9120283126831055,
+      "fold": 3
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/context_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "bd7f9ca94bb5a52fad283c43d5155882b8d917924c04996956e794f5962c113f",
+      "frozen_utc": "2026-10-26T06:19:20.093598+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 19,
+      "best_epoch": 13,
+      "best_validation_ce": 0.18026608228683472,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.815838634967804,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.815838634967804,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            11319,
+            238,
+            191
+          ],
+          [
+            160,
+            27627,
+            1307
+          ],
+          [
+            59,
+            1567,
+            7319
+          ]
+        ],
+        "accuracy": 0.9292586418141282,
+        "class_iou": {
+          "roof": 0.945851090498872,
+          "vegetation_or_fence_hedge": 0.8941066053917602,
+          "other": 0.700852245523317
+        },
+        "mean_iou": 0.8469366471379831,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.8490754107376092,
+        "tree8_rejection": 0.961079168509509,
+        "fence_hedge4_rejection": 0.9374348279457768,
+        "rejection_fraction": 0.5085062365677787,
+        "nll": 0.18026608228683472
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 5.6967551708221436,
+      "fold": 3
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/gated_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "4aaf8f72b6c726f4e9183db70cad9051986166016eb78e8bd54a05ee98da9d73",
+      "frozen_utc": "2026-10-26T06:19:26.075350+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 19,
+      "best_epoch": 13,
+      "best_validation_ce": 0.19040638208389282,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.7463731169700623,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.7463731169700623,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            11273,
+            171,
+            304
+          ],
+          [
+            174,
+            27336,
+            1584
+          ],
+          [
+            90,
+            1379,
+            7476
+          ]
+        ],
+        "accuracy": 0.9256432402032659,
+        "class_iou": {
+          "roof": 0.9384781884781884,
+          "vegetation_or_fence_hedge": 0.892050646129748,
+          "other": 0.6901135419551371
+        },
+        "mean_iou": 0.8402141255210246,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.864954973534062,
+        "tree8_rejection": 0.961079168509509,
+        "fence_hedge4_rejection": 0.9384775808133472,
+        "rejection_fraction": 0.5205977463996626,
+        "nll": 0.19040638208389282
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 5.9607274532318115,
+      "fold": 3
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/point_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "ad0336e627b0e9b3d98d2a4a918c9bf4a86fdeae986157b33897255706bc9c3c",
+      "frozen_utc": "2026-10-26T06:19:27.899667+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 12,
+      "best_epoch": 6,
+      "best_validation_ce": 0.4115205705165863,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9788519740104675,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9788519740104675,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            10237,
+            1328,
+            183
+          ],
+          [
+            88,
+            26959,
+            2047
+          ],
+          [
+            11,
+            5706,
+            3228
+          ]
+        ],
+        "accuracy": 0.8119388595416475,
+        "class_iou": {
+          "roof": 0.8641006161897526,
+          "vegetation_or_fence_hedge": 0.7462079273693534,
+          "other": 0.28885906040268455
+        },
+        "mean_iou": 0.6330558679872635,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.10782291881487592,
+        "tree8_rejection": 0.42171605484298985,
+        "fence_hedge4_rejection": 0.11157455683003129,
+        "rejection_fraction": 0.0646956032699299,
+        "nll": 0.4115205705165863
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.820188045501709,
+      "fold": 3
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/fusion_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "71af78b67c9f52ff2191c38db3f9b9089d5124c34c1e27df40b161da2e304768",
+      "frozen_utc": "2026-10-26T06:19:31.303725+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 17,
+      "best_epoch": 11,
+      "best_validation_ce": 0.19825725257396698,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.8479015827178955,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.8479015827178955,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            10965,
+            413,
+            370
+          ],
+          [
+            140,
+            27639,
+            1315
+          ],
+          [
+            47,
+            1487,
+            7411
+          ]
+        ],
+        "accuracy": 0.9242372506879306,
+        "class_iou": {
+          "roof": 0.9187264348554671,
+          "vegetation_or_fence_hedge": 0.8917532425630768,
+          "other": 0.6971777986829727
+        },
+        "mean_iou": 0.8358858253671722,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.8258747508077267,
+        "tree8_rejection": 0.9517912428129146,
+        "fence_hedge4_rejection": 0.9655891553701773,
+        "rejection_fraction": 0.49093136762608713,
+        "nll": 0.19825725257396698
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 3.382836103439331,
+      "fold": 3
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/context_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "bae555f62f1301618745d9198c96cf00a9b190db30ff8727c167595489808296",
+      "frozen_utc": "2026-10-26T06:19:36.539326+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 18,
+      "best_epoch": 12,
+      "best_validation_ce": 0.18441952764987946,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.8622336983680725,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.8622336983680725,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            11147,
+            384,
+            217
+          ],
+          [
+            130,
+            27987,
+            977
+          ],
+          [
+            54,
+            1739,
+            7152
+          ]
+        ],
+        "accuracy": 0.9296804386687287,
+        "class_iou": {
+          "roof": 0.9342105263157895,
+          "vegetation_or_fence_hedge": 0.8965307364576993,
+          "other": 0.7053950093697603
+        },
+        "mean_iou": 0.845378757381083,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.8396576613734791,
+        "tree8_rejection": 0.9619637328615657,
+        "fence_hedge4_rejection": 0.954118873826903,
+        "rejection_fraction": 0.5001707272982907,
+        "nll": 0.18441952764987946
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 5.219353914260864,
+      "fold": 3
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/gated_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "a007c70c18152c006cf6f0758dcde24418d008efd01a81e89ded871eada4ac04",
+      "frozen_utc": "2026-10-26T06:19:41.039900+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.18949732184410095,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.8647611737251282,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.8647611737251282,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            11218,
+            252,
+            278
+          ],
+          [
+            84,
+            27486,
+            1524
+          ],
+          [
+            60,
+            1598,
+            7287
+          ]
+        ],
+        "accuracy": 0.9237551971398156,
+        "class_iou": {
+          "roof": 0.9433232425159771,
+          "vegetation_or_fence_hedge": 0.8882497414684591,
+          "other": 0.6780496882851028
+        },
+        "mean_iou": 0.836540890756513,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.7998212689901698,
+        "tree8_rejection": 0.9626271561256081,
+        "fence_hedge4_rejection": 0.9332638164754953,
+        "rejection_fraction": 0.47494325828027395,
+        "nll": 0.18949732184410095
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 4.496784210205078,
+      "fold": 3
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/point_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "b05c4616280eeaba00eedb5a63240966f08e377ea5840f68118702ed2b9fc89a",
+      "frozen_utc": "2026-10-26T06:19:43.025941+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 12,
+      "best_epoch": 6,
+      "best_validation_ce": 0.4149078130722046,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9838080406188965,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9838080406188965,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            10326,
+            1132,
+            290
+          ],
+          [
+            116,
+            26191,
+            2787
+          ],
+          [
+            26,
+            5317,
+            3602
+          ]
+        ],
+        "accuracy": 0.8058127623676864,
+        "class_iou": {
+          "roof": 0.8684608915054668,
+          "vegetation_or_fence_hedge": 0.7368820864867907,
+          "other": 0.2996173681583763
+        },
+        "mean_iou": 0.6349867820502112,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.09895511101945419,
+        "tree8_rejection": 0.38301636444051307,
+        "fence_hedge4_rejection": 0.11991657977059438,
+        "rejection_fraction": 0.059593869885713135,
+        "nll": 0.4149078130722046
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.9689371585845947,
+      "fold": 3
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/fusion_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "e08137e0c96cfbb8929839d97ddcd809c6de4daa7802d5aa32e35684b20d0ac8",
+      "frozen_utc": "2026-10-26T06:19:48.932230+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 32,
+      "best_epoch": 26,
+      "best_validation_ce": 0.20096321403980255,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.7873303890228271,
+        "validation_roof_retention": 0.9951481103166496,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.7873303890228271,
+        "validation_roof_retention": 0.9951481103166496,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            11126,
+            270,
+            352
+          ],
+          [
+            237,
+            27305,
+            1552
+          ],
+          [
+            85,
+            1301,
+            7559
+          ]
+        ],
+        "accuracy": 0.9237351115753109,
+        "class_iou": {
+          "roof": 0.9217895608947805,
+          "vegetation_or_fence_hedge": 0.8904288276536768,
+          "other": 0.6967462438934464
+        },
+        "mean_iou": 0.8363215441473013,
+        "roof_retention": 0.9951481103166496,
+        "vegetation_or_fence_hedge_rejection": 0.8387983776723723,
+        "tree8_rejection": 0.9511278195488722,
+        "fence_hedge4_rejection": 0.9603753910323254,
+        "rejection_fraction": 0.5001305561692811,
+        "nll": 0.20096321403980255
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 5.879600286483765,
+      "fold": 3
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/context_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "fc5dede00199efa983b7b270dba78aaeb48bc0dd262016d42a9caf2c8ff3c325",
+      "frozen_utc": "2026-10-26T06:19:55.253717+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 22,
+      "best_epoch": 16,
+      "best_validation_ce": 0.17933474481105804,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.7845626473426819,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.7845626473426819,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            11323,
+            233,
+            192
+          ],
+          [
+            169,
+            27407,
+            1518
+          ],
+          [
+            92,
+            1414,
+            7439
+          ]
+        ],
+        "accuracy": 0.9273304276216683,
+        "class_iou": {
+          "roof": 0.9428761762011825,
+          "vegetation_or_fence_hedge": 0.8915454929898181,
+          "other": 0.6981698732989207
+        },
+        "mean_iou": 0.8441971808299739,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.8635801196122912,
+        "tree8_rejection": 0.975453339230429,
+        "fence_hedge4_rejection": 0.954118873826903,
+        "rejection_fraction": 0.5172836282563722,
+        "nll": 0.17933474481105804
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 6.2936248779296875,
+      "fold": 3
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/spatial_validation/folds/fold3/runs/gated_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "bf78859b5b460e63c7377cb35566840f4675795183a4f7a3e856152a994fde25",
+      "frozen_utc": "2026-10-26T06:19:59.903595+00:00",
+      "train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "validation_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "normalization_sha256": "a9fa023d26141a76e6e0eaedf7ea496ec3b0a15fcadcafc6640b022d051f735e",
+      "script_sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+      "epochs_completed": 14,
+      "best_epoch": 8,
+      "best_validation_ce": 0.18703097105026245,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.784573495388031,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.784573495388031,
+        "validation_roof_retention": 0.9950629894450119,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 49787,
+        "calibration_roof_records": 11748
+      },
+      "validation_common": {
+        "records": 49787,
+        "confusion": [
+          [
+            11167,
+            262,
+            319
+          ],
+          [
+            95,
+            27627,
+            1372
+          ],
+          [
+            38,
+            1660,
+            7247
+          ]
+        ],
+        "accuracy": 0.9247594753650551,
+        "class_iou": {
+          "roof": 0.9399040484807676,
+          "vegetation_or_fence_hedge": 0.8907338148052618,
+          "other": 0.6813651748777736
+        },
+        "mean_iou": 0.8373343460546009,
+        "roof_retention": 0.9950629894450119,
+        "vegetation_or_fence_hedge_rejection": 0.8631676634357599,
+        "tree8_rejection": 0.9690402476780186,
+        "fence_hedge4_rejection": 0.9384775808133472,
+        "rejection_fraction": 0.5174643983369153,
+        "nll": 0.18703097105026245
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 4.6033899784088135,
+      "fold": 3
+    }
+  ],
+  "spatial_design_sha256": "0a32cec2044272e61d1c729a095cc48579d79063886540a3ebc9eb32b1dc57b6",
+  "evaluation_scores_computed_before_freeze": false,
+  "source_test_opened": false,
+  "target_opened": false
+}

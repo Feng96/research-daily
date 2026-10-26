@@ -1,0 +1,1417 @@
+{
+  "freeze_utc": "2026-10-26T06:06:13.117148+00:00",
+  "config": {
+    "created_utc": "2026-10-26T06:05:10.978669+00:00",
+    "methods": [
+      "linear",
+      "point_mlp",
+      "fusion_mlp",
+      "local_context",
+      "context_fusion",
+      "gated_fusion"
+    ],
+    "seeds": [
+      20261026,
+      20261027,
+      20261028
+    ],
+    "epochs": 40,
+    "minimum_epochs": 8,
+    "patience": 6,
+    "batch_size": 2048,
+    "inference_batch_size": 4096,
+    "learning_rate": 0.001,
+    "training_records": 200000,
+    "validation_records": 188456,
+    "validation_full_records": 188481,
+    "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+    "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+    "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+    "train_only_normalization": true,
+    "source_train_sha256": "374a82f801e2d896679c19507cb70f7e130de8425b8f68ad834e3ce0cd86f946",
+    "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+    "feature_source": "existing frozen 34 label-free geometric and 8 optical descriptors",
+    "optical_bands": [
+      "Red",
+      "Green",
+      "NIR"
+    ],
+    "blue_band_available": false,
+    "optical_pixel_size_m": 1.0,
+    "device": "cuda",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "slurm_job_id": "6462885",
+    "slurm_step_id": "15",
+    "context": {
+      "k": 16,
+      "radius_m": 5,
+      "labels_in_features": false,
+      "new_neighbors_cross_split": false,
+      "existing_geometry_descriptors_use_full_unlabeled_scene": true
+    },
+    "class_mapping": {
+      "roof": [
+        5
+      ],
+      "vegetation_or_fence_hedge": [
+        1,
+        4,
+        7,
+        8
+      ],
+      "other": [
+        0,
+        2,
+        3,
+        6
+      ]
+    },
+    "source_test_historically_evaluated": true,
+    "test_used_for_training_selection": false,
+    "target_labels_available": false,
+    "roof_retention_validation_target": 0.995,
+    "augmentation_isolation": "context_fusion and gated_fusion use the same per-seed separate augmentation RNG and same sample order: .2 dropout/.3 shift; gate is the architecture ablation",
+    "gate_supervision": "three-class source-label cross-entropy only; no direct gate labels and no real temporal-change supervision",
+    "smoke": false,
+    "wall_budget_seconds": 14400
+  },
+  "models": [
+    {
+      "method": "linear",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/linear_seed20261026/model.pt",
+      "checkpoint_sha256": "d6001947076ea7a6c44cc416218fba5162515596d246f7dbc782699e868969c5",
+      "frozen_utc": "2026-10-26T06:05:20.947174+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 40,
+      "best_epoch": 40,
+      "best_validation_ce": 0.5803481936454773,
+      "parameters": 105,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9749686121940613,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9749686121940613,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            34704,
+            4850,
+            1933
+          ],
+          [
+            736,
+            62477,
+            20875
+          ],
+          [
+            96,
+            15231,
+            47554
+          ]
+        ],
+        "accuracy": 0.7680042025724838,
+        "class_iou": {
+          "roof": 0.820057184716085,
+          "vegetation_or_fence_hedge": 0.5997657652468584,
+          "other": 0.5549603799787604
+        },
+        "mean_iou": 0.6582611099805679,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.14841594520026638,
+        "tree8_rejection": 0.31853767891015694,
+        "fence_hedge4_rejection": 0.10697518443997317,
+        "rejection_fraction": 0.06913019484654243,
+        "nll": 0.5803481936454773
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 6.252026081085205
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/point_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "76a46c542c5b806a0d80e23d5351a764b4b402d19739ec34ea983e8a86b0782d",
+      "frozen_utc": "2026-10-26T06:05:22.586110+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 9,
+      "best_epoch": 3,
+      "best_validation_ce": 0.4617273211479187,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9636940360069275,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9636940360069275,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            37263,
+            3461,
+            763
+          ],
+          [
+            928,
+            63013,
+            20147
+          ],
+          [
+            103,
+            13366,
+            49412
+          ]
+        ],
+        "accuracy": 0.794286199431167,
+        "class_iou": {
+          "roof": 0.8764052871724917,
+          "vegetation_or_fence_hedge": 0.6244165882178071,
+          "other": 0.5897053382821544
+        },
+        "mean_iou": 0.6968424045574843,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.15582485015697842,
+        "tree8_rejection": 0.36271770994999136,
+        "fence_hedge4_rejection": 0.096579476861167,
+        "rejection_fraction": 0.07209640446576389,
+        "nll": 0.4617273211479187
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.605377197265625
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/fusion_mlp_seed20261026/model.pt",
+      "checkpoint_sha256": "f525f18224514f175e428c58c6d51871071d1c0213a87317b025be9b89fd1084",
+      "frozen_utc": "2026-10-26T06:05:24.531056+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 9,
+      "best_epoch": 3,
+      "best_validation_ce": 0.2759743630886078,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9563879370689392,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9563879370689392,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            38971,
+            1195,
+            1321
+          ],
+          [
+            873,
+            74012,
+            9203
+          ],
+          [
+            374,
+            7041,
+            55466
+          ]
+        ],
+        "accuracy": 0.8938372882794923,
+        "class_iou": {
+          "roof": 0.9119436514250948,
+          "vegetation_or_fence_hedge": 0.8016550409427667,
+          "other": 0.7556161024453375
+        },
+        "mean_iou": 0.8230715982710662,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.5425149843021596,
+        "tree8_rejection": 0.8644593895499224,
+        "fence_hedge4_rejection": 0.4533869885982562,
+        "rejection_fraction": 0.24559048265908223,
+        "nll": 0.2759743630886078
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.9282822608947754
+    },
+    {
+      "method": "local_context",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/local_context_seed20261026/model.pt",
+      "checkpoint_sha256": "15d38f7580dd3c70f59e1293569f32309de0ccd0b76b5b6e7db5b362600abb7d",
+      "frozen_utc": "2026-10-26T06:05:27.145976+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 10,
+      "best_epoch": 4,
+      "best_validation_ce": 0.4396858215332031,
+      "parameters": 29827,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9129940271377563,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9129940271377563,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            38879,
+            1782,
+            826
+          ],
+          [
+            1593,
+            67055,
+            15440
+          ],
+          [
+            222,
+            18705,
+            43954
+          ]
+        ],
+        "accuracy": 0.7953474551088848,
+        "class_iou": {
+          "roof": 0.8978569119209274,
+          "vegetation_or_fence_hedge": 0.6412144393975615,
+          "other": 0.5553463807851213
+        },
+        "mean_iou": 0.6981392440345368,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.3521311007515936,
+        "tree8_rejection": 0.7560269011898603,
+        "fence_hedge4_rejection": 0.233065057008719,
+        "rejection_fraction": 0.1611198369911279,
+        "nll": 0.4393244981765747
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.6115317344665527
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/context_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "a932ad67aacdb136415d9c24ee06607a05a057e27b59dc49e2cf4dbc13596417",
+      "frozen_utc": "2026-10-26T06:05:30.931972+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 12,
+      "best_epoch": 6,
+      "best_validation_ce": 0.2778194844722748,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9108662009239197,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9108662009239197,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            39032,
+            1134,
+            1321
+          ],
+          [
+            890,
+            74024,
+            9174
+          ],
+          [
+            312,
+            7063,
+            55506
+          ]
+        ],
+        "accuracy": 0.8944368977374029,
+        "class_iou": {
+          "roof": 0.9143339033474666,
+          "vegetation_or_fence_hedge": 0.8021238554477976,
+          "other": 0.7564598778892281
+        },
+        "mean_iou": 0.8243058788948306,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.5793216630196937,
+        "tree8_rejection": 0.8909467149508536,
+        "fence_hedge4_rejection": 0.4017437961099933,
+        "rejection_fraction": 0.26250159188351657,
+        "nll": 0.2735217213630676
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.7824862003326416
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261026,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/gated_fusion_seed20261026/model.pt",
+      "checkpoint_sha256": "94580e4235311d36d664146686e607da1e7b2afb5cbf4c2ffc36a6afaeb235fa",
+      "frozen_utc": "2026-10-26T06:05:34.872636+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.27834904193878174,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.919150710105896,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.919150710105896,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            39062,
+            1201,
+            1224
+          ],
+          [
+            1172,
+            75659,
+            7257
+          ],
+          [
+            355,
+            9577,
+            52949
+          ]
+        ],
+        "accuracy": 0.8897036974147812,
+        "class_iou": {
+          "roof": 0.9081229367182778,
+          "vegetation_or_fence_hedge": 0.7975354710855311,
+          "other": 0.741977523051484
+        },
+        "mean_iou": 0.8158786436184311,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.5688802207211493,
+        "tree8_rejection": 0.9068460079324021,
+        "fence_hedge4_rejection": 0.40979208584842386,
+        "rejection_fraction": 0.25803370548032434,
+        "nll": 0.27746060490608215
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.849301338195801
+    },
+    {
+      "method": "linear",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/linear_seed20261027/model.pt",
+      "checkpoint_sha256": "10da7f1fc457c983b53719aee0dd423ada52eb26dc6034293f554662962c3c9b",
+      "frozen_utc": "2026-10-26T06:05:39.162049+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 40,
+      "best_epoch": 40,
+      "best_validation_ce": 0.5798489451408386,
+      "parameters": 105,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9736700654029846,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9736700654029846,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            34791,
+            4843,
+            1853
+          ],
+          [
+            726,
+            63180,
+            20182
+          ],
+          [
+            100,
+            16139,
+            46642
+          ]
+        ],
+        "accuracy": 0.7673568366090758,
+        "class_iou": {
+          "roof": 0.822229574835157,
+          "vegetation_or_fence_hedge": 0.6013134101075474,
+          "other": 0.5492722219605257
+        },
+        "mean_iou": 0.6576050689677434,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.14830891447055466,
+        "tree8_rejection": 0.3163648904983618,
+        "fence_hedge4_rejection": 0.11368209255533199,
+        "rejection_fraction": 0.06908774461943372,
+        "nll": 0.5798489451408386
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 4.285297870635986
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/point_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "d4caf82515b3267e8684fa3837233997944d3e54a59f08a09dd4abad13b238ac",
+      "frozen_utc": "2026-10-26T06:05:41.098507+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.46027398109436035,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9753260016441345,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9753260016441345,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            37287,
+            3608,
+            592
+          ],
+          [
+            1217,
+            66404,
+            16467
+          ],
+          [
+            113,
+            17248,
+            45520
+          ]
+        ],
+        "accuracy": 0.7917551046398098,
+        "class_iou": {
+          "roof": 0.87084569213163,
+          "vegetation_or_fence_hedge": 0.6327565177618539,
+          "other": 0.5694270703027271
+        },
+        "mean_iou": 0.6910097600654037,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.1561816192560175,
+        "tree8_rejection": 0.3930332816002759,
+        "fence_hedge4_rejection": 0.056338028169014086,
+        "rejection_fraction": 0.07183639682472301,
+        "nll": 0.46027398109436035
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.9231350421905518
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/fusion_mlp_seed20261027/model.pt",
+      "checkpoint_sha256": "e9c2eadf5651ff1b6e95b4968ca0f1e0e604ef6a835781d9344daaf8b92f6a4e",
+      "frozen_utc": "2026-10-26T06:05:43.417624+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.28139162063598633,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9368760585784912,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9368760585784912,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            39217,
+            1188,
+            1082
+          ],
+          [
+            1150,
+            73667,
+            9271
+          ],
+          [
+            365,
+            6883,
+            55633
+          ]
+        ],
+        "accuracy": 0.8941981152099163,
+        "class_iou": {
+          "roof": 0.9119808381005534,
+          "vegetation_or_fence_hedge": 0.7993467811065659,
+          "other": 0.7596608132834476
+        },
+        "mean_iou": 0.8236628108301889,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.5119636571211112,
+        "tree8_rejection": 0.8474219693050526,
+        "fence_hedge4_rejection": 0.4215291750503018,
+        "rejection_fraction": 0.2313059812369996,
+        "nll": 0.2765634059906006
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.3003249168395996
+    },
+    {
+      "method": "local_context",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/local_context_seed20261027/model.pt",
+      "checkpoint_sha256": "5407382eff9bd75165ab53f94764527e9049670629df283d1b6fcd4f14e6fa25",
+      "frozen_utc": "2026-10-26T06:05:45.688198+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 8,
+      "best_epoch": 2,
+      "best_validation_ce": 0.43620431423187256,
+      "parameters": 29827,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9587549567222595,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9587549567222595,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            38548,
+            2465,
+            474
+          ],
+          [
+            1303,
+            65300,
+            17485
+          ],
+          [
+            168,
+            15459,
+            47254
+          ]
+        ],
+        "accuracy": 0.8017892770726324,
+        "class_iou": {
+          "roof": 0.8973415894594721,
+          "vegetation_or_fence_hedge": 0.6401207701054777,
+          "other": 0.5845373577436912
+        },
+        "mean_iou": 0.7073332391028804,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.3514532394634193,
+        "tree8_rejection": 0.7573029832729781,
+        "fence_hedge4_rejection": 0.19349429912810195,
+        "rejection_fraction": 0.16065288449293202,
+        "nll": 0.43620431423187256
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.2620596885681152
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/context_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "7ad820d57892bb123f45e95782733bea06e427c8d04507bf4d65602806a2ed06",
+      "frozen_utc": "2026-10-26T06:05:49.933679+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 13,
+      "best_epoch": 7,
+      "best_validation_ce": 0.2779991626739502,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9355169534683228,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9355169534683228,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            39034,
+            1324,
+            1129
+          ],
+          [
+            891,
+            76012,
+            7185
+          ],
+          [
+            315,
+            9086,
+            53480
+          ]
+        ],
+        "accuracy": 0.8942458717154137,
+        "class_iou": {
+          "roof": 0.9142950835031504,
+          "vegetation_or_fence_hedge": 0.8043768122076658,
+          "other": 0.7511763466535571
+        },
+        "mean_iou": 0.8232827474547911,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.5399938160022834,
+        "tree8_rejection": 0.8956716675288843,
+        "fence_hedge4_rejection": 0.42052313883299797,
+        "rejection_fraction": 0.24443902024875833,
+        "nll": 0.27418053150177
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 4.200083017349243
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261027,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/gated_fusion_seed20261027/model.pt",
+      "checkpoint_sha256": "7c1a2e37526fbb0bb2d240748879b7c5e5c91e066169798c95c6e8c2990e4dc1",
+      "frozen_utc": "2026-10-26T06:05:54.672706+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 13,
+      "best_epoch": 7,
+      "best_validation_ce": 0.27773982286453247,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.9204427599906921,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.9204427599906921,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            39241,
+            1178,
+            1068
+          ],
+          [
+            1195,
+            74639,
+            8254
+          ],
+          [
+            317,
+            8034,
+            54530
+          ]
+        ],
+        "accuracy": 0.8936303434223373,
+        "class_iou": {
+          "roof": 0.9126026186655504,
+          "vegetation_or_fence_hedge": 0.799989281886388,
+          "other": 0.7552317770729748
+        },
+        "mean_iou": 0.8226078925416377,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.5481162591570735,
+        "tree8_rejection": 0.8964649077427143,
+        "fence_hedge4_rejection": 0.43661971830985913,
+        "rejection_fraction": 0.2481109648936622,
+        "nll": 0.2720472812652588
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 4.694738149642944
+    },
+    {
+      "method": "linear",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/linear_seed20261028/model.pt",
+      "checkpoint_sha256": "83f9b188c977c9e94df733d6f25e846ee6f7b367292e929fcefcf2fb516fa630",
+      "frozen_utc": "2026-10-26T06:05:58.767846+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 40,
+      "best_epoch": 38,
+      "best_validation_ce": 0.5788139700889587,
+      "parameters": 105,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9741906523704529,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9741906523704529,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            34743,
+            4873,
+            1871
+          ],
+          [
+            744,
+            63045,
+            20299
+          ],
+          [
+            99,
+            15903,
+            46879
+          ]
+        ],
+        "accuracy": 0.7676433756420596,
+        "class_iou": {
+          "roof": 0.8207654145995747,
+          "vegetation_or_fence_hedge": 0.6012072779981691,
+          "other": 0.5511869348978848
+        },
+        "mean_iou": 0.6577198758318762,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.1495576063171915,
+        "tree8_rejection": 0.3195033626487325,
+        "fence_hedge4_rejection": 0.11066398390342053,
+        "rejection_fraction": 0.06963429129345843,
+        "nll": 0.5788139700889587
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 4.069740056991577
+    },
+    {
+      "method": "point_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/point_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "99e11d85330ee75a465bb0a4542f5d6fce937ade255cdc7e8535986b40e7762e",
+      "frozen_utc": "2026-10-26T06:06:00.486919+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 9,
+      "best_epoch": 3,
+      "best_validation_ce": 0.4649128019809723,
+      "parameters": 10883,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9635106325149536,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9635106325149536,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            37055,
+            3674,
+            758
+          ],
+          [
+            913,
+            65267,
+            17908
+          ],
+          [
+            99,
+            16160,
+            46622
+          ]
+        ],
+        "accuracy": 0.7903383283100565,
+        "class_iou": {
+          "roof": 0.8719028683027836,
+          "vegetation_or_fence_hedge": 0.6280383364446411,
+          "other": 0.5717193765558513
+        },
+        "mean_iou": 0.6905535271010921,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.1453239463419275,
+        "tree8_rejection": 0.33119503362648733,
+        "fence_hedge4_rejection": 0.09456740442655935,
+        "rejection_fraction": 0.0670978902237127,
+        "nll": 0.4649128019809723
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 1.7023851871490479
+    },
+    {
+      "method": "fusion_mlp",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/fusion_mlp_seed20261028/model.pt",
+      "checkpoint_sha256": "379f7d324dd225f2ab0b92bbaa1f31f1d4749c7cf0f05229053fa2b93a3b8a95",
+      "frozen_utc": "2026-10-26T06:06:02.834923+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 10,
+      "best_epoch": 4,
+      "best_validation_ce": 0.2826307415962219,
+      "parameters": 14339,
+      "calibration_common": {
+        "temperature": 1.3,
+        "threshold": 0.931438148021698,
+        "validation_roof_retention": 0.9950345891484079,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.3,
+        "threshold": 0.931438148021698,
+        "validation_roof_retention": 0.9950345891484079,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            38807,
+            1323,
+            1357
+          ],
+          [
+            844,
+            74327,
+            8917
+          ],
+          [
+            336,
+            7709,
+            54836
+          ]
+        ],
+        "accuracy": 0.891295580931358,
+        "class_iou": {
+          "roof": 0.9095319567815876,
+          "vegetation_or_fence_hedge": 0.7981851374570447,
+          "other": 0.7495864944296357
+        },
+        "mean_iou": 0.819101196222756,
+        "roof_retention": 0.9950345891484079,
+        "vegetation_or_fence_hedge_rejection": 0.5304442964513367,
+        "tree8_rejection": 0.862217623728229,
+        "fence_hedge4_rejection": 0.43561368209255535,
+        "rejection_fraction": 0.23997113384556606,
+        "nll": 0.2815178632736206
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.3324105739593506
+    },
+    {
+      "method": "local_context",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/local_context_seed20261028/model.pt",
+      "checkpoint_sha256": "3b2192484861d66f6b54b5b27ba5c6ee5c8336cd7f3994b3abbb5701ab681b33",
+      "frozen_utc": "2026-10-26T06:06:05.150455+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 8,
+      "best_epoch": 2,
+      "best_validation_ce": 0.441129207611084,
+      "parameters": 29827,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9595559239387512,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9595559239387512,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            38334,
+            2454,
+            699
+          ],
+          [
+            1656,
+            66112,
+            16320
+          ],
+          [
+            169,
+            16735,
+            45977
+          ]
+        ],
+        "accuracy": 0.7981863140467802,
+        "class_iou": {
+          "roof": 0.8850664942741042,
+          "vegetation_or_fence_hedge": 0.6401425293143681,
+          "other": 0.5754317897371715
+        },
+        "mean_iou": 0.7002136044418812,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.32071163542955,
+        "tree8_rejection": 0.7106052767718573,
+        "fence_hedge4_rejection": 0.17404426559356137,
+        "rejection_fraction": 0.14677166022838223,
+        "nll": 0.441129207611084
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0,
+        "optical_shift_probability": 0,
+        "shift_proxy_m": []
+      },
+      "seconds": 2.2792301177978516
+    },
+    {
+      "method": "context_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/context_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "ea4a36b2326d79164ec4c7fb182523981f0468f0d3a255d62433b4fe51bb6105",
+      "frozen_utc": "2026-10-26T06:06:09.032850+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.2801172435283661,
+      "parameters": 33283,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9611567854881287,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9611567854881287,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            38937,
+            1232,
+            1318
+          ],
+          [
+            1022,
+            73614,
+            9452
+          ],
+          [
+            247,
+            7175,
+            55459
+          ]
+        ],
+        "accuracy": 0.8915078320669015,
+        "class_iou": {
+          "roof": 0.9106792029188886,
+          "vegetation_or_fence_hedge": 0.7958700470295692,
+          "other": 0.7529972437577223
+        },
+        "mean_iou": 0.8198488312353933,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.5317167729045762,
+        "tree8_rejection": 0.8929470598379031,
+        "fence_hedge4_rejection": 0.38497652582159625,
+        "rejection_fraction": 0.24080952583096318,
+        "nll": 0.2801172435283661
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.8462231159210205
+    },
+    {
+      "method": "gated_fusion",
+      "seed": 20261028,
+      "status": "frozen",
+      "checkpoint": "/lustre/isaac24/scratch/yfeng21/lod2_dl_round_20261026/runs/gated_fusion_seed20261028/model.pt",
+      "checkpoint_sha256": "d4b02e4077e91504f955a9487d9ce6f85d8a7aef16b6c4c2f427831ed6c022d3",
+      "frozen_utc": "2026-10-26T06:06:13.049776+00:00",
+      "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+      "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+      "normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+      "script_sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+      "epochs_completed": 11,
+      "best_epoch": 5,
+      "best_validation_ce": 0.2810894846916199,
+      "parameters": 38500,
+      "calibration_common": {
+        "temperature": 1.0,
+        "threshold": 0.9757912755012512,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188456,
+        "calibration_roof_records": 41487
+      },
+      "calibration_full": {
+        "temperature": 1.0,
+        "threshold": 0.9757912755012512,
+        "validation_roof_retention": 0.9950104852122351,
+        "no_validation_rejections": false,
+        "roof_retention_target": 0.995,
+        "calibration_records": 188481,
+        "calibration_roof_records": 41487
+      },
+      "validation_common": {
+        "records": 188456,
+        "confusion": [
+          [
+            38659,
+            1223,
+            1605
+          ],
+          [
+            710,
+            74033,
+            9345
+          ],
+          [
+            218,
+            7663,
+            55000
+          ]
+        ],
+        "accuracy": 0.8898204355393301,
+        "class_iou": {
+          "roof": 0.9114464222562773,
+          "vegetation_or_fence_hedge": 0.7962763783423322,
+          "other": 0.744944535493221
+        },
+        "mean_iou": 0.8175557786972769,
+        "roof_retention": 0.9950104852122351,
+        "vegetation_or_fence_hedge_rejection": 0.4667015507563505,
+        "tree8_rejection": 0.8862907397827211,
+        "fence_hedge4_rejection": 0.3004694835680751,
+        "rejection_fraction": 0.21102538523581102,
+        "nll": 0.2810894846916199
+      },
+      "augmentation": {
+        "optical_dropout_probability": 0.2,
+        "optical_shift_probability": 0.3,
+        "shift_proxy_m": [
+          1,
+          2
+        ]
+      },
+      "seconds": 3.9873697757720947
+    }
+  ],
+  "train_ids_sha256": "589cef527fcde87841c22e0425b8a41c710d79a1a96ca327d6c7b4ab22e70f5e",
+  "validation_ids_sha256": "9c35c3417063128aefeb59366bda79deaddc8e3a831822a1b12da0f0ca594e78",
+  "train_only_normalization_sha256": "2e540f0debea7563455be00804e2702d73389aff93f1dcd2d64b24de5fad2650",
+  "source_test_historically_evaluated": true,
+  "official_test_read_in_this_run_before_freeze": false
+}

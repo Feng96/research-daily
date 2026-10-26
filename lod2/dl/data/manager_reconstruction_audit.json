@@ -1,0 +1,1373 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84595-osm-67521431",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row85199-osm-67521425",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84681-osm-67521385",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84655-osm-67521498",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84674-osm-67521381",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84898-osm-66347628",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84594-osm-67521493",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84602-osm-67521395",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84605-osm-67521427",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84626-osm-66348273",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84641-osm-66347416",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84656-osm-67521446",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84662-osm-67521513",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84665-osm-66346451",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84598-osm-67521499",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84599-osm-67521357",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84600-osm-67521521",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84604-osm-67521511",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84607-osm-67521423",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84608-osm-67521442",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84609-osm-66347037",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "method": "raw",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "method": "legacy_guarded",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "method": "linear",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "method": "point",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "method": "fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "method": "context",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "method": "context_fusion",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    },
+    {
+      "id": "usbf-v1-dc-row84618-osm-66346998",
+      "method": "gated",
+      "immutable_XYZ_and_source_IDs": true,
+      "exact_frozen_decisions": true,
+      "model_hash_verified": true
+    }
+  ],
+  "case_count": 192,
+  "same_mask_exact_model_reuses": 72,
+  "legacy8_masks_exact": 8,
+  "legacy16_frozen_rule_extensions": 16,
+  "shell_failures_preserved": [
+    {
+      "id": "usbf-v1-dc-row84575-osm-67521488",
+      "method": "context_fusion",
+      "boundary_edges": 9,
+      "nonmanifold_edges": 2,
+      "model_preserved": true
+    },
+    {
+      "id": "usbf-v1-dc-row84764-osm-67528254",
+      "method": "fusion",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 1,
+      "model_preserved": true
+    }
+  ],
+  "raw_substitution_count": 0,
+  "source_xyz_exact_raw_returns": true,
+  "completion_sha256": "7427782e637deeed5314d84be2348ed6de53c003a7026725b1551925bee6e131",
+  "scope": "Identity, frozen decisions, matched inputs and artifact provenance; no target roof accuracy or certified solid validation"
+}

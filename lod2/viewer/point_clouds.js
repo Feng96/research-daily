@@ -4,13 +4,13 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
   let payload=null,activeId=null,requestToken=0,visibleCount=0,error=null,loading=false;
   const material=new THREE.PointsMaterial({size:3,sizeAttenuation:false,vertexColors:true,transparent:true,opacity:.95,depthWrite:false,depthTest:false,toneMapped:false});
   const cloud=new THREE.Points(new THREE.BufferGeometry(),material);cloud.name='original-3dep-observations';cloud.renderOrder=8;cloud.frustumCulled=false;cloud.visible=false;root.add(cloud);
-  if(['tree','workflow','canopy','repair','paper'].includes(chapter)){for(const [id,value,label]of [['point-mode','removed','本组剔除的候选点'],['point-color','vegetation','DL 植被／篱笆得分']]){const o=document.createElement('option');o.value=value;o.textContent=label;$(id).append(o);}}
+  if(['tree','workflow','canopy','repair','paper','dl'].includes(chapter)){for(const [id,value,label]of [['point-mode','removed','本组剔除的候选点'],['point-color','vegetation','DL 植被／篱笆得分']]){const o=document.createElement('option');o.value=value;o.textContent=label;$(id).append(o);}}
   const enumValue=(key,values,fallback)=>values.includes(initialHash.get(key))?initialHash.get(key):fallback;
   $('show-points').checked=initialHash.get('points')!=='0';
-  $('point-mode').value=enumValue('pointMode',['inside','high','all','train','test',...(['tree','workflow','canopy','repair','paper'].includes(chapter)?['removed']:[])],'inside');
-  if(['workflow','canopy','repair','paper'].includes(chapter)){$('point-mode').querySelector('option[value=test]').remove();$('point-color').querySelector('option[value=split]').textContent='保留候选／其他';}
-  if(['canopy','repair','paper'].includes(chapter)){const o=document.createElement('option');o.value='decision';o.textContent='当前方法保留／删除';$('point-color').append(o);}
-  $('point-color').value=enumValue('pointColor',['height','split','class',...(['canopy','repair','paper'].includes(chapter)?['decision']:[]),...(['tree','workflow','canopy','repair','paper'].includes(chapter)?['vegetation']:[])],'height');
+  $('point-mode').value=enumValue('pointMode',['inside','high','all','train','test',...(['tree','workflow','canopy','repair','paper','dl'].includes(chapter)?['removed']:[])],'inside');
+  if(['workflow','canopy','repair','paper','dl'].includes(chapter)){$('point-mode').querySelector('option[value=test]').remove();$('point-color').querySelector('option[value=split]').textContent='保留候选／其他';}
+  if(['canopy','repair','paper','dl'].includes(chapter)){const o=document.createElement('option');o.value='decision';o.textContent='当前方法保留／删除';$('point-color').append(o);}
+  $('point-color').value=enumValue('pointColor',['height','split','class',...(['canopy','repair','paper','dl'].includes(chapter)?['decision']:[]),...(['tree','workflow','canopy','repair','paper','dl'].includes(chapter)?['vegetation']:[])],'height');
   $('point-size').value=initialHash.has('pointSize')?Math.max(1,Math.min(6,+initialHash.get('pointSize')||3)):3;
   $('point-through').checked=initialHash.get('pointThrough')!=='0';
   if(initialHash.has('opacity'))$('opacity').value=Math.max(15,Math.min(100,+initialHash.get('opacity')||55));
@@ -37,7 +37,7 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     cloud.geometry.dispose();cloud.geometry=new THREE.BufferGeometry();visibleCount=0;
     if(!payload||payload.id!==getSelected()?.id){appearance();return;}
     const key=chapter+'/'+getGroup(),setId=payload.groupToTrainSet[key];
-    const originalCandidates=new Set(payload.trainSets[payload.groupToTrainSet[['workflow','canopy','repair','paper'].includes(chapter)?chapter+'/raw':'tree/global']]||[]);
+    const originalCandidates=new Set(payload.trainSets[payload.groupToTrainSet[['workflow','canopy','repair','paper','dl'].includes(chapter)?chapter+'/raw':'tree/global']]||[]);
     const scoreKind=payload.groupToScoreModel?.[key]||'fusion',scores=payload.semanticScores?.[scoreKind]||[];
     const train=new Set(payload.trainSets[setId]||[]),test=new Set(payload.tests[chapter]||[]),mode=$('point-mode').value,colorMode=$('point-color').value;
     const indices=[];for(let i=0;i<payload.flags.length;i++){
@@ -64,11 +64,11 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     const tm=m.trainMemberships?.[key],hm=m.testMemberships?.[chapter];
     $('point-membership').textContent=`本组候选 ${fmt(tm?.sourceRecordCount??train.size)} 条 · 留出 ${fmt(hm?.sourceRecordCount??test.size)} 条。颜色和筛选对应当前方法。`;
     const ambiguous=(tm?.ambiguousSourceCoordinates||0)+(hm?.ambiguousSourceCoordinates||0);
-    if(['workflow','canopy','repair','paper'].includes(chapter))$('point-membership').textContent=`当前阶段输入 ${fmt(train.size)} 点 · 原始候选 ${fmt(originalCandidates.size)} 点 · 原始索引精确对应；无独立屋顶GT。`;
+    if(['workflow','canopy','repair','paper','dl'].includes(chapter))$('point-membership').textContent=`当前阶段输入 ${fmt(train.size)} 点 · 原始候选 ${fmt(originalCandidates.size)} 点 · 原始索引精确对应；无独立屋顶GT。`;
     $('point-ambiguity').hidden=!ambiguous;
     $('point-ambiguity').textContent=`旧实验中 ${fmt(ambiguous)} 个成员坐标存在重合回波，按原坐标标记全部匹配源记录；候选记录数与可视回波数可能不同。`;
     $('point-legend').dataset.mode=colorMode;
-    $('point-legend').textContent=colorMode==='decision'&&chapter==='paper'?'青：本设置共同输入　红：共同预处理排除　灰：其他原始点；三组完全相同':colorMode==='decision'?'红：本组删除　青：保留　黄：保留但模态冲突　绿：观测平面邻域　灰：其他原始点；非GT':colorMode==='vegetation'?({point:'点云',image:'光学',fusion:'融合'}[scoreKind]+'模型：蓝 低 → 红 高植被／篱笆得分 · 灰 未推理 · 棕 地面；非本地GT'):colorMode==='height'?'离估计地面高度：蓝 ≤2 m → 绿 → 黄 → 红 ≥30 m':colorMode==='split'?'青：本组候选　粉：留出　灰：其他　棕：地面':'棕：原地面类 2/18　紫：原重叠未分类 17　青：其他类';
+    $('point-legend').textContent=colorMode==='decision'&&chapter==='paper'?'青：本设置共同输入　红：共同预处理排除　灰：其他原始点；三组完全相同':colorMode==='decision'?'红：本组删除　青：保留　黄：保留但模态冲突　绿：观测平面邻域　灰：其他原始点；非GT':colorMode==='vegetation'?(({point:'点云',image:'光学',fusion:'融合'}[scoreKind]||scoreKind)+'模型：蓝 低 → 红 高植被／篱笆得分 · 灰 未推理 · 棕 地面；非本地GT'):colorMode==='height'?'离估计地面高度：蓝 ≤2 m → 绿 → 黄 → 红 ≥30 m':colorMode==='split'?'青：本组候选　粉：留出　灰：其他　棕：地面':'棕：原地面类 2/18　紫：原重叠未分类 17　青：其他类';
     appearance();onHeight();
   }
   async function sync(){
@@ -79,10 +79,13 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     try{
       let promise=cache.get(b.id);
       if(!promise){promise=(async()=>{
-        const response=await fetch((chapter==='paper'?'../next/canopy/data/points/':chapter==='repair'?'../repair/data/points/':['canopy','repair','paper'].includes(chapter)?'../next/canopy/data/points/':chapter==='workflow'?'../next/data/points/':'../data/'+(chapter==='tree'?'tree-points/':'points/'))+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw new Error('点云 HTTP '+response.status);
+        const response=await fetch((chapter==='dl'?'../data/points/':chapter==='paper'?'../next/canopy/data/points/':chapter==='repair'?'../repair/data/points/':['canopy','repair','paper','dl'].includes(chapter)?'../next/canopy/data/points/':chapter==='workflow'?'../next/data/points/':'../data/'+(chapter==='tree'?'tree-points/':'points/'))+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw new Error('点云 HTTP '+response.status);
         const bytes=new Uint8Array(await response.arrayBuffer());
         const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);
-        const data=JSON.parse(text);if(chapter==='paper'){const selectedSet=new URLSearchParams(location.search).get('input')==='guarded'?'guarded':'raw';data.groupToTrainSet={...data.groupToTrainSet,'paper/raw':'raw',...Object.fromEntries(['initial','paper','ours'].map(k=>['paper/'+k,selectedSet]))};data.groupToScoreModel={...data.groupToScoreModel,...Object.fromEntries(['initial','paper','ours'].map(k=>['paper/'+k,'point']))};data.tests.paper=[];for(const g of ['initial','paper','ours'])data.metadata.trainMemberships['paper/'+g]={sourceRecordCount:data.trainSets[selectedSet].length,matchingMethod:'identical shared input source_indices'};}if(data.id!==b.id||data.positions.length!==data.flags.length*3)throw new Error('点云清单不一致');return data;
+        const data=JSON.parse(text);if(chapter==='dl'){
+      const response=await fetch('../dl/data/points/'+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw Error('DL decisions HTTP '+response.status);const bytes=new Uint8Array(await response.arrayBuffer());const overlay=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());
+      if(overlay.id!==data.id||overlay.sourceIndices.length!==data.flags.length)throw Error('DL source index length mismatch');data.sourceIndices=overlay.sourceIndices;data.trainSets=overlay.trainSets;data.groupToTrainSet=overlay.groupToTrainSet;data.groupToScoreModel=overlay.groupToScoreModel;data.tests={dl:[]};data.metadata.trainMemberships=overlay.trainMemberships;data.metadata.testMemberships={dl:{sourceRecordCount:0}};data.decisionMasks={};data.semanticScores={};for(const [method,values]of Object.entries(overlay.vegetation_scores)){const scores=new Float32Array(data.flags.length);scores.fill(-1);for(let i=0;i<values.length;i++)scores[overlay.candidateLocalIndices[i]]=values[i];data.semanticScores[method]=scores;}
+    }if(chapter==='paper'){const selectedSet=new URLSearchParams(location.search).get('input')==='guarded'?'guarded':'raw';data.groupToTrainSet={...data.groupToTrainSet,'paper/raw':'raw',...Object.fromEntries(['initial','paper','ours'].map(k=>['paper/'+k,selectedSet]))};data.groupToScoreModel={...data.groupToScoreModel,...Object.fromEntries(['initial','paper','ours'].map(k=>['paper/'+k,'point']))};data.tests.paper=[];for(const g of ['initial','paper','ours'])data.metadata.trainMemberships['paper/'+g]={sourceRecordCount:data.trainSets[selectedSet].length,matchingMethod:'identical shared input source_indices'};}if(data.id!==b.id||data.positions.length!==data.flags.length*3)throw new Error('点云清单不一致');return data;
       })();cache.set(b.id,promise);promise.catch(()=>cache.delete(b.id));}
       const data=await promise;if(token!==requestToken||getSelected()?.id!==b.id)return;
       payload=data;loading=false;coordinates(b,data.targetLngLat);render();

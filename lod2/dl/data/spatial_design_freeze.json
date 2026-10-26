@@ -1,0 +1,185 @@
+{
+  "created_utc": "2026-10-26T06:16:07.455978+00:00",
+  "stage": "source_train_spatial_reholdout_v1",
+  "source": {
+    "path": "/nfs/home/yfeng21/lod2_tree_20261020/data/source_train.npz",
+    "sha256": "374a82f801e2d896679c19507cb70f7e130de8425b8f68ad834e3ce0cd86f946",
+    "bytes": 89795812
+  },
+  "source_test_opened": false,
+  "target_opened": false,
+  "historical_points_were_used_in_earlier_training": true,
+  "methods": [
+    "point_mlp",
+    "fusion_mlp",
+    "context_fusion",
+    "gated_fusion"
+  ],
+  "seeds": [
+    20261026,
+    20261027,
+    20261028
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "split_axis": "x",
+      "calibration_evaluation_cut_m": 496976.39,
+      "quadrant_median_xy_m": [
+        497037.22,
+        5419371.45
+      ],
+      "training_rows": 200000,
+      "calibration_rows": 51521,
+      "calibration_roof_records": 9496,
+      "evaluation_rows": 51778,
+      "row_hashes": {
+        "train": "cd42fb20be8dbc92802d3d204492515b3b25b37c27c515c335dcb4900354bdd1",
+        "calibration": "dece0372355abe9bce8196ab6e0b360ecc2d2ed33849d5270e446050ffe70383",
+        "evaluation": "3c0d08c77ac2c303743dd8bae73bffe9547308f49bcd986288b9eb01851e343c"
+      },
+      "selected_train_ids_sha256": "3fbf82ee93a20f63c25749feef01676657f3dc65a8fde38b23f64258b612100d",
+      "selected_calibration_ids_sha256": "68956b07d48385d66c2a1f00274898f6e9a5448152bb92d3cd0911458a557d58",
+      "minimum_xy_gaps_m": {
+        "train_calibration": 5.021205035135687,
+        "train_evaluation": 5.020089641118366,
+        "calibration_evaluation": 5.000359987036016
+      },
+      "row_intersections": {
+        "train_calibration": 0,
+        "train_evaluation": 0,
+        "calibration_evaluation": 0
+      },
+      "eligible": true,
+      "skip_reason": null
+    },
+    {
+      "fold": 1,
+      "split_axis": "y",
+      "calibration_evaluation_cut_m": 5419306.2,
+      "quadrant_median_xy_m": [
+        497037.22,
+        5419371.45
+      ],
+      "training_rows": 200000,
+      "calibration_rows": 125944,
+      "calibration_roof_records": 27416,
+      "evaluation_rows": 126090,
+      "row_hashes": {
+        "train": "7d13dd11d52e4844e08683140898668f1759441f855473228aa9e967b5ee258c",
+        "calibration": "b7f6aa55dec9d4d7fda9dfe23ad1f8fd83a0078d92e5afd15e612b4b59803883",
+        "evaluation": "8ccf4ff77baa67339fe202aa181187d5d0506587c4c599c0562e564a13fd290f"
+      },
+      "selected_train_ids_sha256": "91cd13f4b72afb5a49b9fb5e29f1c973b6e399b5a91d533b8870fc929363b9be",
+      "selected_calibration_ids_sha256": "9052390761bd27784dfc0a93edc2f6ee711fd9c165ff1e39e8f8d6569c0a494f",
+      "minimum_xy_gaps_m": {
+        "train_calibration": 5.357284760043703,
+        "train_evaluation": 5.010249494562041,
+        "calibration_evaluation": 5.000039999840076
+      },
+      "row_intersections": {
+        "train_calibration": 0,
+        "train_evaluation": 0,
+        "calibration_evaluation": 0
+      },
+      "eligible": true,
+      "skip_reason": null
+    },
+    {
+      "fold": 2,
+      "split_axis": "x",
+      "calibration_evaluation_cut_m": 496955.94,
+      "quadrant_median_xy_m": [
+        497037.22,
+        5419371.45
+      ],
+      "training_rows": 200000,
+      "calibration_rows": 130471,
+      "calibration_roof_records": 15400,
+      "evaluation_rows": 130441,
+      "row_hashes": {
+        "train": "2a21d4af447e21db136b94c4596fc79f6e56a806d82f00028f60067fb5132535",
+        "calibration": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+        "evaluation": "f9392497f30bac31a23be798ed7efe460afad4e831e1cb2c19a252bffd3e43ef"
+      },
+      "selected_train_ids_sha256": "542fba5cc96d8d3aac6a59af366a5bcdc773dca4d8c4c35fcb3aa02855c251d8",
+      "selected_calibration_ids_sha256": "52d52b02e17a16841125ec7cefb3a45b31cd84ddb843ab26b7b844dffd5dcfb9",
+      "minimum_xy_gaps_m": {
+        "train_calibration": 5.029562605720383,
+        "train_evaluation": 5.011686342887095,
+        "calibration_evaluation": 5.005756686067281
+      },
+      "row_intersections": {
+        "train_calibration": 0,
+        "train_evaluation": 0,
+        "calibration_evaluation": 0
+      },
+      "eligible": true,
+      "skip_reason": null
+    },
+    {
+      "fold": 3,
+      "split_axis": "y",
+      "calibration_evaluation_cut_m": 5419405.465,
+      "quadrant_median_xy_m": [
+        497037.22,
+        5419371.45
+      ],
+      "training_rows": 200000,
+      "calibration_rows": 49787,
+      "calibration_roof_records": 11748,
+      "evaluation_rows": 50232,
+      "row_hashes": {
+        "train": "c001c5a0e64522b894d94e6fca22928684a067411a01fe20ad91a94ddc73966e",
+        "calibration": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+        "evaluation": "34665e3a01a9f338c3a418e652ec13fb0644896b08330944a09114788de6e14d"
+      },
+      "selected_train_ids_sha256": "764cedfc2e477f00a1bbaa5725e968e93b686121a5d68ae26dbe731d77c47d5e",
+      "selected_calibration_ids_sha256": "d33a7f3c605f8a6ac906d2412be6796cf6149a91fffb368f1ac5f2c1575ead73",
+      "minimum_xy_gaps_m": {
+        "train_calibration": 5.00783386306052,
+        "train_evaluation": 5.0152766623303755,
+        "calibration_evaluation": 5.010638681621631
+      },
+      "row_intersections": {
+        "train_calibration": 0,
+        "train_evaluation": 0,
+        "calibration_evaluation": 0
+      },
+      "eligible": true,
+      "skip_reason": null
+    }
+  ],
+  "split_recipe": "Four XY median quadrants. Hold out each quadrant; training other three quadrants is at least5m from its rectangle. Holdout is cut by x for folds0/2 and y for folds1/3; calibration belowmedian-2.5m, evaluation abovemedian+2.5m.",
+  "neighbor_recipe": "K16 within5m, same train/calibration/evaluation/embargo group; no labels in neighborhood or shift lookup.",
+  "maximum_training_rows": 200000,
+  "epochs": 40,
+  "patience": 6,
+  "minimum_epochs": 8,
+  "minimum_train_rows": 10000,
+  "minimum_calibration_rows": 5000,
+  "minimum_evaluation_rows": 5000,
+  "minimum_calibration_roofs": 1000,
+  "minimum_evaluation_tree8_for_scoring": 100,
+  "normalization": "Perfold train-only, same sampled training rows across methods and random seeds.",
+  "holdout_policy": "Every fold checkpoint/calibration must be frozen before any evaluation score is computed.",
+  "legacy_geometry_caveat": "Existing geometric descriptors use fullscene unlabeled XYZ; new learned-neighbor aggregation is split-local. This is not a completely transductive-free recomputation of descriptors.",
+  "confidence_interval_caveat": "Return-level binomial CIs are illustrative only because points on roofs/trees are correlated; geographic sample size is four folds of one scene.",
+  "spatial_script": {
+    "path": "/nfs/home/yfeng21/lod2_dl_round_20261026/tools/spatial_validation.py",
+    "sha256": "8ff31b4cb17b20eeadddc52fa4ae18e2598a48dc4d32af0ca6f984acdd47f060",
+    "bytes": 22769
+  },
+  "frozen_training_component": {
+    "path": "/nfs/home/yfeng21/lod2_dl_round_20261026/tools/train_models.py",
+    "sha256": "f091711b8333ac4ee5b9b39419a7acb9f4b095ff80e6ee3c0265d9e469e0f68d",
+    "bytes": 32769
+  },
+  "frozen_neighbor_component": {
+    "path": "/nfs/home/yfeng21/lod2_dl_round_20261026/tools/prepare_data.py",
+    "sha256": "ba214ea454e13faa10066f7ee6763e116e2379ed2ec5c0477aab2b5424d8d6b3",
+    "bytes": 14661
+  },
+  "slurm_job_id": "6462885",
+  "slurm_step_id": "23"
+}
