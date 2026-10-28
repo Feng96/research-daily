@@ -1,5 +1,316 @@
 [
   {
+    "id": "2026-10-28-usbf-live-viewer",
+    "date": "2026-10-28",
+    "category": "USBF · Data Access",
+    "title": "Connected US Buildings directly to the live USBF publication",
+    "summary": "Made USBF the default building layer and connected bounded GeoParquet reads to the public manifest. The viewer checks for publication changes on opening, periodically in a visible tab, and through a manual update action.",
+    "status": "Live data connection verified",
+    "note": "The checked October 27 publication snapshot contained 150,261,726 records in 3,522 tiles, combining updated six-state data with existing records elsewhere. Those totals are not a count of completed new refinement.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Current publication manifest",
+        "url": "https://data.source.coop/opengeos/us-buildings/USBF_v1/manifest.json"
+      },
+      {
+        "label": "USBF data",
+        "url": "https://source.coop/opengeos/us-buildings"
+      }
+    ],
+    "details": "Source heights remain inherited heights; missing input nDSM and missing building height are different states. Unknown edit flags remain distinct from false. The viewer loads neighborhoods rather than processing the national inventory in the browser."
+  },
+  {
+    "id": "2026-10-28-us-buildings-gis-workspace",
+    "date": "2026-10-28",
+    "category": "Geospatial Software",
+    "title": "Published US Buildings 1.3 with analysis and project tools",
+    "summary": "Published local and URL imports, GeoParquet and raster support, scoped statistics, charts, spatial tools, coordinate conversion, drawing, project save/restore, and map/data downloads. Added local OBJ/GLB placement and LoD1 generation while retaining the experimental roof-model collection.",
+    "status": "Website and live-data checks passed",
+    "note": "Statistics use explicit loaded-data snapshots. PMTiles display fragments are not treated as complete source geometry, and export limits and truncation are recorded.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Website source and data contracts",
+        "url": "https://github.com/Feng96/USBF_site"
+      }
+    ],
+    "details": "The final validation record includes 748 semantic checks, 54 browser checks and six real USBF city probes. A public browser test downloaded 166 DC records from its loaded view and checked their height statistics and identifiers; this was a scoped data-access check, not a nationwide analysis."
+  },
+  {
+    "id": "2026-10-28-personal-research-pages",
+    "date": "2026-10-28",
+    "category": "Research Communication",
+    "title": "Updated the personal research pages, CV and resume",
+    "summary": "Updated the personal website with USBF data and code links, the US Buildings workspace and current roof-reconstruction experiments. Added the 2026 hydrogen-logistics paper to the CV and one-page resume and updated the contact information.",
+    "status": "Website and documents updated",
+    "note": "The paper was already published; this date records the website and document update.",
+    "sources": [
+      {
+        "label": "Personal website",
+        "url": "https://yinanfeng.com/"
+      },
+      {
+        "label": "USBF overview",
+        "url": "https://yinanfeng.com/projects/usbf/"
+      },
+      {
+        "label": "CV and resume",
+        "url": "https://yinanfeng.com/cv/"
+      },
+      {
+        "label": "Publication list",
+        "url": "https://yinanfeng.com/publications/"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-27-us-buildings-comparison-catalog",
+    "date": "2026-10-27",
+    "category": "Geospatial Software",
+    "title": "Expanded the building-data comparison catalog",
+    "summary": "Connected GBA US footprints and supplied heights, Microsoft legacy tiles, Overture and official DC/NYC sources. Added source-specific VIDA subsets and download links for other inventories.",
+    "status": "Catalog update published",
+    "note": "The sources differ in date, coverage and provenance. They are comparison layers, not independent accuracy references; download-only resources are identified separately.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "GBA footprint and height mirror",
+        "url": "https://source.coop/tge-labs/globalbuildingatlas-lod1"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-27-usbf-hollow-only-fast-pass",
+    "date": "2026-10-27",
+    "category": "USBF · Production Engineering",
+    "title": "Tested a separate hollow-only fast pass",
+    "summary": "Tested a route that only proposes strictly supported interior holes in large source footprints while retaining their outer boundaries. A 5,046-building warm-input comparison produced byte-identical outputs after batching changes; its production stage changed from 692.31 to 33.86 seconds.",
+    "status": "Prototype and real-input chain checked",
+    "note": "Both compared outputs contained zero accepted hole changes. This is a stage timing, not national end-to-end throughput or evidence of improved geometry accuracy.",
+    "sources": [],
+    "details": "A separate Chicago chain prepared 59 real frames, ran frozen-model inference and generated 15,825 footprints, also with no accepted hole changes. The route is a distinct method version, not a silent replacement for full V7. Shared fast/full-stage input reuse remained follow-up work."
+  },
+  {
+    "id": "2026-10-26-usbf-public-reproducibility-release",
+    "date": "2026-10-26",
+    "category": "USBF · Reproducibility",
+    "title": "Released and tested the public USBF workflow",
+    "summary": "Published USBF_src v0.1.2 with downloadable example inputs and frozen checkpoints. A public run passed 21 software tests, real model inference, three-building generation, fixed-geometry evaluation of 2,019 pairs, and notebook Run All.",
+    "status": "Public run passed",
+    "note": "This verifies small-example generation and evaluation replay. It does not reconstruct the full paper from all historical imagery or rerun the original training.",
+    "sources": [
+      {
+        "label": "Validated release v0.1.2",
+        "url": "https://github.com/Feng96/USBF_src/releases/tag/v0.1.2"
+      },
+      {
+        "label": "Public execution record",
+        "url": "https://github.com/Feng96/USBF_src/actions/runs/40275102285"
+      }
+    ],
+    "details": "Original code uses MIT and model checkpoints use CC BY 4.0; input data retain their component terms. The later v0.1.3 title/citation update does not represent a new computational experiment."
+  },
+  {
+    "id": "2026-10-26-lod2-neighborhood-optical-models",
+    "date": "2026-10-26",
+    "category": "LoD2 · Point Selection",
+    "title": "Compared point, optical-fusion and neighborhood models",
+    "summary": "Compared 18 models across six configurations and three seeds, including a linear baseline, point MLP, optical fusion, local context and reliability gating. Ran target inference on 120 buildings and eight reconstruction strategies on 24 buildings.",
+    "status": "Model and reconstruction comparisons completed",
+    "note": "Optical and neighborhood features improved tree-point rejection in parts of the source evaluation, but the gate showed no supported advantage over the matched context-fusion baseline. Independent US roof ground truth is still absent.",
+    "sources": [
+      {
+        "label": "LoD2 models, results and point-cloud viewer",
+        "url": "https://feng96.github.io/research-daily/lod2/dl/"
+      },
+      {
+        "label": "Audited findings",
+        "url": "https://github.com/Feng96/research-daily/blob/main/lod2/dl/data/manager_findings.json"
+      }
+    ],
+    "details": "The comparison reports roof-point retention alongside rejected tree points. Native roof output and a passing shell check establish execution and topology diagnostics, not improved roof accuracy."
+  },
+  {
+    "id": "2026-10-26-lod2-spatial-retention-recheck",
+    "date": "2026-10-26",
+    "category": "LoD2 · Validation",
+    "title": "Rechecked roof retention on spatially separated source areas",
+    "summary": "Trained 48 additional models across four spatial folds, four model families and three seeds. The recheck used separated training, calibration and evaluation areas to test whether the calibrated roof-retention target transferred within the source scene.",
+    "status": "Spatial recheck completed",
+    "note": "The lowest evaluation roof retention was 97.37%, despite a 99.5% calibration target. These folds reuse a previously studied scene; they are not independent cities or a new blind geographic test.",
+    "sources": [
+      {
+        "label": "LoD2 models, results and point-cloud viewer",
+        "url": "https://feng96.github.io/research-daily/lod2/dl/"
+      },
+      {
+        "label": "Spatial validation summary",
+        "url": "https://github.com/Feng96/research-daily/blob/main/lod2/dl/data/spatial_validation_summary.json"
+      }
+    ],
+    "details": "Together with the first 18 models, this round contains 66 trained models. The results motivate better validation of observation reliability and roof preservation before treating a more elaborate gate as an improvement."
+  },
+  {
+    "id": "2026-10-26-us-buildings-model-browser",
+    "date": "2026-10-26",
+    "category": "Geospatial Software",
+    "title": "Added experimental roof models and data exports to US Buildings",
+    "summary": "Added browsing for eight US experimental buildings under three methods and 20 Dutch 3DBAG training-reference roofs. Connected model inspection with the footprint/height view and added model downloads, shareable views and mobile access.",
+    "status": "Website update published",
+    "note": "US experiments and Dutch training references remain separate collections. Displaying a model does not provide independent validation of its roof geometry.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "LoD2 models, results and point-cloud viewer",
+        "url": "https://feng96.github.io/research-daily/lod2/dl/"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-25-usbf-circle-confirmation-replay",
+    "date": "2026-10-25",
+    "category": "USBF · Validation",
+    "title": "Replayed the OSM confirmation rule on nine circle candidates",
+    "summary": "Replayed the September 18 confirmation rule on the historical circle candidates. All nine returned to the original GBA geometry; the primary sample retained 2,019 fixed pairs, with 171 modified buildings and 1,848 unchanged buildings.",
+    "status": "Policy replay checked",
+    "note": "The candidates lacked eligible exact-reference confirmation. This did not test the shape threshold on a set of confirmed circle replacements.",
+    "sources": [
+      {
+        "label": "Released workflow",
+        "url": "https://github.com/Feng96/USBF_src"
+      },
+      {
+        "label": "Data roles and confirmation scope",
+        "url": "https://github.com/Feng96/USBF_src/blob/v0.1.3/docs/data.md"
+      }
+    ],
+    "details": "The remaining local-change geometries stayed fixed. Both original-reference and NAIP-frame evaluations were retained; the reference-frame sensitivity remains part of the interpretation."
+  },
+  {
+    "id": "2026-10-25-usbf-curved-reference-check",
+    "date": "2026-10-25",
+    "category": "USBF · Validation",
+    "title": "Checked circular and elliptical reference targets separately",
+    "summary": "Screened 96 complete near-circular or elliptical SpaceNet targets and found nine unique GBA matches. Processed those nine plus four fixed unmatched targets. The final confirmation policy retained GBA geometry for all nine matched cases.",
+    "status": "Supplementary shape check completed",
+    "note": "There was no successful rectangle-to-circle correction in this sample. The nine raw-coordinate pairs, seven registered pairs and four unmatched targets remain separate from the primary 2,019-pair sample.",
+    "sources": [
+      {
+        "label": "Released workflow",
+        "url": "https://github.com/Feng96/USBF_src"
+      },
+      {
+        "label": "Scientific scope",
+        "url": "https://github.com/Feng96/USBF_src/blob/v0.1.3/docs/scientific_scope.md"
+      }
+    ],
+    "details": "Six matched cases had rectilinear GBA outlines against near-circular references; three already had curved GBA outlines. The six disagreements were already unchanged before the confirmation gate. Unmatched targets retain NA scores rather than zeros."
+  },
+  {
+    "id": "2026-10-25-usbf-geometric-change-audit",
+    "date": "2026-10-25",
+    "category": "USBF · Geometry Analysis",
+    "title": "Measured the extent of changes in the historical regional cohort",
+    "summary": "Recomputed geometry differences for 48,772 buildings from the historical regional experiment. Its 1,887 modified buildings contained 71,194.68 m² of additions and 21,071.32 m² of removals, for 92,266.00 m² of symmetric difference.",
+    "status": "Geometry audit completed",
+    "note": "This is the older regional research version, not the current six-state production cohort. Geometry differences measure what changed, not whether it became more accurate.",
+    "sources": [
+      {
+        "label": "Methods and historical experiments",
+        "url": "https://yinanfeng.com/p/building-footprint-extraction/"
+      }
+    ],
+    "details": "Net area change was +50,123.36 m². The audit kept the original operation groups and checked all geometry pairs; these area totals are not extrapolated to the national inventory."
+  },
+  {
+    "id": "2026-10-25-usbf-local-reproducible-example",
+    "date": "2026-10-25",
+    "category": "USBF · Reproducibility",
+    "title": "Ran a minimal USBF example in a clean CPU environment",
+    "summary": "Packaged real inputs and the frozen B0/B1 models into a local workflow. Generated three example buildings, checked their final geometry against the historical outputs, recomputed the 2,019 fixed geometry pairs, and ran the notebook from a fresh kernel.",
+    "status": "Local workflow verified",
+    "note": "At this stage public download and remote execution still required verification. Complete 32-frame generation and historical retraining were not executed.",
+    "sources": [
+      {
+        "label": "Released workflow",
+        "url": "https://github.com/Feng96/USBF_src"
+      }
+    ],
+    "details": "The examples include a changed outline, an unchanged building and a circle candidate that falls back to GBA without confirmation. Evaluation rasterizes the frozen geometries instead of using stored score CSVs as its input."
+  },
+  {
+    "id": "2026-10-24-usbf-spacenet-reference-frame",
+    "date": "2026-10-24",
+    "category": "USBF · Validation",
+    "title": "Compared footprint changes in a common NAIP reference frame",
+    "summary": "Analyzed 171 addition/removal cases within 2,019 fixed GBA–SpaceNet pairs. With the reference moved into the NAIP image frame and both footprint products held fixed, mean IoU for these modified cases changed from 69.74% to 72.51%; boundary F1 at 1 m changed from 54.41% to 59.93%.",
+    "status": "Paired analysis completed",
+    "note": "Raw-coordinate results were negative. These are reference-agreement results in Las Vegas, not nationwide accuracy estimates or a test of absolute positioning.",
+    "sources": [
+      {
+        "label": "Released workflow",
+        "url": "https://github.com/Feng96/USBF_src"
+      },
+      {
+        "label": "Evaluation scope and limitations",
+        "url": "https://github.com/Feng96/USBF_src/blob/v0.1.3/docs/scientific_scope.md"
+      }
+    ],
+    "details": "The reference shift used non-building image features; products and fixed matches were not fitted to the scoring polygons. The modified groups contain 144 additions only, 20 removals only and seven combined changes. The clustered interval for the boundary-F1 difference includes zero."
+  },
+  {
+    "id": "2026-10-23-usbf-six-state-publication",
+    "date": "2026-10-23",
+    "category": "USBF · Data Publishing",
+    "title": "Published the complete six-state USBF update",
+    "summary": "Published 25,092,517 buildings for Alabama, Arkansas, Arizona, California, Colorado and Connecticut, including 913,169 with recorded geometry changes. The complete new regional output replaced the older six-state records.",
+    "status": "Public release verified",
+    "note": "The other 42 states and DC retained their existing data. Publication completeness does not establish that every geometry change improves accuracy.",
+    "sources": [
+      {
+        "label": "USBF data",
+        "url": "https://source.coop/opengeos/us-buildings"
+      },
+      {
+        "label": "Current publication manifest",
+        "url": "https://data.source.coop/opengeos/us-buildings/USBF_v1/manifest.json"
+      }
+    ],
+    "details": "The release was organized as state-level GeoParquet shards at this date. Heights retain their source meaning; the footprint-refinement workflow does not estimate new building heights."
+  },
+  {
+    "id": "2026-10-23-us-buildings-data-catalog",
+    "date": "2026-10-23",
+    "category": "Geospatial Software",
+    "title": "Added real data sources to the US Buildings website",
+    "summary": "Added a data catalog, URL and local GeoJSON inputs, layer visibility and opacity controls, and feature inspection. The first connected sources included VIDA building data and USGS imagery.",
+    "status": "Website published",
+    "note": "The VIDA product combines Google, Microsoft and OpenStreetMap sources; its source labels are not three independent building inventories.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "VIDA source documentation",
+        "url": "https://source.coop/vida/google-microsoft-osm-open-buildings"
+      }
+    ]
+  },
+  {
     "id": "2026-10-22-usbf-six-state-completion",
     "date": "2026-10-22",
     "category": "USBF · Production",

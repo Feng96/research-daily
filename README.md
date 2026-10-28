@@ -41,3 +41,9 @@ The repository owner publishes changes by committing approved content. The GitHu
 ## October 22, 2026 history update
 
 Added 14 dated entries from the USBF and LoD2 research histories, preserving all 15 existing entries. Dates use America/New_York. Production completion, release preparation, controlled experiments and real-observation diagnostics are explicitly separated. Public entries contain summaries and public links, not private transcripts or infrastructure credentials.
+
+## October 28, 2026 update
+
+Added 16 entries for October 23–28, preserving all 29 earlier records (45 total). The update covers six-state publication, SpaceNet reference-frame and circle checks, geometric-change analysis, the local and public reproducible workflow, LoD2 point-model and spatial comparisons, the hollow-only prototype, US Buildings releases, and personal research pages.
+
+Dates use America/New_York and refer to the recorded work or verification. Earlier preparation entries remain historical snapshots. The primary 2,019-pair evaluation, separate curved-reference sample, historical regional cohort, national mixed-version catalog and bounded browser analyses keep their distinct scopes. New links point to public data, code, experiments and the current project pages. No experiment assets or existing study pages were changed.
