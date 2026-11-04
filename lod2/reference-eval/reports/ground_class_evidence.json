@@ -1,0 +1,351 @@
+{
+  "schema": "project-specific-ground-class-evidence-v1",
+  "created_utc": "2026-11-04T20:13:21.669237+00:00",
+  "frozen_input_manifest_sha256": "7116df4bbb6514af2239141272be706a027d50af1894d9b09e9b2982d6505190",
+  "conclusion": "Classification18 is explicitly overlap-ground in both selected historical USGS projects, so [2,18] is supported for these nine blocks. This is not the modern LAS1.4 meaning or a nationwide generic rule.",
+  "input_manifest_modified": false,
+  "source_points_modified": false,
+  "training_or_reconstruction_restarted": false,
+  "projects": [
+    {
+      "project_id": "MA_NE_CMGP_Sandy_Z19_A1_2015",
+      "official_metadata_title": "New England CMGP Sandy Lidar Day09314",
+      "local_path": "/nfs/home/yfeng21/lod2_multicity_20261020/paired_inputs/metadata/boston_source_lpc_metadata.xml",
+      "resolved_path": "/lustre/isaac24/scratch/yfeng21/home_storage/lod2_multicity_20261020/paired_inputs/metadata/boston_source_lpc_metadata.xml",
+      "sha256": "84008dbf6cdf183dc4eed4263720b607fecb8685ff43fe740871297018e85e42",
+      "official_url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/New_England_CMGP_SANDY_LiDAR/MA_NE_CMGP_Sandy_Z19_A1_2015/reports/Swath/USGS_New_England_CMGP_Lidar_LAS_1.2_Day09314.xml",
+      "declared_las_version": "1.2",
+      "source_classification_map": {
+        "1": "default/unclassified",
+        "2": "Bare-earth",
+        "7": "All noise",
+        "9": "Water",
+        "10": "Ignored ground",
+        "17": "Overlap default/unclassified",
+        "18": "Overlap ground"
+      },
+      "source_overlap_encoding": "swath overlap points were identified in these files by adding 16 to the standard classication values",
+      "evidence_lines": [
+        {
+          "line": 66,
+          "text": "<lasver>1.2</lasver>"
+        },
+        {
+          "line": 69,
+          "text": "<lasolap>swath overlap points were identified in these files by adding 16 to the standard classication values</lasolap>"
+        },
+        {
+          "line": 92,
+          "text": "<clascode>17</clascode>"
+        },
+        {
+          "line": 93,
+          "text": "<clasitem>Overlap default/unclassified</clasitem>"
+        },
+        {
+          "line": 96,
+          "text": "<clascode>18</clascode>"
+        },
+        {
+          "line": 97,
+          "text": "<clasitem>Overlap ground</clasitem>"
+        }
+      ],
+      "accepted_ground_classes_for_this_source_only": [
+        2,
+        18
+      ]
+    },
+    {
+      "project_id": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015",
+      "official_metadata_title": "Lidar data for SANDY_Restoration_VA_MD_DC_QL2 Lidar Task Order USGS Contract: G10PC00025 Task Order Number: G13PD00816 SANDY_Restoration_VA_MD_DC_QL2",
+      "local_path": "/nfs/home/yfeng21/lod2_pilot_20261017/data/lidar/Classified_LAS_Metadata.xml",
+      "resolved_path": "/lustre/isaac24/scratch/yfeng21/home_storage/lod2_pilot_20261017/data/lidar/Classified_LAS_Metadata.xml",
+      "sha256": "f6344eca1fcadf5dc7c345376c39a67390914310e60b2320cf187eaffdbd10e6",
+      "official_url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/Sandy_Supplemental_NCR_VA_MD_DC_QL2_LiDAR/MD-VA_Sandy-NCR_2014/reports/Classified_LAS_Metadata.xml",
+      "declared_las_version": "1.2",
+      "source_classification_map": {
+        "1": "Processed, but Unclassified",
+        "2": "Bare earth ground",
+        "7": "Noise",
+        "9": "In-land Water",
+        "10": "Ignored Ground",
+        "11": "Withheld",
+        "17": "Overlap Default (Unclassified)",
+        "18": "Overlap Bare-earth ground",
+        "25": "Overlap In-land Water"
+      },
+      "source_overlap_encoding": "Swath \"overage\" points were identified in these files by adding 16 to the standard classification values.",
+      "evidence_lines": [
+        {
+          "line": 76,
+          "text": "<lasver>1.2</lasver>"
+        },
+        {
+          "line": 79,
+          "text": "<lasolap>Swath \"overage\" points were identified in these files by adding 16 to the standard classification values.</lasolap>"
+        },
+        {
+          "line": 106,
+          "text": "<clascode>17</clascode>"
+        },
+        {
+          "line": 107,
+          "text": "<clasitem>Overlap Default (Unclassified)</clasitem>"
+        },
+        {
+          "line": 110,
+          "text": "<clascode>18</clascode>"
+        },
+        {
+          "line": 111,
+          "text": "<clasitem>Overlap Bare-earth ground</clasitem>"
+        }
+      ],
+      "accepted_ground_classes_for_this_source_only": [
+        2,
+        18
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "boston_g5",
+      "city": "Boston",
+      "points_file": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/boston_g5/roi_points.npz",
+      "crop_receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/boston_g5/inputs_manifest.json",
+      "crop_receipt_sha256": "5c360112d8677aec99a596faede2f0bfd0a40cc62178104625c12e7eaa1134c1",
+      "npz_sha256_from_frozen_crop_receipt": "0b3aa1e684590c19ec726ed0085aae45c7a2c0b43720243cd2239107eaf192bb",
+      "classification_array_sha256_freshly_read": "793762091a83c6b44a51bd23a4630f8f0efbfa321b6c08673c34a46fb1bf8a04",
+      "class_counts": {
+        "1": 4748660,
+        "2": 2195705,
+        "7": 1472,
+        "9": 2755,
+        "10": 1201,
+        "17": 2826853,
+        "18": 940775
+      },
+      "histogram_freshly_recomputed_matches_crop_receipt": true,
+      "point_count": 10717421,
+      "ground_classes": [
+        2,
+        18
+      ],
+      "class18_records": 940775,
+      "ground_class_convention": "LAS1.2 source-specific swath overage encoded as base_class+16:17=overlap unclassified;18=overlap ground",
+      "evidence_project": "MA_NE_CMGP_Sandy_Z19_A1_2015"
+    },
+    {
+      "id": "dc_capitol_hill",
+      "city": "Washington DC",
+      "points_file": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data_fallback/dc_capitol_hill_naip2013/roi_points.npz",
+      "crop_receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data_fallback/dc_capitol_hill_naip2013/inputs_manifest.json",
+      "crop_receipt_sha256": "fdd4d2169d6d950df579ed3bd9515b3a6f14432448df73ae9f0c75f4f09964e7",
+      "npz_sha256_from_frozen_crop_receipt": "d372b0c40fd8001f09596aca786b66af678df8ff0a0f4c3a5bc5d917733ab44a",
+      "classification_array_sha256_freshly_read": "0fc09e1237aabefd9750ba43749b06d2fc1118dcc621b3277e7bb90636e9b1df",
+      "class_counts": {
+        "1": 637318,
+        "2": 311158,
+        "11": 1,
+        "17": 1015077,
+        "18": 369380
+      },
+      "histogram_freshly_recomputed_matches_crop_receipt": true,
+      "point_count": 2332934,
+      "ground_classes": [
+        2,
+        18
+      ],
+      "class18_records": 369380,
+      "ground_class_convention": "LAS1.2 source-specific swath overage encoded as base_class+16:17=overlap unclassified;18=overlap ground",
+      "evidence_project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015"
+    },
+    {
+      "id": "dc_dupont",
+      "city": "Washington DC",
+      "points_file": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/dc_dupont/roi_points.npz",
+      "crop_receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/dc_dupont/inputs_manifest.json",
+      "crop_receipt_sha256": "f4af0eda852962fe8c222d4119d5dfa430a04927bed5052fb6fd95fcaea522eb",
+      "npz_sha256_from_frozen_crop_receipt": "12fc73683b1074bad5f2fc67467312818e4ec671b64a648ae0674e0c7ad816d2",
+      "classification_array_sha256_freshly_read": "106403e83fa3510d8685625c9fe330b16128131af68e404a5c48192f3e246917",
+      "class_counts": {
+        "1": 566489,
+        "2": 340167,
+        "7": 4,
+        "11": 9,
+        "17": 1054000,
+        "18": 499003
+      },
+      "histogram_freshly_recomputed_matches_crop_receipt": true,
+      "point_count": 2459672,
+      "ground_classes": [
+        2,
+        18
+      ],
+      "class18_records": 499003,
+      "ground_class_convention": "LAS1.2 source-specific swath overage encoded as base_class+16:17=overlap unclassified;18=overlap ground",
+      "evidence_project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015"
+    },
+    {
+      "id": "dc_adams_morgan",
+      "city": "Washington DC",
+      "points_file": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/dc_adams_morgan/roi_points.npz",
+      "crop_receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/dc_adams_morgan/inputs_manifest.json",
+      "crop_receipt_sha256": "d8e6c52ebbcaf2702755109cf5516eb4b95c074119f2c2b11686003a877bf88d",
+      "npz_sha256_from_frozen_crop_receipt": "67285b6fd67977ec3c341ac522a54bae5a16b85ca2f40922f9210aaca8f1604b",
+      "classification_array_sha256_freshly_read": "535c3c6ad7968e6cced4aea55aa1a24d022353474aa1cd9a4abd4e72f4e69e35",
+      "class_counts": {
+        "1": 641029,
+        "2": 313817,
+        "11": 5,
+        "17": 1015425,
+        "18": 342556
+      },
+      "histogram_freshly_recomputed_matches_crop_receipt": true,
+      "point_count": 2312832,
+      "ground_classes": [
+        2,
+        18
+      ],
+      "class18_records": 342556,
+      "ground_class_convention": "LAS1.2 source-specific swath overage encoded as base_class+16:17=overlap unclassified;18=overlap ground",
+      "evidence_project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015"
+    },
+    {
+      "id": "dc_brookland",
+      "city": "Washington DC",
+      "points_file": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data_fallback/dc_brookland_naip2013/roi_points.npz",
+      "crop_receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data_fallback/dc_brookland_naip2013/inputs_manifest.json",
+      "crop_receipt_sha256": "207a3cd1901d8607608ac57fd07b61c9d68e789a58f4c716f184eca71bcfab2c",
+      "npz_sha256_from_frozen_crop_receipt": "a4f82fd9018e12df6427ea85b1c76db31f8eca78123dd25d4cee44469927b469",
+      "classification_array_sha256_freshly_read": "2c6701422574f1575c10c2196fc960f9767bf9fd8d56f43fb27212abea8b1212",
+      "class_counts": {
+        "1": 513810,
+        "2": 463501,
+        "11": 2,
+        "17": 678098,
+        "18": 527220
+      },
+      "histogram_freshly_recomputed_matches_crop_receipt": true,
+      "point_count": 2182631,
+      "ground_classes": [
+        2,
+        18
+      ],
+      "class18_records": 527220,
+      "ground_class_convention": "LAS1.2 source-specific swath overage encoded as base_class+16:17=overlap unclassified;18=overlap ground",
+      "evidence_project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015"
+    },
+    {
+      "id": "dc_petworth",
+      "city": "Washington DC",
+      "points_file": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data_fallback/dc_petworth_naip2013/roi_points.npz",
+      "crop_receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data_fallback/dc_petworth_naip2013/inputs_manifest.json",
+      "crop_receipt_sha256": "95e5c92816724988bd889862c8f3f68c093214b758deabe6b8bf310b811876af",
+      "npz_sha256_from_frozen_crop_receipt": "14e0d7f111c005e1a65893414f69b24a813efce7696a35cec130c74ad91e1db1",
+      "classification_array_sha256_freshly_read": "7ded87b4172ad554490e2bc15ec730b3da5ccc5204c6ad32db148352018e4608",
+      "class_counts": {
+        "1": 455941,
+        "2": 467714,
+        "11": 6,
+        "17": 734924,
+        "18": 561186
+      },
+      "histogram_freshly_recomputed_matches_crop_receipt": true,
+      "point_count": 2219771,
+      "ground_classes": [
+        2,
+        18
+      ],
+      "class18_records": 561186,
+      "ground_class_convention": "LAS1.2 source-specific swath overage encoded as base_class+16:17=overlap unclassified;18=overlap ground",
+      "evidence_project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015"
+    },
+    {
+      "id": "dc_anacostia",
+      "city": "Washington DC",
+      "points_file": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data_fallback/dc_anacostia_naip2013/roi_points.npz",
+      "crop_receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data_fallback/dc_anacostia_naip2013/inputs_manifest.json",
+      "crop_receipt_sha256": "88bab86fa05c57d2e79b6824018c0afa4d4afa8de5787ff49b0855249560d1ee",
+      "npz_sha256_from_frozen_crop_receipt": "6af2f9f1ee7feeefd3d08a616522d35aab161557e1696fc8aee3c78168ceaec3",
+      "classification_array_sha256_freshly_read": "6ab818d420345172f36819e2b6cfa2dcd31bfc00251857a43e200cf7eacb1ae6",
+      "class_counts": {
+        "1": 344294,
+        "2": 449573,
+        "7": 31,
+        "11": 2,
+        "17": 454090,
+        "18": 455548
+      },
+      "histogram_freshly_recomputed_matches_crop_receipt": true,
+      "point_count": 1703538,
+      "ground_classes": [
+        2,
+        18
+      ],
+      "class18_records": 455548,
+      "ground_class_convention": "LAS1.2 source-specific swath overage encoded as base_class+16:17=overlap unclassified;18=overlap ground",
+      "evidence_project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015"
+    },
+    {
+      "id": "dc_cleveland_park",
+      "city": "Washington DC",
+      "points_file": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/dc_cleveland_park/roi_points.npz",
+      "crop_receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/dc_cleveland_park/inputs_manifest.json",
+      "crop_receipt_sha256": "04642cb30d8d7c78f6e27900f4700a69684549434092dec370a5f7b29e7094a9",
+      "npz_sha256_from_frozen_crop_receipt": "ba96c66e6218cefc31bdb85b11914eba3893a103f9b098c915bce6a31eba2420",
+      "classification_array_sha256_freshly_read": "6786aedc1ffeb13970f2a73e8fd9f65d4e9cf5e932feddda2a026512da561c22",
+      "class_counts": {
+        "1": 784521,
+        "2": 317891,
+        "11": 30,
+        "17": 1285225,
+        "18": 361556
+      },
+      "histogram_freshly_recomputed_matches_crop_receipt": true,
+      "point_count": 2749223,
+      "ground_classes": [
+        2,
+        18
+      ],
+      "class18_records": 361556,
+      "ground_class_convention": "LAS1.2 source-specific swath overage encoded as base_class+16:17=overlap unclassified;18=overlap ground",
+      "evidence_project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015"
+    },
+    {
+      "id": "dc_woodley_park",
+      "city": "Washington DC",
+      "points_file": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/dc_woodley_park/roi_points.npz",
+      "crop_receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/data/dc_woodley_park/inputs_manifest.json",
+      "crop_receipt_sha256": "781b90f6e35640d542f5147e777528c02c63993882067f6bceea20ebba542d68",
+      "npz_sha256_from_frozen_crop_receipt": "1f72862f3a55d4017daffa8ae32e001f9b45d460f79d9332a83492fe5d7f2493",
+      "classification_array_sha256_freshly_read": "b54c3ee569f8468f65de2d17ef8a95b0e93911ba300a72388c1aa16268b429ba",
+      "class_counts": {
+        "1": 640858,
+        "2": 323344,
+        "7": 413,
+        "11": 6,
+        "17": 816358,
+        "18": 304914
+      },
+      "histogram_freshly_recomputed_matches_crop_receipt": true,
+      "point_count": 2085893,
+      "ground_classes": [
+        2,
+        18
+      ],
+      "class18_records": 304914,
+      "ground_class_convention": "LAS1.2 source-specific swath overage encoded as base_class+16:17=overlap unclassified;18=overlap ground",
+      "evidence_project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015"
+    }
+  ],
+  "total_points": 28763915,
+  "total_class18_records": 4362138,
+  "limitations": [
+    "The DC source explicitly says overlap classes were automatically generated and not independently verified for classification accuracy.",
+    "Project-specific metadata does not guarantee every ground-labelled return is correct.",
+    "Use source metadata and LAS version/flags when adding future 3DEP projects; never globally treat modern class18 high noise as ground."
+  ],
+  "short_user_note_zh": "本批两套历史3DEP使用旧分类编码：18代表重叠航带地面，因此与2一起用于地面估计；该规则不推广到其他3DEP项目。"
+}

@@ -1,0 +1,1707 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-11-04T20:41:37.105216+00:00",
+  "protocol_sha256": "94f49fa7ac6b30fc572c551ba31ab8ae05135f38f5282a2067b3e43408874c6f",
+  "input_footprints": 1756,
+  "reference_entities": 1756,
+  "reference_object_ids": 1756,
+  "cities": {
+    "Boston": 332,
+    "Washington DC": 1424
+  },
+  "spatial_clusters": 9,
+  "evaluation_roles": {
+    "new_expansion": 1730,
+    "development": 26
+  },
+  "footprint_tracks": {
+    "reference_footprint_conditioned_roof": 1756
+  },
+  "methods": [
+    "raw",
+    "legacy_guarded",
+    "fusion",
+    "context_fusion"
+  ],
+  "expected_method_rows": 7024,
+  "observed_method_rows": 7024,
+  "execution_incomplete_rows": 0,
+  "error_count": 0,
+  "warning_count": 1,
+  "issues": [
+    {
+      "level": "warning",
+      "code": "few_spatial_clusters",
+      "count": 9,
+      "interpretation": "descriptive local comparison; not nationwide inference"
+    }
+  ],
+  "claim_scope": "External reference agreement under documented source/epoch/footprint assumptions. Independent real roof accuracy requires verified suitable reference quality and time compatibility.",
+  "source_receipts": {
+    "cohort": {
+      "path": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/reports/evaluation.json",
+      "sha256": "b55a3c0339ca3cca3dd5ccf639093ef1204bc1e096fc218281eb9902eb1e89de"
+    },
+    "evaluation": {
+      "path": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/reports/evaluation.json",
+      "sha256": "b55a3c0339ca3cca3dd5ccf639093ef1204bc1e096fc218281eb9902eb1e89de"
+    }
+  },
+  "input_freeze_verification": {
+    "receipt": "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/control/final_inputs_freeze.json",
+    "receipt_sha256": "1af02bb8f91306439bc353e0205450809c9f35b7a345028b163599c965ad290e",
+    "checked_source_files": 46,
+    "unchanged": true,
+    "failures": []
+  },
+  "paired_cluster_comparisons": {
+    "breakline_f1_1m": [
+      {
+        "footprint_track": "reference_footprint_conditioned_roof",
+        "evaluation_role": "development",
+        "unverified_role_not_heldout": false,
+        "comparisons": {
+          "context_fusion": {
+            "metric": "breakline_f1_1m",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "breakline_f1_1m",
+            "difference": "fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "breakline_f1_1m",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.003897212069590717,
+            "entity_weighted_mean_delta": 0.003897212069590717,
+            "cluster_bootstrap95": [
+              0.003897212069590717,
+              0.003897212069590717
+            ],
+            "city_means": {
+              "Boston": 0.003897212069590717
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.003897212069590717,
+                0.003897212069590717
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fixed_cohort_interpretation": "Includes execution-incomplete sentinel penalties; incomplete execution is not evidence of algorithmic error.",
+        "fully_executed_unit_comparisons": {
+          "context_fusion": {
+            "metric": "breakline_f1_1m",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "breakline_f1_1m",
+            "difference": "fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "breakline_f1_1m",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.003897212069590717,
+            "entity_weighted_mean_delta": 0.003897212069590717,
+            "cluster_bootstrap95": [
+              0.003897212069590717,
+              0.003897212069590717
+            ],
+            "city_means": {
+              "Boston": 0.003897212069590717
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.003897212069590717,
+                0.003897212069590717
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fully_executed_units": 26,
+        "execution_incomplete_units": [],
+        "quality_population": "All methods executed, retaining native failures; runtime-limited completion can still limit representativeness."
+      },
+      {
+        "footprint_track": "reference_footprint_conditioned_roof",
+        "evaluation_role": "new_expansion",
+        "unverified_role_not_heldout": false,
+        "comparisons": {
+          "context_fusion": {
+            "metric": "breakline_f1_1m",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.00965425896626562,
+            "entity_weighted_mean_delta": -0.015789685209981624,
+            "cluster_bootstrap95": [
+              -0.015312958495085183,
+              -0.0030665507382037238
+            ],
+            "city_means": {
+              "Boston": -0.00016026307929899815,
+              "Washington DC": -0.019148254853232242
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                -0.00016026307929899815,
+                -0.00016026307929899815
+              ],
+              "Washington DC": [
+                -0.030465653910871367,
+                -0.00597283839710845
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "breakline_f1_1m",
+            "difference": "fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.00727046195687826,
+            "entity_weighted_mean_delta": -0.012019538556788764,
+            "cluster_bootstrap95": [
+              -0.010494035453760183,
+              -0.0025106809593787834
+            ],
+            "city_means": {
+              "Boston": 7.828805908343225e-05,
+              "Washington DC": -0.014619211972839953
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                7.828805908343225e-05,
+                7.828805908343225e-05
+              ],
+              "Washington DC": [
+                -0.021066358966603797,
+                -0.005099649977840999
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "breakline_f1_1m",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.0060996857468123096,
+            "entity_weighted_mean_delta": -0.010032329313080032,
+            "cluster_bootstrap95": [
+              -0.010459221787884004,
+              0.00048805379293597617
+            ],
+            "city_means": {
+              "Boston": -1.4289172891773955e-05,
+              "Washington DC": -0.012185082320732845
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                -1.4289172891773955e-05,
+                -1.4289172891773955e-05
+              ],
+              "Washington DC": [
+                -0.020904154402876234,
+                0.0009903967587637263
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fixed_cohort_interpretation": "Includes execution-incomplete sentinel penalties; incomplete execution is not evidence of algorithmic error.",
+        "fully_executed_unit_comparisons": {
+          "context_fusion": {
+            "metric": "breakline_f1_1m",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.00965425896626562,
+            "entity_weighted_mean_delta": -0.015789685209981624,
+            "cluster_bootstrap95": [
+              -0.015312958495085183,
+              -0.0030665507382037238
+            ],
+            "city_means": {
+              "Boston": -0.00016026307929899815,
+              "Washington DC": -0.019148254853232242
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                -0.00016026307929899815,
+                -0.00016026307929899815
+              ],
+              "Washington DC": [
+                -0.030465653910871367,
+                -0.00597283839710845
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "breakline_f1_1m",
+            "difference": "fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.00727046195687826,
+            "entity_weighted_mean_delta": -0.012019538556788764,
+            "cluster_bootstrap95": [
+              -0.010494035453760183,
+              -0.0025106809593787834
+            ],
+            "city_means": {
+              "Boston": 7.828805908343225e-05,
+              "Washington DC": -0.014619211972839953
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                7.828805908343225e-05,
+                7.828805908343225e-05
+              ],
+              "Washington DC": [
+                -0.021066358966603797,
+                -0.005099649977840999
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "breakline_f1_1m",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.0060996857468123096,
+            "entity_weighted_mean_delta": -0.010032329313080032,
+            "cluster_bootstrap95": [
+              -0.010459221787884004,
+              0.00048805379293597617
+            ],
+            "city_means": {
+              "Boston": -1.4289172891773955e-05,
+              "Washington DC": -0.012185082320732845
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                -1.4289172891773955e-05,
+                -1.4289172891773955e-05
+              ],
+              "Washington DC": [
+                -0.020904154402876234,
+                0.0009903967587637263
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fully_executed_units": 1730,
+        "execution_incomplete_units": [],
+        "quality_population": "All methods executed, retaining native failures; runtime-limited completion can still limit representativeness."
+      }
+    ],
+    "roof_xy_coverage": [
+      {
+        "footprint_track": "reference_footprint_conditioned_roof",
+        "evaluation_role": "development",
+        "unverified_role_not_heldout": false,
+        "comparisons": {
+          "context_fusion": {
+            "metric": "roof_xy_coverage",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "roof_xy_coverage",
+            "difference": "fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "roof_xy_coverage",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.00025387154100025265,
+            "entity_weighted_mean_delta": 0.00025387154100025265,
+            "cluster_bootstrap95": [
+              0.00025387154100025265,
+              0.00025387154100025265
+            ],
+            "city_means": {
+              "Boston": 0.00025387154100025265
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.00025387154100025265,
+                0.00025387154100025265
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fixed_cohort_interpretation": "Includes execution-incomplete sentinel penalties; incomplete execution is not evidence of algorithmic error.",
+        "fully_executed_unit_comparisons": {
+          "context_fusion": {
+            "metric": "roof_xy_coverage",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "roof_xy_coverage",
+            "difference": "fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "roof_xy_coverage",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.00025387154100025265,
+            "entity_weighted_mean_delta": 0.00025387154100025265,
+            "cluster_bootstrap95": [
+              0.00025387154100025265,
+              0.00025387154100025265
+            ],
+            "city_means": {
+              "Boston": 0.00025387154100025265
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.00025387154100025265,
+                0.00025387154100025265
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fully_executed_units": 26,
+        "execution_incomplete_units": [],
+        "quality_population": "All methods executed, retaining native failures; runtime-limited completion can still limit representativeness."
+      },
+      {
+        "footprint_track": "reference_footprint_conditioned_roof",
+        "evaluation_role": "new_expansion",
+        "unverified_role_not_heldout": false,
+        "comparisons": {
+          "context_fusion": {
+            "metric": "roof_xy_coverage",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.01943425506617667,
+            "entity_weighted_mean_delta": -0.03201709043463034,
+            "cluster_bootstrap95": [
+              -0.028337845623848362,
+              -0.010365562493161808
+            ],
+            "city_means": {
+              "Boston": 3.6500915419797466e-05,
+              "Washington DC": -0.038905011047773136
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                3.6500915419797466e-05,
+                3.6500915419797466e-05
+              ],
+              "Washington DC": [
+                -0.05671219216311652,
+                -0.020767625901743414
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "roof_xy_coverage",
+            "difference": "fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.014853916099772997,
+            "entity_weighted_mean_delta": -0.024466518390804593,
+            "cluster_bootstrap95": [
+              -0.024013146288275878,
+              -0.005556233341850955
+            ],
+            "city_means": {
+              "Boston": 2.0683152002189947e-05,
+              "Washington DC": -0.029728515351548183
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                2.0683152002189947e-05,
+                2.0683152002189947e-05
+              ],
+              "Washington DC": [
+                -0.048046975728553945,
+                -0.0111331498357041
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "roof_xy_coverage",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.0130605228323491,
+            "entity_weighted_mean_delta": -0.02150181566675383,
+            "cluster_bootstrap95": [
+              -0.020680694266080164,
+              -0.006016818541704123
+            ],
+            "city_means": {
+              "Boston": 1.5850419981042305e-06,
+              "Washington DC": -0.026122630706696306
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                1.5850419981042305e-06,
+                1.5850419981042305e-06
+              ],
+              "Washington DC": [
+                -0.04136297357415843,
+                -0.01203522212540635
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fixed_cohort_interpretation": "Includes execution-incomplete sentinel penalties; incomplete execution is not evidence of algorithmic error.",
+        "fully_executed_unit_comparisons": {
+          "context_fusion": {
+            "metric": "roof_xy_coverage",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.01943425506617667,
+            "entity_weighted_mean_delta": -0.03201709043463034,
+            "cluster_bootstrap95": [
+              -0.028337845623848362,
+              -0.010365562493161808
+            ],
+            "city_means": {
+              "Boston": 3.6500915419797466e-05,
+              "Washington DC": -0.038905011047773136
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                3.6500915419797466e-05,
+                3.6500915419797466e-05
+              ],
+              "Washington DC": [
+                -0.05671219216311652,
+                -0.020767625901743414
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "roof_xy_coverage",
+            "difference": "fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.014853916099772997,
+            "entity_weighted_mean_delta": -0.024466518390804593,
+            "cluster_bootstrap95": [
+              -0.024013146288275878,
+              -0.005556233341850955
+            ],
+            "city_means": {
+              "Boston": 2.0683152002189947e-05,
+              "Washington DC": -0.029728515351548183
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                2.0683152002189947e-05,
+                2.0683152002189947e-05
+              ],
+              "Washington DC": [
+                -0.048046975728553945,
+                -0.0111331498357041
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "roof_xy_coverage",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.0130605228323491,
+            "entity_weighted_mean_delta": -0.02150181566675383,
+            "cluster_bootstrap95": [
+              -0.020680694266080164,
+              -0.006016818541704123
+            ],
+            "city_means": {
+              "Boston": 1.5850419981042305e-06,
+              "Washington DC": -0.026122630706696306
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                1.5850419981042305e-06,
+                1.5850419981042305e-06
+              ],
+              "Washington DC": [
+                -0.04136297357415843,
+                -0.01203522212540635
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fully_executed_units": 1730,
+        "execution_incomplete_units": [],
+        "quality_population": "All methods executed, retaining native failures; runtime-limited completion can still limit representativeness."
+      }
+    ],
+    "native_lod2": [
+      {
+        "footprint_track": "reference_footprint_conditioned_roof",
+        "evaluation_role": "development",
+        "unverified_role_not_heldout": false,
+        "comparisons": {
+          "context_fusion": {
+            "metric": "native_lod2",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "native_lod2",
+            "difference": "fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "native_lod2",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fixed_cohort_interpretation": "Includes execution-incomplete sentinel penalties; incomplete execution is not evidence of algorithmic error.",
+        "fully_executed_unit_comparisons": {
+          "context_fusion": {
+            "metric": "native_lod2",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "native_lod2",
+            "difference": "fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "native_lod2",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fully_executed_units": 26,
+        "execution_incomplete_units": [],
+        "quality_population": "All methods executed, retaining native failures; runtime-limited completion can still limit representativeness."
+      },
+      {
+        "footprint_track": "reference_footprint_conditioned_roof",
+        "evaluation_role": "new_expansion",
+        "unverified_role_not_heldout": false,
+        "comparisons": {
+          "context_fusion": {
+            "metric": "native_lod2",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.014747191011235955,
+            "entity_weighted_mean_delta": -0.024277456647398842,
+            "cluster_bootstrap95": [
+              -0.023195876288659795,
+              -0.006722632601427668
+            ],
+            "city_means": {
+              "Boston": 0.0,
+              "Washington DC": -0.02949438202247191
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ],
+              "Washington DC": [
+                -0.04639175257731959,
+                -0.013445265202855336
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "native_lod2",
+            "difference": "fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.008899720937063964,
+            "entity_weighted_mean_delta": -0.01676300578034682,
+            "cluster_bootstrap95": [
+              -0.015470994131505043,
+              -0.0021625296798710655
+            ],
+            "city_means": {
+              "Boston": 0.0032679738562091504,
+              "Washington DC": -0.021067415730337078
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0032679738562091504,
+                0.0032679738562091504
+              ],
+              "Washington DC": [
+                -0.034209962119219235,
+                -0.007593033215951281
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "native_lod2",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.007724719101123595,
+            "entity_weighted_mean_delta": -0.012716763005780347,
+            "cluster_bootstrap95": [
+              -0.014722317351598173,
+              -0.0014534040630227168
+            ],
+            "city_means": {
+              "Boston": 0.0,
+              "Washington DC": -0.01544943820224719
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ],
+              "Washington DC": [
+                -0.029444634703196346,
+                -0.0029068081260454335
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fixed_cohort_interpretation": "Includes execution-incomplete sentinel penalties; incomplete execution is not evidence of algorithmic error.",
+        "fully_executed_unit_comparisons": {
+          "context_fusion": {
+            "metric": "native_lod2",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.014747191011235955,
+            "entity_weighted_mean_delta": -0.024277456647398842,
+            "cluster_bootstrap95": [
+              -0.023195876288659795,
+              -0.006722632601427668
+            ],
+            "city_means": {
+              "Boston": 0.0,
+              "Washington DC": -0.02949438202247191
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ],
+              "Washington DC": [
+                -0.04639175257731959,
+                -0.013445265202855336
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "native_lod2",
+            "difference": "fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.008899720937063964,
+            "entity_weighted_mean_delta": -0.01676300578034682,
+            "cluster_bootstrap95": [
+              -0.015470994131505043,
+              -0.0021625296798710655
+            ],
+            "city_means": {
+              "Boston": 0.0032679738562091504,
+              "Washington DC": -0.021067415730337078
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0032679738562091504,
+                0.0032679738562091504
+              ],
+              "Washington DC": [
+                -0.034209962119219235,
+                -0.007593033215951281
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "native_lod2",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.007724719101123595,
+            "entity_weighted_mean_delta": -0.012716763005780347,
+            "cluster_bootstrap95": [
+              -0.014722317351598173,
+              -0.0014534040630227168
+            ],
+            "city_means": {
+              "Boston": 0.0,
+              "Washington DC": -0.01544943820224719
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ],
+              "Washington DC": [
+                -0.029444634703196346,
+                -0.0029068081260454335
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fully_executed_units": 1730,
+        "execution_incomplete_units": [],
+        "quality_population": "All methods executed, retaining native failures; runtime-limited completion can still limit representativeness."
+      }
+    ],
+    "has_geometry": [
+      {
+        "footprint_track": "reference_footprint_conditioned_roof",
+        "evaluation_role": "development",
+        "unverified_role_not_heldout": false,
+        "comparisons": {
+          "context_fusion": {
+            "metric": "has_geometry",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "has_geometry",
+            "difference": "fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "has_geometry",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fixed_cohort_interpretation": "Includes execution-incomplete sentinel penalties; incomplete execution is not evidence of algorithmic error.",
+        "fully_executed_unit_comparisons": {
+          "context_fusion": {
+            "metric": "has_geometry",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "has_geometry",
+            "difference": "fusion minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "has_geometry",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 26,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": 0.0,
+            "entity_weighted_mean_delta": 0.0,
+            "cluster_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "city_means": {
+              "Boston": 0.0
+            },
+            "city_cluster_counts": {
+              "Boston": 1
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ]
+            },
+            "total_spatial_clusters": 1,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fully_executed_units": 26,
+        "execution_incomplete_units": [],
+        "quality_population": "All methods executed, retaining native failures; runtime-limited completion can still limit representativeness."
+      },
+      {
+        "footprint_track": "reference_footprint_conditioned_roof",
+        "evaluation_role": "new_expansion",
+        "unverified_role_not_heldout": false,
+        "comparisons": {
+          "context_fusion": {
+            "metric": "has_geometry",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.019662921348314606,
+            "entity_weighted_mean_delta": -0.03236994219653179,
+            "cluster_bootstrap95": [
+              -0.02956674473067916,
+              -0.010224948875255624
+            ],
+            "city_means": {
+              "Boston": 0.0,
+              "Washington DC": -0.03932584269662921
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ],
+              "Washington DC": [
+                -0.05913348946135832,
+                -0.02044989775051125
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "has_geometry",
+            "difference": "fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.012410956892120144,
+            "entity_weighted_mean_delta": -0.02254335260115607,
+            "cluster_bootstrap95": [
+              -0.021046172211126143,
+              -0.0034671920570029852
+            ],
+            "city_means": {
+              "Boston": 0.0032679738562091504,
+              "Washington DC": -0.028089887640449437
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0032679738562091504,
+                0.0032679738562091504
+              ],
+              "Washington DC": [
+                -0.04536031827846144,
+                -0.010202357970215122
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "has_geometry",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.012991573033707866,
+            "entity_weighted_mean_delta": -0.02138728323699422,
+            "cluster_bootstrap95": [
+              -0.021324230850838108,
+              -0.0054690421915007835
+            ],
+            "city_means": {
+              "Boston": 0.0,
+              "Washington DC": -0.02598314606741573
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ],
+              "Washington DC": [
+                -0.042648461701676216,
+                -0.010938084383001567
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fixed_cohort_interpretation": "Includes execution-incomplete sentinel penalties; incomplete execution is not evidence of algorithmic error.",
+        "fully_executed_unit_comparisons": {
+          "context_fusion": {
+            "metric": "has_geometry",
+            "difference": "context_fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.019662921348314606,
+            "entity_weighted_mean_delta": -0.03236994219653179,
+            "cluster_bootstrap95": [
+              -0.02956674473067916,
+              -0.010224948875255624
+            ],
+            "city_means": {
+              "Boston": 0.0,
+              "Washington DC": -0.03932584269662921
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ],
+              "Washington DC": [
+                -0.05913348946135832,
+                -0.02044989775051125
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "fusion": {
+            "metric": "has_geometry",
+            "difference": "fusion minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.012410956892120144,
+            "entity_weighted_mean_delta": -0.02254335260115607,
+            "cluster_bootstrap95": [
+              -0.021046172211126143,
+              -0.0034671920570029852
+            ],
+            "city_means": {
+              "Boston": 0.0032679738562091504,
+              "Washington DC": -0.028089887640449437
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0032679738562091504,
+                0.0032679738562091504
+              ],
+              "Washington DC": [
+                -0.04536031827846144,
+                -0.010202357970215122
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          },
+          "legacy_guarded": {
+            "metric": "has_geometry",
+            "difference": "legacy_guarded minus raw",
+            "paired_entities": 1730,
+            "missing_metric_units": [],
+            "equal_city_mean_delta": -0.012991573033707866,
+            "entity_weighted_mean_delta": -0.02138728323699422,
+            "cluster_bootstrap95": [
+              -0.021324230850838108,
+              -0.0054690421915007835
+            ],
+            "city_means": {
+              "Boston": 0.0,
+              "Washington DC": -0.02598314606741573
+            },
+            "city_cluster_counts": {
+              "Boston": 1,
+              "Washington DC": 8
+            },
+            "city_cluster_bootstrap95": {
+              "Boston": [
+                0.0,
+                0.0
+              ],
+              "Washington DC": [
+                -0.042648461701676216,
+                -0.010938084383001567
+              ]
+            },
+            "total_spatial_clusters": 9,
+            "replicates": 2000,
+            "seed": 20261104,
+            "interpretation": "fixed-city paired reference agreement; not nationwide inference",
+            "few_clusters": true
+          }
+        },
+        "fully_executed_units": 1730,
+        "execution_incomplete_units": [],
+        "quality_population": "All methods executed, retaining native failures; runtime-limited completion can still limit representativeness."
+      }
+    ]
+  }
+}

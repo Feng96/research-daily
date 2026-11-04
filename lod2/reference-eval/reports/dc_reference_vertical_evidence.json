@@ -1,0 +1,362 @@
+{
+  "schema": "DC-reference-vertical-evidence-audit-v1",
+  "created_utc": "2026-11-04T20:54:05.058854+00:00",
+  "status": "completed_with_geometry_Z_units_and_vertical_datum_unverified",
+  "main_inputs_or_evaluation_modified": false,
+  "method_outputs_used_to_infer_units_or_datum": false,
+  "verified_facts": {
+    "horizontal_CRS": "EPSG26985 NAD83 Maryland State Plane, metre",
+    "HOUSE_HEIGHT_attribute_unit": "metre, explicitly documented in official Layer13 raw/FGDC metadata",
+    "ALTITUDE_MAX_definition": "Highest point of structure from sea level; named vertical datum and explicit unit absent",
+    "native_source_geometry": "Esri multipatch, not CityGML",
+    "source_reference_system": "2D projected CRS only; no named vertical CRS in inspected raw metadata or queryDataElements"
+  },
+  "geometry_Z_unit": {
+    "verified": false,
+    "value": null,
+    "interpretation": "Metres are supported as a plausible convention by the explicit HOUSE_HEIGHT attribute and horizontal CRS; the inspected sources do not independently declare the vertex-Z physical unit. Keep the frozen geometry-Z flag unknown."
+  },
+  "vertical_datum": {
+    "verified": false,
+    "value": null,
+    "interpretation": "Sea level is not a named geodetic vertical datum. No NAVD88/NGVD29/geoid realization statement for the 2013 multipatch reference was found in the inspected official source metadata."
+  },
+  "not_valid_proofs": [
+    "EPSG26985 and service esriMeters identify the horizontal map unit, not a vertical datum.",
+    "zUnits=10000 corresponds to the peXml ZScale=10000 storage-scale field and is not an explicit physical-unit name.",
+    "The source-reference roof/ground numeric agreement with reconstructed models is not used as unit or datum evidence.",
+    "The separately verified 3DEP NAVD88/GEOID12A datum does not establish the reference model datum."
+  ],
+  "metric_scope": {
+    "coverage": "XY presence of predicted roof over a fixed reference query domain; does not show whether its height is a roof or a tree canopy.",
+    "internal_breakline_F1": "XY agreement of internal structural lines. A wrong high roof/canopy can retain similar XY edges; DC edge extraction also uses nominal-Z structure thresholds.",
+    "permitted_conclusion": "Current raw arm has better aggregate coverage/XY structural-line reference agreement under the frozen footprint/input/epoch assumptions.",
+    "unsupported_conclusions": [
+      "Raw has verified better true three-dimensional roof accuracy.",
+      "The removed returns are all true roof points.",
+      "All tree-canopy heights are correctly reconstructed."
+    ]
+  },
+  "Boston_existing_nominal_Z_diagnostic": {
+    "new_expansion_units": 306,
+    "reference_z_units_verified": true,
+    "vertical_datum_verified": false,
+    "z_policies": [
+      "none"
+    ],
+    "means": {
+      "raw": {
+        "capped_vertical_loss_nominal_m": 4.858707884404435,
+        "vertical_mae_on_common_nominal_m": 1.2531386092523813,
+        "capped_gradient_loss_nominal_m_per_m": 2.2667131793623847,
+        "slope_mae_degrees_nominal_z": 5.107537459252209,
+        "normal_error_degrees_nominal_z": 7.044421106046105,
+        "symmetric_surface_distance_nominal_m": 3.245996900783901
+      },
+      "legacy_guarded": {
+        "capped_vertical_loss_nominal_m": 4.859050805527922,
+        "vertical_mae_on_common_nominal_m": 1.254295783622051,
+        "capped_gradient_loss_nominal_m_per_m": 2.2669758916700897,
+        "slope_mae_degrees_nominal_z": 5.115935753839131,
+        "normal_error_degrees_nominal_z": 7.05244308624546,
+        "symmetric_surface_distance_nominal_m": 3.2458503469224844
+      },
+      "fusion": {
+        "capped_vertical_loss_nominal_m": 4.858473483432659,
+        "vertical_mae_on_common_nominal_m": 1.2718518978270692,
+        "capped_gradient_loss_nominal_m_per_m": 2.2666493474623155,
+        "slope_mae_degrees_nominal_z": 5.343353879331578,
+        "normal_error_degrees_nominal_z": 7.2809652728999295,
+        "symmetric_surface_distance_nominal_m": 3.2393524607452977
+      },
+      "context_fusion": {
+        "capped_vertical_loss_nominal_m": 4.8583724156298125,
+        "vertical_mae_on_common_nominal_m": 1.2530319667340448,
+        "capped_gradient_loss_nominal_m_per_m": 2.266603080374909,
+        "slope_mae_degrees_nominal_z": 5.113938698071787,
+        "normal_error_degrees_nominal_z": 7.050908103979467,
+        "symmetric_surface_distance_nominal_m": 3.2458687257166314
+      }
+    },
+    "paired_method_minus_raw": {
+      "legacy_guarded": {
+        "capped_vertical_loss_nominal_m": 0.0003429211234868633,
+        "vertical_mae_on_common_nominal_m": 0.001157174369669562,
+        "capped_gradient_loss_nominal_m_per_m": 0.0002627123077052711,
+        "slope_mae_degrees_nominal_z": 0.008398294586921458,
+        "normal_error_degrees_nominal_z": 0.008021980199354366,
+        "symmetric_surface_distance_nominal_m": -0.00014655386141637685
+      },
+      "fusion": {
+        "capped_vertical_loss_nominal_m": -0.00023440097177549946,
+        "vertical_mae_on_common_nominal_m": -7.44497974018323e-05,
+        "capped_gradient_loss_nominal_m_per_m": -6.383190006922842e-05,
+        "slope_mae_degrees_nominal_z": -0.0005182779196953911,
+        "normal_error_degrees_nominal_z": -8.539497218461004e-07,
+        "symmetric_surface_distance_nominal_m": -0.006644440038603307
+      },
+      "context_fusion": {
+        "capped_vertical_loss_nominal_m": -0.0003354687746225353,
+        "vertical_mae_on_common_nominal_m": -0.0001066425183365341,
+        "capped_gradient_loss_nominal_m_per_m": -0.00011009898747555607,
+        "slope_mae_degrees_nominal_z": 0.00640123881957757,
+        "normal_error_degrees_nominal_z": 0.006486997933362388,
+        "symmetric_surface_distance_nominal_m": -0.000128175067269432
+      }
+    }
+  },
+  "Boston_interpretation": "Known metre conversion, but no fully verified shared vertical realization/time-matched unchanged-roof GT. Paired capped-loss changes for fusion/context are only about -0.000234/-0.000335 nominal metre, providing no substantive contrary height-accuracy evidence. Boston contains none of the high-NDVI-proxy58 DC cases and cannot adjudicate their canopy-height accuracy.",
+  "DC_existing_nominal_Z_diagnostic": {
+    "new_expansion_units": 1424,
+    "reference_z_units_verified": false,
+    "vertical_datum_verified": false,
+    "z_policies": [
+      "none"
+    ],
+    "means": {
+      "raw": {
+        "capped_vertical_loss_nominal_m": 2.6622263264405177,
+        "vertical_mae_on_common_nominal_m": 0.9241375562209814,
+        "capped_gradient_loss_nominal_m_per_m": 1.2497109464956442,
+        "slope_mae_degrees_nominal_z": 6.870498786992305,
+        "normal_error_degrees_nominal_z": 11.571654939445404,
+        "symmetric_surface_distance_nominal_m": 2.123977276598105
+      },
+      "legacy_guarded": {
+        "capped_vertical_loss_nominal_m": 2.766846936211952,
+        "vertical_mae_on_common_nominal_m": 0.7329753206851342,
+        "capped_gradient_loss_nominal_m_per_m": 1.3540371410614942,
+        "slope_mae_degrees_nominal_z": 6.279198962323548,
+        "normal_error_degrees_nominal_z": 10.759457731095358,
+        "symmetric_surface_distance_nominal_m": 2.2384017026585172
+      },
+      "fusion": {
+        "capped_vertical_loss_nominal_m": 2.8334110692666967,
+        "vertical_mae_on_common_nominal_m": 0.7762528366148981,
+        "capped_gradient_loss_nominal_m_per_m": 1.3775698215156498,
+        "slope_mae_degrees_nominal_z": 6.455249808364925,
+        "normal_error_degrees_nominal_z": 11.059071708306751,
+        "symmetric_surface_distance_nominal_m": 2.3002215019262553
+      },
+      "context_fusion": {
+        "capped_vertical_loss_nominal_m": 2.861666033690133,
+        "vertical_mae_on_common_nominal_m": 0.7031583909652707,
+        "capped_gradient_loss_nominal_m_per_m": 1.408072845082332,
+        "slope_mae_degrees_nominal_z": 6.250309095622189,
+        "normal_error_degrees_nominal_z": 10.700328041320228,
+        "symmetric_surface_distance_nominal_m": 2.3532834565304706
+      }
+    },
+    "paired_method_minus_raw": {
+      "legacy_guarded": {
+        "capped_vertical_loss_nominal_m": 0.10462060977143443,
+        "vertical_mae_on_common_nominal_m": -0.060677006039651434,
+        "capped_gradient_loss_nominal_m_per_m": 0.1043261945658501,
+        "slope_mae_degrees_nominal_z": -0.26903646460572833,
+        "normal_error_degrees_nominal_z": -0.342410582457576,
+        "symmetric_surface_distance_nominal_m": 0.11442442606041245
+      },
+      "fusion": {
+        "capped_vertical_loss_nominal_m": 0.17118474282617888,
+        "vertical_mae_on_common_nominal_m": -0.050479346850698124,
+        "capped_gradient_loss_nominal_m_per_m": 0.12785887502000565,
+        "slope_mae_degrees_nominal_z": -0.17426438068230504,
+        "normal_error_degrees_nominal_z": -0.17853941205563928,
+        "symmetric_surface_distance_nominal_m": 0.17624422532815037
+      },
+      "context_fusion": {
+        "capped_vertical_loss_nominal_m": 0.19943970724961527,
+        "vertical_mae_on_common_nominal_m": -0.06455331722949048,
+        "capped_gradient_loss_nominal_m_per_m": 0.1583618985866881,
+        "slope_mae_degrees_nominal_z": -0.27953081761449133,
+        "normal_error_degrees_nominal_z": -0.3635242997531644,
+        "symmetric_surface_distance_nominal_m": 0.2293061799323655
+      }
+    }
+  },
+  "DC_interpretation": "Conditional error on surviving common-area roofs may decrease while fixed-denominator capped loss and missing fraction increase. This is consistent with a precision/completeness tradeoff; unknown units/datum and epochs prohibit a certified true-height conclusion.",
+  "source_evidence": [
+    {
+      "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Facility_and_Structure/MapServer/3/metadata",
+      "kind": "official raw ArcGIS metadata XML, not CityGML",
+      "retrieved_utc": "2026-11-04T20:54:04.129962+00:00",
+      "sha256": "4598ae82a42ede3ede98d6a00948a3fd65cb3b8704ca18972f35f3cc8baa4b04",
+      "bytes": 270194,
+      "layer": 3,
+      "spatial_elements": [
+        {
+          "tag": "csUnits",
+          "value": "Linear Unit: Meter (1.000000)"
+        },
+        {
+          "tag": "projcsn",
+          "value": "NAD_1983_StatePlane_Maryland_FIPS_1900"
+        },
+        {
+          "tag": "vertMinVal",
+          "value": "-100000.000000"
+        },
+        {
+          "tag": "vertMaxVal",
+          "value": "-100000.000000"
+        }
+      ],
+      "document_has_named_vertical_CRS": false,
+      "attribute_definitions": {}
+    },
+    {
+      "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Facility_and_Structure/MapServer/13/metadata",
+      "kind": "official raw ArcGIS metadata XML, not CityGML",
+      "retrieved_utc": "2026-11-04T20:54:04.419663+00:00",
+      "sha256": "90b231b65b4d1eab92bc668446913d6624d5ec77f8875392f33077ea096132cf",
+      "bytes": 216120,
+      "layer": 13,
+      "spatial_elements": [
+        {
+          "tag": "csUnits",
+          "value": "Linear Unit: Meter (1.000000)"
+        },
+        {
+          "tag": "projcsn",
+          "value": "NAD_1983_StatePlane_Maryland_FIPS_1900"
+        },
+        {
+          "tag": "vertMinVal",
+          "value": "-100000.000000"
+        },
+        {
+          "tag": "vertMaxVal",
+          "value": "-100000.000000"
+        }
+      ],
+      "document_has_named_vertical_CRS": false,
+      "attribute_definitions": {
+        "ALTITUDE_MAX": "Highest point of structure from sea level",
+        "HOUSE_HEIGHT": "Highest point of structure from ground level in meters."
+      }
+    },
+    {
+      "cached_file": "/nfs/home/yfeng21/lod2_pilot_20261017/data/reference/dc_buildings_3d_2013_layer_metadata.json",
+      "sha256": "48760f7e6e3f97fe2e5636d9caa86a106720aa0d21657867502f3e76fa45b27d",
+      "kind": "official MapServer layer JSON cache",
+      "layer": 3,
+      "spatialReference": {
+        "wkid": 26985,
+        "latestWkid": 26985,
+        "xyTolerance": 0.001,
+        "zTolerance": 0.001,
+        "mTolerance": 0.001,
+        "falseX": -36747100,
+        "falseY": -29091500,
+        "xyUnits": 121236910.21292362,
+        "falseZ": -100000,
+        "zUnits": 10000,
+        "falseM": -100000,
+        "mUnits": 10000
+      },
+      "sourceSpatialReference": {
+        "wkid": 26985,
+        "latestWkid": 26985,
+        "xyTolerance": 0.002,
+        "zTolerance": 0.001,
+        "mTolerance": 0.001,
+        "falseX": -36747100,
+        "falseY": -29091500,
+        "xyUnits": 1000,
+        "falseZ": -100000,
+        "zUnits": 10000,
+        "falseM": -100000,
+        "mUnits": 4503604130.97463
+      },
+      "hasZ": true,
+      "vcsWkid_present": false
+    },
+    {
+      "cached_file": "/nfs/home/yfeng21/lod2_pilot_20261017/data/reference/dc_detailed_roof_layer_metadata.json",
+      "sha256": "73b03c6fc8882e0c46bdef8ea1b25af08ddf710c4b3c4a4db0f7e64a7dbb151e",
+      "kind": "official MapServer layer JSON cache",
+      "layer": 13,
+      "spatialReference": {
+        "wkid": 26985,
+        "latestWkid": 26985,
+        "xyTolerance": 0.001,
+        "zTolerance": 0.001,
+        "mTolerance": 0.001,
+        "falseX": -36747100,
+        "falseY": -29091500,
+        "xyUnits": 121236910.21292362,
+        "falseZ": -100000,
+        "zUnits": 10000,
+        "falseM": -100000,
+        "mUnits": 10000
+      },
+      "sourceSpatialReference": {
+        "wkid": 26985,
+        "latestWkid": 26985,
+        "xyTolerance": 0.002,
+        "zTolerance": 0.001,
+        "mTolerance": 0.001,
+        "falseX": -36747100,
+        "falseY": -29091500,
+        "xyUnits": 1000,
+        "falseZ": -100000,
+        "zUnits": 10000,
+        "falseM": -100000,
+        "mUnits": 4503604130.97463
+      },
+      "hasZ": true,
+      "vcsWkid_present": false
+    },
+    {
+      "cached_file": "/nfs/home/yfeng21/lod2_gt_audit_20261016/dc_roof_metadata.xml",
+      "sha256": "80e9e9a6180cc367bd8cfe8090b9ee19eac67336626b804b30d1ad3809a47263",
+      "kind": "cached official ISO19139 metadata XML, not CityGML",
+      "vertical_and_crs_elements": [
+        {
+          "tag": "referenceSystemIdentifier",
+          "attributes": {},
+          "text": "26985 \n \n \n EPSG \n \n \n 4.5(3.0.1)"
+        },
+        {
+          "tag": "verticalCRS",
+          "attributes": {
+            "{http://www.isotc211.org/2005/gco}nilReason": "other:see_referenceSystemInfo"
+          },
+          "text": ""
+        }
+      ]
+    },
+    {
+      "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Facility_and_Structure/MapServer/queryDataElements?layers=%5B3%2C13%5D&f=json",
+      "retrieved_utc": "2026-11-04T20:54:04.623779+00:00",
+      "sha256": "b7d8f86545552b212db7b90fc65c0ce3314eef60291002ae883041bb283a2b34",
+      "kind": "official source data-element spatial references",
+      "spatial_references": [
+        {
+          "layer": 3,
+          "spatialReference": {
+            "wkid": 26985,
+            "latestWkid": 26985
+          }
+        },
+        {
+          "layer": 13,
+          "spatialReference": {
+            "wkid": 26985,
+            "latestWkid": 26985
+          }
+        }
+      ]
+    }
+  ],
+  "frozen_result_source_hashes": {
+    "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/reports/summary.json": "ae9bbd869f0d0565e2e656a3337d496da6af670fb11e78f24337e244d3d74378",
+    "/lustre/isaac24/scratch/yfeng21/lod2_reference_eval_20261104/reports/evaluation.json": "b55a3c0339ca3cca3dd5ccf639093ef1204bc1e096fc218281eb9902eb1e89de"
+  },
+  "additional_primary_metadata_URLs": [
+    "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Facility_and_Structure/MapServer/13/metadata?format=fgdc",
+    "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Facility_and_Structure/MapServer/3/metadata?format=fgdc",
+    "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_APPS/FEMS_Awareness_Viewer/MapServer/11",
+    "https://developers.arcgis.com/rest/users-groups-and-items/metadata-reference/"
+  ]
+}

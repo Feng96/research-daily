@@ -1,0 +1,738 @@
+{
+  "schema": "reference-evaluation-web-v1",
+  "updatedUtc": "2026-11-04T20:43:40.638301+00:00",
+  "track": "reference_footprint_conditioned_roof",
+  "referenceIsAlgorithm": false,
+  "chapter": "dl",
+  "groupOrder": [
+    "raw",
+    "legacy_guarded",
+    "fusion",
+    "context_fusion",
+    "reference"
+  ],
+  "groupLabels": {
+    "raw": "原始点云",
+    "legacy_guarded": "旧融合＋平面保护",
+    "fusion": "光学＋点特征融合",
+    "context_fusion": "光学＋点云邻域融合",
+    "reference": "外部参考屋顶（非算法）"
+  },
+  "referenceMode": true,
+  "blocks": [
+    {
+      "id": "boston_g5",
+      "city": "Boston",
+      "sourceRecordCount": 332,
+      "referenceUnits": 332,
+      "buildingCount": 332,
+      "viewer": "../reference-eval/blocks/boston_g5/viewer.json.gz",
+      "imageryDate": "2014-07-12",
+      "inputReady": true,
+      "inputReadyRecordCount": 332,
+      "viewerUrl": "../reference-eval/blocks/boston_g5/viewer.json.gz",
+      "inputDate": {
+        "NAIP": [
+          "m_4207148_nw_19_1_20140712"
+        ],
+        "LiDAR_project": [
+          "2013-11-16",
+          "2014-12-27"
+        ]
+      },
+      "referenceDate": "2011-04-01 /2011-04-04",
+      "imageryCatalogYear": 2014,
+      "referenceZUnitsVerified": true,
+      "methodCounts": {
+        "raw": {
+          "attempted": 332,
+          "scored": 332,
+          "geometry": 283
+        },
+        "legacy_guarded": {
+          "attempted": 332,
+          "scored": 332,
+          "geometry": 283
+        },
+        "fusion": {
+          "attempted": 332,
+          "scored": 332,
+          "geometry": 284
+        },
+        "context_fusion": {
+          "attempted": 332,
+          "scored": 332,
+          "geometry": 283
+        }
+      },
+      "evaluationRoles": {
+        "new_expansion": 306,
+        "historical_development_group": 26
+      },
+      "viewerBytes": 5224451,
+      "pointPayloadCount": 332,
+      "pointPayloadBytes": 128005663
+    },
+    {
+      "id": "dc_capitol_hill",
+      "city": "Washington DC",
+      "sourceRecordCount": 207,
+      "referenceUnits": 207,
+      "buildingCount": 207,
+      "viewer": "../reference-eval/blocks/dc_capitol_hill/viewer.json.gz",
+      "imageryDate": "2013-09-24",
+      "inputReady": true,
+      "inputReadyRecordCount": 207,
+      "viewerUrl": "../reference-eval/blocks/dc_capitol_hill/viewer.json.gz",
+      "inputDate": {
+        "NAIP": [
+          "m_3807708_se_18_1_20130924",
+          "m_3807601_sw_18_1_20130924"
+        ],
+        "LiDAR_project": [
+          "2014-04-10",
+          "2014-12-20"
+        ]
+      },
+      "referenceDate": "mixed2005/2010/2013 stereo imagery",
+      "imageryCatalogYear": 2013,
+      "referenceZUnitsVerified": false,
+      "methodCounts": {
+        "raw": {
+          "attempted": 207,
+          "scored": 207,
+          "geometry": 188
+        },
+        "legacy_guarded": {
+          "attempted": 207,
+          "scored": 207,
+          "geometry": 187
+        },
+        "fusion": {
+          "attempted": 207,
+          "scored": 207,
+          "geometry": 186
+        },
+        "context_fusion": {
+          "attempted": 207,
+          "scored": 207,
+          "geometry": 182
+        }
+      },
+      "evaluationRoles": {
+        "new_expansion": 207
+      },
+      "viewerBytes": 1611020,
+      "pointPayloadCount": 207,
+      "pointPayloadBytes": 49753541
+    },
+    {
+      "id": "dc_dupont",
+      "city": "Washington DC",
+      "sourceRecordCount": 97,
+      "referenceUnits": 97,
+      "buildingCount": 97,
+      "viewer": "../reference-eval/blocks/dc_dupont/viewer.json.gz",
+      "imageryDate": "2014-09-27",
+      "inputReady": true,
+      "inputReadyRecordCount": 97,
+      "viewerUrl": "../reference-eval/blocks/dc_dupont/viewer.json.gz",
+      "inputDate": {
+        "NAIP": [
+          "m_3807708_se_18_1_20140927"
+        ],
+        "LiDAR_project": [
+          "2014-04-10",
+          "2014-12-20"
+        ]
+      },
+      "referenceDate": "mixed2005/2010/2013 stereo imagery",
+      "imageryCatalogYear": 2014,
+      "referenceZUnitsVerified": false,
+      "methodCounts": {
+        "raw": {
+          "attempted": 97,
+          "scored": 97,
+          "geometry": 86
+        },
+        "legacy_guarded": {
+          "attempted": 97,
+          "scored": 97,
+          "geometry": 83
+        },
+        "fusion": {
+          "attempted": 97,
+          "scored": 97,
+          "geometry": 86
+        },
+        "context_fusion": {
+          "attempted": 97,
+          "scored": 97,
+          "geometry": 85
+        }
+      },
+      "evaluationRoles": {
+        "new_expansion": 97
+      },
+      "viewerBytes": 1088612,
+      "pointPayloadCount": 97,
+      "pointPayloadBytes": 36686535
+    },
+    {
+      "id": "dc_adams_morgan",
+      "city": "Washington DC",
+      "sourceRecordCount": 135,
+      "referenceUnits": 135,
+      "buildingCount": 135,
+      "viewer": "../reference-eval/blocks/dc_adams_morgan/viewer.json.gz",
+      "imageryDate": "2014-09-27",
+      "inputReady": true,
+      "inputReadyRecordCount": 135,
+      "viewerUrl": "../reference-eval/blocks/dc_adams_morgan/viewer.json.gz",
+      "inputDate": {
+        "NAIP": [
+          "m_3807708_se_18_1_20140927"
+        ],
+        "LiDAR_project": [
+          "2014-04-10",
+          "2014-12-20"
+        ]
+      },
+      "referenceDate": "mixed2005/2010/2013 stereo imagery",
+      "imageryCatalogYear": 2014,
+      "referenceZUnitsVerified": false,
+      "methodCounts": {
+        "raw": {
+          "attempted": 135,
+          "scored": 135,
+          "geometry": 109
+        },
+        "legacy_guarded": {
+          "attempted": 135,
+          "scored": 135,
+          "geometry": 108
+        },
+        "fusion": {
+          "attempted": 135,
+          "scored": 135,
+          "geometry": 109
+        },
+        "context_fusion": {
+          "attempted": 135,
+          "scored": 135,
+          "geometry": 108
+        }
+      },
+      "evaluationRoles": {
+        "new_expansion": 135
+      },
+      "viewerBytes": 1016642,
+      "pointPayloadCount": 135,
+      "pointPayloadBytes": 41960078
+    },
+    {
+      "id": "dc_brookland",
+      "city": "Washington DC",
+      "sourceRecordCount": 261,
+      "referenceUnits": 261,
+      "buildingCount": 261,
+      "viewer": "../reference-eval/blocks/dc_brookland/viewer.json.gz",
+      "imageryDate": "2013-09-24",
+      "inputReady": true,
+      "inputReadyRecordCount": 261,
+      "viewerUrl": "../reference-eval/blocks/dc_brookland/viewer.json.gz",
+      "inputDate": {
+        "NAIP": [
+          "m_3807601_nw_18_1_20130924",
+          "m_3807601_sw_18_1_20130924"
+        ],
+        "LiDAR_project": [
+          "2014-04-10",
+          "2014-12-20"
+        ]
+      },
+      "referenceDate": "mixed2005/2010/2013 stereo imagery",
+      "imageryCatalogYear": 2013,
+      "referenceZUnitsVerified": false,
+      "methodCounts": {
+        "raw": {
+          "attempted": 261,
+          "scored": 261,
+          "geometry": 211
+        },
+        "legacy_guarded": {
+          "attempted": 261,
+          "scored": 261,
+          "geometry": 194
+        },
+        "fusion": {
+          "attempted": 261,
+          "scored": 261,
+          "geometry": 193
+        },
+        "context_fusion": {
+          "attempted": 261,
+          "scored": 261,
+          "geometry": 188
+        }
+      },
+      "evaluationRoles": {
+        "new_expansion": 261
+      },
+      "viewerBytes": 1164185,
+      "pointPayloadCount": 261,
+      "pointPayloadBytes": 29827754
+    },
+    {
+      "id": "dc_petworth",
+      "city": "Washington DC",
+      "sourceRecordCount": 209,
+      "referenceUnits": 209,
+      "buildingCount": 209,
+      "viewer": "../reference-eval/blocks/dc_petworth/viewer.json.gz",
+      "imageryDate": "2013-09-24",
+      "inputReady": true,
+      "inputReadyRecordCount": 209,
+      "viewerUrl": "../reference-eval/blocks/dc_petworth/viewer.json.gz",
+      "inputDate": {
+        "NAIP": [
+          "m_3807708_ne_18_1_20130924",
+          "m_3807708_se_18_1_20130924"
+        ],
+        "LiDAR_project": [
+          "2014-04-10",
+          "2014-12-20"
+        ]
+      },
+      "referenceDate": "mixed2005/2010/2013 stereo imagery",
+      "imageryCatalogYear": 2013,
+      "referenceZUnitsVerified": false,
+      "methodCounts": {
+        "raw": {
+          "attempted": 209,
+          "scored": 209,
+          "geometry": 174
+        },
+        "legacy_guarded": {
+          "attempted": 209,
+          "scored": 209,
+          "geometry": 168
+        },
+        "fusion": {
+          "attempted": 209,
+          "scored": 209,
+          "geometry": 166
+        },
+        "context_fusion": {
+          "attempted": 209,
+          "scored": 209,
+          "geometry": 166
+        }
+      },
+      "evaluationRoles": {
+        "new_expansion": 209
+      },
+      "viewerBytes": 1107811,
+      "pointPayloadCount": 209,
+      "pointPayloadBytes": 30719192
+    },
+    {
+      "id": "dc_anacostia",
+      "city": "Washington DC",
+      "sourceRecordCount": 172,
+      "referenceUnits": 172,
+      "buildingCount": 172,
+      "viewer": "../reference-eval/blocks/dc_anacostia/viewer.json.gz",
+      "imageryDate": "2013-09-24",
+      "inputReady": true,
+      "inputReadyRecordCount": 172,
+      "viewerUrl": "../reference-eval/blocks/dc_anacostia/viewer.json.gz",
+      "inputDate": {
+        "NAIP": [
+          "m_3807609_nw_18_1_20130924"
+        ],
+        "LiDAR_project": [
+          "2014-04-10",
+          "2014-12-20"
+        ]
+      },
+      "referenceDate": "mixed2005/2010/2013 stereo imagery",
+      "imageryCatalogYear": 2013,
+      "referenceZUnitsVerified": false,
+      "methodCounts": {
+        "raw": {
+          "attempted": 172,
+          "scored": 172,
+          "geometry": 152
+        },
+        "legacy_guarded": {
+          "attempted": 172,
+          "scored": 172,
+          "geometry": 147
+        },
+        "fusion": {
+          "attempted": 172,
+          "scored": 172,
+          "geometry": 145
+        },
+        "context_fusion": {
+          "attempted": 172,
+          "scored": 172,
+          "geometry": 144
+        }
+      },
+      "evaluationRoles": {
+        "new_expansion": 172
+      },
+      "viewerBytes": 745387,
+      "pointPayloadCount": 172,
+      "pointPayloadBytes": 25430918
+    },
+    {
+      "id": "dc_cleveland_park",
+      "city": "Washington DC",
+      "sourceRecordCount": 277,
+      "referenceUnits": 277,
+      "buildingCount": 277,
+      "viewer": "../reference-eval/blocks/dc_cleveland_park/viewer.json.gz",
+      "imageryDate": "2014-09-27",
+      "inputReady": true,
+      "inputReadyRecordCount": 277,
+      "viewerUrl": "../reference-eval/blocks/dc_cleveland_park/viewer.json.gz",
+      "inputDate": {
+        "NAIP": [
+          "m_3807708_nw_18_1_20140927",
+          "m_3807708_se_18_1_20140927",
+          "m_3807708_sw_18_1_20140927"
+        ],
+        "LiDAR_project": [
+          "2014-04-10",
+          "2014-12-20"
+        ]
+      },
+      "referenceDate": "mixed2005/2010/2013 stereo imagery",
+      "imageryCatalogYear": 2014,
+      "referenceZUnitsVerified": false,
+      "methodCounts": {
+        "raw": {
+          "attempted": 277,
+          "scored": 277,
+          "geometry": 251
+        },
+        "legacy_guarded": {
+          "attempted": 277,
+          "scored": 277,
+          "geometry": 247
+        },
+        "fusion": {
+          "attempted": 277,
+          "scored": 277,
+          "geometry": 246
+        },
+        "context_fusion": {
+          "attempted": 277,
+          "scored": 277,
+          "geometry": 242
+        }
+      },
+      "evaluationRoles": {
+        "new_expansion": 277
+      },
+      "viewerBytes": 1747443,
+      "pointPayloadCount": 277,
+      "pointPayloadBytes": 32107896
+    },
+    {
+      "id": "dc_woodley_park",
+      "city": "Washington DC",
+      "sourceRecordCount": 66,
+      "referenceUnits": 66,
+      "buildingCount": 66,
+      "viewer": "../reference-eval/blocks/dc_woodley_park/viewer.json.gz",
+      "imageryDate": "2014-09-27",
+      "inputReady": true,
+      "inputReadyRecordCount": 66,
+      "viewerUrl": "../reference-eval/blocks/dc_woodley_park/viewer.json.gz",
+      "inputDate": {
+        "NAIP": [
+          "m_3807708_se_18_1_20140927"
+        ],
+        "LiDAR_project": [
+          "2014-04-10",
+          "2014-12-20"
+        ]
+      },
+      "referenceDate": "mixed2005/2010/2013 stereo imagery",
+      "imageryCatalogYear": 2014,
+      "referenceZUnitsVerified": false,
+      "methodCounts": {
+        "raw": {
+          "attempted": 66,
+          "scored": 66,
+          "geometry": 49
+        },
+        "legacy_guarded": {
+          "attempted": 66,
+          "scored": 66,
+          "geometry": 49
+        },
+        "fusion": {
+          "attempted": 66,
+          "scored": 66,
+          "geometry": 49
+        },
+        "context_fusion": {
+          "attempted": 66,
+          "scored": 66,
+          "geometry": 49
+        }
+      },
+      "evaluationRoles": {
+        "new_expansion": 66
+      },
+      "viewerBytes": 445361,
+      "pointPayloadCount": 66,
+      "pointPayloadBytes": 18135184
+    }
+  ],
+  "sourceCandidateRecords": 1756,
+  "inputReadyRecords": 1756,
+  "scoredReferenceUnits": 1756,
+  "candidateRecordsAreNotScoredEntities": true,
+  "scientificRecordsPruned": false,
+  "pointDownsampling": false,
+  "limits": [
+    "Common external-reference footprint is an input condition; not end-to-end building extraction.",
+    "DC source Z units/datum remain unverified and displayed as original nominal values; no reference-to-prediction height fitting.",
+    "Imagery and LiDAR epochs differ; reference2011/2021 must be inspected separately.",
+    "Native shell/full scientific artifacts remain in the experiment; web meshes show only evaluator-compiled roof surfaces."
+  ],
+  "reports": {
+    "evaluation.json": "../reference-eval/reports/evaluation.json.gz",
+    "reconstruction_status.json": "../reference-eval/reports/reconstruction_status.json.gz",
+    "multicity_inventory.json": "../reference-eval/reports/multicity_inventory.json.gz",
+    "ground_class_evidence.json": "../reference-eval/reports/ground_class_evidence.json",
+    "footprint_fragmentation_diagnostic.json": "reference-eval/reports/footprint_fragmentation_diagnostic.json",
+    "dc_reference_vertical_evidence.json": "reference-eval/reports/dc_reference_vertical_evidence.json"
+  },
+  "counts": {
+    "frozen": 1756,
+    "ready": 1756,
+    "strict_new": 1730,
+    "strict_new_ready": 1730,
+    "scored": 1756,
+    "not_attempted": 0
+  },
+  "evaluationCohortUnits": 1756,
+  "methods": [
+    {
+      "id": "raw",
+      "label": "原始点云",
+      "isAlgorithm": true
+    },
+    {
+      "id": "legacy_guarded",
+      "label": "旧融合＋平面保护",
+      "isAlgorithm": true
+    },
+    {
+      "id": "fusion",
+      "label": "光学＋点特征融合",
+      "isAlgorithm": true
+    },
+    {
+      "id": "context_fusion",
+      "label": "光学＋点云邻域融合",
+      "isAlgorithm": true
+    },
+    {
+      "id": "reference",
+      "label": "外部参考屋顶（非算法）",
+      "isAlgorithm": false
+    }
+  ],
+  "countDefinition": "scored=usable external-reference units with all four methods execution-complete, including algorithm-empty/failed outcomes; pending execution is separate. Source candidates, ready observations and strict-new roles are distinct.",
+  "blocksExported": 9,
+  "allFrozenBlocksExported": true,
+  "exportBytes": 421271947,
+  "completePointExport": true,
+  "downloads": [
+    {
+      "block_id": "boston_g5",
+      "part": "part01",
+      "units": 100,
+      "models": 400,
+      "bytes": 4388911,
+      "url": "reference-eval/downloads/boston_g5_part01.zip"
+    },
+    {
+      "block_id": "boston_g5",
+      "part": "part02",
+      "units": 100,
+      "models": 400,
+      "bytes": 3318460,
+      "url": "reference-eval/downloads/boston_g5_part02.zip"
+    },
+    {
+      "block_id": "boston_g5",
+      "part": "part03",
+      "units": 100,
+      "models": 400,
+      "bytes": 3552097,
+      "url": "reference-eval/downloads/boston_g5_part03.zip"
+    },
+    {
+      "block_id": "boston_g5",
+      "part": "part04",
+      "units": 32,
+      "models": 128,
+      "bytes": 1126274,
+      "url": "reference-eval/downloads/boston_g5_part04.zip"
+    },
+    {
+      "block_id": "dc_capitol_hill",
+      "part": "part01",
+      "units": 100,
+      "models": 400,
+      "bytes": 2385380,
+      "url": "reference-eval/downloads/dc_capitol_hill_part01.zip"
+    },
+    {
+      "block_id": "dc_capitol_hill",
+      "part": "part02",
+      "units": 100,
+      "models": 400,
+      "bytes": 2338107,
+      "url": "reference-eval/downloads/dc_capitol_hill_part02.zip"
+    },
+    {
+      "block_id": "dc_capitol_hill",
+      "part": "part03",
+      "units": 7,
+      "models": 28,
+      "bytes": 272184,
+      "url": "reference-eval/downloads/dc_capitol_hill_part03.zip"
+    },
+    {
+      "block_id": "dc_dupont",
+      "part": "part01",
+      "units": 97,
+      "models": 388,
+      "bytes": 3095039,
+      "url": "reference-eval/downloads/dc_dupont_part01.zip"
+    },
+    {
+      "block_id": "dc_adams_morgan",
+      "part": "part01",
+      "units": 100,
+      "models": 400,
+      "bytes": 2449399,
+      "url": "reference-eval/downloads/dc_adams_morgan_part01.zip"
+    },
+    {
+      "block_id": "dc_adams_morgan",
+      "part": "part02",
+      "units": 35,
+      "models": 140,
+      "bytes": 692320,
+      "url": "reference-eval/downloads/dc_adams_morgan_part02.zip"
+    },
+    {
+      "block_id": "dc_brookland",
+      "part": "part01",
+      "units": 100,
+      "models": 400,
+      "bytes": 1727203,
+      "url": "reference-eval/downloads/dc_brookland_part01.zip"
+    },
+    {
+      "block_id": "dc_brookland",
+      "part": "part02",
+      "units": 100,
+      "models": 400,
+      "bytes": 1729556,
+      "url": "reference-eval/downloads/dc_brookland_part02.zip"
+    },
+    {
+      "block_id": "dc_brookland",
+      "part": "part03",
+      "units": 61,
+      "models": 244,
+      "bytes": 860952,
+      "url": "reference-eval/downloads/dc_brookland_part03.zip"
+    },
+    {
+      "block_id": "dc_petworth",
+      "part": "part01",
+      "units": 100,
+      "models": 400,
+      "bytes": 1735749,
+      "url": "reference-eval/downloads/dc_petworth_part01.zip"
+    },
+    {
+      "block_id": "dc_petworth",
+      "part": "part02",
+      "units": 100,
+      "models": 400,
+      "bytes": 2125261,
+      "url": "reference-eval/downloads/dc_petworth_part02.zip"
+    },
+    {
+      "block_id": "dc_petworth",
+      "part": "part03",
+      "units": 9,
+      "models": 36,
+      "bytes": 126673,
+      "url": "reference-eval/downloads/dc_petworth_part03.zip"
+    },
+    {
+      "block_id": "dc_anacostia",
+      "part": "part01",
+      "units": 100,
+      "models": 400,
+      "bytes": 1744197,
+      "url": "reference-eval/downloads/dc_anacostia_part01.zip"
+    },
+    {
+      "block_id": "dc_anacostia",
+      "part": "part02",
+      "units": 72,
+      "models": 288,
+      "bytes": 1154785,
+      "url": "reference-eval/downloads/dc_anacostia_part02.zip"
+    },
+    {
+      "block_id": "dc_cleveland_park",
+      "part": "part01",
+      "units": 100,
+      "models": 400,
+      "bytes": 1688748,
+      "url": "reference-eval/downloads/dc_cleveland_park_part01.zip"
+    },
+    {
+      "block_id": "dc_cleveland_park",
+      "part": "part02",
+      "units": 100,
+      "models": 400,
+      "bytes": 2237153,
+      "url": "reference-eval/downloads/dc_cleveland_park_part02.zip"
+    },
+    {
+      "block_id": "dc_cleveland_park",
+      "part": "part03",
+      "units": 77,
+      "models": 308,
+      "bytes": 1669691,
+      "url": "reference-eval/downloads/dc_cleveland_park_part03.zip"
+    },
+    {
+      "block_id": "dc_woodley_park",
+      "part": "part01",
+      "units": 66,
+      "models": 264,
+      "bytes": 1405208,
+      "url": "reference-eval/downloads/dc_woodley_park_part01.zip"
+    }
+  ],
+  "downloadModelCount": 7024
+}

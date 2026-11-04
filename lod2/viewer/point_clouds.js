@@ -1,5 +1,5 @@
 // Visual inspection of frozen source observations; this module never fits a roof.
-export function createPointCloudController({THREE,root,map,chapter,getSelected,getGroup,isHidden,toast,onChange,onHeight,initialHash}){
+export function createPointCloudController({THREE,root,map,chapter,referenceMode=false,getSelected,getGroup,isHidden,toast,onChange,onHeight,initialHash}){
   const $=id=>document.getElementById(id),cache=new Map();
   let payload=null,activeId=null,requestToken=0,visibleCount=0,error=null,loading=false;
   const material=new THREE.PointsMaterial({size:3,sizeAttenuation:false,vertexColors:true,transparent:true,opacity:.95,depthWrite:false,depthTest:false,toneMapped:false});
@@ -36,6 +36,10 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
   function render(){
     cloud.geometry.dispose();cloud.geometry=new THREE.BufferGeometry();visibleCount=0;
     if(!payload||payload.id!==getSelected()?.id){appearance();return;}
+    const referenceGroup=referenceMode&&getGroup()==='reference';
+    for(const option of $('point-mode').options)if(['train','removed'].includes(option.value))option.disabled=referenceGroup;
+    const decisionOption=$('point-color').querySelector('option[value=decision]');if(decisionOption)decisionOption.disabled=referenceGroup;
+    if(referenceGroup){if(['train','removed'].includes($('point-mode').value))$('point-mode').value='inside';if($('point-color').value==='decision')$('point-color').value='height';}
     const key=chapter+'/'+getGroup(),setId=payload.groupToTrainSet[key];
     const originalCandidates=new Set(payload.trainSets[payload.groupToTrainSet[['workflow','canopy','repair','paper','dl'].includes(chapter)?chapter+'/raw':'tree/global']]||[]);
     const scoreKind=payload.groupToScoreModel?.[key]||'fusion',scores=payload.semanticScores?.[scoreKind]||[];
@@ -65,6 +69,8 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     $('point-membership').textContent=`本组候选 ${fmt(tm?.sourceRecordCount??train.size)} 条 · 留出 ${fmt(hm?.sourceRecordCount??test.size)} 条。颜色和筛选对应当前方法。`;
     const ambiguous=(tm?.ambiguousSourceCoordinates||0)+(hm?.ambiguousSourceCoordinates||0);
     if(['workflow','canopy','repair','paper','dl'].includes(chapter))$('point-membership').textContent=`当前阶段输入 ${fmt(train.size)} 点 · 原始候选 ${fmt(originalCandidates.size)} 点 · 原始索引精确对应；无独立屋顶GT。`;
+    if(referenceMode)$('point-membership').textContent=`本方法输入 ${fmt(train.size)} 点 · 原始候选 ${fmt(originalCandidates.size)} 点 · 按源索引对应；原始点未改动。`;
+    if(referenceGroup)$('point-membership').textContent='官方屋面参考没有筛点决策；叠加的是该建筑原始 3DEP 观测。';
     $('point-ambiguity').hidden=!ambiguous;
     $('point-ambiguity').textContent=`旧实验中 ${fmt(ambiguous)} 个成员坐标存在重合回波，按原坐标标记全部匹配源记录；候选记录数与可视回波数可能不同。`;
     $('point-legend').dataset.mode=colorMode;
@@ -79,14 +85,14 @@ export function createPointCloudController({THREE,root,map,chapter,getSelected,g
     try{
       let promise=cache.get(b.id);
       if(!promise){promise=(async()=>{
-        const response=await fetch((chapter==='dl'?'../data/points/':chapter==='paper'?'../next/canopy/data/points/':chapter==='repair'?'../repair/data/points/':['canopy','repair','paper','dl'].includes(chapter)?'../next/canopy/data/points/':chapter==='workflow'?'../next/data/points/':'../data/'+(chapter==='tree'?'tree-points/':'points/'))+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw new Error('点云 HTTP '+response.status);
+        const response=await fetch(referenceMode?b.pointsUrl:(chapter==='dl'?'../data/points/':chapter==='paper'?'../next/canopy/data/points/':chapter==='repair'?'../repair/data/points/':['canopy','repair','paper','dl'].includes(chapter)?'../next/canopy/data/points/':chapter==='workflow'?'../next/data/points/':'../data/'+(chapter==='tree'?'tree-points/':'points/'))+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw new Error('点云 HTTP '+response.status);
         const bytes=new Uint8Array(await response.arrayBuffer());
         const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);
-        const data=JSON.parse(text);if(chapter==='dl'){
+        const data=JSON.parse(text);if(chapter==='dl'&&!referenceMode){
       const response=await fetch('../dl/data/points/'+encodeURIComponent(b.id)+'.json.gz');if(!response.ok)throw Error('DL decisions HTTP '+response.status);const bytes=new Uint8Array(await response.arrayBuffer());const overlay=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());
       if(overlay.id!==data.id||overlay.sourceIndices.length!==data.flags.length)throw Error('DL source index length mismatch');data.sourceIndices=overlay.sourceIndices;data.trainSets=overlay.trainSets;data.groupToTrainSet=overlay.groupToTrainSet;data.groupToScoreModel=overlay.groupToScoreModel;data.tests={dl:[]};data.metadata.trainMemberships=overlay.trainMemberships;data.metadata.testMemberships={dl:{sourceRecordCount:0}};data.decisionMasks={};data.semanticScores={};for(const [method,values]of Object.entries(overlay.vegetation_scores)){const scores=new Float32Array(data.flags.length);scores.fill(-1);for(let i=0;i<values.length;i++)scores[overlay.candidateLocalIndices[i]]=values[i];data.semanticScores[method]=scores;}
     }if(chapter==='paper'){const selectedSet=new URLSearchParams(location.search).get('input')==='guarded'?'guarded':'raw';data.groupToTrainSet={...data.groupToTrainSet,'paper/raw':'raw',...Object.fromEntries(['initial','paper','ours'].map(k=>['paper/'+k,selectedSet]))};data.groupToScoreModel={...data.groupToScoreModel,...Object.fromEntries(['initial','paper','ours'].map(k=>['paper/'+k,'point']))};data.tests.paper=[];for(const g of ['initial','paper','ours'])data.metadata.trainMemberships['paper/'+g]={sourceRecordCount:data.trainSets[selectedSet].length,matchingMethod:'identical shared input source_indices'};}if(data.id!==b.id||data.positions.length!==data.flags.length*3)throw new Error('点云清单不一致');return data;
-      })();cache.set(b.id,promise);promise.catch(()=>cache.delete(b.id));}
+      })();cache.set(b.id,promise);if(referenceMode&&cache.size>6)cache.delete(cache.keys().next().value);promise.catch(()=>cache.delete(b.id));}
       const data=await promise;if(token!==requestToken||getSelected()?.id!==b.id)return;
       payload=data;loading=false;coordinates(b,data.targetLngLat);render();
     }catch(e){if(token!==requestToken)return;loading=false;error=e.message;$('point-status').textContent='点云加载失败：'+e.message+'。切换建筑可重试。';onHeight();}
