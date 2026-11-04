@@ -47,3 +47,9 @@ Added 14 dated entries from the USBF and LoD2 research histories, preserving all
 Added 16 entries for October 23–28, preserving all 29 earlier records (45 total). The update covers six-state publication, SpaceNet reference-frame and circle checks, geometric-change analysis, the local and public reproducible workflow, LoD2 point-model and spatial comparisons, the hollow-only prototype, US Buildings releases, and personal research pages.
 
 Dates use America/New_York and refer to the recorded work or verification. Earlier preparation entries remain historical snapshots. The primary 2,019-pair evaluation, separate curved-reference sample, historical regional cohort, national mixed-version catalog and bounded browser analyses keep their distinct scopes. New links point to public data, code, experiments and the current project pages. No experiment assets or existing study pages were changed.
+
+## November 4, 2026 update
+
+Added 22 dated entries for October 29–November 4 and preserved the 45 previous records (67 total). Coverage includes regional production and processing comparisons, archival/input recovery, manuscript review preparation and supplementary diagnostics, national-package integrity checks, versioned map display, provider loading, GIS/data-scope workflows and the local-engine interaction prototype.
+
+Dates use America/New_York. Completed calculations, public releases, dated operating snapshots and simulated prototypes retain their actual scopes. Private review text, case keys, operational URLs and infrastructure details are not published. The November 4 diagnostics reuse frozen data; they do not represent new independent reference observations or completed human review. The local package audit is separate from current remote publication and production. Existing study assets and application code remain unchanged.

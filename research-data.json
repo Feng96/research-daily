@@ -1,5 +1,357 @@
 [
   {
+    "id": "2026-11-04-regional-production-november-checkpoint",
+    "date": "2026-11-04",
+    "category": "USBF · Production",
+    "title": "Recorded 1.15 million accepted buildings beyond the six states",
+    "summary": "The November 4 early-morning checkpoint recorded 71 new accepted regions containing 1,147,324 buildings, with 47,953 recorded geometry changes. The completed six-state product remained protected and was counted separately.",
+    "status": "Dated regional production checkpoint",
+    "note": "These are accepted regional outputs, not a completed or newly published nationwide release. Geometry-change counts do not establish accuracy gains.",
+    "sources": [],
+    "details": "At 03:46 EST, a separate incremental check covered 54 regions and 792,827 buildings; that scope does not cover every latest geometry. Input preparation, I/O and delayed intermediate-file retirement continued to constrain production later that day."
+  },
+  {
+    "id": "2026-11-04-source-image-sensitivity",
+    "date": "2026-11-04",
+    "category": "USBF · Validation",
+    "title": "Recomputed source-image sensitivity and exact clustered intervals",
+    "summary": "Recomputed the frozen 171-modified-building results across six source-image groups, including leave-one-image-out checks and all 46,656 ordered cluster resamples. The NAIP-frame mean changes stayed at +2.77 percentage points for IoU and +5.53 for boundary F1 at 1 m.",
+    "status": "Statistical diagnostics completed",
+    "note": "The exact 95% interval was +1.06 to +5.18 points for IoU and -0.73 to +11.08 for F1. Positive leave-one-image-out means did not remove the uncertainty in mean boundary improvement.",
+    "sources": [
+      {
+        "label": "Frozen evaluation workflow and inputs",
+        "url": "https://github.com/Feng96/USBF_src/releases/tag/v0.1.3"
+      }
+    ],
+    "details": "Original-coordinate results remained negative. The exact enumeration is reported alongside the earlier Monte Carlo interval; it does not add independent images or training data. Matching and exclusion accounting were reconciled while preserving the 2,019 fixed pairs."
+  },
+  {
+    "id": "2026-11-04-decline-diagnostics-and-casebooks",
+    "date": "2026-11-04",
+    "category": "USBF · Validation",
+    "title": "Prepared decline diagnostics and blinded comparison cases",
+    "summary": "Identified 47 IoU declines and 54 boundary-F1 declines under the fixed threshold, with 60 buildings in their union. Prepared a 60-case annotated diagnostic book and a 120-case blinded A/B book with controls and a blank review form.",
+    "status": "Diagnostics prepared; human review pending",
+    "note": "The case sample was selected using metric outcomes and is not an unbiased estimate of correctness. No human annotations or causal judgments were invented.",
+    "sources": [
+      {
+        "label": "Frozen evaluation workflow and inputs",
+        "url": "https://github.com/Feng96/USBF_src/releases/tag/v0.1.3"
+      }
+    ],
+    "details": "Using frozen accepted-operation labels, 41 of the IoU declines and 51 of the F1 declines were addition-only cases. Exact geometric decomposition explains the score arithmetic relative to the reference, but does not decide which observed roof outline is correct."
+  },
+  {
+    "id": "2026-11-04-national-package-integrity",
+    "date": "2026-11-04",
+    "category": "USBF · Data Integrity",
+    "title": "Audited all files in the frozen national publication package",
+    "summary": "Scanned all 3,522 files in the local immutable October 27 package, containing 150,261,726 records. IDs were nonempty and unique, and manifest file checks passed. The scan found 233 topologically invalid geometries, all inspected as inherited legacy records.",
+    "status": "Local full-package integrity audit completed",
+    "note": "This audited the local frozen publication package, not fresh remote bytes or live production. Data integrity is separate from footprint accuracy and validation representativeness.",
+    "sources": [
+      {
+        "label": "USBF data",
+        "url": "https://source.coop/opengeos/us-buildings"
+      },
+      {
+        "label": "Original-data publication manifest",
+        "url": "https://data.source.coop/opengeos/us-buildings/USBF_v1/manifest.json"
+      }
+    ],
+    "details": "Original geometry and modern modification flags were absent on 124,918,110 legacy records. The remaining 25,343,616 records had original/delivered pairs: 927,559 flagged modified and 24,416,057 flagged unchanged, with no detected WKB/flag contradictions in those paired records. Legacy unknown flags remain unknown. No geometries were repaired during this audit; manuscript totals still require release-version reconciliation."
+  },
+  {
+    "id": "2026-11-04-quality-guard-speed-tests",
+    "date": "2026-11-04",
+    "category": "USBF · Production Engineering",
+    "title": "Kept quality checks after testing faster processing variants",
+    "summary": "Tested processing reductions on real building cohorts. Removing neighborhood/quality checks changed one 468-building cohort from 14 to 367 modifications and produced unacceptable area changes, so that route was rejected.",
+    "status": "Comparisons completed; unsafe shortcut rejected",
+    "note": "The fastest quality-preserving warm-stage result was about 1.5 times the baseline and missed the preset twofold target. A national end-to-end improvement was not established.",
+    "sources": [],
+    "details": "Process reuse and header-cache comparisons also had mixed results. Their tested correctness did not by itself justify deployment as production acceleration."
+  },
+  {
+    "id": "2026-11-04-fixed-data-and-study-area-workflow",
+    "date": "2026-11-04",
+    "category": "Geospatial Software",
+    "title": "Separated saved study areas from fixed analysis records",
+    "summary": "Published a Data & scope workflow for saving named boundaries and explicitly loading fixed original-data worksets. Statistics, charts, processing, LoD1 and data exports now choose all workset records, the exact selection, or records intersecting a saved study area.",
+    "status": "Workflow published and verified on public data",
+    "note": "Map movement and styling do not silently change analytical inputs. Empty selections stay empty, and selecting a smaller subset does not erase partial-source status.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Website source and documentation",
+        "url": "https://github.com/Feng96/USBF_site"
+      }
+    ],
+    "details": "Saved areas and record provenance survive projects. Map composition records a visual frame separately from data-export scope. The browser loading budgets remain explicit."
+  },
+  {
+    "id": "2026-11-04-local-engine-interaction-prototype",
+    "date": "2026-11-04",
+    "category": "Geospatial Software · Design",
+    "title": "Published an interaction prototype for a local computation engine",
+    "summary": "Published a standalone prototype covering pairing, managed runtimes, optional inspection of existing environments, custom-runtime checks and separate input/output storage choices. Its simulated states can be explored in English and Chinese, including on a phone.",
+    "status": "Interaction prototype published",
+    "note": "This release is a simulated interface prototype. No native installer or working local computation engine was released or enabled.",
+    "sources": [
+      {
+        "label": "Local-engine interaction prototype",
+        "url": "https://feng96.github.io/USBF_site/prototypes/local-engine/"
+      },
+      {
+        "label": "Website source and documentation",
+        "url": "https://github.com/Feng96/USBF_site"
+      }
+    ],
+    "details": "The prototype labels its simulated device state and makes no real engine or third-party-service requests. It preserves user results and external software in the proposed uninstall flow."
+  },
+  {
+    "id": "2026-11-03-local-project-workspace",
+    "date": "2026-11-03",
+    "category": "Geospatial Software",
+    "title": "Added named local projects and a blank workspace",
+    "summary": "Added browser-local projects, project export/import and a blank-workspace action. Cache controls release fetched neighborhoods and research-model caches while keeping current work and saved projects.",
+    "status": "Project workflow published",
+    "note": "Projects use browser storage and portable .usbf.json files. Cloud synchronization is not part of this release.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Website source and documentation",
+        "url": "https://github.com/Feng96/USBF_site"
+      }
+    ],
+    "details": "Project restoration was checked alongside the existing data, language and model workflows."
+  },
+  {
+    "id": "2026-11-03-national-pmtiles-display",
+    "date": "2026-11-03",
+    "category": "USBF · Data Access",
+    "title": "Published the national USBF PMTiles display archive",
+    "summary": "Published a 33.96 GB PMTiles display archive derived from the frozen 150,261,726-record publication and connected it to the default map. Public checks covered DC, New York, Los Angeles and Boston; the full public archive checksum matched.",
+    "status": "Archive and website publication verified",
+    "note": "Display tiles may be clipped or simplified. Complete original polygons remain in GeoParquet and load for explicit data operations; the underlying mixed-version inventory was not regenerated by this display release.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Display publication manifest",
+        "url": "https://data.source.coop/opengeos/us-buildings/USBF_display/manifest.json"
+      },
+      {
+        "label": "Original-data publication manifest",
+        "url": "https://data.source.coop/opengeos/us-buildings/USBF_v1/manifest.json"
+      }
+    ],
+    "details": "Map navigation uses tiled display caching instead of repeatedly reading the original GeoParquet. The display manifest records the source release and immutable archive version."
+  },
+  {
+    "id": "2026-11-03-independent-osm-display",
+    "date": "2026-11-03",
+    "category": "Geospatial Software",
+    "title": "Added an independent OpenStreetMap building layer",
+    "summary": "Connected an OpenFreeMap OpenStreetMap building layer separately from the VIDA source subset. Public-browser checks rendered real upstream tiles in DC, New York and Los Angeles and checked project restoration and mobile layout.",
+    "status": "Independent OSM display published",
+    "note": "This is a display layer. Its tile attributes do not establish measured building heights or complete original analytical geometry.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Original OSM building-data resource",
+        "url": "https://layercake.openstreetmap.us/layers/buildings/"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-03-provider-view-completeness",
+    "date": "2026-11-03",
+    "category": "Geospatial Software",
+    "title": "Checked complete bounded reads from comparison providers",
+    "summary": "Added matching-ID enumeration for DC, stable pagination for NYC, and all matching row-group reads for GBA within explicit limits. Progressive loading, cancellation, retry and cache coverage are shown to the user.",
+    "status": "Provider reads checked on real data",
+    "note": "A completed bounded request does not imply complete provider coverage beyond its area or limits.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Website source and documentation",
+        "url": "https://github.com/Feng96/USBF_site"
+      }
+    ],
+    "details": "For the tested DC bounds, a count-only endpoint reported 15,279 while both ID enumeration and independently paginated records returned 15,277. Acceptance therefore checked the actual matching ID set."
+  },
+  {
+    "id": "2026-11-03-original-analysis-layers-and-tables",
+    "date": "2026-11-03",
+    "category": "Geospatial Software",
+    "title": "Made original analysis layers and attribute-table scope explicit",
+    "summary": "Added layer-purpose labels and an explicit original-data loading action. USBF original records become a separate fixed analysis layer with their source geometry, attributes and provenance. Its attribute table can show all loaded records, including hidden or offscreen rows.",
+    "status": "Layer and table workflows published",
+    "note": "Tile previews retain their display scope. Loading a bounded original-data layer does not turn the full remote source into a local analytical dataset.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Website source and documentation",
+        "url": "https://github.com/Feng96/USBF_site"
+      }
+    ],
+    "details": "Original layers keep their loading area, partial status and licenses through project restoration. Cancellation cannot add a late result."
+  },
+  {
+    "id": "2026-11-03-gis-selection-and-processing",
+    "date": "2026-11-03",
+    "category": "Geospatial Software",
+    "title": "Added range selection and vector processing workflows",
+    "summary": "Published shared range controls for map views, Census state/county boundaries, boxes, polygons and loaded masks. Added original-record selection, selected exports, extraction, clipping, erase, merge, dissolve and related vector operations.",
+    "status": "GIS workflows published and checked",
+    "note": "Browser record, vertex and read budgets still apply. Selecting a large administrative boundary can produce an explicitly partial result.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Website source and documentation",
+        "url": "https://github.com/Feng96/USBF_site"
+      }
+    ],
+    "details": "Results become new layers with input scope and lineage. Selection and processing use original source records, while map tiles remain the display path."
+  },
+  {
+    "id": "2026-11-03-batched-input-retirement",
+    "date": "2026-11-03",
+    "category": "USBF · Production Engineering",
+    "title": "Tested and deployed batched retirement of verified inputs",
+    "summary": "A matched 24-frame comparison checked identical input arrays, masks and probabilities while batching verified loose-file retirement. The measured retirement step was about 3.54 times faster; the combined copy/seal/route/retire segment was about 1.40 times faster.",
+    "status": "Bounded production integration checked",
+    "note": "These are matched stage measurements, not national production speedups. The first production use also checked 64 real frames before broader use of that bounded route.",
+    "sources": []
+  },
+  {
+    "id": "2026-11-03-verified-archival-cleanup",
+    "date": "2026-11-03",
+    "category": "USBF · Production Engineering",
+    "title": "Verified completion of a large archival cleanup campaign",
+    "summary": "The completed campaign retired 786,281 eligible source files and 224,333 directories after archival and restoration checks: 1,010,614 source namespace entries in total.",
+    "status": "Campaign completion verified",
+    "note": "This is a verified source-retirement count, not the net decrease in the filesystem quota counter. Other production writes and later cleanup campaigns are counted separately.",
+    "sources": [],
+    "details": "Current source data, protected products and assets still needed by active consumers remained outside the retirement scope."
+  },
+  {
+    "id": "2026-11-02-manuscript-comment-revision",
+    "date": "2026-11-02",
+    "category": "USBF · Paper",
+    "title": "Prepared a tracked revision and manuscript response sheet",
+    "summary": "Prepared a reviewable manuscript revision and a comment-by-comment response sheet. The revision retained the 23 original comments and identified unresolved evidence checks concerning validation scope, reference frames and data integrity.",
+    "status": "Prepared for author review",
+    "note": "The response and tracked suggestions were delivered as review materials. The outstanding scientific questions motivated the supplementary diagnostics completed on November 4.",
+    "sources": [],
+    "details": "The revision preserves the source manuscript and documents proposed wording separately from the remaining validation questions."
+  },
+  {
+    "id": "2026-11-02-file-capacity-recovery",
+    "date": "2026-11-02",
+    "category": "USBF · Production Engineering",
+    "title": "Recovered execution after file-count backpressure",
+    "summary": "File-count guards paused scientific processing even though bytes remained available. Verified archival and restoration of eligible older inputs created room to resume processing, while automated cleanup continued.",
+    "status": "Execution resumed; capacity remained a constraint",
+    "note": "Resuming tasks did not immediately increase accepted building counts. Retirement totals describe eligible source files removed after verification, not the net change in a live filesystem.",
+    "sources": [],
+    "details": "The work exposed a dependency cycle: completing regions required more inputs, while some cleanup waited for those regions to finish. Older eligible inputs provided a separate recovery route."
+  },
+  {
+    "id": "2026-11-02-covered-viewport-cache",
+    "date": "2026-11-02",
+    "category": "Geospatial Software",
+    "title": "Stopped reloading covered building views on every zoom",
+    "summary": "Added a bounded decoded-neighborhood cache and reused prepared map sources for covered views. In four repeated DC zooms, the local comparison changed from roughly 6.3–6.9 seconds with 11 GeoParquet requests each to 10–106 milliseconds with no additional GeoParquet reads.",
+    "status": "Cache repair published and checked",
+    "note": "This comparison concerns one already covered neighborhood. It is not a cold-load or nationwide latency guarantee.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Website source and documentation",
+        "url": "https://github.com/Feng96/USBF_site"
+      }
+    ],
+    "details": "In-flight covered requests and existing geometry survive zoom changes. Publication changes invalidate cached source data."
+  },
+  {
+    "id": "2026-11-02-chinese-interface-and-model-toggle",
+    "date": "2026-11-02",
+    "category": "Geospatial Software",
+    "title": "Added Chinese controls and repaired model visibility",
+    "summary": "Published an English/Chinese interface option and repaired the Models visibility control. Local and public-browser checks covered language switching, model controls and phone layout.",
+    "status": "Interface update published",
+    "note": "Dataset names, raw attribute names, formats and source values retain their meaning when the interface language changes.",
+    "sources": [
+      {
+        "label": "US Buildings",
+        "url": "https://feng96.github.io/USBF_site/"
+      },
+      {
+        "label": "Website source and documentation",
+        "url": "https://github.com/Feng96/USBF_site"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-31-regional-production-checkpoint",
+    "date": "2026-10-31",
+    "category": "USBF · Production",
+    "title": "Recorded accepted output from the revised regional route",
+    "summary": "The dated production checkpoint recorded 200,071 accepted buildings in new regions, including 51,818 added that day. The completed six-state product remained at 25,092,517 buildings.",
+    "status": "Regional output checkpoint",
+    "note": "The revised regional counter and the earlier hollow-only counter describe different processing cohorts. Neither is a count of a completed new nationwide release.",
+    "sources": [],
+    "details": "Rolling scheduling and input recovery continued, with input preparation and I/O still limiting progress."
+  },
+  {
+    "id": "2026-10-30-regional-route-and-input-reuse",
+    "date": "2026-10-30",
+    "category": "USBF · Production Engineering",
+    "title": "Revised the regional route and input-reuse plan",
+    "summary": "A revised 2,422-building prototype produced 52 geometry changes. Work also moved toward indexed bundles of imagery, elevation, masks and model probabilities so later refinement could reuse the expensive front end.",
+    "status": "Prototype tested; reuse work continued",
+    "note": "The 52 changes are processing outcomes, not verified accuracy gains. Earlier stand-alone fast regions had sometimes retired their sensor inputs, so complete reuse could not be assumed.",
+    "sources": [],
+    "details": "The retained input bundle must contain actual raster arrays and provenance, not only JSON execution records. Regional limits and restore checks are needed before retiring loose inputs."
+  },
+  {
+    "id": "2026-10-29-fast-full-comparison",
+    "date": "2026-10-29",
+    "category": "USBF · Production Engineering",
+    "title": "Compared the hollow-only route with full refinement",
+    "summary": "Compared the two routes on 29 matched regions containing 250,395 buildings. The hollow-only route changed no buildings in that cohort, while full refinement changed 7,467. Median CPU processing time per region was 34 seconds and 704 seconds, respectively.",
+    "status": "Matched production-stage comparison completed",
+    "note": "The faster route covered far fewer editing operations. These timings exclude input acquisition, inference and queueing; they are not national end-to-end speedups.",
+    "sources": [],
+    "details": "The comparison motivated a revised first pass that retained useful local changes, rather than using footprint coverage alone as the success measure."
+  },
+  {
     "id": "2026-10-28-usbf-live-viewer",
     "date": "2026-10-28",
     "category": "USBF · Data Access",
