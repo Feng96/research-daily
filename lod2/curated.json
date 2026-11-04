@@ -1,0 +1,82 @@
+{
+  "schema": "lod2-curated-workspace-v1",
+  "us": {
+    "building_count": 24,
+    "methods": [
+      "raw",
+      "legacy_guarded",
+      "fusion",
+      "context_fusion"
+    ],
+    "buildings": [
+      "usbf-v1-dc-row84575-osm-67521488",
+      "usbf-v1-dc-row84595-osm-67521431",
+      "usbf-v1-dc-row85199-osm-67521425",
+      "usbf-v1-dc-row84681-osm-67521385",
+      "usbf-v1-dc-row84655-osm-67521498",
+      "usbf-v1-dc-row84674-osm-67521381",
+      "usbf-v1-dc-row84898-osm-66347628",
+      "usbf-v1-dc-row84764-osm-67528254",
+      "usbf-v1-dc-row84594-osm-67521493",
+      "usbf-v1-dc-row84602-osm-67521395",
+      "usbf-v1-dc-row84605-osm-67521427",
+      "usbf-v1-dc-row84626-osm-66348273",
+      "usbf-v1-dc-row84641-osm-66347416",
+      "usbf-v1-dc-row84656-osm-67521446",
+      "usbf-v1-dc-row84662-osm-67521513",
+      "usbf-v1-dc-row84665-osm-66346451",
+      "usbf-v1-dc-row84598-osm-67521499",
+      "usbf-v1-dc-row84599-osm-67521357",
+      "usbf-v1-dc-row84600-osm-67521521",
+      "usbf-v1-dc-row84604-osm-67521511",
+      "usbf-v1-dc-row84607-osm-67521423",
+      "usbf-v1-dc-row84608-osm-67521442",
+      "usbf-v1-dc-row84609-osm-66347037",
+      "usbf-v1-dc-row84618-osm-66346998"
+    ],
+    "rows": [
+      {
+        "id": "fusion_mlp",
+        "label": "光学＋点云",
+        "roof_retention": 0.9931386446121641,
+        "tree_rejection": 0.8923436998817724
+      },
+      {
+        "id": "context_fusion",
+        "label": "光学＋局部邻域",
+        "roof_retention": 0.9896789154745628,
+        "tree_rejection": 0.9397327369481476
+      }
+    ],
+    "independent_US_GT": false
+  },
+  "controlled": {
+    "building_count": 200,
+    "methods": [
+      "raw",
+      "graph_20000_long_s20261031"
+    ],
+    "rows": [
+      {
+        "id": "raw",
+        "label": "原始输入",
+        "loss": 1.094044631553961,
+        "ridge_f1": 0.5411725439075514
+      },
+      {
+        "id": "graph_20000_long_s20261031",
+        "label": "局部图网络",
+        "loss": 0.5123316077996095,
+        "ridge_f1": 0.6609475685500079
+      }
+    ],
+    "scope": "controlled point clouds; same-source automatic3DBAG reference"
+  },
+  "retired_methods": [
+    "linear",
+    "point",
+    "context",
+    "gated"
+  ],
+  "selection": "latest US comparison plus controlled graph model with demonstrated loss reduction; no US accuracy ranking"
+}

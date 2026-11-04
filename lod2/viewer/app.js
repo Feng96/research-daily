@@ -1,9 +1,36 @@
 import * as THREE from '../vendor/three.module.js';
-import {createPointCloudController} from './point_clouds.js?v=20261026-dl';
+import {createPointCloudController} from './point_clouds.js?v=20261104-simple';
 
 const $=id=>document.getElementById(id);
 const chapter=new URLSearchParams(location.search).get('chapter')||'pilot';
 const inputBlock=new URLSearchParams(location.search).get('input')==='guarded'?'guarded':'raw';
+
+// Curated mode changes the interface and method list, never source observations.
+const curated=new URLSearchParams(location.search).get('curated')==='1'&&['dl','repair'].includes(chapter);
+document.documentElement.classList.toggle('lod2-curated',curated);
+function setupCuratedControls(){
+ if(!curated)return;
+ const advanced=document.createElement('details');advanced.className='curated-point-settings';
+ const heading=document.createElement('summary');heading.textContent='点云选项';
+ const content=document.createElement('div');content.className='curated-extra-controls';
+ for(const id of ['point-size','point-through']){const label=$(id).closest('label');if(label)content.append(label)}
+ advanced.append(heading,content);document.querySelector('.cloud-inspector').append(advanced);
+ const display=document.createElement('details');display.className='curated-display-settings';
+ const title=document.createElement('summary');title.textContent='显示选项';
+ const settings=document.createElement('div');settings.className='curated-extra-controls';
+ for(const id of ['roof-only','edges','baseline-overlay','opacity']){const label=$(id).closest('label');if(label)settings.append(label)}
+ display.append(title,settings);document.querySelector('.model-tools').append(display);
+ for(const select of [advanced,display])select.addEventListener('toggle',reportHeight);
+ for(const option of [...$('point-mode').options]){
+  if(!['inside','train','removed','all'].includes(option.value))option.remove();
+  else option.textContent={inside:'足迹内原始点',train:'保留点',removed:'删除点',all:'周边与地面'}[option.value];
+ }
+ for(const option of [...$('point-color').options]){
+  if(!['height','decision'].includes(option.value))option.remove();
+  else option.textContent={height:'离地高度',decision:'保留／删除'}[option.value];
+ }
+}
+
 let GROUPS=[],LABELS={};
 let visibleBuildings=[];
 const BASELINES={pilot:'roofer',optimization:'baseline',overnight:'baseline',tree:'global_geo',workflow:'initial',canopy:'baseline',repair:'baseline',paper:'initial',dl:'raw'};
@@ -11,8 +38,12 @@ let data,selected,group='',basemap='satellite',syncing=false,temporaryHide=false
 let loadError=false,loaded=false,hashTimer,toastTimer,lastTileError=0,frameToken=0;
 const mapErrors=[];
 const initialHash=new URLSearchParams(location.hash.slice(1));
+if(curated){
+ if(!['height','decision'].includes(initialHash.get('pointColor')))initialHash.set('pointColor',chapter==='dl'?'decision':'height');
+ if(!['inside','train','removed','all'].includes(initialHash.get('pointMode')))initialHash.set('pointMode','inside');
+}
 group=initialHash.get('group')||'';
-if(['satellite','naip','osm'].includes(initialHash.get('base')))basemap=initialHash.get('base');
+if(['satellite','naip','osm'].includes(initialHash.get('base')))basemap=initialHash.get('base');else if(curated)basemap='naip';
 
 function toast(message){$('toast').textContent=message;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,5200);}
 function style(){return {version:8,sources:{satellite:{type:'raster',tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],tileSize:256,maxzoom:21,attribution:'Imagery © Esri, Vantor, Earthstar Geographics and the GIS User Community'},osm:{type:'raster',tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256,maxzoom:19,attribution:'<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>'}},layers:[{id:'background',type:'background',paint:{'background-color':'#d0d9cb'}},{id:'satellite',type:'raster',source:'satellite',layout:{visibility:basemap==='satellite'?'visible':'none'},paint:{'raster-fade-duration':0}},{id:'osm',type:'raster',source:'osm',layout:{visibility:basemap==='osm'?'visible':'none'},paint:{'raster-fade-duration':0}}]};}
@@ -33,6 +64,7 @@ const edgeMaterial=new THREE.LineBasicMaterial({color:0x3b392b,transparent:true,
 const edgeLines=new THREE.LineSegments(new THREE.BufferGeometry(),edgeMaterial);edgeLines.renderOrder=2;root.add(edgeLines);
 const baselineLines=new THREE.LineSegments(new THREE.BufferGeometry(),new THREE.LineBasicMaterial({color:0x42d9e4,transparent:true,opacity:.8,depthWrite:false,depthTest:false}));baselineLines.renderOrder=3;root.add(baselineLines);
 const pointCloud=createPointCloudController({THREE,root,map:modelMap,chapter,getSelected:()=>selected,getGroup:()=>group,isHidden:()=>temporaryHide,toast,onChange:saveHash,onHeight:reportHeight,initialHash});
+setupCuratedControls();
 let renderer,renderCount=0;
 const modelLayer={id:'experiment-roof-model',type:'custom',renderingMode:'3d',
   onAdd(map,gl){renderer=new THREE.WebGLRenderer({canvas:map.getCanvas(),context:gl});renderer.autoClear=false;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;},
@@ -115,6 +147,19 @@ function frameAllGroups(){
   check(0);
 }
 function renderMetrics(){
+
+  if(curated){
+    $('metrics').replaceChildren();
+    if(chapter==='dl'){
+      const m=selected.dl.methods[group];
+      $('metric-note').textContent='删除 '+m.removed_points+' 点 · '+m.roof_surfaces+' 片屋面 · '+(m.shell_diagnostic?'边检查通过':'边检查未通过')+'；精度仍待核查。';
+    }else{
+      const m=selected.repair;
+      $('metric-note').textContent=group==='baseline'?'修正前的平面保护结果。':m.shell_diagnostic_passed?'局部修正候选；边检查通过，屋顶形状待核查。':'局部修正候选未通过边检查，供定位问题。';
+    }
+    reportHeight();return;
+  }
+
   if(chapter==='dl'){
     const row=selected.dl;$('metric-note').textContent='筛点与重建诊断；删点和边检查不代表真实屋顶精度。青色保留、红色删除。';
     $('metrics').replaceChildren(...GROUPS.map(key=>{const m=row.methods[key],button=document.createElement('button');button.className='metric'+(key===group?' active':'');button.setAttribute('aria-pressed',String(key===group));for(const [cls,text]of [['metric-name',LABELS[key]],['metric-value','删 '+m.removed_points+' 点'],['metric-sub',m.roof_surfaces+' 片屋面 · '+(m.shell_diagnostic?'边检查通过':'边检查未通过')]]){const span=document.createElement('span');span.className=cls;span.textContent=text;button.append(span)}button.onclick=()=>setGroup(key);return button}));reportHeight();return;
@@ -177,7 +222,7 @@ function updatePaperCues(){
 }
 
 function footprintVisibility(){updatePaperCues();for(const id of ['selected-outline','selected-outline-shadow'])if(imageMap.getLayer(id))imageMap.setLayoutProperty(id,'visibility',$('footprint').checked?'visible':'none');$('clean-image').textContent=$('footprint').checked?'查看纯影像':'显示定位轮廓';}
-function saveHash(){if(!loaded||!selected)return;clearTimeout(hashTimer);hashTimer=setTimeout(()=>{const c=imageMap.getCenter();const state={building:selected.id,group,base:basemap,cohort:$('cohort').value,lng:c.lng.toFixed(7),lat:c.lat.toFixed(7),z:imageMap.getZoom().toFixed(3),bearing:imageMap.getBearing().toFixed(2),pitch:modelMap.getPitch().toFixed(1),...pointCloud.state()};history.replaceState(null,'','#'+new URLSearchParams(state));if(parent!==window)parent.postMessage({type:'lod2-selection',chapter,...state,...(chapter==='paper'?{input:inputBlock}:{})},location.origin);},150);}
+function saveHash(){if(!loaded||!selected)return;clearTimeout(hashTimer);hashTimer=setTimeout(()=>{const c=imageMap.getCenter();const state={building:selected.id,group,base:basemap,cohort:$('cohort').value,lng:c.lng.toFixed(7),lat:c.lat.toFixed(7),z:imageMap.getZoom().toFixed(3),bearing:imageMap.getBearing().toFixed(2),pitch:modelMap.getPitch().toFixed(1),...pointCloud.state()};history.replaceState(null,'','#'+new URLSearchParams(state));if(parent!==window)parent.postMessage({type:'lod2-selection',chapter,...state,...(curated?{curated:'1'}:{}),...(chapter==='paper'?{input:inputBlock}:{})},location.origin);},150);}
 function reportHeight(){if(parent!==window)requestAnimationFrame(()=>parent.postMessage({type:'lod2-height',height:document.body.scrollHeight},location.origin));}
 function filterBuildings(focus=true){
   visibleBuildings=data.buildings.filter(b=>$('cohort').value==='all'||b.cohort===$('cohort').value);
@@ -219,7 +264,13 @@ async function init(){
     const bytes=new Uint8Array(await response.arrayBuffer());let jsonText;
     if(bytes[0]===31&&bytes[1]===139){if(!window.DecompressionStream)throw new Error('此浏览器不支持压缩数据，请使用新版浏览器');jsonText=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();}else{jsonText=new TextDecoder().decode(bytes);}
     data=JSON.parse(jsonText);
-    GROUPS=data.groupOrder;LABELS=data.groupLabels;group=GROUPS.includes(group)?group:GROUPS[0];
+    
+    const curatedGroups={dl:['raw','legacy_guarded','fusion','context_fusion'],repair:['baseline','candidate']}[chapter];
+    GROUPS=curated?curatedGroups.filter(key=>data.groupOrder.includes(key)):data.groupOrder;
+    LABELS=curated?{...data.groupLabels,raw:'原始对照',legacy_guarded:'平面保护',fusion:'光学＋点云',context_fusion:'光学＋局部邻域',baseline:'修正前',candidate:'局部修正候选'}:data.groupLabels;
+    if(curated){data.groupOrder=GROUPS;data.groupLabels=LABELS;}
+    group=GROUPS.includes(group)?group:(curated&&GROUPS.includes('fusion')?'fusion':curated&&GROUPS.includes('candidate')?'candidate':GROUPS[0]);
+
     data.naip.url='../data/naip2014.png';
     if(!data.buildings.length||data.buildings.length!==data.buildingCount)throw new Error('建筑分母与导出清单不一致');
     $('chapter-name').textContent={pilot:'01 · 五种重建方法',optimization:'02 · 四组输入优化',overnight:'03 · 120栋扩展复核',tree:'04 · 树冠干扰与语义迁移',workflow:'固定工作流 v0.1',canopy:'树冠清理 · 三组复核',repair:'局部屋面修正 · 8 栋验证',paper:'论文思想 · 同输入配对对照',dl:'邻域与光学可靠性 · 24 栋'}[chapter]||chapter;
@@ -229,6 +280,7 @@ async function init(){
     if(chapter==='repair'){$('chapter-detail').textContent='8 栋 · 修正前 / 局部候选 · 原始点不动';$('metric-mode').closest('label').hidden=true;document.querySelector('label[for=cohort]').hidden=true;}
     if(chapter==='canopy'){$('chapter-detail').textContent='8 栋 · 3 组 · 实际原始点云 · 后端未触发修剪';$('metric-mode').closest('label').hidden=true;document.querySelector('label[for=cohort]').hidden=true;}
     if(chapter==='workflow'){$('chapter-detail').textContent='Georgetown · 8 栋流程验证 · 2 个阶段 · 无精度结论';$('metric-mode').closest('label').hidden=true;document.querySelector('label[for=group-select]').textContent='阶段';document.querySelector('label[for=cohort]').hidden=true;document.querySelector('#baseline-overlay').closest('label').lastChild.textContent='初始屋面轮廓';}
+    if(curated){$('chapter-name').textContent=chapter==='dl'?'最新筛点实验':'局部屋面修正';$('chapter-detail').textContent=data.buildingCount+' 栋 · '+GROUPS.length+' 种保留方法 · NAIP＋3DEP';}
     $('group-select').replaceChildren(...GROUPS.map(key=>{const o=document.createElement('option');o.value=key;o.textContent=LABELS[key];return o;}));$('group-select').disabled=false;
     $('cohort').hidden=!['overnight','tree'].includes(chapter);$('cohort').value=['overnight','tree'].includes(chapter)&&['legacy60','fresh60'].includes(initialHash.get('cohort'))?initialHash.get('cohort'):'all';
     $('metric-mode').value=['overnight','tree'].includes(chapter)?'paired':'common';
@@ -243,5 +295,5 @@ async function init(){
     $('loading').hidden=true;reportHeight();
   }catch(e){loadError=true;$('loading-text').textContent='页面数据加载失败：'+e.message;console.error(e);}
 }
-window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},selectBuilding,setGroup,setBasemap,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;},get inputBlock(){return inputBlock;},pointCloud};
+window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},selectBuilding,setGroup,setBasemap,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;},get inputBlock(){return inputBlock;},get curated(){return curated;},pointCloud};
 init();

@@ -22,3 +22,42 @@ body{height:auto;min-height:100dvh}.workspace{flex:none;height:510px;min-height:
 @media(max-width:680px){.model-pane .model-tools{top:auto;bottom:57px}.model-pane .geometry-warning{bottom:139px;max-height:60px}}
 
 @media(min-width:681px){.model-pane .model-tools{top:auto;bottom:70px}.model-pane .geometry-warning{bottom:126px}}
+
+
+/* Curated interface: the retained methods and original observation tools. */
+.lod2-curated .header{padding:10px 14px}.lod2-curated .brand h1{font-size:16px}
+.lod2-curated.lod2-embedded .header{display:none}
+.lod2-curated #cohort,.lod2-curated label[for=cohort]{display:none!important}
+.lod2-curated .toolbar{padding:9px 12px;gap:8px 15px}
+.lod2-curated .method-controls{display:flex;align-items:center;gap:6px}
+.lod2-curated .method-controls select{min-width:150px}
+.lod2-curated .workspace{height:500px;min-height:400px}
+.lod2-curated .inspector{display:block;padding:8px 12px}
+.lod2-curated .selection{display:block}.lod2-curated .metric-note{margin:0;font-size:11px}
+.lod2-curated .selection>.eyebrow,.lod2-curated #selected-id,.lod2-curated #selected-height,
+.lod2-curated .metric-mode,.lod2-curated #metrics{display:none!important}
+.lod2-curated .observation-panel{padding:11px 12px;gap:14px}
+.lod2-curated .observation-heading strong{font-size:12px}
+.lod2-curated .cloud-controls{margin:9px 0 5px;gap:8px 12px}
+.lod2-curated .cloud-controls select{max-width:205px}
+.lod2-curated #point-membership,.lod2-curated .location-note{display:none}
+.lod2-curated .point-status{margin:5px 0;font-size:11px}
+.lod2-curated .location-inspector{gap:5px;padding-left:14px}
+.lod2-curated .location-inspector>strong{font-size:12px}
+.lod2-curated .location-links{gap:3px 11px;font-size:10px}
+.lod2-curated .curated-point-settings{font-size:11px;margin-top:7px}
+.lod2-curated .curated-point-settings summary,.lod2-curated .curated-display-settings summary{cursor:pointer;color:#356b57}
+.lod2-curated .curated-extra-controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:8px 0}
+.lod2-curated .curated-extra-controls label{display:flex;align-items:center;gap:5px;font-size:11px}
+.lod2-curated .curated-point-settings input[type=range]{width:80px}
+.lod2-curated .model-tools{gap:8px}.lod2-curated .curated-display-settings{position:relative}
+.lod2-curated .curated-display-settings[open]>.curated-extra-controls{position:absolute;right:0;bottom:calc(100% + 10px);width:265px;max-width:70vw;background:#fffffff5;border:1px solid #cbd7cb;box-shadow:0 3px 12px #173e2220;border-radius:6px;padding:10px}
+@media(max-width:680px){
+ .lod2-curated .toolbar{gap:8px}.lod2-curated .building-controls{width:100%}
+ .lod2-curated .method-controls,.lod2-curated .source-controls{flex:1;min-width:0;width:auto}
+ .lod2-curated .method-controls select,.lod2-curated .source-controls select{width:100%;min-width:0;font-size:11px}
+ .lod2-curated .workspace{height:auto;min-height:720px}.lod2-curated .pane{height:360px}
+ .lod2-curated .observation-panel{padding:11px 10px}.lod2-curated .location-inspector{padding:11px 0 0}
+ .lod2-curated .cloud-controls label:first-child{width:auto}.lod2-curated .cloud-controls select{max-width:172px}
+ .lod2-curated .model-tools{max-width:calc(100% - 20px)}
+}
