@@ -101,59 +101,67 @@ function setupImageOverlays(){
   imageMap.on('mouseenter','building-hit',()=>imageMap.getCanvas().style.cursor='pointer');
   imageMap.on('mouseleave','building-hit',()=>imageMap.getCanvas().style.cursor='');
 }
+function fullKey(b=selected,which=group){return b?(referenceMode&&which==='reference'?'reference/':'reconstruction/')+b.id:'';}
 function fullModel(b){
   if(!referenceMode)return b.groups[group];
-  if(group==='reference')return null;
-  if(fullModels.has(b.id))return fullModels.get(b.id).groups[group];
-  if(!fullPending.has(b.id)&&!fullErrors.has(b.id)){
+  const requestedGroup=group,isReference=requestedGroup==='reference',key=fullKey(b,requestedGroup);
+  if(fullModels.has(key))return fullModels.get(key).groups[requestedGroup];
+  if(!fullPending.has(key)&&!fullErrors.has(key)){
     const promise=(async()=>{
-      const response=await fetch('../full-models/blocks/'+referenceBlock+'/'+encodeURIComponent(b.id)+'.json.gz');
+      const response=await fetch('../'+(isReference?'reference-full-models':'full-models')+'/blocks/'+referenceBlock+'/'+encodeURIComponent(b.id)+'.json.gz');
       if(!response.ok)throw Error('完整模型 HTTP '+response.status);
       const bytes=new Uint8Array(await response.arrayBuffer());
       const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);
       const payload=JSON.parse(text);
       if(payload.id!==b.id||payload.blockId!==referenceBlock||!Array.isArray(payload.anchor)||payload.anchor.some((n,i)=>Math.abs(n-data.anchor[i])>1e-9))throw Error('完整模型坐标清单不一致');
-      for(const key of ['raw','legacy_guarded','fusion','context_fusion']){
-        const g=payload.groups?.[key];
+      for(const name of isReference?['reference']:['raw','legacy_guarded','fusion','context_fusion']){
+        const g=payload.groups?.[name];
         if(!g||!Array.isArray(g.positions)||g.positions.length%9||!g.positions.every(Number.isFinite)||g.roofTriangleMask?.length!==g.positions.length/9)throw Error('完整模型面数据不完整');
+        if(isReference&&g.isAlgorithm!==false)throw Error('官方完整模型来源标记不一致');
       }
-      fullModels.set(b.id,payload);
+      fullModels.set(key,payload);
       if(fullModels.size>6)fullModels.delete(fullModels.keys().next().value);
-    })().catch(error=>fullErrors.set(b.id,error.message)).finally(()=>{
-      fullPending.delete(b.id);
-      if(selected?.id===b.id&&modelMode==='building'){geometry(selected);frameAllGroups();reportHeight();}
+    })().catch(error=>fullErrors.set(key,error.message)).finally(()=>{
+      fullPending.delete(key);
+      if(selected?.id===b.id&&modelMode==='building'&&fullKey()===key){geometry(selected);frameAllGroups();reportHeight();}
     });
-    fullPending.set(b.id,promise);
+    fullPending.set(key,promise);
   }
   return null;
 }
 function modelDisplay(){
   const g=displayGeometry,mask=g?.roofTriangleMask||[],classes=g?.surfaceClasses||[];
   const n=mesh.geometry.index?mesh.geometry.index.count/3:(mesh.geometry.getAttribute('position')?.count||0)/3;
-  return {mode:modelMode,requestedMode:modelMode,available:!!g?.positions?.length,loading:modelMode==='building'&&fullPending.has(selected?.id),error:fullErrors.get(selected?.id)||null,
+  return {mode:modelMode,requestedMode:modelMode,available:!!g?.positions?.length,loading:modelMode==='building'&&fullPending.has(fullKey()),error:modelMode==='building'?(fullErrors.get(fullKey())||null):null,
     triangleCount:n,roofTriangles:mask.filter(Boolean).length,wallTriangles:$('roof-only').checked?0:classes.filter(x=>x===1).length,groundTriangles:$('roof-only').checked?0:classes.filter(x=>x===2).length,
-    meshVisible:mesh.visible,edgesVisible:edgeLines.visible,opacity:material.opacity,geometrySource};
+    meshVisible:mesh.visible,edgesVisible:edgeLines.visible,opacity:material.opacity,geometrySource,isAlgorithm:g?.isAlgorithm??selected?.groups[group]?.isAlgorithm};
 }
 function modelStatus(){
   const d=modelDisplay(),name={roof:'屋顶实体面',building:'完整建筑',wireframe:'屋顶框线',hidden:'模型已隐藏'}[modelMode];
   $('model-mode').value=modelMode;
   const buildingOption=$('model-mode').querySelector('option[value=building]');
-  buildingOption.disabled=referenceMode&&group==='reference';
-  buildingOption.textContent=buildingOption.disabled?'完整建筑（参考仅含屋顶）':'完整建筑';
+  const isReference=referenceMode&&group==='reference';
+  buildingOption.disabled=false;
+  buildingOption.textContent=isReference?'完整建筑（官方参考）':'完整建筑';
+  $('reference-building').hidden=!isReference||modelMode==='building';
+  $('retry-full-model').hidden=!(modelMode==='building'&&d.error&&!d.loading);
   $('edges').disabled=modelMode==='wireframe'||modelMode==='hidden';
   let text;
   if(modelMode==='hidden')text='模型已隐藏；可保留点云单独查看。';
   else if(d.loading)text='正在加载完整建筑，暂显示屋顶面…';
   else if(modelMode==='building'&&d.error)text='完整模型加载失败，暂显示屋顶面：'+d.error;
   else if(!d.available)text='本方法未生成可显示的模型；可切换原始基线或官方参考。';
-  else text=name+' · '+d.roofTriangles.toLocaleString('zh-CN')+' 个屋顶三角面'+(modelMode==='building'?' · '+d.wallTriangles.toLocaleString('zh-CN')+' 个墙面三角形':'')+(referenceMode&&group==='reference'?' · 该来源仅提供屋顶面':'');
+  else text=(isReference?'官方参考 · ':'')+name+' · '+d.roofTriangles.toLocaleString('zh-CN')+' 个屋顶三角面'+(modelMode==='building'?' · '+d.wallTriangles.toLocaleString('zh-CN')+' 个墙面三角形':'');
   if(modelMode==='building'&&d.available&&!d.loading&&!d.error&&!d.wallTriangles)text+=' · 原生结果没有墙面，未补造';
+  if(isReference&&modelMode==='roof')text+=' · 当前只看屋顶；可选择完整建筑或点击“查看官方完整建筑”。';
+  if(isReference&&modelMode==='building'&&d.available&&!d.loading&&!d.error)text+=' · 原始官方几何；墙面类型按几何识别，未验证闭合';
   $('model-status').textContent=text;
 }
 function setModelMode(value){
   if(value==='solid')value=lastSolidMode;
   if(!MODEL_MODES.includes(value))return;
-  if(referenceMode&&group==='reference'&&value==='building')value='roof';
+  // A temporary failed request must not prevent an explicit later retry.
+  if(value==='building'&&selected)fullErrors.delete(fullKey());
   modelMode=value;
   if(value==='roof'||value==='building')lastSolidMode=value;
   if(value==='wireframe')$('edges').checked=true;
@@ -164,12 +172,11 @@ function geometry(b){
   root.position.z=Number.isFinite(b.displayOffsetZ)?b.displayOffsetZ:(bases.length?b.ground_z-Math.min(...bases):0);
   pointCloud.sync();
   const source=b.groups[group];
-  if(referenceMode&&group==='reference'&&modelMode==='building'){modelMode='roof';lastSolidMode='roof';}
   $('roof-only').checked=modelMode!=='building';
   const full=modelMode==='building'?fullModel(b):null,g=full||source;
-  displayGeometry=g;geometrySource=full?(referenceMode?'native-full-model':'existing-native-model'):(referenceMode?'compiled-roof-preview':'existing-native-model');
+  displayGeometry=g;geometrySource=full?(referenceMode?(group==='reference'?'official-reference-full-model':'native-full-model'):'existing-native-model'):(referenceMode?'compiled-roof-preview':'existing-native-model');
   mesh.geometry.dispose();edgeLines.geometry.dispose();
-  const warnings=[...(source?.previewWarnings||[])];if(source?.status!=='success'&&source?.isAlgorithm!==false)warnings.unshift('当前记录状态：'+(source?.status||'missing')+'；'+(source?.lodClass||source?.lod||'无声明等级'));$('geometry-warning').hidden=!warnings.length;$('geometry-warning').textContent=warnings.length?'模型提示：'+warnings.join('；'):'';
+  const warnings=[...new Set([...(source?.previewWarnings||[]),...(full?.previewWarnings||[])])];if(source?.status!=='success'&&source?.isAlgorithm!==false)warnings.unshift('当前记录状态：'+(source?.status||'missing')+'；'+(source?.lodClass||source?.lod||'无声明等级'));$('geometry-warning').hidden=!warnings.length;$('geometry-warning').textContent=warnings.length?'模型提示：'+warnings.join('；'):'';
   mesh.geometry=new THREE.BufferGeometry();edgeLines.geometry=new THREE.BufferGeometry();
   if(!g?.positions?.length){baselineLines.geometry.dispose();baselineLines.geometry=new THREE.BufferGeometry();appearance();reportHeight();return;}
   const positions=new Float32Array(g.positions);mesh.geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));mesh.geometry.computeVertexNormals();
@@ -339,6 +346,8 @@ $('basemap').onchange=e=>setBasemap(e.target.value);$('footprint').onchange=foot
 $('clean-image').onclick=()=>{$('footprint').checked=!$('footprint').checked;footprintVisibility();};
 $('models').onchange=()=>setModelMode($('models').checked?'solid':'hidden');$('model-mode').onchange=e=>setModelMode(e.target.value);
 $('models-only').onclick=()=>{$('show-points').checked=false;$('opacity').value=100;setModelMode('solid');};
+$('reference-building').onclick=()=>{$('show-points').checked=false;$('opacity').value=100;setModelMode('building');};
+$('retry-full-model').onclick=()=>setModelMode('building');
 $('baseline-overlay').onchange=appearance;$('metric-mode').onchange=renderMetrics;$('cohort').onchange=()=>filterBuildings(true);$('group-select').onchange=e=>setGroup(e.target.value);$('edges').onchange=appearance;$('opacity').oninput=appearance;
 $('roof-only').onchange=()=>{if(selected)geometry(selected);};
 function setView(pitch){frameToken++;if(pitch>0)modelMap.once('moveend',()=>frameAllGroups());modelMap.easeTo({pitch,duration:450});$('view-3d').classList.toggle('active',pitch>0);$('view-top').classList.toggle('active',pitch===0);$('view-3d').setAttribute('aria-pressed',String(pitch>0));$('view-top').setAttribute('aria-pressed',String(pitch===0));}
@@ -386,5 +395,5 @@ async function init(){
     $('loading').hidden=true;reportHeight();
   }catch(e){loadError=true;$('loading-text').textContent='页面数据加载失败：'+e.message;console.error(e);}
 }
-window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},get modelDisplay(){return modelDisplay();},get mesh(){return mesh;},get edgeLines(){return edgeLines;},selectBuilding,setGroup,setBasemap,setModelMode,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;},get inputBlock(){return inputBlock;},get curated(){return curated;},pointCloud};
+window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},get modelDisplay(){return modelDisplay();},get displayedGeometry(){return displayGeometry;},get mesh(){return mesh;},get edgeLines(){return edgeLines;},selectBuilding,setGroup,setBasemap,setModelMode,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;},get inputBlock(){return inputBlock;},get curated(){return curated;},pointCloud};
 init();
