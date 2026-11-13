@@ -15,13 +15,13 @@ function sanitize(id,state){
  else{if(![...allowed,...(id==='reference'?['reference']:[])].includes(s.group))s.group=id==='reference'?'raw':'fusion';if(!['satellite','naip','osm'].includes(s.base))s.base='naip';if(!['inside','train','removed','all'].includes(s.pointMode))s.pointMode='inside';if(!['height','decision'].includes(s.pointColor))s.pointColor='decision';if(id==='reference'&&!reference.blocks.some(b=>b.id===s.block))s.block=reference.blocks[0]?.id;}
  return s;
 }
-function sourceURL(){const s=states[experiment],hash=new URLSearchParams(s);return experiment==='reference'?'viewer/?v=20261113-model-fix&chapter=dl&curated=1&dataset=reference&block='+encodeURIComponent(s.block)+'&slice='+encodeURIComponent(resultSlice)+'#'+hash:experiment==='us'?'viewer/?v=20261113-model-fix&chapter=dl&curated=1#'+hash:'native/?v=20261113-model-fix&curated=1#'+hash;}
+function sourceURL(){const s=states[experiment],hash=new URLSearchParams(s);return experiment==='reference'?'viewer/?v=20261113-diagnostics&chapter=dl&curated=1&dataset=reference&block='+encodeURIComponent(s.block)+'&slice='+encodeURIComponent(resultSlice)+'#'+hash:experiment==='us'?'viewer/?v=20261113-diagnostics&chapter=dl&curated=1#'+hash:'native/?v=20261113-diagnostics&curated=1#'+hash;}
 function displayState(s){return Object.fromEntries(Object.entries(s).filter(([key])=>['modelMode','edges','opacity','points','models','pointSize','pointThrough'].includes(key)));}
 function save(){const p=new URLSearchParams({experiment,...states[experiment],...(experiment==='reference'?{slice:resultSlice}:{})});history.replaceState(null,'','?'+p+(location.hash||''));$('full-viewer').href=sourceURL();}
 function fit(h){const next=Math.max(700,Math.min(3600,Math.ceil(h)));if(Math.abs(frame.clientHeight-next)>2)frame.style.height=next+'px';}
 function table(headers,rows){const tr=document.createElement('tr');for(const h of headers){const th=document.createElement('th');th.textContent=h;tr.append(th)}$('result-head').replaceChildren(tr);$('result-rows').replaceChildren(...rows.map(row=>{const tr=document.createElement('tr');for(const v of row){const td=document.createElement('td');td.textContent=v;tr.append(td)}return tr}));}
 function render(){
- const isRef=experiment==='reference',us=experiment==='us';$('experiment-panel').setAttribute('aria-labelledby','tab-'+experiment);
+ const isRef=experiment==='reference',us=experiment==='us';$('diagnostic-notes').hidden=!isRef;$('experiment-panel').setAttribute('aria-labelledby','tab-'+experiment);
  for(const b of document.querySelectorAll('[data-experiment]')){const active=b.dataset.experiment===experiment;b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1;}
  $('reference-controls').hidden=!isRef;$('reference-block').value=states.reference.block;
  $('result-controls').hidden=!isRef;$('result-slice').value=resultSlice;

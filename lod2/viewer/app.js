@@ -1,10 +1,12 @@
 import * as THREE from '../vendor/three.module.js';
 import {createPointCloudController} from './point_clouds.js?v=20261113-models';
+import {createDiagnostics} from './diagnostics.js?v=20261113-diagnostics';
 
 const $=id=>document.getElementById(id);
 const chapter=new URLSearchParams(location.search).get('chapter')||'pilot';
 const referenceMode=new URLSearchParams(location.search).get('dataset')==='reference';
 const referenceBlock=new URLSearchParams(location.search).get('block')||'boston_g5';
+const trialMode=new URLSearchParams(location.search).get('trial')==='numerical'&&referenceBlock==='boston_g5';
 if(referenceMode&&!/^(boston_g5|dc_[a-z_]+)$/.test(referenceBlock))throw Error('Unknown reference block');
 const inputBlock=new URLSearchParams(location.search).get('input')==='guarded'?'guarded':'raw';
 
@@ -72,8 +74,11 @@ const mesh=new THREE.Mesh(new THREE.BufferGeometry(),material);mesh.frustumCulle
 const edgeMaterial=new THREE.LineBasicMaterial({color:0x3b392b,transparent:true,opacity:.75,depthWrite:false});
 const edgeLines=new THREE.LineSegments(new THREE.BufferGeometry(),edgeMaterial);edgeLines.renderOrder=2;edgeLines.frustumCulled=false;root.add(edgeLines);
 const baselineLines=new THREE.LineSegments(new THREE.BufferGeometry(),new THREE.LineBasicMaterial({color:0x42d9e4,transparent:true,opacity:.8,depthWrite:false,depthTest:false}));baselineLines.renderOrder=3;root.add(baselineLines);
-const pointCloud=createPointCloudController({THREE,root,map:modelMap,chapter,referenceMode,getSelected:()=>selected,getGroup:()=>group,isHidden:()=>temporaryHide,toast,onChange:saveHash,onHeight:reportHeight,onModelMode:setModelMode,initialHash});
+let diagnostics;
+const pointCloud=createPointCloudController({THREE,root,map:modelMap,chapter,referenceMode,getSelected:()=>selected,getGroup:()=>group==='precision_repair'?'raw':group,isHidden:()=>temporaryHide,toast,onChange:saveHash,onHeight:()=>{diagnostics?.update();reportHeight();},onModelMode:setModelMode,initialHash});
 setupCuratedControls();
+diagnostics=createDiagnostics({getState:()=>selected?{building:selected,block:referenceBlock,referenceMode,trialMode,method:group,mode:modelMode,geometrySource,mesh,display:modelDisplay(),points:pointCloud}:null,onSelect:setGroup,onHeight:reportHeight});
+if(trialMode){const note=document.createElement('p');note.className='trial-notice';note.textContent='独立控制试跑：同一份 raw 点云、地面和重建参数，仅归并足迹中的浮点数值退化；未计入原四方法主表。覆盖恢复不代表屋顶结构或闭合已正确。';document.querySelector('.toolbar').before(note);}
 let renderer,renderCount=0;
 const modelLayer={id:'experiment-roof-model',type:'custom',renderingMode:'3d',
   onAdd(map,gl){renderer=new THREE.WebGLRenderer({canvas:map.getCanvas(),context:gl});renderer.autoClear=false;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;},
@@ -101,20 +106,20 @@ function setupImageOverlays(){
   imageMap.on('mouseenter','building-hit',()=>imageMap.getCanvas().style.cursor='pointer');
   imageMap.on('mouseleave','building-hit',()=>imageMap.getCanvas().style.cursor='');
 }
-function fullKey(b=selected,which=group){return b?(referenceMode&&which==='reference'?'reference/':'reconstruction/')+b.id:'';}
+function fullKey(b=selected,which=group){return b?(trialMode&&which==='precision_repair'?'trial/':referenceMode&&which==='reference'?'reference/':'reconstruction/')+b.id:'';}
 function fullModel(b){
   if(!referenceMode)return b.groups[group];
-  const requestedGroup=group,isReference=requestedGroup==='reference',key=fullKey(b,requestedGroup);
+  const requestedGroup=group,isReference=requestedGroup==='reference',isTrial=trialMode&&requestedGroup==='precision_repair',key=fullKey(b,requestedGroup);
   if(fullModels.has(key))return fullModels.get(key).groups[requestedGroup];
   if(!fullPending.has(key)&&!fullErrors.has(key)){
     const promise=(async()=>{
-      const response=await fetch('../'+(isReference?'reference-full-models':'full-models')+'/blocks/'+referenceBlock+'/'+encodeURIComponent(b.id)+'.json.gz');
+      const response=await fetch(isTrial?'../model-diagnostics/repair/'+encodeURIComponent(b.id)+'.json.gz':'../'+(isReference?'reference-full-models':'full-models')+'/blocks/'+referenceBlock+'/'+encodeURIComponent(b.id)+'.json.gz');
       if(!response.ok)throw Error('完整模型 HTTP '+response.status);
       const bytes=new Uint8Array(await response.arrayBuffer());
       const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);
       const payload=JSON.parse(text);
       if(payload.id!==b.id||payload.blockId!==referenceBlock||!Array.isArray(payload.anchor)||payload.anchor.some((n,i)=>Math.abs(n-data.anchor[i])>1e-9))throw Error('完整模型坐标清单不一致');
-      for(const name of isReference?['reference']:['raw','legacy_guarded','fusion','context_fusion']){
+      for(const name of isTrial?['precision_repair']:isReference?['reference']:['raw','legacy_guarded','fusion','context_fusion']){
         const g=payload.groups?.[name];
         if(!g||!Array.isArray(g.positions)||g.positions.length%9||!g.positions.every(Number.isFinite)||g.roofTriangleMask?.length!==g.positions.length/9)throw Error('完整模型面数据不完整');
         if(isReference&&g.isAlgorithm!==false)throw Error('官方完整模型来源标记不一致');
@@ -174,7 +179,7 @@ function geometry(b){
   const source=b.groups[group];
   $('roof-only').checked=modelMode!=='building';
   const full=modelMode==='building'?fullModel(b):null,g=full||source;
-  displayGeometry=g;geometrySource=full?(referenceMode?(group==='reference'?'official-reference-full-model':'native-full-model'):'existing-native-model'):(referenceMode?'compiled-roof-preview':'existing-native-model');
+  displayGeometry=g;geometrySource=full?(trialMode&&group==='precision_repair'?'numerical-footprint-repair-trial':referenceMode?(group==='reference'?'official-reference-full-model':'native-full-model'):'existing-native-model'):(referenceMode?'compiled-roof-preview':'existing-native-model');
   mesh.geometry.dispose();edgeLines.geometry.dispose();
   const warnings=[...new Set([...(source?.previewWarnings||[]),...(full?.previewWarnings||[])])];if(source?.status!=='success'&&source?.isAlgorithm!==false)warnings.unshift('当前记录状态：'+(source?.status||'missing')+'；'+(source?.lodClass||source?.lod||'无声明等级'));$('geometry-warning').hidden=!warnings.length;$('geometry-warning').textContent=warnings.length?'模型提示：'+warnings.join('；'):'';
   mesh.geometry=new THREE.BufferGeometry();edgeLines.geometry=new THREE.BufferGeometry();
@@ -203,6 +208,7 @@ function appearance(){
   edgeLines.visible=modelMode!=='hidden'&&!temporaryHide&&(modelMode==='wireframe'||$('edges').checked)&&(edgeLines.geometry.getAttribute('position')?.count||0)>0;
   baselineLines.visible=!!selected&&$('baseline-overlay').checked&&!temporaryHide&&modelMode!=='hidden';
   modelStatus();
+  diagnostics?.update();
   pointCloud.appearance();saveHash();modelMap.triggerRepaint();
 }
 function focusBuilding(){
@@ -359,14 +365,15 @@ window.addEventListener('resize',()=>{imageMap.resize();modelMap.resize();report
 
 async function init(){
   try{
-    const response=await fetch(referenceMode?'../reference-eval/blocks/'+referenceBlock+'/viewer.json.gz':chapter==='dl'?'../dl/data/viewer.json.gz':chapter==='paper'?'../paper/data/'+inputBlock+'/viewer.json.gz':chapter==='repair'?'../repair/data/viewer.json.gz':chapter==='canopy'?'../next/canopy/data/viewer.json.gz':chapter==='workflow'?'../next/data/viewer.json.gz':'../data/'+chapter+'.json.gz');if(!response.ok)throw new Error('模型数据 HTTP '+response.status);
+    const response=await fetch(trialMode?'../model-diagnostics/repair/scene.json.gz':referenceMode?'../reference-eval/blocks/'+referenceBlock+'/viewer.json.gz':chapter==='dl'?'../dl/data/viewer.json.gz':chapter==='paper'?'../paper/data/'+inputBlock+'/viewer.json.gz':chapter==='repair'?'../repair/data/viewer.json.gz':chapter==='canopy'?'../next/canopy/data/viewer.json.gz':chapter==='workflow'?'../next/data/viewer.json.gz':'../data/'+chapter+'.json.gz');if(!response.ok)throw new Error('模型数据 HTTP '+response.status);
     const bytes=new Uint8Array(await response.arrayBuffer());let jsonText;
     if(bytes[0]===31&&bytes[1]===139){if(!window.DecompressionStream)throw new Error('此浏览器不支持压缩数据，请使用新版浏览器');jsonText=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();}else{jsonText=new TextDecoder().decode(bytes);}
     data=JSON.parse(jsonText);
     
-    const curatedGroups=referenceMode?['raw','legacy_guarded','fusion','context_fusion','reference']:{dl:['raw','legacy_guarded','fusion','context_fusion'],repair:['baseline','candidate']}[chapter];
+    const curatedGroups=trialMode?['raw','precision_repair','reference']:referenceMode?['raw','legacy_guarded','fusion','context_fusion','reference']:{dl:['raw','legacy_guarded','fusion','context_fusion'],repair:['baseline','candidate']}[chapter];
     GROUPS=curated?curatedGroups.filter(key=>data.groupOrder.includes(key)):data.groupOrder;
     LABELS=curated?{...data.groupLabels,raw:'原始对照',legacy_guarded:'平面保护',fusion:'光学＋点云',context_fusion:'光学＋局部邻域',baseline:'修正前',candidate:'局部修正候选'}:data.groupLabels;
+    if(trialMode)LABELS={...data.groupLabels};
     if(curated){data.groupOrder=GROUPS;data.groupLabels=LABELS;}
     group=GROUPS.includes(group)?group:(curated&&GROUPS.includes('fusion')?'fusion':curated&&GROUPS.includes('candidate')?'candidate':GROUPS[0]);
 
@@ -381,6 +388,7 @@ async function init(){
     if(chapter==='workflow'){$('chapter-detail').textContent='Georgetown · 8 栋流程验证 · 2 个阶段 · 无精度结论';$('metric-mode').closest('label').hidden=true;document.querySelector('label[for=group-select]').textContent='阶段';document.querySelector('label[for=cohort]').hidden=true;document.querySelector('#baseline-overlay').closest('label').lastChild.textContent='初始屋面轮廓';}
     if(curated){$('chapter-name').textContent=chapter==='dl'?'最新筛点实验':'局部屋面修正';$('chapter-detail').textContent=data.buildingCount+' 栋 · '+GROUPS.length+' 种保留方法 · NAIP＋3DEP';}
     if(referenceMode){$('chapter-name').textContent='外部屋面参考对照';$('chapter-detail').textContent=referenceBlock+' · '+data.buildingCount+' 个官方记录 · 4 方法＋来源参考';document.querySelector('#baseline-overlay').closest('label').lastChild.textContent='叠加官方参考边线';$('basemap').querySelector('option[value=naip]').textContent='实际输入 NAIP';}
+    if(trialMode){$('chapter-name').textContent='数值足迹修复 · 独立控制';$('chapter-detail').textContent='Boston 192／183／163 · 相同 raw 点与参数 · 未计入主表';}
     $('group-select').replaceChildren(...GROUPS.map(key=>{const o=document.createElement('option');o.value=key;o.textContent=LABELS[key];return o;}));$('group-select').disabled=false;
     $('cohort').hidden=!['overnight','tree'].includes(chapter);$('cohort').value=['overnight','tree'].includes(chapter)&&['legacy60','fresh60'].includes(initialHash.get('cohort'))?initialHash.get('cohort'):'all';
     $('metric-mode').value=['overnight','tree'].includes(chapter)?'paired':'common';
@@ -395,5 +403,5 @@ async function init(){
     $('loading').hidden=true;reportHeight();
   }catch(e){loadError=true;$('loading-text').textContent='页面数据加载失败：'+e.message;console.error(e);}
 }
-window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},get modelDisplay(){return modelDisplay();},get displayedGeometry(){return displayGeometry;},get mesh(){return mesh;},get edgeLines(){return edgeLines;},selectBuilding,setGroup,setBasemap,setModelMode,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;},get inputBlock(){return inputBlock;},get curated(){return curated;},pointCloud};
+window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},get modelDisplay(){return modelDisplay();},get displayedGeometry(){return displayGeometry;},get diagnostics(){return diagnostics;},get mesh(){return mesh;},get edgeLines(){return edgeLines;},selectBuilding,setGroup,setBasemap,setModelMode,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;},get inputBlock(){return inputBlock;},get curated(){return curated;},pointCloud};
 init();
