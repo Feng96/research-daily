@@ -1,5 +1,5 @@
 // Visual inspection of frozen source observations; this module never fits a roof.
-export function createPointCloudController({THREE,root,map,chapter,referenceMode=false,getSelected,getGroup,isHidden,toast,onChange,onHeight,initialHash}){
+export function createPointCloudController({THREE,root,map,chapter,referenceMode=false,getSelected,getGroup,isHidden,toast,onChange,onHeight,onModelMode,initialHash}){
   const $=id=>document.getElementById(id),cache=new Map();
   let payload=null,activeId=null,requestToken=0,visibleCount=0,error=null,loading=false;
   const material=new THREE.PointsMaterial({size:3,sizeAttenuation:false,vertexColors:true,transparent:true,opacity:.95,depthWrite:false,depthTest:false,toneMapped:false});
@@ -13,7 +13,7 @@ export function createPointCloudController({THREE,root,map,chapter,referenceMode
   $('point-color').value=enumValue('pointColor',['height','split','class',...(['canopy','repair','paper','dl'].includes(chapter)?['decision']:[]),...(['tree','workflow','canopy','repair','paper','dl'].includes(chapter)?['vegetation']:[])],'height');
   $('point-size').value=initialHash.has('pointSize')?Math.max(1,Math.min(6,+initialHash.get('pointSize')||3)):3;
   $('point-through').checked=initialHash.get('pointThrough')!=='0';
-  if(initialHash.has('opacity'))$('opacity').value=Math.max(15,Math.min(100,+initialHash.get('opacity')||55));
+  if(initialHash.has('opacity'))$('opacity').value=Math.max(15,Math.min(100,+initialHash.get('opacity')||100));
   if(initialHash.has('models'))$('models').checked=initialHash.get('models')!=='0';
   function state(){return {points:$('show-points').checked?'1':'0',pointMode:$('point-mode').value,pointColor:$('point-color').value,pointSize:$('point-size').value,pointThrough:$('point-through').checked?'1':'0',opacity:$('opacity').value,models:$('models').checked?'1':'0'};}
   function coordinates(b,xy){
@@ -99,8 +99,8 @@ export function createPointCloudController({THREE,root,map,chapter,referenceMode
   }
   for(const id of ['show-points','point-size','point-through'])$(id).addEventListener(id==='point-size'?'input':'change',()=>{appearance();onChange();});
   for(const id of ['point-mode','point-color'])$(id).addEventListener('change',()=>{render();onChange();});
-  $('points-only').onclick=()=>{$('models').checked=false;$('show-points').checked=true;$('models').dispatchEvent(new Event('change'));appearance();onChange();};
-  $('points-model').onclick=()=>{$('models').checked=true;$('show-points').checked=true;$('opacity').value=55;$('opacity').dispatchEvent(new Event('input'));appearance();onChange();};
+  $('points-only').onclick=()=>{$('show-points').checked=true;onModelMode('hidden');appearance();onChange();};
+  $('points-model').onclick=()=>{$('show-points').checked=true;$('opacity').value=100;onModelMode('solid');appearance();onChange();};
   $('copy-coordinates').onclick=async()=>{
     const field=$('building-coordinates');let copied=false;
     try{await navigator.clipboard.writeText(field.value);copied=true;}catch{field.focus();field.select();try{copied=document.execCommand('copy');}catch{}}

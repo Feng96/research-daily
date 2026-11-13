@@ -27,3 +27,20 @@ html.curated,body.curated{min-height:0;height:auto}
 .curated .metrics>summary{font-size:12px}
 .curated .method-label{min-width:220px!important}
 @media(max-width:900px){.curated main{padding:0 0 12px}.curated .building-label,.curated .method-label{min-width:100%!important}.curated .canvas-wrap,.curated .imagery-viewport{height:300px}.curated .controls select{max-width:100%}.curated .identity b{max-width:100%;overflow-wrap:anywhere}}
+
+/* Keep the geometry controls visible beside the main view controls. */
+.native-model-shortcuts{display:flex;flex-wrap:wrap;gap:5px}
+.native-model-shortcuts button{font-size:12px;min-height:32px;padding:5px 10px}
+.native-model-mode select{min-width:132px}
+.native-model-status{font-size:11px;color:#526c5d;line-height:1.6;margin:6px 0 8px;overflow-wrap:anywhere}
+.native-opacity output{min-width:35px;font-variant-numeric:tabular-nums}
+.viewbar .native-edges,.viewbar .native-points{white-space:nowrap}
+.curated .curated-primary-controls{gap:8px 10px}
+@media(max-width:440px){
+ .curated .curated-primary-controls{gap:7px}
+ .native-model-mode{flex:1;min-width:155px}
+ .native-model-mode select{max-width:100%;min-width:0;flex:1}
+ .native-model-shortcuts{width:100%}
+ .native-model-shortcuts button{flex:1;min-width:0;padding:5px 7px;font-size:11px}
+ .viewbar .native-edges,.viewbar .native-points{font-size:11px}
+}

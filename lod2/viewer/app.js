@@ -1,5 +1,5 @@
 import * as THREE from '../vendor/three.module.js';
-import {createPointCloudController} from './point_clouds.js?v=20261104-reference';
+import {createPointCloudController} from './point_clouds.js?v=20261113-models';
 
 const $=id=>document.getElementById(id);
 const chapter=new URLSearchParams(location.search).get('chapter')||'pilot';
@@ -21,7 +21,7 @@ function setupCuratedControls(){
  const display=document.createElement('details');display.className='curated-display-settings';
  const title=document.createElement('summary');title.textContent='显示选项';
  const settings=document.createElement('div');settings.className='curated-extra-controls';
- for(const id of ['roof-only','edges','baseline-overlay','opacity']){const label=$(id).closest('label');if(label)settings.append(label)}
+ for(const id of ['baseline-overlay','opacity']){const label=$(id).closest('label');if(label)settings.append(label)}
  display.append(title,settings);document.querySelector('.model-tools').append(display);
  for(const select of [advanced,display])select.addEventListener('toggle',reportHeight);
  for(const option of [...$('point-mode').options]){
@@ -41,6 +41,12 @@ let data,selected,group='',basemap='satellite',syncing=false,temporaryHide=false
 let loadError=false,loaded=false,hashTimer,toastTimer,lastTileError=0,frameToken=0;
 const mapErrors=[];
 const initialHash=new URLSearchParams(location.hash.slice(1));
+const MODEL_MODES=['roof','building','wireframe','hidden'];
+let modelMode=MODEL_MODES.includes(initialHash.get('modelMode'))?initialHash.get('modelMode'):initialHash.get('models')==='0'?'hidden':'roof';
+let lastSolidMode=modelMode==='building'?'building':'roof',displayGeometry=null,geometrySource='none';
+const fullModels=new Map(),fullPending=new Map(),fullErrors=new Map();
+$('model-mode').value=modelMode;
+if(initialHash.has('edges'))$('edges').checked=initialHash.get('edges')!=='0';
 if(curated){
  if(!['height','decision'].includes(initialHash.get('pointColor')))initialHash.set('pointColor',chapter==='dl'?'decision':'height');
  if(!['inside','train','removed','all'].includes(initialHash.get('pointMode')))initialHash.set('pointMode','inside');
@@ -62,11 +68,11 @@ scene.add(new THREE.AmbientLight(0xffffff,1.0));
 const sun=new THREE.DirectionalLight(0xffffff,1.4);sun.position.set(-250,-250,800);scene.add(sun);
 const fill=new THREE.DirectionalLight(0xc6d9e9,.3);fill.position.set(300,200,300);scene.add(fill);
 const material=new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:1,metalness:0,polygonOffset:true,polygonOffsetFactor:1,polygonOffsetUnits:1});
-const mesh=new THREE.Mesh(new THREE.BufferGeometry(),material);root.add(mesh);
+const mesh=new THREE.Mesh(new THREE.BufferGeometry(),material);mesh.frustumCulled=false;root.add(mesh);
 const edgeMaterial=new THREE.LineBasicMaterial({color:0x3b392b,transparent:true,opacity:.75,depthWrite:false});
-const edgeLines=new THREE.LineSegments(new THREE.BufferGeometry(),edgeMaterial);edgeLines.renderOrder=2;root.add(edgeLines);
+const edgeLines=new THREE.LineSegments(new THREE.BufferGeometry(),edgeMaterial);edgeLines.renderOrder=2;edgeLines.frustumCulled=false;root.add(edgeLines);
 const baselineLines=new THREE.LineSegments(new THREE.BufferGeometry(),new THREE.LineBasicMaterial({color:0x42d9e4,transparent:true,opacity:.8,depthWrite:false,depthTest:false}));baselineLines.renderOrder=3;root.add(baselineLines);
-const pointCloud=createPointCloudController({THREE,root,map:modelMap,chapter,referenceMode,getSelected:()=>selected,getGroup:()=>group,isHidden:()=>temporaryHide,toast,onChange:saveHash,onHeight:reportHeight,initialHash});
+const pointCloud=createPointCloudController({THREE,root,map:modelMap,chapter,referenceMode,getSelected:()=>selected,getGroup:()=>group,isHidden:()=>temporaryHide,toast,onChange:saveHash,onHeight:reportHeight,onModelMode:setModelMode,initialHash});
 setupCuratedControls();
 let renderer,renderCount=0;
 const modelLayer={id:'experiment-roof-model',type:'custom',renderingMode:'3d',
@@ -95,14 +101,77 @@ function setupImageOverlays(){
   imageMap.on('mouseenter','building-hit',()=>imageMap.getCanvas().style.cursor='pointer');
   imageMap.on('mouseleave','building-hit',()=>imageMap.getCanvas().style.cursor='');
 }
+function fullModel(b){
+  if(!referenceMode)return b.groups[group];
+  if(group==='reference')return null;
+  if(fullModels.has(b.id))return fullModels.get(b.id).groups[group];
+  if(!fullPending.has(b.id)&&!fullErrors.has(b.id)){
+    const promise=(async()=>{
+      const response=await fetch('../full-models/blocks/'+referenceBlock+'/'+encodeURIComponent(b.id)+'.json.gz');
+      if(!response.ok)throw Error('完整模型 HTTP '+response.status);
+      const bytes=new Uint8Array(await response.arrayBuffer());
+      const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);
+      const payload=JSON.parse(text);
+      if(payload.id!==b.id||payload.blockId!==referenceBlock||!Array.isArray(payload.anchor)||payload.anchor.some((n,i)=>Math.abs(n-data.anchor[i])>1e-9))throw Error('完整模型坐标清单不一致');
+      for(const key of ['raw','legacy_guarded','fusion','context_fusion']){
+        const g=payload.groups?.[key];
+        if(!g||!Array.isArray(g.positions)||g.positions.length%9||!g.positions.every(Number.isFinite)||g.roofTriangleMask?.length!==g.positions.length/9)throw Error('完整模型面数据不完整');
+      }
+      fullModels.set(b.id,payload);
+      if(fullModels.size>6)fullModels.delete(fullModels.keys().next().value);
+    })().catch(error=>fullErrors.set(b.id,error.message)).finally(()=>{
+      fullPending.delete(b.id);
+      if(selected?.id===b.id&&modelMode==='building'){geometry(selected);frameAllGroups();reportHeight();}
+    });
+    fullPending.set(b.id,promise);
+  }
+  return null;
+}
+function modelDisplay(){
+  const g=displayGeometry,mask=g?.roofTriangleMask||[],classes=g?.surfaceClasses||[];
+  const n=mesh.geometry.index?mesh.geometry.index.count/3:(mesh.geometry.getAttribute('position')?.count||0)/3;
+  return {mode:modelMode,requestedMode:modelMode,available:!!g?.positions?.length,loading:modelMode==='building'&&fullPending.has(selected?.id),error:fullErrors.get(selected?.id)||null,
+    triangleCount:n,roofTriangles:mask.filter(Boolean).length,wallTriangles:$('roof-only').checked?0:classes.filter(x=>x===1).length,groundTriangles:$('roof-only').checked?0:classes.filter(x=>x===2).length,
+    meshVisible:mesh.visible,edgesVisible:edgeLines.visible,opacity:material.opacity,geometrySource};
+}
+function modelStatus(){
+  const d=modelDisplay(),name={roof:'屋顶实体面',building:'完整建筑',wireframe:'屋顶框线',hidden:'模型已隐藏'}[modelMode];
+  $('model-mode').value=modelMode;
+  const buildingOption=$('model-mode').querySelector('option[value=building]');
+  buildingOption.disabled=referenceMode&&group==='reference';
+  buildingOption.textContent=buildingOption.disabled?'完整建筑（参考仅含屋顶）':'完整建筑';
+  $('edges').disabled=modelMode==='wireframe'||modelMode==='hidden';
+  let text;
+  if(modelMode==='hidden')text='模型已隐藏；可保留点云单独查看。';
+  else if(d.loading)text='正在加载完整建筑，暂显示屋顶面…';
+  else if(modelMode==='building'&&d.error)text='完整模型加载失败，暂显示屋顶面：'+d.error;
+  else if(!d.available)text='本方法未生成可显示的模型；可切换原始基线或官方参考。';
+  else text=name+' · '+d.roofTriangles.toLocaleString('zh-CN')+' 个屋顶三角面'+(modelMode==='building'?' · '+d.wallTriangles.toLocaleString('zh-CN')+' 个墙面三角形':'')+(referenceMode&&group==='reference'?' · 该来源仅提供屋顶面':'');
+  if(modelMode==='building'&&d.available&&!d.loading&&!d.error&&!d.wallTriangles)text+=' · 原生结果没有墙面，未补造';
+  $('model-status').textContent=text;
+}
+function setModelMode(value){
+  if(value==='solid')value=lastSolidMode;
+  if(!MODEL_MODES.includes(value))return;
+  if(referenceMode&&group==='reference'&&value==='building')value='roof';
+  modelMode=value;
+  if(value==='roof'||value==='building')lastSolidMode=value;
+  if(value==='wireframe')$('edges').checked=true;
+  if(selected){geometry(selected);if(value==='building')frameAllGroups();}else appearance();
+}
 function geometry(b){
   const bases=GROUPS.map(key=>b.groups[key]?.nativeGroundZ).filter(Number.isFinite);
   root.position.z=Number.isFinite(b.displayOffsetZ)?b.displayOffsetZ:(bases.length?b.ground_z-Math.min(...bases):0);
   pointCloud.sync();
-  const g=b.groups[group];mesh.geometry.dispose();edgeLines.geometry.dispose();
-  const warnings=[...(g?.previewWarnings||[])];if(g?.status!=='success'&&g?.isAlgorithm!==false)warnings.unshift('当前记录状态：'+(g?.status||'missing')+'；'+(g?.lodClass||g?.lod||'无声明等级'));$('geometry-warning').hidden=!warnings.length;$('geometry-warning').textContent=warnings.length?'模型提示：'+warnings.join('；'):'';
+  const source=b.groups[group];
+  if(referenceMode&&group==='reference'&&modelMode==='building'){modelMode='roof';lastSolidMode='roof';}
+  $('roof-only').checked=modelMode!=='building';
+  const full=modelMode==='building'?fullModel(b):null,g=full||source;
+  displayGeometry=g;geometrySource=full?(referenceMode?'native-full-model':'existing-native-model'):(referenceMode?'compiled-roof-preview':'existing-native-model');
+  mesh.geometry.dispose();edgeLines.geometry.dispose();
+  const warnings=[...(source?.previewWarnings||[])];if(source?.status!=='success'&&source?.isAlgorithm!==false)warnings.unshift('当前记录状态：'+(source?.status||'missing')+'；'+(source?.lodClass||source?.lod||'无声明等级'));$('geometry-warning').hidden=!warnings.length;$('geometry-warning').textContent=warnings.length?'模型提示：'+warnings.join('；'):'';
   mesh.geometry=new THREE.BufferGeometry();edgeLines.geometry=new THREE.BufferGeometry();
-  if(!g?.positions?.length){mesh.visible=false;edgeLines.visible=false;baselineLines.visible=false;baselineLines.geometry.dispose();baselineLines.geometry=new THREE.BufferGeometry();toast('该建筑在当前组没有可显示的模型。');return;}
+  if(!g?.positions?.length){baselineLines.geometry.dispose();baselineLines.geometry=new THREE.BufferGeometry();appearance();reportHeight();return;}
   const positions=new Float32Array(g.positions);mesh.geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));mesh.geometry.computeVertexNormals();
   if($('roof-only').checked){const indices=[];for(let t=0;t<g.roofTriangleMask.length;t++)if(g.roofTriangleMask[t])indices.push(t*3,t*3+1,t*3+2);mesh.geometry.setIndex(indices);}
   const colors=new Float32Array(positions.length);const normal=mesh.geometry.getAttribute('normal');
@@ -111,7 +180,7 @@ function geometry(b){
     for(let k=0;k<3;k++){colors[t*9+k*3]=c.r;colors[t*9+k*3+1]=c.g;colors[t*9+k*3+2]=c.b;}
   }
   mesh.geometry.setAttribute('color',new THREE.BufferAttribute(colors,3));
-  edgeLines.geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array($('roof-only').checked?(g.roofEdges||[]):g.edges),3));
+  edgeLines.geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array($('roof-only').checked?(g.roofEdges||[]):g.edges||[]),3));
   // A single display reference is shared by all four groups. Keep the mesh
   // above the flat basemap without clipping low walls on this sloping site.
   // This is a display translation only; no source XYZ or height difference is fitted.
@@ -122,7 +191,11 @@ function geometry(b){
 }
 function appearance(){
   const alpha=+$('opacity').value/100;material.opacity=alpha;material.transparent=alpha<1;material.depthWrite=alpha>=.95;material.needsUpdate=true;
-  $('opacity-value').textContent=Math.round(alpha*100)+'%';mesh.visible=$('models').checked&&!temporaryHide&&!!selected?.groups[group]?.positions?.length;edgeLines.visible=mesh.visible&&$('edges').checked;baselineLines.visible=!!selected&&$('baseline-overlay').checked&&!temporaryHide&&$('models').checked;
+  $('models').checked=['roof','building'].includes(modelMode);
+  $('opacity-value').textContent=Math.round(alpha*100)+'%';mesh.visible=$('models').checked&&!temporaryHide&&!!displayGeometry?.positions?.length;
+  edgeLines.visible=modelMode!=='hidden'&&!temporaryHide&&(modelMode==='wireframe'||$('edges').checked)&&(edgeLines.geometry.getAttribute('position')?.count||0)>0;
+  baselineLines.visible=!!selected&&$('baseline-overlay').checked&&!temporaryHide&&modelMode!=='hidden';
+  modelStatus();
   pointCloud.appearance();saveHash();modelMap.triggerRepaint();
 }
 function focusBuilding(){
@@ -140,7 +213,7 @@ function frameAllGroups(){
   function check(pass){modelMap.once('render',()=>{
     if(token!==frameToken||!selected||!renderer)return;
     let ratio=0;const point=new THREE.Vector3();
-    for(const key of GROUPS){const g=selected.groups[key];for(let i=0;i<g.positions.length;i+=3){
+    for(const g of [...GROUPS.map(key=>selected.groups[key]),...(modelMode==='building'&&displayGeometry?[displayGeometry]:[])]){for(let i=0;i<g.positions.length;i+=3){
       if($('roof-only').checked&&!g.roofTriangleMask[Math.floor(i/9)])continue;
       point.set(g.positions[i],g.positions[i+1],g.positions[i+2]+root.position.z).applyMatrix4(camera.projectionMatrix);
       if(Number.isFinite(point.x)&&Number.isFinite(point.y))ratio=Math.max(ratio,Math.abs(point.x)/.84,Math.abs(point.y)/.74);
@@ -237,7 +310,7 @@ function updatePaperCues(){
 }
 
 function footprintVisibility(){updatePaperCues();for(const id of ['selected-outline','selected-outline-shadow'])if(imageMap.getLayer(id))imageMap.setLayoutProperty(id,'visibility',$('footprint').checked?'visible':'none');$('clean-image').textContent=$('footprint').checked?'查看纯影像':'显示定位轮廓';}
-function saveHash(){if(!loaded||!selected)return;clearTimeout(hashTimer);hashTimer=setTimeout(()=>{const c=imageMap.getCenter();const state={building:selected.id,group,base:basemap,cohort:$('cohort').value,lng:c.lng.toFixed(7),lat:c.lat.toFixed(7),z:imageMap.getZoom().toFixed(3),bearing:imageMap.getBearing().toFixed(2),pitch:modelMap.getPitch().toFixed(1),...pointCloud.state(),...(referenceMode?{block:referenceBlock}:{})};history.replaceState(null,'','#'+new URLSearchParams(state));if(parent!==window)parent.postMessage({type:'lod2-selection',chapter,...state,...(curated?{curated:'1'}:{}),...(referenceMode?{dataset:'reference'}:{}),...(chapter==='paper'?{input:inputBlock}:{})},location.origin);},150);}
+function saveHash(){if(!loaded||!selected)return;clearTimeout(hashTimer);hashTimer=setTimeout(()=>{const c=imageMap.getCenter();const state={building:selected.id,group,base:basemap,cohort:$('cohort').value,lng:c.lng.toFixed(7),lat:c.lat.toFixed(7),z:imageMap.getZoom().toFixed(3),bearing:imageMap.getBearing().toFixed(2),pitch:modelMap.getPitch().toFixed(1),...pointCloud.state(),modelMode,edges:$('edges').checked?'1':'0',...(referenceMode?{block:referenceBlock}:{})};history.replaceState(null,'','#'+new URLSearchParams(state));if(parent!==window)parent.postMessage({type:'lod2-selection',chapter,...state,...(curated?{curated:'1'}:{}),...(referenceMode?{dataset:'reference'}:{}),...(chapter==='paper'?{input:inputBlock}:{})},location.origin);},150);}
 function reportHeight(){if(parent!==window)requestAnimationFrame(()=>parent.postMessage({type:'lod2-height',height:document.body.scrollHeight},location.origin));}
 function filterBuildings(focus=true){
   visibleBuildings=data.buildings.filter(b=>$('cohort').value==='all'||b.cohort===$('cohort').value);
@@ -264,7 +337,9 @@ document.querySelectorAll('[data-group]').forEach(b=>b.onclick=()=>setGroup(b.da
 document.querySelectorAll('[data-example]').forEach(b=>b.onclick=()=>{const target=data?.buildings.find(x=>x.id===b.dataset.example);if(target)selectBuilding(target);});
 $('basemap').onchange=e=>setBasemap(e.target.value);$('footprint').onchange=footprintVisibility;
 $('clean-image').onclick=()=>{$('footprint').checked=!$('footprint').checked;footprintVisibility();};
-$('models').onchange=appearance;$('baseline-overlay').onchange=appearance;$('metric-mode').onchange=renderMetrics;$('cohort').onchange=()=>filterBuildings(true);$('group-select').onchange=e=>setGroup(e.target.value);$('edges').onchange=appearance;$('opacity').oninput=appearance;
+$('models').onchange=()=>setModelMode($('models').checked?'solid':'hidden');$('model-mode').onchange=e=>setModelMode(e.target.value);
+$('models-only').onclick=()=>{$('show-points').checked=false;$('opacity').value=100;setModelMode('solid');};
+$('baseline-overlay').onchange=appearance;$('metric-mode').onchange=renderMetrics;$('cohort').onchange=()=>filterBuildings(true);$('group-select').onchange=e=>setGroup(e.target.value);$('edges').onchange=appearance;$('opacity').oninput=appearance;
 $('roof-only').onchange=()=>{if(selected)geometry(selected);};
 function setView(pitch){frameToken++;if(pitch>0)modelMap.once('moveend',()=>frameAllGroups());modelMap.easeTo({pitch,duration:450});$('view-3d').classList.toggle('active',pitch>0);$('view-top').classList.toggle('active',pitch===0);$('view-3d').setAttribute('aria-pressed',String(pitch>0));$('view-top').setAttribute('aria-pressed',String(pitch===0));}
 $('view-3d').onclick=()=>setView(55);$('view-top').onclick=()=>setView(0);$('export').onclick=exportImage;
@@ -311,5 +386,5 @@ async function init(){
     $('loading').hidden=true;reportHeight();
   }catch(e){loadError=true;$('loading-text').textContent='页面数据加载失败：'+e.message;console.error(e);}
 }
-window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},selectBuilding,setGroup,setBasemap,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;},get inputBlock(){return inputBlock;},get curated(){return curated;},pointCloud};
+window.roofCompare={imageMap,modelMap,get data(){return data;},get selected(){return selected;},get group(){return group;},get loaded(){return loaded;},get error(){return loadError;},get renderCount(){return renderCount;},get renderer(){return renderer;},get mapErrors(){return mapErrors;},get modelDisplay(){return modelDisplay();},get mesh(){return mesh;},get edgeLines(){return edgeLines;},selectBuilding,setGroup,setBasemap,setModelMode,filterBuildings,get visibleBuildings(){return visibleBuildings;},get chapter(){return chapter;},get inputBlock(){return inputBlock;},get curated(){return curated;},pointCloud};
 init();
