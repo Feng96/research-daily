@@ -1,5 +1,5 @@
 // Read-only explanation of the mesh actually submitted to the renderer.
-export function createDiagnostics({getState,onSelect,onHeight}){
+export function createDiagnostics({getState,onSelect,onHeight,indexURL='../model-diagnostics/index.json.gz'}){
  const $=id=>document.getElementById(id),labels={raw:'原始基线',legacy_guarded:'平面保护',fusion:'光学＋点云',context_fusion:'光学＋局部邻域'};
  const methods=Object.keys(labels),rows=new Map(),fingerprints=new WeakMap();labels.precision_repair='数值足迹修复（raw）';
  let index=null,loadError=null,token=0,lastAudit=null;
@@ -22,7 +22,7 @@ export function createDiagnostics({getState,onSelect,onHeight}){
  }
  function drawRows(s,record){
   const body=$('diagnostic-rows');body.replaceChildren();
-  if(!record){const row=document.createElement('tr'),cell=document.createElement('td');cell.colSpan=5;cell.textContent=loadError?'诊断记录加载失败，可刷新重试。':'正在读取逐建筑诊断…';row.append(cell);body.append(row);return;}
+  if(!record){const row=document.createElement('tr'),cell=document.createElement('td');cell.colSpan=5;cell.textContent=loadError?'诊断记录加载失败，可刷新重试。':index?'该记录没有逐方法诊断；请查看实际几何与输入点。':'正在读取逐建筑诊断…';row.append(cell);body.append(row);return;}
   const full=s.mode==='building'&&s.geometrySource!=='compiled-roof-preview';
   for(const method of s.trialMode?['raw','precision_repair']:methods){const d=record.methods[method];if(!d)continue;const tr=document.createElement('tr');tr.className=method===s.method?'active':'';
    const first=document.createElement('td'),button=document.createElement('button');button.textContent=labels[method];button.setAttribute('aria-pressed',String(method===s.method));button.onclick=()=>onSelect(method);first.append(button);tr.append(first);
@@ -64,6 +64,6 @@ export function createDiagnostics({getState,onSelect,onHeight}){
    onHeight();
   }).catch(error=>{if(current===token){status.textContent=prefix+input+' · 网格核对失败：'+error.message;lastAudit={method:s.method,error:error.message};}});
  }
- (async()=>{try{const response=await fetch('../model-diagnostics/index.json.gz');if(!response.ok)throw Error('HTTP '+response.status);const bytes=new Uint8Array(await response.arrayBuffer());const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);index=JSON.parse(text);for(const b of index.buildings)rows.set(b.blockId+'/'+b.id,b);update();}catch(error){loadError=error.message;update();}})();
+ (async()=>{try{const response=await fetch(indexURL);if(!response.ok)throw Error('HTTP '+response.status);const bytes=new Uint8Array(await response.arrayBuffer());const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);index=JSON.parse(text);for(const b of index.buildings)rows.set(b.blockId+'/'+b.id,b);update();}catch(error){loadError=error.message;update();}})();
  return {update,get status(){return lastAudit;},get loaded(){return !!index;},get error(){return loadError;},get data(){return index;}};
 }
