@@ -3,3 +3,6 @@ export const OSM_REMOTE_ASSET_BASE='https://raw.githubusercontent.com/Feng96/res
 
 // Set to an exact immutable data commit before publication.
 export const STRUCTURE_REMOTE_ASSET_BASE='https://raw.githubusercontent.com/Feng96/research-daily/64f07ba05d40419e4951db3c86eb9b69fb5887b0/lod2/structure-ab/';
+
+// Set to the reviewed immutable official-reference data commit before publication.
+export const OFFICIAL_REMOTE_ASSET_BASE='https://raw.githubusercontent.com/Feng96/research-daily/41de67cc841db70c97c638a5540b893122818e1e/lod2/official-reference/';

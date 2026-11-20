@@ -35,7 +35,7 @@ export function createDiagnostics({getState,onSelect,onHeight,structureMode=fals
   const s=getState();if(!s?.building)return;
   const current=++token,record=rows.get(s.block+'/'+s.building.id),p=s.points.payload,pointState=s.points.status;
   const isRef=s.method==='reference',methodLabel=isRef?'官方来源参考':(structureMode&&s.method==='reference'?'OSM 配对参考':labels[s.method])||s.method;
-  const source=s.geometrySource==='paired-cropped-reference'?'OSM 配对裁剪参考':s.geometrySource==='structural-decoder-model'?'结构模型解码结果':s.geometrySource==='official-reference-full-model'?'官方原始完整几何':s.geometrySource==='numerical-footprint-repair-trial'?'独立数值修复原生模型':s.geometrySource==='native-full-model'?'原生完整模型':'屋顶预览';
+  const source=s.geometrySource==='official-source-full-with-closure'?'官方原始建筑（保留原墙面；补底另记）':s.geometrySource==='official-source-roof-preview'?'官方原始完整屋顶（未裁剪）':s.geometrySource==='structural-decoder-model'?'结构模型解码结果':s.geometrySource==='official-reference-full-model'?'官方原始完整几何':s.geometrySource==='numerical-footprint-repair-trial'?'独立数值修复原生模型':s.geometrySource==='native-full-model'?'原生完整模型':'屋顶预览';
   const hasPoints=p?.id===s.building.id;
   const raw=hasPoints?(p.trainSets[p.groupToTrainSet['dl/raw']]||[]):[];
   const kept=hasPoints&&!isRef?(p.trainSets[p.groupToTrainSet['dl/'+(structureMode?'raw':s.method==='precision_repair'?'raw':s.method)]]||[]):[];

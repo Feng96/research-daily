@@ -1,8 +1,8 @@
 const $=id=>document.getElementById(id),frame=$('experiment-viewer');
 const allowed=['raw','legacy_guarded','fusion','context_fusion'];
 const states={osm:{block:'boston_g5',building:'OSM_way_29552323',group:'raw',base:'naip',pointMode:'inside',pointColor:'decision',points:'0',modelMode:'building'},reference:{block:'boston_g5',group:'raw',base:'naip',pointMode:'inside',pointColor:'decision'},us:{group:'fusion',base:'naip',pointMode:'inside',pointColor:'decision'},controlled:{method:'graph_20000_long_s20261031',case:'dense_canopy'}};
-const labels={raw:'原始输入',legacy_guarded:'平面保护',fusion:'光学＋点云',context_fusion:'光学＋局部邻域',reference:'官方来源参考'};
-const recipes={raw:'保留全部候选点，直接重建。',legacy_guarded:'旧融合选择器配合规则和平面保护，再交给共同重建器。',fusion:'用几何与 R/G/NIR 光学特征判断干扰点，再重建。',context_fusion:'加入邻点结构判断干扰点，再重建；需要同时检查屋顶误删。',reference:'查看官方来源的屋面几何。参考数据与输入可能不同年份。',graph_20000_long_s20261031:'局部图网络学习邻点关系，再交给固定几何重建器。'};
+const labels={raw:'原始输入',legacy_guarded:'平面保护',fusion:'光学＋点云',context_fusion:'光学＋局部邻域',reference:'官方原始屋顶（未裁剪）'};
+const recipes={raw:'保留全部候选点，直接重建。',legacy_guarded:'旧融合选择器配合规则和平面保护，再交给共同重建器。',fusion:'用几何与 R/G/NIR 光学特征判断干扰点，再重建。',context_fusion:'加入邻点结构判断干扰点，再重建；需要同时检查屋顶误删。',reference:'查看未按 OSM 裁剪或平移的官方原始屋顶，可切换含墙面的建筑。来源与观测可能跨年，补底与闭合状态单独标注。',graph_20000_long_s20261031:'局部图网络学习邻点关系，再交给固定几何重建器。'};
 let experiment='osm',data,reference,summary,osm,osmSummary,loaded=false,resultSlice='all';
 const n=x=>Number.isFinite(x)?x.toLocaleString('zh-CN'):'—';
 const percent=x=>Number.isFinite(x)?(x*100).toFixed(1)+'%':'—';
@@ -15,7 +15,7 @@ function sanitize(id,state){
  else{if(![...allowed,...(['reference','osm'].includes(id)?['reference']:[])].includes(s.group))s.group=['reference','osm'].includes(id)?'raw':'fusion';if(!['satellite','naip','osm'].includes(s.base))s.base='naip';if(!['inside','train','removed','all'].includes(s.pointMode))s.pointMode='inside';if(!['height','decision'].includes(s.pointColor))s.pointColor='decision';if(['reference','osm'].includes(id)){const index=id==='osm'?osm:reference;if(!index.blocks.some(b=>b.id===s.block))s.block=index.blocks[0]?.id;};}
  return s;
 }
-function sourceURL(){const s=states[experiment],hash=new URLSearchParams(s);return ['osm','reference'].includes(experiment)?'viewer/?v=20261120-structure&chapter=dl&curated=1&dataset='+experiment+'&block='+encodeURIComponent(s.block)+(experiment==='reference'?'&slice='+encodeURIComponent(resultSlice):'')+'#'+hash:experiment==='us'?'viewer/?v=20261120-structure&chapter=dl&curated=1#'+hash:'native/?v=20261113-diagnostics&curated=1#'+hash;}
+function sourceURL(){const s=states[experiment],hash=new URLSearchParams(s);return ['osm','reference'].includes(experiment)?'viewer/?v=20261120-official&chapter=dl&curated=1&dataset='+experiment+'&block='+encodeURIComponent(s.block)+(experiment==='reference'?'&slice='+encodeURIComponent(resultSlice):'')+'#'+hash:experiment==='us'?'viewer/?v=20261120-official&chapter=dl&curated=1#'+hash:'native/?v=20261113-diagnostics&curated=1#'+hash;}
 function displayState(s){return Object.fromEntries(Object.entries(s).filter(([key])=>['modelMode','edges','opacity','points','models','pointSize','pointThrough'].includes(key)));}
 function save(){const p=new URLSearchParams({experiment,...states[experiment],...(experiment==='reference'?{slice:resultSlice}:{})});history.replaceState(null,'','?'+p+(location.hash||''));$('full-viewer').href=sourceURL();}
 function fit(h){const next=Math.max(700,Math.min(3600,Math.ceil(h)));if(Math.abs(frame.clientHeight-next)>2)frame.style.height=next+'px';}
@@ -72,6 +72,8 @@ function render(){
   $('result-note').textContent='主损失包含重建失败与缺覆盖罚分。点云与参考同源，不能直接当作美国实测精度。';
  }
  if(!regional){const shortcuts=us?[['67528254',{osm:'67528254'}],['66347628',{osm:'66347628'}],['67521425',{osm:'67521425'}]]:[['密集树冠',{case:'dense_canopy'}],['极稀疏点',{case:'very_sparse'}]];for(const [name,state]of shortcuts){const b=document.createElement('button');b.textContent=name;b.onclick=()=>selectCase(state);$('quick-cases').append(b);}}
+ if(isOSM){$('finding').textContent='OSM 与官方模型尚未确认精确配准。官方屋顶保持原始范围与位置，请结合影像和点云目视比较；旧参考指标只保留为历史诊断。';$('result-note').textContent='以下数值来自既往参考评价，配准偏差可能影响指标，不作为当前方法优劣结论。'+$('result-note').textContent;}
+ $('historical-cropped-metrics').open=false;$('historical-cropped-metrics').querySelector('summary').textContent=isOSM?'历史参考指标（配准未确认）':'历史指标与口径';
  $('method-note').textContent=recipes[states[experiment].group||states[experiment].method]||'';
 }
 function setExperiment(id,s={}){experiment=['osm','reference','us','controlled'].includes(id)?id:'osm';states[experiment]=sanitize(experiment,{...states[experiment],...s});render();$('viewer-status').hidden=false;frame.style.height=(innerWidth<650?1480:1060)+'px';frame.src=sourceURL();save();}
