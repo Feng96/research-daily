@@ -3,3 +3,5 @@
 #reference-controls,#result-controls{margin:14px 0 8px}#reference-block,#result-slice{max-width:100%;padding:6px;border:1px solid var(--line);border-radius:5px;background:white;color:var(--ink)}.quick-cases button{max-width:100%;overflow-wrap:anywhere}#regional-downloads[hidden]{display:none}@media(max-width:650px){.experiment-tabs{gap:5px}.experiment-tabs button{min-width:0;flex:1;padding:9px 7px;font-size:12px}.experiment-tabs span{font-size:9px}#reference-controls label{display:block}#reference-block,#result-slice{width:100%;font-size:12px}}
 
 .diagnostic-notes{margin:16px 0;padding:12px 14px;border:1px solid #dfcba7;border-radius:7px;background:#fff8eb;font-size:12px;line-height:1.8}.diagnostic-notes summary{cursor:pointer;font-weight:600}.diagnostic-notes p{margin:9px 0}.diagnostic-notes a{overflow-wrap:anywhere}
+
+.archive-experiments{margin:10px 0}.archive-experiments .experiment-tabs{margin-top:8px}#structure-controls{margin:10px 0}#structure-split{padding:6px;border:1px solid var(--line);border-radius:5px;background:#fff;color:var(--ink)}@media(max-width:650px){#structure-split{width:100%;font-size:13px}}

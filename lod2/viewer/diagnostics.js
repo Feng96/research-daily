@@ -1,7 +1,8 @@
 // Read-only explanation of the mesh actually submitted to the renderer.
-export function createDiagnostics({getState,onSelect,onHeight,indexURL='../model-diagnostics/index.json.gz'}){
+export function createDiagnostics({getState,onSelect,onHeight,structureMode=false,indexURL='../model-diagnostics/index.json.gz'}){
  const $=id=>document.getElementById(id),labels={raw:'原始基线',legacy_guarded:'平面保护',fusion:'光学＋点云',context_fusion:'光学＋局部邻域'};
- const methods=Object.keys(labels),rows=new Map(),fingerprints=new WeakMap();labels.precision_repair='数值足迹修复（raw）';
+ if(structureMode)Object.assign(labels,{geometry:'几何规整',A_joint:'A 联合模型',B_hierarchical:'B 主次模型'});
+ const methods=structureMode?['raw','geometry','A_joint','B_hierarchical']:Object.keys(labels),rows=new Map(),fingerprints=new WeakMap();labels.precision_repair='数值足迹修复（raw）';
  let index=null,loadError=null,token=0,lastAudit=null;
  const status=document.createElement('p');status.id='render-diagnostic';status.className='render-diagnostic';status.setAttribute('role','status');
  document.querySelector('.model-display-panel').append(status);
@@ -33,12 +34,12 @@ export function createDiagnostics({getState,onSelect,onHeight,indexURL='../model
  function update(){
   const s=getState();if(!s?.building)return;
   const current=++token,record=rows.get(s.block+'/'+s.building.id),p=s.points.payload,pointState=s.points.status;
-  const isRef=s.method==='reference',methodLabel=isRef?'官方来源参考':labels[s.method]||s.method;
-  const source=s.geometrySource==='official-reference-full-model'?'官方原始完整几何':s.geometrySource==='numerical-footprint-repair-trial'?'独立数值修复原生模型':s.geometrySource==='native-full-model'?'原生完整模型':'屋顶预览';
+  const isRef=s.method==='reference',methodLabel=isRef?'官方来源参考':(structureMode&&s.method==='reference'?'OSM 配对参考':labels[s.method])||s.method;
+  const source=s.geometrySource==='paired-cropped-reference'?'OSM 配对裁剪参考':s.geometrySource==='structural-decoder-model'?'结构模型解码结果':s.geometrySource==='official-reference-full-model'?'官方原始完整几何':s.geometrySource==='numerical-footprint-repair-trial'?'独立数值修复原生模型':s.geometrySource==='native-full-model'?'原生完整模型':'屋顶预览';
   const hasPoints=p?.id===s.building.id;
   const raw=hasPoints?(p.trainSets[p.groupToTrainSet['dl/raw']]||[]):[];
-  const kept=hasPoints&&!isRef?(p.trainSets[p.groupToTrainSet['dl/'+(s.method==='precision_repair'?'raw':s.method)]]||[]):[];
-  $('point-meaning').textContent=isRef?'官方参考不执行筛点；叠加的是同一份原始 3DEP 观测。':['inside','all','high'].includes(pointState.mode)?'当前显示原始回波：XYZ 不随方法变化。选择“保留点／删除点”或“保留／删除”着色查看筛点差异。':'保留点／删除点对应本方法实际送入重建的源记录，不等于已确认的屋顶／树木标签。';
+  const kept=hasPoints&&!isRef?(p.trainSets[p.groupToTrainSet['dl/'+(structureMode?'raw':s.method==='precision_repair'?'raw':s.method)]]||[]):[];
+  $('point-meaning').textContent=structureMode?'本轮各方法使用相同原始观测，DL 判断屋面结构；点颜色不代表真实屋顶标签。':isRef?'官方参考不执行筛点；叠加的是同一份原始 3DEP 观测。':['inside','all','high'].includes(pointState.mode)?'当前显示原始回波：XYZ 不随方法变化。选择“保留点／删除点”或“保留／删除”着色查看筛点差异。':'保留点／删除点对应本方法实际送入重建的源记录，不等于已确认的屋顶／树木标签。';
   const failure=record?.methods[s.method]?.failure;
   $('native-failure').textContent=isRef?'官方几何用于外部参考对照；它不是本实验预测。':failure?.summary||'请同时看实际输入点、屋面覆盖和原生输出状态；点多或程序返回成功，都不保证屋顶完整。';
   $('native-failure').classList.toggle('has-failure',!!failure?.hasRecordedFailure);
@@ -46,7 +47,7 @@ export function createDiagnostics({getState,onSelect,onHeight,indexURL='../model
   if(record?.trialURL&&!s.trialMode){const a=document.createElement('a');a.href=new URL(record.trialURL,new URL('../',location.href));a.target='_blank';a.rel='noopener';a.textContent='查看本栋数值足迹修复前后 ↗（独立 raw 控制，未计入主表）';$('diagnostic-trial-link').append(a);}
   drawRows(s,record);
   const prefix='实际显示：'+methodLabel+' · '+source+' · '+n(s.display.triangleCount)+' 个三角面';
-  const input=isRef?'':hasPoints?' · 送重建 '+n(kept.length)+' / 候选 '+n(raw.length)+' 点':' · 正在读实际输入点';
+  const input=isRef?'':hasPoints?(structureMode?' · 原始观测 ':' · 送重建 ')+n(kept.length)+' / 候选 '+n(raw.length)+' 点':' · 正在读实际输入点';
   const hidden=s.mode==='hidden'?' · 模型已隐藏；点云当前'+(pointState.visible?'显示':'未显示'):'';
   if(s.display.loading){status.textContent=prefix+' · 正在加载完整几何';lastAudit={method:s.method,loading:true};return;}
   if(!s.display.triangleCount){status.textContent=prefix+input+' · 无模型输出'+hidden;lastAudit={method:s.method,id:s.building.id,block:s.block,mode:s.mode,triangles:0,source:s.geometrySource,loading:false,candidatePoints:raw.length,keptPoints:isRef?null:kept.length,modelHidden:s.mode==='hidden'};return;}

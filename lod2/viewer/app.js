@@ -1,13 +1,14 @@
 import * as THREE from '../vendor/three.module.js';
 import {createPointCloudController} from './point_clouds.js?v=20261113-models';
-import {createDiagnostics} from './diagnostics.js?v=20261119-osm';
-import {OSM_REMOTE_ASSET_BASE} from './asset-source.js?v=20261119-osm';
+import {createDiagnostics} from './diagnostics.js?v=20261120-structure';
+import {OSM_REMOTE_ASSET_BASE,STRUCTURE_REMOTE_ASSET_BASE} from './asset-source.js?v=20261120-structure';
 
 const $=id=>document.getElementById(id);
 const chapter=new URLSearchParams(location.search).get('chapter')||'pilot';
 const dataset=new URLSearchParams(location.search).get('dataset')||'us';
-const osmMode=dataset==='osm';
-const referenceMode=['reference','osm'].includes(dataset);
+const structureMode=dataset==='structure';
+const osmMode=dataset==='osm'||structureMode;
+const referenceMode=['reference','osm','structure'].includes(dataset);
 const referenceBlock=new URLSearchParams(location.search).get('block')||'boston_g5';
 const trialMode=dataset==='reference'&&new URLSearchParams(location.search).get('trial')==='numerical'&&referenceBlock==='boston_g5';
 if(referenceMode&&!/^(boston_g5|dc_[a-z_]+)$/.test(referenceBlock))throw Error('Unknown reference block');
@@ -78,9 +79,9 @@ const edgeMaterial=new THREE.LineBasicMaterial({color:0x3b392b,transparent:true,
 const edgeLines=new THREE.LineSegments(new THREE.BufferGeometry(),edgeMaterial);edgeLines.renderOrder=2;edgeLines.frustumCulled=false;root.add(edgeLines);
 const baselineLines=new THREE.LineSegments(new THREE.BufferGeometry(),new THREE.LineBasicMaterial({color:0x42d9e4,transparent:true,opacity:.8,depthWrite:false,depthTest:false}));baselineLines.renderOrder=3;root.add(baselineLines);
 let diagnostics;
-const pointCloud=createPointCloudController({THREE,root,map:modelMap,chapter,referenceMode,getSelected:()=>selected,getGroup:()=>group==='precision_repair'?'raw':group,isHidden:()=>temporaryHide,toast,onChange:saveHash,onHeight:()=>{diagnostics?.update();reportHeight();},onModelMode:setModelMode,initialHash});
+const pointCloud=createPointCloudController({THREE,root,map:modelMap,chapter,referenceMode,getSelected:()=>selected,getGroup:()=>structureMode?'raw':group==='precision_repair'?'raw':group,isHidden:()=>temporaryHide,toast,onChange:saveHash,onHeight:()=>{diagnostics?.update();reportHeight();},onModelMode:setModelMode,initialHash});
 setupCuratedControls();
-diagnostics=createDiagnostics({indexURL:osmMode?'../osm-production/diagnostics.json.gz':undefined,getState:()=>selected?{building:selected,block:referenceBlock,referenceMode,trialMode,method:group,mode:modelMode,geometrySource,mesh,display:modelDisplay(),points:pointCloud}:null,onSelect:setGroup,onHeight:reportHeight});
+diagnostics=createDiagnostics({indexURL:structureMode?(location.hostname==='feng96.github.io'?STRUCTURE_REMOTE_ASSET_BASE+'diagnostics.json.gz':'../structure-ab/diagnostics.json.gz'):osmMode?'../osm-production/diagnostics.json.gz':undefined,structureMode,getState:()=>selected?{building:selected,block:referenceBlock,referenceMode,trialMode,method:group,mode:modelMode,geometrySource,mesh,display:modelDisplay(),points:pointCloud}:null,onSelect:setGroup,onHeight:reportHeight});
 if(trialMode){const note=document.createElement('p');note.className='trial-notice';note.textContent='独立控制试跑：同一份 raw 点云、地面和重建参数，仅归并足迹中的浮点数值退化；未计入原四方法主表。覆盖恢复不代表屋顶结构或闭合已正确。';document.querySelector('.toolbar').before(note);}
 let renderer,renderCount=0;
 const modelLayer={id:'experiment-roof-model',type:'custom',renderingMode:'3d',
@@ -123,7 +124,7 @@ function fullModel(b){
       const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);
       const payload=JSON.parse(text);
       if(payload.id!==b.id||payload.blockId!==referenceBlock||!Array.isArray(payload.anchor)||payload.anchor.some((n,i)=>Math.abs(n-data.anchor[i])>1e-9))throw Error('完整模型坐标清单不一致');
-      for(const name of isTrial?['precision_repair']:isReference?['reference']:['raw','legacy_guarded','fusion','context_fusion']){
+      for(const name of isTrial?['precision_repair']:isReference?['reference']:structureMode?['raw','geometry','A_joint','B_hierarchical']:['raw','legacy_guarded','fusion','context_fusion']){
         const g=payload.groups?.[name];
         if(!g||!Array.isArray(g.positions)||g.positions.length%9||!g.positions.every(Number.isFinite)||g.roofTriangleMask?.length!==g.positions.length/9)throw Error('完整模型面数据不完整');
         if(isReference&&g.isAlgorithm!==false)throw Error('官方完整模型来源标记不一致');
@@ -162,10 +163,12 @@ function modelStatus(){
   else if(modelMode==='building'&&d.error)text='完整模型加载失败，暂显示屋顶面：'+d.error;
   else if(!d.available)text=osmMode&&isReference?'这栋 OSM 没有相交官方屋面参考；不代表重建失败。':'本方法未生成可显示的模型；可切换原始基线或官方参考。';
   else text=(isReference?'官方参考 · ':'')+name+' · '+d.roofTriangles.toLocaleString('zh-CN')+' 个屋顶三角面'+(modelMode==='building'?' · '+d.wallTriangles.toLocaleString('zh-CN')+' 个墙面三角形':'');
-  if(modelMode==='building'&&d.available&&!d.loading&&!d.error&&!d.wallTriangles)text+=' · 原生结果没有墙面，未补造';
+  if(modelMode==='building'&&d.available&&!d.loading&&!d.error&&!d.wallTriangles)text+=structureMode?' · 当前结果只有屋面，缺少可用墙面':' · 原生结果没有墙面，未补造';
   if(isReference&&modelMode==='roof')text+=' · 当前只看屋顶；可选择完整建筑或点击“查看官方完整建筑”。';
   if(isReference&&modelMode==='building'&&d.available&&!d.loading&&!d.error)text+=' · 原始官方几何；墙面类型按几何识别，未验证闭合';
   if(osmMode&&selected?.displayGroundProvenance?.displayFallbackUsed)text+=' · 局部地面缺测，建筑高度需复核';
+  if(structureMode&&isReference)text='按 OSM 裁剪的参考屋面；裁剪边不等于真实屋脊，参考缺失区域不评价。';
+  if(structureMode&&!isReference&&group!=='raw'&&modelMode==='building'&&d.available)text+=' · 墙面和底面由屋面派生，闭合性未认证';
   $('model-status').textContent=text;
 }
 function setModelMode(value){
@@ -178,6 +181,12 @@ function setModelMode(value){
   if(value==='wireframe')$('edges').checked=true;
   if(selected){geometry(selected);if(value==='building')frameAllGroups();}else appearance();
 }
+function showGeometryWarnings(warnings){
+  const brief=$('geometry-warning');let details=$('geometry-warning-details');
+  if(!details){details=document.createElement('details');details.id='geometry-warning-details';details.className='geometry-warning-details';const title=document.createElement('summary');title.textContent='查看几何提示';const body=document.createElement('div');body.id='geometry-warning-list';details.append(title,body);brief.after(details);details.addEventListener('toggle',reportHeight);}
+  brief.hidden=!warnings.length;brief.textContent=warnings.length>1?'模型有 '+warnings.length+' 项几何提示，可展开核对。':warnings.length?'模型提示：'+warnings[0]:'';
+  details.hidden=warnings.length<2;details.open=false;$('geometry-warning-list').replaceChildren(...warnings.map(text=>{const p=document.createElement('p');p.textContent=text;return p;}));
+}
 function geometry(b){
   if(osmMode&&group==='reference'&&!b.referenceFullAvailable&&modelMode==='building'){modelMode='roof';lastSolidMode='roof';}
   const bases=GROUPS.map(key=>b.groups[key]?.nativeGroundZ).filter(Number.isFinite);
@@ -186,9 +195,9 @@ function geometry(b){
   const source=b.groups[group];
   $('roof-only').checked=modelMode!=='building';
   const full=modelMode==='building'?fullModel(b):null,g=full||source;
-  displayGeometry=g;geometrySource=full?(trialMode&&group==='precision_repair'?'numerical-footprint-repair-trial':referenceMode?(group==='reference'?'official-reference-full-model':'native-full-model'):'existing-native-model'):(referenceMode?'compiled-roof-preview':'existing-native-model');
+  displayGeometry=g;geometrySource=full?(trialMode&&group==='precision_repair'?'numerical-footprint-repair-trial':referenceMode?(group==='reference'?(structureMode?'paired-cropped-reference':'official-reference-full-model'):structureMode&&group!=='raw'?'structural-decoder-model':'native-full-model'):'existing-native-model'):(referenceMode?'compiled-roof-preview':'existing-native-model');
   mesh.geometry.dispose();edgeLines.geometry.dispose();
-  const warnings=[...new Set([...(source?.previewWarnings||[]),...(full?.previewWarnings||[])])];if(source?.status!=='success'&&source?.isAlgorithm!==false)warnings.unshift('当前记录状态：'+(source?.status||'missing')+'；'+(source?.lodClass||source?.lod||'无声明等级'));$('geometry-warning').hidden=!warnings.length;$('geometry-warning').textContent=warnings.length?'模型提示：'+warnings.join('；'):'';
+  const warnings=[...new Set([...(source?.previewWarnings||[]),...(full?.previewWarnings||[])])];if(source?.status!=='success'&&source?.isAlgorithm!==false)warnings.unshift('当前记录状态：'+(source?.status||'missing')+'；'+(source?.lodClass||source?.lod||'无声明等级'));showGeometryWarnings(warnings);
   mesh.geometry=new THREE.BufferGeometry();edgeLines.geometry=new THREE.BufferGeometry();
   if(!g?.positions?.length){baselineLines.geometry.dispose();baselineLines.geometry=new THREE.BufferGeometry();appearance();reportHeight();return;}
   const positions=new Float32Array(g.positions);mesh.geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));mesh.geometry.computeVertexNormals();
@@ -244,6 +253,12 @@ function frameAllGroups(){
   check(0);
 }
 function renderMetrics(){
+  if(structureMode){
+    $('metrics').replaceChildren();
+    $('metric-note').textContent=group==='reference'?(selected.groups.reference?.positions?.length?'按 OSM 配对裁剪的参考屋面；人工切边不作真实屋脊，未推断参考墙面。':'该单元没有可用的配对参考屋面；不据此判定预测错误。'):
+      LABELS[group]+' · '+(selected.groups[group]?.roofCount??'—')+' 个屋面分区 · '+(selected.split||'划分见记录')+'；质量对照见主表。';
+    reportHeight();return;
+  }
   if(referenceMode){
     $('metrics').replaceChildren();
     const r=selected.referenceEvaluation?.[group],m=r?.metrics||r||{},fmt=(x,n=3)=>Number.isFinite(x)?x.toFixed(n):'—';
@@ -308,6 +323,7 @@ function selectBuilding(building,focus=true){
     const source=building.referenceMetadata?.source||{},referenceDate=source.survey_date||source.model_date||'多期／未核实';
     $('selected-height').textContent='NAIP '+(dates.join(' / ')||'日期见记录')+' · 参考 '+referenceDate+' · 给定足迹，原始Z未拟合'+(String(building.cohort).startsWith('historical')?' · 历史复核，不进主表':'');
     if(osmMode)$('selected-height').textContent='OSM 足迹输入 · NAIP '+(dates.join(' / ')||'日期见记录')+' · 3DEP 原始点 · 参考仅在重建后关联';
+    if(structureMode)$('selected-height').textContent='相同 OSM 与原始观测 · '+(building.split||'划分见记录')+' · 参考屋面已配对裁剪';
     if(osmMode){
       let comparison=$('footprint-comparison');if(!comparison){comparison=document.createElement('div');comparison.id='footprint-comparison';comparison.className='point-detail';document.querySelector('.location-inspector').append(comparison);}
       comparison.replaceChildren();const attribution=document.createElement('a');attribution.href='https://www.openstreetmap.org/copyright';attribution.target='_blank';attribution.rel='noopener';attribution.textContent='足迹 © OpenStreetMap contributors';comparison.append(attribution);
@@ -339,7 +355,7 @@ function updatePaperCues(){
 }
 
 function footprintVisibility(){updatePaperCues();for(const id of ['selected-outline','selected-outline-shadow'])if(imageMap.getLayer(id))imageMap.setLayoutProperty(id,'visibility',$('footprint').checked?'visible':'none');$('clean-image').textContent=$('footprint').checked?'查看纯影像':'显示定位轮廓';}
-function saveHash(){if(!loaded||!selected)return;clearTimeout(hashTimer);hashTimer=setTimeout(()=>{const c=imageMap.getCenter();const state={building:selected.id,group,base:basemap,cohort:$('cohort').value,lng:c.lng.toFixed(7),lat:c.lat.toFixed(7),z:imageMap.getZoom().toFixed(3),bearing:imageMap.getBearing().toFixed(2),pitch:modelMap.getPitch().toFixed(1),...pointCloud.state(),modelMode,edges:$('edges').checked?'1':'0',...(referenceMode?{block:referenceBlock}:{})};history.replaceState(null,'','#'+new URLSearchParams(state));if(parent!==window)parent.postMessage({type:'lod2-selection',chapter,...state,...(curated?{curated:'1'}:{}),...(referenceMode?{dataset}:{}),...(chapter==='paper'?{input:inputBlock}:{})},location.origin);},150);}
+function saveHash(){if(!loaded||!selected)return;clearTimeout(hashTimer);hashTimer=setTimeout(()=>{const c=imageMap.getCenter();const state={building:selected.id,group,base:basemap,cohort:$('cohort').value,lng:c.lng.toFixed(7),lat:c.lat.toFixed(7),z:imageMap.getZoom().toFixed(3),bearing:imageMap.getBearing().toFixed(2),pitch:modelMap.getPitch().toFixed(1),...pointCloud.state(),modelMode,edges:$('edges').checked?'1':'0',...(referenceMode?{block:referenceBlock}:{}),...(structureMode?{split:new URLSearchParams(location.search).get('split')||'test'}:{})};history.replaceState(null,'','#'+new URLSearchParams(state));if(parent!==window)parent.postMessage({type:'lod2-selection',chapter,...state,...(curated?{curated:'1'}:{}),...(referenceMode?{dataset}:{}),...(chapter==='paper'?{input:inputBlock}:{})},location.origin);},150);}
 function reportHeight(){if(parent!==window)requestAnimationFrame(()=>parent.postMessage({type:'lod2-height',height:document.body.scrollHeight},location.origin));}
 function filterBuildings(focus=true){
   visibleBuildings=data.buildings.filter(b=>$('cohort').value==='all'||b.cohort===$('cohort').value);
@@ -381,19 +397,30 @@ window.addEventListener('resize',()=>{imageMap.resize();modelMap.resize();report
 
 async function init(){
   try{
-    const response=await fetch(osmMode?'../osm-production/blocks/'+referenceBlock+'/viewer.json.gz':trialMode?'../model-diagnostics/repair/scene.json.gz':referenceMode?'../reference-eval/blocks/'+referenceBlock+'/viewer.json.gz':chapter==='dl'?'../dl/data/viewer.json.gz':chapter==='paper'?'../paper/data/'+inputBlock+'/viewer.json.gz':chapter==='repair'?'../repair/data/viewer.json.gz':chapter==='canopy'?'../next/canopy/data/viewer.json.gz':chapter==='workflow'?'../next/data/viewer.json.gz':'../data/'+chapter+'.json.gz');if(!response.ok)throw new Error('模型数据 HTTP '+response.status);
+    const response=await fetch(structureMode?(location.hostname==='feng96.github.io'?STRUCTURE_REMOTE_ASSET_BASE+'blocks/'+referenceBlock+'/viewer.json.gz':'../structure-ab/blocks/'+referenceBlock+'/viewer.json.gz'):osmMode?'../osm-production/blocks/'+referenceBlock+'/viewer.json.gz':trialMode?'../model-diagnostics/repair/scene.json.gz':referenceMode?'../reference-eval/blocks/'+referenceBlock+'/viewer.json.gz':chapter==='dl'?'../dl/data/viewer.json.gz':chapter==='paper'?'../paper/data/'+inputBlock+'/viewer.json.gz':chapter==='repair'?'../repair/data/viewer.json.gz':chapter==='canopy'?'../next/canopy/data/viewer.json.gz':chapter==='workflow'?'../next/data/viewer.json.gz':'../data/'+chapter+'.json.gz');if(!response.ok)throw new Error('模型数据 HTTP '+response.status);
     const bytes=new Uint8Array(await response.arrayBuffer());let jsonText;
     if(bytes[0]===31&&bytes[1]===139){if(!window.DecompressionStream)throw new Error('此浏览器不支持压缩数据，请使用新版浏览器');jsonText=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();}else{jsonText=new TextDecoder().decode(bytes);}
     data=JSON.parse(jsonText);
+    if(structureMode){
+      const split=new URLSearchParams(location.search).get('split')||'test';
+      data.unfilteredBuildingCount=data.buildingCount;
+      data.buildings=data.buildings.filter(b=>split==='all'||b.split===split);
+      data.buildingCount=data.buildings.length;data.splitView=split;
+    }
     if(osmMode&&location.hostname==='feng96.github.io'){
       if(!/^https:\/\/raw\.githubusercontent\.com\/Feng96\/research-daily\/[0-9a-f]{40}\/lod2\/osm-production\/$/.test(OSM_REMOTE_ASSET_BASE))throw Error('OSM 数据版本地址无效');
-      for(const building of data.buildings)for(const key of ['pointsUrl','fullModelUrl']){const local=building[key];if(!local?.startsWith('../osm-production/'))throw Error('OSM 资产路径不一致');building[key]=OSM_REMOTE_ASSET_BASE+local.slice('../osm-production/'.length);}
+      if(structureMode&&!/^https:\/\/raw\.githubusercontent\.com\/Feng96\/research-daily\/[0-9a-f]{40}\/lod2\/structure-ab\/$/.test(STRUCTURE_REMOTE_ASSET_BASE))throw Error('结构实验数据版本地址无效');
+      for(const building of data.buildings)for(const key of ['pointsUrl','fullModelUrl']){
+        const local=building[key],prefix=structureMode&&key==='fullModelUrl'?'../structure-ab/':'../osm-production/';
+        if(!local?.startsWith(prefix))throw Error('资产路径不一致');
+        building[key]=(prefix==='../structure-ab/'?STRUCTURE_REMOTE_ASSET_BASE:OSM_REMOTE_ASSET_BASE)+local.slice(prefix.length);
+      }
     }
-    
-    const curatedGroups=trialMode?['raw','precision_repair','reference']:referenceMode?['raw','legacy_guarded','fusion','context_fusion','reference']:{dl:['raw','legacy_guarded','fusion','context_fusion'],repair:['baseline','candidate']}[chapter];
+
+    const curatedGroups=structureMode?['raw','geometry','A_joint','B_hierarchical','reference']:trialMode?['raw','precision_repair','reference']:referenceMode?['raw','legacy_guarded','fusion','context_fusion','reference']:{dl:['raw','legacy_guarded','fusion','context_fusion'],repair:['baseline','candidate']}[chapter];
     GROUPS=curated?curatedGroups.filter(key=>data.groupOrder.includes(key)):data.groupOrder;
     LABELS=curated?{...data.groupLabels,raw:'原始对照',legacy_guarded:'平面保护',fusion:'光学＋点云',context_fusion:'光学＋局部邻域',baseline:'修正前',candidate:'局部修正候选'}:data.groupLabels;
-    if(trialMode)LABELS={...data.groupLabels};
+    if(trialMode||structureMode)LABELS={...data.groupLabels};
     if(curated){data.groupOrder=GROUPS;data.groupLabels=LABELS;}
     group=GROUPS.includes(group)?group:(curated&&GROUPS.includes('fusion')?'fusion':curated&&GROUPS.includes('candidate')?'candidate':GROUPS[0]);
 
@@ -409,6 +436,7 @@ async function init(){
     if(curated){$('chapter-name').textContent=chapter==='dl'?'最新筛点实验':'局部屋面修正';$('chapter-detail').textContent=data.buildingCount+' 栋 · '+GROUPS.length+' 种保留方法 · NAIP＋3DEP';}
     if(referenceMode){$('chapter-name').textContent='外部屋面参考对照';$('chapter-detail').textContent=referenceBlock+' · '+data.buildingCount+' 个官方记录 · 4 方法＋来源参考';document.querySelector('#baseline-overlay').closest('label').lastChild.textContent='叠加官方参考边线';$('basemap').querySelector('option[value=naip]').textContent='实际输入 NAIP';}
     if(osmMode){$('chapter-name').textContent='OSM 足迹生产';$('chapter-detail').textContent=referenceBlock+' · '+data.buildingCount+' 个 OSM 实体 · 4 方法';$('imagery-note').textContent='输入足迹来自 OSM，屋面参考仅在预测完成后关联。';}
+    if(structureMode){$('chapter-name').textContent='结构修正 A/B';$('chapter-detail').textContent=referenceBlock+' · '+data.splitView+' · '+data.buildingCount+' 个 OSM 单元';$('imagery-note').textContent='相同 NAIP、3DEP 与 OSM；参考屋面已按 OSM 配对裁剪。';}
     if(trialMode){$('chapter-name').textContent='数值足迹修复 · 独立控制';$('chapter-detail').textContent='Boston 192／183／163 · 相同 raw 点与参数 · 未计入主表';}
     $('group-select').replaceChildren(...GROUPS.map(key=>{const o=document.createElement('option');o.value=key;o.textContent=LABELS[key];return o;}));$('group-select').disabled=false;
     $('cohort').hidden=!['overnight','tree'].includes(chapter);$('cohort').value=['overnight','tree'].includes(chapter)&&['legacy60','fresh60'].includes(initialHash.get('cohort'))?initialHash.get('cohort'):'all';
