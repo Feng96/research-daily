@@ -6,3 +6,6 @@ export const STRUCTURE_REMOTE_ASSET_BASE='https://raw.githubusercontent.com/Feng
 
 // Set to the reviewed immutable official-reference data commit before publication.
 export const OFFICIAL_REMOTE_ASSET_BASE='https://raw.githubusercontent.com/Feng96/research-daily/41de67cc841db70c97c638a5540b893122818e1e/lod2/official-reference/';
+
+// Reviewed immutable residual pilot asset commit set before publication.
+export const RESIDUAL_REMOTE_ASSET_BASE='https://raw.githubusercontent.com/Feng96/research-daily/61e8eb648b528e5d8f6860c327ebff5a5a4cee4d/lod2/residual-structure/';
