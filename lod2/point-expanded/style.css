@@ -39,7 +39,7 @@ canvas:active { cursor: grabbing; }
 .overlay { position: absolute; pointer-events: none; left: 9px; top: 8px; right: 9px; margin: 0; width: fit-content; max-width: calc(100% - 18px); padding: 5px 8px; font-size: 12px; border-radius: 6px; background: #ffffffec; color: var(--ink); line-height: 1.35; }
 .legend { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--muted); font-size: 12px; margin-top: 8px; }
 .legend span { display: inline-flex; align-items: center; gap: 4px; }
-[hidden], .legend span[hidden] { display: none; }
+[hidden], .legend span[hidden], .location[hidden] { display: none; }
 .legend i { width: 8px; height: 8px; background: currentColor; border-radius: 50%; }
 .roof { color: #cf6322; }.tree { color: #228441; }.other { color: #55718e; }
 .legend .outline { width: 12px; height: 0; border-top: 2px dashed #263a44; border-radius: 0; }.legend .shift, .legend .support { width: 12px; height: 0; border-top: 2px dashed #037452; border-radius: 0; }.legend .support { border-color: #a74c0d; }
