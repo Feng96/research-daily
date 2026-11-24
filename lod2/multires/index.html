@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分辨率与尖墙 · LoD2 试验</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5ef;color:#1b2923;font:16px/1.65 system-ui,sans-serif}
+main{max-width:920px;margin:auto;padding:22px clamp(16px,4vw,36px) 48px}a{color:#175d42;text-underline-offset:3px}
+header{padding:12px 0 14px;border-bottom:2px solid #8faf9d}header p{max-width:72ch}h1{font-size:clamp(28px,6vw,50px);line-height:1.18;margin:12px 0 8px}
+h2{font-size:1.4rem;line-height:1.3;margin:0 0 12px}section{margin-top:24px;background:#fff;padding:clamp(14px,3vw,26px);border:1px solid #d7e0d5;border-radius:10px}
+figure{margin:14px 0 0}img{display:block;width:100%;height:auto;border-radius:6px}figcaption,.small{font-size:.9rem;color:#40544a}
+p:last-child{margin-bottom:0}.table{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:right}th,td{padding:8px;border-bottom:1px solid #dce4db}th:first-child,td:first-child{text-align:left}nav a+a{margin-left:16px}
+</style></head><body><main><header><a href="../">返回 LoD2 实验</a><h1>分辨率与尖墙试验</h1><p>Boston 和 Washington DC 的历史航片用于分辨率对照。单独验证 222 的主坡尖墙修正。</p><nav aria-label="试验内容"><a href="#imagery">影像</a><a href="#roof">屋面修复</a><a href="#training">训练</a></nav></header>
+<section id="imagery"><h2>影像清晰度与屋面选择</h2>
+<p><strong>30 厘米让 57 栋获得光学信号，历史 1 米 NAIP 为 18 栋。</strong> 各档影像下，旧评分器的屋面选择一致。</p>
+<p>使用 Boston 2013 年 MassGIS 30 厘米和 DC 2013 年 OCTO 16 厘米航片。影像按固定地面范围裁剪，原始分辨率、有效像素和波段可用性随输入保留。屋面重放的分析网格最细为 25 厘米。</p>
+<figure><a href="case222-imagery.png" aria-label="打开原图：222 的原始观测"><img src="case222-imagery.png" alt="同位置的历史航片、同源降分辨率和较新的 NAIP。新影像用于跨年目视比较。" loading="lazy"></a><figcaption><strong>222 的原始观测</strong> 同位置的历史航片、同源降分辨率和较新的 NAIP。新影像用于跨年目视比较。</figcaption></figure>
+<p class="small">影像来源 <a href="https://www.mass.gov/info-details/massgis-data-20132014-aerial-imagery">MassGIS / USGS</a>、<a href="https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Ortho2013_WebMercator/MapServer">DC GIS OCTO</a>（CC BY 4.0）和 <a href="https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery">USDA NAIP</a>。裁剪并在需要时降采样。</p>
+<p>57 栋有冻结候选且可留点比较。各组复用点云、足迹、候选面和旧评分网络，唯一变化是新增光学项。</p>
+<div class="table"><table><thead><tr><th scope="col">对照</th><th scope="col">有光学信号</th><th scope="col">改选栋数</th><th scope="col">留点残差 · 米</th></tr></thead><tbody><tr><td>关闭新增影像项</td><td>0</td><td>0</td><td>0.517</td></tr><tr><td>历史 NAIP · 1 米</td><td>18</td><td>0</td><td>0.517</td></tr><tr><td>当地航片 · 降到 1 米</td><td>18</td><td>0</td><td>0.517</td></tr><tr><td>当地航片 · 降到 60 厘米</td><td>39</td><td>0</td><td>0.517</td></tr><tr><td>当地航片 · 30 厘米</td><td>57</td><td>0</td><td>0.517</td></tr><tr><td>当地航片 · 本实验最高档</td><td>57</td><td>0</td><td>0.517</td></tr></tbody></table></div>
+<p class="small">留点残差包含树冠回波，且旧主屋面模型曾用完整点云。表格只衡量候选重放和观测一致性。屋顶几何精度仍需独立三维验证。</p></section>
+<section id="roof"><h2>222 的尖墙修复</h2>
+<p>按两坡交线修正边缘窄区，原有假台阶的最大高差由 <strong>5.61 米减至 0.026 米</strong>。两处由 3DEP 支持的平台都保留。修正后重新生成墙面，并检查外墙和台阶墙覆盖。</p>
+<figure><a href="case222-repair.png" aria-label="打开原图：222 修复前后"><img src="case222-repair.png" alt="同一视角、同一组 3DEP 点。小平台保留，尖墙随坡面分区修正而消失。" loading="lazy"></a><figcaption><strong>222 修复前后</strong> 同一视角、同一组 3DEP 点。小平台保留，尖墙随坡面分区修正而消失。</figcaption></figure>
+<p><a href="case222-model.json">下载修复后的 222 模型</a> · <a href="../?experiment=structure&amp;split=pilot&amp;block=boston_g5&amp;building=OSM_way_407834212&amp;group=R_DL&amp;points=1&amp;modelMode=building">打开旧版交互对照</a></p></section>
+<section id="training"><h2>H100 训练与影像适配</h2><p>H100 完成 120 步硬件短训、BF16 和 FP32 推理测试。真实航片随后训练 12 轮，按地理块分成 1564 个训练、314 个验证和 309 个测试窗口。留出影像的局部遮罩 RGB RMSE 为 0.086，可见像素均值基线为 0.123，按 [0,1] 计。</p><p class="small">训练任务是恢复遮罩影像。上方屋面重放使用旧的冻结评分器，屋面与墙面的修正另由点云支撑。<a href="summary.json">下载试验摘要</a></p></section>
+</main></body></html>
