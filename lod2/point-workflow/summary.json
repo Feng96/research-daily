@@ -1,0 +1,2114 @@
+{
+  "schema": "lod2-point-workflow-summary-v1",
+  "building_count": 144,
+  "city_counts": {
+    "Boston": 47,
+    "Washington DC": 97
+  },
+  "reconstruction_sha256": "108fc04cc30550116f5c43ca2d66120abaa6d3ae60c0f83522dd81bb416fe89a",
+  "findings": [
+    "固定同一个重建器。旧足迹硬裁 138 栋有屋顶，套用旧筛点后 136 栋，周边取点后 142 栋。四栋从无到有，两栋全组均无候选点。",
+    "九个街区只有 Brookland 和 Cleveland Park 通过空间留出配准验证，实际移动 24 栋足迹。缓冲新增 34,794 个足迹外候选回波；树冠也可能包含在内。",
+    "Boston 222 两个平台在周边取点后都有候选面，但无权重组未选中。软加权后两处都恢复，17 个确认点全部落在选中屋面 0.35 m 内。历史尖墙在本轮六组均未出现。",
+    "独立 2022 DC 稳定屋面检查覆盖 3 处、52 点。六组均有 51 点误差不超过 0.35 m。人工复核的 42 个树冠点在六组中均无贴近树冠高度的屋面，暂无法证明软加权减少假平台。",
+    "H100 模型在独立 DC 采集上的建筑标签召回率为 88.1%。同批标注点仅保留 20% 邻域回波时，召回从 88.1% 降到 52.9%。222 的 17 个平台点有 15 个被判为植被，软加权后仍可交由几何筛选。",
+    "本轮为 1 m NAIP。近红外只对 3 栋的 182 个候选点触发有限降权。样本有局部核查，整体缺少逐栋独立 LoD2 真值和实体闭合认证。"
+  ],
+  "controlled_comparison": {
+    "stages": {
+      "old_crop": {
+        "processed": 144,
+        "roofs_generated": 138,
+        "statuses": {
+          "roof_generated": 138,
+          "insufficient_distinct_returns": 5,
+          "roof_plane_lacks_observations": 1
+        },
+        "input_returns": 389045,
+        "input_returns_outside_original": 0,
+        "total_effective_weight": 389045.0,
+        "optical_corroboration": 0,
+        "buildings_with_optical_corroboration": 0,
+        "local_proposals": 374,
+        "local_parts_applied": 374,
+        "rejected_local_refinements_with_main_roof": 9,
+        "low_confidence_covered_m2": 6189.873357260421,
+        "median_low_confidence_fraction": 0.011712897218888766
+      },
+      "old_filter": {
+        "processed": 144,
+        "roofs_generated": 136,
+        "statuses": {
+          "roof_generated": 136,
+          "insufficient_distinct_returns": 6,
+          "roof_plane_lacks_observations": 2
+        },
+        "input_returns": 383912,
+        "input_returns_outside_original": 0,
+        "total_effective_weight": 383912.0,
+        "optical_corroboration": 0,
+        "buildings_with_optical_corroboration": 0,
+        "local_proposals": 410,
+        "local_parts_applied": 410,
+        "rejected_local_refinements_with_main_roof": 6,
+        "low_confidence_covered_m2": 6874.331333841899,
+        "median_low_confidence_fraction": 0.011177022740991409
+      },
+      "buffer": {
+        "processed": 144,
+        "roofs_generated": 142,
+        "statuses": {
+          "roof_generated": 142,
+          "insufficient_distinct_returns": 2
+        },
+        "input_returns": 408397,
+        "input_returns_outside_original": 34794,
+        "total_effective_weight": 408397.0,
+        "optical_corroboration": 0,
+        "buildings_with_optical_corroboration": 0,
+        "local_proposals": 424,
+        "local_parts_applied": 424,
+        "rejected_local_refinements_with_main_roof": 6,
+        "low_confidence_covered_m2": 9348.037637602074,
+        "median_low_confidence_fraction": 0.01541322687185527
+      },
+      "align": {
+        "processed": 144,
+        "roofs_generated": 142,
+        "statuses": {
+          "roof_generated": 142,
+          "insufficient_distinct_returns": 2
+        },
+        "input_returns": 408191,
+        "input_returns_outside_original": 34797,
+        "total_effective_weight": 408191.0,
+        "optical_corroboration": 0,
+        "buildings_with_optical_corroboration": 0,
+        "local_proposals": 393,
+        "local_parts_applied": 393,
+        "rejected_local_refinements_with_main_roof": 10,
+        "low_confidence_covered_m2": 9265.454719249394,
+        "median_low_confidence_fraction": 0.011524316926139387
+      },
+      "point_weight": {
+        "processed": 144,
+        "roofs_generated": 142,
+        "statuses": {
+          "roof_generated": 142,
+          "insufficient_distinct_returns": 2
+        },
+        "input_returns": 408191,
+        "input_returns_outside_original": 34797,
+        "total_effective_weight": 283028.23087763786,
+        "optical_corroboration": 0,
+        "buildings_with_optical_corroboration": 0,
+        "local_proposals": 375,
+        "local_parts_applied": 374,
+        "rejected_local_refinements_with_main_roof": 11,
+        "low_confidence_covered_m2": 11738.369083250394,
+        "median_low_confidence_fraction": 0.019865903846642878
+      },
+      "point_weight_naip": {
+        "processed": 144,
+        "roofs_generated": 142,
+        "statuses": {
+          "roof_generated": 142,
+          "insufficient_distinct_returns": 2
+        },
+        "input_returns": 408191,
+        "input_returns_outside_original": 34797,
+        "total_effective_weight": 283026.97086787224,
+        "optical_corroboration": 182,
+        "buildings_with_optical_corroboration": 3,
+        "local_proposals": 374,
+        "local_parts_applied": 373,
+        "rejected_local_refinements_with_main_roof": 11,
+        "low_confidence_covered_m2": 11736.647788733613,
+        "median_low_confidence_fraction": 0.019865903846642878
+      }
+    },
+    "paired_transitions": {
+      "old_crop__old_filter": {
+        "empty_to_roof": 0,
+        "roof_to_empty": 2,
+        "both_roof": 136,
+        "both_empty": 6,
+        "changed_candidate_count": 45
+      },
+      "old_crop__buffer": {
+        "empty_to_roof": 4,
+        "roof_to_empty": 0,
+        "both_roof": 138,
+        "both_empty": 2,
+        "changed_candidate_count": 141
+      },
+      "buffer__align": {
+        "empty_to_roof": 0,
+        "roof_to_empty": 0,
+        "both_roof": 142,
+        "both_empty": 2,
+        "changed_candidate_count": 24
+      },
+      "align__point_weight": {
+        "empty_to_roof": 0,
+        "roof_to_empty": 0,
+        "both_roof": 142,
+        "both_empty": 2,
+        "changed_candidate_count": 0
+      },
+      "point_weight__point_weight_naip": {
+        "empty_to_roof": 0,
+        "roof_to_empty": 0,
+        "both_roof": 142,
+        "both_empty": 2,
+        "changed_candidate_count": 0
+      }
+    },
+    "coverage_scope": "Full-footprint coverage may include low-confidence extension. Success records algorithm output availability, not roof truth.",
+    "counts_by_block": {
+      "boston_g5": 47,
+      "dc_capitol_hill": 12,
+      "dc_dupont": 12,
+      "dc_adams_morgan": 12,
+      "dc_brookland": 12,
+      "dc_petworth": 12,
+      "dc_anacostia": 12,
+      "dc_cleveland_park": 12,
+      "dc_woodley_park": 13
+    }
+  },
+  "candidate_audit": {
+    "raw_point_sample_rows": 1903184,
+    "candidate_point_sample_rows": {
+      "baseline": 389045,
+      "buffer": 408397,
+      "registered": 408191
+    },
+    "candidate_outside_footprint_by_arm": {
+      "baseline": 0,
+      "buffer": 34794,
+      "registered": 33686
+    },
+    "buffer_gain_point_count": 34794,
+    "buffer_removed_membership_count": 15442,
+    "buffer_ambiguous_candidate_count": 17949,
+    "registration_changed_buildings": 24,
+    "median_distinct_xy_spacing_m": 0.1993968231803968,
+    "median_repeat_point_source_proxy_fraction": 0.9360942420152947,
+    "median_elevated_candidate_proxy_coverage": {
+      "baseline": 0.9914687100407964,
+      "buffer": 0.9930414751739742,
+      "registered": 0.9964553035440685
+    },
+    "median_largest_candidate_proxy_gap_m2": {
+      "baseline": 0.5,
+      "buffer": 0.47121089669573524,
+      "registered": 0.25
+    }
+  },
+  "registration": [
+    {
+      "block_id": "boston_g5",
+      "accepted": false,
+      "anchor_count": 125,
+      "estimated_xy_m": [
+        0.0,
+        -0.75
+      ],
+      "applied_xy_m": [
+        0.0,
+        0.0
+      ],
+      "holdout_mean_gain": 0.01361913164731033,
+      "gates": [
+        {
+          "name": "minimum_scoring_buildings",
+          "passed": true,
+          "observed": 125,
+          "threshold": 40
+        },
+        {
+          "name": "candidate_nonzero",
+          "passed": true,
+          "observed": [
+            0.0,
+            -0.75
+          ],
+          "threshold": "nonzero at grid precision"
+        },
+        {
+          "name": "candidate_inside_search",
+          "passed": true,
+          "observed": [
+            0.0,
+            -0.75
+          ],
+          "threshold": 3.0
+        },
+        {
+          "name": "full_fit_gain",
+          "passed": true,
+          "observed": 0.016881458798265102,
+          "threshold": 0.015
+        },
+        {
+          "name": "distant_competing_peak_margin",
+          "passed": true,
+          "observed": 0.03078524262708593,
+          "threshold": 0.004
+        },
+        {
+          "name": "two_direction_edge_evidence",
+          "passed": true,
+          "observed": 0.4699671919339212,
+          "threshold": 0.08
+        },
+        {
+          "name": "four_independent_spatial_folds",
+          "passed": true,
+          "observed": 4,
+          "threshold": 4
+        },
+        {
+          "name": "cv_mean_gain",
+          "passed": true,
+          "observed": 0.01361913164731033,
+          "threshold": 0.01
+        },
+        {
+          "name": "minimum_fold_gain",
+          "passed": true,
+          "observed": -0.0027660413133737995,
+          "threshold": -0.004
+        },
+        {
+          "name": "positive_holdout_folds",
+          "passed": true,
+          "observed": 3,
+          "threshold": 3
+        },
+        {
+          "name": "cross_fit_stability",
+          "passed": true,
+          "observed": 0.25,
+          "threshold": 0.75
+        },
+        {
+          "name": "nondegraded_anchor_fraction",
+          "passed": false,
+          "observed": 0.688,
+          "threshold": 0.7
+        }
+      ]
+    },
+    {
+      "block_id": "dc_capitol_hill",
+      "accepted": false,
+      "anchor_count": 18,
+      "estimated_xy_m": [
+        0.0,
+        0.0
+      ],
+      "applied_xy_m": [
+        0.0,
+        0.0
+      ],
+      "holdout_mean_gain": null,
+      "gates": [
+        {
+          "name": "minimum_scoring_buildings",
+          "passed": false,
+          "observed": 18,
+          "threshold": 40
+        }
+      ]
+    },
+    {
+      "block_id": "dc_dupont",
+      "accepted": false,
+      "anchor_count": 22,
+      "estimated_xy_m": [
+        0.0,
+        0.0
+      ],
+      "applied_xy_m": [
+        0.0,
+        0.0
+      ],
+      "holdout_mean_gain": null,
+      "gates": [
+        {
+          "name": "minimum_scoring_buildings",
+          "passed": false,
+          "observed": 22,
+          "threshold": 40
+        }
+      ]
+    },
+    {
+      "block_id": "dc_adams_morgan",
+      "accepted": false,
+      "anchor_count": 21,
+      "estimated_xy_m": [
+        0.0,
+        0.0
+      ],
+      "applied_xy_m": [
+        0.0,
+        0.0
+      ],
+      "holdout_mean_gain": null,
+      "gates": [
+        {
+          "name": "minimum_scoring_buildings",
+          "passed": false,
+          "observed": 21,
+          "threshold": 40
+        }
+      ]
+    },
+    {
+      "block_id": "dc_brookland",
+      "accepted": true,
+      "anchor_count": 135,
+      "estimated_xy_m": [
+        -0.5,
+        0.75
+      ],
+      "applied_xy_m": [
+        -0.5,
+        0.75
+      ],
+      "holdout_mean_gain": 0.08425219275487603,
+      "gates": [
+        {
+          "name": "minimum_scoring_buildings",
+          "passed": true,
+          "observed": 135,
+          "threshold": 40
+        },
+        {
+          "name": "candidate_nonzero",
+          "passed": true,
+          "observed": [
+            -0.5,
+            0.75
+          ],
+          "threshold": "nonzero at grid precision"
+        },
+        {
+          "name": "candidate_inside_search",
+          "passed": true,
+          "observed": [
+            -0.5,
+            0.75
+          ],
+          "threshold": 3.0
+        },
+        {
+          "name": "full_fit_gain",
+          "passed": true,
+          "observed": 0.08705515924027227,
+          "threshold": 0.015
+        },
+        {
+          "name": "distant_competing_peak_margin",
+          "passed": true,
+          "observed": 0.06106649123303315,
+          "threshold": 0.004
+        },
+        {
+          "name": "two_direction_edge_evidence",
+          "passed": true,
+          "observed": 0.4455854165950391,
+          "threshold": 0.08
+        },
+        {
+          "name": "four_independent_spatial_folds",
+          "passed": true,
+          "observed": 4,
+          "threshold": 4
+        },
+        {
+          "name": "cv_mean_gain",
+          "passed": true,
+          "observed": 0.08425219275487603,
+          "threshold": 0.01
+        },
+        {
+          "name": "minimum_fold_gain",
+          "passed": true,
+          "observed": 0.07082117587313783,
+          "threshold": -0.004
+        },
+        {
+          "name": "positive_holdout_folds",
+          "passed": true,
+          "observed": 4,
+          "threshold": 3
+        },
+        {
+          "name": "cross_fit_stability",
+          "passed": true,
+          "observed": 0.25,
+          "threshold": 0.75
+        },
+        {
+          "name": "nondegraded_anchor_fraction",
+          "passed": true,
+          "observed": 0.9703703703703703,
+          "threshold": 0.7
+        }
+      ]
+    },
+    {
+      "block_id": "dc_petworth",
+      "accepted": false,
+      "anchor_count": 37,
+      "estimated_xy_m": [
+        0.0,
+        0.0
+      ],
+      "applied_xy_m": [
+        0.0,
+        0.0
+      ],
+      "holdout_mean_gain": null,
+      "gates": [
+        {
+          "name": "minimum_scoring_buildings",
+          "passed": false,
+          "observed": 37,
+          "threshold": 40
+        }
+      ]
+    },
+    {
+      "block_id": "dc_anacostia",
+      "accepted": false,
+      "anchor_count": 50,
+      "estimated_xy_m": [
+        -0.25,
+        0.75
+      ],
+      "applied_xy_m": [
+        0.0,
+        0.0
+      ],
+      "holdout_mean_gain": 0.061931445801983176,
+      "gates": [
+        {
+          "name": "minimum_scoring_buildings",
+          "passed": true,
+          "observed": 50,
+          "threshold": 40
+        },
+        {
+          "name": "candidate_nonzero",
+          "passed": true,
+          "observed": [
+            -0.25,
+            0.75
+          ],
+          "threshold": "nonzero at grid precision"
+        },
+        {
+          "name": "candidate_inside_search",
+          "passed": true,
+          "observed": [
+            -0.25,
+            0.75
+          ],
+          "threshold": 3.0
+        },
+        {
+          "name": "full_fit_gain",
+          "passed": true,
+          "observed": 0.037064747660836984,
+          "threshold": 0.015
+        },
+        {
+          "name": "distant_competing_peak_margin",
+          "passed": true,
+          "observed": 0.05762687006758188,
+          "threshold": 0.004
+        },
+        {
+          "name": "two_direction_edge_evidence",
+          "passed": true,
+          "observed": 0.4178121145478754,
+          "threshold": 0.08
+        },
+        {
+          "name": "four_independent_spatial_folds",
+          "passed": false,
+          "observed": 1,
+          "threshold": 4
+        },
+        {
+          "name": "cv_mean_gain",
+          "passed": true,
+          "observed": 0.061931445801983176,
+          "threshold": 0.01
+        },
+        {
+          "name": "minimum_fold_gain",
+          "passed": true,
+          "observed": 0.061931445801983176,
+          "threshold": -0.004
+        },
+        {
+          "name": "positive_holdout_folds",
+          "passed": false,
+          "observed": 1,
+          "threshold": 3
+        },
+        {
+          "name": "cross_fit_stability",
+          "passed": true,
+          "observed": 0.25,
+          "threshold": 0.75
+        },
+        {
+          "name": "nondegraded_anchor_fraction",
+          "passed": true,
+          "observed": 0.8,
+          "threshold": 0.7
+        }
+      ]
+    },
+    {
+      "block_id": "dc_cleveland_park",
+      "accepted": true,
+      "anchor_count": 147,
+      "estimated_xy_m": [
+        -0.25,
+        1.0
+      ],
+      "applied_xy_m": [
+        -0.25,
+        1.0
+      ],
+      "holdout_mean_gain": 0.042482508540246544,
+      "gates": [
+        {
+          "name": "minimum_scoring_buildings",
+          "passed": true,
+          "observed": 147,
+          "threshold": 40
+        },
+        {
+          "name": "candidate_nonzero",
+          "passed": true,
+          "observed": [
+            -0.25,
+            1.0
+          ],
+          "threshold": "nonzero at grid precision"
+        },
+        {
+          "name": "candidate_inside_search",
+          "passed": true,
+          "observed": [
+            -0.25,
+            1.0
+          ],
+          "threshold": 3.0
+        },
+        {
+          "name": "full_fit_gain",
+          "passed": true,
+          "observed": 0.04233732205361948,
+          "threshold": 0.015
+        },
+        {
+          "name": "distant_competing_peak_margin",
+          "passed": true,
+          "observed": 0.03854711090735083,
+          "threshold": 0.004
+        },
+        {
+          "name": "two_direction_edge_evidence",
+          "passed": true,
+          "observed": 0.4621872977609228,
+          "threshold": 0.08
+        },
+        {
+          "name": "four_independent_spatial_folds",
+          "passed": true,
+          "observed": 4,
+          "threshold": 4
+        },
+        {
+          "name": "cv_mean_gain",
+          "passed": true,
+          "observed": 0.042482508540246544,
+          "threshold": 0.01
+        },
+        {
+          "name": "minimum_fold_gain",
+          "passed": true,
+          "observed": 0.03428879189990138,
+          "threshold": -0.004
+        },
+        {
+          "name": "positive_holdout_folds",
+          "passed": true,
+          "observed": 4,
+          "threshold": 3
+        },
+        {
+          "name": "cross_fit_stability",
+          "passed": true,
+          "observed": 0.0,
+          "threshold": 0.75
+        },
+        {
+          "name": "nondegraded_anchor_fraction",
+          "passed": true,
+          "observed": 0.8435374149659864,
+          "threshold": 0.7
+        }
+      ]
+    },
+    {
+      "block_id": "dc_woodley_park",
+      "accepted": false,
+      "anchor_count": 18,
+      "estimated_xy_m": [
+        0.0,
+        0.0
+      ],
+      "applied_xy_m": [
+        0.0,
+        0.0
+      ],
+      "holdout_mean_gain": null,
+      "gates": [
+        {
+          "name": "minimum_scoring_buildings",
+          "passed": false,
+          "observed": 18,
+          "threshold": 40
+        }
+      ]
+    }
+  ],
+  "reviewed_observations": {
+    "scope": "Reviewed return-group support at <=0.35 m in XY-covered surfaces. A group needs >=3 and >=75% fit returns. Vegetation overlap is a canopy-height proxy. The checked-return oracle has incomplete roof coverage, and is for candidate-stage diagnosis.",
+    "overview": {
+      "old_crop": {
+        "roof_platform": {
+          "groups": 2,
+          "returns": 17,
+          "supported_groups": 2,
+          "candidate_supported_groups": 2,
+          "selected_fit_returns": 17,
+          "admissible_candidate_returns": 17
+        },
+        "roof": {
+          "groups": 6,
+          "returns": 140,
+          "supported_groups": 6,
+          "candidate_supported_groups": 6,
+          "selected_fit_returns": 136,
+          "admissible_candidate_returns": 139
+        },
+        "vegetation": {
+          "groups": 2,
+          "returns": 42,
+          "supported_groups": 0,
+          "candidate_supported_groups": 0,
+          "selected_fit_returns": 0,
+          "admissible_candidate_returns": 0
+        }
+      },
+      "old_filter": {
+        "roof_platform": {
+          "groups": 2,
+          "returns": 17,
+          "supported_groups": 2,
+          "candidate_supported_groups": 2,
+          "selected_fit_returns": 17,
+          "admissible_candidate_returns": 17
+        },
+        "roof": {
+          "groups": 6,
+          "returns": 140,
+          "supported_groups": 6,
+          "candidate_supported_groups": 6,
+          "selected_fit_returns": 137,
+          "admissible_candidate_returns": 140
+        },
+        "vegetation": {
+          "groups": 2,
+          "returns": 42,
+          "supported_groups": 0,
+          "candidate_supported_groups": 0,
+          "selected_fit_returns": 0,
+          "admissible_candidate_returns": 0
+        }
+      },
+      "buffer": {
+        "roof_platform": {
+          "groups": 2,
+          "returns": 17,
+          "supported_groups": 0,
+          "candidate_supported_groups": 2,
+          "selector_misses": 2,
+          "selected_fit_returns": 0,
+          "admissible_candidate_returns": 17
+        },
+        "roof": {
+          "groups": 6,
+          "returns": 140,
+          "supported_groups": 6,
+          "candidate_supported_groups": 6,
+          "selected_fit_returns": 136,
+          "admissible_candidate_returns": 137
+        },
+        "vegetation": {
+          "groups": 2,
+          "returns": 42,
+          "supported_groups": 0,
+          "candidate_supported_groups": 0,
+          "selected_fit_returns": 0,
+          "admissible_candidate_returns": 0
+        }
+      },
+      "align": {
+        "roof_platform": {
+          "groups": 2,
+          "returns": 17,
+          "supported_groups": 0,
+          "candidate_supported_groups": 2,
+          "selector_misses": 2,
+          "selected_fit_returns": 0,
+          "admissible_candidate_returns": 17
+        },
+        "roof": {
+          "groups": 6,
+          "returns": 140,
+          "supported_groups": 6,
+          "candidate_supported_groups": 6,
+          "selected_fit_returns": 136,
+          "admissible_candidate_returns": 137
+        },
+        "vegetation": {
+          "groups": 2,
+          "returns": 42,
+          "supported_groups": 0,
+          "candidate_supported_groups": 0,
+          "selected_fit_returns": 0,
+          "admissible_candidate_returns": 0
+        }
+      },
+      "point_weight": {
+        "roof_platform": {
+          "groups": 2,
+          "returns": 17,
+          "supported_groups": 2,
+          "candidate_supported_groups": 2,
+          "selected_fit_returns": 17,
+          "admissible_candidate_returns": 17
+        },
+        "roof": {
+          "groups": 6,
+          "returns": 140,
+          "supported_groups": 6,
+          "candidate_supported_groups": 6,
+          "selected_fit_returns": 136,
+          "admissible_candidate_returns": 139
+        },
+        "vegetation": {
+          "groups": 2,
+          "returns": 42,
+          "supported_groups": 0,
+          "candidate_supported_groups": 0,
+          "selected_fit_returns": 0,
+          "admissible_candidate_returns": 0
+        }
+      },
+      "point_weight_naip": {
+        "roof_platform": {
+          "groups": 2,
+          "returns": 17,
+          "supported_groups": 2,
+          "candidate_supported_groups": 2,
+          "selected_fit_returns": 17,
+          "admissible_candidate_returns": 17
+        },
+        "roof": {
+          "groups": 6,
+          "returns": 140,
+          "supported_groups": 6,
+          "candidate_supported_groups": 6,
+          "selected_fit_returns": 136,
+          "admissible_candidate_returns": 139
+        },
+        "vegetation": {
+          "groups": 2,
+          "returns": 42,
+          "supported_groups": 0,
+          "candidate_supported_groups": 0,
+          "selected_fit_returns": 0,
+          "admissible_candidate_returns": 0
+        }
+      },
+      "checked_roof_only": {
+        "roof_platform": {
+          "groups": 2,
+          "returns": 17,
+          "supported_groups": 2,
+          "candidate_supported_groups": 2,
+          "selected_fit_returns": 17,
+          "admissible_candidate_returns": 17
+        },
+        "roof": {
+          "groups": 6,
+          "returns": 140,
+          "supported_groups": 5,
+          "candidate_supported_groups": 5,
+          "candidate_misses": 1,
+          "selected_fit_returns": 134,
+          "admissible_candidate_returns": 135
+        },
+        "vegetation": {
+          "groups": 2,
+          "returns": 42,
+          "supported_groups": 0,
+          "candidate_supported_groups": 0,
+          "selected_fit_returns": 0,
+          "admissible_candidate_returns": 0
+        }
+      }
+    },
+    "buildings": [
+      {
+        "id": "OSM_way_407834212",
+        "block_id": "boston_g5",
+        "oracle_status": "roof_generated",
+        "groups": [
+          {
+            "type": "roof_platform",
+            "label": "platform_3",
+            "reviewed_returns": 11,
+            "median_p_roof": 0.15830197930335999,
+            "median_p_vegetation": 0.8386809825897217,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "old_filter": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "buffer": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 11,
+                "group_support": false,
+                "candidate_group_support": true
+              },
+              "align": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 11,
+                "group_support": false,
+                "candidate_group_support": true
+              },
+              "point_weight": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              }
+            }
+          },
+          {
+            "type": "roof_platform",
+            "label": "platform_4",
+            "reviewed_returns": 6,
+            "median_p_roof": 0.1019439548254013,
+            "median_p_vegetation": 0.8869918584823608,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 6,
+                "admissible_candidate_returns": 6,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "old_filter": {
+                "selected_fit_returns": 6,
+                "admissible_candidate_returns": 6,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "buffer": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 6,
+                "group_support": false,
+                "candidate_group_support": true
+              },
+              "align": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 6,
+                "group_support": false,
+                "candidate_group_support": true
+              },
+              "point_weight": {
+                "selected_fit_returns": 6,
+                "admissible_candidate_returns": 6,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 6,
+                "admissible_candidate_returns": 6,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 6,
+                "admissible_candidate_returns": 6,
+                "group_support": true,
+                "candidate_group_support": true
+              }
+            }
+          },
+          {
+            "type": "roof",
+            "label": "lower_roof_at_historical_false_wall",
+            "reviewed_returns": 8,
+            "median_p_roof": 0.7297282218933105,
+            "median_p_vegetation": 0.2640565037727356,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 8,
+                "admissible_candidate_returns": 8,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "old_filter": {
+                "selected_fit_returns": 8,
+                "admissible_candidate_returns": 8,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "buffer": {
+                "selected_fit_returns": 8,
+                "admissible_candidate_returns": 8,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "align": {
+                "selected_fit_returns": 8,
+                "admissible_candidate_returns": 8,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight": {
+                "selected_fit_returns": 8,
+                "admissible_candidate_returns": 8,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 8,
+                "admissible_candidate_returns": 8,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 3,
+                "admissible_candidate_returns": 3,
+                "group_support": false,
+                "candidate_group_support": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "OSM_way_407834219",
+        "block_id": "boston_g5",
+        "oracle_status": "roof_generated",
+        "groups": [
+          {
+            "type": "roof",
+            "label": "unobscured_main_roof",
+            "reviewed_returns": 11,
+            "median_p_roof": 0.9956310987472534,
+            "median_p_vegetation": 0.001537600765004754,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "old_filter": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "buffer": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "align": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 11,
+                "admissible_candidate_returns": 11,
+                "group_support": true,
+                "candidate_group_support": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "OSM_way_407834033",
+        "block_id": "boston_g5",
+        "oracle_status": "roof_generated",
+        "groups": [
+          {
+            "type": "roof",
+            "label": "unobscured_south_roof",
+            "reviewed_returns": 3,
+            "median_p_roof": 0.1483508050441742,
+            "median_p_vegetation": 0.8319782614707947,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 3,
+                "admissible_candidate_returns": 3,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "old_filter": {
+                "selected_fit_returns": 3,
+                "admissible_candidate_returns": 3,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "buffer": {
+                "selected_fit_returns": 3,
+                "admissible_candidate_returns": 3,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "align": {
+                "selected_fit_returns": 3,
+                "admissible_candidate_returns": 3,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight": {
+                "selected_fit_returns": 3,
+                "admissible_candidate_returns": 3,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 3,
+                "admissible_candidate_returns": 3,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 3,
+                "admissible_candidate_returns": 3,
+                "group_support": true,
+                "candidate_group_support": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "OSM_way_67460301",
+        "block_id": "dc_capitol_hill",
+        "oracle_status": "roof_generated",
+        "groups": [
+          {
+            "type": "roof",
+            "label": "unobscured_white_roof",
+            "reviewed_returns": 50,
+            "median_p_roof": 0.9461417198181152,
+            "median_p_vegetation": 0.007750510238111019,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "old_filter": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "buffer": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "align": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              }
+            }
+          },
+          {
+            "type": "vegetation",
+            "label": "northwest_canopy",
+            "reviewed_returns": 14,
+            "median_p_roof": 0.2171170711517334,
+            "median_p_vegetation": 0.7815573215484619,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "old_filter": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "buffer": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "align": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "point_weight": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "OSM_way_67460558",
+        "block_id": "dc_capitol_hill",
+        "oracle_status": "roof_generated",
+        "groups": [
+          {
+            "type": "roof",
+            "label": "unobscured_terrace_roof_patch",
+            "reviewed_returns": 51,
+            "median_p_roof": 0.9637314677238464,
+            "median_p_vegetation": 0.013310892507433891,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "old_filter": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 51,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "buffer": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 51,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "align": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 51,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 50,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 50,
+                "admissible_candidate_returns": 51,
+                "group_support": true,
+                "candidate_group_support": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "OSM_way_66732556",
+        "block_id": "dc_capitol_hill",
+        "oracle_status": "roof_generated",
+        "groups": [
+          {
+            "type": "roof",
+            "label": "unobscured_historic_roof",
+            "reviewed_returns": 17,
+            "median_p_roof": 0.8379749059677124,
+            "median_p_vegetation": 0.08633682876825333,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 14,
+                "admissible_candidate_returns": 17,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "old_filter": {
+                "selected_fit_returns": 15,
+                "admissible_candidate_returns": 17,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "buffer": {
+                "selected_fit_returns": 14,
+                "admissible_candidate_returns": 14,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "align": {
+                "selected_fit_returns": 14,
+                "admissible_candidate_returns": 14,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight": {
+                "selected_fit_returns": 14,
+                "admissible_candidate_returns": 17,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 14,
+                "admissible_candidate_returns": 17,
+                "group_support": true,
+                "candidate_group_support": true
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 17,
+                "admissible_candidate_returns": 17,
+                "group_support": true,
+                "candidate_group_support": true
+              }
+            }
+          },
+          {
+            "type": "vegetation",
+            "label": "high_southwest_canopy",
+            "reviewed_returns": 28,
+            "median_p_roof": 0.015363343060016632,
+            "median_p_vegetation": 0.983988344669342,
+            "scores": {
+              "old_crop": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "old_filter": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "buffer": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "align": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "point_weight": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "point_weight_naip": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              },
+              "checked_roof_only": {
+                "selected_fit_returns": 0,
+                "admissible_candidate_returns": 0,
+                "group_support": false,
+                "candidate_group_support": false
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "independent_stable_roof_check": {
+    "schema": "lod2-independent-survey-roof-interior-score-v1",
+    "reference_sha256": "43f1ae4e86713dd0a8e3d890d9b64f3f2ad2b680e9e9f3d60319a85992ca3908",
+    "reconstruction_sha256": "108fc04cc30550116f5c43ca2d66120abaa6d3ae60c0f83522dd81bb416fe89a",
+    "scope": "Independent 2022 provider-labelled points within model-blind historical interior roof windows with stable observations. Point locations and heights derive from the independently flown survey, with locally measured ground vertical adjustment. Report only agreed stable interiors; no assumption of unchanged roof over entire building.",
+    "restrictions": [
+      "Class 6 can include facade returns.",
+      "Stability gate references raw 2014 returns and cannot estimate change rate or population roof accuracy.",
+      "No generated model or official roof geometry fed to the stability gate."
+    ],
+    "height_tolerance_m": 0.35,
+    "qualified_independent_sample_size": 52,
+    "qualified_patch_count": 3,
+    "candidate_selection_does_not_use_external_labels": true,
+    "pooled": {
+      "old_crop": {
+        "reference_points": 52,
+        "xy_covered_points": 52,
+        "within_tolerance_points": 51,
+        "missing_roof_points": 0,
+        "xy_covered_mae_m": 0.08955362101861304,
+        "xy_covered_median_abs_error_m": 0.07220377027424263,
+        "xy_covered_p90_abs_error_m": 0.12528273482118238
+      },
+      "old_filter": {
+        "reference_points": 52,
+        "xy_covered_points": 52,
+        "within_tolerance_points": 51,
+        "missing_roof_points": 0,
+        "xy_covered_mae_m": 0.0878690261512349,
+        "xy_covered_median_abs_error_m": 0.07369076049661061,
+        "xy_covered_p90_abs_error_m": 0.12528273482118238
+      },
+      "buffer": {
+        "reference_points": 52,
+        "xy_covered_points": 52,
+        "within_tolerance_points": 51,
+        "missing_roof_points": 0,
+        "xy_covered_mae_m": 0.09348918913553834,
+        "xy_covered_median_abs_error_m": 0.07576683704420617,
+        "xy_covered_p90_abs_error_m": 0.13100447896140252
+      },
+      "align": {
+        "reference_points": 52,
+        "xy_covered_points": 52,
+        "within_tolerance_points": 51,
+        "missing_roof_points": 0,
+        "xy_covered_mae_m": 0.09348918913553834,
+        "xy_covered_median_abs_error_m": 0.07576683704420617,
+        "xy_covered_p90_abs_error_m": 0.13100447896140252
+      },
+      "point_weight": {
+        "reference_points": 52,
+        "xy_covered_points": 52,
+        "within_tolerance_points": 51,
+        "missing_roof_points": 0,
+        "xy_covered_mae_m": 0.09335405463075229,
+        "xy_covered_median_abs_error_m": 0.0736857938586919,
+        "xy_covered_p90_abs_error_m": 0.13252723743059888
+      },
+      "point_weight_naip": {
+        "reference_points": 52,
+        "xy_covered_points": 52,
+        "within_tolerance_points": 51,
+        "missing_roof_points": 0,
+        "xy_covered_mae_m": 0.09335405463074962,
+        "xy_covered_median_abs_error_m": 0.07368579385868479,
+        "xy_covered_p90_abs_error_m": 0.13252723743059888
+      }
+    },
+    "patches": [
+      {
+        "block_id": "dc_capitol_hill",
+        "id": "OSM_way_67460301",
+        "name": "unobscured_white_roof",
+        "scores": {
+          "old_crop": {
+            "reference_points": 18,
+            "xy_covered_points": 18,
+            "within_tolerance_points": 18,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.10757301542040862,
+            "xy_covered_median_abs_error_m": 0.10413457857133679,
+            "xy_covered_p90_abs_error_m": 0.13358351980951327
+          },
+          "old_filter": {
+            "reference_points": 18,
+            "xy_covered_points": 18,
+            "within_tolerance_points": 18,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.10757301542040862,
+            "xy_covered_median_abs_error_m": 0.10413457857133679,
+            "xy_covered_p90_abs_error_m": 0.13358351980951327
+          },
+          "buffer": {
+            "reference_points": 18,
+            "xy_covered_points": 18,
+            "within_tolerance_points": 18,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.11597205372206115,
+            "xy_covered_median_abs_error_m": 0.11397345160355243,
+            "xy_covered_p90_abs_error_m": 0.14399409711342415
+          },
+          "align": {
+            "reference_points": 18,
+            "xy_covered_points": 18,
+            "within_tolerance_points": 18,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.11597205372206115,
+            "xy_covered_median_abs_error_m": 0.11397345160355243,
+            "xy_covered_p90_abs_error_m": 0.14399409711342415
+          },
+          "point_weight": {
+            "reference_points": 18,
+            "xy_covered_points": 18,
+            "within_tolerance_points": 18,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.11563232871143904,
+            "xy_covered_median_abs_error_m": 0.1128315845600838,
+            "xy_covered_p90_abs_error_m": 0.14253370443823174
+          },
+          "point_weight_naip": {
+            "reference_points": 18,
+            "xy_covered_points": 18,
+            "within_tolerance_points": 18,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.11563232871143904,
+            "xy_covered_median_abs_error_m": 0.1128315845600838,
+            "xy_covered_p90_abs_error_m": 0.14253370443823174
+          }
+        }
+      },
+      {
+        "block_id": "dc_capitol_hill",
+        "id": "OSM_way_67460558",
+        "name": "unobscured_terrace_roof_patch",
+        "scores": {
+          "old_crop": {
+            "reference_points": 15,
+            "xy_covered_points": 15,
+            "within_tolerance_points": 14,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.12539394381537788,
+            "xy_covered_median_abs_error_m": 0.06774194081986451,
+            "xy_covered_p90_abs_error_m": 0.09235222619783769
+          },
+          "old_filter": {
+            "reference_points": 15,
+            "xy_covered_points": 15,
+            "within_tolerance_points": 14,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.13157506394648663,
+            "xy_covered_median_abs_error_m": 0.07481378374403391,
+            "xy_covered_p90_abs_error_m": 0.09924649843102884
+          },
+          "buffer": {
+            "reference_points": 15,
+            "xy_covered_points": 15,
+            "within_tolerance_points": 14,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.13246495812572145,
+            "xy_covered_median_abs_error_m": 0.07587814945456728,
+            "xy_covered_p90_abs_error_m": 0.09932984144480769
+          },
+          "align": {
+            "reference_points": 15,
+            "xy_covered_points": 15,
+            "within_tolerance_points": 14,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.13246495812572145,
+            "xy_covered_median_abs_error_m": 0.07587814945456728,
+            "xy_covered_p90_abs_error_m": 0.09932984144480769
+          },
+          "point_weight": {
+            "reference_points": 15,
+            "xy_covered_points": 15,
+            "within_tolerance_points": 14,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.12599796354065707,
+            "xy_covered_median_abs_error_m": 0.06873422107440064,
+            "xy_covered_p90_abs_error_m": 0.09286220532390671
+          },
+          "point_weight_naip": {
+            "reference_points": 15,
+            "xy_covered_points": 15,
+            "within_tolerance_points": 14,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.12599796354065707,
+            "xy_covered_median_abs_error_m": 0.06873422107440064,
+            "xy_covered_p90_abs_error_m": 0.09286220532390671
+          }
+        }
+      },
+      {
+        "block_id": "dc_capitol_hill",
+        "id": "OSM_way_66732556",
+        "name": "unobscured_historic_roof",
+        "scores": {
+          "old_crop": {
+            "reference_points": 19,
+            "xy_covered_points": 19,
+            "within_tolerance_points": 19,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.04418762411420287,
+            "xy_covered_median_abs_error_m": 0.03547303380831579,
+            "xy_covered_p90_abs_error_m": 0.07182180218569414
+          },
+          "old_filter": {
+            "reference_points": 19,
+            "xy_covered_points": 19,
+            "within_tolerance_points": 19,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.03469732226839789,
+            "xy_covered_median_abs_error_m": 0.03937943493594531,
+            "xy_covered_p90_abs_error_m": 0.06114877737871183
+          },
+          "buffer": {
+            "reference_points": 19,
+            "xy_covered_points": 19,
+            "within_tolerance_points": 19,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.041419289271845856,
+            "xy_covered_median_abs_error_m": 0.039866099175604575,
+            "xy_covered_p90_abs_error_m": 0.07322319686816456
+          },
+          "align": {
+            "reference_points": 19,
+            "xy_covered_points": 19,
+            "within_tolerance_points": 19,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.041419289271845856,
+            "xy_covered_median_abs_error_m": 0.039866099175604575,
+            "xy_covered_p90_abs_error_m": 0.07322319686816456
+          },
+          "point_weight": {
+            "reference_points": 19,
+            "xy_covered_points": 19,
+            "within_tolerance_points": 19,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.04647681425701895,
+            "xy_covered_median_abs_error_m": 0.04055262143270966,
+            "xy_covered_p90_abs_error_m": 0.07363844682677226
+          },
+          "point_weight_naip": {
+            "reference_points": 19,
+            "xy_covered_points": 19,
+            "within_tolerance_points": 19,
+            "missing_roof_points": 0,
+            "xy_covered_mae_m": 0.04647681425701166,
+            "xy_covered_median_abs_error_m": 0.040552621432695446,
+            "xy_covered_p90_abs_error_m": 0.07363844682676515
+          }
+        }
+      }
+    ]
+  },
+  "case222_false_wall_probe": {
+    "schema": "lod2-roof-false-wall-regression-v1",
+    "scope": "Observation-derived local height probe at the known Boston 222 wall defect. A missing surface is unresolved and cannot pass this check. The probe diagnoses this defect; it does not measure whole-building geometry accuracy.",
+    "reconstruction_sha256": "108fc04cc30550116f5c43ca2d66120abaa6d3ae60c0f83522dd81bb416fe89a",
+    "rows": [
+      {
+        "block_id": "boston_g5",
+        "id": "OSM_way_407834212",
+        "probe_source": "Eight actual returns near the historical unsupported high wall describe the lower slope. This tests local agreement with the input observations, not independent evidence that all roof structure above them is absent.",
+        "probe_xy_m": [
+          235015.61895649336,
+          898787.0522908262
+        ],
+        "supported_lower_slope_z_m": 12.263256800341196,
+        "tolerance_m": 0.5,
+        "historical_fit_rmse_m": 0.03654303727003129,
+        "source_control_count": 8,
+        "scores": {
+          "old_crop": {
+            "status": "consistent_with_lower_slope",
+            "model_status": "roof_generated",
+            "highest_roof_z_m": 12.206583325111273,
+            "min_roof_z_m": 12.206583325111273,
+            "signed_error_highest_roof_m": -0.05667347522992294,
+            "overlapping_surfaces": 1
+          },
+          "old_filter": {
+            "status": "consistent_with_lower_slope",
+            "model_status": "roof_generated",
+            "highest_roof_z_m": 12.206583325111273,
+            "min_roof_z_m": 12.206583325111273,
+            "signed_error_highest_roof_m": -0.05667347522992294,
+            "overlapping_surfaces": 1
+          },
+          "buffer": {
+            "status": "consistent_with_lower_slope",
+            "model_status": "roof_generated",
+            "highest_roof_z_m": 12.219104904324613,
+            "min_roof_z_m": 12.219104904324613,
+            "signed_error_highest_roof_m": -0.04415189601658298,
+            "overlapping_surfaces": 1
+          },
+          "align": {
+            "status": "consistent_with_lower_slope",
+            "model_status": "roof_generated",
+            "highest_roof_z_m": 12.219104904324613,
+            "min_roof_z_m": 12.219104904324613,
+            "signed_error_highest_roof_m": -0.04415189601658298,
+            "overlapping_surfaces": 1
+          },
+          "point_weight": {
+            "status": "consistent_with_lower_slope",
+            "model_status": "roof_generated",
+            "highest_roof_z_m": 12.237039630906734,
+            "min_roof_z_m": 12.237039630906734,
+            "signed_error_highest_roof_m": -0.02621716943446195,
+            "overlapping_surfaces": 1
+          },
+          "point_weight_naip": {
+            "status": "consistent_with_lower_slope",
+            "model_status": "roof_generated",
+            "highest_roof_z_m": 12.237039630906734,
+            "min_roof_z_m": 12.237039630906734,
+            "signed_error_highest_roof_m": -0.02621716943446195,
+            "overlapping_surfaces": 1
+          },
+          "historical_R_DL": {
+            "status": "high_surface_at_probe",
+            "model_status": "residual_boundary_refinement",
+            "highest_roof_z_m": 17.81899009771445,
+            "min_roof_z_m": 12.206344241326944,
+            "signed_error_highest_roof_m": 5.555733297373255,
+            "overlapping_surfaces": 2
+          },
+          "historical_R_DL_repair": {
+            "status": "consistent_with_lower_slope",
+            "model_status": "residual_boundary_refinement",
+            "highest_roof_z_m": 12.206344241326939,
+            "min_roof_z_m": 12.206344241326939,
+            "signed_error_highest_roof_m": -0.056912559014257624,
+            "overlapping_surfaces": 1
+          }
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "training": {
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "training_returns": 990000,
+      "test": {
+        "count": 275000,
+        "confusion_true_rows": [
+          [
+            53237,
+            1485,
+            278
+          ],
+          [
+            1264,
+            108586,
+            150
+          ],
+          [
+            8862,
+            703,
+            100435
+          ]
+        ],
+        "accuracy": 0.9536654545454546,
+        "mean_iou": 0.8982820024732489,
+        "iou": {
+          "roof": 0.8174461812486564,
+          "vegetation": 0.9678931793061647,
+          "other": 0.9095066468649255
+        },
+        "roof_recall": 0.9679454545454546,
+        "vegetation_predicted_as_roof_fraction": 0.011490909090909092,
+        "mean_roof_weight_for_reference_roof": 0.8960463404655457,
+        "mean_roof_weight_for_reference_vegetation": 0.07805855572223663,
+        "nll": 0.17685310542583466,
+        "brier": 0.08269458264112473
+      },
+      "same_sample_mlp_test": {
+        "count": 275000,
+        "confusion_true_rows": [
+          [
+            53002,
+            1716,
+            282
+          ],
+          [
+            1225,
+            108580,
+            195
+          ],
+          [
+            8566,
+            643,
+            100791
+          ]
+        ],
+        "accuracy": 0.9540836363636364,
+        "mean_iou": 0.8989126979548115,
+        "iou": {
+          "roof": 0.8180457162260191,
+          "vegetation": 0.9663667351970024,
+          "other": 0.9123256424414131
+        },
+        "roof_recall": 0.9636727272727272,
+        "vegetation_predicted_as_roof_fraction": 0.011136363636363637,
+        "mean_roof_weight_for_reference_roof": 0.8825589418411255,
+        "mean_roof_weight_for_reference_vegetation": 0.0851457342505455,
+        "nll": 0.1812170445919037,
+        "brier": 0.08392506837844849
+      }
+    },
+    "independent_survey": {
+      "scope": "Provider labels independently collected Jan 2022 in DC, with manual edits of building labels and automatic vegetation labeling. Building class is a roof proxy that may contain facades. No roof shape or historical target-label inference.",
+      "buildings": 97,
+      "aggregate": {
+        "count": 416873,
+        "confusion_reference_rows": [
+          [
+            261094,
+            24377,
+            10874
+          ],
+          [
+            7105,
+            28811,
+            957
+          ],
+          [
+            20996,
+            2123,
+            60536
+          ]
+        ],
+        "class_counts": {
+          "2": 83655,
+          "3": 3915,
+          "4": 4691,
+          "5": 28267,
+          "6": 296345
+        },
+        "per_class_recall": {
+          "roof": 0.8810474278290505,
+          "vegetation": 0.7813576329563637,
+          "other": 0.7236387544079852
+        },
+        "per_class_iou": {
+          "roof": 0.8047379224894127,
+          "vegetation": 0.45462578700708506,
+          "other": 0.6339777559013887
+        },
+        "mean_iou_present_classes": 0.6311138217992954,
+        "roof_precision": 0.9028302702328879,
+        "vegetation_to_roof": 0.19268841699888808,
+        "high_vegetation_to_roof": 0.1470619450242332,
+        "noise_to_roof": null,
+        "fixed_probability_operating_points": [
+          {
+            "threshold": 0.2,
+            "roof_retention": 0.9473350318041472,
+            "vegetation_retention_as_roof": 0.44284435766007646,
+            "high_vegetation_retention_as_roof": 0.3561396681642905
+          },
+          {
+            "threshold": 0.35,
+            "roof_retention": 0.9144274409893873,
+            "vegetation_retention_as_roof": 0.27971686599951184,
+            "high_vegetation_retention_as_roof": 0.21866487423497363
+          },
+          {
+            "threshold": 0.5,
+            "roof_retention": 0.8767551333749515,
+            "vegetation_retention_as_roof": 0.18316925663764813,
+            "high_vegetation_retention_as_roof": 0.14483319772172498
+          },
+          {
+            "threshold": 0.65,
+            "roof_retention": 0.8282643540468035,
+            "vegetation_retention_as_roof": 0.11338920077021127,
+            "high_vegetation_retention_as_roof": 0.09289984787915237
+          },
+          {
+            "threshold": 0.8,
+            "roof_retention": 0.7516644451568274,
+            "vegetation_retention_as_roof": 0.059040490331679005,
+            "high_vegetation_retention_as_roof": 0.04966922559875473
+          },
+          {
+            "threshold": 0.95,
+            "roof_retention": 0.4980107644805885,
+            "vegetation_retention_as_roof": 0.009709001166164945,
+            "high_vegetation_retention_as_roof": 0.009587151094916334
+          }
+        ]
+      }
+    },
+    "paired_20pct_context": {
+      "scope": "Deterministic independent-survey return thinning at inference. Scores use exactly the same retained point IDs for full and sparse neighborhood context. This synthetic comparison does not model different sensors, leaf conditions, or actual missing swaths.",
+      "count": 83312,
+      "full_context": {
+        "count": 83312,
+        "confusion_reference_rows": [
+          [
+            52201,
+            4910,
+            2112
+          ],
+          [
+            1441,
+            5865,
+            179
+          ],
+          [
+            4177,
+            414,
+            12013
+          ]
+        ],
+        "class_counts": {
+          "2": 16604,
+          "3": 750,
+          "4": 928,
+          "5": 5807,
+          "6": 59223
+        },
+        "per_class_recall": {
+          "roof": 0.8814312007159381,
+          "vegetation": 0.7835671342685371,
+          "other": 0.7235003613587088
+        },
+        "per_class_iou": {
+          "roof": 0.8050616122515075,
+          "vegetation": 0.4578811772972129,
+          "other": 0.6357766604921937
+        },
+        "mean_iou_present_classes": 0.6329064833469714,
+        "roof_precision": 0.902834708313876,
+        "vegetation_to_roof": 0.1925183700734803,
+        "high_vegetation_to_roof": 0.1499913897020837,
+        "noise_to_roof": null,
+        "fixed_probability_operating_points": [
+          {
+            "threshold": 0.2,
+            "roof_retention": 0.9474528477111933,
+            "vegetation_retention_as_roof": 0.44101536406145625,
+            "high_vegetation_retention_as_roof": 0.3576717754434303
+          },
+          {
+            "threshold": 0.35,
+            "roof_retention": 0.9151849788089087,
+            "vegetation_retention_as_roof": 0.27735470941883766,
+            "high_vegetation_retention_as_roof": 0.21697950749095918
+          },
+          {
+            "threshold": 0.5,
+            "roof_retention": 0.8773280651098391,
+            "vegetation_retention_as_roof": 0.18410153640614563,
+            "high_vegetation_retention_as_roof": 0.14826933011882212
+          },
+          {
+            "threshold": 0.65,
+            "roof_retention": 0.8299140536615842,
+            "vegetation_retention_as_roof": 0.11128924515698063,
+            "high_vegetation_retention_as_roof": 0.09126915791286379
+          },
+          {
+            "threshold": 0.8,
+            "roof_retention": 0.75286628505817,
+            "vegetation_retention_as_roof": 0.057849031396125586,
+            "high_vegetation_retention_as_roof": 0.05028413983123816
+          },
+          {
+            "threshold": 0.95,
+            "roof_retention": 0.49983958934873274,
+            "vegetation_retention_as_roof": 0.008817635270541082,
+            "high_vegetation_retention_as_roof": 0.009126915791286378
+          }
+        ]
+      },
+      "sparse_context": {
+        "count": 83312,
+        "confusion_reference_rows": [
+          [
+            31330,
+            22599,
+            5294
+          ],
+          [
+            182,
+            7144,
+            159
+          ],
+          [
+            943,
+            2298,
+            13363
+          ]
+        ],
+        "class_counts": {
+          "2": 16604,
+          "3": 750,
+          "4": 928,
+          "5": 5807,
+          "6": 59223
+        },
+        "per_class_recall": {
+          "roof": 0.5290174425476588,
+          "vegetation": 0.9544422177688711,
+          "other": 0.804806070826307
+        },
+        "per_class_iou": {
+          "roof": 0.5191555643931862,
+          "vegetation": 0.2206163918226175,
+          "other": 0.6058394160583942
+        },
+        "mean_iou_present_classes": 0.44853712409139934,
+        "roof_precision": 0.9653366199352951,
+        "vegetation_to_roof": 0.024315297261189046,
+        "high_vegetation_to_roof": 0.0160151541243327,
+        "noise_to_roof": null,
+        "fixed_probability_operating_points": [
+          {
+            "threshold": 0.2,
+            "roof_retention": 0.7090826199280685,
+            "vegetation_retention_as_roof": 0.12558450233800936,
+            "high_vegetation_retention_as_roof": 0.07456517995522645
+          },
+          {
+            "threshold": 0.35,
+            "roof_retention": 0.5950053188794894,
+            "vegetation_retention_as_roof": 0.04542418169672679,
+            "high_vegetation_retention_as_roof": 0.028413983123816083
+          },
+          {
+            "threshold": 0.5,
+            "roof_retention": 0.5079445485706566,
+            "vegetation_retention_as_roof": 0.020975283901135604,
+            "high_vegetation_retention_as_roof": 0.015498536249354228
+          },
+          {
+            "threshold": 0.65,
+            "roof_retention": 0.43422319031457374,
+            "vegetation_retention_as_roof": 0.01175684702738811,
+            "high_vegetation_retention_as_roof": 0.010504563457895643
+          },
+          {
+            "threshold": 0.8,
+            "roof_retention": 0.357546899008831,
+            "vegetation_retention_as_roof": 0.004809619238476954,
+            "high_vegetation_retention_as_roof": 0.0053383847081109005
+          },
+          {
+            "threshold": 0.95,
+            "roof_retention": 0.24140958749134628,
+            "vegetation_retention_as_roof": 0.0012024048096192384,
+            "high_vegetation_retention_as_roof": 0.0015498536249354228
+          }
+        ]
+      }
+    },
+    "independent_low_noise_check": {
+      "scope": "Separate check allowing withheld returns. No class 18 high-noise controls were available.",
+      "class_7_count": 722,
+      "class_18_count": 0,
+      "low_noise_to_roof": 0.1371191135734072,
+      "low_noise_to_other": 0.6509695290858726
+    }
+  },
+  "sources": {
+    "richmond_training": "https://www.fisheries.noaa.gov/inport/item/80312",
+    "independent_dc": "https://www.fisheries.noaa.gov/inport/item/69938"
+  }
+}
