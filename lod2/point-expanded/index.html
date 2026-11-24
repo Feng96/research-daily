@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoD2 扩展样本与模型对照</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<main>
+  <header>
+    <nav aria-label="实验导航"><a href="../">LoD2 实验主页</a><a href="../point-workflow/">原 144 栋对照</a></nav>
+    <h1>LoD2 扩展样本与模型对照</h1>
+    <p id="cohort">Boston 和 Washington, DC 的固定样本</p>
+  </header>
+  <section class="card" aria-labelledby="viewerTitle">
+    <h2 id="viewerTitle" class="visually-hidden">建筑查看器</h2>
+    <div id="cohortControl" class="sample-filter" hidden><label>样本 <select id="cohortFilter"><option value="all">全部建筑</option><option value="added">本轮新增</option><option value="pilot">原 144 栋</option></select></label></div>
+    <div class="selectors">
+      <label>区域<select id="block"></select></label>
+      <label>建筑<select id="building"></select></label>
+      <label>方法<select id="method"></select></label>
+    </div>
+    <p id="methodDetails" class="muted"></p>
+    <div class="controls">
+      <label>模型<select id="mode"><option value="building">完整建筑</option><option value="roof">仅屋面</option><option value="wire">屋面线框</option><option value="none">隐藏模型</option></select></label>
+      <label>点云<select id="points"><option value="fit">拟合候选点</option><option value="context">原始周边点</option><option value="none">隐藏点云</option></select></label>
+      <button id="top" type="button" aria-pressed="false">俯视</button>
+      <button id="image" type="button" aria-pressed="false">NAIP 影像</button>
+      <div class="zoom" aria-label="缩放">
+        <button id="zoomOut" type="button" aria-label="缩小">−</button>
+        <button id="zoomIn" type="button" aria-label="放大">+</button>
+      </div>
+    </div>
+    <div class="scene" id="scene">
+      <canvas id="drawing" aria-label="可旋转的屋顶模型和原始点云"></canvas>
+      <p id="status" class="overlay" role="status">正在载入建筑</p>
+    </div>
+    <div class="legend">
+      <span><i class="roof"></i>屋面倾向</span><span><i class="tree"></i>植被倾向</span><span><i class="other"></i>其他回波</span>
+      <span><i class="outline"></i>原始足迹</span><span id="registeredKey" hidden><i class="shift"></i>配准足迹</span>
+      <span id="supportKey" hidden><i class="support"></i>屋面低支撑区</span>
+    </div>
+    <p class="muted fine" id="pointNote"></p>
+    <p class="muted fine">完整建筑模式展示屋面、墙面与底面。实体闭合仍待核验。</p>
+    <div class="fact-grid" id="facts"></div>
+    <div class="location" id="location" hidden>
+      <span id="coordinate"></span>
+      <button type="button" id="copy">复制坐标</button>
+      <a id="street" target="_blank" rel="noopener">Google 街景</a>
+      <a id="previous" target="_blank" rel="noopener">此前实验视图</a>
+    </div>
+  </section>
+  <details id="results" class="card">
+    <summary>六组方法的生成统计</summary>
+    <p class="muted">屋面生成栋数用于衡量输出覆盖。模型覆盖比例可能包含低支撑区。</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th scope="col">方法</th><th scope="col">生成屋面</th><th scope="col" id="addedHeading" hidden>新增样本</th></tr></thead>
+        <tbody id="armResults"></tbody>
+      </table>
+    </div>
+    <ul id="summaryNotes" hidden></ul>
+    <ul id="summaryCases" hidden></ul>
+    <p id="summaryLink" hidden><a href="summary.json">下载本轮指标与审计数据</a></p>
+  </details>
+  <footer>建筑足迹 © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap 贡献者</a> · USGS 3DEP 点云 · USDA NAIP 航片</footer>
+</main>
+</body>
+</html>
