@@ -1,17 +1,14 @@
 'use strict';
 
-const METHOD = {
-  old_crop: { label: '01 · 原足迹硬裁', description: '只取原始 OSM 足迹内的候选点。' },
-  old_filter: { label: '02 · 旧融合硬筛', description: '在原足迹候选点中重放旧融合筛点，删除被排除的回波。' },
-  buffer: { label: '03 · 足迹周边取点', description: '允许周边回波参与拟合，同时检查相邻建筑的点归属。' },
-  align: { label: '04 · 周边取点＋街区配准', description: '仅应用在留出建筑上通过复核的街区平移。' },
-  point_weight: { label: '05 · 加入 DL 点权重', description: '用点云模型估计屋面、植被及其他回波的概率，以屋面概率给候选点加权。' },
-  point_weight_naip: { label: '06 · 点权重＋NAIP', description: '在 DL 点权重上加入通过时相和空间检查的 NAIP 近红外植被证据。' },
-  density_richmond: { label: '稀疏增强 · Richmond', description: '训练时抽稀点云并重新计算局部特征，让模型看到点间距和覆盖变化。' },
-  density_cross_domain: { label: '稀疏增强 · 两地联合', description: '用 Richmond 和 Vaihingen 的点云联合训练，使用同样的抽稀增强。' },
+const PREVIOUS = 'previous_points';
+const CURRENT = 'new_points';
+const METHODS = {
+  [PREVIOUS]: { label: '上一轮模型 · 纯点云', subtitle: '纯点云 · 贴树屋面微调' },
+  [CURRENT]: { label: '本轮模型 · 纯点云', subtitle: '纯点云 · 树冠缺测训练' },
+  new_naive_image: { label: '本轮模型 · 直接影像降权', subtitle: '影像对照 · 直接降权' },
+  new_gated_image: { label: '本轮模型 · 影像条件门控', subtitle: '影像对照 · 通过检查后降权' },
 };
 const STATUS = {
-  roof_generated: '已生成屋面',
   insufficient_distinct_returns: '不同位置的候选回波过少',
   collinear_returns: '候选回波近共线',
   no_roof_candidates: '未找到候选屋面',
@@ -19,17 +16,25 @@ const STATUS = {
   roof_plane_lacks_observations: '候选屋面的观测支撑不足',
   geometry_quality_rejection: '几何检查未通过',
 };
-const pointBit = { old_crop: 1, old_filter: 2, buffer: 4, align: 8, point_weight: 8, point_weight_naip: 8,
-  density_richmond: 8, density_cross_domain: 8 };
-const qualityGroup = { old_crop: 'baseline', buffer: 'buffer', align: 'registered', point_weight: 'registered', point_weight_naip: 'registered',
-  density_richmond: 'registered', density_cross_domain: 'registered' };
 const $ = id => document.getElementById(id);
-const canvas = $('drawing');
-const ctx = canvas.getContext('2d');
+const previousCanvas = $('previousDrawing');
+const currentCanvas = $('drawing');
 const query = new URLSearchParams(location.search);
-const state = { index: null, data: null, selected: null, active: null, previous: null, raster: null,
-  azimuth: -.58, elevation: .57, zoom: 1, top: false, image: false, pending: 0, error: '' };
+const state = {
+  index: null, data: null, selected: null, raster: null, view: 'compare',
+  azimuth: -.58, elevation: .57, zoom: 1, top: false, image: false,
+  pending: 0, error: '',
+};
+
 const number = new Intl.NumberFormat('zh-CN', { maximumFractionDigits: 2 });
+
+function currentArm() {
+  return $('method').value || CURRENT;
+}
+
+function currentDetailsArm() {
+  return state.view === 'previous' ? PREVIOUS : currentArm();
+}
 
 function requestPaint() {
   if (!state.pending) state.pending = requestAnimationFrame(paint);
@@ -49,128 +54,104 @@ function fact(text, value) {
   $('facts').append(cell);
 }
 
-function percent(fraction) {
-  return fraction == null ? '—' : number.format(100 * Math.min(fraction, 1)) + '%';
-}
-
-function sameGeometry(data, first, second) {
-  return data.variants[first]?.mesh != null && data.variants[first].mesh === data.variants[second]?.mesh;
-}
-
 function visiblePoints(data, arm, display) {
+  if (display === 'none') return [];
   const points = [];
-  if (display === 'none') return points;
   const comparison = data.compared_probabilities?.[arm];
-  const bit = methodInfo(arm)?.candidate_bit ?? pointBit[arm];
+  const bit = state.index.method_labels[arm].candidate_bit;
   for (let i = 0; i < data.points.length; i += 6) {
     const [x, y, z, membership, klass, roofProbability] = data.points.slice(i, i + 6);
     if (display === 'context' || membership & bit) {
       const code = comparison?.[i / 6];
-      points.push({ xyz: [x / 100, y / 100, z / 100], klass: code == null ? klass : Math.floor(code / 101),
-        roofProbability: code == null ? roofProbability : code % 101 });
+      points.push({
+        xyz: [x / 100, y / 100, z / 100],
+        klass: code == null ? klass : Math.floor(code / 101),
+        roofProbability: code == null ? roofProbability : code % 101,
+      });
     }
   }
   return points;
 }
 
+function sameGeometry(data, first, second) {
+  const mesh = data.variants[first]?.mesh;
+  return mesh != null && mesh === data.variants[second]?.mesh;
+}
+
+function paneStatus(data, arm) {
+  const variant = data.variants[arm];
+  const messages = [];
+  if (variant?.mesh == null) messages.push(STATUS[variant?.status] || '此方法没有可预览的屋面');
+  if (arm === 'new_gated_image' && sameGeometry(data, arm, CURRENT)) {
+    messages.push('此建筑的屋面与本轮纯点云一致');
+  }
+  if (state.image && data.image) {
+    messages.push('NAIP ' + data.image.dates.join('、') + ' · ' + number.format(data.image.native_gsd_m) + ' m/像元');
+  }
+  return messages.join(' · ');
+}
+
 function updatePanel() {
   const data = state.data;
-  const arm = $('method').value;
-  $('methodDetails').textContent = methodInfo(arm)?.description || '';
-  $('facts').replaceChildren();
-  $('registeredKey').hidden = true;
-  $('supportKey').hidden = true;
-  $('seamKey').hidden = true;
-  $('canopyRoofKey').hidden = $('canopyMissingKey').hidden = true;
+  const arm = currentArm();
+  $('previousPane').hidden = state.view === 'current';
+  $('currentPane').hidden = state.view === 'previous';
+  $('panes').classList.toggle('single', state.view !== 'compare');
+  for (const button of document.querySelectorAll('[data-view]')) {
+    button.setAttribute('aria-pressed', String(button.dataset.view === state.view));
+  }
+  $('currentVariant').textContent = METHODS[arm].subtitle;
+  $('methodDetails').textContent = state.index?.method_labels[arm]?.description || '';
+  $('image').disabled = !state.raster;
   $('location').hidden = !data;
-  $('image').disabled = !data?.image;
-  $('status').hidden = false;
-  if (!data) {
-    $('status').textContent = state.error || '正在载入建筑';
-    $('pointNote').textContent = '';
-    return requestPaint();
-  }
-  const variant = data.variants[arm];
-  const chosen = data.meshes[variant?.mesh];
-  const blocked = !chosen;
-  for (const option of $('mode').options) {
-    if (option.value !== 'none') option.disabled = blocked || (option.value === 'building' && !chosen?.faces.some((value, i) => i % 4 === 0 && value === 1));
-  }
-  const shifted = data.offset.some(offset => offset !== 0);
-  $('registeredKey').hidden = !shifted;
-  $('supportKey').hidden = !(data.scene_notes ? variant?.weak_support?.length : variant?.unsupported?.length) ||
-    !state.top || $('mode').value === 'none';
-  $('seamKey').hidden = !data.seam_rings?.length || !state.top;
-  $('canopyRoofKey').hidden = !variant?.canopy_supported?.length || !state.top || $('mode').value === 'none';
-  $('canopyMissingKey').hidden = !variant?.canopy_inferred?.length || !state.top || $('mode').value === 'none';
-  const mode = $('mode').value;
-  const meshStatus = blocked ? (variant?.preview_missing ? '此模型的屋面无法预览' : STATUS[variant?.status] || '本方法暂无结果') : '';
-  const compare = !blocked && state.previous && state.previous !== arm && sameGeometry(data, arm, state.previous)
-    ? '与刚才的方法生成相同的预览几何' : '';
-  const shared = !blocked && mode === 'building' && $('mode').selectedOptions[0]?.disabled ? '此结果只有屋面，当前只绘制屋面' : '';
-  const imageNote = state.image && data.image ? 'NAIP ' + data.image.dates.join('、') + ' · ' + number.format(data.image.native_gsd_m) + ' m/像元' : '';
-  const overlay = [meshStatus, compare, shared, imageNote].filter(Boolean).join(' · ');
-  $('status').textContent = overlay;
-  $('status').hidden = !overlay;
+  $('facts').replaceChildren();
 
-  const shown = visiblePoints(data, arm, $('points').value).length;
-  const total = $('points').value === 'fit' ? variant?.selected_points : data.point_total;
-  const showCloud = $('points').value !== 'none';
-  const modelColor = data.compared_probabilities ? '点色来源 · ' + (methodInfo(arm)?.point_color ||
-    (data.compared_probabilities[arm] ? methodInfo(arm).label : '原 Richmond 模型')) + '。' : '点的颜色来自模型的语义概率。';
-  $('pointNote').textContent = showCloud
-    ? '当前显示 ' + number.format(shown) + (total == null ? '' : ' / ' + number.format(total)) + ' 个回波。' + modelColor
-    : '';
-  if (data.group_facts) {
-    for (const [label, value] of [...data.group_facts, ...(variant?.group_facts || [])]) fact(label, value);
-  } else if (data.scene_notes) {
-    for (const [label, value] of [...data.scene_notes, ...(variant?.field_notes || [])]) fact(label, value);
-  } else {
-    const quality = data.quality[methodInfo(arm)?.quality_group || qualityGroup[arm]] || {};
-    fact('拟合候选点', number.format(variant?.selected_points ?? 0));
-    fact('原足迹外候选点', number.format(variant?.points_outside_original ?? 0));
-    fact('候选点覆盖', percent(quality.observed_fraction));
-    fact('最大缺测区', quality.maximum_gap_m2 == null ? '—' : number.format(quality.maximum_gap_m2) + ' m²');
-    fact('点间距中位数', quality.building_local_xy_spacing_median_m == null ? '—' : number.format(quality.building_local_xy_spacing_median_m) + ' m');
-    fact('多源 ID 覆盖代理', percent(quality.repeat_source_coverage_fraction));
-    fact('保留局部结构', variant?.status === 'roof_generated' ? number.format(variant.local_applied) : '—');
-    const low = variant?.low_confidence_covered_area_m2;
-    fact(arm === 'point_weight_naip' ? 'NAIP 支持的植被点' : '屋面低支撑区', arm === 'point_weight_naip'
-      ? number.format(variant.optically_corroborated_points ?? 0) : low == null ? '—' : number.format(low) + ' m²');
-  }
+  const showPoints = $('points').value !== 'none';
+  $('togglePoints').setAttribute('aria-pressed', String(showPoints));
+  $('togglePoints').textContent = showPoints ? '隐藏点云' : '显示点云';
+  $('pointLegend').hidden = !showPoints;
+  const showSupport = $('support').checked && state.top && $('mode').value !== 'none';
+  $('supportLegend').hidden = !showSupport;
+  $('overlayLegend').hidden = !showPoints && !showSupport;
 
-  const coords = data.location.map(value => value.toFixed(6)).join(', ');
-  $('coordinate').textContent = coords;
+  const oldStatus = data ? paneStatus(data, PREVIOUS) : (state.error || '正在载入建筑');
+  const newStatus = data ? paneStatus(data, arm) : (state.error || '正在载入建筑');
+  for (const [id, label] of [['previousStatus', oldStatus], ['status', newStatus]]) {
+    $(id).textContent = label;
+    $(id).hidden = !label;
+  }
+  if (!data) return requestPaint();
+
+  const notes = data.variants[currentDetailsArm()]?.field_notes || [];
+  fact('显示的数据', METHODS[currentDetailsArm()].label);
+  for (const [label, value] of [...(data.scene_notes || []), ...notes]) fact(label, value);
+  const coords = data.location.map(value => value.toFixed(6));
+  $('coordinate').textContent = coords.join(', ');
   $('copy').textContent = '复制坐标';
-  $('street').href = 'https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + data.location.join(',');
-  const priorPage = state.index.previous_experiment || (state.index.added_count ? '../point-workflow/' : null);
-  const previous = new URL(priorPage || '../', location.href);
-  previous.search = new URLSearchParams(priorPage ? {
-    block: state.selected.block, building: state.selected.id, method: state.index.previous_method || 'point_weight', mode: 'building',
-  } : {
-    experiment: 'structure', split: 'pilot', block: state.selected.block, building: state.selected.id,
-    group: 'R_DL', points: '1', modelMode: 'building',
+  $('street').href = 'https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + coords.join(',');
+  const prior = new URL(state.index.previous_experiment, location.href);
+  prior.search = new URLSearchParams({
+    block: state.selected.block, building: state.selected.id,
+    method: state.index.previous_method, mode: $('mode').value,
   });
-  $('previous').href = previous;
-  $('previous').hidden = Boolean(data.group_facts) || state.selected.cohort === 'added' ||
-    (state.selected.cohort === 'holdout' && !state.index.previous_coverage_on_holdout);
+  $('previous').href = prior;
   requestPaint();
 }
 
-function shapePath(points, close = false) {
+function shapePath(ctx, points, close = false) {
   ctx.beginPath();
   points.forEach((point, i) => i ? ctx.lineTo(point[0], point[1]) : ctx.moveTo(point[0], point[1]));
   if (close) ctx.closePath();
 }
 
-function brush(xy, project, color, dash, filling) {
+function brush(ctx, xy, project, color, dash, filling) {
   ctx.strokeStyle = color;
   ctx.lineWidth = 1.4;
   ctx.setLineDash(dash);
   for (const ring of xy) {
     const p = [];
     for (let i = 0; i < ring.length; i += 2) p.push(project(ring[i], ring[i + 1], 0));
-    shapePath(p, true);
+    shapePath(ctx, p, true);
     if (filling) { ctx.fillStyle = filling; ctx.fill(); }
     ctx.stroke();
   }
@@ -179,6 +160,19 @@ function brush(xy, project, color, dash, filling) {
 
 function paint() {
   state.pending = 0;
+  const data = state.data;
+  const extent = data?.outline.reduce((max, ring) => Math.max(max, ...ring.map(Math.abs)), 8) || 8;
+  const arm = currentArm();
+  const maximumZ = [PREVIOUS, arm].reduce((max, name) => {
+    const mesh = data?.meshes[data.variants[name]?.mesh];
+    return mesh?.xyz.reduce((peak, z, index) => index % 3 === 2 ? Math.max(peak, z) : peak, max) || max;
+  }, extent / 2);
+  if (state.view !== 'current') draw(previousCanvas, PREVIOUS, extent, maximumZ);
+  if (state.view !== 'previous') draw(currentCanvas, arm, extent, maximumZ);
+}
+
+function draw(canvas, arm, extent, maximumZ) {
+  const ctx = canvas.getContext('2d');
   const rect = canvas.getBoundingClientRect();
   const width = rect.width;
   const height = rect.height;
@@ -190,14 +184,15 @@ function paint() {
   ctx.setTransform(density, 0, 0, density, 0, 0);
   ctx.fillStyle = '#e9f2f0';
   ctx.fillRect(0, 0, width, height);
-  if (!state.data || !width || !height) return;
+  if (!state.data || !width || !height) {
+    canvas.dataset.triangles = '0';
+    canvas.dataset.points = '0';
+    return;
+  }
   const data = state.data;
-  const arm = $('method').value;
   const m = data.variants[arm];
   const mesh = data.meshes[m?.mesh];
   const mode = $('mode').value;
-  const extent = data.outline.reduce((max, ring) => Math.max(max, ...ring.map(Math.abs)), 8);
-  const maximumZ = mesh?.xyz?.reduce((max, value, i) => i % 3 === 2 ? Math.max(max, value) : max, 0) || extent / 2;
   const scale = Math.min(width, height) * .38 * state.zoom / Math.max(extent, state.top ? 0 : .64 * maximumZ);
   const a = state.top ? 0 : state.azimuth;
   const e = state.top ? Math.PI / 2 : state.elevation;
@@ -221,15 +216,15 @@ function paint() {
     ctx.strokeStyle = '#ccdcda';
     ctx.lineWidth = 1;
     for (let line = -gridSize; line <= gridSize; line += 5) {
-      shapePath([project(line, -gridSize, 0), project(line, gridSize, 0)]);
+      shapePath(ctx, [project(line, -gridSize, 0), project(line, gridSize, 0)]);
       ctx.stroke();
-      shapePath([project(-gridSize, line, 0), project(gridSize, line, 0)]);
+      shapePath(ctx, [project(-gridSize, line, 0), project(gridSize, line, 0)]);
       ctx.stroke();
     }
   }
   if (!state.top) {
-    brush(data.outline, project, '#263a44', [5, 4]);
-    if (data.offset.some(offset => offset !== 0)) brush(data.registered_outline, project, '#037452', [3, 3]);
+    brush(ctx, data.outline, project, '#263a44', [5, 4]);
+    if (data.offset.some(offset => offset !== 0)) brush(ctx, data.registered_outline, project, '#037452', [3, 3]);
   }
   const primitives = [];
   const positions = [];
@@ -272,7 +267,7 @@ function paint() {
       ctx.fill();
       ctx.globalAlpha = 1;
     } else {
-      shapePath(item.points, item.kind === 'face');
+      shapePath(ctx, item.points, item.kind === 'face');
       if (item.kind === 'face') {
         ctx.fillStyle = item.color;
         ctx.fill();
@@ -284,13 +279,13 @@ function paint() {
     }
   }
   if (state.top) {
-    if (!data.scene_notes && m?.unsupported?.length && mode !== 'none') brush(m.unsupported, project, '#a74c0d', [4, 3], '#ffab3833');
-    if (m?.weak_support?.length && mode !== 'none') brush(m.weak_support, project, '#a74c0d', [2, 4], '#ffab3826');
-    if (m?.canopy_supported?.length && mode !== 'none') brush(m.canopy_supported, project, '#086c9e', [4, 3], '#5bbbff63');
-    if (m?.canopy_inferred?.length && mode !== 'none') brush(m.canopy_inferred, project, '#a74c0d', [4, 3], '#ffab3860');
-    if (data.seam_rings?.length) brush(data.seam_rings, project, '#923a82', [4, 3], '#aa449c33');
-    brush(data.outline, project, image ? '#eff7f6' : '#263a44', [5, 4]);
-    if (data.offset.some(offset => offset !== 0)) brush(data.registered_outline, project, image ? '#59f1bc' : '#037452', [3, 3]);
+    if ($('support').checked && mode !== 'none') {
+      if (m?.weak_support?.length) brush(ctx, m.weak_support, project, '#a74c0d', [2, 4], '#ffab3826');
+      if (m?.canopy_supported?.length) brush(ctx, m.canopy_supported, project, '#086c9e', [4, 3], '#5bbbff63');
+      if (m?.canopy_inferred?.length) brush(ctx, m.canopy_inferred, project, '#a74c0d', [4, 3], '#ffab3860');
+    }
+    brush(ctx, data.outline, project, image ? '#eff7f6' : '#263a44', [5, 4]);
+    if (data.offset.some(offset => offset !== 0)) brush(ctx, data.registered_outline, project, image ? '#59f1bc' : '#037452', [3, 3]);
   }
   ctx.lineWidth = 1.5;
   ctx.strokeStyle = '#304740';
@@ -300,7 +295,7 @@ function paint() {
   ctx.fillText(meters + ' m', 13, height - 12);
   const x0 = 13;
   const y0 = height - 20;
-  shapePath([[x0, y0 - 4], [x0, y0], [x0 + scale * meters, y0], [x0 + scale * meters, y0 - 4]]);
+  shapePath(ctx, [[x0, y0 - 4], [x0, y0], [x0 + scale * meters, y0], [x0 + scale * meters, y0 - 4]]);
   ctx.stroke();
   canvas.dataset.triangles = String(primitives.filter(p => p.kind === 'face').length);
   canvas.dataset.points = String(primitives.filter(p => p.kind === 'point').length);
@@ -315,29 +310,31 @@ async function json(path) {
 function shareState() {
   const url = new URL(location.href);
   url.search = new URLSearchParams({
-    block: $('block').value,
-    building: $('building').value,
-    method: $('method').value,
-    mode: $('mode').value,
+    block: $('block').value, building: $('building').value,
+    method: state.view === 'previous' ? PREVIOUS : currentArm(),
+    mode: $('mode').value, view: state.view,
   });
-  if (state.index.added_count && $('cohortFilter').value !== 'all') url.searchParams.set('cohort', $('cohortFilter').value);
+  if (state.top) url.searchParams.set('top', '1');
+  if (state.image) url.searchParams.set('image', '1');
+  if ($('support').checked) url.searchParams.set('support', '1');
+  if ($('points').value !== 'none') url.searchParams.set('points', $('points').value);
   history.replaceState(null, '', url);
 }
 
 function setBlock(block, preferred) {
   $('block').value = block;
-  $('building').replaceChildren();
-  const cohort = $('cohortFilter').value;
-  const buildings = state.index.buildings.filter(row => row.block === block && (cohort === 'all' || row.cohort === cohort));
-  for (const row of buildings) addOption($('building'), row.id, row.caption);
-  if (buildings.some(row => row.id === preferred)) $('building').value = preferred;
+  const select = $('building');
+  select.replaceChildren();
+  const buildings = state.index.buildings.filter(row => row.block === block);
+  for (const row of buildings) addOption(select, row.id, row.caption);
+  if (buildings.some(row => row.id === preferred)) select.value = preferred;
 }
 
 async function selectBuilding() {
   const row = state.index.buildings.find(row => row.block === $('block').value && row.id === $('building').value);
+  if (!row) return;
   state.selected = row;
   state.data = state.raster = null;
-  state.previous = null;
   state.error = '';
   state.zoom = 1;
   updatePanel();
@@ -347,8 +344,7 @@ async function selectBuilding() {
     if (state.selected !== row) return;
     state.data = data;
     for (const option of $('method').options) option.disabled = !data.variants[option.value];
-    if (!data.variants[$('method').value]) $('method').value = Object.keys(data.variants)[0];
-    state.active = $('method').value;
+    if (!data.variants[currentArm()]) $('method').value = CURRENT;
     if (data.image) {
       state.raster = new Image();
       state.raster.onload = requestPaint;
@@ -356,17 +352,13 @@ async function selectBuilding() {
         if (state.selected !== row) return;
         state.raster = null;
         state.image = false;
-        $('image').setAttribute('aria-pressed', 'false');
-        $('image').disabled = true;
-        requestPaint();
+        setTop(state.top);
       };
       state.raster.src = data.image.url;
     } else {
       state.image = false;
-      $('image').setAttribute('aria-pressed', 'false');
     }
-    updatePanel();
-    shareState();
+    setTop(state.top);
   } catch (error) {
     if (state.selected !== row) return;
     state.error = '建筑数据载入失败，请刷新或选择另一栋。';
@@ -382,6 +374,12 @@ function setTop(top) {
   $('top').setAttribute('aria-pressed', String(top));
   $('image').setAttribute('aria-pressed', String(state.image));
   updatePanel();
+  if (state.index) shareState();
+}
+
+function transformView() {
+  updatePanel();
+  shareState();
 }
 
 function zoom(factor) {
@@ -389,31 +387,29 @@ function zoom(factor) {
   requestPaint();
 }
 
-function methodInfo(arm) {
-  return state.index?.method_labels?.[arm] || METHOD[arm];
-}
-
 async function init() {
   try {
     state.index = await json('index.json');
-    const hasAdded = Boolean(state.index.added_count);
-    $('cohort').textContent = state.index.cohort_description || (state.index.count + ' 栋' +
-      (hasAdded ? '（新增 ' + state.index.added_count + ' 栋）' : '') + ' · ' + state.index.blocks.length + ' 个街区 · 同一重建器');
-    if (state.index.results_heading) $('resultsSummary').textContent = state.index.results_heading;
-    $('cohortControl').hidden = $('addedHeading').hidden = !hasAdded;
-    if (hasAdded && ['pilot', 'added'].includes(query.get('cohort'))) $('cohortFilter').value = query.get('cohort');
+    $('cohort').textContent = state.index.cohort_description;
     for (const block of state.index.blocks) addOption($('block'), block.id, block.label + ' · ' + block.count);
     for (const arm of state.index.arms) {
-      addOption($('method'), arm, methodInfo(arm).label);
+      if (arm !== PREVIOUS) addOption($('method'), arm, METHODS[arm].label);
       const row = $('armResults').insertRow();
-      row.insertCell().textContent = methodInfo(arm).label;
+      row.insertCell().textContent = METHODS[arm].label;
       row.insertCell().textContent = (state.index.status_counts[arm].roof_generated || 0) + ' / ' + state.index.count;
-      if (hasAdded) row.insertCell().textContent = (state.index.added_status_counts[arm].roof_generated || 0) + ' / ' + state.index.added_count;
     }
-    $('method').value = state.index.arms.includes(query.get('method')) ? query.get('method') : (state.index.default_method || 'point_weight');
-    if (Array.from($('mode').options).some(o => o.value === query.get('mode'))) $('mode').value = query.get('mode');
-    setBlock(state.index.blocks.some(b => b.id === query.get('block')) ? query.get('block') : (state.index.default_block || 'boston_g5'),
-      query.get('building') || state.index.default_building || 'OSM_way_407834212');
+    const arm = query.get('method');
+    const view = query.get('view');
+    state.view = ['compare', 'previous', 'current'].includes(view) ? view : (arm === PREVIOUS ? 'previous' : 'compare');
+    if (state.index.arms.includes(arm) && arm !== PREVIOUS) $('method').value = arm;
+    if (currentArm() !== CURRENT && state.view !== 'previous') $('opticalDetails').open = true;
+    if (Array.from($('mode').options).some(item => item.value === query.get('mode'))) $('mode').value = query.get('mode');
+    if (['fit', 'context'].includes(query.get('points'))) $('points').value = query.get('points');
+    $('support').checked = query.get('support') === '1';
+    state.image = query.get('image') === '1';
+    state.top = state.image || $('support').checked || query.get('top') === '1';
+    const block = state.index.blocks.some(item => item.id === query.get('block')) ? query.get('block') : state.index.default_block;
+    setBlock(block, query.get('building') || state.index.default_building);
     await selectBuilding();
   } catch (error) {
     state.error = '实验数据载入失败，请刷新页面。';
@@ -422,17 +418,28 @@ async function init() {
   }
 }
 
-$('block').addEventListener('change', event => { setBlock(event.target.value); selectBuilding(); });
-$('cohortFilter').addEventListener('change', () => { setBlock($('block').value, $('building').value); selectBuilding(); });
-$('building').addEventListener('change', selectBuilding);
-$('method').addEventListener('change', () => {
-  state.previous = state.active;
-  state.active = $('method').value;
-  updatePanel();
-  shareState();
+$('block').addEventListener('change', () => {
+  setBlock($('block').value);
+  selectBuilding();
 });
-$('mode').addEventListener('change', () => { updatePanel(); shareState(); });
-$('points').addEventListener('change', updatePanel);
+$('building').addEventListener('change', selectBuilding);
+for (const button of document.querySelectorAll('[data-view]')) {
+  button.addEventListener('click', () => {
+    state.view = button.dataset.view;
+    transformView();
+  });
+}
+$('method').addEventListener('change', () => {
+  if (state.view === 'previous') state.view = 'compare';
+  transformView();
+});
+$('mode').addEventListener('change', transformView);
+$('points').addEventListener('change', transformView);
+$('support').addEventListener('change', () => setTop($('support').checked || state.top));
+$('togglePoints').addEventListener('click', () => {
+  $('points').value = $('points').value === 'none' ? 'fit' : 'none';
+  transformView();
+});
 $('top').addEventListener('click', () => setTop(!state.top));
 $('image').addEventListener('click', () => {
   state.image = !state.image;
@@ -440,6 +447,12 @@ $('image').addEventListener('click', () => {
 });
 $('zoomIn').addEventListener('click', () => zoom(1.23));
 $('zoomOut').addEventListener('click', () => zoom(1 / 1.23));
+$('resetView').addEventListener('click', () => {
+  state.azimuth = -.58;
+  state.elevation = .57;
+  state.zoom = 1;
+  setTop(false);
+});
 $('copy').addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText($('coordinate').textContent);
@@ -453,57 +466,62 @@ $('copy').addEventListener('click', async () => {
     $('copy').textContent = '已选中坐标';
   }
 });
-canvas.addEventListener('wheel', event => {
-  event.preventDefault();
-  zoom(event.deltaY < 0 ? 1.12 : 1 / 1.12);
-}, { passive: false });
-let pointer = null;
-canvas.addEventListener('pointerdown', event => {
-  pointer = [event.clientX, event.clientY];
-  canvas.setPointerCapture(event.pointerId);
-});
-canvas.addEventListener('pointermove', event => {
-  if (!pointer) return;
-  const dx = event.clientX - pointer[0];
-  const dy = event.clientY - pointer[1];
-  pointer = [event.clientX, event.clientY];
-  if (dx === 0 && dy === 0) return;
-  if (state.top) setTop(false);
-  state.azimuth += dx * .012;
-  state.elevation = Math.min(1.46, Math.max(.12, state.elevation + dy * .009));
-  requestPaint();
-});
-for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) canvas.addEventListener(type, () => { pointer = null; });
-new ResizeObserver(requestPaint).observe(canvas);
+
+const observer = new ResizeObserver(requestPaint);
+for (const canvas of [previousCanvas, currentCanvas]) {
+  canvas.addEventListener('wheel', event => {
+    event.preventDefault();
+    zoom(event.deltaY < 0 ? 1.12 : 1 / 1.12);
+  }, { passive: false });
+  let pointer = null;
+  canvas.addEventListener('pointerdown', event => {
+    pointer = [event.clientX, event.clientY];
+    canvas.setPointerCapture(event.pointerId);
+  });
+  canvas.addEventListener('pointermove', event => {
+    if (!pointer) return;
+    const dx = event.clientX - pointer[0];
+    const dy = event.clientY - pointer[1];
+    pointer = [event.clientX, event.clientY];
+    if (dx === 0 && dy === 0) return;
+    if (state.top) setTop(false);
+    state.azimuth += dx * .012;
+    state.elevation = Math.min(1.46, Math.max(.12, state.elevation + dy * .009));
+    requestPaint();
+  });
+  for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) {
+    canvas.addEventListener(type, () => { pointer = null; });
+  }
+  observer.observe(canvas);
+}
+
 $('results').addEventListener('toggle', async event => {
   const target = event.currentTarget;
   if (!target.open || target.dataset.loaded) return;
   target.dataset.loaded = 'yes';
   try {
     const summary = await json('summary.json');
-    const findings = Array.isArray(summary.findings) ? summary.findings.filter(note => typeof note === 'string').slice(0, 6) : [];
-    for (const note of findings) {
+    for (const note of summary.findings || []) {
       const item = document.createElement('li');
       item.textContent = note;
       $('summaryNotes').append(item);
     }
-    $('summaryNotes').hidden = !findings.length;
     for (const sample of summary.cases || []) {
-      if (!state.index.buildings.some(row => row.block === sample.block && row.id === sample.id) ||
-          !state.index.arms.includes(sample.method)) continue;
       const item = document.createElement('li');
       const link = document.createElement('a');
       const url = new URL(location.href);
       url.search = new URLSearchParams({ block: sample.block, building: sample.id, method: sample.method, mode: 'roof' });
+      if (sample.label.startsWith('俯视')) url.searchParams.set('support', '1');
       link.href = url;
       link.textContent = sample.label;
       item.append(link);
       $('summaryCases').append(item);
     }
+    $('summaryNotes').hidden = !$('summaryNotes').childElementCount;
     $('summaryCases').hidden = !$('summaryCases').childElementCount;
-    $('summaryLink').hidden = false;
   } catch {
-    // The stage table also works in export previews without a science summary.
+    delete target.dataset.loaded;
   }
 });
+
 init();
