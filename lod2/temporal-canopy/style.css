@@ -33,13 +33,16 @@ button[aria-pressed="true"] { color: #fff; border-color: var(--evergreen); backg
 button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid #0f806a; outline-offset: 2px; }
 .controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
 .view-buttons, .layer-buttons { display: flex; gap: 5px; flex-wrap: wrap; }
-.panes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.image-info { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+.panes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .panes.single { grid-template-columns: minmax(0, 1fr); }
 .pane { overflow: hidden; min-width: 0; }
 .pane-title { padding: 12px; color: #304b45; background: #eaf0ec; }
 .current-pane { border-color: #7fa89e; }
 .current-pane .pane-title { color: #103e35; background: #dceee7; }
+.reference-pane .pane-title { color: #533f58; background: #eee8f0; }
 .pane-title span { display: block; margin-top: 2px; font-size: 13px; }
+.pane-title .roof-score { display: block; margin-top: 4px; color: inherit; font-size: 12px; }
 .scene { height: clamp(300px, 45vh, 500px); background: #e9f2f0; overflow: hidden; position: relative; }
 canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; }
 canvas:active { cursor: grabbing; }
@@ -49,6 +52,7 @@ canvas:active { cursor: grabbing; }
 .legend i { display: inline-block; width: 8px; height: 8px; background: currentColor; border-radius: 50%; margin-left: 5px; }
 .legend i:first-child { margin-left: 0; }
 .roof { color: #cf6322; }.tree { color: #228441; }.other { color: #55718e; }
+.survey-reference { color: #ffe287; border: 1px solid #66522b; }
 .canopy-observed { color: #086c9e; }.support { color: #a74c0d; }
 .view-hint { margin: 6px 0 8px; font-size: 12px; }
 .disclosure { padding: 11px 12px; margin-top: 9px; }
@@ -69,6 +73,9 @@ table { border-collapse: collapse; font-size: 14px; }
 th, td { text-align: left; padding: 6px 9px; border-bottom: 1px solid var(--line); }
 li { margin-bottom: 5px; font-size: 14px; }
 footer { margin-top: 14px; font-size: 12px; color: var(--muted); }
+@media (min-width: 641px) {
+  .panes:not(.single) .pane-title { min-height: 88px; }
+}
 @media (max-width: 640px) {
   main { padding: 14px 10px 24px; }
   header { margin-bottom: 12px; }
